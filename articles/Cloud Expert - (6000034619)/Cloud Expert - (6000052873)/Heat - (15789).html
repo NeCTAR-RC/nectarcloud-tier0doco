@@ -1,0 +1,97 @@
+<p> </p>
+<p>Heat is a template driven service that automates the management of the entire lifecycle of your application on the NeCTAR cloud.</p>
+<p>A
+ 'template driven service' simply means that you define your 
+application's requirements in a human readable text file - the template.
+ In this file you to describe both the infrastructure and its 
+relationships that your application will need to run on the NeCTAR 
+cloud.</p>
+<p>Heat then uses this template to provision the required 
+infrastructure and manage the lifecycle of your application from start 
+to finish. This template, and the infrastructure that it has created, is
+ termed a 'stack'.</p>
+<p>As part of the life cycle management, the Heat 
+service supports both scaling on demand and the freeing up of 
+infrastructure once the application is finished.</p>
+<p>Heat integrates 
+well with configuration management tools, such as Chef and Puppet. Thus 
+the Heat service offers executable documentation of your application's 
+deployment and lifecycle, making your deployments repeatable and 
+reliable. The net effect is to limit human error and to save you time. 
+Thus saving you money.</p>
+<h2>The stack template format(s)</h2>
+<p>Heat is modelled after Amazon's <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/Welcome.html?r=7078">CloudFormation</a>
+ service, and endeavours to maintain some degree of comparability with 
+this service. Hence Heat supports two different template formats.</p>
+<ul>
+<li>The first is a <a href="http://www.json.org/">JSON</a> based implementation that mimics the Amazon specification.</li>
+<li>The second is a <a href="http://www.yaml.org/">YAML</a> based native OpenStack implementation.</li>
+</ul>
+<h2>The stack lifecycle</h2>
+<p>A template is created, using a standard text editor (such as <a href="http://notepad-plus-plus.org/">Notepad++</a>).
+ It is then uploaded into the OpenStack Heat service, either by means of
+ the Heat command line client, or the Horizon dashboard.</p>
+<p>If 
+uploaded via the command line client, the engine expects any mandatory 
+parameters to be provided as arguments added at the point the template 
+was uploaded.</p>
+<p>If, however, uploaded via the dashboard, then the 
+dashboard will create an input wizard that will step the person who 
+uploaded the template through the process of entering the required 
+parameter values.</p>
+<p>Once all the required data has been gathered the stack is then provisioned and launched.</p>
+<p>The
+ template and its associated parameters will remain in the Heat database
+ until such time as the engine is instructed to destroy the stack.</p>
+<p>At
+ that point all the provisioned infrastructure will be destroyed, its 
+resources released, and then the template and its parameters will be 
+removed from the Heat database.</p>
+<p>We have created a screencast that that does a walk through of this lifecycle: <a href="http://support.rc.nectar.org.au/node/210">Heat: a screencast</a>.</p>
+<h2>More information</h2>
+<p>The following pages offer more in depth technical information on using Heat in the NeCTAR cloud.</p>
+<ul>
+<li>
+<a href="http://support.rc.nectar.org.au/node/159">Heat: enough YAML to read a template</a> (usefull if you don't know YAML)</li>
+<li>
+<a href="http://support.rc.nectar.org.au/node/162">Heat: walk through of a YAML template</a> - a walk through of a Heat template that is in use on the NeCTAR cloud.</li>
+<li><a href="http://support.rc.nectar.org.au/node/171">Heat: actions that can be performed</a></li>
+<li><a href="http://support.rc.nectar.org.au/node/186">Heat: the command line client</a></li>
+<li><a href="http://support.rc.nectar.org.au/node/189">Heat: the dashboard</a></li>
+<li>
+<a href="http://support.rc.nectar.org.au/node/180">Heat: preparing your images</a> - you need more than just cloud-init!</li>
+<li><a href="http://support.rc.nectar.org.au/node/174">Heat: good practices</a></li>
+<li><a href="http://support.rc.nectar.org.au/node/177">Heat: debugging</a></li>
+<li><a href="http://support.rc.nectar.org.au/node/168">Heat: oddities and gotcha's</a></li>
+<li><a href="http://support.rc.nectar.org.au/node/213">Heat: supported resources</a></li>
+</ul>
+<h2>Further links</h2>
+<ul>
+<li>
+<a title="Sample Templates" href="https://github.com/NeCTAR-RC/heat-templates" target="_self">NeCTAR sample templates</a> -  a set of templates that have been run against the NeCTAR cloud.</li>
+<li>The OpenStack dashboard manual <a href="http://docs.openstack.org/user-guide/content/dashboard_stacks.html">Heat page</a>.</li>
+<li>The <a href="https://wiki.openstack.org/wiki/Heat">Heat wiki</a>
+</li>
+<li>The <a href="http://docs.openstack.org/developer/heat/template_guide/">Heat template guide</a>
+</li>
+<li>The <a href="http://docs.openstack.org/user-guide/content/heat_client_commands.html">command line client</a>
+</li>
+<li>The <a href="http://support.rc.nectar.org.au/node/255">Tech Talk</a> on Heat</li>
+</ul>
+<h2>Known issues</h2>
+<p><b><span style="font-size: 1.231em;">Restricted resources</span></b></p>
+<p>Only OpenStack admins can currently make use of the following resources:</p>
+<ul>
+<li>AWS::CloudFormation::WaitConditionHandle</li>
+<li>OS::Heat::HARestarter</li>
+<li>AWS::AutoScaling::ScalingPolicy</li>
+<li>AWS::IAM::User</li>
+</ul>
+<p>This is a <a title="bug 1089261" href="https://bugs.launchpad.net/heat/+bug/1089261" target="_self">known issue</a> and should be resolved in the next release of OpenStack.</p>
+<h3>No root certificates message</h3>
+<p>If you get an error stating that "<i>No root certificates specified for verification of other-side certificates</i>" when using the command line then the work around is to use the --insecure flag:</p>
+<p><span style="font-family: courier new,courier;">heat --insecure stack-list</span></p>
+<p>This
+ stops the server's certificate from being verified against any 
+certficate authority. Not the greatest solution, but a solution for the 
+time being.</p>
