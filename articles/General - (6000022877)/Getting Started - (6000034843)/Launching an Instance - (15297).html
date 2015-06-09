@@ -1,0 +1,85 @@
+<p> </p>
+<p>
+        
+                </p>
+<div id="main">
+                            <h2>You are here</h2>                                                    <h1 id="page-title">Launching an Instance</h1>
+                                                                                
+                <div id="main-content">
+                      <div>
+    <div id="block-system-main">
+
+    
+  <div>
+    <div id="node-126">
+
+  
+      
+  
+  <div>
+    <div><div>
+<div>
+<p>This is a general guide to Launching an Instance.<br> See <a href="http://support.rc.nectar.org.au/node/129" target="_self">Launching 123</a> for a step by step specific example.</p>
+<h4>Preparation: you will need before your first launch...</h4>
+<p>For login access to an instance use the Access &amp; Security Tab (see <a href="http://support.rc.nectar.org.au/node/153">KeyPairs</a>) to create or upload an SSH Key. <br> Network Access: to specify which addresses and ports can reach an instance, use the Access &amp; Security Tab (see <a href="http://support.rc.nectar.org.au/node/117">Security Groups</a>).</p>
+<p>The default Security Group starts out with no network access. <br>Changes: add/edit access rules to any applied security group, even after launching. <br>Changes immediately apply to all instances using the Security Group.</p>
+<h4>Select an Image</h4>
+<p>Available images are listed under the dashboard Images tab. (for more details check the <a href="https://wiki.rc.nectar.org.au/wiki/Image_Catalog">Image Catalog</a>)<br> Select an Image and click "launch".<br> You will see the launch page.</p>
+<h4>Configure the instance</h4>
+<p><span>Fill in some or all options:</span></p>
+<ul>
+<li><span>Server Name: your choice of name for the instance for easy reference</span></li>
+<li>
+<span>User Data: Information that will be made available to your instance through the </span><a href="http://support.rc.nectar.org.au/node/72">Metadata Interface</a>
+</li>
+<li>
+<span>Flavour: the size of the hardware to use (see Instances</span><a href="http://support.rc.nectar.org.au/node/87"> Available by Size</a><span>)</span>
+</li>
+<li><span>Your allocated flavour or lesser configurations can be selected (the default is m1.small a 1 CPU machine)</span></li>
+</ul>
+<ul>
+<li>
+<span>Key Name: is an SSH KeyPair used to access your instance, create them via the </span><span>Access &amp; Security Tab (see <a href="http://support.rc.nectar.org.au/node/153">KeyPairs</a>)</span>
+</li>
+<li><span><a href="http://support.rc.nectar.org.au/node/117">Security Groups</a>: Add Network Access to your instances.</span></li>
+</ul>
+<ul><li>
+<span>The default </span><span>Security Group</span><span> (no network access at first) is pre-selected.</span>
+</li></ul>
+<p><span>The default Security Group can have access rules added to it later if necessary, or</span></p>
+<ul>
+<li>
+<span>Create and modify groups via the </span><a href="http://support.rc.nectar.org.au/node/117">Security Groups</a><span> tab</span>
+</li>
+<li><span>Changes: add/edit access rules to any applied Security Group even after launching.</span></li>
+<li><span>Changes immediately apply to all instances using the Security Group.</span></li>
+</ul>
+<h4>Launch Instance</h4>
+<p><span>The
+ Launch Instance button begins Cloud provisioning and initialisation of a
+ running instance from the selected image and your configuration 
+options. The Instance will normally pass from Status "Build" to 
+"Active". Depending on your image size and cloud activity the length of 
+time required may vary, refresh your browser to see the status change. 
+Your instance will have a public IP address and be reachable according 
+to the Security Groups selected.</span></p>
+<p><span>Connect to your new instance via </span><a href="http://support.rc.nectar.org.au/node/114">ssh or other methods listed here</a></p>
+<h4>If your Launch is unsuccessful</h4>
+<p><span>You
+ may get a message that you your quota has been exceeded or you have 
+insufficient resources. Check the table to the right on the Launch 
+Instance page it lists the number of instances you may run 
+simultaneously, then check the </span>Instances tab to see how many 
+Instances you already have running. You may have to terminate a running 
+Instance to free resources before you can launch another (see Instance 
+tab to Terminate). If you need more resources see the <a href="http://support.rc.nectar.org.au/node/27">allocation tab</a> to apply for an increase.</p>
+</div>
+  <p><br></p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
