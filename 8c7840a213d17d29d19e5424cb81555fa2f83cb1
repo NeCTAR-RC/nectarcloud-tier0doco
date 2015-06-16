@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba1f61a0_c212c657",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-06-16T06:49:25Z",
+      "side": 1,
+      "message": "Not sure, should github be capitalized?",
+      "range": {
+        "startLine": 6,
+        "startChar": 2,
+        "endLine": 6,
+        "endChar": 8
+      },
+      "revId": "8c7840a213d17d29d19e5424cb81555fa2f83cb1",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_8209ee2e",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-06-16T06:49:25Z",
+      "side": 1,
+      "message": "sponsored",
+      "range": {
+        "startLine": 8,
+        "startChar": 40,
+        "endLine": 8,
+        "endChar": 48
+      },
+      "revId": "8c7840a213d17d29d19e5424cb81555fa2f83cb1",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
