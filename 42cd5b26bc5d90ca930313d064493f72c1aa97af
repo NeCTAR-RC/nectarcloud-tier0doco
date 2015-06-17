@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba1f61a0_021a1e17",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-06-17T03:35:44Z",
+      "side": 1,
+      "message": "Actually, should clone from https://github.com/NeCTAR-RC/nectarcloud-tier0doco.git. Saves core bandwidth/HA.",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 55
+      },
+      "revId": "42cd5b26bc5d90ca930313d064493f72c1aa97af",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_e216eaf0",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-06-17T03:35:44Z",
+      "side": 1,
+      "message": ".",
+      "range": {
+        "startLine": 102,
+        "startChar": 253,
+        "endLine": 102,
+        "endChar": 255
+      },
+      "revId": "42cd5b26bc5d90ca930313d064493f72c1aa97af",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
