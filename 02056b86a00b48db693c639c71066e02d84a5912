@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_07307655",
+        "filename": "README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000105
+      },
+      "writtenOn": "2015-06-19T03:30:23Z",
+      "side": 1,
+      "message": "Looks like some of the spelling changes I made in revision 9 were reverted this revision.",
+      "revId": "02056b86a00b48db693c639c71066e02d84a5912",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_a7c36a89",
+        "filename": "README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000105
+      },
+      "writtenOn": "2015-06-19T03:30:23Z",
+      "side": 1,
+      "message": "prefer my spelling in revision #9",
+      "revId": "02056b86a00b48db693c639c71066e02d84a5912",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_87f46688",
+        "filename": "README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 1000105
+      },
+      "writtenOn": "2015-06-19T03:30:23Z",
+      "side": 1,
+      "message": "spelling",
+      "revId": "02056b86a00b48db693c639c71066e02d84a5912",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_e7f1e296",
+        "filename": "README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 1000105
+      },
+      "writtenOn": "2015-06-19T03:30:23Z",
+      "side": 1,
+      "message": "Jenkins, maybe?",
+      "revId": "02056b86a00b48db693c639c71066e02d84a5912",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_c7ee5eb4",
+        "filename": "README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 1000105
+      },
+      "writtenOn": "2015-06-19T03:30:23Z",
+      "side": 1,
+      "message": "spelling",
+      "revId": "02056b86a00b48db693c639c71066e02d84a5912",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_272bfaec",
+        "filename": "README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 1000105
+      },
+      "writtenOn": "2015-06-19T03:30:23Z",
+      "side": 1,
+      "message": "Capitalisation?",
+      "revId": "02056b86a00b48db693c639c71066e02d84a5912",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
