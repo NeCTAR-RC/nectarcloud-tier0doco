@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_a776cad6",
+        "filename": "README.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2015-06-22T03:21:09Z",
+      "side": 1,
+      "message": "space missing",
+      "range": {
+        "startLine": 5,
+        "startChar": 12,
+        "endLine": 5,
+        "endChar": 15
+      },
+      "revId": "3e8c00190f0a71d8d6c14202fa85b272c0f48b79",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
