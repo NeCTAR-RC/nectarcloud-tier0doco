@@ -144,10 +144,24 @@ your own computer so you can make changes to it.
 [Further documentation on cloning repositories](https://help.github.com/articles/cloning-a-repository/)
  can be found at github.
 
-#### Making some changes
+##### The project directory structure
 
-Now you have the project locally (on your computer), you can start making
-changes.  We use the branching feature of git to keep your changes separate from
+Now you have the project cloned locally, you can start having a look around and
+hopefully making some valuable changes :)  where or what to do might be a little
+opaque, so for now;
+
+Any content you create should be nested within the starting-doco folder.  It
+should have subfolders created within it consistent with the
+[action list content google document](https://docs.google.com/spreadsheets/d/1jSReAxlDlqVktTXUbjnprH04vki8ZKBVKXPDQd20JZA/edit#gid=0).
+
+If you are not sure where to create content, then just place it directly under
+starting-doco folder and it will get moved around later on.
+
+Ignore the articles folder, it will be removed or tidied up soon.
+
+##### Making some changes
+
+We use the branching feature of git to keep your changes separate from
  other peoples changes.
 
 - create a new git branch for your changes.  The branch name should be one word
@@ -155,15 +169,18 @@ changes.  We use the branching feature of git to keep your changes separate from
 reading was created on the "contributing" branch.
 
     `git branch testing_documentation_workflow`
+
     `git checkout testing_documentation_workflow`
 
-- if the file doesn't exist yet, then <-------- ????????????????????????????
+- if the file doesn't exist yet, then create it under the starting-doco folder.
+
+it may get moved elsewhere after that, but it's a good start.
 
 - using your text editor, open the file you wish to edit.
 
 - make your changes to the file.
 
-#### Some words about markdown
+##### Some words about markdown
 
 This README and also the documentation committed to this project were all
 created in github flavoured markdown. Markdown is just a way of making plain
@@ -171,6 +188,7 @@ text appear as structured formatted rich text.  A simple example is by adding
 a # to the start of a line in markdown makes that line appear as a heading;
 
 `# The largest heading (an <h1> tag)`
+
 `## The second largest heading (an <h2> tag)`
 
 There are heaps and heaps of ways of controlling the look and feel of your
@@ -184,6 +202,12 @@ get to see exactly how your content will appear to readers.  That's because
 github renders your markdown into HTML moments before readers see it.  It's
 exactly the same as as when writing in other markup languages such as HTML.
 
+One thing to note is that github flavoured markdown will treat carriage returns
+in an interesting way.  Carriage returns are ignored by github unless they come
+in a pair.   That means that the carriage return at the end of a line is ignored
+, but if it is followed immediately by another carraige return at the end of a
+paragraph, then github will render your text as a paragraph.
+
 *It is* possible to render your markdown locally, which is invaluable if you're
 creating content and you do care about how it appears to end users.  This is
 possible using [grip](https://github.com/joeyespo/grip) which does require you
@@ -191,11 +215,51 @@ to have some familiarity with installing python packages, but for Ubuntu it's as
 simple as
 
 `$ sudo apt-get install python-pip`
+
 `$ pip install grip`
+
 `$ grip --gfm --context=NeCTAR-RC/nectarcloud-tier0doco README.md`
 
 And then I simply point my web browser at [http://localhost:5000/](http://localhost:5000/)
 and voila, there's my markdown rendered into html.
+
+##### The NeCTAR style guide
+
+All commits to this repository must pass markdown validation as applied by
+a robot called Jenkins - he's pretty fussy - but can be tamed easily; more
+on that later.  Where markdown may be valid, but stylistic choices are still
+possible, please consider the following.
+
+###### Title
+
+Each page should have the following front matter at the top:
+
+> title: Data Storage
+> description: User documentation about eResearch SA's data storage services.
+
+###### Headings
+
+H1 is for the page title and H2 onwards are for sub-headings. Jenkins will
+prevent you from puttting a lower-number heading before a higher-number heading
+
+###### Text
+
+Markdown defaults to left aligned text, it's important not to change this as
+it's generally accepted that centred text is harder to read.
+
+Underline is for hyperlinks ONLY. Instead, use bold or italics for emphasis.
+
+Don't change the colour of the headings and paragraph text.
+
+###### Links
+
+All links should open in the same window, even external links. This ensures the
+website meets basic web accessibility standards. Yes, it's kind of annoying, but
+it means that the user gets to decide how they want their links to open.
+
+Link text should be meaningful - don't use phrases like 'click here' - and
+should be embedded behind text where possible; try not to paste full URLs onto
+the page.
 
 #### Submitting your changes for review
 
