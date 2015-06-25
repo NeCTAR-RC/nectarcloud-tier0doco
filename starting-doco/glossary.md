@@ -1,22 +1,66 @@
-> access control
+# NeCTAR Cloud & OpenStack Glossary
+
+This glossary aims to demystify some of the unavoidable jargon and acronyms that
+come with moving into the cloud.  Like for example, what is the cloud exactly?
+
+> The Cloud
+
+Honestly, getting a good definition of "cloud" is really hard.  The cloud is 
+many things to many people, and it's somewhat a matter of perspective.  I asked 
+the question on a sysadmin IRC channel once, and the answers i received caused 
+as much debate and controversy as provided actual insight. 
+
+"..[a cloud is] a network of remote servers hosted on the Internet and used to
+store, manage, and process data in place of local servers or personal computers
+.." [Oxford Dictionary](http://www.oxforddictionaries.com/definition/english/cloud-computing)
+
+But that's not the complete answer.  There are private clouds, and local clouds,
+and public clouds.  They don't have to be connected to the internet and the 
+workloads they achieve are not always a direct replacement of traditional 
+computing effort.  A better answer might be that a cloud is;
+
+".. a network of servers used to store, manage, and process data to achieve 
+efficiencies of scale in completing various computational tasks.  They are
+typified by their automation, scalability and opacity.."
+
+> OpenStack
+
+is thankfully easier to define, "..OpenStack is a free and open-source cloud
+computing software platform. Users primarily deploy it as an infrastructure as 
+a service (IaaS) solution. The technology consists of a series of interrelated
+projects that control pools of processing, storage, and networking resources 
+throughout a data center which users manage through a web-based dashboard,
+command-line tools, or a RESTful API..." [Wikipedia](https://en.wikipedia.org/wiki/OpenStack)
+
+Ok, and what's IaaS?  Good question, keep reading .. :)
+
+## Thanks 
+
+This content heavily sourced from the excellent [eSpaces glossary](https://espaces.edu.au/vwrangler/nectar-openstack-glossary)
+produced by Steve Crawley at QCIF.  Also thanks to the OpenStack foundation for
+their 
+
+## The list
+
+> Access Control
 
 The process of determining if an (authenticated) agent is permitted to perform
 some action.  Synonym: authorization.  (Note: some IT texts make a distinction
 between access control and authorization, but take contradictory positions on
 which is which.)
 
-> access group
+> Access Group
 
 OpenStack terminology - a synonym for security group.
 
-> access rule
+> Access Rule
 
 OpenStack terminology - a security group is a set of access rules.  An access
 rule allow network access to an instance from other hosts with a specified
 combination of protocol family (e.g. TCP, UDP, UCMP), port number and address
  range.
 
-> account
+> Account
 
 NeCTAR and OpenStack terminology. A synonym for "project" and "tenant".
 
@@ -49,7 +93,7 @@ See service endpoint.
 
 The package manager used on Debian family distros.
 
-> amanda
+> Amanda
 
 Advanced Maryland Automatic Network Disk Archive - an open source backup system
 
@@ -70,21 +114,21 @@ add definition here!
 
 add definition here!
 
-> attach
+> Attach
 
 An OpenStack volume can be attached to an OpenStack instance to provide it with
  additional disk storage.
 
-> authentication
+> Authentication
 
 The process of establishing that an agent (i.e. a person, or other entity) in a
  computer system is who they say they are.
 
-> authorization
+> Authorization
 
 See access control.
 
-> availability zone
+> Availability Zone (or AZ)
 
 OpenStack terminology - a logical grouping of compute nodes within a region
 
@@ -100,9 +144,9 @@ See availability zone.
 
 Microsoft's commercial cloud computing platform / service.
 
-> backup
+> Backup
 
-add definition here!
+define me!
 
 > Barrine
 
@@ -112,18 +156,14 @@ An HPC system run by UQ/RCC.
 
 The Biodiversity and Climate Change Virtual Laboratory.
 
-> boot
+> Boot
 
 Bootstrap a computer. Bootstrapping is the process in which a computer goes from
  having empty memory to having the operating system loaded and running.
  (C.f the phrase - "pulling yourself up by your own bootstraps").  See also
  reboot, soft boot, hard boot.
 
-> Boto
-
-add definition here!
-
-> bricked
+> Bricked
 
 Colloquialism: describes a system that has been damaged in a way that
 permanently locks out some or all functionality.
@@ -140,7 +180,7 @@ RDSI terminology - Collection Development Storage.
 
 add definition here!
 
-> cell
+> Cell
 
 OpenStack terminology
 
@@ -157,7 +197,7 @@ performance, reliability and scalability."  Volume Storage is typically
 
 > CephFS
 
-add definition here!
+define me!
 
 > Chef
 
@@ -172,7 +212,14 @@ Classless Internet Domain Routing notation - a concise notation for writing IPv4
 
 The OpenStack Volume Storage management service.
 
-> cloud computing
+> The Cloud
+
+".."Cloud" is a buzzword that vaguely suggests the promise and convenience of 
+being able to access files from anywhere. But the reality is that the cloud is 
+hardly floating like mist above our heads.  It's a physical infrastructure, its
+many computers housed in massive warehouses all over the world.." Gizmodo.
+
+> Cloud Computing
 
 Computation performed using machines that are "out there in the cloud".
 Generally speaking this refers to computational resources implemented on
@@ -181,7 +228,7 @@ organizations.
 
 > CloudMan
 
-add definition here!
+define me!
 
 > CloudStor
 
@@ -193,47 +240,47 @@ A free cloud-based file transfer service provided by AARNET. Allows researchers
 An enhanced version of CloudStor that supports secure long-term file storage.
  (Free for AAF users, up to 100Gb per user.)
 
-> cluster-as-a-service
+> Cluster-as-a-service
 
 Implementing HPC-style compute facilities on top of cloud computing
 infrastructure.
 
-> collection
+> Collection
 
 RDSI terminology
 
-> collection vm
+> Collection VM
 
 RDSI collections in QRIScloud are exposed via virtual machines that run access
 services; e.g. scp, sftp, rsync, WebDAV & GridFTP.
 
-> compute node
+> Compute Node
 
 OpenStack terminology for a physical computer used to run virtual machines.
 It will typically have multiple CPUs and shared memory, and one or more network
- interfaces.  It may also have on-node disc storage.
+interfaces.  It may also have on-node disc storage.
 
 > Conductor
 
-add definition here!
+define me!
 
 > Container
 
 OpenStack terminology - Object Storage objects are held in containers.
 
-> copyleft
+> Copyleft
 
 A form of software licensing that uses Copyright Law as the legal basis for
  granting and enforcing license terms.
 
 > Creative Commons
 
-  A family of licenses originally designed for creative (non-software) works,
+A family of licenses originally designed for creative (non-software) works,
   that is often used for published scientific data.
 
 > CVL
 
-   Characterization Virtual Laboratory - A NeCTAR Virtual Laboratory project.
+Characterization Virtual Laboratory - A NeCTAR Virtual Laboratory project.
 
 > DaRIS
 
@@ -244,14 +291,14 @@ add definition here!
 The NeCTAR Dashboard is the main web-based interface for managing NeCTAR
 virtuals.  The OpenStack component service for the dashboard is called Horizon
 
-> data centre
+> Data Centre
 
 A place where a large collection of shared computing equipment is housed.
 
-> data repository
+> Data Repository
 
 A system or service that provides systematic data management services. More
- than just "a shared fileserver".
+than just "a shared fileserver".
 
 > .deb
 
@@ -267,29 +314,29 @@ Debian, Ubuntu, Mint and many lesser known but similar linux distributions.
 
 > Director
 
-add definition here!
+define me!
 
 > Distribution (linux)
 
-Typically refers to an operating system
-distribution, comprising the core OS itself, and compendium of utilities,
-services and applications that run on the OS.
+Typically refers to an operating system distribution, comprising the Linux 
+Kernel itself, and compendium of utilities, services and applications that run
+ on the OS.  May inherit frameworks and software from other distributions.
 
-> distro
+> Distro
 
 A contraction of "distribution".
 
 > DMF
 
-add definition here!
+define me!
 
 > Docker
 
-add definition here!
+define me!
 
 > DropBox
 
-add definition here!
+define me!
 
 > Drupal
 
@@ -297,7 +344,7 @@ A popular open source website / content management system.
 
 > DSpace
 
-add definition here!
+define me!
 
 > DuraSpace
 
@@ -306,43 +353,43 @@ projects
 
 > EC2
 
-   Amazon's "Elastic Compute Cloud".
+Amazon's "Elastic Compute Cloud".
 
 > EC2 Credentials
 
-   One of the kinds of credentials you can obtain from the NeCTAR Dashboard.
+One of the kinds of credentials you can obtain from the NeCTAR Dashboard.
 
-> elastic computing
+> Elastic Computing
 
-add definition here!
+define me!
 
-> ephemeral storage
+> Ephemeral Storage
 
 Disc storage associated with a NeCTAR virtual that goes away when the virtual is
  terminated
 
 > ERSA
 
-  eResearch SA runs the South Australian node of the NeCTAR research cloud.
+eResearch SA runs the South Australian node of the NeCTAR research cloud.
 
 > espace
 
-    The UQ library managed system for UQ research publications.
+The UQ library managed system for UQ research publications.
 
 > eSpaces
 
-   A web-based collaboration system for the Australian academic community. 1
+A web-based collaboration system for the Australian academic community. 1
 
 > FAQ
 
-   A Frequently Asked Question. A software project or an IT support organization
-    will often create an online FAQ document consisting of a number of such
-    questions, and their answers.
+A Frequently Asked Question. A software project or an IT support organization
+will often create an online FAQ document consisting of a number of such
+questions, and their answers.
 
 > Fedora
 
-    RedHat's "bleeding edge" Linux distro.  (It was called Fedora Core in early
-    releases)
+RedHat's "bleeding edge" Linux distro.  (It was called Fedora Core in early
+releases)
 
 > Fedora Repository
 
@@ -353,62 +400,62 @@ Disc storage associated with a NeCTAR virtual that goes away when the virtual is
 
 > Fez
 
-add definition here!
+define me!
 
 > Flashlight
 
-    An RCC / QCIF HPC system designed for data intensive computation.
+An RCC / QCIF HPC system designed for data intensive computation.
 
-> flavor
+> Flavor
 
-    An OpenStack term for virtual sizing specification.  Gives the amount of
-     memory, number of VCPUs and ephemeral disc size.
+An OpenStack term for virtual sizing specification.  Gives the amount of
+memory, number of VCPUs and ephemeral disc size.
 
 > Galaxy
 
-add definition here!
+define me!
 
-> ganglia
+> Ganglia
 
-add definition here!
+define me!
 
 > Git
 
-   The most popular distributed version control system.
+The most popular distributed version control system.
 
 > Github
 
-    The most popular free open-source project hosting site.
+The most popular free open-source project hosting site.
 
 > Glance
 
-    OpenStack's Image store service.
+OpenStack's Image store service.
 
 > Globus GridFTP
 
-add definition here!
+define me!
 
 > GNU
 
-   Stands for "GNU is Not Unix".  Originally a project that aimed to provide a
-   complete open-source replacement for the (proprietary) AT&T Unix operating
-   system.  GNU now focus mostly on things "above the kernel".
+Stands for "GNU is Not Unix".  Originally a project that aimed to provide a
+complete open-source replacement for the (proprietary) AT&T Unix operating
+system.  GNU now focus mostly on things "above the kernel".
 
 > Google Drive
 
-add definition here!
+define me!
 
 > GPL
 
-   The GNU Public License. One of the most important open source software
-   licenses. In fact there are a number of variants of GPL currently in use:
-   GPL2, GPL3, LGPL, Affero
+The GNU Public License. One of the most important open source software
+licenses. In fact there are a number of variants of GPL currently in use:
+GPL2, GPL3, LGPL, Affero
 
 > GPU
 
-   Graphics Processing Unit - primarily designed for high-speed graphics process
-    (e.g. on a video card), GPUs can also be exploited for certain kinds of
-    parallel computation.
+Graphics Processing Unit - primarily designed for high-speed graphics process
+(e.g. on a video card), GPUs can also be exploited for certain kinds of
+parallel computation.
 
 > GPGPU
 
@@ -416,67 +463,71 @@ add definition here!
 
 > Grizzly
 
-   The name of an OpenStack release.
+The name of an OpenStack release.
 
 > Grizzly
 
-   A scalable web server framework implemented in Java (not servlet based).
+A scalable web server framework implemented in Java (not servlet based).
 
 > GVL
 
-   Genomics Virtual Laboratory - A NeCTAR virtual laboratory project.
+Genomics Virtual Laboratory - A NeCTAR virtual laboratory project.
 
-> hard reboot
+> Hard Reboot
 
-   A reboot in which no attempt is made to shut down cleanly prior to booting.
- This has an increased risk of damage to file systems or application data on the
- instance.
+A reboot in which no attempt is made to shut down cleanly prior to booting.
+This has an increased risk of damage to file systems or application data on the
+instance.
 
 > Havana
 
-    The name of an OpenStack release.
+The name of an OpenStack release.
 
 > Heat
 
-  The orchestration service for OpenStack. It is designed to launch multiple
+The orchestration service for OpenStack. It is designed to launch multiple
 composite cloud applications based on templates in the form of text files that
 can be treated like code.
 
 > HFS
 
-   Hierarchical File Storage (usually) or Hierarchical File System.
+Hierarchical File Storage (usually) or Hierarchical File System.
 
 > HPC
 
-   High Performance Computing systems - typically refers to "high end" computing
- hardware designed for doing "large" computational tasks.
+High Performance Computing systems - typically refers to "high end" computing
+hardware designed for doing "large" computational tasks.
 
 > HOW-TO
 
-    A document written for users that tries to explain "how to" do a specific
-task or solve a specific problem.
+A document written for users that tries to explain "how to" do a specific
 
 > Hyper-V
 
-   Microsoft's main virtualization technology offering.
+Microsoft's main virtualization technology offering.
 
-> hypervisor
+> Hypervisor
 
-    The software that performs the core management of virtual machines in a
+The software that performs the core management of virtual machines in a
 virtualized computing system.
+
+> IaaS
+
+Infrastructure as a service (IaaS) is a type of cloud computing in which a 
+third-party provider hosts virtualized computing resources over the Internet.
 
 > Icehouse
 
-  The name of an OpenStack release.
+The name of an OpenStack release.
 
-> image
+> Image
 
- A starting state for a new "clean" virtual machine.  Typical consists of an
+A starting state for a new "clean" virtual machine.  Typical consists of an
 image of a file system with freshly installed operating system and applications.
 
-> image store
+> Image Store
 
-   The place where OpenStack images are held.
+The place where OpenStack images are held.
 
 > Instance
 
@@ -484,43 +535,43 @@ OpenStack terminology for a virtual machine
 
 > Intel
 
-add definition here!
+define me!
 
 > Intersect
 
-add definition here!
+define me!
 
 > Internet
 
-add definition here!
+define me!
 
 > IP
 
-    The Internet Protocol (IP) is the principal communications protocol in the
- Internet protocol suite for relaying datagrams (also knows as messages or
+The Internet Protocol (IP) is the principal communications protocol in the
+Internet protocol suite for relaying datagrams (also knows as messages or
 packets) across network boundaries. Transmission and the routing of IP packets
- are what makes the Internet work.
+are what makes the Internet work.
 
 > IPv4
 
-  The (currently) dominant version of IP in use at the moment.  IPv4 is limited
- by its design to 232 distinct addresses. The IPv4 address space is "full" in
+The (currently) dominant version of IP in use at the moment.  IPv4 is limited
+by its design to 232 distinct addresses. The IPv4 address space is "full" in
 most regions, and networking providers are rolling out support of the next
 generation (IPv6).
 
 > IPv6
 
-  The successor version of IP, which supports 264 addresses.
+The successor version of IP, which supports 264 addresses.
 
 > iSCSI
 
- Internet Small Computer System Interface, an IP-based storage networking
+Internet Small Computer System Interface, an IP-based storage networking
 standard for linking data storage facilities.
 
 > Issue Tracking System
 
- An issue tracker is a system that is used to record "issues" in a software
- product, and track their resolution. Issues can include bugs, requested
+An issue tracker is a system that is used to record "issues" in a software
+product, and track their resolution. Issues can include bugs, requested
 enhancements or planned features.
 
 > IVEC
@@ -529,7 +580,7 @@ add definition here!
 
 > JSON
 
-add definition here!
+define me!
 
 > Juju
 
@@ -545,85 +596,85 @@ add definition here!
 
 > Kepler
 
-    A computational workflow engine.
+A computational workflow engine.
 
-> key pair
+> Key pair
 
-  A matching pair of public and private keys; see public key encryption.
+A matching pair of public and private keys; see public key encryption.
 
 > Keystone
 
-  Keystone is an OpenStack service that provides Identity, Token, Catalog and
- Policy services for use specifically by projects in the OpenStack family.
+Keystone is an OpenStack service that provides Identity, Token, Catalog and
+Policy services for use specifically by projects in the OpenStack family.
 
 > Kilo
 
-  The name of an OpenStack release.
+The name of an OpenStack release.
 
 > KVM
 
-   Kernel-based Virtual Machine(s) - a virtualization framework supported by
- modern Linux kernels.
+Kernel-based Virtual Machine(s) - a virtualization framework supported by
+modern Linux kernels.
 
-> launch
+> Launch
 
 OpenStack terminology for creating a new virtual machine instance.  There are
- multiple steps in the launch process; e.g. "scheduling" where the system
+multiple steps in the launch process; e.g. "scheduling" where the system
 decides which cell, aggregate & compute node to put the instance on, "building"
- which creates the virtual machines, allocates network addresses, etcetera, and
- "booting" where the virtual machine is started up.
+which creates the virtual machines, allocates network addresses, etcetera, and
+"booting" where the virtual machine is started up.
 
 > LDAP
 
-add definition here!
+define me!
 
 > Linux
 
- The leading open-source operating system, originally developed by Linus
+The leading open-source operating system, originally developed by Linus
 Torsvalds.  (What we normally call Linux is better labelled GNU / Linux,
 reflecting the fact that the core user libraries and utilities are provided
- by GNU projects.)  Linux is "Unix-like", but contains no Unix code.
+by GNU projects.)  Linux is "Unix-like", but contains no Unix code.
 
 > LiveArc
 
-   Another name for Mediaflux
+Another name for Mediaflux
 
 > LTS
 
-   Long Term Support - Ubuntu LTS releases are
+Long Term Support - Ubuntu LTS releases are
 
 > Manilla
 
-add definition here!
+define me!
 
 > MariaDB
 
-   A fork of MySQL that is managed by the original MySQL founder and developers.
+A fork of MySQL that is managed by the original MySQL founder and developers.
 
 > MASSIVE
 
-add definition here!
+define me!
 
 > Multi-modal
 
- Australian Sciences Imaging and Visualisation Environment. A GPU-based HPC
- system run by Monash.
+Australian Sciences Imaging and Visualisation Environment. A GPU-based HPC
+system run by Monash.
 
 > MATLAB
 
-add definition here!
+define me!
 
 > Mediaflux
 
-add definition here!
+define me!
 
 > memcache
 
-add definition here!
+define me!
 
 > Mint
 
-add definition here!
+define me!
 
 > MPI
 
@@ -636,11 +687,11 @@ An open source SQL database system.  Currently owned by Oracle Inc.
 
 > MyTardis
 
-add definition here!
+define me!
 
 > Nagios
 
-add definition here!
+define me!
 
 > NCI
 
@@ -656,7 +707,7 @@ The NeCTAR Research Cloud
 
 > NeCTAR RC Support
 
-add definition here!
+define me!
 
 > NeCTAR VLs
 
@@ -668,7 +719,7 @@ computational science facilities in the NeCTAR RC to support particular research
 
 OpenStack "networking as a service".  Neutron manages the network interface
 devices (e.g., vNICs) used by other Openstack instances.  Neutron will supersede
- "nova network" 1
+ "nova network"
 
 > NFS
 
@@ -677,20 +728,18 @@ devices (e.g., vNICs) used by other Openstack instances.  Neutron will supersede
 
 > Nimrod
 
-add definition here!
+define me!
 
 > Node
 
 NeCTAR terminology - a Node (or cloud node) is one of the "data centre
 aggregations" that comprise the NeCTAR research cloud.   1
 
+The term "node" can also refer to a compute node; see above.
+
 > NoDE
 
 RDSI terminology
-
-> node
-
-The term "node" can also refer to a compute node; see above.
 
 > Node Zero
 
@@ -698,100 +747,118 @@ The NeCTAR RC node managed by University of Melbourne. (Obsolete terminology)
 
 > Nova
 
-add definition here!
+define me!
 
 > Nova compute
 
-add definition here!
+define me!
 
 > Nova cells
 
-add definition here!
+define me!
 
 > Nova network
 
-add definition here!
+define me!
 
 > NSP
 
 Nectar Servers Program - provides managed servers for eResearch projects.   1
 
-> object
+> Object
 
 NeCTAR & OpenStack terminology - the unit of storage in object storage
 
-> object storage
+> Object Storage
 
 NeCTAR & OpenStack terminology - a kind of data storage where "objects" are
 saved and retrieved using a RESTful API. Object Storage is typically replicated
- with copies held at (at least) 3 locations.
+with copies held at (at least) 3 locations.
 
-> object store
+> Object Store
 
-add definition here!
+define me!
 
 > Omero
 
-add definition here!
+define me!
 
-> open source
+> Open Source
 
 Open source refers to a computer program in which the source code is available
-to the general public for use and/or modification from its original design.  1
+to the general public for use and/or modification from its original design.
 
 > OpenStack
 
-A project that is developing an Open Source framework for doing Cloud Computing
-.  Also the name for the framework.  1, 2
+"..OpenStack is a free and open-source cloud computing software platform. Users 
+primarily deploy it as an infrastructure as a service (IaaS) solution. The 
+technology consists of a series of interrelated projects that control pools of
+processing, storage, and networking resources throughout a data center which
+users manage through a web-based dashboard, command-line tools, or a RESTful
+API..." [Wikipedia]9https://en.wikipedia.org/wiki/OpenStack)
 
-> OpenStack APIs
+> OpenStack Clients
 
-add definition here!
-
-> OpenStack clients
-
- These are tools that you can install on a system (e.g. your desktop or laptop)
+These are tools that you can install on a system (e.g. your desktop or laptop)
 for interacting with the OpenStack services.
 
 > OpenSUSE
 
-     operating system
+operating system
 
 > ORM
 
-   Object-Relational Mapping - a mapping from a conventional (table-based)
+Object-Relational Mapping - a mapping from a conventional (table-based)
 database to object-oriented programming.
 
 > OS
 
-    A contraction of Operating System
+A contraction of Operating System
 
-> overcommit
+> Overcommit
 
-    A way of dealing with resource shortage in a virtual computing framework.
-  (Many virtuals do not use all of the resources allocated to them all of the
- time.)
+A way of dealing with resource shortage in a virtual computing framework.
+(Many virtuals do not use all of the resources allocated to them all of the
+time.)
 
-> password
+> Password
 
-  A secret (e.g. known to the user) that is used for authentication purposes.
+A secret (e.g. known to the user) that is used for authentication purposes.
 
-> passphrase
+> Passphrase
 
-    A longer secret that is typically used to secure a private key.
+A longer secret that is typically used to secure a private key.
 
 > Pausey
 
-    The Pausey Centre runs the Western Australian node of the NeCTAR research
+The Pausey Centre runs the Western Australian node of the NeCTAR research
+
+> Overcommit
+
+A way of dealing with resource shortage in a virtual computing framework.
+(Many virtuals do not use all of the resources allocated to them all of the
+time.)
+
+> Password
+
+A secret (e.g. known to the user) that is used for authentication purposes.
+
+> Passphrase
+
+A longer secret that is typically used to secure a private key.
+
+> Pausey
+
+The Pausey Centre runs the Western Australian node of the NeCTAR research
 cloud.
 
 > PBS
 
-       persistent store
+define me!
 
 > Panasas
 
-add definition here!
+define me!
 
 > Plone
 
@@ -800,72 +867,72 @@ A popular website / content management / wiki system.  Espaces is implemented
 
 > Polaris
 
-   The tier3 data center that houses the second stage QRIScloud infrastructure.
-  (No, they don't offer site tours.)
+The tier3 data center that houses the second stage QRIScloud infrastructure.
+(No, they don't offer site tours.)
 
 > pQERN
 
- The predecessor of QERN.  (Decommissioned)
+The predecessor of QERN.  (Decommissioned)
 
 > Prentice
 
-  The first stage QRISCloud infrastructure was housed in the UQ Prentice
- building.
+The first stage QRISCloud infrastructure was housed in the UQ Prentice
+building.
 
-> private key
+> Private Key
 
-   See key pair, public key encryption.
+See key pair, public key encryption.
 
 > Project
 
-   The NeCTAR term for a "resource container"; i.e. what you get when you are
+The NeCTAR term for a "resource container"; i.e. what you get when you are
 granted a NeCTAR allocation. A project "owns" virtual machine instances,
 snapshots and various kinds of storage, and may be shared by multiple users.
 (See also "tenant" and "account") 1
 
-> public key
+> Public Key
 
-    See key pair, public key encryption.
+See key pair, public key encryption.
 
-> public key encryption
+> Public Key Encryption
 
- A kind of encryption system based on "one-way functions". These systems depend
+A kind of encryption system based on "one-way functions". These systems depend
 on a public / private key pair, where the public key is for encryption and the
- private key is for a decryption. Knowledge of one key does not allow you to
+private key is for a decryption. Knowledge of one key does not allow you to
 determine the other one.
 
-> puppet
+> Puppet
 
-add definition here!
+define me!
 
-> putty
+> Putty
 
- A widely used Windows tool for accessing a command shell on a remote
- Unix/Linux system.  Putty supports SSH.
+A widely used Windows tool for accessing a command shell on a remote
+Unix/Linux system.  Putty supports SSH.
 
-> python
+> Python
 
-    A programming language. (OpenStack is largely implemented in python.)
+A programming language. (OpenStack is largely implemented in python.)
 
 > QCIF
 
-  Queensland Cyber Infrastructure Foundation  1
+Queensland Cyber Infrastructure Foundation.
 
 > Qcloud
 
-    The previous name for QRIScloud (
+The previous name for QRIScloud
 
 > QERN
 
-  The predecessor of Qcloud / QRIScloud implemented by QCIF.  (Decommissioned)
+The predecessor of Qcloud / QRIScloud implemented by QCIF.  (Decommissioned)
 
 > QRIScloud
 
-The overall name for the QCIF's cloud computing systems.    1
+The overall name for the QCIF's cloud computing systems.
 
 > QRIScompute
 
-   The "compute" component of QRIScloud. This includes the QRIScloud NeCTAR RC
+The "compute" component of QRIScloud. This includes the QRIScloud NeCTAR RC
 facilities, special compute, elastic compute and Kepler / Nimrod based services.
 
 > QRISdata
@@ -875,136 +942,132 @@ The "data" component of QRIScloud. This includes QCIF's RDSI storage and data
 
 > Quadrant
 
-add definition here!
+define me!
 
-> quota
+> Quota
 
-add definition here!
+define me!
 
 > R
 
- A programming language
+A programming language
 
 > RAID
 
-  Redundant Array of Independent Discs. A way of putting together disc storage
- that provides a degree of recoverability in the event of the loss of disc
+Redundant Array of Independent Discs. A way of putting together disc storage
+that provides a degree of recoverability in the event of the loss of disc
 media.   1
 
 > RDA
 
 Research Data Australia - A project of ANDS.
+
 > RDP
 
    Microsoft's Remote Desktop Protocol.
 
 > RDSI
 
-  Research Data Storage Infrastructure - A organization / project funding the
+Research Data Storage Infrastructure - A organization / project funding the
 provision of storage for "research data collections" to the Australian academic
 community.
 
-> reboot
+> Reboot
 
-add definition here!
+define me!
 
-> rebuild
+> Rebuild
 
-add definition here!
+define me!
 
 > ReDBox
 
-add definition here!
+define me!
 
 > Redhat Inc
 
-    A leading open source software vendor that produces RHEL and Fedora, as well
- as other software products.    1
+A leading open source software vendor that produces RHEL and Fedora, as well
+as other software products.
 
 > ReDS
 
-  RDSI terminology - Research Data Storage.   1
+RDSI terminology - Research Data Storage.
 
-> replica
+> Replica
 
-   A copy of (say) a file or collection.
+A copy of (say) a file or collection.
 
-> replication
+> Replication
 
-   A process for creating or updating a replica.
+A process for creating or updating a replica.
 
-> rescue
+> Rescue
 
-    As system administration terminology: a procedure for recovering a system
+As system administration terminology: a procedure for recovering a system
 that won't boot properly.
 
-> As
+> Research Data Management
 
- OpenStack terminology: a function of Nova that provides a possible way of
-recovering a damaged instance.
-
-> research data management
-
-  The topic / problem-space of storing and curating the data outputs of
- (academic) research.  Aspects include safe storage, metadata, data publication,
- data discovery, access control & ethical considerations, provenance & audit,
+The topic / problem-space of storing and curating the data outputs of
+(academic) research.  Aspects include safe storage, metadata, data publication,
+data discovery, access control & ethical considerations, provenance & audit,
 and long term archival considerations.
 
-> resize
+> Resize
 
-add definition here!
+define me!
 
 > REST / RESTful
 
-    Representational state transfer (REST) is an architectural style for
- implementing web-based system. RESTful APIs are designed to be easy to use by
- both web browsers (e.g. from Javascript) and from stand-alone clients and
+Representational state transfer (REST) is an architectural style for
+implementing web-based system. RESTful APIs are designed to be easy to use by
+both web browsers (e.g. from Javascript) and from stand-alone clients and
 servers. OpenStack APIs are RESTful.   1
 
 > RESTful service
 
-   A service that exposes RESTful APIs.
+A service that exposes RESTful APIs.
 
 > RHEL
 
-  Redhat Enterprise Linux.  The flagship product of RedHat Inc. RHEL distros are
- "paid-for-support" Linux aimed at the "enterprise computing" market.
+Redhat Enterprise Linux.  The flagship product of RedHat Inc. RHEL distros are
+"paid-for-support" Linux aimed at the "enterprise computing" market.
 
 > RHEL family
 
-   RHEL, CentOS and Scientific Linux.  (Amazon Linux is pretty similar.)
+RHEL, CentOS and Scientific Linux.  (Amazon Linux is pretty similar.)
 
 > RPM   Redhat Package Manager format.
 
-add definition here!
+define me!
 
 > rsync
 
- A standard Unix / Linux utility for incrementally copying changes between file
- trees; i.e. "synchronizing" them.
+A standard Unix / Linux utility for incrementally copying changes between file
+trees; i.e. "synchronizing" them.
 
 > S3
 
-add definition here!
+define me!
 
 > SaaS
 
-  Software as a Service.
+Software as a Service.
 
 > Salt
 
-add definition here!
+define me!
 
 > Samba
 
- An open source reimplementation of the Windows fileserver technology; e.g. it
+An open source reimplementation of the Windows fileserver technology; e.g. it
 can store Windows "shares" on Linux systems.
 
 > SAML
 
-  Security Assertion Markup Language (SAML, pronounced sam-el) is an XML-based
- data format for exchanging authentication and authorization data between
-parties.  1
+Security Assertion Markup Language (SAML, pronounced sam-el) is an XML-based
+data format for exchanging authentication and authorization data between
+parties.
 
 > Scientific Linux / SL Scientific Linux
 
@@ -1013,41 +1076,41 @@ computing".  SL is "for free", but with no support.
 
 > scp
 
-   A Unix/Linux command for copying files and file trees over SSH.
+A Unix/Linux command for copying files and file trees over SSH.
 
 > service
 
-add definition here!
+define me!
 
-> service endpoint
+> Service Endpoint
 
-  Typically a web URL that can be used by an application to access a service.
+Typically a web URL that can be used by an application to access a service.
 (Synonym: API endpoint.)
 
 > Security Group
 
-add definition here!
+define me!
 
 > SFTP
 
-add definition here!
+define me!
 
 > SGI
 
-add definition here!
+define me!
 
-> shared memory
+> Shared Memory
 
- Computer memory regions that can be accessed by different processors
+Computer memory regions that can be accessed by different processors
 (or processes) in computer system.
 
 > Shibboleth
 
-add definition here!
+define me!
 
-> shutdown
+> Shutdown
 
-add definition here!
+define me!
 
 > SLES
 
@@ -1055,18 +1118,18 @@ SUSE Linux Enterprise Server - a paid-for Linux distro. 1, 2
 
 > SMB
 
-   The Windows network file system protocol.
+The Windows network file system protocol.
 
-> snapshot
+> Snapshot
 
-  OpenStack terminology for an image produced from an active (typically not
+OpenStack terminology for an image produced from an active (typically not
 "clean") virtual instance.
 
 > SSH
 
-   A protocol and tools for establishing secure "shell" sessions over the
+A protocol and tools for establishing secure "shell" sessions over the
 network.  SSH encrypts the data transferred, and supports user authentication
- using public/private keys.  See also "putty".
+using public/private keys.  See also "putty".
 
 > Solaris
 
@@ -1076,13 +1139,9 @@ A proprietary Unix system produced by Sun Microsystems, and now Oracle.
 
 A widely used non-distributed version control system.
 
-> support ticket
+> Suspend
 
-add definition here!
-
-> suspend
-
-add definition here!
+define me!
 
 > Swift
 
@@ -1090,35 +1149,47 @@ The OpenStack object storage API, and associated command-line tool.
 
 > tar
 
-   The standard file archive utility (and format) for Unix, Linux and related
+The standard file archive utility (and format) for Unix, Linux and related
 platforms.  (Analogous to ZIP files on Windows.)
 
-> tenant
+> Tenant
 
-    Openstack terminology - "isolated resource containers forming the principal
- organizational structure within the Compute service".  Note: NeCTAR uses /
- prefers the term "project".
+Openstack terminology - "isolated resource containers forming the principal
+organizational structure within the Compute service".  Note: NeCTAR uses /
+prefers the term "project".
 
-> terminate
+> Terminate
 
 OpenStack terminology - permanently destroy an Instance and its ephemeral
 storage.
 
 > TERN
 
-add definition here!
+define me!
 
-> ticket
+> Ticket
 
 Synonym for support ticket
 
 > tier n storage
 
-add definition here!
+define me!
 
 > tier n support
 
-add definition here!
+define me!
+
+> Ticket
+
+Synonym for support ticket
+
+> Tier n storage
+
+define me!
+
+> Tier n support
+
+define me!
 
 > IT support terminology
 
@@ -1152,118 +1223,118 @@ add definition here!
 
 > Ubuntu
 
-    A Debian based Linux distro produced by Canonical, aimed primarily at the
- desktop computing.  Ubuntu is for-free, though paid support is available.
+A Debian based Linux distro produced by Canonical, aimed primarily at the
+desktop computing.  Ubuntu is for-free, though paid support is available.
 
 > Unix
 
-  A proprietary operating system for "minicomputers" originally written by Bell
- Labs / AT&T in the 1970s.  Many versions of Unix have been produced by many
+A proprietary operating system for "minicomputers" originally written by Bell
+Labs / AT&T in the 1970s.  Many versions of Unix have been produced by many
 companies over the years.
 
 > URI / URL
 
- Universal Resource Identifier / Universal Resource Locator.
+Universal Resource Identifier / Universal Resource Locator.
 
 > Vagrant
 
-   A desktop virtualization framework aimed at supporting transient virtual
+A desktop virtualization framework aimed at supporting transient virtual
 machine instances.
 
 > VCPU
 
-  OpenStack terminology - a Virtual CPU.
+OpenStack terminology - a Virtual CPU.
 
 > VCPU hours
 
-add definition here!
+define me!
 
 > Versi
 
-add definition here!
+define me!
 
 > VicNode
 
-add definition here!
+define me!
 
 > virtual
 
-   Contraction of "virtual machine".
+Contraction of "virtual machine".
 
 > Virtual Barrine
 
-   A project to use "cluster as a service" technology to build a cluster in
- QRIScloud.
+A project to use "cluster as a service" technology to build a cluster in
+QRIScloud.
 
-> virtual machine
+> Virtual Machine (or VM)
 
-   A "computational element" that "thinks" it is a real computer with control of
- its own (virtual) reseources, but is actually running under the control of
- something else.  In the cloud computing context, virtual machines run directly
+A "computational element" that "thinks" it is a real computer with control of
+its own (virtual) reseources, but is actually running under the control of
+something else.  In the cloud computing context, virtual machines run directly
 on real computer hardware (i.e. they execute native instructions at normal clock
- speed), but access to system resources is "mediated".
+speed), but access to system resources is "mediated".
 
-> virtual memory
+> Virtual Memory
 
-add definition here!
+define me!
 
 > VM
 
-    Either a contraction of "virtual machine" or "virtual memory".
+Either a contraction of "virtual machine" or "virtual memory".
 
 > VMware
 
-    A commercial virtualization company, and the name of their main product
- line.
+A commercial virtualization company, and the name of their main product
+line.
 
 > VNC
 
-add definition here!
+define me!
 
-> volume
+> Volume
 
-add definition here!
+define me!
 
 > Volume Storage
 
-add definition here!
+define me!
 
-> wiki
+> Wiki
 
-add definition here!
+define me!
 
 > Windows
 
-   A generic name for Microscoft's operating systems.
+A generic name for Microscoft's operating systems.
 
 > WinSCP
 
-    A popular open source file transfer tool for Windows.
+A popular open source file transfer tool for Windows.
 
-> workflow
+> Workflow
 
-add definition here!
+define me!
 
 > X11
 
-add definition here!
+define me!
 
 > x86
 
-   The most common instruction set architecture for 32 bit computers.
+The most common instruction set architecture for 32 bit computers.
 
 > x86-64
 
-    The 64bit version of x86.
+The 64bit version of x86.
 
 > XML
 
-   Stands for eXtensible Markup Language.
+Stands for eXtensible Markup Language.
 
 > Xen
 
 A virtualization framework supported by modern Linux kernels.
 
-> yum
+> Yum
 
 The package manager used on RHEL family and Fedora distros.
