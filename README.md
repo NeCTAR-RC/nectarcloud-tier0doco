@@ -345,6 +345,7 @@ Note; if you want to get really clever, you can install mdl - the same markdown
 parsing tool that Jenkins uses - that way you don't need to bother Jenkins for
 markdown related issues.  You'll probably need ubuntu for this;
 
+`$ sudo apt-get install ruby`
 `$ sudo gem install mdl`
 `$ mdl README.md`
 `README.md:4: MD013 Line length`
