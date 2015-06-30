@@ -313,6 +313,11 @@ review.rc.nectar.org.au.  In the first instance, that will probably fail.
 
 You will then need to [create an account with Gerrit](https://wiki.rc.nectar.org.au/wiki/SettingUpGerrit)
 
+Specifically, you need to make sure that your gerrit account (and it's
+associated username) have permissions to contribute to the tier0doco project.
+If you `git review` fails with an authentication error, then this is your
+issue.  [Log an issue with core services to have your account added.](http://support.rc.nectar.org.au/docs/support)
+
 ##### Who the heck is Jenkins
 
 It will happen sometimes that regardless how hard you try, somebody will find
