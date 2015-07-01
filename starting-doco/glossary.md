@@ -108,7 +108,8 @@ command, you can download and install any of it using a simple command.  Apt
 maintains a local database that tracks which packages you have installed and
 manages the additional packages your original package depends on (the
 "dependencies").  Before apt and other such package managers, managing
-dependencies was a difficult and manual process.
+dependencies was a difficult and manual process. Apt uses the .deb file format
+for distributing packages both inside and outside of package repositories.
 
 > AMD
 
@@ -262,13 +263,15 @@ OpenStack terminology for a physical computer used to run virtual machines.
 It will typically have multiple CPUs and shared memory, and one or more network
 interfaces.  It may also have on-node disc storage.
 
-> Conductor
-
-define me!
-
 > Container
 
-OpenStack terminology - Object Storage objects are held in containers.
+General Computing - a means by which to run multiple "things" inside a given
+computer and have those things isolated from each other and the computer itself.
+Similar in concept to Virtualisation, however not as broadly applicable because
+the containers must be the same operating system as the host itself.
+
+Containers may one day be possible within OpenStack, however it has been the
+main focus of that project to achieve scalable virtualisation.
 
 > Copyleft
 
@@ -284,18 +287,24 @@ A family of licenses originally designed for creative (non-software) works,
 
 Characterization Virtual Laboratory - A NeCTAR Virtual Laboratory project.
 
-> DaRIS
+> DaRIS (Distributed and Reflective Informatics System)
 
-add definition here!
+DaRIS is a subject-oriented informatics framework and capability developed
+primarily at the University of Melbourne. It is built with the commercial
+Mediaflux data operating system. DaRIS is mainly used to supply a repository to
+manage bio-medical imaging data.
+[DaRIS](http://nsp.nectar.org.au/wiki-its-r/doku.php?id=data_management:daris:about)
 
 > Dashboard
 
 The NeCTAR Dashboard is the main web-based interface for managing NeCTAR
-virtuals.  The OpenStack component service for the dashboard is called Horizon
+virtuals.  The OpenStack component service for the dashboard is called Horizon.
 
 > Data Centre
 
 A place where a large collection of shared computing equipment is housed.
+These expensive and high security installations are often hot and noisy and
+consume hard drives for breakfast.
 
 > Data Repository
 
@@ -304,19 +313,11 @@ than just "a shared fileserver".
 
 > .deb
 
-The Debian standard package format, also used by ubuntu.
+The Debian standard package format. See apt.
 
-> Debian
-
-A long-running Linux distro.
-
-> Debian family
+> Debian & family
 
 Debian, Ubuntu, Mint and many lesser known but similar linux distributions.
-
-> Director
-
-define me!
 
 > Distribution (linux)
 
