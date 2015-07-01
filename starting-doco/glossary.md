@@ -5,8 +5,8 @@ come with moving into the cloud.  Like for example, what is the cloud exactly?
 
 > The Cloud
 
-Honestly, getting a good definition of "cloud" is really hard.  The cloud is
-many things to many people, and it's somewhat a matter of perspective.  I asked
+Getting a good definition of "cloud" is hard.  The cloud is many things to many
+people, and it's somewhat a matter of perspective.  I asked
 the question on a sysadmin IRC channel once, and the answers i received caused
 as much debate and controversy as provided actual insight.
 
@@ -36,7 +36,7 @@ projects that control pools of processing, storage, and networking resources
 throughout a data center which users manage through a web-based dashboard,
 command-line tools, or a RESTful API..." [Wikipedia](https://en.wikipedia.org/wiki/OpenStack)
 
-Ok, and what's IaaS?  Good question, keep reading .. :)
+Ok, and what's IaaS? And RESTful? and API?? Good questions, keep reading .. :)
 
 ## Thanks
 
@@ -49,9 +49,7 @@ their
 > Access Control
 
 The process of determining if an (authenticated) agent is permitted to perform
-some action.  Synonym: authorization.  (Note: some IT texts make a distinction
-between access control and authorization, but take contradictory positions on
-which is which.)
+some action.  Synonym: authorization.
 
 > Access Group
 
@@ -64,13 +62,20 @@ rule allow network access to an instance from other hosts with a specified
 combination of protocol family (e.g. TCP, UDP, UCMP), port number and address
  range.
 
+At NeCTAR by the default security group applied to new instances does not
+contain an access rule for ssh.  Meaning that new users often find their new
+virtual machines inaccessable via ssh until they add the appropriate access
+rule.
+
 > Account
 
 NeCTAR and OpenStack terminology. A synonym for "project" and "tenant".
 
-> Active Directory
+> Active Directory (AD)
 
 Microsoft's directory service product; essentially LDAP enhanced with Kerberos.
+Most Microsoft Windows environments will use AD to centrally control
+ authentication.
 
 > AAF
 
@@ -93,30 +98,30 @@ people to use.)
 
 See service endpoint.
 
-> apt-get
+> apt
 
-The package manager used on Debian family distros.
-
-> Amanda
-
-Advanced Maryland Automatic Network Disk Archive - an open source backup system
+apt is the name of the package manager used by the Debian family
+(Debian/Ubuntu/Mint) of distros.  It is a simple and elegant way to install
+software on your Debian server.  Conceptually remote "repositories" contain
+massive amounts of software (called "packages" and by using the `apt-get`
+command, you can download and install any of it using a simple command.  Apt
+maintains a local database that tracks which packages you have installed and
+manages the additional packages your original package depends on (the
+"dependencies").  Before apt and other such package managers, managing
+dependencies was a difficult and manual process.
 
 > AMD
 
 Advanced Micro Devices Inc. A manufacturer of x86 and x86_64 compatible
-microprocessors.
-
-> ascp
-
-The Aspera command line copy program
+microprocessors.  In 2006 AMD aquired ATI, a manufacturer of high end graphics
+chipsets, maing AMD a powerhouse of CPU and GPU hardware.  A direct competitor
+to Intel.
 
 > Aspera
 
-add definition here!
-
-> Aspera Shares
-
-add definition here!
+"Aspera High-speed File Transfer Software that moves the world's data at maximum
+speed, regardless of file size, transfer distance or network conditions"
+[Aspera](http://asperasoft.com/technology/)
 
 > Attach
 
@@ -126,11 +131,8 @@ An OpenStack volume can be attached to an OpenStack instance to provide it with
 > Authentication
 
 The process of establishing that an agent (i.e. a person, or other entity) in a
- computer system is who they say they are.
-
-> Authorization
-
-See access control.
+ computer system is who they say they are.  The simple username and password
+is the most familiar means of authentication.
 
 > Availability Zone (or AZ)
 
@@ -148,33 +150,31 @@ See availability zone.
 
 Microsoft's commercial cloud computing platform / service.
 
-> Backup
-
-define me!
-
-> Barrine
-
-An HPC system run by UQ/RCC.
-
 > BCCVL
 
 The Biodiversity and Climate Change Virtual Laboratory.
 
 > Boot
 
-Bootstrap a computer. Bootstrapping is the process in which a computer goes from
- having empty memory to having the operating system loaded and running.
- (C.f the phrase - "pulling yourself up by your own bootstraps").  See also
- reboot, soft boot, hard boot.
+The boot (or "bootstrap") process is the means by which the computer starts
+itself up after the power button is pressed.  Ultimately booting is the process
+in which a computer goes from having empty memory to having the operating
+system loaded and running.
 
 > Bricked
 
 Colloquialism: describes a system that has been damaged in a way that
-permanently locks out some or all functionality.
+permanently locks out some or all functionality.  It's usually the consequence
+of some kind of firmware update that fails to run properly, or at all, meaning
+further remedial firmware updates are not possible.  The device is bricked when
+it can't be fixed and is effectively an expensive square shaped "brick".
 
 > Canonical
 
-The company that produces Ubuntu.
+Canonical Ltd. is a UK-based privately held computer software company founded
+(and funded) by South African entrepreneur Mark Shuttleworth to market
+commercial support and services for Ubuntu and related projects
+[Wikipedia](https://en.wikipedia.org/wiki/Canonical_(company))
 
 > CDS
 
@@ -182,11 +182,20 @@ RDSI terminology - Collection Development Storage.
 
 > Ceilometer
 
-add definition here!
+The OpenStack Ceilometer project aims to deliver a unique point of
+contact for billing systems to acquire all of the measurements they need to
+establish customer billing, across all current OpenStack core components.
+
+It is also a means by which to gather performance related metrics useful for the
+general management of the OpenStack environment in general.
 
 > Cell
 
-OpenStack terminology
+Cells are a means by which to partition an OpenStack
+compute cloud into groups.
+
+In the NeCTAR sense we use cells to identify the various nodes contributing to
+the NeCTAR cloud.
 
 > CentOS
 
