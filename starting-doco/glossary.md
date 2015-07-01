@@ -321,17 +321,34 @@ Debian, Ubuntu, Mint and many lesser known but similar linux distributions.
 
 > Distribution (linux)
 
-Typically refers to an operating system distribution, comprising the Linux
-Kernel itself, and compendium of utilities, services and applications that run
- on the OS.  May inherit frameworks and software from other distributions.
+Refers to a (ideally) homoginized release of the Linux Kernel and a
+compendium of utilities, services and applications that are nominally modified
+and tested to run well together, then given an odd name like "Mandriva" or
+"Suse" or "Debian".  May inherit concepts, frameworks and software
+from other distributions with or without attribution or other reciprical
+contribution.  Typically distributions attract a zealous user base
+who will willingly fight each other to the bitter death over not much at all.
+Some are funded by corporations, others by well meaning techno hippes or not
+by anyone at all.
 
 > Distro
 
-A contraction of "distribution".
+A contraction of "Distribution".
 
 > DMF
 
-define me!
+DMF is a Hierarchical Storage Management (HSM) system by SGI designed for
+the bulk storage of data. The basic premise is that fast storage is expensive so
+wouldn't it be cool if we could put only the data we actually use on the fast
+storage, and the rest can kind of trickle through less expensive storage layers.
+So the hierachy is in fact a sandwidge of storage technologies (usually ssd,
+hdd, tape) at each of which the storage cost per gigabyte decreases.  As data
+ages through the layers the usual trade off is speed, so ideally frequently used
+data stays on the faster storage layer.  Conversely, data which is seldom
+accessed is often archived off to tape where the cost per gigabyte is very low.
+Magical filesystems ideally make all of this invisible to users and
+applications.  Usually highly expensive and complicated, it's pretty awesome
+when it works. [SGI DMF](https://www.sgi.com/products/storage/idm/dmf.html)
 
 > Docker
 
