@@ -191,11 +191,13 @@ general management of the OpenStack environment in general.
 
 > Cell
 
-Cells are a means by which to partition an OpenStack
-compute cloud into groups.
+Cells are a means by which to partition an OpenStack compute cloud into groups.
 
-In the NeCTAR sense we use cells to identify the various nodes contributing to
-the NeCTAR cloud.
+At NeCTAR each site runs a different configuration, as a resource cells in an
+OpenStack Compute cells setup. This allows the NeCTAR nodes to do different
+things such as span multiple data centers, or run off compute node storage with a
+shared file system, or use on compute node storage with a non-shared file
+system.  It's also a way to partition tenants and accounts.
 
 > CentOS
 
@@ -205,16 +207,18 @@ A community-based rebadging of RHEL distros.  The result is "for free", but with
 > Ceph
 
 "Ceph is a unified, distributed storage system designed for excellent
-performance, reliability and scalability."  Volume Storage is typically
- implemented using Ceph.
+performance, reliability and scalability."  Volume and object storage
+are typically implemented using Ceph.
 
 > CephFS
 
-define me!
+A project aimed and making Ceph work akin to a traditional filesystem
+ala ext4 or xfs.  It is still considered experimental at this stage.
 
 > Chef
 
-A recipe based system configuration framework.
+A recipe based system configuration framework. A main competitor to Puppet, but
+also now to other such systems such as Ansible and Salt.
 
 > CIDR notation
 
@@ -227,31 +231,16 @@ The OpenStack Volume Storage management service.
 
 > The Cloud
 
-".."Cloud" is a buzzword that vaguely suggests the promise and convenience of
-being able to access files from anywhere. But the reality is that the cloud is
-hardly floating like mist above our heads.  It's a physical infrastructure, its
-many computers housed in massive warehouses all over the world.." Gizmodo.
-
-> Cloud Computing
-
-Computation performed using machines that are "out there in the cloud".
-Generally speaking this refers to computational resources implemented on
-commodity computer systems that are managed and owned by some other
-organizations.
-
-> CloudMan
-
-define me!
+A network of servers used to store, manage, and process data to achieve
+efficiencies of scale in completing various computational tasks.  They are
+typified by their automation, scalability and opacity.
 
 > CloudStor
 
 A free cloud-based file transfer service provided by AARNET. Allows researchers
- to send and receive large files (up to 100Gb)
-
-> CloudStor+
-
-An enhanced version of CloudStor that supports secure long-term file storage.
- (Free for AAF users, up to 100Gb per user.)
+ to send and receive large files (up to 100Gb) or the big brother CloudStor+
+which is an enhanced version of CloudStor that supports secure long-term file
+storage.
 
 > Cluster-as-a-service
 
@@ -260,7 +249,7 @@ infrastructure.
 
 > Collection
 
-RDSI terminology
+define me!
 
 > Collection VM
 
