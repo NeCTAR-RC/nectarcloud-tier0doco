@@ -41,8 +41,7 @@ Ok, and what's IaaS? And RESTful? and API?? Good questions, keep reading .. :)
 ## Thanks
 
 This content heavily sourced from the excellent [eSpaces glossary](https://espaces.edu.au/vwrangler/nectar-openstack-glossary)
-produced by Steve Crawley at QCIF.  Also thanks to the OpenStack foundation for
-their
+produced by Steve Crawley at QCIF.
 
 ## The list
 
@@ -250,7 +249,11 @@ infrastructure.
 
 > Collection
 
-define me!
+RDSI Collection - Large data collection, usually formalised with metadata and
+made discoverable and accessible. Stored as part of a data storage investment
+project called RDSI (Research Data Storage Infrastructure). Operators of the
+infrastructure from RDSI project are called RDSI nodes and may still refer to
+their storage facilities or collections as 'RDSI storage' or 'RDSI collection'.
 
 > Collection VM
 
