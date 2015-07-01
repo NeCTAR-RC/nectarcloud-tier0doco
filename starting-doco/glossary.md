@@ -5,8 +5,8 @@ come with moving into the cloud.  Like for example, what is the cloud exactly?
 
 > The Cloud
 
-Honestly, getting a good definition of "cloud" is really hard.  The cloud is
-many things to many people, and it's somewhat a matter of perspective.  I asked
+Getting a good definition of "cloud" is hard.  The cloud is many things to many
+people, and it's somewhat a matter of perspective.  I asked
 the question on a sysadmin IRC channel once, and the answers i received caused
 as much debate and controversy as provided actual insight.
 
@@ -36,22 +36,19 @@ projects that control pools of processing, storage, and networking resources
 throughout a data center which users manage through a web-based dashboard,
 command-line tools, or a RESTful API..." [Wikipedia](https://en.wikipedia.org/wiki/OpenStack)
 
-Ok, and what's IaaS?  Good question, keep reading .. :)
+Ok, and what's IaaS? And RESTful? and API?? Good questions, keep reading .. :)
 
 ## Thanks
 
 This content heavily sourced from the excellent [eSpaces glossary](https://espaces.edu.au/vwrangler/nectar-openstack-glossary)
-produced by Steve Crawley at QCIF.  Also thanks to the OpenStack foundation for
-their
+produced by Steve Crawley at QCIF.
 
 ## The list
 
 > Access Control
 
 The process of determining if an (authenticated) agent is permitted to perform
-some action.  Synonym: authorization.  (Note: some IT texts make a distinction
-between access control and authorization, but take contradictory positions on
-which is which.)
+some action.  Synonym: authorization.
 
 > Access Group
 
@@ -64,13 +61,20 @@ rule allow network access to an instance from other hosts with a specified
 combination of protocol family (e.g. TCP, UDP, UCMP), port number and address
  range.
 
+At NeCTAR by the default security group applied to new instances does not
+contain an access rule for ssh.  Meaning that new users often find their new
+virtual machines inaccessable via ssh until they add the appropriate access
+rule.
+
 > Account
 
 NeCTAR and OpenStack terminology. A synonym for "project" and "tenant".
 
-> Active Directory
+> Active Directory (AD)
 
 Microsoft's directory service product; essentially LDAP enhanced with Kerberos.
+Most Microsoft Windows environments will use AD to centrally control
+ authentication.
 
 > AAF
 
@@ -93,30 +97,31 @@ people to use.)
 
 See service endpoint.
 
-> apt-get
+> apt
 
-The package manager used on Debian family distros.
-
-> Amanda
-
-Advanced Maryland Automatic Network Disk Archive - an open source backup system
+apt is the name of the package manager used by the Debian family
+(Debian/Ubuntu/Mint) of distros.  It is a simple and elegant way to install
+software on your Debian server.  Conceptually remote "repositories" contain
+massive amounts of software (called "packages" and by using the `apt-get`
+command, you can download and install any of it using a simple command.  Apt
+maintains a local database that tracks which packages you have installed and
+manages the additional packages your original package depends on (the
+"dependencies").  Before apt and other such package managers, managing
+dependencies was a difficult and manual process. Apt uses the .deb file format
+for distributing packages both inside and outside of package repositories.
 
 > AMD
 
 Advanced Micro Devices Inc. A manufacturer of x86 and x86_64 compatible
-microprocessors.
-
-> ascp
-
-The Aspera command line copy program
+microprocessors.  In 2006 AMD aquired ATI, a manufacturer of high end graphics
+chipsets, maing AMD a powerhouse of CPU and GPU hardware.  A direct competitor
+to Intel.
 
 > Aspera
 
-add definition here!
-
-> Aspera Shares
-
-add definition here!
+"Aspera High-speed File Transfer Software that moves the world's data at maximum
+speed, regardless of file size, transfer distance or network conditions"
+[Aspera](http://asperasoft.com/technology/)
 
 > Attach
 
@@ -126,11 +131,8 @@ An OpenStack volume can be attached to an OpenStack instance to provide it with
 > Authentication
 
 The process of establishing that an agent (i.e. a person, or other entity) in a
- computer system is who they say they are.
-
-> Authorization
-
-See access control.
+ computer system is who they say they are.  The simple username and password
+is the most familiar means of authentication.
 
 > Availability Zone (or AZ)
 
@@ -148,33 +150,31 @@ See availability zone.
 
 Microsoft's commercial cloud computing platform / service.
 
-> Backup
-
-define me!
-
-> Barrine
-
-An HPC system run by UQ/RCC.
-
 > BCCVL
 
 The Biodiversity and Climate Change Virtual Laboratory.
 
 > Boot
 
-Bootstrap a computer. Bootstrapping is the process in which a computer goes from
- having empty memory to having the operating system loaded and running.
- (C.f the phrase - "pulling yourself up by your own bootstraps").  See also
- reboot, soft boot, hard boot.
+The boot (or "bootstrap") process is the means by which the computer starts
+itself up after the power button is pressed.  Ultimately booting is the process
+in which a computer goes from having empty memory to having the operating
+system loaded and running.
 
 > Bricked
 
 Colloquialism: describes a system that has been damaged in a way that
-permanently locks out some or all functionality.
+permanently locks out some or all functionality.  It's usually the consequence
+of some kind of firmware update that fails to run properly, or at all, meaning
+further remedial firmware updates are not possible.  The device is bricked when
+it can't be fixed and is effectively an expensive square shaped "brick".
 
 > Canonical
 
-The company that produces Ubuntu.
+Canonical Ltd. is a UK-based privately held computer software company founded
+(and funded) by South African entrepreneur Mark Shuttleworth to market
+commercial support and services for Ubuntu and related projects
+[Wikipedia](https://en.wikipedia.org/wiki/Canonical_(company))
 
 > CDS
 
@@ -182,11 +182,22 @@ RDSI terminology - Collection Development Storage.
 
 > Ceilometer
 
-add definition here!
+The OpenStack Ceilometer project aims to deliver a unique point of
+contact for billing systems to acquire all of the measurements they need to
+establish customer billing, across all current OpenStack core components.
+
+It is also a means by which to gather performance related metrics useful for the
+general management of the OpenStack environment in general.
 
 > Cell
 
-OpenStack terminology
+Cells are a means by which to partition an OpenStack compute cloud into groups.
+
+At NeCTAR each site runs a different configuration, as a resource cells in an
+OpenStack Compute cells setup. This allows the NeCTAR nodes to do different
+things such as span multiple data centers, or run off compute node storage with a
+shared file system, or use on compute node storage with a non-shared file
+system.  It's also a way to partition tenants and accounts.
 
 > CentOS
 
@@ -196,16 +207,18 @@ A community-based rebadging of RHEL distros.  The result is "for free", but with
 > Ceph
 
 "Ceph is a unified, distributed storage system designed for excellent
-performance, reliability and scalability."  Volume Storage is typically
- implemented using Ceph.
+performance, reliability and scalability."  Volume and object storage
+are typically implemented using Ceph.
 
 > CephFS
 
-define me!
+A project aimed and making Ceph work akin to a traditional filesystem
+ala ext4 or xfs.  It is still considered experimental at this stage.
 
 > Chef
 
-A recipe based system configuration framework.
+A recipe based system configuration framework. A main competitor to Puppet, but
+also now to other such systems such as Ansible and Salt.
 
 > CIDR notation
 
@@ -218,31 +231,16 @@ The OpenStack Volume Storage management service.
 
 > The Cloud
 
-".."Cloud" is a buzzword that vaguely suggests the promise and convenience of
-being able to access files from anywhere. But the reality is that the cloud is
-hardly floating like mist above our heads.  It's a physical infrastructure, its
-many computers housed in massive warehouses all over the world.." Gizmodo.
-
-> Cloud Computing
-
-Computation performed using machines that are "out there in the cloud".
-Generally speaking this refers to computational resources implemented on
-commodity computer systems that are managed and owned by some other
-organizations.
-
-> CloudMan
-
-define me!
+A network of servers used to store, manage, and process data to achieve
+efficiencies of scale in completing various computational tasks.  They are
+typified by their automation, scalability and opacity.
 
 > CloudStor
 
 A free cloud-based file transfer service provided by AARNET. Allows researchers
- to send and receive large files (up to 100Gb)
-
-> CloudStor+
-
-An enhanced version of CloudStor that supports secure long-term file storage.
- (Free for AAF users, up to 100Gb per user.)
+ to send and receive large files (up to 100Gb) or the big brother CloudStor+
+which is an enhanced version of CloudStor that supports secure long-term file
+storage.
 
 > Cluster-as-a-service
 
@@ -251,7 +249,11 @@ infrastructure.
 
 > Collection
 
-RDSI terminology
+RDSI Collection - Large data collection, usually formalised with metadata and
+made discoverable and accessible. Stored as part of a data storage investment
+project called RDSI (Research Data Storage Infrastructure). Operators of the
+infrastructure from RDSI project are called RDSI nodes and may still refer to
+their storage facilities or collections as 'RDSI storage' or 'RDSI collection'.
 
 > Collection VM
 
@@ -264,13 +266,15 @@ OpenStack terminology for a physical computer used to run virtual machines.
 It will typically have multiple CPUs and shared memory, and one or more network
 interfaces.  It may also have on-node disc storage.
 
-> Conductor
-
-define me!
-
 > Container
 
-OpenStack terminology - Object Storage objects are held in containers.
+General Computing - a means by which to run multiple "things" inside a given
+computer and have those things isolated from each other and the computer itself.
+Similar in concept to Virtualisation, however not as broadly applicable because
+the containers must be the same operating system as the host itself.
+
+Containers may one day be possible within OpenStack, however it has been the
+main focus of that project to achieve scalable virtualisation.
 
 > Copyleft
 
@@ -286,18 +290,24 @@ A family of licenses originally designed for creative (non-software) works,
 
 Characterization Virtual Laboratory - A NeCTAR Virtual Laboratory project.
 
-> DaRIS
+> DaRIS (Distributed and Reflective Informatics System)
 
-add definition here!
+DaRIS is a subject-oriented informatics framework and capability developed
+primarily at the University of Melbourne. It is built with the commercial
+Mediaflux data operating system. DaRIS is mainly used to supply a repository to
+manage bio-medical imaging data.
+[DaRIS](http://nsp.nectar.org.au/wiki-its-r/doku.php?id=data_management:daris:about)
 
 > Dashboard
 
 The NeCTAR Dashboard is the main web-based interface for managing NeCTAR
-virtuals.  The OpenStack component service for the dashboard is called Horizon
+virtuals.  The OpenStack component service for the dashboard is called Horizon.
 
 > Data Centre
 
 A place where a large collection of shared computing equipment is housed.
+These expensive and high security installations are often hot and noisy and
+consume hard drives for breakfast.
 
 > Data Repository
 
@@ -306,33 +316,42 @@ than just "a shared fileserver".
 
 > .deb
 
-The Debian standard package format, also used by ubuntu.
+The Debian standard package format. See apt.
 
-> Debian
-
-A long-running Linux distro.
-
-> Debian family
+> Debian & family
 
 Debian, Ubuntu, Mint and many lesser known but similar linux distributions.
 
-> Director
-
-define me!
-
 > Distribution (linux)
 
-Typically refers to an operating system distribution, comprising the Linux
-Kernel itself, and compendium of utilities, services and applications that run
- on the OS.  May inherit frameworks and software from other distributions.
+Refers to a (ideally) homoginized release of the Linux Kernel and a
+compendium of utilities, services and applications that are nominally modified
+and tested to run well together, then given an odd name like "Mandriva" or
+"Suse" or "Debian".  May inherit concepts, frameworks and software
+from other distributions with or without attribution or other reciprical
+contribution.  Typically distributions attract a zealous user base
+who will willingly fight each other to the bitter death over not much at all.
+Some are funded by corporations, others by well meaning techno hippes or not
+by anyone at all.
 
 > Distro
 
-A contraction of "distribution".
+A contraction of "Distribution".
 
 > DMF
 
-define me!
+DMF is a Hierarchical Storage Management (HSM) system by SGI designed for
+the bulk storage of data. The basic premise is that fast storage is expensive so
+wouldn't it be cool if we could put only the data we actually use on the fast
+storage, and the rest can kind of trickle through less expensive storage layers.
+So the hierachy is in fact a sandwidge of storage technologies (usually ssd,
+hdd, tape) at each of which the storage cost per gigabyte decreases.  As data
+ages through the layers the usual trade off is speed, so ideally frequently used
+data stays on the faster storage layer.  Conversely, data which is seldom
+accessed is often archived off to tape where the cost per gigabyte is very low.
+Magical filesystems ideally make all of this invisible to users and
+applications.  Usually highly expensive and complicated, it's pretty awesome
+when it works. [SGI DMF](https://www.sgi.com/products/storage/idm/dmf.html)
 
 > Docker
 
