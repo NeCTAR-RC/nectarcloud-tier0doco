@@ -42,3 +42,11 @@
         visibility: 1}
   parent: 6
   title: Getting Started
+10:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000074960, created_at: '2015-07-07T02:52:48-04:00', description: Simon,
+        id: 6000115998, is_default: false, language_id: null, name: Simon, parent_id: null,
+        position: 1, updated_at: '2015-07-07T02:52:48-04:00', visibility: 1}
+  parent: 9
+  title: Simon
