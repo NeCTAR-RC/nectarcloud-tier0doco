@@ -42,3 +42,12 @@
         visibility: 1}
   parent: 6
   title: Getting Started
+10:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000074945, created_at: '2015-07-07T02:27:51-04:00', description: Test
+          Folder, id: 6000115978, is_default: false, language_id: null, name: Test
+          Folder, parent_id: null, position: 1, updated_at: '2015-07-07T02:27:51-04:00',
+        visibility: 1}
+  parent: 9
+  title: Test Folder
