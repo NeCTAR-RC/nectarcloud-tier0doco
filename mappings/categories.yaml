@@ -1,2 +1,35 @@
----
-# Categories
+1:
+  freshdesk:
+    fd_attributes:
+      category: {created_at: '2015-07-06T03:53:16-04:00', description: NeCTAR fundamentals,
+        id: 6000074121, is_default: false, language_id: null, name: NeCTAR fundamentals,
+        parent_id: null, position: 4, updated_at: '2015-07-06T03:53:16-04:00'}
+  title: NeCTAR fundamentals
+2:
+  freshdesk:
+    fd_attributes:
+      category: {created_at: '2015-07-06T03:54:40-04:00', description: Training, id: 6000074124,
+        is_default: false, language_id: null, name: Training, parent_id: null, position: 6,
+        updated_at: '2015-07-06T03:54:40-04:00'}
+  title: Training
+3:
+  freshdesk:
+    fd_attributes:
+      category: {created_at: '2015-07-06T03:53:18-04:00', description: Cloud Expert,
+        id: 6000074122, is_default: false, language_id: null, name: Cloud Expert,
+        parent_id: null, position: 5, updated_at: '2015-07-06T03:53:18-04:00'}
+  title: Cloud Expert
+5:
+  freshdesk:
+    fd_attributes:
+      category: {created_at: '2015-07-06T03:50:24-04:00', description: Cloud basics,
+        id: 6000074120, is_default: false, language_id: null, name: Cloud basics,
+        parent_id: null, position: 11, updated_at: '2015-07-06T03:50:24-04:00'}
+  title: Cloud basics
+6:
+  freshdesk:
+    fd_attributes:
+      category: {created_at: '2015-07-06T03:53:19-04:00', description: General, id: 6000074123,
+        is_default: false, language_id: null, name: General, parent_id: null, position: 6,
+        updated_at: '2015-07-06T03:53:19-04:00'}
+  title: General
