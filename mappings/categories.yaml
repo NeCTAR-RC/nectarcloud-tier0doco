@@ -40,3 +40,10 @@
         is_default: false, language_id: null, name: Simon, parent_id: null, position: 6,
         updated_at: '2015-07-08T03:47:28-04:00'}
   title: Simon
+11:
+  freshdesk:
+    fd_attributes:
+      category: {created_at: '2015-07-08T03:53:36-04:00', description: Lone Category,
+        id: 6000075884, is_default: false, language_id: null, name: Lone Category,
+        parent_id: null, position: 7, updated_at: '2015-07-08T03:53:36-04:00'}
+  title: Lone Category
