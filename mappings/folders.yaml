@@ -50,12 +50,3 @@
         visibility: 1}
   parent: 11
   title: Orphan Folder
-13:
-  freshdesk:
-    fd_attributes:
-      folder: {category_id: 6000075884, created_at: '2015-07-08T04:21:24-04:00', description: Orphan
-          Folder 2, id: 6000117450, is_default: false, language_id: null, name: Orphan
-          Folder 2, parent_id: null, position: 2, updated_at: '2015-07-08T04:21:24-04:00',
-        visibility: 1}
-  parent: 11
-  title: Orphan Folder 2
