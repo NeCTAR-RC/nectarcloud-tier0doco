@@ -26,10 +26,3 @@
         id: 6000074120, is_default: false, language_id: null, name: Cloud basics,
         parent_id: null, position: 11, updated_at: '2015-07-06T03:50:24-04:00'}
   title: Cloud basics
-12:
-  freshdesk:
-    fd_attributes:
-      category: {created_at: '2015-07-08T22:36:52-04:00', description: Simon, id: 6000076649,
-        is_default: false, language_id: null, name: Simon, parent_id: null, position: 5,
-        updated_at: '2015-07-08T22:36:52-04:00'}
-  title: Simon
