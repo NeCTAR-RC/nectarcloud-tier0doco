@@ -1019,8 +1019,10 @@
         created_at: '2015-07-09T02:19:08-04:00'
         datetime_01: null
         delta: true
-        desc_un_html: ' A Test document '
-        description: <h1>A Test document</h1>
+        desc_un_html: " A Test document \n This is li's comment for testing "
+        description: '<h1>A Test document</h1>
+
+          <p>This is li''s comment for testing</p>'
         folder:
           category_id: 6000076723
           created_at: '2015-07-09T02:19:07-04:00'
@@ -1035,28 +1037,30 @@
           updated_at: '2015-07-09T02:19:07-04:00'
           visibility: 1
         folder_id: 6000118751
-        hits: 0
+        hits: 4
         id: 6000022343
         int_01: null
         int_02: null
         int_03: null
-        language_id: null
-        modified_at: '2015-07-09T02:19:08-04:00'
+        language_id: 6
+        modified_at: '2015-07-15T01:47:33-04:00'
         modified_by: null
         outdated: false
-        parent_id: null
+        parent_id: 6000022343
         position: 1
         seo_data: {}
         status: 2
         string_01: null
         string_02: null
         tags: []
-        thumbs_down: 0
+        thumbs_down: 1
         thumbs_up: 0
         title: Testing Testing 123
-        updated_at: '2015-07-09T02:19:08-04:00'
+        updated_at: '2015-07-15T01:47:33-04:00'
         user_id: 6000675345
-  html: <h1>A Test document</h1>
+  html: '<h1>A Test document</h1>
+
+    <p>This is li''s comment for testing</p>'
   parent: 15
-  sha1: 6df0992a9faac0a0404a29ab380097964e33ca59
+  sha1: 1ddf45149c002acc6c5162cd5809a47a7ffc2bb5
   title: Testing Testing 123
