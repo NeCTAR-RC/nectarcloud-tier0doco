@@ -1020,14 +1020,17 @@
         datetime_01: null
         delta: true
         desc_un_html: " A Test document \n This is li's comment for testing \n As\
-          \ we all have rights, try it again \n Now test loggint "
+          \ we all have rights, try it again \n Now test loggint \n Test new code\
+          \ on the listener "
         description: '<h1>A Test document</h1>
 
           <p>This is li''s comment for testing</p>
 
           <p>As we all have rights, try it again</p>
 
-          <p>Now test loggint</p>'
+          <p>Now test loggint</p>
+
+          <p>Test new code on the listener</p>'
         folder:
           category_id: 6000076723
           created_at: '2015-07-09T02:19:07-04:00'
@@ -1048,7 +1051,7 @@
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-07-15T02:27:28-04:00'
+        modified_at: '2015-07-15T02:43:08-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000022343
@@ -1061,7 +1064,7 @@
         thumbs_down: 1
         thumbs_up: 0
         title: Testing Testing 123
-        updated_at: '2015-07-15T02:27:28-04:00'
+        updated_at: '2015-07-15T02:43:08-04:00'
         user_id: 6000675345
   html: '<h1>A Test document</h1>
 
@@ -1069,7 +1072,9 @@
 
     <p>As we all have rights, try it again</p>
 
-    <p>Now test loggint</p>'
+    <p>Now test loggint</p>
+
+    <p>Test new code on the listener</p>'
   parent: 15
-  sha1: 7cdfab361121525b4d36ad8a31ab0f794929c09b
+  sha1: 3d97317d321500702a0d581b437aa3b457e29d35
   title: Testing Testing 123
