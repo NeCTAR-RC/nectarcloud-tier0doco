@@ -1,5 +1,7 @@
 # NeCTAR Cloud & OpenStack Glossary
 
+blah
+
 This glossary aims to demystify some of the unavoidable jargon and acronyms that
 come with moving into the cloud.  Like for example, what is the cloud exactly?
 
