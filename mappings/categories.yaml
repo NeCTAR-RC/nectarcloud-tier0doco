@@ -33,3 +33,10 @@
         is_default: false, language_id: null, name: Simon, parent_id: null, position: 5,
         updated_at: '2015-07-09T02:19:06-04:00'}
   title: Simon
+14:
+  freshdesk:
+    fd_attributes:
+      category: {created_at: '2015-07-15T22:54:27-04:00', description: Testdoco, id: 6000081683,
+        is_default: false, language_id: null, name: Testdoco, parent_id: null, position: 6,
+        updated_at: '2015-07-15T22:54:27-04:00'}
+  title: Testdoco

@@ -49,3 +49,11 @@
         position: 2, updated_at: '2015-07-15T20:38:37-04:00', visibility: 1}
   parent: 13
   title: Li
+17:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000081683, created_at: '2015-07-15T22:54:28-04:00', description: folder1,
+        id: 6000126502, is_default: false, language_id: null, name: folder1, parent_id: null,
+        position: 1, updated_at: '2015-07-15T22:54:28-04:00', visibility: 1}
+  parent: 14
+  title: folder1
