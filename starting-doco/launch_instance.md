@@ -43,24 +43,24 @@ If you are running a Windows machine the SSH private key may need to be converte
 3. Click 'Launch Instance' button
 4. Type instance name
 5. Select a flavour. Flavour indicates the specification of a instance. You can find more information in the Flavour Details.
-6. Select an NeCTAR offical image (we suggest selecting a Ubuntu image such as NeCTAR Ubuntu 14.10 (Utopic) amd64) 
+6. Select an NeCTAR offical image (we suggest selecting a Ubuntu image such as NeCTAR Ubuntu 14.10 (Utopic) amd64)
 7. Click Access & Security tab
 8. Select a key pair created earlier
-9. Select security groups to use. Tick 'ssh' and 'http' (these are pre-defined group) 
+9. Select security groups to use. Tick 'ssh' and 'http' (these are pre-defined group)
 10. Click AVailability Zone
 11. Select the location of your instance or leave as unselected(the system will auto select available location)
 12. Click launch button and the page will change to the Instances Tab
 13. After a while(usually a couple of minutes), your instance will become active and will have an IP address. The IP address is available in the Instances table
- 
+
 ## Log Into Instance
 You can use a SSH client to log into the instance created earlier.
 
 #### Windows User
-1. Download PuTTY(putty.exe) from [PuTTY download page][putty] 
+1. Download PuTTY(putty.exe) from [PuTTY download page][putty]
 2. Double click putty.exe
 3. Copy/paste the IP address to Host Name
 4. Expand the SSH item under Connection on the right side Category and click Auth
-5. Click the Browse button and select the created private key eariler
+5. Click the Browse button and select the created private key earlier
 6. Click Session on the right side Category
 7. Click Open button
 8. Type username ubuntu for Ubuntu image and root for other images
@@ -72,7 +72,7 @@ You can use a SSH client to log into the instance created earlier.
 4. Replace XX.XX.XX.XX with the IP address located in Instances page
 
 Note:
-Type chmod 600 privatekey to set permission for the private key and your account is the owner of the private key file. 
+Type chmod 600 privatekey to set permission for the private key and your account is the owner of the private key file.
 
 [dashboard]: https://dashboard.rc.nectar.org.au
 [putty]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
