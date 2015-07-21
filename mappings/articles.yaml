@@ -1186,3 +1186,66 @@
   parent: 17
   sha1: ea64e3adf7c58d54fb1448f7d9b6b9f2144b5f45
   title: Important test doco
+28:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 2
+        bool_01: null
+        created_at: '2015-07-21T03:51:29-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " NeCTAR welcome and introduction \n Welcome to the Nectar Cloud\
+          \ knowledge base. Browse or search our\nuser documentation, and if you can\u2019\
+          t find what you\u2019re looking\nfor contact our support team at [email]\
+          \ or [phone]. \n What is the Nectar Cloud \n Nectar (National eResearch\n\
+          Collaboration Tools and Resources) is "
+        description: "<h1>NeCTAR welcome and introduction</h1>\n<p>Welcome to the\
+          \ Nectar Cloud knowledge base. Browse or search our\nuser documentation,\
+          \ and if you can\u2019t find what you\u2019re looking\nfor contact our support\
+          \ team at [email] or [phone].</p>\n<h2>What is the Nectar Cloud</h2>\n<p><a\
+          \ href=\"http://nectar.org.au/\">Nectar</a> (National eResearch\nCollaboration\
+          \ Tools and Resources) is</p>"
+        folder:
+          category_id: 6000076723
+          created_at: '2015-07-15T20:38:37-04:00'
+          customer_folders: []
+          description: Li
+          id: 6000126429
+          is_default: false
+          language_id: 6
+          name: Li
+          parent_id: 6000126429
+          position: 2
+          updated_at: '2015-07-15T20:38:37-04:00'
+          visibility: 1
+        folder_id: 6000126429
+        hits: 0
+        id: 6000027419
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: null
+        modified_at: '2015-07-21T03:51:29-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: null
+        position: 2
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: test
+        updated_at: '2015-07-21T03:51:29-04:00'
+        user_id: 6000675345
+  html: "<h1>NeCTAR welcome and introduction</h1>\n<p>Welcome to the Nectar Cloud\
+    \ knowledge base. Browse or search our\nuser documentation, and if you can\u2019\
+    t find what you\u2019re looking\nfor contact our support team at [email] or [phone].</p>\n\
+    <h2>What is the Nectar Cloud</h2>\n<p><a href=\"http://nectar.org.au/\">Nectar</a>\
+    \ (National eResearch\nCollaboration Tools and Resources) is</p>"
+  parent: 16
+  sha1: cabf50a1562ccad2bdccd089153bc8da7b76cbd3
+  title: test
