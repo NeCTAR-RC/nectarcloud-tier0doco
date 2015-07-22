@@ -1141,17 +1141,14 @@
         created_at: '2015-07-21T03:51:29-04:00'
         datetime_01: null
         delta: true
-        desc_un_html: " NeCTAR welcome and introduction \n Welcome to the Nectar Cloud\
-          \ knowledge base. Browse or search our\nuser documentation, and if you can\u2019\
-          t find what you\u2019re looking\nfor contact our support team at [email]\
-          \ or [phone]. \n What is the Nectar Cloud \n Nectar (National eResearch\n\
-          Collaboration Tools and Resources) is "
-        description: "<h1>NeCTAR welcome and introduction</h1>\n<p>Welcome to the\
-          \ Nectar Cloud knowledge base. Browse or search our\nuser documentation,\
-          \ and if you can\u2019t find what you\u2019re looking\nfor contact our support\
-          \ team at [email] or [phone].</p>\n<h2>What is the Nectar Cloud</h2>\n<p><a\
-          \ href=\"http://nectar.org.au/\">Nectar</a> (National eResearch\nCollaboration\
-          \ Tools and Resources) is</p>"
+        desc_un_html: " NeCTAR welcome and introduction \n A new version of bot has\
+          \ been installed. This will be the last before SS comes back. \n 20150722 "
+        description: '<h1>NeCTAR welcome and introduction</h1>
+
+          <p>A new version of bot has been installed. This will be the last before
+          SS comes back.</p>
+
+          <p>20150722</p>'
         folder:
           category_id: 6000076723
           created_at: '2015-07-15T20:38:37-04:00'
@@ -1166,16 +1163,16 @@
           updated_at: '2015-07-15T20:38:37-04:00'
           visibility: 1
         folder_id: 6000126429
-        hits: 0
+        hits: 1
         id: 6000027419
         int_01: null
         int_02: null
         int_03: null
-        language_id: null
-        modified_at: '2015-07-21T03:51:29-04:00'
+        language_id: 6
+        modified_at: '2015-07-22T03:56:07-04:00'
         modified_by: null
         outdated: false
-        parent_id: null
+        parent_id: 6000027419
         position: 2
         seo_data: {}
         status: 2
@@ -1185,15 +1182,16 @@
         thumbs_down: 0
         thumbs_up: 0
         title: test
-        updated_at: '2015-07-21T03:51:29-04:00'
+        updated_at: '2015-07-22T03:56:07-04:00'
         user_id: 6000675345
-  html: "<h1>NeCTAR welcome and introduction</h1>\n<p>Welcome to the Nectar Cloud\
-    \ knowledge base. Browse or search our\nuser documentation, and if you can\u2019\
-    t find what you\u2019re looking\nfor contact our support team at [email] or [phone].</p>\n\
-    <h2>What is the Nectar Cloud</h2>\n<p><a href=\"http://nectar.org.au/\">Nectar</a>\
-    \ (National eResearch\nCollaboration Tools and Resources) is</p>"
+  html: '<h1>NeCTAR welcome and introduction</h1>
+
+    <p>A new version of bot has been installed. This will be the last before SS comes
+    back.</p>
+
+    <p>20150722</p>'
   parent: 16
-  sha1: cabf50a1562ccad2bdccd089153bc8da7b76cbd3
+  sha1: 9fee3de11fb3104baa8cb951054f100fc037f3dc
   title: test
 29:
   freshdesk:
