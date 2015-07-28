@@ -1132,19 +1132,86 @@
   parent: 16
   sha1: 1adab88cb7b2de6cb30d841db30647ee241343ff
   title: How To Test
-27:
+28:
   freshdesk:
     fd_attributes:
       article:
         art_type: 2
         bool_01: null
-        created_at: '2015-07-15T22:54:29-04:00'
+        created_at: '2015-07-21T03:51:29-04:00'
         datetime_01: null
         delta: true
-        desc_un_html: " All documents are important \n Content will come later "
+        desc_un_html: " NeCTAR welcome and introduction \n A new version of bot has\
+          \ been installed. This will be the last before SS comes back. \n 20150722 "
+        description: '<h1>NeCTAR welcome and introduction</h1>
+
+          <p>A new version of bot has been installed. This will be the last before
+          SS comes back.</p>
+
+          <p>20150722</p>'
+        folder:
+          category_id: 6000076723
+          created_at: '2015-07-15T20:38:37-04:00'
+          customer_folders: []
+          description: Li
+          id: 6000126429
+          is_default: false
+          language_id: 6
+          name: Li
+          parent_id: 6000126429
+          position: 2
+          updated_at: '2015-07-15T20:38:37-04:00'
+          visibility: 1
+        folder_id: 6000126429
+        hits: 1
+        id: 6000027419
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-07-22T03:56:07-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000027419
+        position: 2
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: test
+        updated_at: '2015-07-27T21:51:36-04:00'
+        user_id: 6000675345
+  html: '<h1>NeCTAR welcome and introduction</h1>
+
+    <p>A new version of bot has been installed. This will be the last before SS comes
+    back.</p>
+
+    <p>20150722</p>'
+  parent: 16
+  sha1: 9fee3de11fb3104baa8cb951054f100fc037f3dc
+  title: test
+29:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 2
+        bool_01: null
+        created_at: '2015-07-27T21:51:37-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " All documents are important \n A new broker has been created:\
+          \ 20150721 16:29 ACST\nFile name has no spaces, hope is temporary\nCan I\
+          \ ignore the change? "
         description: '<h1>All documents are important</h1>
 
-          <p>Content will come later</p>'
+          <p>A new broker has been created: 20150721 16:29 ACST
+
+          File name has no spaces, hope is temporary
+
+          Can I ignore the change?</p>'
         folder:
           category_id: 6000081683
           created_at: '2015-07-15T22:54:28-04:00'
@@ -1160,16 +1227,16 @@
           visibility: 1
         folder_id: 6000126502
         hits: 0
-        id: 6000025230
+        id: 6000031049
         int_01: null
         int_02: null
         int_03: null
         language_id: null
-        modified_at: '2015-07-15T22:54:29-04:00'
+        modified_at: '2015-07-27T21:51:37-04:00'
         modified_by: null
         outdated: false
         parent_id: null
-        position: 1
+        position: 2
         seo_data: {}
         status: 2
         string_01: null
@@ -1177,12 +1244,16 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: Important test doco
-        updated_at: '2015-07-15T22:54:29-04:00'
+        title: Important_test_doco
+        updated_at: '2015-07-27T21:51:37-04:00'
         user_id: 6000675345
   html: '<h1>All documents are important</h1>
 
-    <p>Content will come later</p>'
+    <p>A new broker has been created: 20150721 16:29 ACST
+
+    File name has no spaces, hope is temporary
+
+    Can I ignore the change?</p>'
   parent: 17
-  sha1: ea64e3adf7c58d54fb1448f7d9b6b9f2144b5f45
-  title: Important test doco
+  sha1: 8cfe5a91c410fe5d5f4e3eaedfac1d8e15bb14b4
+  title: Important_test_doco
