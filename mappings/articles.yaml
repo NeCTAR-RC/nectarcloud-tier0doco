@@ -1200,5 +1200,7 @@
 
     <p>Some extra stuff.</p>', parent: 18, sha1: 0ee811e0fc54bbbb510f526ed17d4c5563e7f000,
   title: test spaces in filename}
-30: {html: '<h1>hey, how ya doing</h1>', parent: 18, sha1: 256c2bafa4003e56d799ddbdda2a71abc73b3ed7,
+30: {html: '<h1>hey, how ya doing</h1>
+
+    <p>sorry, last one didn''t get through</p>', parent: 18, sha1: e02787263e38e7f65653b6ce85340ba0ffd48295,
   title: A new file again}
