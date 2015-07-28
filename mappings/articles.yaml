@@ -1132,19 +1132,25 @@
   parent: 16
   sha1: 1adab88cb7b2de6cb30d841db30647ee241343ff
   title: How To Test
-27:
+28:
   freshdesk:
     fd_attributes:
       article:
         art_type: 2
         bool_01: null
-        created_at: '2015-07-15T22:54:29-04:00'
+        created_at: '2015-07-28T02:57:20-04:00'
         datetime_01: null
         delta: true
-        desc_un_html: " All documents are important \n Content will come later "
+        desc_un_html: " All documents are important \n A new broker has been created:\
+          \ 20150721 16:29 ACST\nFile name has no spaces, hope is temporary\nCan I\
+          \ ignore the change? "
         description: '<h1>All documents are important</h1>
 
-          <p>Content will come later</p>'
+          <p>A new broker has been created: 20150721 16:29 ACST
+
+          File name has no spaces, hope is temporary
+
+          Can I ignore the change?</p>'
         folder:
           category_id: 6000081683
           created_at: '2015-07-15T22:54:28-04:00'
@@ -1160,16 +1166,16 @@
           visibility: 1
         folder_id: 6000126502
         hits: 0
-        id: 6000025230
+        id: 6000031188
         int_01: null
         int_02: null
         int_03: null
         language_id: null
-        modified_at: '2015-07-15T22:54:29-04:00'
+        modified_at: '2015-07-28T02:57:20-04:00'
         modified_by: null
         outdated: false
         parent_id: null
-        position: 1
+        position: 4
         seo_data: {}
         status: 2
         string_01: null
@@ -1177,12 +1183,20 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: Important test doco
-        updated_at: '2015-07-15T22:54:29-04:00'
+        title: Important_test_doco
+        updated_at: '2015-07-28T02:57:20-04:00'
         user_id: 6000675345
   html: '<h1>All documents are important</h1>
 
-    <p>Content will come later</p>'
+    <p>A new broker has been created: 20150721 16:29 ACST
+
+    File name has no spaces, hope is temporary
+
+    Can I ignore the change?</p>'
   parent: 17
-  sha1: ea64e3adf7c58d54fb1448f7d9b6b9f2144b5f45
-  title: Important test doco
+  sha1: 4ed020235783056b75b3d785b2195dcc5b578307
+  title: Important_test_doco
+29: {html: '<h1>A filename with spaces</h1>
+
+    <p>Some extra stuff.</p>', parent: 18, sha1: 0ee811e0fc54bbbb510f526ed17d4c5563e7f000,
+  title: test spaces in filename}
