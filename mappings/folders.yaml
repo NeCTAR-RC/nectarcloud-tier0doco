@@ -41,3 +41,11 @@
         position: 1, updated_at: '2015-07-15T22:54:28-04:00', visibility: 1}
   parent: 14
   title: folder1
+19:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000089803, created_at: '2015-07-28T03:36:22-04:00', description: Simon,
+        id: 6000139300, is_default: false, language_id: null, name: Simon, parent_id: null,
+        position: 1, updated_at: '2015-07-28T03:36:22-04:00', visibility: 1}
+  parent: 15
+  title: Simon
