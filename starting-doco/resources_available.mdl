@@ -1,0 +1,36 @@
+# Available Resources
+
+## The Cloud
+
+The completed cloud will intially have a capacity of approximately 30,000 cores
+at up to 8 Nodes distributed around Australia.
+
+## Sharing it out (allocations)
+
+NeCTAR shares access to the cloud via allocations of time & capacity (CPU cores).
+
+- All researchers initially (and without application) get 2 CPUs for 3 Months.
+- This means you can run 2 Small or 1 Medium instance for three months.
+- Need more time or computing power? Submit an allocation request.
+- Multiple users can share an allocation (known as a Project within the Cloud).
+
+## Instances available by size
+
+- m1.small: 1 core, 4GB RAM, 30GB secondary disk
+- m1.medium: 2 cores, 8GB RAM, 60GB secondary disk
+- m1.large: 4 cores, 16GB RAM, 120GB secondary disk
+- m1.xlarge: 8 cores, 32GB RAM, 240GB secondary disk
+- m1.xxlarge: 16 cores, 64GB RAM, 480GB secondary disk
+
+Individual researchers will initially be allocated 2 small or 1 medium instances
+by default.
+
+Larger instances are assigned when requested via an allocation request.
+
+## Internet Traffic Quotas (downloads to your instances)
+
+- On-Net internet traffic is unlimited ([check AARNET off/on net status][aarnetstatus])
+- Off-Net: 1GB of off-net traffic per core per month
+- How to manage and monitor your usage: see [Manage my Account](manage_my_account)
+
+[aarnetstatus]: http://lg.aarnet.edu.au/cgi-bin/traffic.cgi
