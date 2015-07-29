@@ -377,6 +377,18 @@ You need two +1 votes (or one +2) for your change to be accepted, merged and to
  amendments before they are finally accepted (but don't worry, that's not
  likely to happen to you - we want your docs!).
 
+##### What went wrong
+
+Jenkins should email you advising what was wrong with your submission.  If
+you follow that link you'll see the option on the left for the "console
+output", click on that and scroll down and you'll see what He's complaining
+about.
+
+You can also get there by finding your submission on the list at our [gerrit](https://review.rc.nectar.org.au/#/q/status:open)
+.  Click on your submission, then down the bottom you will see the Jenkins
+feedback; click on that and the hyperlink referred to above should be
+visible there too.
+
 #### Amending your changes for review
 
 So as we've seen, it's almost guaranteed your first commit will not be accepted
