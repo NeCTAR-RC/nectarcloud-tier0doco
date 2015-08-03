@@ -1,0 +1,13 @@
+---
+freshdesk_config:
+    api_token: uMrPIAeKAmEUe5lq3TD
+    api_url: https://wrbtesting.freshdesk.com
+gerrit_config:
+    gerrit_url: https://review.rc.nectar.org.au
+    project_name: NeCTAR-RC/nectarcloud-tier0doco
+    web_username: tier0docobot
+    web_password: aew2ehi1ajuiR4pe
+    email_address: devnull@rc.nectar.org.au
+github_config:
+    webhook_auth_token: 4ca35bd3-e366-48c8-9a9e-04ae3ea9ed30
+    repo_url: https://github.com/NeCTAR-RC/nectarcloud-tier0doco.git

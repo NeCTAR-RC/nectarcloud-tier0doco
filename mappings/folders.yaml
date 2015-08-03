@@ -49,3 +49,10 @@
         position: 1, updated_at: '2015-07-28T03:36:22-04:00', visibility: 1}
   parent: 15
   title: Simon
+20: {parent: 16, title: Training}
+21: {parent: 16, title: Cloud Basics}
+22: {parent: 16, title: Cloud Expert}
+23: {parent: 16, title: NeCTAR Blueprints}
+24: {parent: 16, title: Tools and Apps}
+25: {parent: 16, title: Service Applications}
+26: {parent: 16, title: NeCTAR Fundamentals}
