@@ -1,9 +1,3 @@
----
-title: Cloud welcome and introduction
-layout: base
-description: Introduction to user documentation about Nectar Cloud.
----
-
 # NeCTAR welcome and introduction
 
 Welcome to the Nectar Cloud knowledge base. Browse or search our
