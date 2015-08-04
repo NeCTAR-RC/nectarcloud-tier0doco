@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_5f1d0173",
+        "filename": "articles/Cloud basics--DOCID5/10 good practices.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-08-04T05:56:18Z",
+      "side": 1,
+      "message": "Could these be headings?",
+      "revId": "d0b18ee65b530724e5da5d57ab1fd1348152373d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_bf123d60",
+        "filename": "articles/Cloud basics--DOCID5/10 good practices.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-08-04T05:56:18Z",
+      "side": 1,
+      "message": "Could these be wrapped in code tags? or ```",
+      "revId": "d0b18ee65b530724e5da5d57ab1fd1348152373d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
