@@ -147,17 +147,35 @@ your own computer so you can make changes to it.
 ##### The project directory structure
 
 Now you have the project cloned locally, you can start having a look around and
-hopefully making some valuable changes :)  where or what to do might be a little
-opaque, so for now;
+hopefully making some valuable changes :) All the content we are creating
+should be created under the correct folders.  That way it can be parsed and
+imported correctly into Freshdesk.
 
-Any content you create should be nested within the starting-doco folder.  It
-should have subfolders created within it consistent with the
+All the content we create should be under 
+articles/NeCTAR Documentation--DOCID16/
+
+Underneath that your content must be structured in accordance with the
 [action list content google document](https://docs.google.com/spreadsheets/d/1jSReAxlDlqVktTXUbjnprH04vki8ZKBVKXPDQd20JZA/edit#gid=0).
+so have a look at that and you will see the folder structure laid out from left
+to right.
 
-If you are not sure where to create content, then just place it directly under
-starting-doco folder and it will get moved around later on.
+Thusly, content would be named NeCTAR Documentation--DOCID16/'Folder
+Name'/'Solution Name'.md
 
-Ignore the articles folder, it will be removed or tidied up soon.
+If you are not sure where to create content, then ask one of the tier0 team.
+
+###### What are those --DOCID things
+
+The --DOCIDX is an internal reference created by the import to Freshdesk.
+If you are creating a new document, that reference will be added automatically
+you don't need to do anything extra.
+
+If the file you wish to edit has one of those already, then leave it intact;
+changing the --DOCID for an existing article will cause Bad Stuff (tm) to
+happen.
+
+You can rename an article by changing the filename, but do still leave the
+--DOCID alone.
 
 ##### Making some changes
 
