@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_df21f1b5",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-08-04T05:44:23Z",
+      "side": 1,
+      "message": "Actually, it needs to be under \u0027NeCTAR Documentation--DOCID16\u0027/\u0027Folder Name\u0027/Solution Name.md",
+      "revId": "0fba39ab777ee013adcf9cb309d1f46fc7fd84f9",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
