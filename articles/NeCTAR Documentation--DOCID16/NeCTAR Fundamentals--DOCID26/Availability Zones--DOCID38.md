@@ -27,4 +27,4 @@ Some participating institutions offer **private availability zones**, for which
 you may be eligible. You will have to contact your Node's local support.
 
 [Launch Dialog AZ Tab]: images/launch_dialog_az_tab.png
-[Cloud Storage]: ../Cloud Basics/introduction_to_cloud_storage.md
+[Cloud Storage]: ../Cloud%20Basics/Introduction%20to%20Cloud%20Storage.md
