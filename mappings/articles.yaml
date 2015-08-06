@@ -1383,3 +1383,150 @@
   parent: 21
   sha1: 39c7a194507b59f9aec1539aee8a40cddf43ea26
   title: Resources available to you
+38:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 2
+        bool_01: null
+        created_at: '2015-08-06T00:50:16-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Availability Zones \n The Nectar Cloud is organised in Availability\
+          \ Zones, that are hosted by the\nnodes participating institutions. In many\
+          \ cloud usage scenarios you won't need\nto worry about these: the Nectar\
+          \ software will select a suitable Availability\nZone for you when you launch\
+          \ your VM. In certain other scenarios, however, you\nhave to select the\
+          \ AZ that is right for your purpose. \n How to select an Availability Zone\
+          \ at launch \n You can select a specific Avalability Zone for your VM at\
+          \ Launch time in the\nLaunch Dialog's Availability Zone. The default option\
+          \ is \"(Any availability\nzone)\" If you leave this selected Nectar will\
+          \ find a suitable AZ for you.\n \n Scenarios \n If your VM uses persistent\
+          \ volume storage, your VM and your storage must\nbe in compatible Availability\
+          \ Zones. You can find more information about\nstorage here \n In some scenarios\
+          \ you can use institutionally licensed software, in which\ncase you may\
+          \ need to select the appropriate Availability Zone \n Some participating\
+          \ institutions offer private availability zones, for which\nyou may be eligible.\
+          \ You will have to contact your Node's local support. "
+        description: '<h1>Availability Zones</h1>
+
+          <p>The Nectar Cloud is organised in Availability Zones, that are hosted
+          by the
+
+          nodes participating institutions. In many cloud usage scenarios you won''t
+          need
+
+          to worry about these: the Nectar software will select a suitable Availability
+
+          Zone for you when you launch your VM. In certain other scenarios, however,
+          you
+
+          have to select the AZ that is right for your purpose.</p>
+
+          <h2>How to select an Availability Zone at launch</h2>
+
+          <p>You can select a specific Avalability Zone for your VM at Launch time
+          in the
+
+          Launch Dialog''s Availability Zone. The default option is "(Any availability
+
+          zone)" If you leave this selected Nectar will find a suitable AZ for you.
+
+          <img alt="Screenshot of Launch Dialog AZ Tab" src="images/launch_dialog_az_tab.png"></p>
+
+          <h2>Scenarios</h2>
+
+          <p>If your VM uses <strong>persistent volume storage</strong>, your VM and
+          your storage must
+
+          be in compatible Availability Zones. You can find more information about
+
+          storage <a href="introduction_to_cloud_storage.md">here</a></p>
+
+          <p>In some scenarios you can use <strong>institutionally licensed software</strong>,
+          in which
+
+          case you may need to select the appropriate Availability Zone</p>
+
+          <p>Some participating institutions offer <strong>private availability zones</strong>,
+          for which
+
+          you may be eligible. You will have to contact your Node''s local support.</p>'
+        folder:
+          category_id: 6000094319
+          created_at: '2015-08-03T01:25:04-04:00'
+          customer_folders: []
+          description: NeCTAR Fundamentals
+          id: 6000146436
+          is_default: false
+          language_id: 6
+          name: NeCTAR Fundamentals
+          parent_id: 6000146436
+          position: 7
+          updated_at: '2015-08-03T01:25:04-04:00'
+          visibility: 1
+        folder_id: 6000146436
+        hits: 0
+        id: 6000037213
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: null
+        modified_at: '2015-08-06T00:50:16-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: null
+        position: 1
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Availability Zones
+        updated_at: '2015-08-06T00:50:16-04:00'
+        user_id: 6000675345
+  html: '<h1>Availability Zones</h1>
+
+    <p>The Nectar Cloud is organised in Availability Zones, that are hosted by the
+
+    nodes participating institutions. In many cloud usage scenarios you won''t need
+
+    to worry about these: the Nectar software will select a suitable Availability
+
+    Zone for you when you launch your VM. In certain other scenarios, however, you
+
+    have to select the AZ that is right for your purpose.</p>
+
+    <h2>How to select an Availability Zone at launch</h2>
+
+    <p>You can select a specific Avalability Zone for your VM at Launch time in the
+
+    Launch Dialog''s Availability Zone. The default option is "(Any availability
+
+    zone)" If you leave this selected Nectar will find a suitable AZ for you.
+
+    <img alt="Screenshot of Launch Dialog AZ Tab" src="images/launch_dialog_az_tab.png"></p>
+
+    <h2>Scenarios</h2>
+
+    <p>If your VM uses <strong>persistent volume storage</strong>, your VM and your
+    storage must
+
+    be in compatible Availability Zones. You can find more information about
+
+    storage <a href="introduction_to_cloud_storage.md">here</a></p>
+
+    <p>In some scenarios you can use <strong>institutionally licensed software</strong>,
+    in which
+
+    case you may need to select the appropriate Availability Zone</p>
+
+    <p>Some participating institutions offer <strong>private availability zones</strong>,
+    for which
+
+    you may be eligible. You will have to contact your Node''s local support.</p>'
+  parent: 26
+  sha1: 06c66e1fe0f7ec67fa7e3882c52f28d5f080f54d
+  title: Availability Zones
