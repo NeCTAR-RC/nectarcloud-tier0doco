@@ -1,52 +1,46 @@
 # Getting An Account
 
-Before you can use NeCTAR cloud, you need to obtain an user account. This is
-normally done through Australian Access Federation(AAF). Please contact your
-local IT help desk to discuss your AAF credentials and please refer
-to [AAF][aaf] website to get more information about AAF.
+If you work or study at an Australian University you will be able to login to
+the Nectar Cloud using your institutional credentials. Access to the Nectar
+Cloud is enabled by the [Australian Access Federation (AAF)](http://aaf.edu.au/).
 
 ## AAF Authentication
 
-AAF Credentials are same as your research institutional username and password.
-You can get it from your institutional IT service department. However, before
-you doing that, you need to make sure your organization is a member of the AAF.
-You can get a complete AAF member list from this [link][aaf member list].
+Your AAF credentials are the same as your institutional username and password.
+To check that your organisation is a member of the AAF check the 
+[complete AAF member list here](http://aaf.edu.au/subscribe/subscribers/).
 
-If your research institutional is not a member of the AAF, you can refer
-[this page][aaf member] to see various ways to become an AAF member.
+If your institution is not a member of the AAF, talk to your local IT team
+to arrange access.
 
-## Login to NeCTAR Dashboard
+## Logging in
 
 Once you have obtained your AAF credentials, you can follow these steps to
-login to [NeCTAR Dashboard][dashboard]:
+login to [NeCTAR Dashboard](https://dashboard.rc.nectar.org.au/):
 
-- Go To [Dashboard][dashboard]
-
-- Click 'log in' button
+- Click 'log in'
 
 - In dropdown list, select the name of your research institution
 
-- Click 'Select' button
+- Click 'Select'
 
-- Wait until selected institutional login page appears
+- Wait until the selected institutional login page appears
 
-- Type in username and password
+- Type in your username and password
 
-- Click 'Continue' button
+- Click 'Continue'
 
-If you have any problems during the login process, please contact your local
-help desk of your IT service department.
+If you have any issues contact the Nectar help team.
 
 ## API Credentials
 
-The first time you log into the Dashboard a NeCTAR Cloud Account is also created
-for you. This account is needed if you are using the cloud through API other
-than the Dashboard. The API is a programming interface providing more
-flexibility of utilizing the power of the cloud.
+The first time you login to the dashboard a NeCTAR Cloud account is created
+for you. You will need this account if you want to access the Cloud outside of
+the dashboard through the API. The API is a programming interface providing
+more flexibility of utilising the power of the cloud.
 
-There are two types of API credentials and which one you use will depend on API
-client you use. The below section only works for Linux/Unix users. For windows
-user, please find relevant information from the Internet.
+There are two types of API credentials and which one you use will depend on
+the API client you use. The below section only works for Linux/Unix users.
 
 ### Openstack API
 
