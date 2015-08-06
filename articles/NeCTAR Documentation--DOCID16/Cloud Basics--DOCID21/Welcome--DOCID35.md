@@ -1,17 +1,19 @@
 # NeCTAR welcome and introduction
 
 Welcome to the Nectar Cloud knowledge base. Browse or search our
-user documentation, and if you can’t find what you’re looking
+user documentation, and if you can't find what you're looking
 for contact our support team at [email] or [phone].
 
 ## What is the Nectar Cloud
 
-[Nectar](http://nectar.org.au/) (National eResearch
-Collaboration Tools and Resources) is
+[Nectar](http://nectar.org.au/)
+(National eResearch Collaboration Tools and Resources) is
 an Australian Government project funded to build new
-infrastructure specifically for the
-needs of Australian researchers. All Australian researchers
-have access to the Nectar Cloud via the
+infrastructure specifically for the needs of Australian researchers.
+The Nectar Cloud provides supported computing infrastructure, giving researchers
+access to computing resources without the need to purchase or host their own
+hardware.
+All Australian researchers have access to the Nectar Cloud via the
 [AAF](http://support.rc.nectar.org.au/node/111).
 
 To access the cloud all users must first login through the
@@ -20,16 +22,12 @@ Nectar Cloud dashboard:
 
 ## Instances
 
-Instances running inside the Research Cloud are just like
-real-life machines but in a
-remote location. The Research Cloud is used to start, copy
-and delete instances.
-They have an operating system (you select it from a list),
-network access (a real IP
-address & you specify any access), and hard disk storage. With
-no hardware to
-maintain you can copy (Snapshot) and customise new machines
-rapidly.
+Instances running inside the Research Cloud are just like real-life machines but
+in a remote location. The Research Cloud is used to start, copy and delete
+instances. They have an operating system (you select it from a list), network
+access (a real IP address & you specify any access), and hard disk storage.
+With no hardware to maintain you can copy (Snapshot) and customise new
+machines rapidly.
 
 ## Tools
 
@@ -78,7 +76,7 @@ Copies of instances are called Snapshots and can be used
 like other Images to start new instances. Making a Snapshot
 is simple:
 
-1. Go to the Dashboard ‘Instances’ tab
+1. Go to the Dashboard "Instances" tab
 1. Click "Create Snapshot" for the running instance you wish to copy.
 
 ## Keypairs
@@ -124,5 +122,3 @@ according to performance, persistence and data safety.
 
 To find out which storage option is right for you. We need
 to write the documentation for it. [LINK]
-
-
