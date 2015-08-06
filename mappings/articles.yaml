@@ -1238,3 +1238,148 @@
   parent: 21
   sha1: 52dbe802a6bf4ae16083833e1bf7d786d98c1708
   title: Good Practices
+37:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 2
+        bool_01: null
+        created_at: '2015-08-06T00:30:29-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Available Resources \n The Cloud \n The Nectar Cloud supports\
+          \ thousands of virtual machines\nusing 20,000 VCPUs across Australia. \n\
+          \ Sharing it out (allocations) \n The Nectar Cloud provides access to the\
+          \ cloud via projects, each with an\nallocation of time & capacity (virtual\
+          \ CPUs). \n \n All researchers initially (and without application) get a\
+          \ personal\n project with 2 VCPUs for 3 Months. \n This means you can run\
+          \ 2 Small or 1 Medium instance for three months. \n Need more time or computing\
+          \ power? Submit an allocation request. \n Multiple users can share an allocation\
+          \ a project. \n \n Instances available by size \n The resources available\
+          \ to an instance are selected by different\n'flavors' when launching the\
+          \ instance for the first time. \n The flavors define the number of VCPUs,\
+          \ the root disk size and the\nsize of the ephemeral disk. The current flavors\
+          \ use a name\npre-fixed with 'm2.' \n \n m2.tiny: 1 VCPUs, 768MB RAM, 5GB\
+          \ root disk, no ephemeral disk \n m2.xsmall: 1 VCPUs, 2GB RAM, 10GB root\
+          \ disk, no ephemeral disk \n m2.small: 1 VCPUs, 4GB RAM, 30GB root disk,\
+          \ no ephemeral disk \n m2.medium: 2 VCPUs, 6GB RAM, 30GB root disk, no ephemeral\
+          \ disk \n m2.large: 4 core, 12GB RAM, 30GB root disk, 80GB ephemeral disk\
+          \ \n m2.xlarge: 12 core, 48GB RAM, 30GB root disk, 360GB ephemeral disk\
+          \ \n \n Legacy flavors use a prefix of 'm1.' and have a smaller root disk.\
+          \ \n \n m1.small: 1 core, 4GB RAM, 10GB root disk, 30GB secondary disk \n\
+          \ m1.medium: 2 cores, 8GB RAM, 10GB root disk, 60GB secondary disk \n m1.large:\
+          \ 4 cores, 16GB RAM, 10GB root disk, 120GB secondary disk \n m1.xlarge:\
+          \ 8 cores, 32GB RAM, 10GB root disk, 240GB secondary disk \n m1.xxlarge:\
+          \ 16 cores, 64GB RAM, 10GB root disk, 480GB secondary disk \n \n Larger\
+          \ instances require more resources than available in the\npersonal project;\
+          \ a new project with more resources can be requested\nvia an allocation\
+          \ request. \n Internet Traffic Quotas (downloads to your instances) \n \n\
+          \ On-Net internet traffic is unlimited (check AARNET off/on net status)\
+          \ \n Off-Net: 1GB of off-net traffic per core per month \n How to manage\
+          \ and monitor your usage: see Manage my Account\n \n "
+        description: "<h1>Available Resources</h1>\n<h2>The Cloud</h2>\n<p>The Nectar\
+          \ Cloud supports <a href=\"http://status.rc.nectar.org.au/growth/infrastructure/\"\
+          >thousands of virtual machines</a>\nusing <a href=\"http://status.rc.nectar.org.au/growth/infrastructure/\"\
+          >20,000 VCPUs</a> across Australia.</p>\n<h2>Sharing it out (allocations)</h2>\n\
+          <p>The Nectar Cloud provides access to the cloud via projects, each with\
+          \ an\nallocation of time &amp; capacity (virtual CPUs).</p>\n<ul>\n<li>All\
+          \ researchers initially (and without application) get a personal\n project\
+          \ with 2 VCPUs for 3 Months.</li>\n<li>This means you can run 2 Small or\
+          \ 1 Medium instance for three months.</li>\n<li>Need more time or computing\
+          \ power? Submit an allocation request.</li>\n<li>Multiple users can share\
+          \ an allocation a project.</li>\n</ul>\n<h2>Instances available by size</h2>\n\
+          <p>The resources available to an instance are selected by different\n'flavors'\
+          \ when launching the instance for the first time.</p>\n<p>The flavors define\
+          \ the number of VCPUs, the root disk size and the\nsize of the ephemeral\
+          \ disk. The current flavors use a name\npre-fixed with 'm2.'</p>\n<ul>\n\
+          <li>m2.tiny: 1 VCPUs, 768MB RAM, 5GB root disk, no ephemeral disk</li>\n\
+          <li>m2.xsmall: 1 VCPUs, 2GB RAM, 10GB root disk, no ephemeral disk</li>\n\
+          <li>m2.small: 1 VCPUs, 4GB RAM, 30GB root disk, no ephemeral disk</li>\n\
+          <li>m2.medium: 2 VCPUs, 6GB RAM, 30GB root disk, no ephemeral disk</li>\n\
+          <li>m2.large: 4 core, 12GB RAM, 30GB root disk, 80GB ephemeral disk</li>\n\
+          <li>m2.xlarge: 12 core, 48GB RAM, 30GB root disk, 360GB ephemeral disk</li>\n\
+          </ul>\n<p>Legacy flavors use a prefix of 'm1.' and have a smaller root disk.</p>\n\
+          <ul>\n<li>m1.small: 1 core, 4GB RAM, 10GB root disk, 30GB secondary disk</li>\n\
+          <li>m1.medium: 2 cores, 8GB RAM, 10GB root disk, 60GB secondary disk</li>\n\
+          <li>m1.large: 4 cores, 16GB RAM, 10GB root disk, 120GB secondary disk</li>\n\
+          <li>m1.xlarge: 8 cores, 32GB RAM, 10GB root disk, 240GB secondary disk</li>\n\
+          <li>m1.xxlarge: 16 cores, 64GB RAM, 10GB root disk, 480GB secondary disk</li>\n\
+          </ul>\n<p>Larger instances require more resources than available in the\n\
+          personal project; a new project with more resources can be requested\nvia\
+          \ an allocation request.</p>\n<h2>Internet Traffic Quotas (downloads to\
+          \ your instances)</h2>\n<ul>\n<li>On-Net internet traffic is unlimited (<a\
+          \ href=\"http://lg.aarnet.edu.au/cgi-bin/traffic.cgi\">check AARNET off/on\
+          \ net status</a>)</li>\n<li>Off-Net: 1GB of off-net traffic per core per\
+          \ month</li>\n<li>How to manage and monitor your usage: see <a href=\"manage_my_account\"\
+          >Manage my Account</a>\n</li>\n</ul>"
+        folder:
+          category_id: 6000094319
+          created_at: '2015-08-03T01:24:59-04:00'
+          customer_folders: []
+          description: Cloud Basics
+          id: 6000146431
+          is_default: false
+          language_id: 6
+          name: Cloud Basics
+          parent_id: 6000146431
+          position: 2
+          updated_at: '2015-08-03T01:24:59-04:00'
+          visibility: 1
+        folder_id: 6000146431
+        hits: 0
+        id: 6000037208
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: null
+        modified_at: '2015-08-06T00:30:29-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: null
+        position: 5
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Resources available to you
+        updated_at: '2015-08-06T00:30:29-04:00'
+        user_id: 6000675345
+  html: "<h1>Available Resources</h1>\n<h2>The Cloud</h2>\n<p>The Nectar Cloud supports\
+    \ <a href=\"http://status.rc.nectar.org.au/growth/infrastructure/\">thousands\
+    \ of virtual machines</a>\nusing <a href=\"http://status.rc.nectar.org.au/growth/infrastructure/\"\
+    >20,000 VCPUs</a> across Australia.</p>\n<h2>Sharing it out (allocations)</h2>\n\
+    <p>The Nectar Cloud provides access to the cloud via projects, each with an\n\
+    allocation of time &amp; capacity (virtual CPUs).</p>\n<ul>\n<li>All researchers\
+    \ initially (and without application) get a personal\n project with 2 VCPUs for\
+    \ 3 Months.</li>\n<li>This means you can run 2 Small or 1 Medium instance for\
+    \ three months.</li>\n<li>Need more time or computing power? Submit an allocation\
+    \ request.</li>\n<li>Multiple users can share an allocation a project.</li>\n\
+    </ul>\n<h2>Instances available by size</h2>\n<p>The resources available to an\
+    \ instance are selected by different\n'flavors' when launching the instance for\
+    \ the first time.</p>\n<p>The flavors define the number of VCPUs, the root disk\
+    \ size and the\nsize of the ephemeral disk. The current flavors use a name\npre-fixed\
+    \ with 'm2.'</p>\n<ul>\n<li>m2.tiny: 1 VCPUs, 768MB RAM, 5GB root disk, no ephemeral\
+    \ disk</li>\n<li>m2.xsmall: 1 VCPUs, 2GB RAM, 10GB root disk, no ephemeral disk</li>\n\
+    <li>m2.small: 1 VCPUs, 4GB RAM, 30GB root disk, no ephemeral disk</li>\n<li>m2.medium:\
+    \ 2 VCPUs, 6GB RAM, 30GB root disk, no ephemeral disk</li>\n<li>m2.large: 4 core,\
+    \ 12GB RAM, 30GB root disk, 80GB ephemeral disk</li>\n<li>m2.xlarge: 12 core,\
+    \ 48GB RAM, 30GB root disk, 360GB ephemeral disk</li>\n</ul>\n<p>Legacy flavors\
+    \ use a prefix of 'm1.' and have a smaller root disk.</p>\n<ul>\n<li>m1.small:\
+    \ 1 core, 4GB RAM, 10GB root disk, 30GB secondary disk</li>\n<li>m1.medium: 2\
+    \ cores, 8GB RAM, 10GB root disk, 60GB secondary disk</li>\n<li>m1.large: 4 cores,\
+    \ 16GB RAM, 10GB root disk, 120GB secondary disk</li>\n<li>m1.xlarge: 8 cores,\
+    \ 32GB RAM, 10GB root disk, 240GB secondary disk</li>\n<li>m1.xxlarge: 16 cores,\
+    \ 64GB RAM, 10GB root disk, 480GB secondary disk</li>\n</ul>\n<p>Larger instances\
+    \ require more resources than available in the\npersonal project; a new project\
+    \ with more resources can be requested\nvia an allocation request.</p>\n<h2>Internet\
+    \ Traffic Quotas (downloads to your instances)</h2>\n<ul>\n<li>On-Net internet\
+    \ traffic is unlimited (<a href=\"http://lg.aarnet.edu.au/cgi-bin/traffic.cgi\"\
+    >check AARNET off/on net status</a>)</li>\n<li>Off-Net: 1GB of off-net traffic\
+    \ per core per month</li>\n<li>How to manage and monitor your usage: see <a href=\"\
+    manage_my_account\">Manage my Account</a></li>\n</ul>"
+  parent: 21
+  sha1: 39c7a194507b59f9aec1539aee8a40cddf43ea26
+  title: Resources available to you
