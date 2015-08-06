@@ -2054,3 +2054,317 @@
   parent: 21
   sha1: a4874ff570cdcd48a61261b4d0200ce2a0bdae08
   title: Welcome
+36:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 2
+        bool_01: null
+        created_at: '2015-08-05T22:38:12-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " 10 Good practices for managing your NeCTAR instances \n Consider\
+          \ Security \n Security of your NeCTAR instances is your responsibility.\
+          \ \n If we see evidence that an instance's security has been comprised,\
+          \ we\nwill take steps to shut down and isolate it so that it doesn't do\
+          \ any further\ndamage to cloud infrastructure or to other users' assets.\
+          \ \n Compromised NeCTAR instances are a real issue. Across the NeCTAR federation,\
+          \ we\nsee examples at least once a month. \n Apply system patches as often\
+          \ as possible \n Keeping your system up to date is one of the simplest and\
+          \ most effective\nways to secure your system against unwanted intrusion.\
+          \ \n It is easy and more practical to configure a recent Linux system to\
+          \ apply\npatches automatically.  Alternatively If you are applying patches\
+          \ by hand, we\nrecommend that you do it at least once a week. \n Understand\
+          \ the lifecycle of your Linux Distribution \n Every release of a linux distribution\
+          \ (such as Debian Wheezy, or Ubuntu\nPrecise) will have a published end\
+          \ of life date.  Assuming you are doing the\nright thing and applying patches\
+          \ regularly, once the end of life date is\nreached, the patches will no\
+          \ longer be available. \n If system patches are discontinued, you should\
+          \ update to a more recent version\nof the operating system.  You should\
+          \ treat this as a matter of urgency. \n It is trivially easy for a Bad Person(tm)\
+          \ to scan your machine and determine\nexactly which attacks your instance\
+          \ is vulnerable to. \n Understand SSH authentication \n It is undeniable\
+          \ that ssh key authentication is the most effective way to\nsecure ssh access\
+          \ to your instance.  Enabling ssh password authentication may\nseem like\
+          \ a good idea, but doing so opens your machine to brute force password\n\
+          attacks.  Don't underestimate the means and will of Bad People(tm) to exploit\n\
+          your instance for their nefarious purposes. \n Don't share your ssh private\
+          \ key with anyone, ever.   Like giving machine guns\nto monkeys, it's a\
+          \ very bad idea. \n Don't use VNC, use x2go instead \n VNC is one of those\
+          \ longstanding ways of getting graphical access to your\ncomputer over a\
+          \ network.  While it's well known and loved, there are in fact\nmany ways\
+          \ to exploit vnc and there are now better ways to get to your graphical\n\
+          content. \n x2go is technically superior to vnc and tunnels your graphical\
+          \ content over\nssh. \n Terminate instances that you no longer require \n\
+          \ In theory, you can run an instance as long as you like.  In practice,\
+          \ we would\nprefer you to promptly terminate any instance that are not using\
+          \ actively, so\nthat other users can make use of the resources. \n Currently,\
+          \ there is no formal NeCTAR mechanism to discourage wasteful use of\nyour\
+          \ allocation, but this likely to change. \n What should I do when I am finished\
+          \ with an instance \n When you are finished with an Instance, you should\
+          \ Terminate it.  Leaving an\ninstance running, or in \"paused\" or \"suspended\"\
+          \ or \"shutdown\" states is tying\ndown resources that other people could\
+          \ be using. \n Note that terminating an instance destroys its primary and\
+          \ ephemeral file\nsystems.  If you want to save the primary file system\
+          \ (so that you can launch a\nnew instance), snapshot the instance before\
+          \ you terminate it. "
+        description: '<h1>10 Good practices for managing your NeCTAR instances</h1>
+
+          <h2>Consider Security</h2>
+
+          <p>Security of your NeCTAR instances is your responsibility.</p>
+
+          <p>If we see evidence that an instance''s security has been comprised, we
+
+          will take steps to shut down and isolate it so that it doesn''t do any further
+
+          damage to cloud infrastructure or to other users'' assets.</p>
+
+          <p>Compromised NeCTAR instances are a real issue. Across the NeCTAR federation,
+          we
+
+          see examples at least once a month.</p>
+
+          <h2>Apply system patches as often as possible</h2>
+
+          <p>Keeping your system up to date is one of the simplest and most effective
+
+          ways to secure your system against unwanted intrusion.</p>
+
+          <p>It is easy and more practical to configure a recent Linux system to apply
+
+          patches automatically.  Alternatively If you are applying patches by hand,
+          we
+
+          recommend that you do it at least once a week.</p>
+
+          <h2>Understand the lifecycle of your Linux Distribution</h2>
+
+          <p>Every release of a linux distribution (such as Debian Wheezy, or Ubuntu
+
+          Precise) will have a published end of life date.  Assuming you are doing
+          the
+
+          right thing and applying patches regularly, once the end of life date is
+
+          reached, the patches will no longer be available.</p>
+
+          <p>If system patches are discontinued, you should update to a more recent
+          version
+
+          of the operating system.  You should treat this as a matter of urgency.</p>
+
+          <p>It is trivially easy for a Bad Person(tm) to scan your machine and determine
+
+          exactly which attacks your instance is vulnerable to.</p>
+
+          <h2>Understand SSH authentication</h2>
+
+          <p>It is undeniable that ssh key authentication is the most effective way
+          to
+
+          secure ssh access to your instance.  Enabling ssh password authentication
+          may
+
+          seem like a good idea, but doing so opens your machine to brute force password
+
+          attacks.  Don''t underestimate the means and will of Bad People(tm) to exploit
+
+          your instance for their nefarious purposes.</p>
+
+          <p>Don''t share your ssh private key with anyone, ever.   Like giving machine
+          guns
+
+          to monkeys, it''s a very bad idea.</p>
+
+          <h2>Don''t use VNC, use x2go instead</h2>
+
+          <p>VNC is one of those longstanding ways of getting graphical access to
+          your
+
+          computer over a network.  While it''s well known and loved, there are in
+          fact
+
+          many ways to exploit vnc and there are now better ways to get to your graphical
+
+          content.</p>
+
+          <p>x2go is technically superior to vnc and tunnels your graphical content
+          over
+
+          ssh.</p>
+
+          <h2>Terminate instances that you no longer require</h2>
+
+          <p>In theory, you can run an instance as long as you like.  In practice,
+          we would
+
+          prefer you to promptly terminate any instance that are not using actively,
+          so
+
+          that other users can make use of the resources.</p>
+
+          <p>Currently, there is no formal NeCTAR mechanism to discourage wasteful
+          use of
+
+          your allocation, but this likely to change.</p>
+
+          <h2>What should I do when I am finished with an instance</h2>
+
+          <p>When you are finished with an Instance, you should Terminate it.  Leaving
+          an
+
+          instance running, or in "paused" or "suspended" or "shutdown" states is
+          tying
+
+          down resources that other people could be using.</p>
+
+          <p>Note that terminating an instance destroys its primary and ephemeral
+          file
+
+          systems.  If you want to save the primary file system (so that you can launch
+          a
+
+          new instance), snapshot the instance before you terminate it.</p>'
+        folder:
+          category_id: 6000094319
+          created_at: '2015-08-03T01:24:59-04:00'
+          customer_folders: []
+          description: Cloud Basics
+          id: 6000146431
+          is_default: false
+          language_id: 6
+          name: Cloud Basics
+          parent_id: 6000146431
+          position: 2
+          updated_at: '2015-08-03T01:24:59-04:00'
+          visibility: 1
+        folder_id: 6000146431
+        hits: 0
+        id: 6000037181
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: null
+        modified_at: '2015-08-05T22:38:12-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: null
+        position: 4
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Good Practices
+        updated_at: '2015-08-05T22:38:12-04:00'
+        user_id: 6000675345
+  html: '<h1>10 Good practices for managing your NeCTAR instances</h1>
+
+    <h2>Consider Security</h2>
+
+    <p>Security of your NeCTAR instances is your responsibility.</p>
+
+    <p>If we see evidence that an instance''s security has been comprised, we
+
+    will take steps to shut down and isolate it so that it doesn''t do any further
+
+    damage to cloud infrastructure or to other users'' assets.</p>
+
+    <p>Compromised NeCTAR instances are a real issue. Across the NeCTAR federation,
+    we
+
+    see examples at least once a month.</p>
+
+    <h2>Apply system patches as often as possible</h2>
+
+    <p>Keeping your system up to date is one of the simplest and most effective
+
+    ways to secure your system against unwanted intrusion.</p>
+
+    <p>It is easy and more practical to configure a recent Linux system to apply
+
+    patches automatically.  Alternatively If you are applying patches by hand, we
+
+    recommend that you do it at least once a week.</p>
+
+    <h2>Understand the lifecycle of your Linux Distribution</h2>
+
+    <p>Every release of a linux distribution (such as Debian Wheezy, or Ubuntu
+
+    Precise) will have a published end of life date.  Assuming you are doing the
+
+    right thing and applying patches regularly, once the end of life date is
+
+    reached, the patches will no longer be available.</p>
+
+    <p>If system patches are discontinued, you should update to a more recent version
+
+    of the operating system.  You should treat this as a matter of urgency.</p>
+
+    <p>It is trivially easy for a Bad Person(tm) to scan your machine and determine
+
+    exactly which attacks your instance is vulnerable to.</p>
+
+    <h2>Understand SSH authentication</h2>
+
+    <p>It is undeniable that ssh key authentication is the most effective way to
+
+    secure ssh access to your instance.  Enabling ssh password authentication may
+
+    seem like a good idea, but doing so opens your machine to brute force password
+
+    attacks.  Don''t underestimate the means and will of Bad People(tm) to exploit
+
+    your instance for their nefarious purposes.</p>
+
+    <p>Don''t share your ssh private key with anyone, ever.   Like giving machine
+    guns
+
+    to monkeys, it''s a very bad idea.</p>
+
+    <h2>Don''t use VNC, use x2go instead</h2>
+
+    <p>VNC is one of those longstanding ways of getting graphical access to your
+
+    computer over a network.  While it''s well known and loved, there are in fact
+
+    many ways to exploit vnc and there are now better ways to get to your graphical
+
+    content.</p>
+
+    <p>x2go is technically superior to vnc and tunnels your graphical content over
+
+    ssh.</p>
+
+    <h2>Terminate instances that you no longer require</h2>
+
+    <p>In theory, you can run an instance as long as you like.  In practice, we would
+
+    prefer you to promptly terminate any instance that are not using actively, so
+
+    that other users can make use of the resources.</p>
+
+    <p>Currently, there is no formal NeCTAR mechanism to discourage wasteful use of
+
+    your allocation, but this likely to change.</p>
+
+    <h2>What should I do when I am finished with an instance</h2>
+
+    <p>When you are finished with an Instance, you should Terminate it.  Leaving an
+
+    instance running, or in "paused" or "suspended" or "shutdown" states is tying
+
+    down resources that other people could be using.</p>
+
+    <p>Note that terminating an instance destroys its primary and ephemeral file
+
+    systems.  If you want to save the primary file system (so that you can launch
+    a
+
+    new instance), snapshot the instance before you terminate it.</p>'
+  parent: 21
+  sha1: 52dbe802a6bf4ae16083833e1bf7d786d98c1708
+  title: Good Practices
