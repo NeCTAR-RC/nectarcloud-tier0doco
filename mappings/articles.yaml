@@ -1674,12 +1674,11 @@
           \ is \"(Any availability\nzone)\" If you leave this selected Nectar will\
           \ find a suitable AZ for you.\n \n Scenarios \n If your VM uses persistent\
           \ volume storage, your VM and your storage must\nbe in compatible Availability\
-          \ Zones. You can find more information about\nstorage [here] [Cloud Storage]\
-          \ \n In some scenarios you can use institutionally licensed software, in\
-          \ which\ncase you may need to select the appropriate Availability Zone \n\
-          \ Some participating institutions offer private availability zones, for\
-          \ which\nyou may be eligible. You will have to contact your Node's local\
-          \ support. \n [Cloud Storage]: ../Cloud Basics/introduction_to_cloud_storage.md "
+          \ Zones. You can find more information about\nstorage here \n In some scenarios\
+          \ you can use institutionally licensed software, in which\ncase you may\
+          \ need to select the appropriate Availability Zone \n Some participating\
+          \ institutions offer private availability zones, for which\nyou may be eligible.\
+          \ You will have to contact your Node's local support. "
         description: '<h1>Availability Zones</h1>
 
           <p>The Nectar Cloud is organised in Availability Zones, that are hosted
@@ -1715,7 +1714,7 @@
 
           be in compatible Availability Zones. You can find more information about
 
-          storage [here] [Cloud Storage]</p>
+          storage <a href="../Cloud%20Basics/Introduction%20to%20Cloud%20Storage.md">here</a></p>
 
           <p>In some scenarios you can use <strong>institutionally licensed software</strong>,
           in which
@@ -1725,9 +1724,7 @@
           <p>Some participating institutions offer <strong>private availability zones</strong>,
           for which
 
-          you may be eligible. You will have to contact your Node''s local support.</p>
-
-          <p>[Cloud Storage]: ../Cloud Basics/introduction_to_cloud_storage.md</p>'
+          you may be eligible. You will have to contact your Node''s local support.</p>'
         folder:
           category_id: 6000094319
           created_at: '2015-08-03T01:25:04-04:00'
@@ -1748,7 +1745,7 @@
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-08-06T01:20:05-04:00'
+        modified_at: '2015-08-06T02:26:57-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000037213
@@ -1761,7 +1758,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Availability Zones
-        updated_at: '2015-08-06T01:20:05-04:00'
+        updated_at: '2015-08-06T02:26:57-04:00'
         user_id: 6000675345
   html: '<h1>Availability Zones</h1>
 
@@ -1794,7 +1791,7 @@
 
     be in compatible Availability Zones. You can find more information about
 
-    storage [here] [Cloud Storage]</p>
+    storage <a href="../Cloud%20Basics/Introduction%20to%20Cloud%20Storage.md">here</a></p>
 
     <p>In some scenarios you can use <strong>institutionally licensed software</strong>,
     in which
@@ -1804,11 +1801,9 @@
     <p>Some participating institutions offer <strong>private availability zones</strong>,
     for which
 
-    you may be eligible. You will have to contact your Node''s local support.</p>
-
-    <p>[Cloud Storage]: ../Cloud Basics/introduction_to_cloud_storage.md</p>'
+    you may be eligible. You will have to contact your Node''s local support.</p>'
   parent: 26
-  sha1: dfa5998d8da8820e913d95f745fd17945917b7a6
+  sha1: b1e2dd6ff9baa2e6a886edc5ae5669e35e51e5ed
   title: Availability Zones
 39:
   freshdesk:
