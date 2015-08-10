@@ -5,9 +5,7 @@ enabled.
 
 ## Preparation
 
-You need to create a public/private key pairs before you can use SSH to login to
-the newly created instance. The public will be inserted into the instance and
-the private key is used on your desktop/laptop.
+You need to create a public/private key pairs before you can use SSH to login to the newly created instance. The public will be inserted into the instance and the private key is used on your desktop/laptop.
 
 ### Windows User
 
