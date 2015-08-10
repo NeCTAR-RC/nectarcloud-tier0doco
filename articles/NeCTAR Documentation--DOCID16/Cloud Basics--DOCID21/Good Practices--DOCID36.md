@@ -1,5 +1,3 @@
-# 10 Good practices for managing your NeCTAR instances
-
 ## Consider Security
 
 Security of your NeCTAR instances is your responsibility.

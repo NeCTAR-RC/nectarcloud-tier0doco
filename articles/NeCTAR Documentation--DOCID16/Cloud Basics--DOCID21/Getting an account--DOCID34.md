@@ -1,5 +1,3 @@
-# Getting An Account
-
 If you work or study at an Australian University you will be able to login to
 the Nectar Cloud using your institutional credentials. Access to the Nectar
 Cloud is enabled by the [Australian Access Federation (AAF)](http://aaf.edu.au/).

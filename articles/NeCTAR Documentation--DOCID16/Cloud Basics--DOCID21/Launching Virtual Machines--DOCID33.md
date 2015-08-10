@@ -1,5 +1,3 @@
-# Launching Virtual Machine
-
 This guide helps to launch a running instance (virtual machine) with SSH login
 enabled.
 
