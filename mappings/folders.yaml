@@ -1,62 +1,21 @@
 20:
-  freshdesk:
-    fd_attributes:
-      folder: {category_id: 6000094319, created_at: '2015-08-03T01:24:58-04:00', description: Training,
-        id: 6000146430, is_default: false, language_id: null, name: Training, parent_id: null,
-        position: 1, updated_at: '2015-08-03T01:24:58-04:00', visibility: 1}
-  parent: 16
-  title: Training
+    parent: 16
+    title: Training
 21:
-  freshdesk:
-    fd_attributes:
-      folder: {category_id: 6000094319, created_at: '2015-08-03T01:24:59-04:00', description: Cloud
-          Basics, id: 6000146431, is_default: false, language_id: null, name: Cloud
-          Basics, parent_id: null, position: 2, updated_at: '2015-08-03T01:24:59-04:00',
-        visibility: 1}
-  parent: 16
-  title: Cloud Basics
+    parent: 16
+    title: Cloud Basics
 22:
-  freshdesk:
-    fd_attributes:
-      folder: {category_id: 6000094319, created_at: '2015-08-03T01:25:00-04:00', description: Cloud
-          Expert, id: 6000146432, is_default: false, language_id: null, name: Cloud
-          Expert, parent_id: null, position: 3, updated_at: '2015-08-03T01:25:00-04:00',
-        visibility: 1}
-  parent: 16
-  title: Cloud Expert
+    parent: 16
+    title: Cloud Expert
 23:
-  freshdesk:
-    fd_attributes:
-      folder: {category_id: 6000094319, created_at: '2015-08-03T01:25:01-04:00', description: NeCTAR
-          Blueprints, id: 6000146433, is_default: false, language_id: null, name: NeCTAR
-          Blueprints, parent_id: null, position: 4, updated_at: '2015-08-03T01:25:01-04:00',
-        visibility: 1}
-  parent: 16
-  title: NeCTAR Blueprints
+    parent: 16
+    title: NeCTAR Blueprints
 24:
-  freshdesk:
-    fd_attributes:
-      folder: {category_id: 6000094319, created_at: '2015-08-03T01:25:02-04:00', description: Tools
-          and Apps, id: 6000146434, is_default: false, language_id: null, name: Tools
-          and Apps, parent_id: null, position: 5, updated_at: '2015-08-03T01:25:02-04:00',
-        visibility: 1}
-  parent: 16
-  title: Tools and Apps
+    parent: 16
+    title: Tools and Apps
 25:
-  freshdesk:
-    fd_attributes:
-      folder: {category_id: 6000094319, created_at: '2015-08-03T01:25:03-04:00', description: Service
-          Applications, id: 6000146435, is_default: false, language_id: null, name: Service
-          Applications, parent_id: null, position: 6, updated_at: '2015-08-03T01:25:03-04:00',
-        visibility: 1}
-  parent: 16
-  title: Service Applications
+    parent: 16
+    title: Service Applications
 26:
-  freshdesk:
-    fd_attributes:
-      folder: {category_id: 6000094319, created_at: '2015-08-03T01:25:04-04:00', description: NeCTAR
-          Fundamentals, id: 6000146436, is_default: false, language_id: null, name: NeCTAR
-          Fundamentals, parent_id: null, position: 7, updated_at: '2015-08-03T01:25:04-04:00',
-        visibility: 1}
-  parent: 16
-  title: NeCTAR Fundamentals
+    parent: 16
+    title: NeCTAR Fundamentals
