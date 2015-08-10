@@ -1,5 +1,3 @@
-# Availability Zones
-
 The Nectar Cloud is organised in Availability Zones, that are hosted by the
 participating institutions. An availability zone is a virtual area in the
 cloud where your VM will reside. In many cloud usage scenarios you won't need

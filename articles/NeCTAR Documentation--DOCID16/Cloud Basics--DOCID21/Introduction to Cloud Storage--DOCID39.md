@@ -1,5 +1,3 @@
-# Introduction to Cloud Storage
-
 The NeCTAR virtual machines have many resources binded with them in order for it
 to function properly. Among these resources, storage is the fundamental component
 for both the virtual machine and user to save and use data. The amount of

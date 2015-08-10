@@ -1,5 +1,3 @@
-# Available Resources
-
 ## The Cloud
 
 The Nectar Cloud supports [thousands of virtual machines][cloud_growth]
