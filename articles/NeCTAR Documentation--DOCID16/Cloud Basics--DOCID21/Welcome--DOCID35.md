@@ -6,15 +6,8 @@ for contact our support team at [email] or [phone].
 
 ## What is the Nectar Cloud
 
-[Nectar](http://nectar.org.au/)
-(National eResearch Collaboration Tools and Resources) is
-an Australian Government project funded to build new
-infrastructure specifically for the needs of Australian researchers.
-The Nectar Cloud provides supported computing infrastructure, giving researchers
-access to computing resources without the need to purchase or host their own
-hardware.
-All Australian researchers have access to the Nectar Cloud via the
-[AAF](http://support.rc.nectar.org.au/node/111).
+[Nectar](http://nectar.org.au/) (National eResearch Collaboration Tools and Resources) is an Australian Government project funded to build new infrastructure specifically for the needs of Australian researchers.  The Nectar Cloud provides supported computing infrastructure, giving researchers access to computing resources without the need to purchase or host their own hardware.  
+All Australian researchers have access to the Nectar Cloud via the [AAF](http://support.rc.nectar.org.au/node/111).
 
 To access the cloud all users must first login through the
 Nectar Cloud dashboard:
