@@ -1,3 +1,5 @@
 *~
 *.sw[pqrstuv]
 *pyc*
+
+.idea
