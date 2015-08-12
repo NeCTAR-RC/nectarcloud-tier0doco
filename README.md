@@ -248,17 +248,10 @@ a robot called Jenkins - he's pretty fussy - but can be tamed easily; more
 on that later.  Where markdown may be valid, but stylistic choices are still
 possible, please consider the following.
 
-###### Title
-
-Each page should have the following front matter at the top:
-
-> title: Data Storage
-> description: User documentation about eResearch SA's data storage services.
-
 ###### Headings
 
 H1 is for the page title and H2 onwards are for sub-headings. Jenkins will
-prevent you from puttting a lower-number heading before a higher-number heading
+prevent you from putting a lower-number heading before a higher-number heading
 
 ###### Text
 
