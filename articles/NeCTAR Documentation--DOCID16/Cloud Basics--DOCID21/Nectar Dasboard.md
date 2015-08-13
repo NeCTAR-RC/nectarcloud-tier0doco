@@ -1,4 +1,4 @@
-#The Nectar dashboard
+# The Nectar dashboard
 
 The Nectar dashboard is the first and easiest way to manage your VMs in the
 Nectar cloud. You will find a guide to the dashboard below. You can find the
