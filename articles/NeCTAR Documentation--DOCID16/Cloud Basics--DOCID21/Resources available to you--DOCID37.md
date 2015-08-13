@@ -10,9 +10,9 @@ allocation of time & capacity (virtual CPUs).
 
 - All researchers initially (and without application) get a personal
  project with 2 VCPUs for 3 Months.
-- This means you can run 2 Small or 1 Medium instance for three months.
+- This means you can run 2 Small or 1 Medium virtual machine for three months.
 - Need more time or computing power? Submit an allocation request.
-- Multiple users can share an allocation a project.
+- Multiple users can share an allocation for a project.
 
 ## Instances available by size
 
@@ -44,7 +44,7 @@ via an allocation request.
 
 ## Internet Traffic Quotas (downloads to your instances)
 
-- On-Net internet traffic is unlimited ([check AARNET off/on net status][aarnetstatus])
+- On-Net Internet traffic is unlimited ([check AARNET off/on net status][aarnetstatus])
 - Off-Net: 1GB of off-net traffic per core per month
 - How to manage and monitor your usage: see [Manage my Account](manage_my_account)
 
