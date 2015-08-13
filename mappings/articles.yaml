@@ -2513,11 +2513,11 @@
         int_01: null
         int_02: null
         int_03: null
-        language_id: null
-        modified_at: '2015-08-13T10:31:24+09:30'
+        language_id: 6
+        modified_at: '2015-08-13T13:46:52+09:30'
         modified_by: null
         outdated: false
-        parent_id: null
+        parent_id: 6000041232
         position: 2
         seo_data: {}
         status: 2
@@ -2526,8 +2526,8 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: Intoduction to YAML
-        updated_at: '2015-08-13T10:31:24+09:30'
+        title: Introduction to YAML
+        updated_at: '2015-08-13T13:46:52+09:30'
         user_id: 6002659931
   html: "<h1>Just enough YAML to read a template</h1>\n<p>Heat templates are written\
     \ in a format named '<a href=\"http://yaml.org/\">YAML</a>'. This\nis a short\
@@ -2570,4 +2570,4 @@
     \        - '.EXE'\n        - 'Dr. Dobb's Journal'\n        - 'The Register'</code></p>"
   parent: 22
   sha1: f8f212154973f4639a222d59fb9c280c5c902474
-  title: Intoduction to YAML
+  title: Introduction to YAML
