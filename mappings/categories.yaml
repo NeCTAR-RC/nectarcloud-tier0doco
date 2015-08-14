@@ -5,10 +5,3 @@
         id: 6000099797, is_default: false, language_id: null, name: NeCTAR Documentation,
         parent_id: null, position: 4, updated_at: '2015-08-10T11:18:47+09:30'}
   title: NeCTAR Documentation
-17:
-  freshdesk:
-    fd_attributes:
-      category: {created_at: '2015-08-13T13:46:39+09:30', description: Training, id: 6000102981,
-        is_default: false, language_id: null, name: Training, parent_id: null, position: 5,
-        updated_at: '2015-08-13T13:46:39+09:30'}
-  title: Training
