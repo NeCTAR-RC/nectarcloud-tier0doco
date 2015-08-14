@@ -2581,3 +2581,465 @@
   parent: 22
   sha1: f8f212154973f4639a222d59fb9c280c5c902474
   title: Introduction to YAML
+42:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-08-14T11:18:29+09:30'
+        datetime_01: null
+        delta: true
+        desc_un_html: " First, we will need to create a ssh key pair for connecting\
+          \ to our instances. An ssh key pair is required to encrypt the data which\
+          \ is transferred to communicate with the instance. The pair consists of\
+          \ two keys: A private key, and a public key.  The public key is called \"\
+          public\" because that\u2019s the one which is placed on the server and which\
+          \ you may upload online without worrying about security issues. It is useless\
+          \ without its counterpart, the private key. The private key is the secret\
+          \ key which you keep on your local computer so that you may connect to the\
+          \ instance. You should keep the private key very safe and never share it\
+          \ with anyone. Take care not to lose it, otherwise you won\u2019t be able\
+          \ to connect to your machine. The connection to the machine only works with\
+          \ both keys. \n \nThe image above shows two computers connected through\
+          \ their ports, with an ssh server and client encrypting the connection.\
+          \ Applications can use this secure ssh connection to exchange data.  \n\
+          \ We will first have to generate this key pair before we can proceed with\
+          \ launching an instance. \n The ssh keys will have a name. You should choose\
+          \ a name that you can associate with your instance, for example \"Nectar_Key\"\
+          . As a general rule of thumb, file names should consist of alphanumeric\
+          \ characters and underscores ( _ ) only. You should avoid white spaces.\
+          \ They makes working with files on Unix systems a bit clumsy. \n Note: The\
+          \ process differs between Unix/Mac Systems and Windows. Follow the steps\
+          \ described below for your platform, and then continue to the next section.\
+          \ \n Mac and Linux \n SSH key pairs can be generated with the ssh-keygen\
+          \ command. \n If you choose Nectar_Key as your key name, you will have two\
+          \ files after the generation of keys: The private key, called Nectar_Key\
+          \ and the public key, called Nectar_Key.pub. \n Open your Unix or Mac Terminal.\
+          \ You will start off in your \"home\" directory. If you already had the\
+          \ terminal open before, make sure you are in the home directory, by simply\
+          \ typing  \n cd \n Now, check if you already have a directory called .ssh,\
+          \ by typing     \n ls -a     \n A list of files in your home directory will\
+          \ be printed. If you don\u2019t see the name .ssh in this list, create the\
+          \ directory (if you see the directory, skip this command):     \n mkdir\
+          \ .ssh     \n and change to this directory:     \n cd .ssh      \n Now generate\
+          \ the key with     \n ssh-keygen -t rsa -f Nectar_Key     \n This generates\
+          \ a pair of keys in the directory .ssh, which is the default location for\
+          \ ssh keys.   \nYou will be asked to specify a passphrase. Choose a secure\
+          \ passphrase! But make sure that you store your password somewhere safe\
+          \ - you will not be able to connect to your instance if you forget the password!\
+          \ \n You will have generated (1) a key you keep private, named Nectar_Key\
+          \ and (2) a public key, named Nectar_Key.pub. If you type \n ls \n Then\
+          \ you should see both files listed. \n Open the public key file with your\
+          \ favourite text editor. If you don\u2019t have a favourite editor, here\
+          \ are some suggestions:   \nOn a Mac, type     \n open -e Nectar_Key.pub\
+          \     \n which should open the key in TextEdit.    \nOn a Linux gnome environment\
+          \ (e.g. Unity), type     \n gedit Nectar_Key     \n or if you are using\
+          \ KDE, type      \n kate Nectar_Key     \n If you are using another desktop\
+          \ environment we assume you are familiar with your favourite text editor.\
+          \ \n Copy all the text which is contained in the file Nectar_Key.pub into\
+          \ the clipboard. With CTRL+A you can mark all text, and with CTRL+C copy\
+          \ it (on a Mac it is Command (\u2318) instead of CTRL). You will need the\
+          \ contents of the public key on the keyboard in one of the next steps. \
+          \ \n Windows \n Open the PuTTYgen program by clicking on PuTTYgen.exe which\
+          \ you downloaded in the beginning of this tutorial. \n \n For Type of key\
+          \ to generate, select SSH-2 RSA. \n Click on Generate.  \n Move your mouse\
+          \ in the area below the progress bar. When the progress bar is full, PuTTYgen\
+          \ generates your key pair. \n \n\n \n Type a passphrase in the Key passphrase\
+          \ field. Choose a secure passphrase! Type the same passphrase in the Confirm\
+          \ passphrase field. \n Right-click in the text field \"Public key for pasting\
+          \ into OpenSSH authorized_keys file\" and choose Select All. Right-click\
+          \ again in the same text field and choose Copy. This copies the content\
+          \ onto the clipboard, we will need to paste it somewhere else in one of\
+          \ the next steps. \n Click the Save private key button to save the private\
+          \ key. It is important that you save the key, because you will need the\
+          \ file later. So save it in a folder where you can find it again. In this\
+          \ exercise, we will name the file Nectar_Key.ppk.  \n Save your public key\
+          \ as well by clicking the Save public key button. As a file name, type Nectar_Key.pub.txt. "
+        description: "<p>First, we will need to create a <strong>ssh key pair</strong>\
+          \ for connecting to our instances. An ssh key pair is required to encrypt\
+          \ the data which is transferred to communicate with the instance. The pair\
+          \ consists of two keys: A <em>private</em> key, and a <em>public</em> key.\
+          \  The public key is called \"public\" because that\u2019s the one which\
+          \ is placed on the server and which you may upload online without worrying\
+          \ about security issues. It is useless without its counterpart, the <em>private</em>\
+          \ key. The private key is the secret key which you keep on your local computer\
+          \ so that you may connect to the instance. You should keep the private key\
+          \ very safe and never share it with anyone. Take care not to lose it, otherwise\
+          \ you won\u2019t be able to connect to your machine. The connection to the\
+          \ machine only works with both keys.</p>\n<p><img alt=\"\" src=\"images/sshKeys.png\"\
+          >\nThe image above shows two computers connected through their <em>ports</em>,\
+          \ with an ssh server and client encrypting the connection. Applications\
+          \ can use this secure ssh connection to exchange data. </p>\n<p>We will\
+          \ first have to generate this key pair before we can proceed with launching\
+          \ an instance.</p>\n<p>The ssh keys will have a <em>name</em>. You should\
+          \ choose a name that you can associate with your instance, for example \"\
+          <em>Nectar_Key\"</em>. As a general rule of thumb, file names should consist\
+          \ of alphanumeric characters and underscores ( _ ) only. You should avoid\
+          \ white spaces. They makes working with files on Unix systems a bit clumsy.</p>\n\
+          <p><em>Note:</em> The process differs between Unix/Mac Systems and Windows.\
+          \ Follow the steps described below for your platform, and then continue\
+          \ to the next section.</p>\n<h3>Mac and Linux</h3>\n<p>SSH key pairs can\
+          \ be generated with the <em>ssh-keygen</em> command.</p>\n<p>If you choose\
+          \ <em>Nectar_Key</em> as your key name, you will have two files after the\
+          \ generation of keys: The private key, called <em>Nectar_Key</em> and the\
+          \ public key, called <em>Nectar_Key.pub</em>.</p>\n<p>Open your Unix or\
+          \ Mac Terminal. You will start off in your <em>\"home\"</em> directory.\
+          \ If you already had the terminal open before, make sure you are in the\
+          \ home directory, by simply typing </p>\n<p><code>cd</code></p>\n<p>Now,\
+          \ check if you already have a directory called <em>.ssh</em>, by typing\
+          \    </p>\n<p><code>ls -a</code>    </p>\n<p>A list of files in your home\
+          \ directory will be printed. If you don\u2019t see the name <em>.ssh</em>\
+          \ in this list, create the directory (if you see the directory, skip this\
+          \ command):    </p>\n<p><code>mkdir .ssh</code>    </p>\n<p>and change to\
+          \ this directory:    </p>\n<p><code>cd .ssh</code>     </p>\n<p>Now generate\
+          \ the key with    </p>\n<p><code>ssh-keygen -t rsa -f Nectar_Key</code>\
+          \    </p>\n<p>This generates a pair of keys in the directory <em>.ssh</em>,\
+          \ which is the default location for ssh keys.  <br>\nYou will be asked to\
+          \ specify a passphrase. Choose a secure passphrase! But make sure that you\
+          \ store your password somewhere safe - you will not be able to connect to\
+          \ your instance if you forget the password!</p>\n<p>You will have generated\
+          \ (1) a key you keep private, named <em>Nectar_Key</em> and (2) a public\
+          \ key, named <em>Nectar_Key.pub</em>. If you type</p>\n<p><code>ls</code></p>\n\
+          <p>Then you should see both files listed.</p>\n<p>Open the public key file\
+          \ with your favourite text editor. If you don\u2019t have a favourite editor,\
+          \ here are some suggestions:  <br>\nOn a <strong>Mac</strong>, type    </p>\n\
+          <p><code>open -e Nectar_Key.pub</code>    </p>\n<p>which should open the\
+          \ key in TextEdit.   <br>\nOn a <strong>Linux</strong> gnome environment\
+          \ (e.g. Unity), type    </p>\n<p><code>gedit Nectar_Key</code>    </p>\n\
+          <p>or if you are using KDE, type     </p>\n<p><code>kate Nectar_Key</code>\
+          \    </p>\n<p>If you are using another desktop environment we assume you\
+          \ are familiar with your favourite text editor.</p>\n<p>Copy <em>all</em>\
+          \ the text which is contained in the file <em>Nectar_Key.pub</em> into the\
+          \ clipboard. With CTRL+A you can mark all text, and with CTRL+C copy it\
+          \ (on a Mac it is Command (\u2318) instead of CTRL). You will need the contents\
+          \ of the public key on the keyboard in one of the next steps. </p>\n<h3>Windows</h3>\n\
+          <p>Open the <strong>PuTTYgen</strong> program by clicking on <em>PuTTYgen.exe</em>\
+          \ which you downloaded in the beginning of this tutorial.</p>\n<p><img alt=\"\
+          \" src=\"images/scrPuttyGen1.png\"></p>\n<p>For <strong>Type of key to generate</strong>,\
+          \ select <strong>SSH-2 RSA</strong>.</p>\n<p>Click on <strong>Generate</strong>.\
+          \ </p>\n<p>Move your mouse in the area below the progress bar. When the\
+          \ progress bar is full, PuTTYgen generates your key pair.</p>\n<p style=\"\
+          clear:both\"></p>\n\n<p><img alt=\"\" src=\"images/scrPuttyGen2.png\"></p>\n\
+          <p>Type a passphrase in the <strong>Key passphrase</strong> field. Choose\
+          \ a secure passphrase! Type the same passphrase in the <strong>Confirm passphrase</strong>\
+          \ field.</p>\n<p>Right-click in the text field \"<strong>Public key for\
+          \ pasting into OpenSSH authorized_keys file</strong>\" and choose <strong>Select\
+          \ All</strong>. Right-click again in the same text field and choose <strong>Copy</strong>.\
+          \ This copies the content onto the clipboard, we will need to paste it somewhere\
+          \ else in one of the next steps.</p>\n<p>Click the <strong>Save private\
+          \ key</strong> button to save the private key. It is important that you\
+          \ save the key, because you will need the file later. So save it in a folder\
+          \ where you can find it again. In this exercise, we will name the file <em>Nectar_Key.ppk</em>.\
+          \ </p>\n<p>Save your public key as well by clicking the <strong>Save public\
+          \ key</strong> button. As a file name, type <em>Nectar_Key.pub.txt</em>.</p>"
+        folder:
+          category_id: 6000102981
+          created_at: '2015-08-13T13:46:50+09:30'
+          customer_folders: []
+          description: Launching and Connecting
+          id: 6000160100
+          is_default: false
+          language_id: 6
+          name: Launching and Connecting
+          parent_id: 6000160100
+          position: 10
+          updated_at: '2015-08-13T13:46:50+09:30'
+          visibility: 1
+        folder_id: 6000160100
+        hits: 0
+        id: 6000042035
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: null
+        modified_at: '2015-08-14T11:18:29+09:30'
+        modified_by: null
+        outdated: false
+        parent_id: null
+        position: 1
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: 02 - Create an SSH key
+        updated_at: '2015-08-14T11:18:29+09:30'
+        user_id: 6002659931
+  html: "<p>First, we will need to create a <strong>ssh key pair</strong> for connecting\
+    \ to our instances. An ssh key pair is required to encrypt the data which is transferred\
+    \ to communicate with the instance. The pair consists of two keys: A <em>private</em>\
+    \ key, and a <em>public</em> key.  The public key is called \"public\" because\
+    \ that\u2019s the one which is placed on the server and which you may upload online\
+    \ without worrying about security issues. It is useless without its counterpart,\
+    \ the <em>private</em> key. The private key is the secret key which you keep on\
+    \ your local computer so that you may connect to the instance. You should keep\
+    \ the private key very safe and never share it with anyone. Take care not to lose\
+    \ it, otherwise you won\u2019t be able to connect to your machine. The connection\
+    \ to the machine only works with both keys.</p>\n<p><img alt=\"\" src=\"images/sshKeys.png\"\
+    >\nThe image above shows two computers connected through their <em>ports</em>,\
+    \ with an ssh server and client encrypting the connection. Applications can use\
+    \ this secure ssh connection to exchange data. </p>\n<p>We will first have to\
+    \ generate this key pair before we can proceed with launching an instance.</p>\n\
+    <p>The ssh keys will have a <em>name</em>. You should choose a name that you can\
+    \ associate with your instance, for example \"<em>Nectar_Key\"</em>. As a general\
+    \ rule of thumb, file names should consist of alphanumeric characters and underscores\
+    \ ( _ ) only. You should avoid white spaces. They makes working with files on\
+    \ Unix systems a bit clumsy.</p>\n<p><em>Note:</em> The process differs between\
+    \ Unix/Mac Systems and Windows. Follow the steps described below for your platform,\
+    \ and then continue to the next section.</p>\n<h3>Mac and Linux</h3>\n<p>SSH key\
+    \ pairs can be generated with the <em>ssh-keygen</em> command.</p>\n<p>If you\
+    \ choose <em>Nectar_Key</em> as your key name, you will have two files after the\
+    \ generation of keys: The private key, called <em>Nectar_Key</em> and the public\
+    \ key, called <em>Nectar_Key.pub</em>.</p>\n<p>Open your Unix or Mac Terminal.\
+    \ You will start off in your <em>\"home\"</em> directory. If you already had the\
+    \ terminal open before, make sure you are in the home directory, by simply typing\
+    \ </p>\n<p><code>cd</code></p>\n<p>Now, check if you already have a directory\
+    \ called <em>.ssh</em>, by typing    </p>\n<p><code>ls -a</code>    </p>\n<p>A\
+    \ list of files in your home directory will be printed. If you don\u2019t see\
+    \ the name <em>.ssh</em> in this list, create the directory (if you see the directory,\
+    \ skip this command):    </p>\n<p><code>mkdir .ssh</code>    </p>\n<p>and change\
+    \ to this directory:    </p>\n<p><code>cd .ssh</code>     </p>\n<p>Now generate\
+    \ the key with    </p>\n<p><code>ssh-keygen -t rsa -f Nectar_Key</code>    </p>\n\
+    <p>This generates a pair of keys in the directory <em>.ssh</em>, which is the\
+    \ default location for ssh keys.  <br>\nYou will be asked to specify a passphrase.\
+    \ Choose a secure passphrase! But make sure that you store your password somewhere\
+    \ safe - you will not be able to connect to your instance if you forget the password!</p>\n\
+    <p>You will have generated (1) a key you keep private, named <em>Nectar_Key</em>\
+    \ and (2) a public key, named <em>Nectar_Key.pub</em>. If you type</p>\n<p><code>ls</code></p>\n\
+    <p>Then you should see both files listed.</p>\n<p>Open the public key file with\
+    \ your favourite text editor. If you don\u2019t have a favourite editor, here\
+    \ are some suggestions:  <br>\nOn a <strong>Mac</strong>, type    </p>\n<p><code>open\
+    \ -e Nectar_Key.pub</code>    </p>\n<p>which should open the key in TextEdit.\
+    \   <br>\nOn a <strong>Linux</strong> gnome environment (e.g. Unity), type   \
+    \ </p>\n<p><code>gedit Nectar_Key</code>    </p>\n<p>or if you are using KDE,\
+    \ type     </p>\n<p><code>kate Nectar_Key</code>    </p>\n<p>If you are using\
+    \ another desktop environment we assume you are familiar with your favourite text\
+    \ editor.</p>\n<p>Copy <em>all</em> the text which is contained in the file <em>Nectar_Key.pub</em>\
+    \ into the clipboard. With CTRL+A you can mark all text, and with CTRL+C copy\
+    \ it (on a Mac it is Command (\u2318) instead of CTRL). You will need the contents\
+    \ of the public key on the keyboard in one of the next steps. </p>\n<h3>Windows</h3>\n\
+    <p>Open the <strong>PuTTYgen</strong> program by clicking on <em>PuTTYgen.exe</em>\
+    \ which you downloaded in the beginning of this tutorial.</p>\n<p><img alt=\"\"\
+    \ src=\"images/scrPuttyGen1.png\"></p>\n<p>For <strong>Type of key to generate</strong>,\
+    \ select <strong>SSH-2 RSA</strong>.</p>\n<p>Click on <strong>Generate</strong>.\
+    \ </p>\n<p>Move your mouse in the area below the progress bar. When the progress\
+    \ bar is full, PuTTYgen generates your key pair.</p>\n<p style=\"clear:both\"\
+    ></p>\n\n<p><img alt=\"\" src=\"images/scrPuttyGen2.png\"></p>\n<p>Type a passphrase\
+    \ in the <strong>Key passphrase</strong> field. Choose a secure passphrase! Type\
+    \ the same passphrase in the <strong>Confirm passphrase</strong> field.</p>\n\
+    <p>Right-click in the text field \"<strong>Public key for pasting into OpenSSH\
+    \ authorized_keys file</strong>\" and choose <strong>Select All</strong>. Right-click\
+    \ again in the same text field and choose <strong>Copy</strong>. This copies the\
+    \ content onto the clipboard, we will need to paste it somewhere else in one of\
+    \ the next steps.</p>\n<p>Click the <strong>Save private key</strong> button to\
+    \ save the private key. It is important that you save the key, because you will\
+    \ need the file later. So save it in a folder where you can find it again. In\
+    \ this exercise, we will name the file <em>Nectar_Key.ppk</em>. </p>\n<p>Save\
+    \ your public key as well by clicking the <strong>Save public key</strong> button.\
+    \ As a file name, type <em>Nectar_Key.pub.txt</em>.</p>"
+  parent: 31
+  sha1: edd04b53f51e881f6c5fbc0e9c20d1b418f7fb2f
+  title: 02 - Create an SSH key
+43:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-08-14T11:18:30+09:30'
+        datetime_01: null
+        delta: true
+        desc_un_html: " In this module we are going to learn how to launch an instance\
+          \ and how to connect to it. We are going to discuss two ways to connect:\
+          \ (a) with the command line and (b) to a remote desktop, with the benefits\
+          \ of having a graphical interface. We will briefly take a look at how to\
+          \ run graphical applications via the command line (instead of the remote\
+          \ desktop), and we will also set up a web server to publish a very simple\
+          \ website. Finally, we will set up the different cloud storage types, so\
+          \ we can access the storage remotely and directly from our instance. \n\
+          \ General notes \n What is an \"instance\" \n In Module 5 we have already\
+          \ discussed in more detail what an instance is, but let\u2019s do a little\
+          \ recap at this point. \nIn the NeCTAR Research Cloud, an instance is a\
+          \ virtual machine.\nInstances running inside the Research Cloud are just\
+          \ like real-life computers, except that they run remotely, \"in the Cloud\"\
+          . Here and when learning about them on the web, you will often find them\
+          \ referred to as \"instances\".  \n Instance vs \"local computer\" \n In\
+          \ this document we will often talk about the \"local computer\" as opposed\
+          \ to the \u201Cinstance\u201D. The local computer is the one you are probably\
+          \ sitting in front of right now: It is your home or office computer that\
+          \ you use to connect to the instance. The instance is your virtual machine\
+          \ that is running in the NeCTAR cloud. \n You may be familiar with connecting\
+          \ to remote computers already. You may have connected to a remote desktop,\
+          \ or used a command line. The same tools and techniques apply when connecting\
+          \ to running instances. Your instance has a public IP address and can be\
+          \ reached and controlled with any remote access tools you wish to use, after\
+          \ you have set it up for remote access. For example, you can use an SSH\
+          \ terminal, or alternatively connect to your remote desktop.  \n In this\
+          \ module we will create and launch an instance (a virtual machine, short:\
+          \ VM) and go through the two options on how you can connect to your instance\
+          \ (terminal and remote desktop).  \n Use of Terminals \n Throughout the\
+          \ exercises, we will use a Terminal to type commands. To prepare, make sure\
+          \ you know how to open your Terminal by following instructions below for\
+          \ your Operating System.  \n On Windows, you will use two terminals: \n\
+          \ \n The PuTTY terminal to connect to and type commands for the instance.\
+          \ You will need to download PuTTY: \n \n You will need the files PuTTYgen.exe\
+          \ and the file Putty.exe from the\nofficial PuTTY website. \n This Terminal\
+          \ will be referred to as the \"ssh terminal\". \n \n The Windows command\
+          \ line on your computer.  You can open it by typing \"cmd\" into the search\
+          \ field (on Windows < 8 on \"Start\"; on Windows 8 in the \"App search\"\
+          \ field).  \n \n This Terminal will be referred to as your \"local Terminal\"\
+          . \n On Mac and Linux, there are built-in terminals available. You can access\
+          \ them as follows: \n \n \n On Linux Systems, depending on your desktop\
+          \ environment, opening a terminal is usually achieved by clicking on the\
+          \ terminal symbol, or by right click on the desktop and select \"Open Terminal\"\
+          .  \n \n \n On a Mac, you can open a terminal as follows:  \n \n \n Bring\
+          \ up \"Spotlight Search\" by holding down the \"Command\" and \"Spacebar\"\
+          \ keys simultaneously. \n \n \n In the search box that appears, type \"\
+          Terminal\" and press the Return key. \n \n \n Alternatively, in the Finder,\
+          \ go to Applications > Utilities and you will find the Terminal app there.\
+          \ \n \n "
+        description: "<p>In this module we are going to learn how to launch an instance\
+          \ and how to connect to it. We are going to discuss two ways to connect:\
+          \ (a) with the command line and (b) to a remote desktop, with the benefits\
+          \ of having a graphical interface. We will briefly take a look at how to\
+          \ run graphical applications via the command line (instead of the remote\
+          \ desktop), and we will also set up a web server to publish a very simple\
+          \ website. Finally, we will set up the different cloud storage types, so\
+          \ we can access the storage remotely and directly from our instance.</p>\n\
+          <h3>General notes</h3>\n<h3>What is an \"instance\"</h3>\n<p>In Module 5\
+          \ we have already discussed in more detail what an instance is, but let\u2019\
+          s do a little recap at this point. \nIn the NeCTAR Research Cloud, an instance\
+          \ is a virtual machine.\nInstances running inside the Research Cloud are\
+          \ just like real-life computers, except that they run remotely, \"in the\
+          \ Cloud\". Here and when learning about them on the web, you will often\
+          \ find them referred to as \"instances\". </p>\n<h3>Instance <em>vs</em>\
+          \ \"local computer\"</h3>\n<p>In this document we will often talk about\
+          \ the \"local computer\" as opposed to the \u201Cinstance\u201D. The local\
+          \ computer is the one you are probably sitting in front of right now: It\
+          \ is your home or office computer that you use to connect to the instance.\
+          \ The instance is your virtual machine that is running in the NeCTAR cloud.</p>\n\
+          <p>You may be familiar with connecting to remote computers already. You\
+          \ may have connected to a remote desktop, or used a command line. The same\
+          \ tools and techniques apply when connecting to running instances. Your\
+          \ instance has a public IP address and can be reached and controlled with\
+          \ any remote access tools you wish to use, after you have set it up for\
+          \ remote access. For example, you can use an SSH terminal, or alternatively\
+          \ connect to your remote desktop. </p>\n<p>In this module we will create\
+          \ and launch an instance (a virtual machine, short: VM) and go through the\
+          \ two options on how you can connect to your instance (terminal and remote\
+          \ desktop). </p>\n<h3>Use of Terminals</h3>\n<p>Throughout the exercises,\
+          \ we will use a Terminal to type commands. To prepare, make sure you know\
+          \ how to open your Terminal by following instructions below for your Operating\
+          \ System. </p>\n<p>On <strong>Windows</strong>, you will use two terminals:</p>\n\
+          <ul>\n<li>The <strong>PuTTY</strong> terminal to connect to and type commands\
+          \ for the instance. You will need to download PuTTY:</li>\n</ul>\n<p>You\
+          \ will need the files <em>PuTTYgen.exe</em> and the file <em>Putty.exe</em>\
+          \ from the\n<a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\"\
+          >official PuTTY website</a>.</p>\n<p>This Terminal will be referred to as\
+          \ the <strong>\"ssh terminal\"</strong>.</p>\n<ul>\n<li>The <strong>Windows\
+          \ command line</strong> on your computer.  You can open it by typing \"\
+          cmd\" into the search field (on Windows &lt; 8 on \"Start\"; on Windows\
+          \ 8 in the \"App search\" field). </li>\n</ul>\n<p>This Terminal will be\
+          \ referred to as your <strong>\"local Terminal\"</strong>.</p>\n<p>On <strong>Mac\
+          \ and Linux</strong>, there are built-in terminals available. You can access\
+          \ them as follows:</p>\n<ul>\n<li>\n<p>On <strong>Linux</strong> Systems,\
+          \ depending on your desktop environment, opening a terminal is usually achieved\
+          \ by clicking on the terminal symbol, or by right click on the desktop and\
+          \ select \"<em>Open Terminal</em>\". </p>\n</li>\n<li>\n<p>On a <strong>Mac</strong>,\
+          \ you can open a terminal as follows: </p>\n<ul>\n<li>\n<p>Bring up \"Spotlight\
+          \ Search\" by holding down the \"Command\" and \"Spacebar\" keys simultaneously.</p>\n\
+          </li>\n<li>\n<p>In the search box that appears, type \"Terminal\" and press\
+          \ the Return key.</p>\n</li>\n</ul>\n<p>Alternatively, in the <em>Finder</em>,\
+          \ go to <em>Applications &gt; Utilities</em> and you will find the Terminal\
+          \ app there.</p>\n</li>\n</ul>"
+        folder:
+          category_id: 6000102981
+          created_at: '2015-08-13T13:46:50+09:30'
+          customer_folders: []
+          description: Launching and Connecting
+          id: 6000160100
+          is_default: false
+          language_id: 6
+          name: Launching and Connecting
+          parent_id: 6000160100
+          position: 10
+          updated_at: '2015-08-13T13:46:50+09:30'
+          visibility: 1
+        folder_id: 6000160100
+        hits: 0
+        id: 6000042036
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: null
+        modified_at: '2015-08-14T11:18:30+09:30'
+        modified_by: null
+        outdated: false
+        parent_id: null
+        position: 2
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: 01 - Introduction
+        updated_at: '2015-08-14T11:18:30+09:30'
+        user_id: 6002659931
+  html: "<p>In this module we are going to learn how to launch an instance and how\
+    \ to connect to it. We are going to discuss two ways to connect: (a) with the\
+    \ command line and (b) to a remote desktop, with the benefits of having a graphical\
+    \ interface. We will briefly take a look at how to run graphical applications\
+    \ via the command line (instead of the remote desktop), and we will also set up\
+    \ a web server to publish a very simple website. Finally, we will set up the different\
+    \ cloud storage types, so we can access the storage remotely and directly from\
+    \ our instance.</p>\n<h3>General notes</h3>\n<h3>What is an \"instance\"</h3>\n\
+    <p>In Module 5 we have already discussed in more detail what an instance is, but\
+    \ let\u2019s do a little recap at this point. \nIn the NeCTAR Research Cloud,\
+    \ an instance is a virtual machine.\nInstances running inside the Research Cloud\
+    \ are just like real-life computers, except that they run remotely, \"in the Cloud\"\
+    . Here and when learning about them on the web, you will often find them referred\
+    \ to as \"instances\". </p>\n<h3>Instance <em>vs</em> \"local computer\"</h3>\n\
+    <p>In this document we will often talk about the \"local computer\" as opposed\
+    \ to the \u201Cinstance\u201D. The local computer is the one you are probably\
+    \ sitting in front of right now: It is your home or office computer that you use\
+    \ to connect to the instance. The instance is your virtual machine that is running\
+    \ in the NeCTAR cloud.</p>\n<p>You may be familiar with connecting to remote computers\
+    \ already. You may have connected to a remote desktop, or used a command line.\
+    \ The same tools and techniques apply when connecting to running instances. Your\
+    \ instance has a public IP address and can be reached and controlled with any\
+    \ remote access tools you wish to use, after you have set it up for remote access.\
+    \ For example, you can use an SSH terminal, or alternatively connect to your remote\
+    \ desktop. </p>\n<p>In this module we will create and launch an instance (a virtual\
+    \ machine, short: VM) and go through the two options on how you can connect to\
+    \ your instance (terminal and remote desktop). </p>\n<h3>Use of Terminals</h3>\n\
+    <p>Throughout the exercises, we will use a Terminal to type commands. To prepare,\
+    \ make sure you know how to open your Terminal by following instructions below\
+    \ for your Operating System. </p>\n<p>On <strong>Windows</strong>, you will use\
+    \ two terminals:</p>\n<ul>\n<li>The <strong>PuTTY</strong> terminal to connect\
+    \ to and type commands for the instance. You will need to download PuTTY:</li>\n\
+    </ul>\n<p>You will need the files <em>PuTTYgen.exe</em> and the file <em>Putty.exe</em>\
+    \ from the\n<a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\"\
+    >official PuTTY website</a>.</p>\n<p>This Terminal will be referred to as the\
+    \ <strong>\"ssh terminal\"</strong>.</p>\n<ul>\n<li>The <strong>Windows command\
+    \ line</strong> on your computer.  You can open it by typing \"cmd\" into the\
+    \ search field (on Windows &lt; 8 on \"Start\"; on Windows 8 in the \"App search\"\
+    \ field). </li>\n</ul>\n<p>This Terminal will be referred to as your <strong>\"\
+    local Terminal\"</strong>.</p>\n<p>On <strong>Mac and Linux</strong>, there are\
+    \ built-in terminals available. You can access them as follows:</p>\n<ul>\n<li>\n\
+    <p>On <strong>Linux</strong> Systems, depending on your desktop environment, opening\
+    \ a terminal is usually achieved by clicking on the terminal symbol, or by right\
+    \ click on the desktop and select \"<em>Open Terminal</em>\". </p>\n</li>\n<li>\n\
+    <p>On a <strong>Mac</strong>, you can open a terminal as follows: </p>\n<ul>\n\
+    <li>\n<p>Bring up \"Spotlight Search\" by holding down the \"Command\" and \"\
+    Spacebar\" keys simultaneously.</p>\n</li>\n<li>\n<p>In the search box that appears,\
+    \ type \"Terminal\" and press the Return key.</p>\n</li>\n</ul>\n<p>Alternatively,\
+    \ in the <em>Finder</em>, go to <em>Applications &gt; Utilities</em> and you will\
+    \ find the Terminal app there.</p>\n</li>\n</ul>"
+  parent: 31
+  sha1: cf9b638e9856d9cbd98184df80ca4e1b75d827e8
+  title: 01 - Introduction
