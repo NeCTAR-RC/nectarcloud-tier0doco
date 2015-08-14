@@ -6,7 +6,7 @@ If we see evidence that an instance's security has been comprised, we
 will take steps to shut down and isolate it so that it doesn't do any further
 damage to cloud infrastructure or to other users' assets.
 
-Compromised NeCTAR instances are a real issue. Across the NeCTAR federation, we
+Compromised Nectar instances are a real issue. Across the Nectar federation, we
 see examples at least once a month.
 
 ## Apply system patches as often as possible
@@ -46,10 +46,10 @@ to monkeys, it's a very bad idea.
 
 VNC is one of those longstanding ways of getting graphical access to your
 computer over a network.  While it's well known and loved, there are in fact
-many ways to exploit vnc and there are now better ways to get to your graphical
+many ways to exploit VNC and there are now better ways to get to your graphical
 content.
 
-x2go is technically superior to vnc and tunnels your graphical content over
+X2go is technically superior to VNC and tunnels your graphical content over
 ssh.
 
 ## Terminate instances that you no longer require
@@ -58,12 +58,12 @@ In theory, you can run an instance as long as you like.  In practice, we would
 prefer you to promptly terminate any instance that are not using actively, so
 that other users can make use of the resources.
 
-Currently, there is no formal NeCTAR mechanism to discourage wasteful use of
-your allocation, but this likely to change.
+Currently, there is no formal Nectar mechanism to discourage wasteful use of
+your allocation, but this is likely to change.
 
 ## What should I do when I am finished with an instance
 
-When you are finished with an Instance, you should Terminate it.  Leaving an
+When you are finished with an Instance, you should terminate it.  Leaving an
 instance running, or in "paused" or "suspended" or "shutdown" states is tying
 down resources that other people could be using.
 
