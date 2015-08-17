@@ -1681,7 +1681,7 @@
 
           zone)" If you leave this selected Nectar will find a suitable AZ for you.
 
-          <img alt="Screenshot of Launch Dialog AZ Tab" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/NeCTAR%20Fundamentals--DOCID26/images/launch_dialog_az_tab.png%5C?raw%5C=true"></p>
+          <img alt="Screenshot of Launch Dialog AZ Tab" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/NeCTAR%20Fundamentals--DOCID26/images/launch_dialog_az_tab.png?raw=true"></p>
 
           <h2>Scenarios</h2>
 
@@ -1721,7 +1721,7 @@
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-08-17T16:31:07+09:30'
+        modified_at: '2015-08-17T16:33:56+09:30'
         modified_by: null
         outdated: false
         parent_id: 6000039048
@@ -1734,7 +1734,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Availability Zones
-        updated_at: '2015-08-17T16:31:07+09:30'
+        updated_at: '2015-08-17T16:33:56+09:30'
         user_id: 6002659931
   html: '<p>The Nectar Cloud is organised in Availability Zones, that are hosted by
     the
@@ -1758,7 +1758,7 @@
     zone)" If you leave this selected Nectar will find a suitable AZ for you.
 
     <img alt="Screenshot of Launch Dialog AZ Tab" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR
-    Documentation--DOCID16/NeCTAR Fundamentals--DOCID26/images/launch_dialog_az_tab.png\?raw\=true"></p>
+    Documentation--DOCID16/NeCTAR Fundamentals--DOCID26/images/launch_dialog_az_tab.png?raw=true"></p>
 
     <h2>Scenarios</h2>
 
@@ -1779,7 +1779,7 @@
 
     you may be eligible. You will have to contact your Node''s local support.</p>'
   parent: 26
-  sha1: de16b0d53b376b3a1712956c07f3f76d939d21db
+  sha1: f5d14d797b4f2c7f8f08e78b2988746c514f63d6
   title: Availability Zones
 39:
   freshdesk:
@@ -2270,7 +2270,7 @@
           \ against the NeCTAR cloud. \n The OpenStack End User Guide Heat\n  page.\
           \ \n The Heat wiki\n \n The Heat template guide\n \n The command line client\n\
           \ \n "
-        description: "<h1>\n<img alt=\"Flame Logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/glossy_flame.png%5C?raw%5C=true\"\
+        description: "<h1>\n<img alt=\"Flame Logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/glossy_flame.png?raw=true\"\
           > Heat</h1>\n<p>Heat is a template driven service that automates the management\
           \ of the entire\nlifecycle of your application on the NeCTAR cloud.</p>\n\
           <p>A 'template driven service' simply means that you define your application's\n\
@@ -2345,7 +2345,7 @@
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-08-17T16:31:05+09:30'
+        modified_at: '2015-08-17T16:33:54+09:30'
         modified_by: null
         outdated: false
         parent_id: 6000041231
@@ -2358,11 +2358,11 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction to HEAT
-        updated_at: '2015-08-17T16:31:05+09:30'
+        updated_at: '2015-08-17T16:33:54+09:30'
         user_id: 6002659931
   html: "<h1><img alt=\"Flame Logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/glossy_flame.png\\?raw\\\
-    =true\"> Heat</h1>\n<p>Heat is a template driven service that automates the management\
+    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/glossy_flame.png?raw=true\"\
+    > Heat</h1>\n<p>Heat is a template driven service that automates the management\
     \ of the entire\nlifecycle of your application on the NeCTAR cloud.</p>\n<p>A\
     \ 'template driven service' simply means that you define your application's\n\
     requirements in a human readable text file - the template. In this file you to\n\
@@ -2414,7 +2414,7 @@
     >template guide</a></li>\n<li>The <a href=\"http://docs.openstack.org/user-guide/cli_create_and_manage_stacks.html\"\
     >command line client</a></li>\n</ul>"
   parent: 22
-  sha1: dcfa6c2d5d65af0f48dad39fcf0f11cf4f947af1
+  sha1: 36ef3bb760ef023481ce0f33695dbf9c92d94295
   title: Introduction to HEAT
 41:
   freshdesk:
@@ -2597,7 +2597,7 @@
         description: '<p>This page is to test images, there should be one just below
           i  ZZthisi line:</p>
 
-          <p><img alt="Test Image" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Simon%20Test%20Folder--DOCID18/Testing%20Image%20ReWrites--DOCID37/images/test.gif%5C?raw%5C=true"></p>'
+          <p><img alt="Test Image" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Simon%20Test%20Folder--DOCID18/Testing%20Image%20ReWrites--DOCID37/images/test.gif?raw=true"></p>'
         folder:
           category_id: 6000105460
           created_at: '2015-08-17T12:05:51+09:30'
@@ -2612,13 +2612,13 @@
           updated_at: '2015-08-17T12:05:51+09:30'
           visibility: 1
         folder_id: 6000163991
-        hits: 6
+        hits: 7
         id: 6000043108
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-08-17T16:31:06+09:30'
+        modified_at: '2015-08-17T16:33:55+09:30'
         modified_by: null
         outdated: false
         parent_id: 6000043108
@@ -2631,13 +2631,13 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Image Test
-        updated_at: '2015-08-17T16:31:06+09:30'
+        updated_at: '2015-08-17T16:33:55+09:30'
         user_id: 6002659931
   html: '<p>This page is to test images, there should be one just below i  ZZthisi
     line:</p>
 
     <p><img alt="Test Image" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Simon
-    Test Folder--DOCID18/Testing Image ReWrites--DOCID37/images/test.gif\?raw\=true"></p>'
+    Test Folder--DOCID18/Testing Image ReWrites--DOCID37/images/test.gif?raw=true"></p>'
   parent: 37
-  sha1: 69b08aa801f0e5aee4ff89c63ff1714317c46363
+  sha1: 280dae297ed21e7b9bdc6a7eed6ab4be0148b11e
   title: Image Test
