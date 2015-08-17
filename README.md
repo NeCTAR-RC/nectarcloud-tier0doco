@@ -374,6 +374,9 @@ or even better, markdown parsing in near realtime with
 
 Once your markdown is clean, then do your `git commit --amend`
 
+If you do decide to use mdl locally, there is a file in the root directory of the project named `md_style.rb`
+with rules that match those applied by Jenkins. There are further instructions in the file on how to use it.
+
 #### Getting Changes accepted
 
 As well as Jenkins, actual people will read your changes.  They - like
