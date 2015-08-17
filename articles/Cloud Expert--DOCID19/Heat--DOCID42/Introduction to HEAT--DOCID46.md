@@ -1,4 +1,4 @@
-# ![Flame Logo](images/glossy_flame.png) Heat
+# ![`flame logo`](images/glossy_flame.png) Heat
 
 Heat is a template driven service that automates the management of the entire
 lifecycle of your application on the NeCTAR cloud.
@@ -63,7 +63,7 @@ from the Heat database
 The following pages offer more in depth technical information on using Heat in
 the NeCTAR cloud.
 
-* [Enough YAML to read a template](Yaml_Intro.md) (useful if you don't know YAML)
+* [Enough YAML to read a template](Introduction to YAML--DOCID41.md) (useful if you don't know YAML)
 * A walk through of a YAML template
 * Actions that can be performed
 * The command line client
