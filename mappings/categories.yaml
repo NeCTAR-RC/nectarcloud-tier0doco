@@ -5,3 +5,10 @@
         id: 6000099797, is_default: false, language_id: null, name: NeCTAR Documentation,
         parent_id: null, position: 4, updated_at: '2015-08-10T11:18:47+09:30'}
   title: NeCTAR Documentation
+18:
+  freshdesk:
+    fd_attributes:
+      category: {created_at: '2015-08-17T12:05:50+09:30', description: Simon Test
+          Folder, id: 6000105460, is_default: false, language_id: null, name: Simon
+          Test Folder, parent_id: null, position: 4, updated_at: '2015-08-17T12:05:50+09:30'}
+  title: Simon Test Folder

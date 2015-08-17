@@ -60,3 +60,12 @@
         visibility: 1}
   parent: 16
   title: NeCTAR Fundamentals
+37:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000105460, created_at: '2015-08-17T12:05:51+09:30', description: Testing
+          Image ReWrites, id: 6000163991, is_default: false, language_id: null, name: Testing
+          Image ReWrites, parent_id: null, position: 1, updated_at: '2015-08-17T12:05:51+09:30',
+        visibility: 1}
+  parent: 18
+  title: Testing Image ReWrites
