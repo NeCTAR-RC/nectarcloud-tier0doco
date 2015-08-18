@@ -2770,16 +2770,16 @@
           updated_at: '2015-08-10T11:18:50+09:30'
           visibility: 1
         folder_id: 6000155118
-        hits: 0
+        hits: 5
         id: 6000043753
         int_01: null
         int_02: null
         int_03: null
-        language_id: null
-        modified_at: '2015-08-18T10:07:17+09:30'
+        language_id: 6
+        modified_at: '2015-08-18T13:41:46+09:30'
         modified_by: null
         outdated: false
-        parent_id: null
+        parent_id: 6000043753
         position: 3
         seo_data: {}
         status: 2
@@ -2788,8 +2788,8 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: Heat_Template_Walk_Through
-        updated_at: '2015-08-18T10:07:17+09:30'
+        title: Heat Template Walk Through
+        updated_at: '2015-08-18T13:41:46+09:30'
         user_id: 6002659931
   html: "<h1>Walk through of a YAML template</h1>\n<h2>Template sections</h2>\n<p>A\
     \ Heat template is divided into several sections. These are the sections that\n\
@@ -2888,4 +2888,4 @@
     \ template.</p>"
   parent: 22
   sha1: dfe85ec0f3cf2898c2cb86d445f872aaeb5d3e60
-  title: Heat_Template_Walk_Through
+  title: Heat Template Walk Through
