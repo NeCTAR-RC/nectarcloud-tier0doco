@@ -300,10 +300,8 @@ should consider formatting your commit message with a less than 10 word subject
 up the top, then if any further explanation is required, do that in a separate
 paragraph underneath.
 
-- now you need to upload this change
-
-to Gerrit for review by Jenkins and others this step will fail, but that's ok
-for now.
+- now you need to upload this change to Gerrit for review by Jenkins and others 
+  this step will fail, but that's ok for now.
 
     `git review`
 
