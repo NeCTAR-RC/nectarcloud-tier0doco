@@ -2270,7 +2270,7 @@
           \ against the NeCTAR cloud. \n The OpenStack End User Guide Heat\n  page.\
           \ \n The Heat wiki\n \n The Heat template guide\n \n The command line client\n\
           \ \n "
-        description: "<h1>\n<img alt=\"Flame Logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/glossy_flame.png?raw=true\"\
+        description: "<h1>\n<img alt=\"flame logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/glossy_flame.png?raw=true\"\
           > Heat</h1>\n<p>Heat is a template driven service that automates the management\
           \ of the entire\nlifecycle of your application on the NeCTAR cloud.</p>\n\
           <p>A 'template driven service' simply means that you define your application's\n\
@@ -2311,11 +2311,11 @@
           resources released, and then the template and its parameters will be removed\n\
           from the Heat database</p>\n<h2>More information</h2>\n<p>The following\
           \ pages offer more in depth technical information on using Heat in\nthe\
-          \ NeCTAR cloud.</p>\n<ul>\n<li>\n<a href=\"Yaml_Intro.md\">Enough YAML to\
-          \ read a template</a> (useful if you don't know YAML)</li>\n<li>A walk through\
-          \ of a YAML template</li>\n<li>Actions that can be performed</li>\n<li>The\
-          \ command line client</li>\n<li>The dashboard</li>\n<li>Preparing your images\
-          \ - you need more than just cloud-init!</li>\n<li>Good practices</li>\n\
+          \ NeCTAR cloud.</p>\n<ul>\n<li>\n<a href=\"Introduction%20to%20YAML--DOCID48.md\"\
+          >Enough YAML to read a template</a> (useful if you don't know YAML)</li>\n\
+          <li>A walk through of a YAML template</li>\n<li>Actions that can be performed</li>\n\
+          <li>The command line client</li>\n<li>The dashboard</li>\n<li>Preparing\
+          \ your images - you need more than just cloud-init!</li>\n<li>Good practices</li>\n\
           <li>Debugging</li>\n<li>Oddities and gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
           >Supported resources</a></li>\n</ul>\n<h2>Further links</h2>\n<ul>\n<li>\n\
           <a href=\"https://github.com/NeCTAR-RC/heat-templates\">NeCTAR sample templates</a>\
@@ -2339,16 +2339,16 @@
           updated_at: '2015-08-20T13:25:09+09:30'
           visibility: 1
         folder_id: 6000168845
-        hits: 0
+        hits: 2
         id: 6000045556
         int_01: null
         int_02: null
         int_03: null
-        language_id: null
-        modified_at: '2015-08-20T13:25:12+09:30'
+        language_id: 6
+        modified_at: '2015-08-20T16:16:38+09:30'
         modified_by: null
         outdated: false
-        parent_id: null
+        parent_id: 6000045556
         position: 2
         seo_data: {}
         status: 2
@@ -2358,9 +2358,9 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction to HEAT
-        updated_at: '2015-08-20T13:25:12+09:30'
+        updated_at: '2015-08-20T16:16:38+09:30'
         user_id: 6002659931
-  html: "<h1><img alt=\"Flame Logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+  html: "<h1><img alt=\"flame logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Heat--DOCID42/images/glossy_flame.png?raw=true\"> Heat</h1>\n\
     <p>Heat is a template driven service that automates the management of the entire\n\
     lifecycle of your application on the NeCTAR cloud.</p>\n<p>A 'template driven\
@@ -2399,11 +2399,11 @@
     \ will be destroyed, its\nresources released, and then the template and its parameters\
     \ will be removed\nfrom the Heat database</p>\n<h2>More information</h2>\n<p>The\
     \ following pages offer more in depth technical information on using Heat in\n\
-    the NeCTAR cloud.</p>\n<ul>\n<li><a href=\"Yaml_Intro.md\">Enough YAML to read\
-    \ a template</a> (useful if you don't know YAML)</li>\n<li>A walk through of a\
-    \ YAML template</li>\n<li>Actions that can be performed</li>\n<li>The command\
-    \ line client</li>\n<li>The dashboard</li>\n<li>Preparing your images - you need\
-    \ more than just cloud-init!</li>\n<li>Good practices</li>\n<li>Debugging</li>\n\
+    the NeCTAR cloud.</p>\n<ul>\n<li><a href=\"Introduction to YAML--DOCID48.md\"\
+    >Enough YAML to read a template</a> (useful if you don't know YAML)</li>\n<li>A\
+    \ walk through of a YAML template</li>\n<li>Actions that can be performed</li>\n\
+    <li>The command line client</li>\n<li>The dashboard</li>\n<li>Preparing your images\
+    \ - you need more than just cloud-init!</li>\n<li>Good practices</li>\n<li>Debugging</li>\n\
     <li>Oddities and gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
     >Supported resources</a></li>\n</ul>\n<h2>Further links</h2>\n<ul>\n<li><a href=\"\
     https://github.com/NeCTAR-RC/heat-templates\">NeCTAR sample templates</a> -\n\
@@ -2414,7 +2414,7 @@
     >template guide</a></li>\n<li>The <a href=\"http://docs.openstack.org/user-guide/cli_create_and_manage_stacks.html\"\
     >command line client</a></li>\n</ul>"
   parent: 42
-  sha1: c801ef2000065630d50ee620afb8e58f67fe4920
+  sha1: de3c11e8ea7d0655134160ab99e1e6eb958fd77b
   title: Introduction to HEAT
 47:
   freshdesk:
