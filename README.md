@@ -420,3 +420,23 @@ That's a simple process of;
 And waiting for some more feedback via email.
 
 See the NeCTAR wiki for more documentation on [making changes after commiting](https://wiki.rc.nectar.org.au/wiki/ChangeWorkflow#Making_more_changes_after_committing.).
+
+#### Cleaning up your local branches
+
+This workflow can lead to a lot of local branches on your machine that have been merged into the master branch.
+If you want to delete one, the command
+
+```bash
+git branch -d <branch_name>
+```
+
+will remove it.
+ 
+If you want to delete a lot of them, the utility script `cleanup_branches.sh` in the root directory of the project
+will do the job (it only works on Linux and OSX, sorry).
+ 
+To use it, make sure you are in the root directory of the project, then type:
+
+```bash
+./cleanup_branches.sh 
+```
