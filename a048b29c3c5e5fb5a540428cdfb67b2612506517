@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_78ee1624",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cloud Basics--DOCID21/Resources available to you--DOCID37.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000131
+      },
+      "writtenOn": "2015-08-20T03:40:39Z",
+      "side": 1,
+      "message": "Consider different title \"Allocations: Personal Trials and Projects\"",
+      "range": {
+        "startLine": 6,
+        "startChar": 3,
+        "endLine": 6,
+        "endChar": 31
+      },
+      "revId": "a048b29c3c5e5fb5a540428cdfb67b2612506517",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_98e94a1d",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cloud Basics--DOCID21/Resources available to you--DOCID37.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000131
+      },
+      "writtenOn": "2015-08-20T03:40:39Z",
+      "side": 1,
+      "message": "is not technically exact. Consider saying \"have a 10G root disk\"",
+      "range": {
+        "startLine": 33,
+        "startChar": 41,
+        "endLine": 33,
+        "endChar": 66
+      },
+      "revId": "a048b29c3c5e5fb5a540428cdfb67b2612506517",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_38e49e3a",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cloud Basics--DOCID21/Resources available to you--DOCID37.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000131
+      },
+      "writtenOn": "2015-08-20T03:40:39Z",
+      "side": 1,
+      "message": "Is this link correct?",
+      "range": {
+        "startLine": 49,
+        "startChar": 44,
+        "endLine": 49,
+        "endChar": 82
+      },
+      "revId": "a048b29c3c5e5fb5a540428cdfb67b2612506517",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
