@@ -2867,3 +2867,544 @@
   parent: 42
   sha1: 831f265c1bdab3e82e173a6819f0fa2e61038b93
   title: Introduction to YAML
+49:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-08-20T13:27:05+09:30'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Security Recommendations \n This document lists a number of\
+          \ Security Recommendations to help ensure the\nsafe running of your instances\
+          \ on the cloud. Security is important, so please\nfollow these. We conduct\
+          \ routine and random audits to determine the integrity\nof machine images\
+          \ and running instances. If you have discovered a critical\nsecurity flaw,\
+          \ or believe your machine has been compromised, please email\nsecurity@rc.nectar.org.au,\
+          \ or for non-urgent security questions\nsupport@nectar.org.au. \n Mail Servers\
+          \ \n If you run a mail server, make sure it only listens on the localhost\
+          \ ip\naddress (127.0.0.1). For many clients, if you don't specify an SMTP\
+          \ server\nwhen sending email, it will use the recipients SMTP server automatically.\
+          \ This\nis probably what you want. Some nodes (Qld) disallow this and require\
+          \ you to\nuse their SMTP server for outgoing mail. \n Enable Automatic Updates\
+          \ \n All operating systems have the ability to apply updates automatically,\
+          \ and its\neasy to turn this on. Please do so, and ask us if you need help.\
+          \ \n Upgrade your kernel \n Some updates, such as a kernel upgrade require\
+          \ a reboot of the instance. Please\nschedule this into your regular maintenance.\
+          \ \n No open recursive name servers \n If you are running a DNS server,\
+          \ please ensure you only allow recursion from\ntrusted hosts. \n Control\
+          \ or disable access to your NTP server \n If you run an NTP server, limit\
+          \ which systems can access it. Disable the\n'monlist' command as this can\
+          \ be used as a denial of service vector on your\nsystem. For info about\
+          \ DDoS by NTP, see\nthis article on Cloudflare \n Subscribe to security\
+          \ announcements for your OS \n If there is a security problem with your\
+          \ Operating System, you need to find\nout as soon as possible. Find the\
+          \ appropriate mailing list and keep an eye\nout for anything that requires\
+          \ urgent action. \n Run a restrictive firewall \n Your instances should\
+          \ be configured so they allow the minimum access required\nto run their\
+          \ service. Please use a host-based firewall, in conjunction with\nthe cloud-provided\
+          \ firewall to manage access. \n Disable/Remove unneeded accounts \n Keep\
+          \ an eye on the user accounts enabled on your system. Some applications\n\
+          create default accounts which are insecure. \n Disable SSH password login\
+          \ - use keys \n With enough time and compute power it is possible for passwords\
+          \ to be brute\nforce attacked. The average SSH server deals with thousands\
+          \ of such attacks\nevery week, so use ssh keys. Ubuntu provides some good\
+          \ documentation \n Don't store keys on the image \n The cloud provides a\
+          \ metadata service so you can download keys on boot, so\nyou don't need\
+          \ to copy keys manually. This ensures that if your key is\ncompromised,\
+          \ not all running instances of that image are compromised. \n Install ssh\
+          \ attack banning tools \n Install a tools like fail2ban or denyhosts, which\
+          \ checks log files for\nattempted breaches and then blocks malicious IP\
+          \ addresses. \n Disable unneeded services \n Know what services run on your\
+          \ image, and disable the unneeded ones before\nyou upload it. This reduces\
+          \ the attack surface. \n Use Encrypted Communications \n Wherever possible,\
+          \ use encrypted communications to avoid attacks which\nintercept data. \n\
+          \ Use best-practices for logging \n Make sure that services are logging\
+          \ to a secure location, that is as\ntamperproof as possible. If logging\
+          \ remotely, ensure that it is done over\na secure channel so that eavesdroppers\
+          \ cannot monitor what is happening on\nyour instance. \n ddos-attacks/>\
+          \ \"Cloudflare Understanding NTP DDoS\" "
+        description: '<h1>Security Recommendations</h1>
+
+          <p>This document lists a number of Security Recommendations to help ensure
+          the
+
+          safe running of your instances on the cloud. Security is important, so please
+
+          follow these. We conduct routine and random audits to determine the integrity
+
+          of machine images and running instances. If you have discovered a critical
+
+          security flaw, or believe your machine has been compromised, please email
+
+          <a href="mailto:security@rc.nectar.org.au">security@rc.nectar.org.au</a>,
+          or for non-urgent security questions
+
+          <a href="mailto:support@nectar.org.au">support@nectar.org.au</a>.</p>
+
+          <h2>Mail Servers</h2>
+
+          <p>If you run a mail server, make sure it only listens on the localhost
+          ip
+
+          address (127.0.0.1). For many clients, if you don''t specify an SMTP server
+
+          when sending email, it will use the recipients SMTP server automatically.
+          This
+
+          is probably what you want. Some nodes (Qld) disallow this and require you
+          to
+
+          use their SMTP server for outgoing mail.</p>
+
+          <h2>Enable Automatic Updates</h2>
+
+          <p>All operating systems have the ability to apply updates automatically,
+          and its
+
+          easy to turn this on. Please do so, and ask us if you need help.</p>
+
+          <h2>Upgrade your kernel</h2>
+
+          <p>Some updates, such as a kernel upgrade require a reboot of the instance.
+          Please
+
+          schedule this into your regular maintenance.</p>
+
+          <h2>No open recursive name servers</h2>
+
+          <p>If you are running a DNS server, please ensure you only allow recursion
+          from
+
+          trusted hosts.</p>
+
+          <h2>Control or disable access to your NTP server</h2>
+
+          <p>If you run an NTP server, limit which systems can access it. Disable
+          the
+
+          ''monlist'' command as this can be used as a denial of service vector on
+          your
+
+          system. For info about DDoS by NTP, see
+
+          <a href="https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-">this
+          article on Cloudflare</a></p>
+
+          <h2>Subscribe to security announcements for your OS</h2>
+
+          <p>If there is a security problem with your Operating System, you need to
+          find
+
+          out as soon as possible. Find the appropriate mailing list and keep an eye
+
+          out for anything that requires urgent action.</p>
+
+          <h2>Run a restrictive firewall</h2>
+
+          <p>Your instances should be configured so they allow the minimum access
+          required
+
+          to run their service. Please use a host-based firewall, in conjunction with
+
+          the cloud-provided firewall to manage access.</p>
+
+          <h2>Disable/Remove unneeded accounts</h2>
+
+          <p>Keep an eye on the user accounts enabled on your system. Some applications
+
+          create default accounts which are insecure.</p>
+
+          <h2>Disable SSH password login - use keys</h2>
+
+          <p>With enough time and compute power it is possible for passwords to be
+          brute
+
+          force attacked. The average SSH server deals with thousands of such attacks
+
+          every week, so use ssh keys. Ubuntu provides some good documentation</p>
+
+          <h2>Don''t store keys on the image</h2>
+
+          <p>The cloud provides a metadata service so you can download keys on boot,
+          so
+
+          you don''t need to copy keys manually. This ensures that if your key is
+
+          compromised, not all running instances of that image are compromised.</p>
+
+          <h2>Install ssh attack banning tools</h2>
+
+          <p>Install a tools like fail2ban or denyhosts, which checks log files for
+
+          attempted breaches and then blocks malicious IP addresses.</p>
+
+          <h2>Disable unneeded services</h2>
+
+          <p>Know what services run on your image, and disable the unneeded ones before
+
+          you upload it. This reduces the attack surface.</p>
+
+          <h2>Use Encrypted Communications</h2>
+
+          <p>Wherever possible, use encrypted communications to avoid attacks which
+
+          intercept data.</p>
+
+          <h2>Use best-practices for logging</h2>
+
+          <p>Make sure that services are logging to a secure location, that is as
+
+          tamperproof as possible. If logging remotely, ensure that it is done over
+
+          a secure channel so that eavesdroppers cannot monitor what is happening
+          on
+
+          your instance.</p>
+
+          <p>ddos-attacks/&gt; "Cloudflare Understanding NTP DDoS"</p>'
+        folder:
+          category_id: 6000099797
+          created_at: '2015-08-10T11:18:50+09:30'
+          customer_folders: []
+          description: Cloud Expert
+          id: 6000155118
+          is_default: false
+          language_id: 6
+          name: Cloud Expert
+          parent_id: 6000155118
+          position: 3
+          updated_at: '2015-08-10T11:18:50+09:30'
+          visibility: 1
+        folder_id: 6000155118
+        hits: 0
+        id: 6000045559
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: null
+        modified_at: '2015-08-20T13:27:05+09:30'
+        modified_by: null
+        outdated: false
+        parent_id: null
+        position: 1
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Security Guidelines
+        updated_at: '2015-08-20T13:27:05+09:30'
+        user_id: 6002659931
+  html: '<h1>Security Recommendations</h1>
+
+    <p>This document lists a number of Security Recommendations to help ensure the
+
+    safe running of your instances on the cloud. Security is important, so please
+
+    follow these. We conduct routine and random audits to determine the integrity
+
+    of machine images and running instances. If you have discovered a critical
+
+    security flaw, or believe your machine has been compromised, please email
+
+    <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#64;&#114;&#99;&#46;&#110;&#101;&#99;&#116;&#97;&#114;&#46;&#111;&#114;&#103;&#46;&#97;&#117;">&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#64;&#114;&#99;&#46;&#110;&#101;&#99;&#116;&#97;&#114;&#46;&#111;&#114;&#103;&#46;&#97;&#117;</a>,
+    or for non-urgent security questions
+
+    <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#110;&#101;&#99;&#116;&#97;&#114;&#46;&#111;&#114;&#103;&#46;&#97;&#117;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#110;&#101;&#99;&#116;&#97;&#114;&#46;&#111;&#114;&#103;&#46;&#97;&#117;</a>.</p>
+
+    <h2>Mail Servers</h2>
+
+    <p>If you run a mail server, make sure it only listens on the localhost ip
+
+    address (127.0.0.1). For many clients, if you don''t specify an SMTP server
+
+    when sending email, it will use the recipients SMTP server automatically. This
+
+    is probably what you want. Some nodes (Qld) disallow this and require you to
+
+    use their SMTP server for outgoing mail.</p>
+
+    <h2>Enable Automatic Updates</h2>
+
+    <p>All operating systems have the ability to apply updates automatically, and
+    its
+
+    easy to turn this on. Please do so, and ask us if you need help.</p>
+
+    <h2>Upgrade your kernel</h2>
+
+    <p>Some updates, such as a kernel upgrade require a reboot of the instance. Please
+
+    schedule this into your regular maintenance.</p>
+
+    <h2>No open recursive name servers</h2>
+
+    <p>If you are running a DNS server, please ensure you only allow recursion from
+
+    trusted hosts.</p>
+
+    <h2>Control or disable access to your NTP server</h2>
+
+    <p>If you run an NTP server, limit which systems can access it. Disable the
+
+    ''monlist'' command as this can be used as a denial of service vector on your
+
+    system. For info about DDoS by NTP, see
+
+    <a href="https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-">this
+    article on Cloudflare</a></p>
+
+    <h2>Subscribe to security announcements for your OS</h2>
+
+    <p>If there is a security problem with your Operating System, you need to find
+
+    out as soon as possible. Find the appropriate mailing list and keep an eye
+
+    out for anything that requires urgent action.</p>
+
+    <h2>Run a restrictive firewall</h2>
+
+    <p>Your instances should be configured so they allow the minimum access required
+
+    to run their service. Please use a host-based firewall, in conjunction with
+
+    the cloud-provided firewall to manage access.</p>
+
+    <h2>Disable/Remove unneeded accounts</h2>
+
+    <p>Keep an eye on the user accounts enabled on your system. Some applications
+
+    create default accounts which are insecure.</p>
+
+    <h2>Disable SSH password login - use keys</h2>
+
+    <p>With enough time and compute power it is possible for passwords to be brute
+
+    force attacked. The average SSH server deals with thousands of such attacks
+
+    every week, so use ssh keys. Ubuntu provides some good documentation</p>
+
+    <h2>Don''t store keys on the image</h2>
+
+    <p>The cloud provides a metadata service so you can download keys on boot, so
+
+    you don''t need to copy keys manually. This ensures that if your key is
+
+    compromised, not all running instances of that image are compromised.</p>
+
+    <h2>Install ssh attack banning tools</h2>
+
+    <p>Install a tools like fail2ban or denyhosts, which checks log files for
+
+    attempted breaches and then blocks malicious IP addresses.</p>
+
+    <h2>Disable unneeded services</h2>
+
+    <p>Know what services run on your image, and disable the unneeded ones before
+
+    you upload it. This reduces the attack surface.</p>
+
+    <h2>Use Encrypted Communications</h2>
+
+    <p>Wherever possible, use encrypted communications to avoid attacks which
+
+    intercept data.</p>
+
+    <h2>Use best-practices for logging</h2>
+
+    <p>Make sure that services are logging to a secure location, that is as
+
+    tamperproof as possible. If logging remotely, ensure that it is done over
+
+    a secure channel so that eavesdroppers cannot monitor what is happening on
+
+    your instance.</p>
+
+    <p>ddos-attacks/&gt; "Cloudflare Understanding NTP DDoS"</p>'
+  parent: 22
+  sha1: 8ce91eb9bc4d37262ee5df194010793e11f9b5fb
+  title: Security Guidelines
+50:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-08-20T13:27:06+09:30'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Security groups \n Incoming network access to your machines\
+          \ is usually required. Security Groups\nare how to add network access. If\
+          \ you can't reach your instance by SSH to login\nor by browser if it runs\
+          \ a Webserver additional Security Group settings could\nbe needed. \n Adding\
+          \ Network Access \n The default Security Group is empty and no incoming\
+          \ access is configured until\nyou add rules to specify: \n \n which ports\
+          \ are available for connection to your instance and... \n from which addresses\
+          \ your instance will accept inbound traffic to the\n  open ports \n \n \n\
+          \ NOTE: If you do not specify a security group at boot the default security\n\
+          group will be applied \n \n \n Each rule adds further access, it never cancels\
+          \ or overrides another rule. \n Rules can have overlapping ranges and addresses.\
+          \ \n Rules for the same ports and addresses can be added to more than one\n\
+          \  Security Group \n \n Removing Network Access \n To remove access to a\
+          \ port or from an address locate all security groups with\nrules relating\
+          \ to that port or address, then \n \n remove or edit each applicable rule,\
+          \ OR \n do not apply those Security Groups that contain the applicable rule(s)\
+          \ \n \n Pre-Defined and Default Security Groups \n For Project Trials (pt-xxxx)\
+          \ there are pre-defined security groups for\nconvenience. \n \n SSH opens\
+          \ tcp port 22 to traffic from all sources (for logging via ssh) \n HTTP\
+          \ opens tcp ports 80 and 443 to traffic from all sources (for\n  web servers)\
+          \ \n ICMP opens all ICMP traffic from all sources (etc. to allow pinging\
+          \ your\n  VMs IP address) \n \n For all other shared projects that are created\
+          \ after an allocation request,\nthere is only the empty 'default' security\
+          \ group at first. These Projects\nshare their security groups so all changes\
+          \ should be made with caution as\nthey may affect instances by other users\
+          \ sharing your Project. \n Managing Security Groups \n Sometimes it can\
+          \ be convenient to organise rules into multiple Security\nGroups,\nfor example\
+          \ \n \n apply only some or all groups depending on a instances purpose.\
+          \ \n users experimenting with network access can remove groups and re-apply\n\
+          \  them without re-creating rules each time \n testing rules on a temporary\
+          \ security group and test Instance before\n  adding the same rules to Security\
+          \ Groups already in use.\n  rules can appear in more than one Security Group\
+          \ \n \n Applying Security Groups \n Security Groups are most conveniently\
+          \ applied before Launching your\ninstance, multiple security groups can\
+          \ be selected.\nHowever Security Groups can also be added or removed on\
+          \ running instances. \n Click Launch then click the Security Groups field.\
+          \ The default group is\npre-selected \n Outgoing traffic \n Outgoing traffic\
+          \ is not blocked on any port:  connections that originate\nfrom your instance\
+          \ to the outside world, are not blocked by Nectar\nOpenStack configuration\
+          \ \n \n Security Note \n Using the Research Cloud creates a publicly accessible\
+          \ server (depending on\nSecurity Groups) and therefore that machine can\
+          \ be exploited. All users must\nread & follow our Security Guidelines. \n\
+          \ "
+        description: "<h1>Security groups</h1>\n<p>Incoming network access to your\
+          \ machines is usually required. Security Groups\nare how to add network\
+          \ access. If you can't reach your instance by SSH to login\nor by browser\
+          \ if it runs a Webserver additional Security Group settings could\nbe needed.</p>\n\
+          <h2>Adding Network Access</h2>\n<p>The default Security Group is empty and\
+          \ no incoming access is configured until\nyou add rules to specify:</p>\n\
+          <ul>\n<li>which ports are available for connection to your instance and...</li>\n\
+          <li>from which addresses your instance will accept inbound traffic to the\n\
+          \  open ports</li>\n</ul>\n<blockquote>\n<p>NOTE: If you do not specify\
+          \ a security group at boot the default security\ngroup will be applied</p>\n\
+          </blockquote>\n<ul>\n<li>Each rule adds further access, it never cancels\
+          \ or overrides another rule.</li>\n<li>Rules can have overlapping ranges\
+          \ and addresses.</li>\n<li>Rules for the same ports and addresses can be\
+          \ added to more than one\n  Security Group</li>\n</ul>\n<h2>Removing Network\
+          \ Access</h2>\n<p>To remove access to a port or from an address locate all\
+          \ security groups with\nrules relating to that port or address, then</p>\n\
+          <ul>\n<li>remove or edit each applicable rule, OR</li>\n<li>do not apply\
+          \ those Security Groups that contain the applicable rule(s)</li>\n</ul>\n\
+          <h2>Pre-Defined and Default Security Groups</h2>\n<p>For Project Trials\
+          \ (pt-xxxx) there are pre-defined security groups for\nconvenience.</p>\n\
+          <ul>\n<li>SSH opens tcp port 22 to traffic from all sources (for logging\
+          \ via ssh)</li>\n<li>HTTP opens tcp ports 80 and 443 to traffic from all\
+          \ sources (for\n  web servers)</li>\n<li>ICMP opens all ICMP traffic from\
+          \ all sources (etc. to allow pinging your\n  VMs IP address)</li>\n</ul>\n\
+          <p>For all other shared projects that are created after an allocation request,\n\
+          there is only the empty 'default' security group at first. These Projects\n\
+          share their security groups so all changes should be made with caution as\n\
+          they may affect instances by other users sharing your Project.</p>\n<h2>Managing\
+          \ Security Groups</h2>\n<p>Sometimes it can be convenient to organise rules\
+          \ into multiple Security\nGroups,\nfor example</p>\n<ul>\n<li>apply only\
+          \ some or all groups depending on a instances purpose.</li>\n<li>users experimenting\
+          \ with network access can remove groups and re-apply\n  them without re-creating\
+          \ rules each time</li>\n<li>testing rules on a temporary security group\
+          \ and test Instance before\n  adding the same rules to Security Groups already\
+          \ in use.\n  rules can appear in more than one Security Group</li>\n</ul>\n\
+          <h2>Applying Security Groups</h2>\n<p>Security Groups are most conveniently\
+          \ applied before Launching your\ninstance, multiple security groups can\
+          \ be selected.\nHowever Security Groups can also be added or removed on\
+          \ running instances.</p>\n<p>Click Launch then click the Security Groups\
+          \ field. The default group is\npre-selected</p>\n<h2>Outgoing traffic</h2>\n\
+          <p>Outgoing traffic is not blocked on any port:  connections that originate\n\
+          from your instance to the outside world, are not blocked by Nectar\nOpenStack\
+          \ configuration</p>\n<blockquote>\n<p>Security Note</p>\n<p>Using the Research\
+          \ Cloud creates a publicly accessible server (depending on\nSecurity Groups)\
+          \ and therefore that machine can be exploited. All users must\nread &amp;\
+          \ follow our <a href=\"../NeCTAR%20Fundamentals/Security%20Guidelines.md\"\
+          >Security Guidelines</a>.</p>\n</blockquote>"
+        folder:
+          category_id: 6000099797
+          created_at: '2015-08-10T11:18:55+09:30'
+          customer_folders: []
+          description: NeCTAR Fundamentals
+          id: 6000155122
+          is_default: false
+          language_id: 6
+          name: NeCTAR Fundamentals
+          parent_id: 6000155122
+          position: 2
+          updated_at: '2015-08-10T14:58:26+09:30'
+          visibility: 1
+        folder_id: 6000155122
+        hits: 0
+        id: 6000045560
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: null
+        modified_at: '2015-08-20T13:27:06+09:30'
+        modified_by: null
+        outdated: false
+        parent_id: null
+        position: 2
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Security Groups
+        updated_at: '2015-08-20T13:27:06+09:30'
+        user_id: 6002659931
+  html: "<h1>Security groups</h1>\n<p>Incoming network access to your machines is\
+    \ usually required. Security Groups\nare how to add network access. If you can't\
+    \ reach your instance by SSH to login\nor by browser if it runs a Webserver additional\
+    \ Security Group settings could\nbe needed.</p>\n<h2>Adding Network Access</h2>\n\
+    <p>The default Security Group is empty and no incoming access is configured until\n\
+    you add rules to specify:</p>\n<ul>\n<li>which ports are available for connection\
+    \ to your instance and...</li>\n<li>from which addresses your instance will accept\
+    \ inbound traffic to the\n  open ports</li>\n</ul>\n<blockquote>\n<p>NOTE: If\
+    \ you do not specify a security group at boot the default security\ngroup will\
+    \ be applied</p>\n</blockquote>\n<ul>\n<li>Each rule adds further access, it never\
+    \ cancels or overrides another rule.</li>\n<li>Rules can have overlapping ranges\
+    \ and addresses.</li>\n<li>Rules for the same ports and addresses can be added\
+    \ to more than one\n  Security Group</li>\n</ul>\n<h2>Removing Network Access</h2>\n\
+    <p>To remove access to a port or from an address locate all security groups with\n\
+    rules relating to that port or address, then</p>\n<ul>\n<li>remove or edit each\
+    \ applicable rule, OR</li>\n<li>do not apply those Security Groups that contain\
+    \ the applicable rule(s)</li>\n</ul>\n<h2>Pre-Defined and Default Security Groups</h2>\n\
+    <p>For Project Trials (pt-xxxx) there are pre-defined security groups for\nconvenience.</p>\n\
+    <ul>\n<li>SSH opens tcp port 22 to traffic from all sources (for logging via ssh)</li>\n\
+    <li>HTTP opens tcp ports 80 and 443 to traffic from all sources (for\n  web servers)</li>\n\
+    <li>ICMP opens all ICMP traffic from all sources (etc. to allow pinging your\n\
+    \  VMs IP address)</li>\n</ul>\n<p>For all other shared projects that are created\
+    \ after an allocation request,\nthere is only the empty 'default' security group\
+    \ at first. These Projects\nshare their security groups so all changes should\
+    \ be made with caution as\nthey may affect instances by other users sharing your\
+    \ Project.</p>\n<h2>Managing Security Groups</h2>\n<p>Sometimes it can be convenient\
+    \ to organise rules into multiple Security\nGroups,\nfor example</p>\n<ul>\n<li>apply\
+    \ only some or all groups depending on a instances purpose.</li>\n<li>users experimenting\
+    \ with network access can remove groups and re-apply\n  them without re-creating\
+    \ rules each time</li>\n<li>testing rules on a temporary security group and test\
+    \ Instance before\n  adding the same rules to Security Groups already in use.\n\
+    \  rules can appear in more than one Security Group</li>\n</ul>\n<h2>Applying\
+    \ Security Groups</h2>\n<p>Security Groups are most conveniently applied before\
+    \ Launching your\ninstance, multiple security groups can be selected.\nHowever\
+    \ Security Groups can also be added or removed on running instances.</p>\n<p>Click\
+    \ Launch then click the Security Groups field. The default group is\npre-selected</p>\n\
+    <h2>Outgoing traffic</h2>\n<p>Outgoing traffic is not blocked on any port:  connections\
+    \ that originate\nfrom your instance to the outside world, are not blocked by\
+    \ Nectar\nOpenStack configuration</p>\n<blockquote>\n<p>Security Note</p>\n<p>Using\
+    \ the Research Cloud creates a publicly accessible server (depending on\nSecurity\
+    \ Groups) and therefore that machine can be exploited. All users must\nread &amp;\
+    \ follow our <a href=\"../NeCTAR%20Fundamentals/Security%20Guidelines.md\">Security\
+    \ Guidelines</a>.</p>\n</blockquote>"
+  parent: 26
+  sha1: 110ae42ab838db6636815b508b9660e8c3f70171
+  title: Security Groups
