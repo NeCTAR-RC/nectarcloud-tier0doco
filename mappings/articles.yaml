@@ -2923,8 +2923,7 @@
           \ Use best-practices for logging \n Make sure that services are logging\
           \ to a secure location, that is as\ntamperproof as possible. If logging\
           \ remotely, ensure that it is done over\na secure channel so that eavesdroppers\
-          \ cannot monitor what is happening on\nyour instance. \n ddos-attacks/>\
-          \ \"Cloudflare Understanding NTP DDoS\" "
+          \ cannot monitor what is happening on\nyour instance. "
         description: '<h1>Security Recommendations</h1>
 
           <p>This document lists a number of Security Recommendations to help ensure
@@ -2989,8 +2988,8 @@
 
           system. For info about DDoS by NTP, see
 
-          <a href="https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-">this
-          article on Cloudflare</a></p>
+          <a href="https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-ddos-attacks/"
+          title="Cloudflare Understanding NTP DDoS">this article on Cloudflare</a></p>
 
           <h2>Subscribe to security announcements for your OS</h2>
 
@@ -3061,9 +3060,7 @@
           a secure channel so that eavesdroppers cannot monitor what is happening
           on
 
-          your instance.</p>
-
-          <p>ddos-attacks/&gt; "Cloudflare Understanding NTP DDoS"</p>'
+          your instance.</p>'
         folder:
           category_id: 6000099797
           created_at: '2015-08-10T11:18:50+09:30'
@@ -3078,16 +3075,16 @@
           updated_at: '2015-08-10T11:18:50+09:30'
           visibility: 1
         folder_id: 6000155118
-        hits: 0
+        hits: 1
         id: 6000045559
         int_01: null
         int_02: null
         int_03: null
-        language_id: null
-        modified_at: '2015-08-20T13:27:05+09:30'
+        language_id: 6
+        modified_at: '2015-08-20T16:16:08+09:30'
         modified_by: null
         outdated: false
-        parent_id: null
+        parent_id: 6000045559
         position: 1
         seo_data: {}
         status: 2
@@ -3097,7 +3094,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Security Guidelines
-        updated_at: '2015-08-20T13:27:05+09:30'
+        updated_at: '2015-08-20T16:16:08+09:30'
         user_id: 6002659931
   html: '<h1>Security Recommendations</h1>
 
@@ -3155,8 +3152,8 @@
 
     system. For info about DDoS by NTP, see
 
-    <a href="https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-">this
-    article on Cloudflare</a></p>
+    <a href="https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-ddos-attacks/"
+    title="Cloudflare Understanding NTP DDoS">this article on Cloudflare</a></p>
 
     <h2>Subscribe to security announcements for your OS</h2>
 
@@ -3222,11 +3219,9 @@
 
     a secure channel so that eavesdroppers cannot monitor what is happening on
 
-    your instance.</p>
-
-    <p>ddos-attacks/&gt; "Cloudflare Understanding NTP DDoS"</p>'
+    your instance.</p>'
   parent: 22
-  sha1: 8ce91eb9bc4d37262ee5df194010793e11f9b5fb
+  sha1: 7b4f6129465bb7b5fd211fc3744bebb505122d8b
   title: Security Guidelines
 50:
   freshdesk:
