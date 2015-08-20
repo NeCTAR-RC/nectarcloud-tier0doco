@@ -60,3 +60,38 @@
         visibility: 1}
   parent: 16
   title: NeCTAR Fundamentals
+38:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000108460, created_at: '2015-08-20T09:56:00+09:30', description: System
+          Templates, id: 6000168715, is_default: false, language_id: null, name: System
+          Templates, parent_id: null, position: 3, updated_at: '2015-08-20T09:56:00+09:30',
+        visibility: 1}
+  parent: 19
+  title: System Templates
+39:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000108460, created_at: '2015-08-20T09:56:01+09:30', description: Instance
+          Management, id: 6000168716, is_default: false, language_id: null, name: Instance
+          Management, parent_id: null, position: 4, updated_at: '2015-08-20T09:56:01+09:30',
+        visibility: 1}
+  parent: 19
+  title: Instance Management
+40:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000108460, created_at: '2015-08-20T09:55:57+09:30', description: Object
+          Storage, id: 6000168713, is_default: false, language_id: null, name: Object
+          Storage, parent_id: null, position: 1, updated_at: '2015-08-20T09:55:57+09:30',
+        visibility: 1}
+  parent: 19
+  title: Object Storage
+41:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000108460, created_at: '2015-08-20T09:55:58+09:30', description: Authentication,
+        id: 6000168714, is_default: false, language_id: null, name: Authentication,
+        parent_id: null, position: 2, updated_at: '2015-08-20T09:55:58+09:30', visibility: 1}
+  parent: 19
+  title: Authentication
