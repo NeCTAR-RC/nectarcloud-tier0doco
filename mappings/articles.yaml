@@ -2215,13 +2215,13 @@
   parent: 21
   sha1: 5d6df91fc2e2deaa66567ccb90fd402e63e7381b
   title: Introduction to Cloud Storage
-40:
+46:
   freshdesk:
     fd_attributes:
       article:
         art_type: 1
         bool_01: null
-        created_at: '2015-08-13T10:31:23+09:30'
+        created_at: '2015-08-20T13:25:12+09:30'
         datetime_01: null
         delta: true
         desc_un_html: " \n Heat \n Heat is a template driven service that automates\
@@ -2270,7 +2270,7 @@
           \ against the NeCTAR cloud. \n The OpenStack End User Guide Heat\n  page.\
           \ \n The Heat wiki\n \n The Heat template guide\n \n The command line client\n\
           \ \n "
-        description: "<h1>\n<img alt=\"Flame Logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/glossy_flame.png?raw=true\"\
+        description: "<h1>\n<img alt=\"Flame Logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/glossy_flame.png?raw=true\"\
           > Heat</h1>\n<p>Heat is a template driven service that automates the management\
           \ of the entire\nlifecycle of your application on the NeCTAR cloud.</p>\n\
           <p>A 'template driven service' simply means that you define your application's\n\
@@ -2326,30 +2326,30 @@
           >template guide</a>\n</li>\n<li>The <a href=\"http://docs.openstack.org/user-guide/cli_create_and_manage_stacks.html\"\
           >command line client</a>\n</li>\n</ul>"
         folder:
-          category_id: 6000099797
-          created_at: '2015-08-10T11:18:50+09:30'
+          category_id: 6000108460
+          created_at: '2015-08-20T13:25:09+09:30'
           customer_folders: []
-          description: Cloud Expert
-          id: 6000155118
+          description: Heat
+          id: 6000168845
           is_default: false
           language_id: 6
-          name: Cloud Expert
-          parent_id: 6000155118
-          position: 3
-          updated_at: '2015-08-10T11:18:50+09:30'
+          name: Heat
+          parent_id: 6000168845
+          position: 5
+          updated_at: '2015-08-20T13:25:09+09:30'
           visibility: 1
-        folder_id: 6000155118
-        hits: 4
-        id: 6000041231
+        folder_id: 6000168845
+        hits: 0
+        id: 6000045556
         int_01: null
         int_02: null
         int_03: null
-        language_id: 6
-        modified_at: '2015-08-17T16:33:54+09:30'
+        language_id: null
+        modified_at: '2015-08-20T13:25:12+09:30'
         modified_by: null
         outdated: false
-        parent_id: 6000041231
-        position: 1
+        parent_id: null
+        position: 2
         seo_data: {}
         status: 2
         string_01: null
@@ -2358,26 +2358,26 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction to HEAT
-        updated_at: '2015-08-17T16:33:54+09:30'
+        updated_at: '2015-08-20T13:25:12+09:30'
         user_id: 6002659931
-  html: "<h1><img alt=\"Flame Logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/glossy_flame.png?raw=true\"\
-    > Heat</h1>\n<p>Heat is a template driven service that automates the management\
-    \ of the entire\nlifecycle of your application on the NeCTAR cloud.</p>\n<p>A\
-    \ 'template driven service' simply means that you define your application's\n\
-    requirements in a human readable text file - the template. In this file you to\n\
-    describe both the infrastructure and its relationships that your application\n\
-    will need to run on the NeCTAR cloud.</p>\n<p>Heat then uses this template to\
-    \ provision the required infrastructure and\nmanage the lifecycle of your application\
-    \ from start to finish. This template,\nand the infrastructure that it has created,\
-    \ is termed a 'stack'.</p>\n<p>As part of the life cycle management, the Heat\
-    \ service supports both scaling on\ndemand and the freeing up of infrastructure\
-    \ once the application is finished.</p>\n<p>Heat integrates well with configuration\
-    \ management tools, such as Chef and\nPuppet. Thus the Heat service offers executable\
-    \ documentation of your\napplication's deployment and lifecycle, making your deployments\
-    \ repeatable and\nreliable. The net effect is to limit human error and to save\
-    \ you time. Thus\nsaving you money.</p>\n<h2>The stack template format(s)</h2>\n\
-    <p>Heat is modelled after Amazon's <a href=\"http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/Welcome.html\"\
+  html: "<h1><img alt=\"Flame Logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/glossy_flame.png?raw=true\"> Heat</h1>\n\
+    <p>Heat is a template driven service that automates the management of the entire\n\
+    lifecycle of your application on the NeCTAR cloud.</p>\n<p>A 'template driven\
+    \ service' simply means that you define your application's\nrequirements in a\
+    \ human readable text file - the template. In this file you to\ndescribe both\
+    \ the infrastructure and its relationships that your application\nwill need to\
+    \ run on the NeCTAR cloud.</p>\n<p>Heat then uses this template to provision the\
+    \ required infrastructure and\nmanage the lifecycle of your application from start\
+    \ to finish. This template,\nand the infrastructure that it has created, is termed\
+    \ a 'stack'.</p>\n<p>As part of the life cycle management, the Heat service supports\
+    \ both scaling on\ndemand and the freeing up of infrastructure once the application\
+    \ is finished.</p>\n<p>Heat integrates well with configuration management tools,\
+    \ such as Chef and\nPuppet. Thus the Heat service offers executable documentation\
+    \ of your\napplication's deployment and lifecycle, making your deployments repeatable\
+    \ and\nreliable. The net effect is to limit human error and to save you time.\
+    \ Thus\nsaving you money.</p>\n<h2>The stack template format(s)</h2>\n<p>Heat\
+    \ is modelled after Amazon's <a href=\"http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/Welcome.html\"\
     >CloudFormation</a>\nservice, and endeavours to maintain some degree of compatibility\
     \ with this\nservice. Hence Heat supports two different template formats.</p>\n\
     <ul>\n<li>The first is a <a href=\"http://www.json.org/\">JSON</a> based implementation\
@@ -2413,16 +2413,300 @@
     >wiki</a></li>\n<li>The Heat <a href=\"http://docs.openstack.org/developer/heat/template_guide/\"\
     >template guide</a></li>\n<li>The <a href=\"http://docs.openstack.org/user-guide/cli_create_and_manage_stacks.html\"\
     >command line client</a></li>\n</ul>"
-  parent: 22
-  sha1: 36ef3bb760ef023481ce0f33695dbf9c92d94295
+  parent: 42
+  sha1: c801ef2000065630d50ee620afb8e58f67fe4920
   title: Introduction to HEAT
-41:
+47:
   freshdesk:
     fd_attributes:
       article:
         art_type: 1
         bool_01: null
-        created_at: '2015-08-13T10:31:24+09:30'
+        created_at: '2015-08-20T13:25:13+09:30'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Walk through of a YAML template \n Template sections \n A\
+          \ Heat template is divided into several sections. These are the sections\
+          \ that\nwill typically appear in a Heat template: \n \n \nheat_template_version\
+          \ - A field that allows you to specify which version\n   of Heat the template\
+          \ was written for (optional) \n \ndescription - A field that allows you\
+          \ to describe the intent of the template\n  to a human audience (optional)\
+          \ \n \nparameters - The specification of any arguments that the user might\
+          \ be\n  required to provide (optional) \n \nresources - The specification\
+          \ of the OpenStack resources that are to be\n  created (mandatory) \n \n\
+          outputs - Any expected values that are to be returned once the template\n\
+          \  has been processed (optional). \n \n The following table contains a guided\
+          \ tour of a template\nin the NeCTAR sample template repository\nthat will\
+          \ install the Apache web server on a single Ubuntu instance. \n\n\n\nSection\n\
+          Template content\n\n\n\n\nVersion indicator\n\n\n\n\n The first line of\
+          \ a YAML template should list a version indicator.\nIf present Heat will\
+          \ parse the file  appropriately. If not present then\nHeat will assume that\
+          \ the file adheres to the most recent specification. \n\n\n\nSection\nTemplate\
+          \ content\n\n\n\n\nDescription\n\n\n\n\n Description is optional section\
+          \ that allows you to provide a description of\nthe template. \n\n\n\nSection\n\
+          Template content\n\n\n\n\nParameters\n\n\n\n\n Parameters is an optional\
+          \ section that allows you to specify any input\nparameters that might be\
+          \ required when the configuration described in the\ntemplate is built. \n\
+          \n\n\nSection\nTemplate content\n\n\n\n\nParameters\n\n\n\n\n Each parameter\
+          \ is in its own nested block, with the name appearing in\nthe first line,\
+          \ and its attributes as further nested elements. \n\n\n\nSection\nTemplate\
+          \ content\n\n\n\n\nParameters\n\n\n\n\n \n \ntype is a mandatory element\
+          \ for a parameter that can be one of:\n  string, number, json or comma_delimited_list\n\
+          \ \n \ndescription is an optional attribute that provided guidance to people\n\
+          \  using the template. \n \n\n\n\nSection\nTemplate content\n\n\n\n\nParameters\n\
+          \n\n\n\n \n \ndefault is an optional attribute that provides a default value\
+          \ for\n  the parameter. \n Constraints on the user entered value can also\
+          \ be set. \n \n\n\n\nSection\nTemplate content\n\n\n\n\nResources\n\n\n\n\
+          \n Resources is a mandatory section that defines the resources that the\n\
+          application will need. \n\n\n\nSection\nTemplate content\n\n\n\n\nResources\n\
+          \n\n\n\n Each resource is in its own nested block, with the name appearing\
+          \ in the\nfirst line, and attributes as  further nested elements \n Type\
+          \ defines the OpenStack resource to be built. The complete list\nsupported\
+          \ can be found in the template guide\nThis resource type will build a security\
+          \ group. \n Each resource has its own attribute set. These are documented\
+          \ in the\ntemplate guide - e.g.: for the AWS::EC2::SecurityGroup \n\n\n\n\
+          Section\nTemplate content\n\n\n\n\nResources\n\n\n\n\n This resource type\
+          \ builds an instance with apache installed. \n The AWS::CloudFormation::Init\
+          \ section provides instructions as to what\nshould be done on the instance\
+          \ once it has booted. \n Fn::Select is a function that will select an item\
+          \ from a list. \n get_param is a function that returns the value of the\
+          \ named parameter\nthat was set by the user. \n The Heat manual contains\
+          \ a complete list of built in functions\nCurrently NeCTAR supports releases\
+          \ up to Juno. \n UserData is a mechanism by which information can be passed\
+          \ to an instance at\nlaunch time. Typically this will be either a a shell\
+          \ script or a configuration\nfile. \n Note that the chosen image for the\
+          \ instance must have the cloudinit\npackaged installed for AWS::CloudFormation::Init\
+          \ to work. \n\n\n\nSection\nTemplate content\n\n\n\n\nResources\n\n\n\n\n\
+          \ These resource types will notify the heat engine when the software is\n\
+          fully installed on the instance. \n\n\n\nSection\nTemplate content\n\n\n\
+          \n\nOutputs\n\n\n\n\n The outputs will show once the heat engine has finished\
+          \ building the template. "
+        description: "<h1>Walk through of a YAML template</h1>\n<h2>Template sections</h2>\n\
+          <p>A Heat template is divided into several sections. These are the sections\
+          \ that\nwill typically appear in a Heat template:</p>\n<ul>\n<li>\n<code>heat_template_version</code>\
+          \ - A field that allows you to specify which version\n   of Heat the template\
+          \ was written for (optional)</li>\n<li>\n<code>description</code> - A field\
+          \ that allows you to describe the intent of the template\n  to a human audience\
+          \ (optional)</li>\n<li>\n<code>parameters</code> - The specification of\
+          \ any arguments that the user might be\n  required to provide (optional)</li>\n\
+          <li>\n<code>resources</code> - The specification of the OpenStack resources\
+          \ that are to be\n  created (mandatory)</li>\n<li>\n<code>outputs</code>\
+          \ - Any expected values that are to be returned once the template\n  has\
+          \ been processed (optional).</li>\n</ul>\n<p>The following table contains\
+          \ a guided tour of a <a href=\"https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/juno/Ubuntu/apache_single_instance_aws.yaml\"\
+          >template</a>\nin the <a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
+          >NeCTAR sample template repository</a>\nthat will install the Apache web\
+          \ server on a single Ubuntu instance.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
+          <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Version indicator</td>\n\
+          <td><img alt=\"version info\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_template_version.png?raw=true\"\
+          ></td>\n</tr>\n</tbody>\n</table>\n<p>The first line of a YAML template\
+          \ should list a version indicator.\nIf present Heat will parse the file\
+          \  appropriately. If not present then\nHeat will assume that the file adheres\
+          \ to the most recent specification.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
+          <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Description</td>\n\
+          <td><img alt=\"description\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_description.png?raw=true\"\
+          ></td>\n</tr>\n</tbody>\n</table>\n<p>Description is optional section that\
+          \ allows you to provide a description of\nthe template.</p>\n<table>\n<thead>\n\
+          <tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n<tbody>\n\
+          <tr>\n<td>Parameters</td>\n<td><img alt=\"parameters\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_parameters.png?raw=true\"\
+          ></td>\n</tr>\n</tbody>\n</table>\n<p>Parameters is an optional section\
+          \ that allows you to specify any input\nparameters that might be required\
+          \ when the configuration described in the\ntemplate is built.</p>\n<table>\n\
+          <thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n\
+          <tbody>\n<tr>\n<td>Parameters</td>\n<td><img alt=\"key name\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_key_name.png?raw=true\"\
+          ></td>\n</tr>\n</tbody>\n</table>\n<p>Each parameter is in its own nested\
+          \ block, with the name appearing in\nthe first line, and its attributes\
+          \ as further nested elements.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
+          <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Parameters</td>\n\
+          <td><img alt=\"instance type\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_instance_type.png?raw=true\"\
+          ></td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li>\n<code>type</code> is a mandatory\
+          \ element for a parameter that can be one of:\n  <code>string</code>, <code>number</code>,\
+          \ <code>json</code> or <code>comma_delimited_list</code>\n</li>\n<li>\n\
+          <code>description</code> is an optional attribute that provided guidance\
+          \ to people\n  using the template.</li>\n</ul>\n<table>\n<thead>\n<tr>\n\
+          <th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n<tbody>\n\
+          <tr>\n<td>Parameters</td>\n<td><img alt=\"image name\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_image_name.png?raw=true\"\
+          ></td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li>\n<code>default</code> is an\
+          \ optional attribute that provides a default value for\n  the parameter.</li>\n\
+          <li>Constraints on the user entered value can also be set.</li>\n</ul>\n\
+          <table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n\
+          </thead>\n<tbody>\n<tr>\n<td>Resources</td>\n<td><img alt=\"resources\"\
+          \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_resources.png?raw=true\"\
+          ></td>\n</tr>\n</tbody>\n</table>\n<p>Resources is a mandatory section that\
+          \ defines the resources that the\napplication will need.</p>\n<table>\n\
+          <thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n\
+          <tbody>\n<tr>\n<td>Resources</td>\n<td><img alt=\"web security group\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_web_security_group.png?raw=true\"\
+          ></td>\n</tr>\n</tbody>\n</table>\n<p>Each resource is in its own nested\
+          \ block, with the name appearing in the\nfirst line, and attributes as \
+          \ further nested elements</p>\n<p>Type defines the OpenStack resource to\
+          \ be built. The complete list\nsupported can be found in the <a href=\"\
+          http://docs.openstack.org/developer/heat/template_guide/\">template guide</a>\n\
+          This resource type will build a security group.</p>\n<p>Each resource has\
+          \ its own attribute set. These are documented in the\ntemplate guide - e.g.:\
+          \ for the <a href=\"http://docs.openstack.org/developer/heat/template_guide/cfn.html#AWS::EC2::SecurityGroup\"\
+          ><code>AWS::EC2::SecurityGroup</code></a></p>\n<table>\n<thead>\n<tr>\n\
+          <th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n<tbody>\n\
+          <tr>\n<td>Resources</td>\n<td><img alt=\"apache server\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_apache_server.png?raw=true\"\
+          ></td>\n</tr>\n</tbody>\n</table>\n<p>This resource type builds an instance\
+          \ with apache installed.</p>\n<p>The <code>AWS::CloudFormation::Init</code>\
+          \ section provides instructions as to what\nshould be done on the instance\
+          \ once it has booted.</p>\n<p><code>Fn::Select</code> is a function that\
+          \ will select an item from a list.</p>\n<p><code>get_param</code> is a function\
+          \ that returns the value of the named parameter\nthat was set by the user.</p>\n\
+          <p>The Heat manual contains a complete list of <a href=\"http://docs.openstack.org/developer/heat/template_guide/hot_spec.html\"\
+          >built in functions</a>\nCurrently NeCTAR supports releases up to Juno.</p>\n\
+          <p>UserData is a mechanism by which information can be passed to an instance\
+          \ at\nlaunch time. Typically this will be either a a shell script or a configuration\n\
+          file.</p>\n<p>Note that the chosen image for the instance must have the\
+          \ <code>cloudinit</code>\npackaged installed for <code>AWS::CloudFormation::Init</code>\
+          \ to work.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n\
+          </tr>\n</thead>\n<tbody>\n<tr>\n<td>Resources</td>\n<td><img alt=\"apache\
+          \ server\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_wait_handle.png?raw=true\"\
+          ></td>\n</tr>\n</tbody>\n</table>\n<p>These resource types will notify the\
+          \ heat engine when the software is\nfully installed on the instance.</p>\n\
+          <table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n\
+          </thead>\n<tbody>\n<tr>\n<td>Outputs</td>\n<td><img alt=\"apache server\"\
+          \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_outputs.png?raw=true\"\
+          ></td>\n</tr>\n</tbody>\n</table>\n<p>The outputs will show once the heat\
+          \ engine has finished building the template.</p>"
+        folder:
+          category_id: 6000108460
+          created_at: '2015-08-20T13:25:09+09:30'
+          customer_folders: []
+          description: Heat
+          id: 6000168845
+          is_default: false
+          language_id: 6
+          name: Heat
+          parent_id: 6000168845
+          position: 5
+          updated_at: '2015-08-20T13:25:09+09:30'
+          visibility: 1
+        folder_id: 6000168845
+        hits: 0
+        id: 6000045557
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: null
+        modified_at: '2015-08-20T13:25:13+09:30'
+        modified_by: null
+        outdated: false
+        parent_id: null
+        position: 3
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Heat Template Walk Through
+        updated_at: '2015-08-20T13:25:13+09:30'
+        user_id: 6002659931
+  html: "<h1>Walk through of a YAML template</h1>\n<h2>Template sections</h2>\n<p>A\
+    \ Heat template is divided into several sections. These are the sections that\n\
+    will typically appear in a Heat template:</p>\n<ul>\n<li><code>heat_template_version</code>\
+    \ - A field that allows you to specify which version\n   of Heat the template\
+    \ was written for (optional)</li>\n<li><code>description</code> - A field that\
+    \ allows you to describe the intent of the template\n  to a human audience (optional)</li>\n\
+    <li><code>parameters</code> - The specification of any arguments that the user\
+    \ might be\n  required to provide (optional)</li>\n<li><code>resources</code>\
+    \ - The specification of the OpenStack resources that are to be\n  created (mandatory)</li>\n\
+    <li><code>outputs</code> - Any expected values that are to be returned once the\
+    \ template\n  has been processed (optional).</li>\n</ul>\n<p>The following table\
+    \ contains a guided tour of a <a href=\"https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/juno/Ubuntu/apache_single_instance_aws.yaml\"\
+    >template</a>\nin the <a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
+    >NeCTAR sample template repository</a>\nthat will install the Apache web server\
+    \ on a single Ubuntu instance.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
+    <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Version indicator</td>\n\
+    <td><img alt=\"version info\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_template_version.png?raw=true\"></td>\n\
+    </tr>\n</tbody>\n</table>\n<p>The first line of a YAML template should list a\
+    \ version indicator.\nIf present Heat will parse the file  appropriately. If not\
+    \ present then\nHeat will assume that the file adheres to the most recent specification.</p>\n\
+    <table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n\
+    <tbody>\n<tr>\n<td>Description</td>\n<td><img alt=\"description\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_description.png?raw=true\"></td>\n\
+    </tr>\n</tbody>\n</table>\n<p>Description is optional section that allows you\
+    \ to provide a description of\nthe template.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
+    <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Parameters</td>\n\
+    <td><img alt=\"parameters\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_parameters.png?raw=true\"></td>\n\
+    </tr>\n</tbody>\n</table>\n<p>Parameters is an optional section that allows you\
+    \ to specify any input\nparameters that might be required when the configuration\
+    \ described in the\ntemplate is built.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
+    <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Parameters</td>\n\
+    <td><img alt=\"key name\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_key_name.png?raw=true\"></td>\n</tr>\n\
+    </tbody>\n</table>\n<p>Each parameter is in its own nested block, with the name\
+    \ appearing in\nthe first line, and its attributes as further nested elements.</p>\n\
+    <table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n\
+    <tbody>\n<tr>\n<td>Parameters</td>\n<td><img alt=\"instance type\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_instance_type.png?raw=true\"></td>\n\
+    </tr>\n</tbody>\n</table>\n<ul>\n<li><code>type</code> is a mandatory element\
+    \ for a parameter that can be one of:\n  <code>string</code>, <code>number</code>,\
+    \ <code>json</code> or <code>comma_delimited_list</code></li>\n<li><code>description</code>\
+    \ is an optional attribute that provided guidance to people\n  using the template.</li>\n\
+    </ul>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n\
+    </thead>\n<tbody>\n<tr>\n<td>Parameters</td>\n<td><img alt=\"image name\" src=\"\
+    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_image_name.png?raw=true\"></td>\n\
+    </tr>\n</tbody>\n</table>\n<ul>\n<li><code>default</code> is an optional attribute\
+    \ that provides a default value for\n  the parameter.</li>\n<li>Constraints on\
+    \ the user entered value can also be set.</li>\n</ul>\n<table>\n<thead>\n<tr>\n\
+    <th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n\
+    <td>Resources</td>\n<td><img alt=\"resources\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_resources.png?raw=true\"></td>\n</tr>\n\
+    </tbody>\n</table>\n<p>Resources is a mandatory section that defines the resources\
+    \ that the\napplication will need.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
+    <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Resources</td>\n\
+    <td><img alt=\"web security group\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_web_security_group.png?raw=true\"\
+    ></td>\n</tr>\n</tbody>\n</table>\n<p>Each resource is in its own nested block,\
+    \ with the name appearing in the\nfirst line, and attributes as  further nested\
+    \ elements</p>\n<p>Type defines the OpenStack resource to be built. The complete\
+    \ list\nsupported can be found in the <a href=\"http://docs.openstack.org/developer/heat/template_guide/\"\
+    >template guide</a>\nThis resource type will build a security group.</p>\n<p>Each\
+    \ resource has its own attribute set. These are documented in the\ntemplate guide\
+    \ - e.g.: for the <a href=\"http://docs.openstack.org/developer/heat/template_guide/cfn.html#AWS::EC2::SecurityGroup\"\
+    ><code>AWS::EC2::SecurityGroup</code></a></p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
+    <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Resources</td>\n\
+    <td><img alt=\"apache server\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_apache_server.png?raw=true\"></td>\n\
+    </tr>\n</tbody>\n</table>\n<p>This resource type builds an instance with apache\
+    \ installed.</p>\n<p>The <code>AWS::CloudFormation::Init</code> section provides\
+    \ instructions as to what\nshould be done on the instance once it has booted.</p>\n\
+    <p><code>Fn::Select</code> is a function that will select an item from a list.</p>\n\
+    <p><code>get_param</code> is a function that returns the value of the named parameter\n\
+    that was set by the user.</p>\n<p>The Heat manual contains a complete list of\
+    \ <a href=\"http://docs.openstack.org/developer/heat/template_guide/hot_spec.html\"\
+    >built in functions</a>\nCurrently NeCTAR supports releases up to Juno.</p>\n\
+    <p>UserData is a mechanism by which information can be passed to an instance at\n\
+    launch time. Typically this will be either a a shell script or a configuration\n\
+    file.</p>\n<p>Note that the chosen image for the instance must have the <code>cloudinit</code>\n\
+    packaged installed for <code>AWS::CloudFormation::Init</code> to work.</p>\n<table>\n\
+    <thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n\
+    <tbody>\n<tr>\n<td>Resources</td>\n<td><img alt=\"apache server\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_wait_handle.png?raw=true\"></td>\n\
+    </tr>\n</tbody>\n</table>\n<p>These resource types will notify the heat engine\
+    \ when the software is\nfully installed on the instance.</p>\n<table>\n<thead>\n\
+    <tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n<tbody>\n\
+    <tr>\n<td>Outputs</td>\n<td><img alt=\"apache server\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_outputs.png?raw=true\"></td>\n</tr>\n\
+    </tbody>\n</table>\n<p>The outputs will show once the heat engine has finished\
+    \ building the template.</p>"
+  parent: 42
+  sha1: 6be381c7cebba06fe61e16c46dcc06ecdf5ebc69
+  title: Heat Template Walk Through
+48:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-08-20T13:25:11+09:30'
         datetime_01: null
         delta: true
         desc_un_html: " Just enough YAML to read a template \n Heat templates are\
@@ -2507,30 +2791,30 @@
           \ Verity\n    last: Stob\n    publications:\n        - '.EXE'\n        -\
           \ 'Dr. Dobb's Journal'\n        - 'The Register'</code></p>"
         folder:
-          category_id: 6000099797
-          created_at: '2015-08-10T11:18:50+09:30'
+          category_id: 6000108460
+          created_at: '2015-08-20T13:25:09+09:30'
           customer_folders: []
-          description: Cloud Expert
-          id: 6000155118
+          description: Heat
+          id: 6000168845
           is_default: false
           language_id: 6
-          name: Cloud Expert
-          parent_id: 6000155118
-          position: 3
-          updated_at: '2015-08-10T11:18:50+09:30'
+          name: Heat
+          parent_id: 6000168845
+          position: 5
+          updated_at: '2015-08-20T13:25:09+09:30'
           visibility: 1
-        folder_id: 6000155118
-        hits: 1
-        id: 6000041232
+        folder_id: 6000168845
+        hits: 0
+        id: 6000045555
         int_01: null
         int_02: null
         int_03: null
-        language_id: 6
-        modified_at: '2015-08-13T13:46:52+09:30'
+        language_id: null
+        modified_at: '2015-08-20T13:25:11+09:30'
         modified_by: null
         outdated: false
-        parent_id: 6000041232
-        position: 2
+        parent_id: null
+        position: 1
         seo_data: {}
         status: 2
         string_01: null
@@ -2539,7 +2823,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction to YAML
-        updated_at: '2015-08-17T13:33:58+09:30'
+        updated_at: '2015-08-20T13:25:11+09:30'
         user_id: 6002659931
   html: "<h1>Just enough YAML to read a template</h1>\n<p>Heat templates are written\
     \ in a format named '<a href=\"http://yaml.org/\">YAML</a>'. This\nis a short\
@@ -2580,292 +2864,6 @@
     \ Journal', 'The Register']</code></p>\n<p>Lists and Maps can be nested in any\
     \ order.</p>\n<p><code>yaml\nname:\n    first: Verity\n    last: Stob\n    publications:\n\
     \        - '.EXE'\n        - 'Dr. Dobb's Journal'\n        - 'The Register'</code></p>"
-  parent: 22
+  parent: 42
   sha1: 831f265c1bdab3e82e173a6819f0fa2e61038b93
   title: Introduction to YAML
-45:
-  freshdesk:
-    fd_attributes:
-      article:
-        art_type: 1
-        bool_01: null
-        created_at: '2015-08-18T10:07:17+09:30'
-        datetime_01: null
-        delta: true
-        desc_un_html: " Walk through of a YAML template \n Template sections \n A\
-          \ Heat template is divided into several sections. These are the sections\
-          \ that\nwill typically appear in a Heat template: \n \n \nheat_template_version\
-          \ - A field that allows you to specify which version\n   of Heat the template\
-          \ was written for (optional) \n \ndescription - A field that allows you\
-          \ to describe the intent of the template\n  to a human audience (optional)\
-          \ \n \nparameters - The specification of any arguments that the user might\
-          \ be\n  required to provide (optional) \n \nresources - The specification\
-          \ of the OpenStack resources that are to be\n  created (mandatory) \n \n\
-          outputs - Any expected values that are to be returned once the template\n\
-          \  has been processed (optional). \n \n The following table contains a guided\
-          \ tour of a template\nin the NeCTAR sample template repository\nthat will\
-          \ install the Apache web server on a single Ubuntu instance. \n\n\n\nSection\n\
-          Template content\n\n\n\n\nVersion indicator\n\n\n\n\n The first line of\
-          \ a YAML template should list a version indicator.\nIf present Heat will\
-          \ parse the file  appropriately. If not present then\nHeat will assume that\
-          \ the file adheres to the most recent specification. \n\n\n\nSection\nTemplate\
-          \ content\n\n\n\n\nDescription\n\n\n\n\n Description is optional section\
-          \ that allows you to provide a description of\nthe template. \n\n\n\nSection\n\
-          Template content\n\n\n\n\nParameters\n\n\n\n\n Parameters is an optional\
-          \ section that allows you to specify any input\nparameters that might be\
-          \ required when the configuration described in the\ntemplate is built. \n\
-          \n\n\nSection\nTemplate content\n\n\n\n\nParameters\n\n\n\n\n Each parameter\
-          \ is in its own nested block, with the name appearing in\nthe first line,\
-          \ and its attributes as further nested elements. \n\n\n\nSection\nTemplate\
-          \ content\n\n\n\n\nParameters\n\n\n\n\n \n \ntype is a mandatory element\
-          \ for a parameter that can be one of:\n  string, number, json or comma_delimited_list\n\
-          \ \n \ndescription is an optional attribute that provided guidance to people\n\
-          \  using the template. \n \n\n\n\nSection\nTemplate content\n\n\n\n\nParameters\n\
-          \n\n\n\n \n \ndefault is an optional attribute that provides a default value\
-          \ for\n  the parameter. \n Constraints on the user entered value can also\
-          \ be set. \n \n\n\n\nSection\nTemplate content\n\n\n\n\nResources\n\n\n\n\
-          \n Resources is a mandatory section that defines the resources that the\n\
-          application will need. \n\n\n\nSection\nTemplate content\n\n\n\n\nResources\n\
-          \n\n\n\n Each resource is in its own nested block, with the name appearing\
-          \ in the\nfirst line, and attributes as  further nested elements \n Type\
-          \ defines the OpenStack resource to be built. The complete list\nsupported\
-          \ can be found in the template guide\nThis resource type will build a security\
-          \ group. \n Each resource has its own attribute set. These are documented\
-          \ in the\ntemplate guide - e.g.: for the AWS::EC2::SecurityGroup \n\n\n\n\
-          Section\nTemplate content\n\n\n\n\nResources\n\n\n\n\n This resource type\
-          \ builds an instance with apache installed. \n The AWS::CloudFormation::Init\
-          \ section provides instructions as to what\nshould be done on the instance\
-          \ once it has booted. \n Fn::Select is a function that will select an item\
-          \ from a list. \n get_param is a function that returns the value of the\
-          \ named parameter\nthat was set by the user. \n The Heat manual contains\
-          \ a complete list of built in functions\nCurrently NeCTAR supports releases\
-          \ up to Juno. \n UserData is a mechanism by which information can be passed\
-          \ to an instance at\nlaunch time. Typically this will be either a a shell\
-          \ script or a configuration\nfile. \n Note that the chosen image for the\
-          \ instance must have the cloudinit\npackaged installed for AWS::CloudFormation::Init\
-          \ to work. \n\n\n\nSection\nTemplate content\n\n\n\n\nResources\n\n\n\n\n\
-          \ These resource types will notify the heat engine when the software is\n\
-          fully installed on the instance. \n\n\n\nSection\nTemplate content\n\n\n\
-          \n\nOutputs\n\n\n\n\n The outputs will show once the heat engine has finished\
-          \ building the template. "
-        description: "<h1>Walk through of a YAML template</h1>\n<h2>Template sections</h2>\n\
-          <p>A Heat template is divided into several sections. These are the sections\
-          \ that\nwill typically appear in a Heat template:</p>\n<ul>\n<li>\n<code>heat_template_version</code>\
-          \ - A field that allows you to specify which version\n   of Heat the template\
-          \ was written for (optional)</li>\n<li>\n<code>description</code> - A field\
-          \ that allows you to describe the intent of the template\n  to a human audience\
-          \ (optional)</li>\n<li>\n<code>parameters</code> - The specification of\
-          \ any arguments that the user might be\n  required to provide (optional)</li>\n\
-          <li>\n<code>resources</code> - The specification of the OpenStack resources\
-          \ that are to be\n  created (mandatory)</li>\n<li>\n<code>outputs</code>\
-          \ - Any expected values that are to be returned once the template\n  has\
-          \ been processed (optional).</li>\n</ul>\n<p>The following table contains\
-          \ a guided tour of a <a href=\"https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/juno/Ubuntu/apache_single_instance_aws.yaml\"\
-          >template</a>\nin the <a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
-          >NeCTAR sample template repository</a>\nthat will install the Apache web\
-          \ server on a single Ubuntu instance.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
-          <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Version indicator</td>\n\
-          <td><img alt=\"version info\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/heat_template_version.png?raw=true\"\
-          ></td>\n</tr>\n</tbody>\n</table>\n<p>The first line of a YAML template\
-          \ should list a version indicator.\nIf present Heat will parse the file\
-          \  appropriately. If not present then\nHeat will assume that the file adheres\
-          \ to the most recent specification.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
-          <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Description</td>\n\
-          <td><img alt=\"description\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/heat_description.png?raw=true\"\
-          ></td>\n</tr>\n</tbody>\n</table>\n<p>Description is optional section that\
-          \ allows you to provide a description of\nthe template.</p>\n<table>\n<thead>\n\
-          <tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n<tbody>\n\
-          <tr>\n<td>Parameters</td>\n<td><img alt=\"parameters\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/heat_parameters.png?raw=true\"\
-          ></td>\n</tr>\n</tbody>\n</table>\n<p>Parameters is an optional section\
-          \ that allows you to specify any input\nparameters that might be required\
-          \ when the configuration described in the\ntemplate is built.</p>\n<table>\n\
-          <thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n\
-          <tbody>\n<tr>\n<td>Parameters</td>\n<td><img alt=\"key name\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/heat_key_name.png?raw=true\"\
-          ></td>\n</tr>\n</tbody>\n</table>\n<p>Each parameter is in its own nested\
-          \ block, with the name appearing in\nthe first line, and its attributes\
-          \ as further nested elements.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
-          <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Parameters</td>\n\
-          <td><img alt=\"instance type\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/heat_instance_type.png?raw=true\"\
-          ></td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li>\n<code>type</code> is a mandatory\
-          \ element for a parameter that can be one of:\n  <code>string</code>, <code>number</code>,\
-          \ <code>json</code> or <code>comma_delimited_list</code>\n</li>\n<li>\n\
-          <code>description</code> is an optional attribute that provided guidance\
-          \ to people\n  using the template.</li>\n</ul>\n<table>\n<thead>\n<tr>\n\
-          <th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n<tbody>\n\
-          <tr>\n<td>Parameters</td>\n<td><img alt=\"image name\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/heat_image_name.png?raw=true\"\
-          ></td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li>\n<code>default</code> is an\
-          \ optional attribute that provides a default value for\n  the parameter.</li>\n\
-          <li>Constraints on the user entered value can also be set.</li>\n</ul>\n\
-          <table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n\
-          </thead>\n<tbody>\n<tr>\n<td>Resources</td>\n<td><img alt=\"resources\"\
-          \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/heat_resources.png?raw=true\"\
-          ></td>\n</tr>\n</tbody>\n</table>\n<p>Resources is a mandatory section that\
-          \ defines the resources that the\napplication will need.</p>\n<table>\n\
-          <thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n\
-          <tbody>\n<tr>\n<td>Resources</td>\n<td><img alt=\"web security group\" src=\"\
-          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/heat_web_security_group.png?raw=true\"\
-          ></td>\n</tr>\n</tbody>\n</table>\n<p>Each resource is in its own nested\
-          \ block, with the name appearing in the\nfirst line, and attributes as \
-          \ further nested elements</p>\n<p>Type defines the OpenStack resource to\
-          \ be built. The complete list\nsupported can be found in the <a href=\"\
-          http://docs.openstack.org/developer/heat/template_guide/\">template guide</a>\n\
-          This resource type will build a security group.</p>\n<p>Each resource has\
-          \ its own attribute set. These are documented in the\ntemplate guide - e.g.:\
-          \ for the <a href=\"http://docs.openstack.org/developer/heat/template_guide/cfn.html#AWS::EC2::SecurityGroup\"\
-          ><code>AWS::EC2::SecurityGroup</code></a></p>\n<table>\n<thead>\n<tr>\n\
-          <th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n<tbody>\n\
-          <tr>\n<td>Resources</td>\n<td><img alt=\"apache server\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/heat_apache_server.png?raw=true\"\
-          ></td>\n</tr>\n</tbody>\n</table>\n<p>This resource type builds an instance\
-          \ with apache installed.</p>\n<p>The <code>AWS::CloudFormation::Init</code>\
-          \ section provides instructions as to what\nshould be done on the instance\
-          \ once it has booted.</p>\n<p><code>Fn::Select</code> is a function that\
-          \ will select an item from a list.</p>\n<p><code>get_param</code> is a function\
-          \ that returns the value of the named parameter\nthat was set by the user.</p>\n\
-          <p>The Heat manual contains a complete list of <a href=\"http://docs.openstack.org/developer/heat/template_guide/hot_spec.html\"\
-          >built in functions</a>\nCurrently NeCTAR supports releases up to Juno.</p>\n\
-          <p>UserData is a mechanism by which information can be passed to an instance\
-          \ at\nlaunch time. Typically this will be either a a shell script or a configuration\n\
-          file.</p>\n<p>Note that the chosen image for the instance must have the\
-          \ <code>cloudinit</code>\npackaged installed for <code>AWS::CloudFormation::Init</code>\
-          \ to work.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n\
-          </tr>\n</thead>\n<tbody>\n<tr>\n<td>Resources</td>\n<td><img alt=\"apache\
-          \ server\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/heat_wait_handle.png?raw=true\"\
-          ></td>\n</tr>\n</tbody>\n</table>\n<p>These resource types will notify the\
-          \ heat engine when the software is\nfully installed on the instance.</p>\n\
-          <table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n\
-          </thead>\n<tbody>\n<tr>\n<td>Outputs</td>\n<td><img alt=\"apache server\"\
-          \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Expert--DOCID22/images/heat_outputs.png?raw=true\"\
-          ></td>\n</tr>\n</tbody>\n</table>\n<p>The outputs will show once the heat\
-          \ engine has finished building the template.</p>"
-        folder:
-          category_id: 6000099797
-          created_at: '2015-08-10T11:18:50+09:30'
-          customer_folders: []
-          description: Cloud Expert
-          id: 6000155118
-          is_default: false
-          language_id: 6
-          name: Cloud Expert
-          parent_id: 6000155118
-          position: 3
-          updated_at: '2015-08-10T11:18:50+09:30'
-          visibility: 1
-        folder_id: 6000155118
-        hits: 6
-        id: 6000043753
-        int_01: null
-        int_02: null
-        int_03: null
-        language_id: 6
-        modified_at: '2015-08-20T11:57:04+09:30'
-        modified_by: null
-        outdated: false
-        parent_id: 6000043753
-        position: 3
-        seo_data: {}
-        status: 2
-        string_01: null
-        string_02: null
-        tags: []
-        thumbs_down: 0
-        thumbs_up: 0
-        title: Heat Template Walk Through
-        updated_at: '2015-08-20T11:57:04+09:30'
-        user_id: 6002659931
-  html: "<h1>Walk through of a YAML template</h1>\n<h2>Template sections</h2>\n<p>A\
-    \ Heat template is divided into several sections. These are the sections that\n\
-    will typically appear in a Heat template:</p>\n<ul>\n<li><code>heat_template_version</code>\
-    \ - A field that allows you to specify which version\n   of Heat the template\
-    \ was written for (optional)</li>\n<li><code>description</code> - A field that\
-    \ allows you to describe the intent of the template\n  to a human audience (optional)</li>\n\
-    <li><code>parameters</code> - The specification of any arguments that the user\
-    \ might be\n  required to provide (optional)</li>\n<li><code>resources</code>\
-    \ - The specification of the OpenStack resources that are to be\n  created (mandatory)</li>\n\
-    <li><code>outputs</code> - Any expected values that are to be returned once the\
-    \ template\n  has been processed (optional).</li>\n</ul>\n<p>The following table\
-    \ contains a guided tour of a <a href=\"https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/juno/Ubuntu/apache_single_instance_aws.yaml\"\
-    >template</a>\nin the <a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
-    >NeCTAR sample template repository</a>\nthat will install the Apache web server\
-    \ on a single Ubuntu instance.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
-    <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Version indicator</td>\n\
-    <td><img alt=\"version info\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/heat_template_version.png?raw=true\"\
-    ></td>\n</tr>\n</tbody>\n</table>\n<p>The first line of a YAML template should\
-    \ list a version indicator.\nIf present Heat will parse the file  appropriately.\
-    \ If not present then\nHeat will assume that the file adheres to the most recent\
-    \ specification.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n\
-    </tr>\n</thead>\n<tbody>\n<tr>\n<td>Description</td>\n<td><img alt=\"description\"\
-    \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/heat_description.png?raw=true\"\
-    ></td>\n</tr>\n</tbody>\n</table>\n<p>Description is optional section that allows\
-    \ you to provide a description of\nthe template.</p>\n<table>\n<thead>\n<tr>\n\
-    <th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n\
-    <td>Parameters</td>\n<td><img alt=\"parameters\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/heat_parameters.png?raw=true\"\
-    ></td>\n</tr>\n</tbody>\n</table>\n<p>Parameters is an optional section that allows\
-    \ you to specify any input\nparameters that might be required when the configuration\
-    \ described in the\ntemplate is built.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
-    <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Parameters</td>\n\
-    <td><img alt=\"key name\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/heat_key_name.png?raw=true\"\
-    ></td>\n</tr>\n</tbody>\n</table>\n<p>Each parameter is in its own nested block,\
-    \ with the name appearing in\nthe first line, and its attributes as further nested\
-    \ elements.</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n\
-    </tr>\n</thead>\n<tbody>\n<tr>\n<td>Parameters</td>\n<td><img alt=\"instance type\"\
-    \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/heat_instance_type.png?raw=true\"\
-    ></td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li><code>type</code> is a mandatory\
-    \ element for a parameter that can be one of:\n  <code>string</code>, <code>number</code>,\
-    \ <code>json</code> or <code>comma_delimited_list</code></li>\n<li><code>description</code>\
-    \ is an optional attribute that provided guidance to people\n  using the template.</li>\n\
-    </ul>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n\
-    </thead>\n<tbody>\n<tr>\n<td>Parameters</td>\n<td><img alt=\"image name\" src=\"\
-    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/heat_image_name.png?raw=true\"\
-    ></td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li><code>default</code> is an optional\
-    \ attribute that provides a default value for\n  the parameter.</li>\n<li>Constraints\
-    \ on the user entered value can also be set.</li>\n</ul>\n<table>\n<thead>\n<tr>\n\
-    <th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n\
-    <td>Resources</td>\n<td><img alt=\"resources\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/heat_resources.png?raw=true\"\
-    ></td>\n</tr>\n</tbody>\n</table>\n<p>Resources is a mandatory section that defines\
-    \ the resources that the\napplication will need.</p>\n<table>\n<thead>\n<tr>\n\
-    <th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n\
-    <td>Resources</td>\n<td><img alt=\"web security group\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/heat_web_security_group.png?raw=true\"\
-    ></td>\n</tr>\n</tbody>\n</table>\n<p>Each resource is in its own nested block,\
-    \ with the name appearing in the\nfirst line, and attributes as  further nested\
-    \ elements</p>\n<p>Type defines the OpenStack resource to be built. The complete\
-    \ list\nsupported can be found in the <a href=\"http://docs.openstack.org/developer/heat/template_guide/\"\
-    >template guide</a>\nThis resource type will build a security group.</p>\n<p>Each\
-    \ resource has its own attribute set. These are documented in the\ntemplate guide\
-    \ - e.g.: for the <a href=\"http://docs.openstack.org/developer/heat/template_guide/cfn.html#AWS::EC2::SecurityGroup\"\
-    ><code>AWS::EC2::SecurityGroup</code></a></p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n\
-    <th>Template content</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Resources</td>\n\
-    <td><img alt=\"apache server\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/heat_apache_server.png?raw=true\"\
-    ></td>\n</tr>\n</tbody>\n</table>\n<p>This resource type builds an instance with\
-    \ apache installed.</p>\n<p>The <code>AWS::CloudFormation::Init</code> section\
-    \ provides instructions as to what\nshould be done on the instance once it has\
-    \ booted.</p>\n<p><code>Fn::Select</code> is a function that will select an item\
-    \ from a list.</p>\n<p><code>get_param</code> is a function that returns the value\
-    \ of the named parameter\nthat was set by the user.</p>\n<p>The Heat manual contains\
-    \ a complete list of <a href=\"http://docs.openstack.org/developer/heat/template_guide/hot_spec.html\"\
-    >built in functions</a>\nCurrently NeCTAR supports releases up to Juno.</p>\n\
-    <p>UserData is a mechanism by which information can be passed to an instance at\n\
-    launch time. Typically this will be either a a shell script or a configuration\n\
-    file.</p>\n<p>Note that the chosen image for the instance must have the <code>cloudinit</code>\n\
-    packaged installed for <code>AWS::CloudFormation::Init</code> to work.</p>\n<table>\n\
-    <thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n\
-    <tbody>\n<tr>\n<td>Resources</td>\n<td><img alt=\"apache server\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/heat_wait_handle.png?raw=true\"\
-    ></td>\n</tr>\n</tbody>\n</table>\n<p>These resource types will notify the heat\
-    \ engine when the software is\nfully installed on the instance.</p>\n<table>\n\
-    <thead>\n<tr>\n<th>Section</th>\n<th>Template content</th>\n</tr>\n</thead>\n\
-    <tbody>\n<tr>\n<td>Outputs</td>\n<td><img alt=\"apache server\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
-    \ Documentation--DOCID16/Cloud Expert--DOCID22/images/heat_outputs.png?raw=true\"\
-    ></td>\n</tr>\n</tbody>\n</table>\n<p>The outputs will show once the heat engine\
-    \ has finished building the template.</p>"
-  parent: 22
-  sha1: 5d8480bd099a0119a7483fa4e93fd745d2fe851a
-  title: Heat Template Walk Through
