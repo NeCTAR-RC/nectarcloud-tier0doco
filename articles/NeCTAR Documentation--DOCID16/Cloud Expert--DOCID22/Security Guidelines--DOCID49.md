@@ -90,5 +90,4 @@ tamperproof as possible. If logging remotely, ensure that it is done over
 a secure channel so that eavesdroppers cannot monitor what is happening on
 your instance.
 
-[link1]: <https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-
-ddos-attacks/> "Cloudflare Understanding NTP DDoS"
+[link1]: <https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-ddos-attacks/> "Cloudflare Understanding NTP DDoS"
