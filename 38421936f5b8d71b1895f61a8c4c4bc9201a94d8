@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_98314a0e",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cloud Basics--DOCID21/Good Practices--DOCID36.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2015-08-23T23:01:03Z",
+      "side": 1,
+      "message": "NeCTAR is spelt like that?",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 18
+      },
+      "revId": "38421936f5b8d71b1895f61a8c4c4bc9201a94d8",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
