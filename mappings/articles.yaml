@@ -1192,8 +1192,8 @@
           \ your responsibility. \n If we see evidence that an instance's security\
           \ has been comprised, we\nwill take steps to shut down and isolate it so\
           \ that it doesn't do any further\ndamage to cloud infrastructure or to other\
-          \ users' assets. \n Compromised NeCTAR instances are a real issue. Across\
-          \ the NeCTAR federation, we\nsee examples at least once a month. \n Apply\
+          \ users' assets. \n Compromised Nectar instances are a real issue. Across\
+          \ the Nectar federation, we\nsee examples at least once a month. \n Apply\
           \ system patches as often as possible \n Keeping your system up to date\
           \ is one of the simplest and most effective\nways to secure your system\
           \ against unwanted intrusion. \n It is easy and more practical to configure\
@@ -1217,21 +1217,21 @@
           \ giving machine guns\nto monkeys, it's a very bad idea. \n Don't use VNC,\
           \ use x2go instead \n VNC is one of those longstanding ways of getting graphical\
           \ access to your\ncomputer over a network.  While it's well known and loved,\
-          \ there are in fact\nmany ways to exploit vnc and there are now better ways\
-          \ to get to your graphical\ncontent. \n x2go is technically superior to\
-          \ vnc and tunnels your graphical content over\nssh. \n Terminate instances\
+          \ there are in fact\nmany ways to exploit VNC and there are now better ways\
+          \ to get to your graphical\ncontent. \n X2go is technically superior to\
+          \ VNC and tunnels your graphical content over\nssh. \n Terminate instances\
           \ that you no longer require \n In theory, you can run an instance as long\
           \ as you like.  In practice, we would\nprefer you to promptly terminate\
           \ any instance that are not using actively, so\nthat other users can make\
-          \ use of the resources. \n Currently, there is no formal NeCTAR mechanism\
-          \ to discourage wasteful use of\nyour allocation, but this likely to change.\
-          \ \n What should I do when I am finished with an instance \n When you are\
-          \ finished with an Instance, you should Terminate it.  Leaving an\ninstance\
-          \ running, or in \"paused\" or \"suspended\" or \"shutdown\" states is tying\n\
-          down resources that other people could be using. \n Note that terminating\
-          \ an instance destroys its primary and ephemeral file\nsystems.  If you\
-          \ want to save the primary file system (so that you can launch a\nnew instance),\
-          \ snapshot the instance before you terminate it. "
+          \ use of the resources. \n Currently, there is no formal Nectar mechanism\
+          \ to discourage wasteful use of\nyour allocation, but this is likely to\
+          \ change. \n What should I do when I am finished with an instance \n When\
+          \ you are finished with an Instance, you should terminate it.  Leaving an\n\
+          instance running, or in \"paused\" or \"suspended\" or \"shutdown\" states\
+          \ is tying\ndown resources that other people could be using. \n Note that\
+          \ terminating an instance destroys its primary and ephemeral file\nsystems.\
+          \  If you want to save the primary file system (so that you can launch a\n\
+          new instance), snapshot the instance before you terminate it. "
         description: '<h2>Consider Security</h2>
 
           <p>Security of your NeCTAR instances is your responsibility.</p>
@@ -1242,7 +1242,7 @@
 
           damage to cloud infrastructure or to other users'' assets.</p>
 
-          <p>Compromised NeCTAR instances are a real issue. Across the NeCTAR federation,
+          <p>Compromised Nectar instances are a real issue. Across the Nectar federation,
           we
 
           see examples at least once a month.</p>
@@ -1307,11 +1307,11 @@
           computer over a network.  While it''s well known and loved, there are in
           fact
 
-          many ways to exploit vnc and there are now better ways to get to your graphical
+          many ways to exploit VNC and there are now better ways to get to your graphical
 
           content.</p>
 
-          <p>x2go is technically superior to vnc and tunnels your graphical content
+          <p>X2go is technically superior to VNC and tunnels your graphical content
           over
 
           ssh.</p>
@@ -1326,14 +1326,14 @@
 
           that other users can make use of the resources.</p>
 
-          <p>Currently, there is no formal NeCTAR mechanism to discourage wasteful
+          <p>Currently, there is no formal Nectar mechanism to discourage wasteful
           use of
 
-          your allocation, but this likely to change.</p>
+          your allocation, but this is likely to change.</p>
 
           <h2>What should I do when I am finished with an instance</h2>
 
-          <p>When you are finished with an Instance, you should Terminate it.  Leaving
+          <p>When you are finished with an Instance, you should terminate it.  Leaving
           an
 
           instance running, or in "paused" or "suspended" or "shutdown" states is
@@ -1362,16 +1362,16 @@
           updated_at: '2015-08-10T14:58:26+09:30'
           visibility: 1
         folder_id: 6000155117
-        hits: 0
+        hits: 3
         id: 6000043124
         int_01: null
         int_02: null
         int_03: null
-        language_id: null
-        modified_at: '2015-08-17T13:34:55+09:30'
+        language_id: 6
+        modified_at: '2015-08-24T15:59:57+09:30'
         modified_by: null
         outdated: false
-        parent_id: null
+        parent_id: 6000043124
         position: 5
         seo_data: {}
         status: 2
@@ -1381,7 +1381,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Good Practices
-        updated_at: '2015-08-17T13:34:55+09:30'
+        updated_at: '2015-08-24T15:59:57+09:30'
         user_id: 6002659931
   html: '<h2>Consider Security</h2>
 
@@ -1393,7 +1393,7 @@
 
     damage to cloud infrastructure or to other users'' assets.</p>
 
-    <p>Compromised NeCTAR instances are a real issue. Across the NeCTAR federation,
+    <p>Compromised Nectar instances are a real issue. Across the Nectar federation,
     we
 
     see examples at least once a month.</p>
@@ -1451,11 +1451,11 @@
 
     computer over a network.  While it''s well known and loved, there are in fact
 
-    many ways to exploit vnc and there are now better ways to get to your graphical
+    many ways to exploit VNC and there are now better ways to get to your graphical
 
     content.</p>
 
-    <p>x2go is technically superior to vnc and tunnels your graphical content over
+    <p>X2go is technically superior to VNC and tunnels your graphical content over
 
     ssh.</p>
 
@@ -1467,13 +1467,13 @@
 
     that other users can make use of the resources.</p>
 
-    <p>Currently, there is no formal NeCTAR mechanism to discourage wasteful use of
+    <p>Currently, there is no formal Nectar mechanism to discourage wasteful use of
 
-    your allocation, but this likely to change.</p>
+    your allocation, but this is likely to change.</p>
 
     <h2>What should I do when I am finished with an instance</h2>
 
-    <p>When you are finished with an Instance, you should Terminate it.  Leaving an
+    <p>When you are finished with an Instance, you should terminate it.  Leaving an
 
     instance running, or in "paused" or "suspended" or "shutdown" states is tying
 
@@ -1486,7 +1486,7 @@
 
     new instance), snapshot the instance before you terminate it.</p>'
   parent: 21
-  sha1: 8268f0e99435be96c00638021cb7d0d64223d922
+  sha1: 16b9cd15a0754709d46f6e8ff5dfda05615d4df6
   title: Good Practices
 37:
   freshdesk:
