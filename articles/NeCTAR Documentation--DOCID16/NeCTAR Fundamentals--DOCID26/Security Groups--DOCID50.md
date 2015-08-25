@@ -1,5 +1,3 @@
-# Security groups
-
 Incoming network access to your machines is usually required. Security Groups
 are how to add network access. If you can't reach your instance by SSH to login
 or by browser if it runs a Webserver additional Security Group settings could
