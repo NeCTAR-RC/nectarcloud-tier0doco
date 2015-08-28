@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_4c3434de",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cloud Expert--DOCID22/Storage.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-08-28T04:17:11Z",
+      "side": 1,
+      "message": "Spacing between options",
+      "revId": "d78c96573c605aa7aa58628777bc48e82dcbe10d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_2c3100ed",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cloud Expert--DOCID22/Storage.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-08-28T04:17:11Z",
+      "side": 1,
+      "message": "2 x cinder in command",
+      "revId": "d78c96573c605aa7aa58628777bc48e82dcbe10d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_8c4d8c75",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cloud Expert--DOCID22/Storage.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-08-28T04:17:11Z",
+      "side": 1,
+      "message": "cinder, not cider - but I could do with a cider :)",
+      "revId": "d78c96573c605aa7aa58628777bc48e82dcbe10d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
