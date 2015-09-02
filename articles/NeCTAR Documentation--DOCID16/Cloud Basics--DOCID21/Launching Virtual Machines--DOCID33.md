@@ -11,9 +11,9 @@ the private key is used on your desktop/laptop.
 
 Use PuTTYgen key generator to generate the required key pair.
 
-- Download PuTTYgen (puttygen.exe) from [PuTTYgen download page][putty]
+- Download PuTTYgen (`puttygen.exe`) from [PuTTYgen download page][putty]
 
-- Launch the PuTTYgen application by double clicking the puttygen.exe
+- Launch the PuTTYgen application by double clicking the `puttygen.exe`
 
 - The default settings are fine for this case, click the 'Generate' button
 
@@ -22,12 +22,13 @@ Use PuTTYgen key generator to generate the required key pair.
 
 - Save your private key by clicking 'Save private key' button. You should give
  a sensible name for future reference. The passphrase can provide additional
- security, though can be left empty
+ security, though can be left empty.
 
 ### Linux/Mac User
 
-Type ssh-keygen in the terminal and enter. This generates a public key (id_rsa.pub)
-and a private key (id_rsa). By default, the two keys are located in ~/.ssh
+Type `ssh-keygen` in the terminal and enter. This generates a public key
+(`id_rsa.pub`) and a private key (`id_rsa`). By default, the two keys are
+located in `~/.ssh`
 
 ### Import Public Key
 
@@ -225,6 +226,7 @@ To get more information about the terms used, please refer to
 
 - After a while (usually a couple of minutes), your instance will become active
  and will have an IP address. The IP address is available in the Instances table
+ on your Nectar Dashboard.
 
 The launch button begins Cloud provisioning and initialisation of a running
 instance from the selected image and your configuration options. The instance
