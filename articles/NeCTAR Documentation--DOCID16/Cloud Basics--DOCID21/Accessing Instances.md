@@ -1,5 +1,3 @@
-# Accessing Virtual Machine
-
 You can use a SSH client to log into the virtual machine created earlier.
 
 ## Windows User
