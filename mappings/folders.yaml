@@ -1,6 +1,9 @@
 20:
   parent: 16
   title: Cloud Basics
+21:
+  parent: 16
+  title: Cloud Basics
 22:
   parent: 16
   title: Cloud Expert
