@@ -1,36 +1,12 @@
-20:
-  parent: 16
-  title: Cloud Basics
-21:
-  parent: 16
-  title: Cloud Basics
-22:
-  parent: 16
-  title: Cloud Expert
-23:
-  parent: 16
-  title: NeCTAR Blueprints
-24:
-  parent: 16
-  title: Tools and Apps
-25:
-  parent: 16
-  title: Service Applications
-26:
-  parent: 16
-  title: NeCTAR Fundamentals
-38:
-  parent: 19
-  title: System Templates
-39:
-  parent: 19
-  title: Instance Management
-40:
-  parent: 19
-  title: Object Storage
-41:
-  parent: 19
-  title: Authentication
-42:
-  parent: 19
-  title: Heat
+20: {parent: 16, title: Training}
+21: {parent: 16, title: Cloud Basics}
+22: {parent: 16, title: Cloud Expert}
+23: {parent: 16, title: NeCTAR Blueprints}
+24: {parent: 16, title: Tools and Apps}
+25: {parent: 16, title: Service Applications}
+26: {parent: 16, title: NeCTAR Fundamentals}
+38: {parent: 19, title: System Templates}
+39: {parent: 19, title: Instance Management}
+40: {parent: 19, title: Object Storage}
+41: {parent: 19, title: Authentication}
+42: {parent: 19, title: Heat}
