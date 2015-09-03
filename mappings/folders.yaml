@@ -1,12 +1,105 @@
-20: {parent: 16, title: Training}
-21: {parent: 16, title: Cloud Basics}
-22: {parent: 16, title: Cloud Expert}
-23: {parent: 16, title: NeCTAR Blueprints}
-24: {parent: 16, title: Tools and Apps}
-25: {parent: 16, title: Service Applications}
-26: {parent: 16, title: NeCTAR Fundamentals}
-38: {parent: 19, title: System Templates}
-39: {parent: 19, title: Instance Management}
-40: {parent: 19, title: Object Storage}
-41: {parent: 19, title: Authentication}
-42: {parent: 19, title: Heat}
+20:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:03-04:00', description: Training,
+        id: 6000190149, is_default: false, language_id: null, name: Training, parent_id: null,
+        position: 1, updated_at: '2015-09-03T01:28:03-04:00', visibility: 1}
+  parent: 16
+  title: Training
+21:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:04-04:00', description: Cloud
+          Basics, id: 6000190150, is_default: false, language_id: null, name: Cloud
+          Basics, parent_id: null, position: 2, updated_at: '2015-09-03T01:28:04-04:00',
+        visibility: 1}
+  parent: 16
+  title: Cloud Basics
+22:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:05-04:00', description: Cloud
+          Expert, id: 6000190151, is_default: false, language_id: null, name: Cloud
+          Expert, parent_id: null, position: 3, updated_at: '2015-09-03T01:28:05-04:00',
+        visibility: 1}
+  parent: 16
+  title: Cloud Expert
+23:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:06-04:00', description: NeCTAR
+          Blueprints, id: 6000190152, is_default: false, language_id: null, name: NeCTAR
+          Blueprints, parent_id: null, position: 4, updated_at: '2015-09-03T01:28:06-04:00',
+        visibility: 1}
+  parent: 16
+  title: NeCTAR Blueprints
+24:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:07-04:00', description: Tools
+          and Apps, id: 6000190153, is_default: false, language_id: null, name: Tools
+          and Apps, parent_id: null, position: 5, updated_at: '2015-09-03T01:28:07-04:00',
+        visibility: 1}
+  parent: 16
+  title: Tools and Apps
+25:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:08-04:00', description: Service
+          Applications, id: 6000190154, is_default: false, language_id: null, name: Service
+          Applications, parent_id: null, position: 6, updated_at: '2015-09-03T01:28:08-04:00',
+        visibility: 1}
+  parent: 16
+  title: Service Applications
+26:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:09-04:00', description: NeCTAR
+          Fundamentals, id: 6000190155, is_default: false, language_id: null, name: NeCTAR
+          Fundamentals, parent_id: null, position: 7, updated_at: '2015-09-03T01:28:09-04:00',
+        visibility: 1}
+  parent: 16
+  title: NeCTAR Fundamentals
+38:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122279, created_at: '2015-09-03T01:27:58-04:00', description: System
+          Templates, id: 6000190144, is_default: false, language_id: null, name: System
+          Templates, parent_id: null, position: 1, updated_at: '2015-09-03T01:27:58-04:00',
+        visibility: 1}
+  parent: 19
+  title: System Templates
+39:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122279, created_at: '2015-09-03T01:27:59-04:00', description: Instance
+          Management, id: 6000190145, is_default: false, language_id: null, name: Instance
+          Management, parent_id: null, position: 2, updated_at: '2015-09-03T01:27:59-04:00',
+        visibility: 1}
+  parent: 19
+  title: Instance Management
+40:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122279, created_at: '2015-09-03T01:28:00-04:00', description: Object
+          Storage, id: 6000190146, is_default: false, language_id: null, name: Object
+          Storage, parent_id: null, position: 3, updated_at: '2015-09-03T01:28:00-04:00',
+        visibility: 1}
+  parent: 19
+  title: Object Storage
+41:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122279, created_at: '2015-09-03T01:28:01-04:00', description: Authentication,
+        id: 6000190147, is_default: false, language_id: null, name: Authentication,
+        parent_id: null, position: 4, updated_at: '2015-09-03T01:28:01-04:00', visibility: 1}
+  parent: 19
+  title: Authentication
+42:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122279, created_at: '2015-09-03T01:28:02-04:00', description: Heat,
+        id: 6000190148, is_default: false, language_id: null, name: Heat, parent_id: null,
+        position: 5, updated_at: '2015-09-03T01:28:02-04:00', visibility: 1}
+  parent: 19
+  title: Heat
