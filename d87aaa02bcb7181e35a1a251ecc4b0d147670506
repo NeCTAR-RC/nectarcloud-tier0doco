@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_dd31e70c",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cloud Basics--DOCID21/Nectar Dasboard.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-09-16T00:33:04Z",
+      "side": 1,
+      "message": "Minor spelling mistake - aalocation",
+      "revId": "d87aaa02bcb7181e35a1a251ecc4b0d147670506",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
