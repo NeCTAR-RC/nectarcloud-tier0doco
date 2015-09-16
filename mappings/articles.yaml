@@ -6192,3 +6192,195 @@
   parent: 40
   sha1: 48b62875d7a25f4cf58fa2d80c09c3ee2bad1eb3
   title: Getting Started
+55:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-09-15T23:44:29-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Object Storage \n Object Storage is not a traditional file-system\
+          \ or real-time data storage system.\nIt's designed for mostly static data\
+          \ that can be retrieved, leveraged, and then\nupdated if necessary. It is\
+          \ independent of a particular Virtual Machine and can\nbe updated and used\
+          \ without having any Virtual Machine running. It is designed\nto be redundant\
+          \ and scalable. \n Concept \n Think about that dataset comprised of 2GB\
+          \ files that you read in and analyze\nmany times, but in general it doesn't\
+          \ change. Or the images you want to use on\nthe cloud. Those are a couple\
+          \ examples of what's perfect for Object Storage.\nObjects are written to\
+          \ multiple hardware devices in the data center to ensure\nintegrity, and\
+          \ great performance! \n In general, the object store is great for data you\
+          \ write once and read many\ntimes, but not suitable for applications like\
+          \ databases. It's the safest place\nto put your data on the NeCTAR Research\
+          \ Cloud as multiple redundant copies of\nyour data are made, and it has\
+          \ great performance. You can access the object\nstore from anywhere on the\
+          \ Internet, and data from Object Storage can be\ntransferred to and from\
+          \ your Virtual Machine with a variety of http-capable\ntools. \n Object\
+          \ Storage has the following features which are quite different from the\n\
+          traditional file systems: \n \n \n Access via API at application-level,\
+          \ rather than via OS at file-system-level.\n  This means, byte-level interaction\
+          \ is not possible and interaction can occur\n  via a single API end point.\
+          \ \n \n \n No directory tree, object storage uses a flat structure and objects\
+          \ are stored\n  in containers. \n \n \n Metadata lives directly with object.\
+          \ \n \n \n Scalability. Object storage systems can scale very well when\
+          \ data reaches\n  hundreds of TB and moves into the PB range and beyond.\
+          \ \n \n \n Durability. Object Storage systems have mechanisms to check file\
+          \ consistency,\n  and handle failed drives, bit-rot, server and cabinet\
+          \ failures, etc. These\n  features allow the system to automatically replicate\
+          \ data as needed to retain\n  the desired number of replicas, which results\
+          \ in extremely high durability\n  and availability of data. \n \n \n Cost.\
+          \ Object storage systems are designed to run on commodity hardware, it is\n\
+          \  cheaper compared to block or file storage. \n \n \n Swift \n Swift is\
+          \ the component that provides object storage for OpenStack. With your\n\
+          credentials and via a URL you can request Swift to reserve & create storage\n\
+          (called containers or buckets). Files (known as objects when stored in Swift)\n\
+          can then be uploaded and accessed similarly by your running Virtual Machines.\
+          \ \n The NeCTAR implementation of Swift is geodistributed across Nodes of\
+          \ the\nResearch Cloud so that availability is not reliant on any one datacentre\
+          \ or\nnetwork infrastructure. Each collection of Swift nodes/hardware is\
+          \ known as a\nregion, which may or may not include a Swift proxy server\
+          \ (the Internet facing\nand serving component of Swift). With some Swift\
+          \ clients/APIs users can\nexplicitly chose which proxy to connect to, this\
+          \ might be useful e.g. for\nspeeding up writes to object storage by choosing\
+          \ the nearest proxy. Due to\nNeCTAR's Swift having multiple regions (some\
+          \ of which are Node private) some\nclients/APIs require explicit configuration\
+          \ of a default region, which should\nbe \"Melbourne\" for most users. \n\
+          \ Swift does not provide encryption of the data it stores. If you have sensitive\n\
+          data that requires encryption you must encrypt the data files before upload. "
+        description: "<h2>Object Storage</h2>\n<p>Object Storage is not a traditional\
+          \ file-system or real-time data storage system.\nIt's designed for mostly\
+          \ static data that can be retrieved, leveraged, and then\nupdated if necessary.\
+          \ It is independent of a particular Virtual Machine and can\nbe updated\
+          \ and used without having any Virtual Machine running. It is designed\n\
+          to be redundant and scalable.</p>\n<h3>Concept</h3>\n<p>Think about that\
+          \ dataset comprised of 2GB files that you read in and analyze\nmany times,\
+          \ but in general it doesn't change. Or the images you want to use on\nthe\
+          \ cloud. Those are a couple examples of what's perfect for Object Storage.\n\
+          Objects are written to multiple hardware devices in the data center to ensure\n\
+          integrity, and great performance!</p>\n<p>In general, the object store is\
+          \ great for data you write once and read many\ntimes, but not suitable for\
+          \ applications like databases. It's the safest place\nto put your data on\
+          \ the NeCTAR Research Cloud as multiple redundant copies of\nyour data are\
+          \ made, and it has great performance. You can access the object\nstore from\
+          \ anywhere on the Internet, and data from Object Storage can be\ntransferred\
+          \ to and from your Virtual Machine with a variety of http-capable\ntools.</p>\n\
+          <p>Object Storage has the following features which are quite different from\
+          \ the\ntraditional file systems:</p>\n<ul>\n<li>\n<p>Access via API at application-level,\
+          \ rather than via OS at file-system-level.\n  This means, byte-level interaction\
+          \ is not possible and interaction can occur\n  via a single API end point.</p>\n\
+          </li>\n<li>\n<p>No directory tree, object storage uses a flat structure\
+          \ and objects are stored\n  in containers.</p>\n</li>\n<li>\n<p>Metadata\
+          \ lives directly with object.</p>\n</li>\n<li>\n<p>Scalability. Object storage\
+          \ systems can scale very well when data reaches\n  hundreds of TB and moves\
+          \ into the PB range and beyond.</p>\n</li>\n<li>\n<p>Durability. Object\
+          \ Storage systems have mechanisms to check file consistency,\n  and handle\
+          \ failed drives, bit-rot, server and cabinet failures, etc. These\n  features\
+          \ allow the system to automatically replicate data as needed to retain\n\
+          \  the desired number of replicas, which results in extremely high durability\n\
+          \  and availability of data.</p>\n</li>\n<li>\n<p>Cost. Object storage systems\
+          \ are designed to run on commodity hardware, it is\n  cheaper compared to\
+          \ block or file storage.</p>\n</li>\n</ul>\n<h3>Swift</h3>\n<p>Swift is\
+          \ the component that provides object storage for OpenStack. With your\n\
+          credentials and via a URL you can request Swift to reserve &amp; create\
+          \ storage\n(called containers or buckets). Files (known as objects when\
+          \ stored in Swift)\ncan then be uploaded and accessed similarly by your\
+          \ running Virtual Machines.</p>\n<p>The NeCTAR implementation of Swift is\
+          \ geodistributed across Nodes of the\nResearch Cloud so that availability\
+          \ is not reliant on any one datacentre or\nnetwork infrastructure. Each\
+          \ collection of Swift nodes/hardware is known as a\nregion, which may or\
+          \ may not include a Swift proxy server (the Internet facing\nand serving\
+          \ component of Swift). With some Swift clients/APIs users can\nexplicitly\
+          \ chose which proxy to connect to, this might be useful e.g. for\nspeeding\
+          \ up writes to object storage by choosing the nearest proxy. Due to\nNeCTAR's\
+          \ Swift having multiple regions (some of which are Node private) some\n\
+          clients/APIs require explicit configuration of a default region, which should\n\
+          be \"Melbourne\" for most users.</p>\n<p>Swift does not provide encryption\
+          \ of the data it stores. If you have sensitive\ndata that requires encryption\
+          \ you must encrypt the data files before upload.</p>"
+        folder:
+          category_id: 6000122279
+          created_at: '2015-09-03T01:28:00-04:00'
+          customer_folders: []
+          description: Object Storage
+          id: 6000190146
+          is_default: false
+          language_id: 6
+          name: Object Storage
+          parent_id: 6000190146
+          position: 3
+          updated_at: '2015-09-03T01:28:00-04:00'
+          visibility: 1
+        folder_id: 6000190146
+        hits: 0
+        id: 6000061932
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-09-15T23:44:29-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000061932
+        position: 2
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Introduction to Object Storage
+        updated_at: '2015-09-15T23:44:29-04:00'
+        user_id: 6002464727
+  html: "<h2>Object Storage</h2>\n<p>Object Storage is not a traditional file-system\
+    \ or real-time data storage system.\nIt's designed for mostly static data that\
+    \ can be retrieved, leveraged, and then\nupdated if necessary. It is independent\
+    \ of a particular Virtual Machine and can\nbe updated and used without having\
+    \ any Virtual Machine running. It is designed\nto be redundant and scalable.</p>\n\
+    <h3>Concept</h3>\n<p>Think about that dataset comprised of 2GB files that you\
+    \ read in and analyze\nmany times, but in general it doesn't change. Or the images\
+    \ you want to use on\nthe cloud. Those are a couple examples of what's perfect\
+    \ for Object Storage.\nObjects are written to multiple hardware devices in the\
+    \ data center to ensure\nintegrity, and great performance!</p>\n<p>In general,\
+    \ the object store is great for data you write once and read many\ntimes, but\
+    \ not suitable for applications like databases. It's the safest place\nto put\
+    \ your data on the NeCTAR Research Cloud as multiple redundant copies of\nyour\
+    \ data are made, and it has great performance. You can access the object\nstore\
+    \ from anywhere on the Internet, and data from Object Storage can be\ntransferred\
+    \ to and from your Virtual Machine with a variety of http-capable\ntools.</p>\n\
+    <p>Object Storage has the following features which are quite different from the\n\
+    traditional file systems:</p>\n<ul>\n<li>\n<p>Access via API at application-level,\
+    \ rather than via OS at file-system-level.\n  This means, byte-level interaction\
+    \ is not possible and interaction can occur\n  via a single API end point.</p>\n\
+    </li>\n<li>\n<p>No directory tree, object storage uses a flat structure and objects\
+    \ are stored\n  in containers.</p>\n</li>\n<li>\n<p>Metadata lives directly with\
+    \ object.</p>\n</li>\n<li>\n<p>Scalability. Object storage systems can scale very\
+    \ well when data reaches\n  hundreds of TB and moves into the PB range and beyond.</p>\n\
+    </li>\n<li>\n<p>Durability. Object Storage systems have mechanisms to check file\
+    \ consistency,\n  and handle failed drives, bit-rot, server and cabinet failures,\
+    \ etc. These\n  features allow the system to automatically replicate data as needed\
+    \ to retain\n  the desired number of replicas, which results in extremely high\
+    \ durability\n  and availability of data.</p>\n</li>\n<li>\n<p>Cost. Object storage\
+    \ systems are designed to run on commodity hardware, it is\n  cheaper compared\
+    \ to block or file storage.</p>\n</li>\n</ul>\n<h3>Swift</h3>\n<p>Swift is the\
+    \ component that provides object storage for OpenStack. With your\ncredentials\
+    \ and via a URL you can request Swift to reserve &amp; create storage\n(called\
+    \ containers or buckets). Files (known as objects when stored in Swift)\ncan then\
+    \ be uploaded and accessed similarly by your running Virtual Machines.</p>\n<p>The\
+    \ NeCTAR implementation of Swift is geodistributed across Nodes of the\nResearch\
+    \ Cloud so that availability is not reliant on any one datacentre or\nnetwork\
+    \ infrastructure. Each collection of Swift nodes/hardware is known as a\nregion,\
+    \ which may or may not include a Swift proxy server (the Internet facing\nand\
+    \ serving component of Swift). With some Swift clients/APIs users can\nexplicitly\
+    \ chose which proxy to connect to, this might be useful e.g. for\nspeeding up\
+    \ writes to object storage by choosing the nearest proxy. Due to\nNeCTAR's Swift\
+    \ having multiple regions (some of which are Node private) some\nclients/APIs\
+    \ require explicit configuration of a default region, which should\nbe \"Melbourne\"\
+    \ for most users.</p>\n<p>Swift does not provide encryption of the data it stores.\
+    \ If you have sensitive\ndata that requires encryption you must encrypt the data\
+    \ files before upload.</p>"
+  parent: 40
+  sha1: a703bc6e69d586b786feb574313bcdfb5ed172ab
+  title: Introduction to Object Storage
