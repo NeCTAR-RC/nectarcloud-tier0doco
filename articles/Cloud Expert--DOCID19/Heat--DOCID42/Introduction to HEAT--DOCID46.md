@@ -65,7 +65,7 @@ the NeCTAR cloud.
 
 * [Enough YAML to read a template](Introduction to YAML--DOCID48.md) (useful if you don't know YAML)
 * [A walk through of a YAML template](Heat Template Walk Through--DOCID47.md)
-* Actions that can be performed
+* [Actions that can be performed](Heat Actions.md)
 * [The command line client](Heat Commandline Client.md)
 * [The dashboard](Heat Dashboard Introduction.md)
 * Preparing your images - you need more than just cloud-init!
