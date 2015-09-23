@@ -64,7 +64,7 @@ The following pages offer more in depth technical information on using Heat in
 the NeCTAR cloud.
 
 * [Enough YAML to read a template](Introduction to YAML--DOCID48.md) (useful if you don't know YAML)
-* A walk through of a YAML template
+* [A walk through of a YAML template](Heat Template Walk Through--DOCID47.md)
 * Actions that can be performed
 * The command line client
 * The dashboard
