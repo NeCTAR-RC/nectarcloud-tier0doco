@@ -70,7 +70,7 @@ the NeCTAR cloud.
 * The dashboard
 * Preparing your images - you need more than just cloud-init!
 * Good practices
-* Debugging
+* [Debugging](Heat Debugging.md)
 * Oddities and gotcha's
 * [Supported resources](https://github.com/NeCTAR-RC/heat-templates)
 
