@@ -67,7 +67,7 @@ the NeCTAR cloud.
 * [A walk through of a YAML template](Heat Template Walk Through--DOCID47.md)
 * Actions that can be performed
 * [The command line client](Heat Commandline Client.md)
-* The dashboard
+* [The dashboard](Heat Dashboard Introduction.md)
 * Preparing your images - you need more than just cloud-init!
 * Good practices
 * [Debugging](Heat Debugging.md)
