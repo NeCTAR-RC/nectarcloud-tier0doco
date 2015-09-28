@@ -67,7 +67,7 @@ the NeCTAR cloud.
 * A walk through of a YAML template
 * Actions that can be performed
 * The command line client
-* The dashboard
+* [The dashboard](Heat Dashboard Introduction.md)
 * Preparing your images - you need more than just cloud-init!
 * Good practices
 * Debugging
