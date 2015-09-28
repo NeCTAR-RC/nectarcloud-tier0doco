@@ -69,7 +69,7 @@ the NeCTAR cloud.
 * [The command line client](Heat Commandline Client.md)
 * The dashboard
 * Preparing your images - you need more than just cloud-init!
-* Good practices
+* [Good practices](Heat Good Practices.md)
 * [Debugging](Heat Debugging.md)
 * Oddities and gotcha's
 * [Supported resources](https://github.com/NeCTAR-RC/heat-templates)
