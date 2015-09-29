@@ -2321,7 +2321,8 @@
           <li>A walk through of a YAML template</li>\n<li>Actions that can be performed</li>\n\
           <li>The command line client</li>\n<li>The dashboard</li>\n<li>Preparing\
           \ your images - you need more than just cloud-init!</li>\n<li>Good practices</li>\n\
-          <li>Debugging</li>\n<li>Oddities and gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
+          <li><a href=\"Heat%20Debugging.md\">Debugging</a></li>\n<li>Oddities and\
+          \ gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
           >Supported resources</a></li>\n</ul>\n<h2>Further links</h2>\n<ul>\n<li>\n\
           <a href=\"https://github.com/NeCTAR-RC/heat-templates\">NeCTAR sample templates</a>\
           \ -\n  a set of templates that have been run against the NeCTAR cloud.</li>\n\
@@ -2344,13 +2345,13 @@
           updated_at: '2015-09-03T01:28:02-04:00'
           visibility: 1
         folder_id: 6000190148
-        hits: 0
+        hits: 4
         id: 6000055383
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-09-03T01:28:19-04:00'
+        modified_at: '2015-09-28T20:44:46-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055383
@@ -2363,7 +2364,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction to HEAT
-        updated_at: '2015-09-03T01:28:19-04:00'
+        updated_at: '2015-09-28T20:44:46-04:00'
         user_id: 6002464727
   html: "<h1><img alt=\"flame logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Heat--DOCID42/images/glossy_flame.png?raw=true\"> Heat</h1>\n\
@@ -2408,18 +2409,18 @@
     >Enough YAML to read a template</a> (useful if you don't know YAML)</li>\n<li>A\
     \ walk through of a YAML template</li>\n<li>Actions that can be performed</li>\n\
     <li>The command line client</li>\n<li>The dashboard</li>\n<li>Preparing your images\
-    \ - you need more than just cloud-init!</li>\n<li>Good practices</li>\n<li>Debugging</li>\n\
-    <li>Oddities and gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
-    >Supported resources</a></li>\n</ul>\n<h2>Further links</h2>\n<ul>\n<li><a href=\"\
-    https://github.com/NeCTAR-RC/heat-templates\">NeCTAR sample templates</a> -\n\
-    \  a set of templates that have been run against the NeCTAR cloud.</li>\n<li>The\
-    \ OpenStack End User Guide <a href=\"http://docs.openstack.org/user-guide/dashboard_stacks.html\"\
+    \ - you need more than just cloud-init!</li>\n<li>Good practices</li>\n<li><a\
+    \ href=\"Heat Debugging.md\">Debugging</a></li>\n<li>Oddities and gotcha's</li>\n\
+    <li><a href=\"https://github.com/NeCTAR-RC/heat-templates\">Supported resources</a></li>\n\
+    </ul>\n<h2>Further links</h2>\n<ul>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
+    >NeCTAR sample templates</a> -\n  a set of templates that have been run against\
+    \ the NeCTAR cloud.</li>\n<li>The OpenStack End User Guide <a href=\"http://docs.openstack.org/user-guide/dashboard_stacks.html\"\
     >Heat</a>\n  page.</li>\n<li>The Heat <a href=\"https://wiki.openstack.org/wiki/Heat\"\
     >wiki</a></li>\n<li>The Heat <a href=\"http://docs.openstack.org/developer/heat/template_guide/\"\
     >template guide</a></li>\n<li>The <a href=\"http://docs.openstack.org/user-guide/cli_create_and_manage_stacks.html\"\
     >command line client</a></li>\n</ul>"
   parent: 42
-  sha1: de3c11e8ea7d0655134160ab99e1e6eb958fd77b
+  sha1: 8c7945d0e6338afd87f8d3d79f0f91ead3b4cdb8
   title: Introduction to HEAT
 47:
   freshdesk:
@@ -6565,3 +6566,353 @@
   parent: 40
   sha1: 7834687f4506e0008d2ae1e593aca67c69cec19d
   title: API
+57:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-09-28T20:44:47-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Debugging Heat templates \n Beyond the OpenStack tips\nwe\
+          \ have the following heuristics. \n There are four possible locations in\
+          \ which defects can be found: \n \n In the template(s) \n In the automated\
+          \ installation of software \n Infrastructure problems \n Incorrect usage\
+          \ of resources \n \n We believe that the command line client gives far better\
+          \ feedback than\nthe dashboard. Thus preference it when developing your\
+          \ templates. \n If the stack fails at start up first check that you don't\
+          \ have a template\nformatting error. \n If you get a YAML error ('Template\
+          \ not in valid format'), an online YAML parser\nsuch as the ones at YAML\
+          \ Lint or the Online Yaml Parser\ncan be useful in finding the syntax error.\
+          \ \n To convert from JSON to YAML, an online converter such as the one at\n\
+          Convert JSON to YAML Online\ncan be useful in porting between the two formats.\
+          \ \n To debug JSON syntax errors the following command set is useful: \n\
+          \ bash\ncat template.json | python -m json.tool \n Where template.json is\
+          \ the name of your template. The command simply pipes the\nfile into python,\
+          \ which in turn will invoke the json module that finally will\nvalidate\
+          \ and pretty print the file. \n Similarly, if you have the pyaml module\
+          \ installed\nyou can validate yaml files: \n bash\ncat template.yaml | python\
+          \ -m pyaml \n Where template.yaml is the name of your template. \n The form\
+          \ of the command in both of the above is useful, in that you can\nverify\
+          \ remote files: \n bash\ncurl -s https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/json/Fedora/WordPress_2_Instances.json\
+          \ | python -m json.tool \n If the stack launches, and reports no error,\
+          \ suspicion falls on\nthe automated installation of software. \n In this\
+          \ scenario turn to on instances log files and scripts. \n On the newly launched\
+          \ image: \n \n Heat writes the scripts to the /var/lib/cloud/ directory;\
+          \ \n The cloud init log can be found in /var/log/cloud-init.log; \n The\
+          \ output of your code run by cloud init can be found in /var/log/cloud-init-output.log;\
+          \ \n The output of the cfn init output is found in /var/log/cfn-init.log;\
+          \ \n The log showing the parts produced by heat can be found in /var/log/part-handler.log;\
+          \ \n The log showing the output of users scripts run can be found in /var/log/heat-provisioning.log.\
+          \ \n \n If the stack state does reveal an error start by trying to understand\
+          \ the\ncommand line client error messages. \n If you have nested templates,\
+          \ you can find the ones that failed to launch with\nthe following command:\
+          \ \n bash\nheat stack-list --show-nested -f \"status=FAILED\" \n For a given\
+          \ template, you can see the list of events associated with the\ntemplate:\
+          \ \n bash\nheat event-list <template id> \n You can then drill down into\
+          \ the events for a given resource: \n bash\nheat event-list -r <resource\
+          \ name> <template id> \n And then examine a specific event for more detail:\
+          \ \n bash\nheat event-show <template id> <resource name> <event id> "
+        description: '<h1>Debugging Heat templates</h1>
+
+          <p>Beyond the OpenStack <a href="https://wiki.openstack.org/wiki/Heat/TroubleShooting">tips</a>
+
+          we have the following heuristics.</p>
+
+          <p>There are four possible locations in which defects can be found:</p>
+
+          <ul>
+
+          <li>In the template(s)</li>
+
+          <li>In the automated installation of software</li>
+
+          <li>Infrastructure problems</li>
+
+          <li>Incorrect usage of resources</li>
+
+          </ul>
+
+          <p>We believe that the command line client gives far better feedback than
+
+          the dashboard. Thus preference it when developing your templates.</p>
+
+          <p>If the stack fails at start up first check that you don''t have a template
+
+          formatting error.</p>
+
+          <p>If you get a YAML error (''Template not in valid format''), an online
+          YAML parser
+
+          such as the ones at <a href="http://yamllint.com/">YAML Lint</a> or the
+          <a href="http://yaml-online-parser.appspot.com/">Online Yaml Parser</a>
+
+          can be useful in finding the syntax error.</p>
+
+          <p>To convert from JSON to YAML, an online converter such as the one at
+
+          <a href="http://jsontoyaml.com/">Convert JSON to YAML Online</a>
+
+          can be useful in porting between the two formats.</p>
+
+          <p>To debug JSON syntax errors the following command set is useful:</p>
+
+          <p><code>bash
+
+          cat template.json | python -m json.tool</code></p>
+
+          <p>Where <code>template.json</code> is the name of your template. The command
+          simply pipes the
+
+          file into python, which in turn will invoke the json module that finally
+          will
+
+          validate and pretty print the file.</p>
+
+          <p>Similarly, if you have the <a href="https://pypi.python.org/pypi/pyaml/">pyaml</a>
+          module installed
+
+          you can validate yaml files:</p>
+
+          <p><code>bash
+
+          cat template.yaml | python -m pyaml</code></p>
+
+          <p>Where <code>template.yaml</code> is the name of your template.</p>
+
+          <p>The form of the command in both of the above is useful, in that you can
+
+          verify remote files:</p>
+
+          <p><code>bash
+
+          curl -s https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/json/Fedora/WordPress_2_Instances.json
+          | python -m json.tool</code></p>
+
+          <p>If the stack launches, and reports no error, suspicion falls on
+
+          the automated installation of software.</p>
+
+          <p>In this scenario turn to on instances log files and scripts.</p>
+
+          <p>On the newly launched image:</p>
+
+          <ul>
+
+          <li>Heat writes the scripts to the <code>/var/lib/cloud/</code> directory;</li>
+
+          <li>The cloud init log can be found in <code>/var/log/cloud-init.log</code>;</li>
+
+          <li>The output of your code run by cloud init can be found in <code>/var/log/cloud-init-output.log</code>;</li>
+
+          <li>The output of the cfn init output is found in <code>/var/log/cfn-init.log</code>;</li>
+
+          <li>The log showing the parts produced by heat can be found in <code>/var/log/part-handler.log</code>;</li>
+
+          <li>The log showing the output of users scripts run can be found in <code>/var/log/heat-provisioning.log</code>.</li>
+
+          </ul>
+
+          <p>If the stack state does reveal an error start by trying to understand
+          the
+
+          command line client error messages.</p>
+
+          <p>If you have nested templates, you can find the ones that failed to launch
+          with
+
+          the following command:</p>
+
+          <p><code>bash
+
+          heat stack-list --show-nested -f "status=FAILED"</code></p>
+
+          <p>For a given template, you can see the list of events associated with
+          the
+
+          template:</p>
+
+          <p><code>bash
+
+          heat event-list &lt;template id&gt;</code></p>
+
+          <p>You can then drill down into the events for a given resource:</p>
+
+          <p><code>bash
+
+          heat event-list -r &lt;resource name&gt; &lt;template id&gt;</code></p>
+
+          <p>And then examine a specific event for more detail:</p>
+
+          <p><code>bash
+
+          heat event-show &lt;template id&gt; &lt;resource name&gt; &lt;event id&gt;</code></p>'
+        folder:
+          category_id: 6000122279
+          created_at: '2015-09-03T01:28:02-04:00'
+          customer_folders: []
+          description: Heat
+          id: 6000190148
+          is_default: false
+          language_id: 6
+          name: Heat
+          parent_id: 6000190148
+          position: 5
+          updated_at: '2015-09-03T01:28:02-04:00'
+          visibility: 1
+        folder_id: 6000190148
+        hits: 0
+        id: 6000068002
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-09-28T20:44:47-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000068002
+        position: 4
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Heat Debugging
+        updated_at: '2015-09-28T20:44:47-04:00'
+        user_id: 6002464727
+  html: '<h1>Debugging Heat templates</h1>
+
+    <p>Beyond the OpenStack <a href="https://wiki.openstack.org/wiki/Heat/TroubleShooting">tips</a>
+
+    we have the following heuristics.</p>
+
+    <p>There are four possible locations in which defects can be found:</p>
+
+    <ul>
+
+    <li>In the template(s)</li>
+
+    <li>In the automated installation of software</li>
+
+    <li>Infrastructure problems</li>
+
+    <li>Incorrect usage of resources</li>
+
+    </ul>
+
+    <p>We believe that the command line client gives far better feedback than
+
+    the dashboard. Thus preference it when developing your templates.</p>
+
+    <p>If the stack fails at start up first check that you don''t have a template
+
+    formatting error.</p>
+
+    <p>If you get a YAML error (''Template not in valid format''), an online YAML
+    parser
+
+    such as the ones at <a href="http://yamllint.com/">YAML Lint</a> or the <a href="http://yaml-online-parser.appspot.com/">Online
+    Yaml Parser</a>
+
+    can be useful in finding the syntax error.</p>
+
+    <p>To convert from JSON to YAML, an online converter such as the one at
+
+    <a href="http://jsontoyaml.com/">Convert JSON to YAML Online</a>
+
+    can be useful in porting between the two formats.</p>
+
+    <p>To debug JSON syntax errors the following command set is useful:</p>
+
+    <p><code>bash
+
+    cat template.json | python -m json.tool</code></p>
+
+    <p>Where <code>template.json</code> is the name of your template. The command
+    simply pipes the
+
+    file into python, which in turn will invoke the json module that finally will
+
+    validate and pretty print the file.</p>
+
+    <p>Similarly, if you have the <a href="https://pypi.python.org/pypi/pyaml/">pyaml</a>
+    module installed
+
+    you can validate yaml files:</p>
+
+    <p><code>bash
+
+    cat template.yaml | python -m pyaml</code></p>
+
+    <p>Where <code>template.yaml</code> is the name of your template.</p>
+
+    <p>The form of the command in both of the above is useful, in that you can
+
+    verify remote files:</p>
+
+    <p><code>bash
+
+    curl -s https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/json/Fedora/WordPress_2_Instances.json
+    | python -m json.tool</code></p>
+
+    <p>If the stack launches, and reports no error, suspicion falls on
+
+    the automated installation of software.</p>
+
+    <p>In this scenario turn to on instances log files and scripts.</p>
+
+    <p>On the newly launched image:</p>
+
+    <ul>
+
+    <li>Heat writes the scripts to the <code>/var/lib/cloud/</code> directory;</li>
+
+    <li>The cloud init log can be found in <code>/var/log/cloud-init.log</code>;</li>
+
+    <li>The output of your code run by cloud init can be found in <code>/var/log/cloud-init-output.log</code>;</li>
+
+    <li>The output of the cfn init output is found in <code>/var/log/cfn-init.log</code>;</li>
+
+    <li>The log showing the parts produced by heat can be found in <code>/var/log/part-handler.log</code>;</li>
+
+    <li>The log showing the output of users scripts run can be found in <code>/var/log/heat-provisioning.log</code>.</li>
+
+    </ul>
+
+    <p>If the stack state does reveal an error start by trying to understand the
+
+    command line client error messages.</p>
+
+    <p>If you have nested templates, you can find the ones that failed to launch with
+
+    the following command:</p>
+
+    <p><code>bash
+
+    heat stack-list --show-nested -f "status=FAILED"</code></p>
+
+    <p>For a given template, you can see the list of events associated with the
+
+    template:</p>
+
+    <p><code>bash
+
+    heat event-list &lt;template id&gt;</code></p>
+
+    <p>You can then drill down into the events for a given resource:</p>
+
+    <p><code>bash
+
+    heat event-list -r &lt;resource name&gt; &lt;template id&gt;</code></p>
+
+    <p>And then examine a specific event for more detail:</p>
+
+    <p><code>bash
+
+    heat event-show &lt;template id&gt; &lt;resource name&gt; &lt;event id&gt;</code></p>'
+  parent: 42
+  sha1: 08103cd647be93e52f873b4ffd739f1e908f28a6
+  title: Heat Debugging
