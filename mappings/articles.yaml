@@ -7087,3 +7087,227 @@
   parent: 26
   sha1: bba65138cc3ac626e863e69f7a0c6ee103e4a792
   title: Managing An Allocation
+59:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-01T22:28:24-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Introduction \n Security should be one of the foremost thoughts\
+          \ at all stages of setting up your\nVirtual Machines. It requires good knowledge\
+          \ of the fundamentals of Operating\nSystem on your Virtual Machines to implement\
+          \ a good security policy. \n What is security?  Security is a set of appropriate\
+          \ procedures to protect your\nresources (your data, your account, your services\
+          \ and your reputation) against\nrisks. \n The NeCTAR cloud is a public Cloud\
+          \ environment, thus your virtual machines are\nconnected to the rest of\
+          \ the world and there are many potential risks associated\nwith that. You\
+          \ should always consider your Virtual Machines are untrusted and\nsome security\
+          \ policy and procedures must be implemented. \n Security is a big topic\
+          \ and there many complete books on the subject. This\nguide provides some\
+          \ basic introduction to security and how the techniques, and\ntools can\
+          \ be used to provide additional security on a Virtual Machine. \n Security\
+          \ requirements \n Before you implement security policy, you should consider\
+          \ the aspects of\nsecurity that are required. The main security requirements\
+          \ are:  \n \n \n Confidentiality (don't let anybody else know your password\
+          \ confidential data) \n \n \n Authorization (Only allow these that need\
+          \ to access data) \n \n \n Integrity (Ensure that the data has not been\
+          \ modified) \n \n \n Availability (Ensure that system can perform its required\
+          \ functions) \n \n \n Type of Attackers \n It is important to know the type\
+          \ of attackers to the Virtual Machine. The types\nof attachers are listed\
+          \ below: \n \n \n Crackers, there are people that gain unauthorized access\
+          \ to a computer \n \n \n Hackers, any individual who illegally breaks into\
+          \ computer systems to damage, \n steal information or perform some malicious\
+          \ functions using the systems. \n \n \n Types of attacks against virtual\
+          \ machines \n There are many different types of attacks and are different\
+          \ depending upon the\noperating system, the service and type of attackers.\
+          \ The below list only\nprovides some common types of attack and aims to\
+          \ provide an idea of what areas to\nfocus on. \n \n \n Reading data, typically\
+          \ associated with steal important information such as\n confidential data,\
+          \ account information and password, etc. \n \n \n Changing data, potentially\
+          \ to gain sufficient access to be able to update data \n \n \n Access to\
+          \ virtual machine, get access to your virtual machine and use it to\n attach\
+          \ other computer systems. The attackers might setup a service to send email\n\
+          \ spans using your virtual machines \n \n \n Denial of service, attacker\
+          \ disables or makes unusable the services provided\n by the system  \n \n\
+          \ \n Common Methods of Attacking A Virtual machine \n The below shows some\
+          \ techniques used to gain access and it only provides an idea\nof methods\
+          \ used and doesn't include all available methods. \n \n \n Password guessing,\
+          \ where attacks try to guess your system account password and\n in the hope\
+          \ they will be lucky and find a easily guessed password. \n \n \n Social\
+          \ engineering, attackers to pretend to be someone you trust and gain\n password\
+          \ from you. \n \n \n trojan horses, are programs planted in a virtual machine\
+          \ which appear to be\n harmless. When a trigger is activated, the attacker\
+          \ can gain access to the \n virtual machine and run certain command. Attackers\
+          \ can use various ways to get\n the programs to your virtual machines such\
+          \ as by installing a untrusted software\n packages. \n \n \n virtus, a virus\
+          \ is a programs designed to damage the system. \n \n \n software bugs, a\
+          \ software bug is a bug that can lead to a security exposure. \n \n \n address\
+          \ spoofing is to change the IP address of computer to pretend it is a\n\
+          \ trust system and gain access.  \n \n \n Security Policy \n If you already\
+          \ have security policy in place, you need to follow these steps\nto secure\
+          \ your virtual machines. If you don't have one, there are a number of\n\
+          factors you need to consider when you are creating a security policy. \n\
+          \ You need to make sure you have covered any of Authorization, Authentication,\n\
+          Confidentiality, Integrity and Availability. You also need to consider how\
+          \ the\npolicy is going to be implemented as people might make mistakes.\
+          \ You should\nalways consider how this can be enforced and audited.  "
+        description: "<h2>Introduction</h2>\n<p>Security should be one of the foremost\
+          \ thoughts at all stages of setting up your\nVirtual Machines. It requires\
+          \ good knowledge of the fundamentals of Operating\nSystem on your Virtual\
+          \ Machines to implement a good security policy.</p>\n<p>What is security?\
+          \  Security is a set of appropriate procedures to protect your\nresources\
+          \ (your data, your account, your services and your reputation) against\n\
+          risks.</p>\n<p>The NeCTAR cloud is a public Cloud environment, thus your\
+          \ virtual machines are\nconnected to the rest of the world and there are\
+          \ many potential risks associated\nwith that. You should always consider\
+          \ your Virtual Machines are untrusted and\nsome security policy and procedures\
+          \ must be implemented.</p>\n<p>Security is a big topic and there many complete\
+          \ books on the subject. This\nguide provides some basic introduction to\
+          \ security and how the techniques, and\ntools can be used to provide additional\
+          \ security on a Virtual Machine.</p>\n<h2>Security requirements</h2>\n<p>Before\
+          \ you implement security policy, you should consider the aspects of\nsecurity\
+          \ that are required. The main security requirements are: </p>\n<ul>\n<li>\n\
+          <p>Confidentiality (don't let anybody else know your password confidential\
+          \ data)</p>\n</li>\n<li>\n<p>Authorization (Only allow these that need to\
+          \ access data)</p>\n</li>\n<li>\n<p>Integrity (Ensure that the data has\
+          \ not been modified)</p>\n</li>\n<li>\n<p>Availability (Ensure that system\
+          \ can perform its required functions)</p>\n</li>\n</ul>\n<h2>Type of Attackers</h2>\n\
+          <p>It is important to know the type of attackers to the Virtual Machine.\
+          \ The types\nof attachers are listed below:</p>\n<ul>\n<li>\n<p>Crackers,\
+          \ there are people that gain unauthorized access to a computer</p>\n</li>\n\
+          <li>\n<p>Hackers, any individual who illegally breaks into computer systems\
+          \ to damage, \n steal information or perform some malicious functions using\
+          \ the systems.</p>\n</li>\n</ul>\n<h2>Types of attacks against virtual machines</h2>\n\
+          <p>There are many different types of attacks and are different depending\
+          \ upon the\noperating system, the service and type of attackers. The below\
+          \ list only\nprovides some common types of attack and aims to provide an\
+          \ idea of what areas to\nfocus on.</p>\n<ul>\n<li>\n<p>Reading data, typically\
+          \ associated with steal important information such as\n confidential data,\
+          \ account information and password, etc.</p>\n</li>\n<li>\n<p>Changing data,\
+          \ potentially to gain sufficient access to be able to update data</p>\n\
+          </li>\n<li>\n<p>Access to virtual machine, get access to your virtual machine\
+          \ and use it to\n attach other computer systems. The attackers might setup\
+          \ a service to send email\n spans using your virtual machines</p>\n</li>\n\
+          <li>\n<p>Denial of service, attacker disables or makes unusable the services\
+          \ provided\n by the system </p>\n</li>\n</ul>\n<h2>Common Methods of Attacking\
+          \ A Virtual machine</h2>\n<p>The below shows some techniques used to gain\
+          \ access and it only provides an idea\nof methods used and doesn't include\
+          \ all available methods.</p>\n<ul>\n<li>\n<p>Password guessing, where attacks\
+          \ try to guess your system account password and\n in the hope they will\
+          \ be lucky and find a easily guessed password.</p>\n</li>\n<li>\n<p>Social\
+          \ engineering, attackers to pretend to be someone you trust and gain\n password\
+          \ from you.</p>\n</li>\n<li>\n<p>trojan horses, are programs planted in\
+          \ a virtual machine which appear to be\n harmless. When a trigger is activated,\
+          \ the attacker can gain access to the \n virtual machine and run certain\
+          \ command. Attackers can use various ways to get\n the programs to your\
+          \ virtual machines such as by installing a untrusted software\n packages.</p>\n\
+          </li>\n<li>\n<p>virtus, a virus is a programs designed to damage the system.</p>\n\
+          </li>\n<li>\n<p>software bugs, a software bug is a bug that can lead to\
+          \ a security exposure.</p>\n</li>\n<li>\n<p>address spoofing is to change\
+          \ the IP address of computer to pretend it is a\n trust system and gain\
+          \ access. </p>\n</li>\n</ul>\n<h2>Security Policy</h2>\n<p>If you already\
+          \ have security policy in place, you need to follow these steps\nto secure\
+          \ your virtual machines. If you don't have one, there are a number of\n\
+          factors you need to consider when you are creating a security policy.</p>\n\
+          <p>You need to make sure you have covered any of Authorization, Authentication,\n\
+          Confidentiality, Integrity and Availability. You also need to consider how\
+          \ the\npolicy is going to be implemented as people might make mistakes.\
+          \ You should\nalways consider how this can be enforced and audited. </p>"
+        folder:
+          category_id: 6000122279
+          created_at: '2015-10-01T22:28:23-04:00'
+          customer_folders: []
+          description: Security Guidelines
+          id: 6000203455
+          is_default: false
+          language_id: 6
+          name: Security Guidelines
+          parent_id: 6000203455
+          position: 6
+          updated_at: '2015-10-01T22:28:23-04:00'
+          visibility: 1
+        folder_id: 6000203455
+        hits: 0
+        id: 6000070469
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-01T22:28:24-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000070469
+        position: 1
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Introduction
+        updated_at: '2015-10-01T22:28:24-04:00'
+        user_id: 6002464727
+  html: "<h2>Introduction</h2>\n<p>Security should be one of the foremost thoughts\
+    \ at all stages of setting up your\nVirtual Machines. It requires good knowledge\
+    \ of the fundamentals of Operating\nSystem on your Virtual Machines to implement\
+    \ a good security policy.</p>\n<p>What is security?  Security is a set of appropriate\
+    \ procedures to protect your\nresources (your data, your account, your services\
+    \ and your reputation) against\nrisks.</p>\n<p>The NeCTAR cloud is a public Cloud\
+    \ environment, thus your virtual machines are\nconnected to the rest of the world\
+    \ and there are many potential risks associated\nwith that. You should always\
+    \ consider your Virtual Machines are untrusted and\nsome security policy and procedures\
+    \ must be implemented.</p>\n<p>Security is a big topic and there many complete\
+    \ books on the subject. This\nguide provides some basic introduction to security\
+    \ and how the techniques, and\ntools can be used to provide additional security\
+    \ on a Virtual Machine.</p>\n<h2>Security requirements</h2>\n<p>Before you implement\
+    \ security policy, you should consider the aspects of\nsecurity that are required.\
+    \ The main security requirements are: </p>\n<ul>\n<li>\n<p>Confidentiality (don't\
+    \ let anybody else know your password confidential data)</p>\n</li>\n<li>\n<p>Authorization\
+    \ (Only allow these that need to access data)</p>\n</li>\n<li>\n<p>Integrity (Ensure\
+    \ that the data has not been modified)</p>\n</li>\n<li>\n<p>Availability (Ensure\
+    \ that system can perform its required functions)</p>\n</li>\n</ul>\n<h2>Type\
+    \ of Attackers</h2>\n<p>It is important to know the type of attackers to the Virtual\
+    \ Machine. The types\nof attachers are listed below:</p>\n<ul>\n<li>\n<p>Crackers,\
+    \ there are people that gain unauthorized access to a computer</p>\n</li>\n<li>\n\
+    <p>Hackers, any individual who illegally breaks into computer systems to damage,\
+    \ \n steal information or perform some malicious functions using the systems.</p>\n\
+    </li>\n</ul>\n<h2>Types of attacks against virtual machines</h2>\n<p>There are\
+    \ many different types of attacks and are different depending upon the\noperating\
+    \ system, the service and type of attackers. The below list only\nprovides some\
+    \ common types of attack and aims to provide an idea of what areas to\nfocus on.</p>\n\
+    <ul>\n<li>\n<p>Reading data, typically associated with steal important information\
+    \ such as\n confidential data, account information and password, etc.</p>\n</li>\n\
+    <li>\n<p>Changing data, potentially to gain sufficient access to be able to update\
+    \ data</p>\n</li>\n<li>\n<p>Access to virtual machine, get access to your virtual\
+    \ machine and use it to\n attach other computer systems. The attackers might setup\
+    \ a service to send email\n spans using your virtual machines</p>\n</li>\n<li>\n\
+    <p>Denial of service, attacker disables or makes unusable the services provided\n\
+    \ by the system </p>\n</li>\n</ul>\n<h2>Common Methods of Attacking A Virtual\
+    \ machine</h2>\n<p>The below shows some techniques used to gain access and it\
+    \ only provides an idea\nof methods used and doesn't include all available methods.</p>\n\
+    <ul>\n<li>\n<p>Password guessing, where attacks try to guess your system account\
+    \ password and\n in the hope they will be lucky and find a easily guessed password.</p>\n\
+    </li>\n<li>\n<p>Social engineering, attackers to pretend to be someone you trust\
+    \ and gain\n password from you.</p>\n</li>\n<li>\n<p>trojan horses, are programs\
+    \ planted in a virtual machine which appear to be\n harmless. When a trigger is\
+    \ activated, the attacker can gain access to the \n virtual machine and run certain\
+    \ command. Attackers can use various ways to get\n the programs to your virtual\
+    \ machines such as by installing a untrusted software\n packages.</p>\n</li>\n\
+    <li>\n<p>virtus, a virus is a programs designed to damage the system.</p>\n</li>\n\
+    <li>\n<p>software bugs, a software bug is a bug that can lead to a security exposure.</p>\n\
+    </li>\n<li>\n<p>address spoofing is to change the IP address of computer to pretend\
+    \ it is a\n trust system and gain access. </p>\n</li>\n</ul>\n<h2>Security Policy</h2>\n\
+    <p>If you already have security policy in place, you need to follow these steps\n\
+    to secure your virtual machines. If you don't have one, there are a number of\n\
+    factors you need to consider when you are creating a security policy.</p>\n<p>You\
+    \ need to make sure you have covered any of Authorization, Authentication,\nConfidentiality,\
+    \ Integrity and Availability. You also need to consider how the\npolicy is going\
+    \ to be implemented as people might make mistakes. You should\nalways consider\
+    \ how this can be enforced and audited. </p>"
+  parent: 43
+  sha1: de998a4ca1a83ce4ae6df69abc8c40dafc20f609
+  title: Introduction

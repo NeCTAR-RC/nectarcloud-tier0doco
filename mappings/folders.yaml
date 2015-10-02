@@ -103,3 +103,12 @@
         position: 5, updated_at: '2015-09-03T01:28:02-04:00', visibility: 1}
   parent: 19
   title: Heat
+43:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122279, created_at: '2015-10-01T22:28:23-04:00', description: Security
+          Guidelines, id: 6000203455, is_default: false, language_id: null, name: Security
+          Guidelines, parent_id: null, position: 6, updated_at: '2015-10-01T22:28:23-04:00',
+        visibility: 1}
+  parent: 19
+  title: Security Guidelines
