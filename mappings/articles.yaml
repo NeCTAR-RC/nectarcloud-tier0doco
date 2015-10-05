@@ -7311,3 +7311,266 @@
   parent: 43
   sha1: de998a4ca1a83ce4ae6df69abc8c40dafc20f609
   title: Introduction
+60:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-05T18:20:25-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Getting Started \n Security is an complex topic and it is\
+          \ impossible to address everything. This\ndocument lists a number of security\
+          \ recommendations to help ensure the safe\nrunning of your instances on\
+          \ the cloud. Security is important, so please\nfollow these. \n The NecTAR\
+          \ team conduct routine and random audits to determine the integrity\nof\
+          \ machine images and running instances. If you have discovered a critical\n\
+          security flaw, or believe your machine has been compromised, please email\n\
+          security@rc.nectar.org.au, or for non-urgent security questions go to NeCTAR\n\
+          support to lodge a ticket. \n Mail Servers \n If you run a mail server,\
+          \ make sure it only listens on the localhost IP\naddress (127.0.0.1). For\
+          \ many clients, if you don't specify an SMTP server\nwhen sending email,\
+          \ it will use the recipients SMTP server automatically. This\nis probably\
+          \ what you want. Some nodes (Qld) disallow this and require you to\nuse\
+          \ their SMTP server for outgoing mail. \n Enable Automatic Updates \n All\
+          \ operating systems have the ability to apply updates automatically, and\
+          \ its\neasy to turn this on. Please do so, and ask us if you need help.\
+          \ \n Upgrade your kernel \n Some updates, such as a kernel upgrade require\
+          \ a reboot of the instance. Please\nschedule this into your regular maintenance.\
+          \ \n No open recursive name servers \n If you are running a DNS server,\
+          \ please ensure you only allow recursion from\ntrusted hosts. \n Control\
+          \ or disable access to your NTP server \n If you run an NTP server, limit\
+          \ which systems can access it. Disable the\n'monlist' command as this can\
+          \ be used as a denial of service vector on your\nsystem. For info about\
+          \ DDoS by NTP, see\nthis article on Cloudflare \n Subscribe to security\
+          \ announcements for your OS \n If there is a security problem with your\
+          \ Operating System, you need to find\nout as soon as possible. Find the\
+          \ appropriate mailing list and keep an eye\nout for anything that requires\
+          \ urgent action. As soon as new security bugs are\ndetected, you need to\
+          \ execute security upgrade immediately.  \n Run a restrictive firewall \n\
+          \ Your instances should be configured so they allow the minimum access required\n\
+          to run their service. Please use a host-based firewall, in conjunction with\n\
+          the cloud-provided firewall to manage access. \n Disable/Remove unneeded\
+          \ accounts \n Keep an eye on the user accounts enabled on your system. Some\
+          \ applications\ncreate default accounts which are insecure. You may also\
+          \ open a temporary user\naccount to allow quick login for a task and leave\
+          \ it forever. This may lead to\nsecurity issue later, and you need to regular\
+          \ check and delete these user\naccounts. \n Disable SSH password login -\
+          \ use keys \n With enough time and compute power it is possible for passwords\
+          \ to be brute\nforce attacked. The average SSH server deals with thousands\
+          \ of such attacks\nevery week, so use ssh keys. Ubuntu provides some good\
+          \ documentation for it. \n Don't store keys on the image \n The cloud provides\
+          \ a metadata service so you can download keys on boot, so\nyou don't need\
+          \ to copy keys manually. This ensures that if your key is\ncompromised,\
+          \ not all running instances of that image are compromised. \n Install ssh\
+          \ attack banning tools \n Install a tools like fail2ban or denyhosts, which\
+          \ checks log files for\nattempted breaches and then blocks malicious IP\
+          \ addresses. \n Disable unneeded services \n Know what services run on your\
+          \ image, and disable the unneeded ones before\nyou upload it. This reduces\
+          \ the attack surface. \n Use Encrypted Communications \n Wherever possible,\
+          \ use encrypted communications to avoid attacks which\nintercept data. \n\
+          \ Use best-practices for logging \n Make sure that services are logging\
+          \ to a secure location, that is as\ntamperproof as possible. If logging\
+          \ remotely, ensure that it is done over\na secure channel so that eavesdroppers\
+          \ cannot monitor what is happening on\nyour instance. \n Only open ports\
+          \ for required services \n By default, virtual machines in NeCTAR has closed\
+          \ all ports, so in order to make\nservices available to public, you need\
+          \ to open certain ports for it. Before you\nopen a open, you need to think\
+          \ carefully about what service associated with it\nand what is the intention.\
+          \ Never open ports for non-service binded to it. \n Only grand sufficient\
+          \ permission to user account \n When creating user account, make sure only\
+          \ grand the permission sufficient for \nits use. Never grant extra permission\
+          \ if it is not needed. \n Disable root access from ssh and use sudo if possible\
+          \ \n Disable root user SSH login and setup user account with sudo permission\
+          \ to\nperform administrator tasks. \n Use other port for SSH \n The SSH\
+          \ service on the virtual machine uses port 22 by default. This port is \n\
+          well-known and can attract many attackers. Use a custom ssh port other than\
+          \ 22\nwill improve security. Be noted, the port number below 1024 is well\
+          \ reserved and\nshouldn't be used for SSH. \n Read security guide for service\
+          \ installed \n Before and after you install a new service on your virtual\
+          \ machine, you need to\ncheck the service security guide to perform any\
+          \ required steps to harden the\nservice security. "
+        description: "<h2>Getting Started</h2>\n<p>Security is an complex topic and\
+          \ it is impossible to address everything. This\ndocument lists a number\
+          \ of security recommendations to help ensure the safe\nrunning of your instances\
+          \ on the cloud. Security is important, so please\nfollow these.</p>\n<p>The\
+          \ NecTAR team conduct routine and random audits to determine the integrity\n\
+          of machine images and running instances. If you have discovered a critical\n\
+          security flaw, or believe your machine has been compromised, please email\n\
+          <a href=\"mailto:security@rc.nectar.org.au\">security@rc.nectar.org.au</a>,\
+          \ or for non-urgent security questions go to NeCTAR\n<a href=\"https://support.nectar.org.au/support/home\"\
+          >support</a> to lodge a ticket.</p>\n<h2>Mail Servers</h2>\n<p>If you run\
+          \ a mail server, make sure it only listens on the localhost IP\naddress\
+          \ (127.0.0.1). For many clients, if you don't specify an SMTP server\nwhen\
+          \ sending email, it will use the recipients SMTP server automatically. This\n\
+          is probably what you want. Some nodes (Qld) disallow this and require you\
+          \ to\nuse their SMTP server for outgoing mail.</p>\n<h2>Enable Automatic\
+          \ Updates</h2>\n<p>All operating systems have the ability to apply updates\
+          \ automatically, and its\neasy to turn this on. Please do so, and ask us\
+          \ if you need help.</p>\n<h2>Upgrade your kernel</h2>\n<p>Some updates,\
+          \ such as a kernel upgrade require a reboot of the instance. Please\nschedule\
+          \ this into your regular maintenance.</p>\n<h2>No open recursive name servers</h2>\n\
+          <p>If you are running a DNS server, please ensure you only allow recursion\
+          \ from\ntrusted hosts.</p>\n<h2>Control or disable access to your NTP server</h2>\n\
+          <p>If you run an NTP server, limit which systems can access it. Disable\
+          \ the\n'monlist' command as this can be used as a denial of service vector\
+          \ on your\nsystem. For info about DDoS by NTP, see\n<a href=\"https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-ddos-attacks/\"\
+          \ title=\"Cloudflare Understanding NTP DDoS\">this article on Cloudflare</a></p>\n\
+          <h2>Subscribe to security announcements for your OS</h2>\n<p>If there is\
+          \ a security problem with your Operating System, you need to find\nout as\
+          \ soon as possible. Find the appropriate mailing list and keep an eye\n\
+          out for anything that requires urgent action. As soon as new security bugs\
+          \ are\ndetected, you need to execute security upgrade immediately. </p>\n\
+          <h2>Run a restrictive firewall</h2>\n<p>Your instances should be configured\
+          \ so they allow the minimum access required\nto run their service. Please\
+          \ use a host-based firewall, in conjunction with\nthe cloud-provided firewall\
+          \ to manage access.</p>\n<h2>Disable/Remove unneeded accounts</h2>\n<p>Keep\
+          \ an eye on the user accounts enabled on your system. Some applications\n\
+          create default accounts which are insecure. You may also open a temporary\
+          \ user\naccount to allow quick login for a task and leave it forever. This\
+          \ may lead to\nsecurity issue later, and you need to regular check and delete\
+          \ these user\naccounts.</p>\n<h2>Disable SSH password login - use keys</h2>\n\
+          <p>With enough time and compute power it is possible for passwords to be\
+          \ brute\nforce attacked. The average SSH server deals with thousands of\
+          \ such attacks\nevery week, so use ssh keys. Ubuntu provides some good documentation\
+          \ for it.</p>\n<h2>Don't store keys on the image</h2>\n<p>The cloud provides\
+          \ a metadata service so you can download keys on boot, so\nyou don't need\
+          \ to copy keys manually. This ensures that if your key is\ncompromised,\
+          \ not all running instances of that image are compromised.</p>\n<h2>Install\
+          \ ssh attack banning tools</h2>\n<p>Install a tools like fail2ban or denyhosts,\
+          \ which checks log files for\nattempted breaches and then blocks malicious\
+          \ IP addresses.</p>\n<h2>Disable unneeded services</h2>\n<p>Know what services\
+          \ run on your image, and disable the unneeded ones before\nyou upload it.\
+          \ This reduces the attack surface.</p>\n<h2>Use Encrypted Communications</h2>\n\
+          <p>Wherever possible, use encrypted communications to avoid attacks which\n\
+          intercept data.</p>\n<h2>Use best-practices for logging</h2>\n<p>Make sure\
+          \ that services are logging to a secure location, that is as\ntamperproof\
+          \ as possible. If logging remotely, ensure that it is done over\na secure\
+          \ channel so that eavesdroppers cannot monitor what is happening on\nyour\
+          \ instance.</p>\n<h2>Only open ports for required services</h2>\n<p>By default,\
+          \ virtual machines in NeCTAR has closed all ports, so in order to make\n\
+          services available to public, you need to open certain ports for it. Before\
+          \ you\nopen a open, you need to think carefully about what service associated\
+          \ with it\nand what is the intention. Never open ports for non-service binded\
+          \ to it.</p>\n<h2>Only grand sufficient permission to user account</h2>\n\
+          <p>When creating user account, make sure only grand the permission sufficient\
+          \ for \nits use. Never grant extra permission if it is not needed.</p>\n\
+          <h2>Disable root access from ssh and use sudo if possible</h2>\n<p>Disable\
+          \ root user SSH login and setup user account with sudo permission to\nperform\
+          \ administrator tasks.</p>\n<h2>Use other port for SSH</h2>\n<p>The SSH\
+          \ service on the virtual machine uses port 22 by default. This port is \n\
+          well-known and can attract many attackers. Use a custom ssh port other than\
+          \ 22\nwill improve security. Be noted, the port number below 1024 is well\
+          \ reserved and\nshouldn't be used for SSH.</p>\n<h2>Read security guide\
+          \ for service installed</h2>\n<p>Before and after you install a new service\
+          \ on your virtual machine, you need to\ncheck the service security guide\
+          \ to perform any required steps to harden the\nservice security.</p>"
+        folder:
+          category_id: 6000122279
+          created_at: '2015-10-01T22:28:23-04:00'
+          customer_folders: []
+          description: Security Guidelines
+          id: 6000203455
+          is_default: false
+          language_id: 6
+          name: Security Guidelines
+          parent_id: 6000203455
+          position: 6
+          updated_at: '2015-10-01T22:28:23-04:00'
+          visibility: 1
+        folder_id: 6000203455
+        hits: 0
+        id: 6000073462
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-05T18:20:25-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000073462
+        position: 2
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Getting Started
+        updated_at: '2015-10-05T18:20:25-04:00'
+        user_id: 6002464727
+  html: "<h2>Getting Started</h2>\n<p>Security is an complex topic and it is impossible\
+    \ to address everything. This\ndocument lists a number of security recommendations\
+    \ to help ensure the safe\nrunning of your instances on the cloud. Security is\
+    \ important, so please\nfollow these.</p>\n<p>The NecTAR team conduct routine\
+    \ and random audits to determine the integrity\nof machine images and running\
+    \ instances. If you have discovered a critical\nsecurity flaw, or believe your\
+    \ machine has been compromised, please email\n<a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#64;&#114;&#99;&#46;&#110;&#101;&#99;&#116;&#97;&#114;&#46;&#111;&#114;&#103;&#46;&#97;&#117;\"\
+    >&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#64;&#114;&#99;&#46;&#110;&#101;&#99;&#116;&#97;&#114;&#46;&#111;&#114;&#103;&#46;&#97;&#117;</a>,\
+    \ or for non-urgent security questions go to NeCTAR\n<a href=\"https://support.nectar.org.au/support/home\"\
+    >support</a> to lodge a ticket.</p>\n<h2>Mail Servers</h2>\n<p>If you run a mail\
+    \ server, make sure it only listens on the localhost IP\naddress (127.0.0.1).\
+    \ For many clients, if you don't specify an SMTP server\nwhen sending email, it\
+    \ will use the recipients SMTP server automatically. This\nis probably what you\
+    \ want. Some nodes (Qld) disallow this and require you to\nuse their SMTP server\
+    \ for outgoing mail.</p>\n<h2>Enable Automatic Updates</h2>\n<p>All operating\
+    \ systems have the ability to apply updates automatically, and its\neasy to turn\
+    \ this on. Please do so, and ask us if you need help.</p>\n<h2>Upgrade your kernel</h2>\n\
+    <p>Some updates, such as a kernel upgrade require a reboot of the instance. Please\n\
+    schedule this into your regular maintenance.</p>\n<h2>No open recursive name servers</h2>\n\
+    <p>If you are running a DNS server, please ensure you only allow recursion from\n\
+    trusted hosts.</p>\n<h2>Control or disable access to your NTP server</h2>\n<p>If\
+    \ you run an NTP server, limit which systems can access it. Disable the\n'monlist'\
+    \ command as this can be used as a denial of service vector on your\nsystem. For\
+    \ info about DDoS by NTP, see\n<a href=\"https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-ddos-attacks/\"\
+    \ title=\"Cloudflare Understanding NTP DDoS\">this article on Cloudflare</a></p>\n\
+    <h2>Subscribe to security announcements for your OS</h2>\n<p>If there is a security\
+    \ problem with your Operating System, you need to find\nout as soon as possible.\
+    \ Find the appropriate mailing list and keep an eye\nout for anything that requires\
+    \ urgent action. As soon as new security bugs are\ndetected, you need to execute\
+    \ security upgrade immediately. </p>\n<h2>Run a restrictive firewall</h2>\n<p>Your\
+    \ instances should be configured so they allow the minimum access required\nto\
+    \ run their service. Please use a host-based firewall, in conjunction with\nthe\
+    \ cloud-provided firewall to manage access.</p>\n<h2>Disable/Remove unneeded accounts</h2>\n\
+    <p>Keep an eye on the user accounts enabled on your system. Some applications\n\
+    create default accounts which are insecure. You may also open a temporary user\n\
+    account to allow quick login for a task and leave it forever. This may lead to\n\
+    security issue later, and you need to regular check and delete these user\naccounts.</p>\n\
+    <h2>Disable SSH password login - use keys</h2>\n<p>With enough time and compute\
+    \ power it is possible for passwords to be brute\nforce attacked. The average\
+    \ SSH server deals with thousands of such attacks\nevery week, so use ssh keys.\
+    \ Ubuntu provides some good documentation for it.</p>\n<h2>Don't store keys on\
+    \ the image</h2>\n<p>The cloud provides a metadata service so you can download\
+    \ keys on boot, so\nyou don't need to copy keys manually. This ensures that if\
+    \ your key is\ncompromised, not all running instances of that image are compromised.</p>\n\
+    <h2>Install ssh attack banning tools</h2>\n<p>Install a tools like fail2ban or\
+    \ denyhosts, which checks log files for\nattempted breaches and then blocks malicious\
+    \ IP addresses.</p>\n<h2>Disable unneeded services</h2>\n<p>Know what services\
+    \ run on your image, and disable the unneeded ones before\nyou upload it. This\
+    \ reduces the attack surface.</p>\n<h2>Use Encrypted Communications</h2>\n<p>Wherever\
+    \ possible, use encrypted communications to avoid attacks which\nintercept data.</p>\n\
+    <h2>Use best-practices for logging</h2>\n<p>Make sure that services are logging\
+    \ to a secure location, that is as\ntamperproof as possible. If logging remotely,\
+    \ ensure that it is done over\na secure channel so that eavesdroppers cannot monitor\
+    \ what is happening on\nyour instance.</p>\n<h2>Only open ports for required services</h2>\n\
+    <p>By default, virtual machines in NeCTAR has closed all ports, so in order to\
+    \ make\nservices available to public, you need to open certain ports for it. Before\
+    \ you\nopen a open, you need to think carefully about what service associated\
+    \ with it\nand what is the intention. Never open ports for non-service binded\
+    \ to it.</p>\n<h2>Only grand sufficient permission to user account</h2>\n<p>When\
+    \ creating user account, make sure only grand the permission sufficient for \n\
+    its use. Never grant extra permission if it is not needed.</p>\n<h2>Disable root\
+    \ access from ssh and use sudo if possible</h2>\n<p>Disable root user SSH login\
+    \ and setup user account with sudo permission to\nperform administrator tasks.</p>\n\
+    <h2>Use other port for SSH</h2>\n<p>The SSH service on the virtual machine uses\
+    \ port 22 by default. This port is \nwell-known and can attract many attackers.\
+    \ Use a custom ssh port other than 22\nwill improve security. Be noted, the port\
+    \ number below 1024 is well reserved and\nshouldn't be used for SSH.</p>\n<h2>Read\
+    \ security guide for service installed</h2>\n<p>Before and after you install a\
+    \ new service on your virtual machine, you need to\ncheck the service security\
+    \ guide to perform any required steps to harden the\nservice security.</p>"
+  parent: 43
+  sha1: af54be18865ca687741c0dd59cf3f89570a951fa
+  title: Getting Started
