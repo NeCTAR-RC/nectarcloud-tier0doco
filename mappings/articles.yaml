@@ -7574,3 +7574,167 @@
   parent: 43
   sha1: af54be18865ca687741c0dd59cf3f89570a951fa
   title: Getting Started
+61:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-05T19:39:49-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " What is instance (Virtual Machine) \n An instance (virtual\
+          \ machine) is a computing environment completed with virtual\nhardware devices\
+          \ which simulates the real computer system. The instance normally\nruns\
+          \ as a process in a physical computer system called host and you can boot\
+          \ an\noperating system inside the virtual machine. The instance will be\
+          \ tricked as it\nis running on a real computer system and it will run just\
+          \ as it would on a real,\nphysical machine. \n Your instance's operating\
+          \ system is stored on a virtual hard drive and it is\ncalled image. The\
+          \ image is a big, multi-gigabtye file storage stored on storage.\nYou can\
+          \ launch a instance by using different images (operating system) and you\n\
+          can access it through SSH. As the instance thinks it runs in a 'real' computer\n\
+          system, you can do anything just like a normal computer system. However,\
+          \ there\nare still some cases that can be restricted by underline virtual\
+          \ hardware support\nsuch as 3D graphics. \n The instance doesn't have any\
+          \ knowledge about the underline hardware and all\nhardware are done by virtualization.\
+          \ The instance only thinks that it uses the\nreal hardware. \n Instances\
+          \ add some overhead as there are virtualization layer to support required\n\
+          functions, so they won't be as fast as if you run operating system on real\n\
+          hardware. \n Why is virtualization useful \n The virtualization is useful\
+          \ in the below scenarios: \n \n \n flexibility. If you need more instances\
+          \ or more computing power, simply launch\n more instances or launch a instance\
+          \ with more CPUs and RAMs. This makes it is\n easy to copy with changes.\
+          \ \n \n \n easier software installations. Instances can be used to ship\
+          \ entire software\n configuration. The instances can be made as a image\
+          \ after configuration, and\n then other users can use the image to launch\
+          \ new virtual machines. \n \n \n testing and disaster recovery. Once installed,\
+          \ a virtual machine can be\n consider as a \"container\" (snapshot) that\
+          \ can be arbitrarily frozen, woken up, copied,\n backed up and, transported\
+          \ between hosts.  \n \n \n infrastructure consolidation. Virtual machines\
+          \ can significantly\n reduce hardware and electricity costs. \n \n \n Some\
+          \ terminology \n It is helpful to understand some crucial terminology, especially\
+          \ the following\nterms: \n \n \n host: This is the computer system where\
+          \ your virtual machine is running on top\n of it. \n \n \n guest operation\
+          \ system: This is the operation system that is running inside\n the virtual\
+          \ machine. \n \n \n virtual machine image: a single file which contains\
+          \ a virtual disk that has\n bootable operation system installed on it. \
+          \ \n \n \n Target audience \n This guide aims to provide more detailed information\
+          \ to advanced users who might\nact as system administrator to manage instances\
+          \ running in NeCTAR Cloud. "
+        description: "<h2>What is instance (Virtual Machine)</h2>\n<p>An instance\
+          \ (virtual machine) is a computing environment completed with virtual\n\
+          hardware devices which simulates the real computer system. The instance\
+          \ normally\nruns as a process in a physical computer system called host\
+          \ and you can boot an\noperating system inside the virtual machine. The\
+          \ instance will be tricked as it\nis running on a real computer system and\
+          \ it will run just as it would on a real,\nphysical machine.</p>\n<p>Your\
+          \ instance's operating system is stored on a virtual hard drive and it is\n\
+          called image. The image is a big, multi-gigabtye file storage stored on\
+          \ storage.\nYou can launch a instance by using different images (operating\
+          \ system) and you\ncan access it through SSH. As the instance thinks it\
+          \ runs in a 'real' computer\nsystem, you can do anything just like a normal\
+          \ computer system. However, there\nare still some cases that can be restricted\
+          \ by underline virtual hardware support\nsuch as 3D graphics.</p>\n<p>The\
+          \ instance doesn't have any knowledge about the underline hardware and all\n\
+          hardware are done by virtualization. The instance only thinks that it uses\
+          \ the\nreal hardware.</p>\n<p>Instances add some overhead as there are virtualization\
+          \ layer to support required\nfunctions, so they won't be as fast as if you\
+          \ run operating system on real\nhardware.</p>\n<h2>Why is virtualization\
+          \ useful</h2>\n<p>The virtualization is useful in the below scenarios:</p>\n\
+          <ul>\n<li>\n<p>flexibility. If you need more instances or more computing\
+          \ power, simply launch\n more instances or launch a instance with more CPUs\
+          \ and RAMs. This makes it is\n easy to copy with changes.</p>\n</li>\n<li>\n\
+          <p>easier software installations. Instances can be used to ship entire software\n\
+          \ configuration. The instances can be made as a image after configuration,\
+          \ and\n then other users can use the image to launch new virtual machines.</p>\n\
+          </li>\n<li>\n<p>testing and disaster recovery. Once installed, a virtual\
+          \ machine can be\n consider as a \"container\" (snapshot) that can be arbitrarily\
+          \ frozen, woken up, copied,\n backed up and, transported between hosts.\
+          \ </p>\n</li>\n<li>\n<p>infrastructure consolidation. Virtual machines can\
+          \ significantly\n reduce hardware and electricity costs.</p>\n</li>\n</ul>\n\
+          <h2>Some terminology</h2>\n<p>It is helpful to understand some crucial terminology,\
+          \ especially the following\nterms:</p>\n<ul>\n<li>\n<p>host: This is the\
+          \ computer system where your virtual machine is running on top\n of it.</p>\n\
+          </li>\n<li>\n<p>guest operation system: This is the operation system that\
+          \ is running inside\n the virtual machine.</p>\n</li>\n<li>\n<p>virtual\
+          \ machine image: a single file which contains a virtual disk that has\n\
+          \ bootable operation system installed on it. </p>\n</li>\n</ul>\n<h2>Target\
+          \ audience</h2>\n<p>This guide aims to provide more detailed information\
+          \ to advanced users who might\nact as system administrator to manage instances\
+          \ running in NeCTAR Cloud.</p>"
+        folder:
+          category_id: 6000122279
+          created_at: '2015-09-03T01:27:59-04:00'
+          customer_folders: []
+          description: Instance Management
+          id: 6000190145
+          is_default: false
+          language_id: 6
+          name: Instance Management
+          parent_id: 6000190145
+          position: 2
+          updated_at: '2015-09-03T01:27:59-04:00'
+          visibility: 1
+        folder_id: 6000190145
+        hits: 0
+        id: 6000073471
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-05T19:39:49-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000073471
+        position: 1
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Introduction to Instance Management
+        updated_at: '2015-10-05T19:39:49-04:00'
+        user_id: 6002464727
+  html: "<h2>What is instance (Virtual Machine)</h2>\n<p>An instance (virtual machine)\
+    \ is a computing environment completed with virtual\nhardware devices which simulates\
+    \ the real computer system. The instance normally\nruns as a process in a physical\
+    \ computer system called host and you can boot an\noperating system inside the\
+    \ virtual machine. The instance will be tricked as it\nis running on a real computer\
+    \ system and it will run just as it would on a real,\nphysical machine.</p>\n\
+    <p>Your instance's operating system is stored on a virtual hard drive and it is\n\
+    called image. The image is a big, multi-gigabtye file storage stored on storage.\n\
+    You can launch a instance by using different images (operating system) and you\n\
+    can access it through SSH. As the instance thinks it runs in a 'real' computer\n\
+    system, you can do anything just like a normal computer system. However, there\n\
+    are still some cases that can be restricted by underline virtual hardware support\n\
+    such as 3D graphics.</p>\n<p>The instance doesn't have any knowledge about the\
+    \ underline hardware and all\nhardware are done by virtualization. The instance\
+    \ only thinks that it uses the\nreal hardware.</p>\n<p>Instances add some overhead\
+    \ as there are virtualization layer to support required\nfunctions, so they won't\
+    \ be as fast as if you run operating system on real\nhardware.</p>\n<h2>Why is\
+    \ virtualization useful</h2>\n<p>The virtualization is useful in the below scenarios:</p>\n\
+    <ul>\n<li>\n<p>flexibility. If you need more instances or more computing power,\
+    \ simply launch\n more instances or launch a instance with more CPUs and RAMs.\
+    \ This makes it is\n easy to copy with changes.</p>\n</li>\n<li>\n<p>easier software\
+    \ installations. Instances can be used to ship entire software\n configuration.\
+    \ The instances can be made as a image after configuration, and\n then other users\
+    \ can use the image to launch new virtual machines.</p>\n</li>\n<li>\n<p>testing\
+    \ and disaster recovery. Once installed, a virtual machine can be\n consider as\
+    \ a \"container\" (snapshot) that can be arbitrarily frozen, woken up, copied,\n\
+    \ backed up and, transported between hosts. </p>\n</li>\n<li>\n<p>infrastructure\
+    \ consolidation. Virtual machines can significantly\n reduce hardware and electricity\
+    \ costs.</p>\n</li>\n</ul>\n<h2>Some terminology</h2>\n<p>It is helpful to understand\
+    \ some crucial terminology, especially the following\nterms:</p>\n<ul>\n<li>\n\
+    <p>host: This is the computer system where your virtual machine is running on\
+    \ top\n of it.</p>\n</li>\n<li>\n<p>guest operation system: This is the operation\
+    \ system that is running inside\n the virtual machine.</p>\n</li>\n<li>\n<p>virtual\
+    \ machine image: a single file which contains a virtual disk that has\n bootable\
+    \ operation system installed on it. </p>\n</li>\n</ul>\n<h2>Target audience</h2>\n\
+    <p>This guide aims to provide more detailed information to advanced users who\
+    \ might\nact as system administrator to manage instances running in NeCTAR Cloud.</p>"
+  parent: 39
+  sha1: 3a2b58d66efa369f617034987e4dcd626476a6d8
+  title: Introduction to Instance Management
