@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_f1b4cff3",
+        "filename": "articles/Cloud Expert--DOCID19/Object Storage--DOCID40/Trouble Shooting.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000131
+      },
+      "writtenOn": "2015-10-06T03:16:06Z",
+      "side": 1,
+      "message": "test comment from Just",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 17,
+        "endChar": 6
+      },
+      "revId": "5cc223eea0d481d88770953e067215560e01982d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
