@@ -2319,10 +2319,10 @@
           \ NeCTAR cloud.</p>\n<ul>\n<li>\n<a href=\"Introduction%20to%20YAML--DOCID48.md\"\
           >Enough YAML to read a template</a> (useful if you don't know YAML)</li>\n\
           <li>A walk through of a YAML template</li>\n<li>Actions that can be performed</li>\n\
-          <li>The command line client</li>\n<li>The dashboard</li>\n<li>Preparing\
-          \ your images - you need more than just cloud-init!</li>\n<li>Good practices</li>\n\
-          <li><a href=\"Heat%20Debugging.md\">Debugging</a></li>\n<li>Oddities and\
-          \ gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
+          <li><a href=\"Heat%20Commandline%20Client.md\">The command line client</a></li>\n\
+          <li>The dashboard</li>\n<li>Preparing your images - you need more than just\
+          \ cloud-init!</li>\n<li>Good practices</li>\n<li><a href=\"Heat%20Debugging.md\"\
+          >Debugging</a></li>\n<li>Oddities and gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
           >Supported resources</a></li>\n</ul>\n<h2>Further links</h2>\n<ul>\n<li>\n\
           <a href=\"https://github.com/NeCTAR-RC/heat-templates\">NeCTAR sample templates</a>\
           \ -\n  a set of templates that have been run against the NeCTAR cloud.</li>\n\
@@ -2345,13 +2345,13 @@
           updated_at: '2015-09-03T01:28:02-04:00'
           visibility: 1
         folder_id: 6000190148
-        hits: 4
+        hits: 6
         id: 6000055383
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-09-28T20:44:46-04:00'
+        modified_at: '2015-10-06T19:44:41-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055383
@@ -2364,7 +2364,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction to HEAT
-        updated_at: '2015-09-28T20:44:46-04:00'
+        updated_at: '2015-10-06T19:44:41-04:00'
         user_id: 6002464727
   html: "<h1><img alt=\"flame logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Heat--DOCID42/images/glossy_flame.png?raw=true\"> Heat</h1>\n\
@@ -2408,19 +2408,20 @@
     the NeCTAR cloud.</p>\n<ul>\n<li><a href=\"Introduction to YAML--DOCID48.md\"\
     >Enough YAML to read a template</a> (useful if you don't know YAML)</li>\n<li>A\
     \ walk through of a YAML template</li>\n<li>Actions that can be performed</li>\n\
-    <li>The command line client</li>\n<li>The dashboard</li>\n<li>Preparing your images\
-    \ - you need more than just cloud-init!</li>\n<li>Good practices</li>\n<li><a\
-    \ href=\"Heat Debugging.md\">Debugging</a></li>\n<li>Oddities and gotcha's</li>\n\
-    <li><a href=\"https://github.com/NeCTAR-RC/heat-templates\">Supported resources</a></li>\n\
-    </ul>\n<h2>Further links</h2>\n<ul>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
-    >NeCTAR sample templates</a> -\n  a set of templates that have been run against\
-    \ the NeCTAR cloud.</li>\n<li>The OpenStack End User Guide <a href=\"http://docs.openstack.org/user-guide/dashboard_stacks.html\"\
+    <li><a href=\"Heat Commandline Client.md\">The command line client</a></li>\n\
+    <li>The dashboard</li>\n<li>Preparing your images - you need more than just cloud-init!</li>\n\
+    <li>Good practices</li>\n<li><a href=\"Heat Debugging.md\">Debugging</a></li>\n\
+    <li>Oddities and gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
+    >Supported resources</a></li>\n</ul>\n<h2>Further links</h2>\n<ul>\n<li><a href=\"\
+    https://github.com/NeCTAR-RC/heat-templates\">NeCTAR sample templates</a> -\n\
+    \  a set of templates that have been run against the NeCTAR cloud.</li>\n<li>The\
+    \ OpenStack End User Guide <a href=\"http://docs.openstack.org/user-guide/dashboard_stacks.html\"\
     >Heat</a>\n  page.</li>\n<li>The Heat <a href=\"https://wiki.openstack.org/wiki/Heat\"\
     >wiki</a></li>\n<li>The Heat <a href=\"http://docs.openstack.org/developer/heat/template_guide/\"\
     >template guide</a></li>\n<li>The <a href=\"http://docs.openstack.org/user-guide/cli_create_and_manage_stacks.html\"\
     >command line client</a></li>\n</ul>"
   parent: 42
-  sha1: 8c7945d0e6338afd87f8d3d79f0f91ead3b4cdb8
+  sha1: cbda17ebff272322b1916c88b56742453e037fb1
   title: Introduction to HEAT
 47:
   freshdesk:
@@ -7738,3 +7739,311 @@
   parent: 39
   sha1: 3a2b58d66efa369f617034987e4dcd626476a6d8
   title: Introduction to Instance Management
+62:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-06T19:44:43-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " The Heat command line client \n In true OpenStack fashion\
+          \ there is a Heat command line client.\nTo our biased eye, the command line\
+          \ tool seems more fully featured and\ngives more detailed feedback than\
+          \ the dashboard, so we prefer to use it\nwhen developing templates. \n Instructions\
+          \ on installing the command line tools can be found\nhere. \n We will step\
+          \ through some the actions the command line tool can perform,\nusing one\
+          \ of the NeCTAR Heat sample templates. \n To list all the stacks you have\
+          \ created do (don't forget to source your\nRC file before you start!): \n\
+          \ bash\nheat stack-list \n Repeat the above command liberally as you step\
+          \ through the following commands! \n To validate the template (all one line):\
+          \ \n bash\nheat template-validate --template-url https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml\
+          \ \n Then to use the template to create a stack named \"teststack\" (again,\
+          \ all one line): \n bash\nheat create teststack --template-url=https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml\
+          \ --parameters=\"InstanceType=m1.small;DBUsername=dbuser;DBPassword=verybadpassword;DBRootPassword=anotherverybadpassword;KeyName=nectar_dev\"\
+          \ \n PS: Don't forget to customise the command: e.g.: replace the passwords\
+          \ with far\nbetter ones, and also to change the key name to match one of\
+          \ your keys.\nThe to show all the stacks that have been created: \n bash\n\
+          heat stack-list \n To show all details for the newly created stack: \n bash\n\
+          heat stack-show teststack \n To list all the events that have occurred in\
+          \ the stacks life to date: \n bash\nheat event-list teststack \n To drill\
+          \ down into a particular event, make a note of its id and replace\n<ID>\
+          \ with it in the following command: \n bash\nheat event-show teststack WikiDatabase\
+          \ <ID> \n To suspend the stack: \n bash\nheat action-suspend teststack \n\
+          \ To resume it: \n bash\nheat action-resume teststack \n To list the resources\
+          \ being used by the stack: \n bash\nheat resource-list teststack \n To drill\
+          \ down on a particular resource: \n bash\nheat resource-show teststack WikiDatabase\
+          \ \n To show the metadata associated with a particular resource: \n bash\n\
+          heat resource-metadata teststack WikiDatabase \n To show the template that\
+          \ was used to create the stack: \n bash\nheat template-show teststack \n\
+          \ And finally, to delete the stack, do: \n bash\nheat stack-delete teststack "
+        description: '<h1>The Heat command line client</h1>
+
+          <p>In true OpenStack fashion there is a <a href="http://docs.openstack.org/user-guide/cli.html">Heat
+          command line client</a>.
+
+          To our biased eye, the command line tool seems more fully featured and
+
+          gives more detailed feedback than the dashboard, so we prefer to use it
+
+          when developing templates.</p>
+
+          <p>Instructions on installing the command line tools can be found
+
+          <a href="http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html">here</a>.</p>
+
+          <p>We will step through some the actions the command line tool can perform,
+
+          using one of the NeCTAR Heat sample templates.</p>
+
+          <p>To list all the stacks you have created do (don''t forget to source your
+
+          RC file before you start!):</p>
+
+          <p><code>bash
+
+          heat stack-list</code></p>
+
+          <p>Repeat the above command liberally as you step through the following
+          commands!</p>
+
+          <p>To validate the template (all one line):</p>
+
+          <p><code>bash
+
+          heat template-validate --template-url https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml</code></p>
+
+          <p>Then to use the template to create a stack named "teststack" (again,
+          all one line):</p>
+
+          <p><code>bash
+
+          heat create teststack --template-url=https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml
+          --parameters="InstanceType=m1.small;DBUsername=dbuser;DBPassword=verybadpassword;DBRootPassword=anotherverybadpassword;KeyName=nectar_dev"</code></p>
+
+          <p><em>PS</em>: Don''t forget to customise the command: e.g.: replace the
+          passwords with far
+
+          better ones, and also to change the key name to match one of your keys.
+
+          The to show all the stacks that have been created:</p>
+
+          <p><code>bash
+
+          heat stack-list</code></p>
+
+          <p>To show all details for the newly created stack:</p>
+
+          <p><code>bash
+
+          heat stack-show teststack</code></p>
+
+          <p>To list all the events that have occurred in the stacks life to date:</p>
+
+          <p><code>bash
+
+          heat event-list teststack</code></p>
+
+          <p>To drill down into a particular event, make a note of its id and replace
+
+          &lt;ID&gt; with it in the following command:</p>
+
+          <p><code>bash
+
+          heat event-show teststack WikiDatabase &lt;ID&gt;</code></p>
+
+          <p>To suspend the stack:</p>
+
+          <p><code>bash
+
+          heat action-suspend teststack</code></p>
+
+          <p>To resume it:</p>
+
+          <p><code>bash
+
+          heat action-resume teststack</code></p>
+
+          <p>To list the resources being used by the stack:</p>
+
+          <p><code>bash
+
+          heat resource-list teststack</code></p>
+
+          <p>To drill down on a particular resource:</p>
+
+          <p><code>bash
+
+          heat resource-show teststack WikiDatabase</code></p>
+
+          <p>To show the metadata associated with a particular resource:</p>
+
+          <p><code>bash
+
+          heat resource-metadata teststack WikiDatabase</code></p>
+
+          <p>To show the template that was used to create the stack:</p>
+
+          <p><code>bash
+
+          heat template-show teststack</code></p>
+
+          <p>And finally, to delete the stack, do:</p>
+
+          <p><code>bash
+
+          heat stack-delete teststack</code></p>'
+        folder:
+          category_id: 6000122279
+          created_at: '2015-09-03T01:28:02-04:00'
+          customer_folders: []
+          description: Heat
+          id: 6000190148
+          is_default: false
+          language_id: 6
+          name: Heat
+          parent_id: 6000190148
+          position: 5
+          updated_at: '2015-09-03T01:28:02-04:00'
+          visibility: 1
+        folder_id: 6000190148
+        hits: 0
+        id: 6000074218
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-06T19:44:43-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000074218
+        position: 5
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Heat Commandline Client
+        updated_at: '2015-10-06T19:44:43-04:00'
+        user_id: 6002464727
+  html: '<h1>The Heat command line client</h1>
+
+    <p>In true OpenStack fashion there is a <a href="http://docs.openstack.org/user-guide/cli.html">Heat
+    command line client</a>.
+
+    To our biased eye, the command line tool seems more fully featured and
+
+    gives more detailed feedback than the dashboard, so we prefer to use it
+
+    when developing templates.</p>
+
+    <p>Instructions on installing the command line tools can be found
+
+    <a href="http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html">here</a>.</p>
+
+    <p>We will step through some the actions the command line tool can perform,
+
+    using one of the NeCTAR Heat sample templates.</p>
+
+    <p>To list all the stacks you have created do (don''t forget to source your
+
+    RC file before you start!):</p>
+
+    <p><code>bash
+
+    heat stack-list</code></p>
+
+    <p>Repeat the above command liberally as you step through the following commands!</p>
+
+    <p>To validate the template (all one line):</p>
+
+    <p><code>bash
+
+    heat template-validate --template-url https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml</code></p>
+
+    <p>Then to use the template to create a stack named "teststack" (again, all one
+    line):</p>
+
+    <p><code>bash
+
+    heat create teststack --template-url=https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml
+    --parameters="InstanceType=m1.small;DBUsername=dbuser;DBPassword=verybadpassword;DBRootPassword=anotherverybadpassword;KeyName=nectar_dev"</code></p>
+
+    <p><em>PS</em>: Don''t forget to customise the command: e.g.: replace the passwords
+    with far
+
+    better ones, and also to change the key name to match one of your keys.
+
+    The to show all the stacks that have been created:</p>
+
+    <p><code>bash
+
+    heat stack-list</code></p>
+
+    <p>To show all details for the newly created stack:</p>
+
+    <p><code>bash
+
+    heat stack-show teststack</code></p>
+
+    <p>To list all the events that have occurred in the stacks life to date:</p>
+
+    <p><code>bash
+
+    heat event-list teststack</code></p>
+
+    <p>To drill down into a particular event, make a note of its id and replace
+
+    &lt;ID&gt; with it in the following command:</p>
+
+    <p><code>bash
+
+    heat event-show teststack WikiDatabase &lt;ID&gt;</code></p>
+
+    <p>To suspend the stack:</p>
+
+    <p><code>bash
+
+    heat action-suspend teststack</code></p>
+
+    <p>To resume it:</p>
+
+    <p><code>bash
+
+    heat action-resume teststack</code></p>
+
+    <p>To list the resources being used by the stack:</p>
+
+    <p><code>bash
+
+    heat resource-list teststack</code></p>
+
+    <p>To drill down on a particular resource:</p>
+
+    <p><code>bash
+
+    heat resource-show teststack WikiDatabase</code></p>
+
+    <p>To show the metadata associated with a particular resource:</p>
+
+    <p><code>bash
+
+    heat resource-metadata teststack WikiDatabase</code></p>
+
+    <p>To show the template that was used to create the stack:</p>
+
+    <p><code>bash
+
+    heat template-show teststack</code></p>
+
+    <p>And finally, to delete the stack, do:</p>
+
+    <p><code>bash
+
+    heat stack-delete teststack</code></p>'
+  parent: 42
+  sha1: 7f5681a9438808069ac9e0ba6b0a6f87a6d0177c
+  title: Heat Commandline Client
