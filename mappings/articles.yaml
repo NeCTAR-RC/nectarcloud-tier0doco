@@ -8047,3 +8047,417 @@
   parent: 42
   sha1: 7f5681a9438808069ac9e0ba6b0a6f87a6d0177c
   title: Heat Commandline Client
+63:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-08T00:39:43-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Manage instances \n As an NeCTAR Cloud administrative user,\
+          \ You can manage instances for users via\nNeCTAR Dashboard. You can perform\
+          \ many tasks such as view,\nterminate, reboot and create a snapshot from\
+          \ an instance, etc.  \n Control the state of an instance \n To manage and\
+          \ change the state of an instance, you can login to the NeCTAR\nDashboard\
+          \ and follow the below steps: \n \n \n login to Dashboard \n \n \n Authenticate\
+          \ yourself via AAF \n \n \n Click 'Instances' on the left side of the page\
+          \ and click 'Action' drop down\n list for an instance. You should see something\
+          \ similar as the below screenshot \n \n \n \n The drop down list includes\
+          \ all the available actions you can use to manage the\ninstance. The below\
+          \ gives a brief explanation about them: \n \n \n Create Snapshot, create\
+          \ a snapshot of instance. The snapshot will save all the\n state of instance\
+          \ at the time you taking the snapshot and it can be used an\n image to launch\
+          \ a new instance with all the saved state. Only primary disk is\n saved.\
+          \ \n \n \n Edit instance, change the name of the instance. \n \n \n Edit\
+          \ Security Groups, you can add/delete security groups associated with the\n\
+          \ instance. This allows your open/close ports after instance has been launched.\
+          \ \n \n \n Console, this action allows you to access the instance via the\
+          \ VNC console and\n allow your to access the instance via the web browser.\
+          \ \n \n \n View Log, this action allows you view the boot messages that\
+          \ normally displayed\n on the standard output (monitor). This is useful\
+          \ for debugging. \n \n \n Pause Instance, this action temporarily pauses\
+          \ the state of a running instance,\n it is useful for taking a snapshot.\
+          \ \n \n \n Suspend Instance, this action stops a running instance. The difference\
+          \ between\n pause and suspend is that pause is only for a shot period, all\
+          \ resources binded\n to an instance are still available and suspend is for\
+          \ long-term and resources may\n be removed. \n \n \n Soft Reboot Instance,\
+          \ this action allows users to reboot the running instance. \n \n \n Hard\
+          \ Reboot Instance, this action allows users to reboot the running instance.\n\
+          \ The difference between soft reboot and hard reboot are that soft reboot\
+          \ issues\n reboot signal to the running instance and will do a smooth reboot\
+          \ and the hard\n reboot simulates the reboot like pressing the computer\
+          \ power button. It is useful\n if the running instance is not responding\
+          \ to any commands. \n \n \n Rebuild Instance, use different image to build\
+          \ a new instance. The new instance\n maintains the same specification of\
+          \ the old instance such as cpus, rams and etc.\n Remember, this action will\
+          \ destroy all data in the instance and need to use with\n caution. \n \n\
+          \ \n Terminate Instance, permanently delete the instance and data is removed\
+          \ as well. \n \n \n You can refer to this document to see more information\
+          \ about\nmanaging instances. \n Create instance snapshots \n To create an\
+          \ snapshot, you can click 'Create Snapshot' from the above action list\n\
+          and you will see a pop-up window like below: \n \n Provide a meaningful\
+          \ name and the click 'Create Snapshot' button. \n Notes: You should always\
+          \ pause the instance before snapshot it. However, live\nsnapshot is also\
+          \ possible and you need to make sure the snapshot is consistent\nwith the\
+          \ instance as the snapshot doesn't capture the state of the memory. So\n\
+          before snapshot, you need to ensure that: \n \n \n running programs have\
+          \ written their contenst to disk \n \n \n the file system does not have\
+          \ any 'dirty' buffers \n \n \n For Linux user, you can execute sync to write\
+          \ dirty buffer to disk.\nIt is not sufficient to only use sync to get file\
+          \ system consistent. It is\nrecommend to use fsfreeze tool. In ubuntu, you\
+          \ can run sudo apt-get install util-linux\nto install the fsfreeze tool.\
+          \ \n To freeze a file system, you can run fsfreeze -f /mnt as a root user\n\
+          in a command line console, where /mnt is the file system mount point. \n\
+          \ After you created the snapshot, you can unfreeze the file system by executing\
+          \ fsfreeze -u /mnt\nwhere /mnt is the file system mount point. \n You can\
+          \ refer to Taking Snapshot for more information. \n Change security group\
+          \ \n You can click \"Edit Security groups\" from the drop down list to add/remove\n\
+          security group for a running instance. \n \n From the above screenshot,\
+          \ You can see the currently applied security groups are\nlisted on the right\
+          \ hand side and left hand side is a list of available security\ngroups.\
+          \ You can click the plus button to add the available security groups\nto\
+          \ the right hand side and click the minus button to remove a security group.\n\
+          Once you have done, you can click 'Save' button to save your changes.  \n\
+          \ Launch a VNC console \n Sometimes, you need to access your instance directly\
+          \ via a web browser and you\ncan do it by using the VNC console. The console\
+          \ provides a great way to access\nthe instance if you haven't open port\
+          \ for SSH. \n Click the \"console\" item from the drop down list and you\
+          \ should see a screenshot\nlike below: \n \n You can then click the 'Click\
+          \ here to show only console' and you should see the\nbelow screenshot: \n\
+          \ \n After the login prompt appears, you can type in username and password\
+          \ to login\nto the instance and perform any task as required. \n View log\
+          \ \n The console log provides very useful information that may be required\
+          \ in\ntroubleshooting issues. You can access the log by clicking \"view\
+          \ log\" item from\nthe action drop down list. After clicking, you should\
+          \ see the below screenshot: \n \n This gives you the latest system log messages,\
+          \ if you want to see the full logs,\nyou can click the 'View Full Log Button'.\
+          \ \n create and manage volumes \n You can attach volumes as persistent storage\
+          \ to instances. You can attach or\ndetach a volume from a instance at any\
+          \ time and it is also easy to create snapshot\nfrom or delete a volume.\
+          \ \n To create a volume, you can follow the below steps: \n \n \n Log in\
+          \ to the dashboard \n \n \n select the project from the CURRENT PROJECT\
+          \ on the Project tab \n \n \n On the Project tab, open the Compute tab and\
+          \ click Volumes category \n \n \n Click 'Create Volume' button \n \n \n\
+          \ In the pop-up window, you can enter or select the following values: \n\
+          \ \n \n Volume Name: name for the volume \n Description: description for\
+          \ the volume \n Type: Leave this field blank \n Size: The size of the volume\
+          \ in gibibytes \n Volume Source: Select one of the following options: \n\
+          \ No source, empty volume: An empty volume does not contain a file system\
+          \ or\n   a partition table \n Snapshot: If you choose this option, You can\
+          \ select the snapshot from the list \n Image: You can select the image from\
+          \ the list \n Volume: You can select the volume from the list \n \n \n Availability\
+          \ Zone: Select the Availability Zone from the list \n \n \n Click 'Create\
+          \ Volume' button \n \n \n The dashboard shows the volume on the Volumes\
+          \ tab. \n \n \n To attach a volume to an instance, you can follow the below\
+          \ steps:  \n \n \n Log in to the dashboard[dashboard ] \n \n \n select the\
+          \ project from the CURRENT PROJECT on the Project tab \n \n \n On the Project\
+          \ tab, open the Compute tab and click Volumes category \n \n \n Select the\
+          \ volume to add to an instance and in the action drop down list, \n click\
+          \ Edit Attachments \n \n \n In the Manage Volume Attachments dialog box,\
+          \ select an instance and click\n 'Attach Volume' button \n \n \n You can\
+          \ follow the below steps to detach a volume from an instance: \n \n \n Log\
+          \ in to the dashboard, choose a project, and click Volumes \n \n \n Select\
+          \ the volume and click Edit Attachments \n \n \n Click 'Detach Volume' button\
+          \ and confirm your changes \n \n \n You can follow the below steps to delete\
+          \ a volume: \n \n \n Log in to the dashboard, choose a project, and click\
+          \ Volumes \n \n \n Select the check boxes for the volumes that you want\
+          \ to delete. \n \n \n Click 'Delete Volumes' button and confirm your choice.\
+          \ \n \n \n Note: the data in its attached volumes is not destroyed after\
+          \ you delete a volume "
+        description: "<h2>Manage instances</h2>\n<p>As an NeCTAR Cloud administrative\
+          \ user, You can manage instances for users via\nNeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\"\
+          >Dashboard</a>. You can perform many tasks such as view,\nterminate, reboot\
+          \ and create a snapshot from an instance, etc. </p>\n<h3>Control the state\
+          \ of an instance</h3>\n<p>To manage and change the state of an instance,\
+          \ you can login to the NeCTAR\n<a href=\"https://dashboard.rc.nectar.org.au/\"\
+          >Dashboard</a> and follow the below steps:</p>\n<ul>\n<li>\n<p>login to\
+          \ <a href=\"https://dashboard.rc.nectar.org.au/\">Dashboard</a></p>\n</li>\n\
+          <li>\n<p>Authenticate yourself via AAF</p>\n</li>\n<li>\n<p>Click 'Instances'\
+          \ on the left side of the page and click 'Action' drop down\n list for an\
+          \ instance. You should see something similar as the below screenshot</p>\n\
+          </li>\n</ul>\n<p><img alt=\"instance management\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Instance%20Management--DOCID39/images/instance_management.png?raw=true\"\
+          ></p>\n<p>The drop down list includes all the available actions you can\
+          \ use to manage the\ninstance. The below gives a brief explanation about\
+          \ them:</p>\n<ul>\n<li>\n<p>Create Snapshot, create a snapshot of instance.\
+          \ The snapshot will save all the\n state of instance at the time you taking\
+          \ the snapshot and it can be used an\n image to launch a new instance with\
+          \ all the saved state. Only primary disk is\n saved.</p>\n</li>\n<li>\n\
+          <p>Edit instance, change the name of the instance.</p>\n</li>\n<li>\n<p>Edit\
+          \ Security Groups, you can add/delete security groups associated with the\n\
+          \ instance. This allows your open/close ports after instance has been launched.</p>\n\
+          </li>\n<li>\n<p>Console, this action allows you to access the instance via\
+          \ the VNC console and\n allow your to access the instance via the web browser.</p>\n\
+          </li>\n<li>\n<p>View Log, this action allows you view the boot messages\
+          \ that normally displayed\n on the standard output (monitor). This is useful\
+          \ for debugging.</p>\n</li>\n<li>\n<p>Pause Instance, this action temporarily\
+          \ pauses the state of a running instance,\n it is useful for taking a snapshot.</p>\n\
+          </li>\n<li>\n<p>Suspend Instance, this action stops a running instance.\
+          \ The difference between\n pause and suspend is that pause is only for a\
+          \ shot period, all resources binded\n to an instance are still available\
+          \ and suspend is for long-term and resources may\n be removed.</p>\n</li>\n\
+          <li>\n<p>Soft Reboot Instance, this action allows users to reboot the running\
+          \ instance.</p>\n</li>\n<li>\n<p>Hard Reboot Instance, this action allows\
+          \ users to reboot the running instance.\n The difference between soft reboot\
+          \ and hard reboot are that soft reboot issues\n reboot signal to the running\
+          \ instance and will do a smooth reboot and the hard\n reboot simulates the\
+          \ reboot like pressing the computer power button. It is useful\n if the\
+          \ running instance is not responding to any commands.</p>\n</li>\n<li>\n\
+          <p>Rebuild Instance, use different image to build a new instance. The new\
+          \ instance\n maintains the same specification of the old instance such as\
+          \ cpus, rams and etc.\n Remember, this action will destroy all data in the\
+          \ instance and need to use with\n caution.</p>\n</li>\n<li>\n<p>Terminate\
+          \ Instance, permanently delete the instance and data is removed as well.</p>\n\
+          </li>\n</ul>\n<p>You can refer to this <a href=\"http://docs.openstack.org/user-guide/dashboard_launch_instances.html\"\
+          >document</a> to see more information about\nmanaging instances.</p>\n<h3>Create\
+          \ instance snapshots</h3>\n<p>To create an snapshot, you can click 'Create\
+          \ Snapshot' from the above action list\nand you will see a pop-up window\
+          \ like below:</p>\n<p><img alt=\"snapshot\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Instance%20Management--DOCID39/images/snapshot.png?raw=true\"\
+          ></p>\n<p>Provide a meaningful name and the click 'Create Snapshot' button.</p>\n\
+          <p>Notes: You should always pause the instance before snapshot it. However,\
+          \ live\nsnapshot is also possible and you need to make sure the snapshot\
+          \ is consistent\nwith the instance as the snapshot doesn't capture the state\
+          \ of the memory. So\nbefore snapshot, you need to ensure that:</p>\n<ul>\n\
+          <li>\n<p>running programs have written their contenst to disk</p>\n</li>\n\
+          <li>\n<p>the file system does not have any 'dirty' buffers</p>\n</li>\n\
+          </ul>\n<p>For Linux user, you can execute <code>sync</code> to write dirty\
+          \ buffer to disk.\nIt is not sufficient to only use sync to get file system\
+          \ consistent. It is\nrecommend to use fsfreeze tool. In ubuntu, you can\
+          \ run <code>sudo apt-get install util-linux</code>\nto install the fsfreeze\
+          \ tool.</p>\n<p>To freeze a file system, you can run <code>fsfreeze -f /mnt</code>\
+          \ as a root user\nin a command line console, where /mnt is the file system\
+          \ mount point.</p>\n<p>After you created the snapshot, you can unfreeze\
+          \ the file system by executing <code>fsfreeze -u /mnt</code>\nwhere /mnt\
+          \ is the file system mount point.</p>\n<p>You can refer to <a href=\"http://docs.openstack.org/openstack-ops/content/snapshots.html\"\
+          >Taking Snapshot</a> for more information.</p>\n<h3>Change security group</h3>\n\
+          <p>You can click \"Edit Security groups\" from the drop down list to add/remove\n\
+          security group for a running instance.</p>\n<p><img alt=\"instance management\"\
+          \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Instance%20Management--DOCID39/images/security_group.png?raw=true\"\
+          ></p>\n<p>From the above screenshot, You can see the currently applied security\
+          \ groups are\nlisted on the right hand side and left hand side is a list\
+          \ of available security\ngroups. You can click the plus button to add the\
+          \ available security groups\nto the right hand side and click the minus\
+          \ button to remove a security group.\nOnce you have done, you can click\
+          \ 'Save' button to save your changes. </p>\n<h3>Launch a VNC console</h3>\n\
+          <p>Sometimes, you need to access your instance directly via a web browser\
+          \ and you\ncan do it by using the VNC console. The console provides a great\
+          \ way to access\nthe instance if you haven't open port for SSH.</p>\n<p>Click\
+          \ the \"console\" item from the drop down list and you should see a screenshot\n\
+          like below:</p>\n<p><img alt=\"instance management\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Instance%20Management--DOCID39/images/console1.png?raw=true\"\
+          ></p>\n<p>You can then click the 'Click here to show only console' and you\
+          \ should see the\nbelow screenshot:</p>\n<p><img alt=\"instance management\"\
+          \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Instance%20Management--DOCID39/images/console2.png?raw=true\"\
+          ></p>\n<p>After the login prompt appears, you can type in username and password\
+          \ to login\nto the instance and perform any task as required.</p>\n<h3>View\
+          \ log</h3>\n<p>The console log provides very useful information that may\
+          \ be required in\ntroubleshooting issues. You can access the log by clicking\
+          \ \"view log\" item from\nthe action drop down list. After clicking, you\
+          \ should see the below screenshot:</p>\n<p><img alt=\"instance management\"\
+          \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Instance%20Management--DOCID39/images/log.png?raw=true\"\
+          ></p>\n<p>This gives you the latest system log messages, if you want to\
+          \ see the full logs,\nyou can click the 'View Full Log Button'.</p>\n<h3>create\
+          \ and manage volumes</h3>\n<p>You can attach volumes as persistent storage\
+          \ to instances. You can attach or\ndetach a volume from a instance at any\
+          \ time and it is also easy to create snapshot\nfrom or delete a volume.</p>\n\
+          <p>To create a volume, you can follow the below steps:</p>\n<ul>\n<li>\n\
+          <p>Log in to the <a href=\"https://dashboard.rc.nectar.org.au/\">dashboard</a></p>\n\
+          </li>\n<li>\n<p>select the project from the CURRENT PROJECT on the Project\
+          \ tab</p>\n</li>\n<li>\n<p>On the Project tab, open the Compute tab and\
+          \ click Volumes category</p>\n</li>\n<li>\n<p>Click 'Create Volume' button</p>\n\
+          </li>\n<li>\n<p>In the pop-up window, you can enter or select the following\
+          \ values:</p>\n</li>\n</ul>\n<p>Volume Name: name for the volume</p>\n<p>Description:\
+          \ description for the volume</p>\n<p>Type: Leave this field blank</p>\n\
+          <p>Size: The size of the volume in gibibytes</p>\n<p>Volume Source: Select\
+          \ one of the following options:</p>\n<p>No source, empty volume: An empty\
+          \ volume does not contain a file system or\n   a partition table</p>\n<p>Snapshot:\
+          \ If you choose this option, You can select the snapshot from the list</p>\n\
+          <p>Image: You can select the image from the list</p>\n<p>Volume: You can\
+          \ select the volume from the list</p>\n<ul>\n<li>\n<p>Availability Zone:\
+          \ Select the Availability Zone from the list</p>\n</li>\n<li>\n<p>Click\
+          \ 'Create Volume' button</p>\n</li>\n<li>\n<p>The dashboard shows the volume\
+          \ on the Volumes tab.</p>\n</li>\n</ul>\n<p>To attach a volume to an instance,\
+          \ you can follow the below steps: </p>\n<ul>\n<li>\n<p>Log in to the <a\
+          \ href=\"https://dashboard.rc.nectar.org.au/\">dashboard</a>[dashboard ]</p>\n\
+          </li>\n<li>\n<p>select the project from the CURRENT PROJECT on the Project\
+          \ tab</p>\n</li>\n<li>\n<p>On the Project tab, open the Compute tab and\
+          \ click Volumes category</p>\n</li>\n<li>\n<p>Select the volume to add to\
+          \ an instance and in the action drop down list, \n click Edit Attachments</p>\n\
+          </li>\n<li>\n<p>In the Manage Volume Attachments dialog box, select an instance\
+          \ and click\n 'Attach Volume' button</p>\n</li>\n</ul>\n<p>You can follow\
+          \ the below steps to detach a volume from an instance:</p>\n<ul>\n<li>\n\
+          <p>Log in to the <a href=\"https://dashboard.rc.nectar.org.au/\">dashboard</a>,\
+          \ choose a project, and click Volumes</p>\n</li>\n<li>\n<p>Select the volume\
+          \ and click Edit Attachments</p>\n</li>\n<li>\n<p>Click 'Detach Volume'\
+          \ button and confirm your changes</p>\n</li>\n</ul>\n<p>You can follow the\
+          \ below steps to delete a volume:</p>\n<ul>\n<li>\n<p>Log in to the <a href=\"\
+          https://dashboard.rc.nectar.org.au/\">dashboard</a>, choose a project, and\
+          \ click Volumes</p>\n</li>\n<li>\n<p>Select the check boxes for the volumes\
+          \ that you want to delete.</p>\n</li>\n<li>\n<p>Click 'Delete Volumes' button\
+          \ and confirm your choice.</p>\n</li>\n</ul>\n<p>Note: the data in its attached\
+          \ volumes is not destroyed after you delete a volume</p>"
+        folder:
+          category_id: 6000122279
+          created_at: '2015-09-03T01:27:59-04:00'
+          customer_folders: []
+          description: Instance Management
+          id: 6000190145
+          is_default: false
+          language_id: 6
+          name: Instance Management
+          parent_id: 6000190145
+          position: 2
+          updated_at: '2015-09-03T01:27:59-04:00'
+          visibility: 1
+        folder_id: 6000190145
+        hits: 0
+        id: 6000075745
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-08T00:39:43-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000075745
+        position: 2
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Getting Started
+        updated_at: '2015-10-08T00:39:43-04:00'
+        user_id: 6002464727
+  html: "<h2>Manage instances</h2>\n<p>As an NeCTAR Cloud administrative user, You\
+    \ can manage instances for users via\nNeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\"\
+    >Dashboard</a>. You can perform many tasks such as view,\nterminate, reboot and\
+    \ create a snapshot from an instance, etc. </p>\n<h3>Control the state of an instance</h3>\n\
+    <p>To manage and change the state of an instance, you can login to the NeCTAR\n\
+    <a href=\"https://dashboard.rc.nectar.org.au/\">Dashboard</a> and follow the below\
+    \ steps:</p>\n<ul>\n<li>\n<p>login to <a href=\"https://dashboard.rc.nectar.org.au/\"\
+    >Dashboard</a></p>\n</li>\n<li>\n<p>Authenticate yourself via AAF</p>\n</li>\n\
+    <li>\n<p>Click 'Instances' on the left side of the page and click 'Action' drop\
+    \ down\n list for an instance. You should see something similar as the below screenshot</p>\n\
+    </li>\n</ul>\n<p><img alt=\"instance management\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Instance Management--DOCID39/images/instance_management.png?raw=true\"\
+    ></p>\n<p>The drop down list includes all the available actions you can use to\
+    \ manage the\ninstance. The below gives a brief explanation about them:</p>\n\
+    <ul>\n<li>\n<p>Create Snapshot, create a snapshot of instance. The snapshot will\
+    \ save all the\n state of instance at the time you taking the snapshot and it\
+    \ can be used an\n image to launch a new instance with all the saved state. Only\
+    \ primary disk is\n saved.</p>\n</li>\n<li>\n<p>Edit instance, change the name\
+    \ of the instance.</p>\n</li>\n<li>\n<p>Edit Security Groups, you can add/delete\
+    \ security groups associated with the\n instance. This allows your open/close\
+    \ ports after instance has been launched.</p>\n</li>\n<li>\n<p>Console, this action\
+    \ allows you to access the instance via the VNC console and\n allow your to access\
+    \ the instance via the web browser.</p>\n</li>\n<li>\n<p>View Log, this action\
+    \ allows you view the boot messages that normally displayed\n on the standard\
+    \ output (monitor). This is useful for debugging.</p>\n</li>\n<li>\n<p>Pause Instance,\
+    \ this action temporarily pauses the state of a running instance,\n it is useful\
+    \ for taking a snapshot.</p>\n</li>\n<li>\n<p>Suspend Instance, this action stops\
+    \ a running instance. The difference between\n pause and suspend is that pause\
+    \ is only for a shot period, all resources binded\n to an instance are still available\
+    \ and suspend is for long-term and resources may\n be removed.</p>\n</li>\n<li>\n\
+    <p>Soft Reboot Instance, this action allows users to reboot the running instance.</p>\n\
+    </li>\n<li>\n<p>Hard Reboot Instance, this action allows users to reboot the running\
+    \ instance.\n The difference between soft reboot and hard reboot are that soft\
+    \ reboot issues\n reboot signal to the running instance and will do a smooth reboot\
+    \ and the hard\n reboot simulates the reboot like pressing the computer power\
+    \ button. It is useful\n if the running instance is not responding to any commands.</p>\n\
+    </li>\n<li>\n<p>Rebuild Instance, use different image to build a new instance.\
+    \ The new instance\n maintains the same specification of the old instance such\
+    \ as cpus, rams and etc.\n Remember, this action will destroy all data in the\
+    \ instance and need to use with\n caution.</p>\n</li>\n<li>\n<p>Terminate Instance,\
+    \ permanently delete the instance and data is removed as well.</p>\n</li>\n</ul>\n\
+    <p>You can refer to this <a href=\"http://docs.openstack.org/user-guide/dashboard_launch_instances.html\"\
+    >document</a> to see more information about\nmanaging instances.</p>\n<h3>Create\
+    \ instance snapshots</h3>\n<p>To create an snapshot, you can click 'Create Snapshot'\
+    \ from the above action list\nand you will see a pop-up window like below:</p>\n\
+    <p><img alt=\"snapshot\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Instance Management--DOCID39/images/snapshot.png?raw=true\"\
+    ></p>\n<p>Provide a meaningful name and the click 'Create Snapshot' button.</p>\n\
+    <p>Notes: You should always pause the instance before snapshot it. However, live\n\
+    snapshot is also possible and you need to make sure the snapshot is consistent\n\
+    with the instance as the snapshot doesn't capture the state of the memory. So\n\
+    before snapshot, you need to ensure that:</p>\n<ul>\n<li>\n<p>running programs\
+    \ have written their contenst to disk</p>\n</li>\n<li>\n<p>the file system does\
+    \ not have any 'dirty' buffers</p>\n</li>\n</ul>\n<p>For Linux user, you can execute\
+    \ <code>sync</code> to write dirty buffer to disk.\nIt is not sufficient to only\
+    \ use sync to get file system consistent. It is\nrecommend to use fsfreeze tool.\
+    \ In ubuntu, you can run <code>sudo apt-get install util-linux</code>\nto install\
+    \ the fsfreeze tool.</p>\n<p>To freeze a file system, you can run <code>fsfreeze\
+    \ -f /mnt</code> as a root user\nin a command line console, where /mnt is the\
+    \ file system mount point.</p>\n<p>After you created the snapshot, you can unfreeze\
+    \ the file system by executing <code>fsfreeze -u /mnt</code>\nwhere /mnt is the\
+    \ file system mount point.</p>\n<p>You can refer to <a href=\"http://docs.openstack.org/openstack-ops/content/snapshots.html\"\
+    >Taking Snapshot</a> for more information.</p>\n<h3>Change security group</h3>\n\
+    <p>You can click \"Edit Security groups\" from the drop down list to add/remove\n\
+    security group for a running instance.</p>\n<p><img alt=\"instance management\"\
+    \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Instance Management--DOCID39/images/security_group.png?raw=true\"\
+    ></p>\n<p>From the above screenshot, You can see the currently applied security\
+    \ groups are\nlisted on the right hand side and left hand side is a list of available\
+    \ security\ngroups. You can click the plus button to add the available security\
+    \ groups\nto the right hand side and click the minus button to remove a security\
+    \ group.\nOnce you have done, you can click 'Save' button to save your changes.\
+    \ </p>\n<h3>Launch a VNC console</h3>\n<p>Sometimes, you need to access your instance\
+    \ directly via a web browser and you\ncan do it by using the VNC console. The\
+    \ console provides a great way to access\nthe instance if you haven't open port\
+    \ for SSH.</p>\n<p>Click the \"console\" item from the drop down list and you\
+    \ should see a screenshot\nlike below:</p>\n<p><img alt=\"instance management\"\
+    \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Instance Management--DOCID39/images/console1.png?raw=true\"\
+    ></p>\n<p>You can then click the 'Click here to show only console' and you should\
+    \ see the\nbelow screenshot:</p>\n<p><img alt=\"instance management\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Instance Management--DOCID39/images/console2.png?raw=true\"\
+    ></p>\n<p>After the login prompt appears, you can type in username and password\
+    \ to login\nto the instance and perform any task as required.</p>\n<h3>View log</h3>\n\
+    <p>The console log provides very useful information that may be required in\n\
+    troubleshooting issues. You can access the log by clicking \"view log\" item from\n\
+    the action drop down list. After clicking, you should see the below screenshot:</p>\n\
+    <p><img alt=\"instance management\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Instance Management--DOCID39/images/log.png?raw=true\"></p>\n\
+    <p>This gives you the latest system log messages, if you want to see the full\
+    \ logs,\nyou can click the 'View Full Log Button'.</p>\n<h3>create and manage\
+    \ volumes</h3>\n<p>You can attach volumes as persistent storage to instances.\
+    \ You can attach or\ndetach a volume from a instance at any time and it is also\
+    \ easy to create snapshot\nfrom or delete a volume.</p>\n<p>To create a volume,\
+    \ you can follow the below steps:</p>\n<ul>\n<li>\n<p>Log in to the <a href=\"\
+    https://dashboard.rc.nectar.org.au/\">dashboard</a></p>\n</li>\n<li>\n<p>select\
+    \ the project from the CURRENT PROJECT on the Project tab</p>\n</li>\n<li>\n<p>On\
+    \ the Project tab, open the Compute tab and click Volumes category</p>\n</li>\n\
+    <li>\n<p>Click 'Create Volume' button</p>\n</li>\n<li>\n<p>In the pop-up window,\
+    \ you can enter or select the following values:</p>\n</li>\n</ul>\n<p>Volume Name:\
+    \ name for the volume</p>\n<p>Description: description for the volume</p>\n<p>Type:\
+    \ Leave this field blank</p>\n<p>Size: The size of the volume in gibibytes</p>\n\
+    <p>Volume Source: Select one of the following options:</p>\n<p>No source, empty\
+    \ volume: An empty volume does not contain a file system or\n   a partition table</p>\n\
+    <p>Snapshot: If you choose this option, You can select the snapshot from the list</p>\n\
+    <p>Image: You can select the image from the list</p>\n<p>Volume: You can select\
+    \ the volume from the list</p>\n<ul>\n<li>\n<p>Availability Zone: Select the Availability\
+    \ Zone from the list</p>\n</li>\n<li>\n<p>Click 'Create Volume' button</p>\n</li>\n\
+    <li>\n<p>The dashboard shows the volume on the Volumes tab.</p>\n</li>\n</ul>\n\
+    <p>To attach a volume to an instance, you can follow the below steps: </p>\n<ul>\n\
+    <li>\n<p>Log in to the <a href=\"https://dashboard.rc.nectar.org.au/\">dashboard</a>[dashboard\
+    \ ]</p>\n</li>\n<li>\n<p>select the project from the CURRENT PROJECT on the Project\
+    \ tab</p>\n</li>\n<li>\n<p>On the Project tab, open the Compute tab and click\
+    \ Volumes category</p>\n</li>\n<li>\n<p>Select the volume to add to an instance\
+    \ and in the action drop down list, \n click Edit Attachments</p>\n</li>\n<li>\n\
+    <p>In the Manage Volume Attachments dialog box, select an instance and click\n\
+    \ 'Attach Volume' button</p>\n</li>\n</ul>\n<p>You can follow the below steps\
+    \ to detach a volume from an instance:</p>\n<ul>\n<li>\n<p>Log in to the <a href=\"\
+    https://dashboard.rc.nectar.org.au/\">dashboard</a>, choose a project, and click\
+    \ Volumes</p>\n</li>\n<li>\n<p>Select the volume and click Edit Attachments</p>\n\
+    </li>\n<li>\n<p>Click 'Detach Volume' button and confirm your changes</p>\n</li>\n\
+    </ul>\n<p>You can follow the below steps to delete a volume:</p>\n<ul>\n<li>\n\
+    <p>Log in to the <a href=\"https://dashboard.rc.nectar.org.au/\">dashboard</a>,\
+    \ choose a project, and click Volumes</p>\n</li>\n<li>\n<p>Select the check boxes\
+    \ for the volumes that you want to delete.</p>\n</li>\n<li>\n<p>Click 'Delete\
+    \ Volumes' button and confirm your choice.</p>\n</li>\n</ul>\n<p>Note: the data\
+    \ in its attached volumes is not destroyed after you delete a volume</p>"
+  parent: 39
+  sha1: 8c94a571d0b252ef55690b85f90fccc10b695f81
+  title: Getting Started
