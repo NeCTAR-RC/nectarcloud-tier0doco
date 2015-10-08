@@ -2318,7 +2318,8 @@
           \ pages offer more in depth technical information on using Heat in\nthe\
           \ NeCTAR cloud.</p>\n<ul>\n<li>\n<a href=\"Introduction%20to%20YAML--DOCID48.md\"\
           >Enough YAML to read a template</a> (useful if you don't know YAML)</li>\n\
-          <li>A walk through of a YAML template</li>\n<li>Actions that can be performed</li>\n\
+          <li><a href=\"Heat%20Template%20Walk%20Through--DOCID47.md\">A walk through\
+          \ of a YAML template</a></li>\n<li>Actions that can be performed</li>\n\
           <li><a href=\"Heat%20Commandline%20Client.md\">The command line client</a></li>\n\
           <li>The dashboard</li>\n<li>Preparing your images - you need more than just\
           \ cloud-init!</li>\n<li>Good practices</li>\n<li><a href=\"Heat%20Debugging.md\"\
@@ -2351,7 +2352,7 @@
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-06T19:44:41-04:00'
+        modified_at: '2015-10-08T02:00:25-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055383
@@ -2364,7 +2365,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction to HEAT
-        updated_at: '2015-10-06T19:44:41-04:00'
+        updated_at: '2015-10-08T02:00:25-04:00'
         user_id: 6002464727
   html: "<h1><img alt=\"flame logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Heat--DOCID42/images/glossy_flame.png?raw=true\"> Heat</h1>\n\
@@ -2406,22 +2407,22 @@
     \ will be removed\nfrom the Heat database</p>\n<h2>More information</h2>\n<p>The\
     \ following pages offer more in depth technical information on using Heat in\n\
     the NeCTAR cloud.</p>\n<ul>\n<li><a href=\"Introduction to YAML--DOCID48.md\"\
-    >Enough YAML to read a template</a> (useful if you don't know YAML)</li>\n<li>A\
-    \ walk through of a YAML template</li>\n<li>Actions that can be performed</li>\n\
-    <li><a href=\"Heat Commandline Client.md\">The command line client</a></li>\n\
-    <li>The dashboard</li>\n<li>Preparing your images - you need more than just cloud-init!</li>\n\
-    <li>Good practices</li>\n<li><a href=\"Heat Debugging.md\">Debugging</a></li>\n\
-    <li>Oddities and gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
-    >Supported resources</a></li>\n</ul>\n<h2>Further links</h2>\n<ul>\n<li><a href=\"\
-    https://github.com/NeCTAR-RC/heat-templates\">NeCTAR sample templates</a> -\n\
-    \  a set of templates that have been run against the NeCTAR cloud.</li>\n<li>The\
-    \ OpenStack End User Guide <a href=\"http://docs.openstack.org/user-guide/dashboard_stacks.html\"\
+    >Enough YAML to read a template</a> (useful if you don't know YAML)</li>\n<li><a\
+    \ href=\"Heat Template Walk Through--DOCID47.md\">A walk through of a YAML template</a></li>\n\
+    <li>Actions that can be performed</li>\n<li><a href=\"Heat Commandline Client.md\"\
+    >The command line client</a></li>\n<li>The dashboard</li>\n<li>Preparing your\
+    \ images - you need more than just cloud-init!</li>\n<li>Good practices</li>\n\
+    <li><a href=\"Heat Debugging.md\">Debugging</a></li>\n<li>Oddities and gotcha's</li>\n\
+    <li><a href=\"https://github.com/NeCTAR-RC/heat-templates\">Supported resources</a></li>\n\
+    </ul>\n<h2>Further links</h2>\n<ul>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
+    >NeCTAR sample templates</a> -\n  a set of templates that have been run against\
+    \ the NeCTAR cloud.</li>\n<li>The OpenStack End User Guide <a href=\"http://docs.openstack.org/user-guide/dashboard_stacks.html\"\
     >Heat</a>\n  page.</li>\n<li>The Heat <a href=\"https://wiki.openstack.org/wiki/Heat\"\
     >wiki</a></li>\n<li>The Heat <a href=\"http://docs.openstack.org/developer/heat/template_guide/\"\
     >template guide</a></li>\n<li>The <a href=\"http://docs.openstack.org/user-guide/cli_create_and_manage_stacks.html\"\
     >command line client</a></li>\n</ul>"
   parent: 42
-  sha1: cbda17ebff272322b1916c88b56742453e037fb1
+  sha1: 3c3044972ab3a629ccaca6b5236c0ba8adb41eb6
   title: Introduction to HEAT
 47:
   freshdesk:
