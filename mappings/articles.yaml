@@ -2321,9 +2321,10 @@
           <li><a href=\"Heat%20Template%20Walk%20Through--DOCID47.md\">A walk through\
           \ of a YAML template</a></li>\n<li>Actions that can be performed</li>\n\
           <li><a href=\"Heat%20Commandline%20Client.md\">The command line client</a></li>\n\
-          <li>The dashboard</li>\n<li>Preparing your images - you need more than just\
-          \ cloud-init!</li>\n<li>Good practices</li>\n<li><a href=\"Heat%20Debugging.md\"\
-          >Debugging</a></li>\n<li>Oddities and gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
+          <li><a href=\"Heat%20Dashboard%20Introduction.md\">The dashboard</a></li>\n\
+          <li>Preparing your images - you need more than just cloud-init!</li>\n<li>Good\
+          \ practices</li>\n<li><a href=\"Heat%20Debugging.md\">Debugging</a></li>\n\
+          <li>Oddities and gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
           >Supported resources</a></li>\n</ul>\n<h2>Further links</h2>\n<ul>\n<li>\n\
           <a href=\"https://github.com/NeCTAR-RC/heat-templates\">NeCTAR sample templates</a>\
           \ -\n  a set of templates that have been run against the NeCTAR cloud.</li>\n\
@@ -2352,7 +2353,7 @@
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-08T02:00:25-04:00'
+        modified_at: '2015-10-08T19:42:04-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055383
@@ -2365,7 +2366,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction to HEAT
-        updated_at: '2015-10-08T02:00:25-04:00'
+        updated_at: '2015-10-08T19:42:04-04:00'
         user_id: 6002464727
   html: "<h1><img alt=\"flame logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Heat--DOCID42/images/glossy_flame.png?raw=true\"> Heat</h1>\n\
@@ -2410,19 +2411,20 @@
     >Enough YAML to read a template</a> (useful if you don't know YAML)</li>\n<li><a\
     \ href=\"Heat Template Walk Through--DOCID47.md\">A walk through of a YAML template</a></li>\n\
     <li>Actions that can be performed</li>\n<li><a href=\"Heat Commandline Client.md\"\
-    >The command line client</a></li>\n<li>The dashboard</li>\n<li>Preparing your\
-    \ images - you need more than just cloud-init!</li>\n<li>Good practices</li>\n\
-    <li><a href=\"Heat Debugging.md\">Debugging</a></li>\n<li>Oddities and gotcha's</li>\n\
-    <li><a href=\"https://github.com/NeCTAR-RC/heat-templates\">Supported resources</a></li>\n\
-    </ul>\n<h2>Further links</h2>\n<ul>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
-    >NeCTAR sample templates</a> -\n  a set of templates that have been run against\
-    \ the NeCTAR cloud.</li>\n<li>The OpenStack End User Guide <a href=\"http://docs.openstack.org/user-guide/dashboard_stacks.html\"\
+    >The command line client</a></li>\n<li><a href=\"Heat Dashboard Introduction.md\"\
+    >The dashboard</a></li>\n<li>Preparing your images - you need more than just cloud-init!</li>\n\
+    <li>Good practices</li>\n<li><a href=\"Heat Debugging.md\">Debugging</a></li>\n\
+    <li>Oddities and gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
+    >Supported resources</a></li>\n</ul>\n<h2>Further links</h2>\n<ul>\n<li><a href=\"\
+    https://github.com/NeCTAR-RC/heat-templates\">NeCTAR sample templates</a> -\n\
+    \  a set of templates that have been run against the NeCTAR cloud.</li>\n<li>The\
+    \ OpenStack End User Guide <a href=\"http://docs.openstack.org/user-guide/dashboard_stacks.html\"\
     >Heat</a>\n  page.</li>\n<li>The Heat <a href=\"https://wiki.openstack.org/wiki/Heat\"\
     >wiki</a></li>\n<li>The Heat <a href=\"http://docs.openstack.org/developer/heat/template_guide/\"\
     >template guide</a></li>\n<li>The <a href=\"http://docs.openstack.org/user-guide/cli_create_and_manage_stacks.html\"\
     >command line client</a></li>\n</ul>"
   parent: 42
-  sha1: 3c3044972ab3a629ccaca6b5236c0ba8adb41eb6
+  sha1: 333e4497817012c8348fd0f0066c0c172c8ea20e
   title: Introduction to HEAT
 47:
   freshdesk:
@@ -9273,3 +9275,421 @@
   parent: 39
   sha1: 343ee2b5838147e62152f2381afcd028ada5ae2c
   title: Trouble Shotting
+66:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-08T19:42:06-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Documentation \n The following documentations provides reference\
+          \ and guidance information for the\nNova API: \n \n \n Nova Python API reference\
+          \ \n \n \n Nova Command Line API Reference  \n \n \n Nova API Reference\
+          \ \n \n \n The following documentations explain how to configure and run\
+          \ Nova: \n \n \n Admin guide for Compute \n \n \n Operation guide for Compute\
+          \ \n \n \n Security guide for Compute \n \n \n NeCTAR Support \n If you\
+          \ have a problem and you cannot resolve it, you can always go to NecTAR\n\
+          HelpDesk to log a support ticket and the NeCTAR support staff are\nmore\
+          \ than happy to help you. "
+        description: '<h2>Documentation</h2>
+
+          <p>The following documentations provides reference and guidance information
+          for the
+
+          Nova API:</p>
+
+          <ul>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/developer/nova/">Nova Python API reference</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/cli-reference/content/novaclient_commands.html">Nova
+          Command Line API Reference</a> </p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://developer.openstack.org/api-ref-compute-v2.1.html">Nova
+          API Reference</a></p>
+
+          </li>
+
+          </ul>
+
+          <p>The following documentations explain how to configure and run Nova:</p>
+
+          <ul>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/admin-guide-cloud/compute.html">Admin
+          guide for Compute</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/openstack-ops/content/instances.html">Operation
+          guide for Compute</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/security-guide/compute.html">Security
+          guide for Compute</a></p>
+
+          </li>
+
+          </ul>
+
+          <h2>NeCTAR Support</h2>
+
+          <p>If you have a problem and you cannot resolve it, you can always go to
+          NecTAR
+
+          <a href="https://support.nectar.org.au/support/home">HelpDesk</a> to log
+          a support ticket and the NeCTAR support staff are
+
+          more than happy to help you.</p>'
+        folder:
+          category_id: 6000122279
+          created_at: '2015-09-03T01:27:59-04:00'
+          customer_folders: []
+          description: Instance Management
+          id: 6000190145
+          is_default: false
+          language_id: 6
+          name: Instance Management
+          parent_id: 6000190145
+          position: 2
+          updated_at: '2015-09-03T01:27:59-04:00'
+          visibility: 1
+        folder_id: 6000190145
+        hits: 0
+        id: 6000076073
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-08T19:42:06-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000076073
+        position: 5
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: More Info
+        updated_at: '2015-10-08T19:42:06-04:00'
+        user_id: 6002464727
+  html: '<h2>Documentation</h2>
+
+    <p>The following documentations provides reference and guidance information for
+    the
+
+    Nova API:</p>
+
+    <ul>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/developer/nova/">Nova Python API reference</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/cli-reference/content/novaclient_commands.html">Nova
+    Command Line API Reference</a> </p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://developer.openstack.org/api-ref-compute-v2.1.html">Nova API
+    Reference</a></p>
+
+    </li>
+
+    </ul>
+
+    <p>The following documentations explain how to configure and run Nova:</p>
+
+    <ul>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/admin-guide-cloud/compute.html">Admin guide
+    for Compute</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/openstack-ops/content/instances.html">Operation
+    guide for Compute</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/security-guide/compute.html">Security guide
+    for Compute</a></p>
+
+    </li>
+
+    </ul>
+
+    <h2>NeCTAR Support</h2>
+
+    <p>If you have a problem and you cannot resolve it, you can always go to NecTAR
+
+    <a href="https://support.nectar.org.au/support/home">HelpDesk</a> to log a support
+    ticket and the NeCTAR support staff are
+
+    more than happy to help you.</p>'
+  parent: 39
+  sha1: 7560ab3a1020eea2385f16461c2acf7304615b14
+  title: More Info
+67:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-08T19:42:07-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Heat: the dashboard \n On the research cloud dashboard project\
+          \ panel\nthere is a side menu heading named \"Orchestration\". It has a\
+          \ sub menu entry\ntitled \"Stacks\": \n \n When you select it you will see\
+          \ a list of the stacks that you have created, and\nto the top right, a button\
+          \ pair, one labelled \"+ Launch Stack\", the other\n\"\u2716 Delete Stack\"\
+          : \n \n Pressing the \"+ Launch Stack\" button creates a dialogue that invites\
+          \ you to\nprovide a Heat template. \n \n The dialogue offers you three ways\
+          \ of providing a template via the \"Template Source\"\ndrop down: \n \n\
+          \ \nURL - The template can be reached via a web browser, and you are going\
+          \ to\n  provide the URL it can be found at; \n \nFile - You are going to\
+          \ upload the template from your local machine; \n \nDirect Input - You will\
+          \ type the template in by hand. \n \n Dependent on which selection you make\
+          \ in the \"Template Source\" drop down, the\ndialogue will reconfigure itself\
+          \ to allow you to provide the required information. \n The dialogue also\
+          \ offers you the chance to provide an \"Environment Source\".\nThis is also\
+          \ in the form of a drop down, but here the choices are limited\nto: \n \n\
+          \ \nFile - You are going to upload the environment from your local machine;\
+          \ \n \nDirect Input - You will type the environment in by hand. \n \n Again,\
+          \ dependant on which selection you make, the dialogue will reconfigure\n\
+          itself to allow you to provide the required information. \n An environment\n\
+          simply allows you to provide parameter values and to define custom resources.\
+          \ \n In this example we are going to use one of the NeCTAR Heat sample templates.\
+          \ \n So in the Template Source field select \"URL\", then in the \"Template\
+          \ URL\" field\nenter: \n https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/juno/Fedora/wordpress_single_instance.yaml\
+          \ \n Then in the Environment Source field select \"Direct Input\", then\
+          \ in the environment\ndata edit box type the following yaml (taking care\
+          \ to enter the correct values): \n yaml\nparameters:\n  # your nectar keypair\
+          \ name instead of 'nectar_demo'\n  key_name: nectar_demo\n  # the latest\
+          \ nectar fedora image id\n  fedora_image_id: db354243-aba2-4831-81c7-a155b9089291\
+          \ \n Once you are done press the \"Next\" button. \n All going well, you\
+          \ should now be presented with a page titled \"Launch Stack\".\nIt will\
+          \ be a form that is made up of fields that are taken from your template's\n\
+          parameters. \n Next to each field is a small question mark icon. As it gains\
+          \ focus, so the user\nwill be shows the parameters comment field as a help\
+          \ bubble to the right. \n \n The value entered into the \"Stack Name\" field\
+          \ is used to give a name to the stack\nthat is going to be launched by Heat.\
+          \ This name must start with a letter and may\nonly contain letters, numbers,\
+          \ underscores, full stops and hyphens... \n The \"Creation Timeout (minutes)\"\
+          \ field is the number of minutes that should be\nallowed for the stack creation\
+          \ to take. If this time is exceeded then the stack\ncreation will be aborted.\
+          \ \n The \"Rollback On Failure\" field, if checked, will ensure that the\
+          \ complete\nstack gets deleted if there is a failure in creation. If it's\
+          \ not checked then\nyou will have to manually delete the stack should there\
+          \ be a failure in the creation. \n The rest of the fields are taken from\
+          \ the template that has been uploaded.\nYou should find that the values\
+          \ you entered in the environment file\nhave been used to fill the fields.\
+          \ Otherwise, simply provide the requested\nvalues then select the \"Launch\"\
+          \ button. \n All going well, the stack should be created. Once created you\
+          \ can select it\nin the lists of stacks that are active, drilling down into\
+          \ its\nparticular details. \n When you are finished with a stack, you can\
+          \ simply hit the \"Delete\" button\nnext to it on the stack listings. If\
+          \ you want to delete more than one\nstack, select the checkboxes next to\
+          \ them and hit the \"\u2716 Delete Stack\"\nbutton. "
+        description: "<h1>Heat: the dashboard</h1>\n<p>On the research cloud <a href=\"\
+          https://dashboard.rc.nectar.org.au/project/\">dashboard project panel</a>\n\
+          there is a side menu heading named \"Orchestration\". It has a sub menu\
+          \ entry\ntitled <a href=\"https://dashboard.rc.nectar.org.au/project/stacks/\"\
+          >\"Stacks\"</a>:</p>\n<p><img alt=\"Heat in the dashboard project menu\"\
+          \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_dash_side_menu.png?raw=true\"\
+          ></p>\n<p>When you select it you will see a list of the stacks that you\
+          \ have created, and\nto the top right, a button pair, one labelled \"+ Launch\
+          \ Stack\", the other\n\"\u2716 Delete Stack\":</p>\n<p><img alt=\"Heat stack\
+          \ listing\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_dash_stack_listing.png?raw=true\"\
+          ></p>\n<p>Pressing the \"+ Launch Stack\" button creates a dialogue that\
+          \ invites you to\nprovide a Heat template.</p>\n<p><img alt=\"Heat select\
+          \ template dialog\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_dash_select_template.png?raw=true\"\
+          ></p>\n<p>The dialogue offers you three ways of providing a template via\
+          \ the \"Template Source\"\ndrop down:</p>\n<ul>\n<li>\n<code>URL</code>\
+          \ - The template can be reached via a web browser, and you are going to\n\
+          \  provide the URL it can be found at;</li>\n<li>\n<code>File</code> - You\
+          \ are going to upload the template from your local machine;</li>\n<li>\n\
+          <code>Direct Input</code> - You will type the template in by hand.</li>\n\
+          </ul>\n<p>Dependent on which selection you make in the \"Template Source\"\
+          \ drop down, the\ndialogue will reconfigure itself to allow you to provide\
+          \ the required information.</p>\n<p>The dialogue also offers you the chance\
+          \ to provide an \"Environment Source\".\nThis is also in the form of a drop\
+          \ down, but here the choices are limited\nto:</p>\n<ul>\n<li>\n<code>File</code>\
+          \ - You are going to upload the environment from your local machine;</li>\n\
+          <li>\n<code>Direct Input</code> - You will type the environment in by hand.</li>\n\
+          </ul>\n<p>Again, dependant on which selection you make, the dialogue will\
+          \ reconfigure\nitself to allow you to provide the required information.</p>\n\
+          <p>An <a href=\"http://docs.openstack.org/developer/heat/template_guide/environment.html\"\
+          >environment</a>\nsimply allows you to provide parameter values and to define\
+          \ custom resources.</p>\n<p>In this example we are going to use one of the\
+          \ NeCTAR Heat sample templates.</p>\n<p>So in the Template Source field\
+          \ select \"URL\", then in the \"Template URL\" field\nenter:</p>\n<p><a\
+          \ href=\"https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/juno/Fedora/wordpress_single_instance.yaml\"\
+          >https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/juno/Fedora/wordpress_single_instance.yaml</a></p>\n\
+          <p>Then in the Environment Source field select \"Direct Input\", then in\
+          \ the environment\ndata edit box type the following <code>yaml</code> (taking\
+          \ care to enter the correct values):</p>\n<p><code>yaml\nparameters:\n \
+          \ # your nectar keypair name instead of 'nectar_demo'\n  key_name: nectar_demo\n\
+          \  # the latest nectar fedora image id\n  fedora_image_id: db354243-aba2-4831-81c7-a155b9089291</code></p>\n\
+          <p>Once you are done press the \"Next\" button.</p>\n<p>All going well,\
+          \ you should now be presented with a page titled \"Launch Stack\".\nIt will\
+          \ be a form that is made up of fields that are taken from your template's\n\
+          parameters.</p>\n<p>Next to each field is a small question mark icon. As\
+          \ it gains focus, so the user\nwill be shows the parameters comment field\
+          \ as a help bubble to the right.</p>\n<p><img alt=\"Heat launch template\
+          \ dialog\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_dash_launch.png?raw=true\"\
+          ></p>\n<p>The value entered into the \"Stack Name\" field is used to give\
+          \ a name to the stack\nthat is going to be launched by Heat. This name must\
+          \ start with a letter and may\nonly contain letters, numbers, underscores,\
+          \ full stops and hyphens...</p>\n<p>The \"Creation Timeout (minutes)\" field\
+          \ is the number of minutes that should be\nallowed for the stack creation\
+          \ to take. If this time is exceeded then the stack\ncreation will be aborted.</p>\n\
+          <p>The \"Rollback On Failure\" field, if checked, will ensure that the complete\n\
+          stack gets deleted if there is a failure in creation. If it's not checked\
+          \ then\nyou will have to manually delete the stack should there be a failure\
+          \ in the creation.</p>\n<p>The rest of the fields are taken from the template\
+          \ that has been uploaded.\nYou should find that the values you entered in\
+          \ the environment file\nhave been used to fill the fields. Otherwise, simply\
+          \ provide the requested\nvalues then select the \"Launch\" button.</p>\n\
+          <p>All going well, the stack should be created. Once created you can select\
+          \ it\nin the lists of stacks that are active, drilling down into its\nparticular\
+          \ details.</p>\n<p>When you are finished with a stack, you can simply hit\
+          \ the \"Delete\" button\nnext to it on the stack listings. If you want to\
+          \ delete more than one\nstack, select the checkboxes next to them and hit\
+          \ the \"\u2716 Delete Stack\"\nbutton.</p>"
+        folder:
+          category_id: 6000122279
+          created_at: '2015-09-03T01:28:02-04:00'
+          customer_folders: []
+          description: Heat
+          id: 6000190148
+          is_default: false
+          language_id: 6
+          name: Heat
+          parent_id: 6000190148
+          position: 5
+          updated_at: '2015-09-03T01:28:02-04:00'
+          visibility: 1
+        folder_id: 6000190148
+        hits: 0
+        id: 6000076074
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-08T19:42:07-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000076074
+        position: 6
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Heat Dashboard Introduction
+        updated_at: '2015-10-08T19:42:07-04:00'
+        user_id: 6002464727
+  html: "<h1>Heat: the dashboard</h1>\n<p>On the research cloud <a href=\"https://dashboard.rc.nectar.org.au/project/\"\
+    >dashboard project panel</a>\nthere is a side menu heading named \"Orchestration\"\
+    . It has a sub menu entry\ntitled <a href=\"https://dashboard.rc.nectar.org.au/project/stacks/\"\
+    >\"Stacks\"</a>:</p>\n<p><img alt=\"Heat in the dashboard project menu\" src=\"\
+    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_dash_side_menu.png?raw=true\"></p>\n\
+    <p>When you select it you will see a list of the stacks that you have created,\
+    \ and\nto the top right, a button pair, one labelled \"+ Launch Stack\", the other\n\
+    \"\u2716 Delete Stack\":</p>\n<p><img alt=\"Heat stack listing\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_dash_stack_listing.png?raw=true\"\
+    ></p>\n<p>Pressing the \"+ Launch Stack\" button creates a dialogue that invites\
+    \ you to\nprovide a Heat template.</p>\n<p><img alt=\"Heat select template dialog\"\
+    \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_dash_select_template.png?raw=true\"\
+    ></p>\n<p>The dialogue offers you three ways of providing a template via the \"\
+    Template Source\"\ndrop down:</p>\n<ul>\n<li><code>URL</code> - The template can\
+    \ be reached via a web browser, and you are going to\n  provide the URL it can\
+    \ be found at;</li>\n<li><code>File</code> - You are going to upload the template\
+    \ from your local machine;</li>\n<li><code>Direct Input</code> - You will type\
+    \ the template in by hand.</li>\n</ul>\n<p>Dependent on which selection you make\
+    \ in the \"Template Source\" drop down, the\ndialogue will reconfigure itself\
+    \ to allow you to provide the required information.</p>\n<p>The dialogue also\
+    \ offers you the chance to provide an \"Environment Source\".\nThis is also in\
+    \ the form of a drop down, but here the choices are limited\nto:</p>\n<ul>\n<li><code>File</code>\
+    \ - You are going to upload the environment from your local machine;</li>\n<li><code>Direct\
+    \ Input</code> - You will type the environment in by hand.</li>\n</ul>\n<p>Again,\
+    \ dependant on which selection you make, the dialogue will reconfigure\nitself\
+    \ to allow you to provide the required information.</p>\n<p>An <a href=\"http://docs.openstack.org/developer/heat/template_guide/environment.html\"\
+    >environment</a>\nsimply allows you to provide parameter values and to define\
+    \ custom resources.</p>\n<p>In this example we are going to use one of the NeCTAR\
+    \ Heat sample templates.</p>\n<p>So in the Template Source field select \"URL\"\
+    , then in the \"Template URL\" field\nenter:</p>\n<p><a href=\"https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/juno/Fedora/wordpress_single_instance.yaml\"\
+    >https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/juno/Fedora/wordpress_single_instance.yaml</a></p>\n\
+    <p>Then in the Environment Source field select \"Direct Input\", then in the environment\n\
+    data edit box type the following <code>yaml</code> (taking care to enter the correct\
+    \ values):</p>\n<p><code>yaml\nparameters:\n  # your nectar keypair name instead\
+    \ of 'nectar_demo'\n  key_name: nectar_demo\n  # the latest nectar fedora image\
+    \ id\n  fedora_image_id: db354243-aba2-4831-81c7-a155b9089291</code></p>\n<p>Once\
+    \ you are done press the \"Next\" button.</p>\n<p>All going well, you should now\
+    \ be presented with a page titled \"Launch Stack\".\nIt will be a form that is\
+    \ made up of fields that are taken from your template's\nparameters.</p>\n<p>Next\
+    \ to each field is a small question mark icon. As it gains focus, so the user\n\
+    will be shows the parameters comment field as a help bubble to the right.</p>\n\
+    <p><img alt=\"Heat launch template dialog\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Heat--DOCID42/images/heat_dash_launch.png?raw=true\"></p>\n\
+    <p>The value entered into the \"Stack Name\" field is used to give a name to the\
+    \ stack\nthat is going to be launched by Heat. This name must start with a letter\
+    \ and may\nonly contain letters, numbers, underscores, full stops and hyphens...</p>\n\
+    <p>The \"Creation Timeout (minutes)\" field is the number of minutes that should\
+    \ be\nallowed for the stack creation to take. If this time is exceeded then the\
+    \ stack\ncreation will be aborted.</p>\n<p>The \"Rollback On Failure\" field,\
+    \ if checked, will ensure that the complete\nstack gets deleted if there is a\
+    \ failure in creation. If it's not checked then\nyou will have to manually delete\
+    \ the stack should there be a failure in the creation.</p>\n<p>The rest of the\
+    \ fields are taken from the template that has been uploaded.\nYou should find\
+    \ that the values you entered in the environment file\nhave been used to fill\
+    \ the fields. Otherwise, simply provide the requested\nvalues then select the\
+    \ \"Launch\" button.</p>\n<p>All going well, the stack should be created. Once\
+    \ created you can select it\nin the lists of stacks that are active, drilling\
+    \ down into its\nparticular details.</p>\n<p>When you are finished with a stack,\
+    \ you can simply hit the \"Delete\" button\nnext to it on the stack listings.\
+    \ If you want to delete more than one\nstack, select the checkboxes next to them\
+    \ and hit the \"\u2716 Delete Stack\"\nbutton.</p>"
+  parent: 42
+  sha1: 82abbdcee3af6319380154f6cee2d38c2d2968f4
+  title: Heat Dashboard Introduction
