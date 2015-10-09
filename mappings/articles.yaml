@@ -9914,3 +9914,522 @@
   parent: 42
   sha1: 5fe40b8d23dab31c94978688fa9f5608cf655b64
   title: Heat Actions
+70:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-08T20:47:14-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Debugging Swift Command line Client \n The below assumes you\
+          \ have installed swift command client in a Linux\nenvironment. If you have\
+          \ other operating systems, the debugging process might be\na slightly different,\
+          \ however, the general rules should still apply. \n Swift command line client\
+          \ is very much like other Linux commands, it outputs\nerrors in the standard\
+          \ output, which is the monitor. \n If you get an error, you can always read\
+          \ the error message and generally it give\nyou very good hints about what\
+          \ might be wrong. \n For example, if you execute swift list on the command\
+          \ line without\nauthentication, the error message might look like this:\
+          \ \n ```\nAuth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment\
+          \ variables\nto be set or overridden with -A, -U, or -K. \n Auth version\
+          \ 2.0 requires OS_AUTH_URL, OS_USERNAME, OS_PASSWORD, and\nOS_TENANT_NAME\
+          \ OS_TENANT_ID to be set or overridden with --os-auth-url,\n--os-username,\
+          \ --os-password, --os-tenant-name or os-tenant-id. Note:\nadding \"-V 2\"\
+          \ is necessary for this.\n``` \n The above message indicates you that there\
+          \ are 2 authentication versions that\nswift currently supports and each\
+          \ version requires some environment variables\nto be set. To set these environment\
+          \ variables you can either source the script\nfile downloaded from NeCTAR\
+          \ Dashboard or you can override it by\nusing command line options. \n You\
+          \ can always execute man swift`` or simplyswift``` to get more help\ninformation\
+          \ and to learn each supported options. \n If you find a useful command,\
+          \ you can also execute swift command --help,\nthis will give your more specific\
+          \ help for the command. \n Debugging Client Python API \n Debugging client\
+          \ Python API takes more effects as it depends on how familiar\nwith Python\
+          \ programming and what development environment you use. \n The below provides\
+          \ some basic information about how you debug the client Python\nAPI. \n\
+          \ You can debug your python code using Python debugger called pdb and you\
+          \ can find\nmore information here. \n The below code uses pdb debuuger to\
+          \ debug a python file contains clinet python\nAPI code. \n pdb file_name.py\
+          \ \n Once you executed the above code, the command line will be stopped\
+          \ on the first\nline of code and you can use some commands to control the\
+          \ execution flow. \n Some useful ones to use are: \n \n \n b: set a breakpoint\
+          \ \n \n \n c: continue debugging until you hit a breakpoint \n \n \n s:\
+          \ step through the code \n \n \n n: to go to next line of code \n \n \n\
+          \ l: list source code for the current file \n \n \n u : navigate up a stack\
+          \ frame \n \n \n d: navigate down a stack frame \n \n \n p: to print the\
+          \ value of an expression in the current context \n \n \n Debugging Via HTTP\
+          \ \n The both of command line API and python API are restful web service\
+          \ client.\nThus the requests are all made by using HTTP and you can always\
+          \ refer to\nOpenStack Service End for further references about what should\
+          \ be\npresented in the HTTP requests. The swift API uses requests library\n\
+          to send and receive HTTP requests/responses. \n For command line client,\
+          \ you can add --debug option to print out HTTP request\nheader and HTTP\
+          \ response header, which give you a lot of more insight\ninformation. To\
+          \ verify parameters in the request header, you can refer to\nOpenStack service\
+          \ {API]api to see what are expected. \n To enable debugging information\
+          \ on the standard out for Python API, you can add\nthe below code: \n ```\n\
+          import logging\nlogger = logging.getLogger(\"swiftclient\")\nlogging.basicConfig(level=logging.DEBUG)\
+          \ \n ``` \n The will print the same output as adding --debug option for\
+          \ command line API. \n Debugging via Source Code \n If the above techniques\
+          \ are still not helpful, you can always look at the source\ncode to find\
+          \ the problems. \n The below source file structure is based on the installation\
+          \ in Ubuntu. \n The command line swift command is located in /usr/bin/swift.\
+          \ By looking at this\nfile, you should get a idea of how the various options\
+          \ are interpreted. This file\nacts as an interface for Python API. \n The\
+          \ Python API files are located under\n/usr/lib/python2.7/dist-packages/swiftclient\
+          \ and the most important file to look\nat is client.py. This is file does\
+          \ all the request preparation, sending request\nand receiving response.\
+          \ It is also used by the command line swift client.  "
+        description: '<h2>Debugging Swift Command line Client</h2>
+
+          <p>The below assumes you have installed swift command client in a Linux
+
+          environment. If you have other operating systems, the debugging process
+          might be
+
+          a slightly different, however, the general rules should still apply.</p>
+
+          <p>Swift command line client is very much like other Linux commands, it
+          outputs
+
+          errors in the standard output, which is the monitor.</p>
+
+          <p>If you get an error, you can always read the error message and generally
+          it give
+
+          you very good hints about what might be wrong.</p>
+
+          <p>For example, if you execute <code>swift list</code> on the command line
+          without
+
+          authentication, the error message might look like this:</p>
+
+          <p>```
+
+          Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment variables
+
+          to be set or overridden with -A, -U, or -K.</p>
+
+          <p>Auth version 2.0 requires OS_AUTH_URL, OS_USERNAME, OS_PASSWORD, and
+
+          OS_TENANT_NAME OS_TENANT_ID to be set or overridden with --os-auth-url,
+
+          --os-username, --os-password, --os-tenant-name or os-tenant-id. Note:
+
+          adding "-V 2" is necessary for this.
+
+          ```</p>
+
+          <p>The above message indicates you that there are 2 authentication versions
+          that
+
+          swift currently supports and each version requires some environment variables
+
+          to be set. To set these environment variables you can either source the
+          script
+
+          file downloaded from NeCTAR <a href="https://dashboard.rc.nectar.org.au">Dashboard</a>
+          or you can override it by
+
+          using command line options.</p>
+
+          <p>You can always execute <code>man swift`` or simply</code>swift``` to
+          get more help
+
+          information and to learn each supported options.</p>
+
+          <p>If you find a useful command, you can also execute <code>swift command
+          --help</code>,
+
+          this will give your more specific help for the command.</p>
+
+          <h2>Debugging Client Python API</h2>
+
+          <p>Debugging client Python API takes more effects as it depends on how familiar
+
+          with Python programming and what development environment you use.</p>
+
+          <p>The below provides some basic information about how you debug the client
+          Python
+
+          API.</p>
+
+          <p>You can debug your python code using Python debugger called pdb and you
+          can find
+
+          more information <a href="https://docs.python.org/2/library/pdb.html">here</a>.</p>
+
+          <p>The below code uses pdb debuuger to debug a python file contains clinet
+          python
+
+          API code.</p>
+
+          <p><code>pdb file_name.py</code></p>
+
+          <p>Once you executed the above code, the command line will be stopped on
+          the first
+
+          line of code and you can use some commands to control the execution flow.</p>
+
+          <p>Some useful ones to use are:</p>
+
+          <ul>
+
+          <li>
+
+          <p>b: set a breakpoint</p>
+
+          </li>
+
+          <li>
+
+          <p>c: continue debugging until you hit a breakpoint</p>
+
+          </li>
+
+          <li>
+
+          <p>s: step through the code</p>
+
+          </li>
+
+          <li>
+
+          <p>n: to go to next line of code</p>
+
+          </li>
+
+          <li>
+
+          <p>l: list source code for the current file</p>
+
+          </li>
+
+          <li>
+
+          <p>u : navigate up a stack frame</p>
+
+          </li>
+
+          <li>
+
+          <p>d: navigate down a stack frame</p>
+
+          </li>
+
+          <li>
+
+          <p>p: to print the value of an expression in the current context</p>
+
+          </li>
+
+          </ul>
+
+          <h2>Debugging Via HTTP</h2>
+
+          <p>The both of command line API and python API are restful web service client.
+
+          Thus the requests are all made by using HTTP and you can always refer to
+
+          <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">OpenStack
+          Service End</a> for further references about what should be
+
+          presented in the HTTP requests. The swift API uses <a href="http://www.python-requests.org/en/latest/">requests</a>
+          library
+
+          to send and receive HTTP requests/responses.</p>
+
+          <p>For command line client, you can add --debug option to print out HTTP
+          request
+
+          header and HTTP response header, which give you a lot of more insight
+
+          information. To verify parameters in the request header, you can refer to
+
+          OpenStack service {API]<a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">api</a>
+          to see what are expected.</p>
+
+          <p>To enable debugging information on the standard out for Python API, you
+          can add
+
+          the below code:</p>
+
+          <p>```
+
+          import logging
+
+          logger = logging.getLogger("swiftclient")
+
+          logging.basicConfig(level=logging.DEBUG)</p>
+
+          <p>```</p>
+
+          <p>The will print the same output as adding --debug option for command line
+          API.</p>
+
+          <h2>Debugging via Source Code</h2>
+
+          <p>If the above techniques are still not helpful, you can always look at
+          the source
+
+          code to find the problems.</p>
+
+          <p>The below source file structure is based on the installation in Ubuntu.</p>
+
+          <p>The command line swift command is located in /usr/bin/swift. By looking
+          at this
+
+          file, you should get a idea of how the various options are interpreted.
+          This file
+
+          acts as an interface for Python API.</p>
+
+          <p>The Python API files are located under
+
+          /usr/lib/python2.7/dist-packages/swiftclient and the most important file
+          to look
+
+          at is client.py. This is file does all the request preparation, sending
+          request
+
+          and receiving response. It is also used by the command line swift client.
+          </p>'
+        folder:
+          category_id: 6000122279
+          created_at: '2015-09-03T01:28:00-04:00'
+          customer_folders: []
+          description: Object Storage
+          id: 6000190146
+          is_default: false
+          language_id: 6
+          name: Object Storage
+          parent_id: 6000190146
+          position: 3
+          updated_at: '2015-09-03T01:28:00-04:00'
+          visibility: 1
+        folder_id: 6000190146
+        hits: 0
+        id: 6000076083
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-08T20:47:14-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000076083
+        position: 4
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Trouble Shooting
+        updated_at: '2015-10-08T20:47:14-04:00'
+        user_id: 6002464727
+  html: '<h2>Debugging Swift Command line Client</h2>
+
+    <p>The below assumes you have installed swift command client in a Linux
+
+    environment. If you have other operating systems, the debugging process might
+    be
+
+    a slightly different, however, the general rules should still apply.</p>
+
+    <p>Swift command line client is very much like other Linux commands, it outputs
+
+    errors in the standard output, which is the monitor.</p>
+
+    <p>If you get an error, you can always read the error message and generally it
+    give
+
+    you very good hints about what might be wrong.</p>
+
+    <p>For example, if you execute <code>swift list</code> on the command line without
+
+    authentication, the error message might look like this:</p>
+
+    <p>```
+
+    Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment variables
+
+    to be set or overridden with -A, -U, or -K.</p>
+
+    <p>Auth version 2.0 requires OS_AUTH_URL, OS_USERNAME, OS_PASSWORD, and
+
+    OS_TENANT_NAME OS_TENANT_ID to be set or overridden with --os-auth-url,
+
+    --os-username, --os-password, --os-tenant-name or os-tenant-id. Note:
+
+    adding "-V 2" is necessary for this.
+
+    ```</p>
+
+    <p>The above message indicates you that there are 2 authentication versions that
+
+    swift currently supports and each version requires some environment variables
+
+    to be set. To set these environment variables you can either source the script
+
+    file downloaded from NeCTAR <a href="https://dashboard.rc.nectar.org.au">Dashboard</a>
+    or you can override it by
+
+    using command line options.</p>
+
+    <p>You can always execute <code>man swift`` or simply</code>swift``` to get more
+    help
+
+    information and to learn each supported options.</p>
+
+    <p>If you find a useful command, you can also execute <code>swift command --help</code>,
+
+    this will give your more specific help for the command.</p>
+
+    <h2>Debugging Client Python API</h2>
+
+    <p>Debugging client Python API takes more effects as it depends on how familiar
+
+    with Python programming and what development environment you use.</p>
+
+    <p>The below provides some basic information about how you debug the client Python
+
+    API.</p>
+
+    <p>You can debug your python code using Python debugger called pdb and you can
+    find
+
+    more information <a href="https://docs.python.org/2/library/pdb.html">here</a>.</p>
+
+    <p>The below code uses pdb debuuger to debug a python file contains clinet python
+
+    API code.</p>
+
+    <p><code>pdb file_name.py</code></p>
+
+    <p>Once you executed the above code, the command line will be stopped on the first
+
+    line of code and you can use some commands to control the execution flow.</p>
+
+    <p>Some useful ones to use are:</p>
+
+    <ul>
+
+    <li>
+
+    <p>b: set a breakpoint</p>
+
+    </li>
+
+    <li>
+
+    <p>c: continue debugging until you hit a breakpoint</p>
+
+    </li>
+
+    <li>
+
+    <p>s: step through the code</p>
+
+    </li>
+
+    <li>
+
+    <p>n: to go to next line of code</p>
+
+    </li>
+
+    <li>
+
+    <p>l: list source code for the current file</p>
+
+    </li>
+
+    <li>
+
+    <p>u : navigate up a stack frame</p>
+
+    </li>
+
+    <li>
+
+    <p>d: navigate down a stack frame</p>
+
+    </li>
+
+    <li>
+
+    <p>p: to print the value of an expression in the current context</p>
+
+    </li>
+
+    </ul>
+
+    <h2>Debugging Via HTTP</h2>
+
+    <p>The both of command line API and python API are restful web service client.
+
+    Thus the requests are all made by using HTTP and you can always refer to
+
+    <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">OpenStack
+    Service End</a> for further references about what should be
+
+    presented in the HTTP requests. The swift API uses <a href="http://www.python-requests.org/en/latest/">requests</a>
+    library
+
+    to send and receive HTTP requests/responses.</p>
+
+    <p>For command line client, you can add --debug option to print out HTTP request
+
+    header and HTTP response header, which give you a lot of more insight
+
+    information. To verify parameters in the request header, you can refer to
+
+    OpenStack service {API]<a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">api</a>
+    to see what are expected.</p>
+
+    <p>To enable debugging information on the standard out for Python API, you can
+    add
+
+    the below code:</p>
+
+    <p>```
+
+    import logging
+
+    logger = logging.getLogger("swiftclient")
+
+    logging.basicConfig(level=logging.DEBUG)</p>
+
+    <p>```</p>
+
+    <p>The will print the same output as adding --debug option for command line API.</p>
+
+    <h2>Debugging via Source Code</h2>
+
+    <p>If the above techniques are still not helpful, you can always look at the source
+
+    code to find the problems.</p>
+
+    <p>The below source file structure is based on the installation in Ubuntu.</p>
+
+    <p>The command line swift command is located in /usr/bin/swift. By looking at
+    this
+
+    file, you should get a idea of how the various options are interpreted. This file
+
+    acts as an interface for Python API.</p>
+
+    <p>The Python API files are located under
+
+    /usr/lib/python2.7/dist-packages/swiftclient and the most important file to look
+
+    at is client.py. This is file does all the request preparation, sending request
+
+    and receiving response. It is also used by the command line swift client. </p>'
+  parent: 40
+  sha1: 019ba245203a10e54d4e7a31b4d0719e15fbf816
+  title: Trouble Shooting
