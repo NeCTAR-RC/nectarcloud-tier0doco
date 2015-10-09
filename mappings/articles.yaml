@@ -10433,3 +10433,155 @@
   parent: 40
   sha1: 019ba245203a10e54d4e7a31b4d0719e15fbf816
   title: Trouble Shooting
+71:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-09T00:30:20-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " The Nectar dashboard \n The Nectar dashboard is the first\
+          \ and easiest way to manage your VMs in the\nNectar cloud. You will find\
+          \ a guide to the dashboard below. You can find the\nNectar at https://dashboard.rc.nectar.org.au/,\
+          \ where you'll\nbe asked to log in with your AAF credentials. \n Overview\
+          \ \n The first screen you'll see when you log on to the dashboard is the\
+          \ Overview\nscreen. It has a familiar navigation panel on the left hand\
+          \ side and a\ncentral space that shows your dashboard information. On the\
+          \ overview screen\nthis information consists of pie charts indicating the\
+          \ resource usage (e.g.\nnumber VCPUs in use) in your allocation. An important\
+          \ part of your dashboard\nis the Project Selector on the top left hand side:\
+          \ if you manage more than\none project on the Nectar cloud this selector\
+          \ will determine which project\nyour dashboard information relates to. \n\
+          \ ![Dashboard Overview] \n Instances \n You reach the instances screen in\
+          \ the dashboard by clicking the Instances\ntab in the navigation panel.\
+          \ Thecentral space now shows information about the\ninstances in your project,\
+          \ including their Name, IP Address and other info. \n Beside a filter function\
+          \ at the top of the table (which can be handy if your\nproject contains\
+          \ many instances), there are some command buttons (e.g.\nLaunch Instance).\
+          \ You can find detailed information for each instance by\nclicking the Instance\
+          \ Name and you can perform a number of administrative\nActions on each VM\
+          \ by making a selection from the instance's corresponding\nAction selector.\
+          \ \n You can find similar information screens for information about your\n\
+          Volumes, Images and Access & Security using the navigation panel. \n ![Dashboard\
+          \ Instances] \n Allocations \n You use the Allocations screens for managing\
+          \ aallocation request. You can\nstart a new allocation request using the\
+          \ New Request tab, and you can find\ninformation about any existing request\
+          \ that you may have on the My Request\nscreen. You can also use the My Request\
+          \ screen to request amendments to any\nof your allocations, should you need\
+          \ additional resources. \n ![Dashboard Allocations] \n Other features \n\
+          \ All basic features for managing your Nectar OpenStack VMs, including\n\
+          Orchestrating a stack of them, and various Storage options are in \nthe\
+          \ Nectar Dashboard. Additional features can be accessed using Command \n\
+          Line Interface or one of the OpenStack APIs. "
+        description: "<h1>The Nectar dashboard</h1>\n<p>The Nectar dashboard is the\
+          \ first and easiest way to manage your VMs in the\nNectar cloud. You will\
+          \ find a guide to the dashboard below. You can find the\nNectar at <a href=\"\
+          https://dashboard.rc.nectar.org.au/\">https://dashboard.rc.nectar.org.au/</a>,\
+          \ where you'll\nbe asked to log in with your AAF credentials.</p>\n<h2>Overview</h2>\n\
+          <p>The first screen you'll see when you log on to the dashboard is the <strong>Overview\n\
+          screen</strong>. It has a familiar <strong>navigation panel</strong> on\
+          \ the left hand side and a\ncentral space that shows your dashboard information.\
+          \ On the overview screen\nthis information consists of pie charts indicating\
+          \ the resource usage (e.g.\nnumber VCPUs in use) in your allocation. An\
+          \ important part of your dashboard\nis the <strong>Project Selector</strong>\
+          \ on the top left hand side: if you manage more than\none project on the\
+          \ Nectar cloud this selector will determine which project\nyour dashboard\
+          \ information relates to.</p>\n<p>![Dashboard Overview]</p>\n<h2>Instances</h2>\n\
+          <p>You reach the <strong>instances screen</strong> in the dashboard by clicking\
+          \ the Instances\ntab in the navigation panel. Thecentral space now shows\
+          \ information about the\ninstances in your project, including their Name,\
+          \ IP Address and other info.</p>\n<p>Beside a filter function at the top\
+          \ of the table (which can be handy if your\nproject contains many instances),\
+          \ there are some <strong>command buttons</strong> (e.g.\nLaunch Instance).\
+          \ You can find <strong>detailed information</strong> for each instance by\n\
+          clicking the Instance Name and you can perform a number of administrative\n\
+          Actions on each VM by making a selection from the instance's corresponding\n\
+          <strong>Action selector</strong>.</p>\n<p>You can find similar information\
+          \ screens for information about your\n<strong>Volumes</strong>, <strong>Images</strong>\
+          \ and <strong>Access &amp; Security</strong> using the navigation panel.</p>\n\
+          <p>![Dashboard Instances]</p>\n<h2>Allocations</h2>\n<p>You use the Allocations\
+          \ screens for managing aallocation request. You can\nstart a new allocation\
+          \ request using the New Request tab, and you can find\ninformation about\
+          \ any existing request that you may have on the My Request\nscreen. You\
+          \ can also use the My Request screen to request amendments to any\nof your\
+          \ allocations, should you need additional resources.</p>\n<p>![Dashboard\
+          \ Allocations]</p>\n<h2>Other features</h2>\n<p>All basic features for managing\
+          \ your Nectar OpenStack VMs, including\n<strong>Orchestrating</strong> a\
+          \ stack of them, and various <strong>Storage options</strong> are in \n\
+          the Nectar Dashboard. Additional features can be accessed using Command\
+          \ \nLine Interface or one of the OpenStack APIs.</p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:04-04:00'
+          customer_folders: []
+          description: Cloud Basics
+          id: 6000190150
+          is_default: false
+          language_id: 6
+          name: Cloud Basics
+          parent_id: 6000190150
+          position: 1
+          updated_at: '2015-10-08T21:02:17-04:00'
+          visibility: 1
+        folder_id: 6000190150
+        hits: 0
+        id: 6000076111
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-09T00:30:20-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000076111
+        position: 9
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Nectar Dashboard
+        updated_at: '2015-10-09T00:30:20-04:00'
+        user_id: 6002464727
+  html: "<h1>The Nectar dashboard</h1>\n<p>The Nectar dashboard is the first and easiest\
+    \ way to manage your VMs in the\nNectar cloud. You will find a guide to the dashboard\
+    \ below. You can find the\nNectar at <a href=\"https://dashboard.rc.nectar.org.au/\"\
+    >https://dashboard.rc.nectar.org.au/</a>, where you'll\nbe asked to log in with\
+    \ your AAF credentials.</p>\n<h2>Overview</h2>\n<p>The first screen you'll see\
+    \ when you log on to the dashboard is the <strong>Overview\nscreen</strong>. It\
+    \ has a familiar <strong>navigation panel</strong> on the left hand side and a\n\
+    central space that shows your dashboard information. On the overview screen\n\
+    this information consists of pie charts indicating the resource usage (e.g.\n\
+    number VCPUs in use) in your allocation. An important part of your dashboard\n\
+    is the <strong>Project Selector</strong> on the top left hand side: if you manage\
+    \ more than\none project on the Nectar cloud this selector will determine which\
+    \ project\nyour dashboard information relates to.</p>\n<p>![Dashboard Overview]</p>\n\
+    <h2>Instances</h2>\n<p>You reach the <strong>instances screen</strong> in the\
+    \ dashboard by clicking the Instances\ntab in the navigation panel. Thecentral\
+    \ space now shows information about the\ninstances in your project, including\
+    \ their Name, IP Address and other info.</p>\n<p>Beside a filter function at the\
+    \ top of the table (which can be handy if your\nproject contains many instances),\
+    \ there are some <strong>command buttons</strong> (e.g.\nLaunch Instance). You\
+    \ can find <strong>detailed information</strong> for each instance by\nclicking\
+    \ the Instance Name and you can perform a number of administrative\nActions on\
+    \ each VM by making a selection from the instance's corresponding\n<strong>Action\
+    \ selector</strong>.</p>\n<p>You can find similar information screens for information\
+    \ about your\n<strong>Volumes</strong>, <strong>Images</strong> and <strong>Access\
+    \ &amp; Security</strong> using the navigation panel.</p>\n<p>![Dashboard Instances]</p>\n\
+    <h2>Allocations</h2>\n<p>You use the Allocations screens for managing aallocation\
+    \ request. You can\nstart a new allocation request using the New Request tab,\
+    \ and you can find\ninformation about any existing request that you may have on\
+    \ the My Request\nscreen. You can also use the My Request screen to request amendments\
+    \ to any\nof your allocations, should you need additional resources.</p>\n<p>![Dashboard\
+    \ Allocations]</p>\n<h2>Other features</h2>\n<p>All basic features for managing\
+    \ your Nectar OpenStack VMs, including\n<strong>Orchestrating</strong> a stack\
+    \ of them, and various <strong>Storage options</strong> are in \nthe Nectar Dashboard.\
+    \ Additional features can be accessed using Command \nLine Interface or one of\
+    \ the OpenStack APIs.</p>"
+  parent: 21
+  sha1: 33692167a28f43e82d922b232077659acad5d435
+  title: Nectar Dashboard
