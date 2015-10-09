@@ -10585,3 +10585,288 @@
   parent: 21
   sha1: 33692167a28f43e82d922b232077659acad5d435
   title: Nectar Dashboard
+72:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-09T00:35:24-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Videos \n You can find userful Videos on SwiftStack, which\
+          \ is the company\nwho built the Object Storage for OpenStack. \n You can\
+          \ also visit this YouTube link and it has very good introduction\nabout\
+          \ Object Storage. \n For more deep introduction, you can visit this YouTube\
+          \ link and it\nprovides a serials of videos about Object Storage. \n You\
+          \ can also search YouTube by keywords 'object storage' or 'swift',\nyou\
+          \ will find that there are large amount of videos about this topic and which\n\
+          can certainly help you.  \n Documentation \n The following documentations\
+          \ provides reference and guidance information for the\nSwift API: \n \n\
+          \ \n Swift Python API reference \n \n \n Swift Command Line API Reference\
+          \  \n \n \n Swift API Reference \n \n \n The following documentations explain\
+          \ how to configure and run Swift Object\nStorage: \n \n \n Admin guide for\
+          \ Object Storage \n \n \n Operation guide for Object Storage \n \n \n Security\
+          \ guide for Object Storage \n \n \n Books \n The following book explain\
+          \ how to use and develop Swift Object Storage: \n \n \nOpenStack Swift Using,\
+          \ Administering, and Developing for Swift Object Storage  \n \n NeCTAR Support\
+          \ \n If you have a problem and you cannot resolve it, you can always go\
+          \ to NecTAR\nHelpDesk to log a support ticket and the NeCTAR support staff\
+          \ are\nmore than happy to help you. \n Useful Links \n SwftStack Resources "
+        description: '<h2>Videos</h2>
+
+          <p>You can find userful Videos on <a href="https://swiftstack.com/resources/videos/#">SwiftStack</a>,
+          which is the company
+
+          who built the Object Storage for OpenStack.</p>
+
+          <p>You can also visit this YouTube <a href="https://www.youtube.com/watch?v=LPXM0sC2TL8">link</a>
+          and it has very good introduction
+
+          about Object Storage.</p>
+
+          <p>For more deep introduction, you can visit this YouTube <a href="https://www.youtube.com/watch?v=JUXRJaZMOb0&amp;list=PLIr7I80Leee5NpoYTd9ffNvWq0pG18CN3">link</a>
+          and it
+
+          provides a serials of videos about Object Storage.</p>
+
+          <p>You can also search <a href="https://www.youtube.com/">YouTube</a> by
+          keywords ''object storage'' or ''swift'',
+
+          you will find that there are large amount of videos about this topic and
+          which
+
+          can certainly help you. </p>
+
+          <h2>Documentation</h2>
+
+          <p>The following documentations provides reference and guidance information
+          for the
+
+          Swift API:</p>
+
+          <ul>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/developer/swift/">Swift Python API
+          reference</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/cli-reference/content/swiftclient_commands.html">Swift
+          Command Line API Reference</a> </p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">Swift
+          API Reference</a></p>
+
+          </li>
+
+          </ul>
+
+          <p>The following documentations explain how to configure and run Swift Object
+
+          Storage:</p>
+
+          <ul>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/admin-guide-cloud/objectstorage.html">Admin
+          guide for Object Storage</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/openstack-ops/content/storage_decision.html">Operation
+          guide for Object Storage</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/security-guide/object-storage.html">Security
+          guide for Object Storage</a></p>
+
+          </li>
+
+          </ul>
+
+          <h2>Books</h2>
+
+          <p>The following book explain how to use and develop Swift Object Storage:</p>
+
+          <ul>
+
+          <li>
+
+          <a href="http://shop.oreilly.com/product/0636920033288.do">OpenStack Swift
+          Using, Administering, and Developing for Swift Object Storage</a> </li>
+
+          </ul>
+
+          <h2>NeCTAR Support</h2>
+
+          <p>If you have a problem and you cannot resolve it, you can always go to
+          NecTAR
+
+          <a href="https://support.nectar.org.au/support/home">HelpDesk</a> to log
+          a support ticket and the NeCTAR support staff are
+
+          more than happy to help you.</p>
+
+          <h2>Useful Links</h2>
+
+          <p><a href="https://swiftstack.com/resources/data-sheets/#">SwftStack Resources</a></p>'
+        folder:
+          category_id: 6000122279
+          created_at: '2015-09-03T01:28:00-04:00'
+          customer_folders: []
+          description: Object Storage
+          id: 6000190146
+          is_default: false
+          language_id: 6
+          name: Object Storage
+          parent_id: 6000190146
+          position: 3
+          updated_at: '2015-09-03T01:28:00-04:00'
+          visibility: 1
+        folder_id: 6000190146
+        hits: 0
+        id: 6000076112
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-09T00:35:24-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000076112
+        position: 5
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: More Info
+        updated_at: '2015-10-09T00:35:24-04:00'
+        user_id: 6002464727
+  html: '<h2>Videos</h2>
+
+    <p>You can find userful Videos on <a href="https://swiftstack.com/resources/videos/#">SwiftStack</a>,
+    which is the company
+
+    who built the Object Storage for OpenStack.</p>
+
+    <p>You can also visit this YouTube <a href="https://www.youtube.com/watch?v=LPXM0sC2TL8">link</a>
+    and it has very good introduction
+
+    about Object Storage.</p>
+
+    <p>For more deep introduction, you can visit this YouTube <a href="https://www.youtube.com/watch?v=JUXRJaZMOb0&amp;list=PLIr7I80Leee5NpoYTd9ffNvWq0pG18CN3">link</a>
+    and it
+
+    provides a serials of videos about Object Storage.</p>
+
+    <p>You can also search <a href="https://www.youtube.com/">YouTube</a> by keywords
+    ''object storage'' or ''swift'',
+
+    you will find that there are large amount of videos about this topic and which
+
+    can certainly help you. </p>
+
+    <h2>Documentation</h2>
+
+    <p>The following documentations provides reference and guidance information for
+    the
+
+    Swift API:</p>
+
+    <ul>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/developer/swift/">Swift Python API reference</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/cli-reference/content/swiftclient_commands.html">Swift
+    Command Line API Reference</a> </p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">Swift
+    API Reference</a></p>
+
+    </li>
+
+    </ul>
+
+    <p>The following documentations explain how to configure and run Swift Object
+
+    Storage:</p>
+
+    <ul>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/admin-guide-cloud/objectstorage.html">Admin
+    guide for Object Storage</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/openstack-ops/content/storage_decision.html">Operation
+    guide for Object Storage</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/security-guide/object-storage.html">Security
+    guide for Object Storage</a></p>
+
+    </li>
+
+    </ul>
+
+    <h2>Books</h2>
+
+    <p>The following book explain how to use and develop Swift Object Storage:</p>
+
+    <ul>
+
+    <li><a href="http://shop.oreilly.com/product/0636920033288.do">OpenStack Swift
+    Using, Administering, and Developing for Swift Object Storage</a> </li>
+
+    </ul>
+
+    <h2>NeCTAR Support</h2>
+
+    <p>If you have a problem and you cannot resolve it, you can always go to NecTAR
+
+    <a href="https://support.nectar.org.au/support/home">HelpDesk</a> to log a support
+    ticket and the NeCTAR support staff are
+
+    more than happy to help you.</p>
+
+    <h2>Useful Links</h2>
+
+    <p><a href="https://swiftstack.com/resources/data-sheets/#">SwftStack Resources</a></p>'
+  parent: 40
+  sha1: db029615b7b86c32716f65944013097d8b26d7cf
+  title: More Info
