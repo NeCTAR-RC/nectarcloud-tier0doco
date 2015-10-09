@@ -2319,18 +2319,18 @@
           \ NeCTAR cloud.</p>\n<ul>\n<li>\n<a href=\"Introduction%20to%20YAML--DOCID48.md\"\
           >Enough YAML to read a template</a> (useful if you don't know YAML)</li>\n\
           <li><a href=\"Heat%20Template%20Walk%20Through--DOCID47.md\">A walk through\
-          \ of a YAML template</a></li>\n<li>Actions that can be performed</li>\n\
-          <li><a href=\"Heat%20Commandline%20Client.md\">The command line client</a></li>\n\
-          <li><a href=\"Heat%20Dashboard%20Introduction.md\">The dashboard</a></li>\n\
-          <li>Preparing your images - you need more than just cloud-init!</li>\n<li><a\
-          \ href=\"Heat%20Good%20Practices.md\">Good practices</a></li>\n<li><a href=\"\
-          Heat%20Debugging.md\">Debugging</a></li>\n<li>Oddities and gotcha's</li>\n\
-          <li><a href=\"https://github.com/NeCTAR-RC/heat-templates\">Supported resources</a></li>\n\
-          </ul>\n<h2>Further links</h2>\n<ul>\n<li>\n<a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
-          >NeCTAR sample templates</a> -\n  a set of templates that have been run\
-          \ against the NeCTAR cloud.</li>\n<li>The OpenStack End User Guide <a href=\"\
-          http://docs.openstack.org/user-guide/dashboard_stacks.html\">Heat</a>\n\
-          \  page.</li>\n<li>The Heat <a href=\"https://wiki.openstack.org/wiki/Heat\"\
+          \ of a YAML template</a></li>\n<li><a href=\"Heat%20Actions.md\">Actions\
+          \ that can be performed</a></li>\n<li><a href=\"Heat%20Commandline%20Client.md\"\
+          >The command line client</a></li>\n<li><a href=\"Heat%20Dashboard%20Introduction.md\"\
+          >The dashboard</a></li>\n<li>Preparing your images - you need more than\
+          \ just cloud-init!</li>\n<li><a href=\"Heat%20Good%20Practices.md\">Good\
+          \ practices</a></li>\n<li><a href=\"Heat%20Debugging.md\">Debugging</a></li>\n\
+          <li>Oddities and gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
+          >Supported resources</a></li>\n</ul>\n<h2>Further links</h2>\n<ul>\n<li>\n\
+          <a href=\"https://github.com/NeCTAR-RC/heat-templates\">NeCTAR sample templates</a>\
+          \ -\n  a set of templates that have been run against the NeCTAR cloud.</li>\n\
+          <li>The OpenStack End User Guide <a href=\"http://docs.openstack.org/user-guide/dashboard_stacks.html\"\
+          >Heat</a>\n  page.</li>\n<li>The Heat <a href=\"https://wiki.openstack.org/wiki/Heat\"\
           >wiki</a>\n</li>\n<li>The Heat <a href=\"http://docs.openstack.org/developer/heat/template_guide/\"\
           >template guide</a>\n</li>\n<li>The <a href=\"http://docs.openstack.org/user-guide/cli_create_and_manage_stacks.html\"\
           >command line client</a>\n</li>\n</ul>"
@@ -2354,7 +2354,7 @@
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-08T20:25:48-04:00'
+        modified_at: '2015-10-08T20:43:16-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055383
@@ -2367,7 +2367,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction to HEAT
-        updated_at: '2015-10-08T20:25:48-04:00'
+        updated_at: '2015-10-08T20:43:16-04:00'
         user_id: 6002464727
   html: "<h1><img alt=\"flame logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Heat--DOCID42/images/glossy_flame.png?raw=true\"> Heat</h1>\n\
@@ -2411,21 +2411,22 @@
     the NeCTAR cloud.</p>\n<ul>\n<li><a href=\"Introduction to YAML--DOCID48.md\"\
     >Enough YAML to read a template</a> (useful if you don't know YAML)</li>\n<li><a\
     \ href=\"Heat Template Walk Through--DOCID47.md\">A walk through of a YAML template</a></li>\n\
-    <li>Actions that can be performed</li>\n<li><a href=\"Heat Commandline Client.md\"\
-    >The command line client</a></li>\n<li><a href=\"Heat Dashboard Introduction.md\"\
-    >The dashboard</a></li>\n<li>Preparing your images - you need more than just cloud-init!</li>\n\
-    <li><a href=\"Heat Good Practices.md\">Good practices</a></li>\n<li><a href=\"\
-    Heat Debugging.md\">Debugging</a></li>\n<li>Oddities and gotcha's</li>\n<li><a\
-    \ href=\"https://github.com/NeCTAR-RC/heat-templates\">Supported resources</a></li>\n\
-    </ul>\n<h2>Further links</h2>\n<ul>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
-    >NeCTAR sample templates</a> -\n  a set of templates that have been run against\
-    \ the NeCTAR cloud.</li>\n<li>The OpenStack End User Guide <a href=\"http://docs.openstack.org/user-guide/dashboard_stacks.html\"\
+    <li><a href=\"Heat Actions.md\">Actions that can be performed</a></li>\n<li><a\
+    \ href=\"Heat Commandline Client.md\">The command line client</a></li>\n<li><a\
+    \ href=\"Heat Dashboard Introduction.md\">The dashboard</a></li>\n<li>Preparing\
+    \ your images - you need more than just cloud-init!</li>\n<li><a href=\"Heat Good\
+    \ Practices.md\">Good practices</a></li>\n<li><a href=\"Heat Debugging.md\">Debugging</a></li>\n\
+    <li>Oddities and gotcha's</li>\n<li><a href=\"https://github.com/NeCTAR-RC/heat-templates\"\
+    >Supported resources</a></li>\n</ul>\n<h2>Further links</h2>\n<ul>\n<li><a href=\"\
+    https://github.com/NeCTAR-RC/heat-templates\">NeCTAR sample templates</a> -\n\
+    \  a set of templates that have been run against the NeCTAR cloud.</li>\n<li>The\
+    \ OpenStack End User Guide <a href=\"http://docs.openstack.org/user-guide/dashboard_stacks.html\"\
     >Heat</a>\n  page.</li>\n<li>The Heat <a href=\"https://wiki.openstack.org/wiki/Heat\"\
     >wiki</a></li>\n<li>The Heat <a href=\"http://docs.openstack.org/developer/heat/template_guide/\"\
     >template guide</a></li>\n<li>The <a href=\"http://docs.openstack.org/user-guide/cli_create_and_manage_stacks.html\"\
     >command line client</a></li>\n</ul>"
   parent: 42
-  sha1: aba0dbf1c24526150b79344d5a07ef95c7cc5921
+  sha1: 5c6caec135d2afe441feea195e57afc08df0953a
   title: Introduction to HEAT
 47:
   freshdesk:
@@ -9799,3 +9800,117 @@
   parent: 42
   sha1: a14cc710196e142aa244c181ef48f9af1b646bd2
   title: Heat Good Practices
+69:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-08T20:43:18-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Actions that can be performed \n The following is the list\
+          \ of actions that you can perform on or with your stacks.\nThey are all\
+          \ available from the command line. Only some are available via the dashboard.\
+          \ \n With templates \n \n \nShow - display the particular template that\
+          \ was used to create the stack. \n \nValidate - check a template for errors.\
+          \ \n \n On stacks \n \n \nCreate - build a running stack up from a template.\
+          \ \n \nDelete - remove a stack and resources from existence. \n \nSuspend\
+          \ - moves a stacks resources to a suspended state (powered off,\n  but still\
+          \ present). If you suspend as stack with an already suspended VM this\n\
+          \  command will fail. The only way to recover is to delete the stack. \n\
+          \ \nResume - takes a stack that's in a suspended state back to powered on.\
+          \ \n \nList - list the stacks that you have created. \n \nShow - show a\
+          \ lot of detail about a particular stack. \n \nUpdate - modify an existing\
+          \ running stack. You will have to understand the\n  update action on each\
+          \ resource to know how this will affect the stack. \n \n On resources \n\
+          \ \n \nList - list the resources that a stack is using \n \nShow - show\
+          \ the details of a particular resource \n \nMetadata - show the metadata\
+          \ associated with a particular resource \n \n On events \n \n \nList - list\
+          \ all the events a stack has experienced. \n \nShow - show the details of\
+          \ a particular resource. \n "
+        description: "<h1>Actions that can be performed</h1>\n<p>The following is\
+          \ the list of actions that you can perform on or with your stacks.\nThey\
+          \ are all available from the command line. Only some are available via the\
+          \ dashboard.</p>\n<h2>With templates</h2>\n<ul>\n<li>\n<strong>Show</strong>\
+          \ - display the particular template that was used to create the stack.</li>\n\
+          <li>\n<strong>Validate</strong> - check a template for errors.</li>\n</ul>\n\
+          <h2>On stacks</h2>\n<ul>\n<li>\n<strong>Create</strong> - build a running\
+          \ stack up from a template.</li>\n<li>\n<strong>Delete</strong> - remove\
+          \ a stack and resources from existence.</li>\n<li>\n<strong>Suspend</strong>\
+          \ - moves a stacks resources to a suspended state (powered off,\n  but still\
+          \ present). If you suspend as stack with an already suspended VM this\n\
+          \  command will fail. The only way to recover is to delete the stack.</li>\n\
+          <li>\n<strong>Resume</strong> - takes a stack that's in a suspended state\
+          \ back to powered on.</li>\n<li>\n<strong>List</strong> - list the stacks\
+          \ that you have created.</li>\n<li>\n<strong>Show</strong> - show a lot\
+          \ of detail about a particular stack.</li>\n<li>\n<strong>Update</strong>\
+          \ - modify an existing running stack. You will have to understand the\n\
+          \  update action on each resource to know how this will affect the stack.</li>\n\
+          </ul>\n<h2>On resources</h2>\n<ul>\n<li>\n<strong>List</strong> - list the\
+          \ resources that a stack is using</li>\n<li>\n<strong>Show</strong> - show\
+          \ the details of a particular resource</li>\n<li>\n<strong>Metadata</strong>\
+          \ - show the metadata associated with a particular resource</li>\n</ul>\n\
+          <h2>On events</h2>\n<ul>\n<li>\n<strong>List</strong> - list all the events\
+          \ a stack has experienced.</li>\n<li>\n<strong>Show</strong> - show the\
+          \ details of a particular resource.</li>\n</ul>"
+        folder:
+          category_id: 6000122279
+          created_at: '2015-09-03T01:28:02-04:00'
+          customer_folders: []
+          description: Heat
+          id: 6000190148
+          is_default: false
+          language_id: 6
+          name: Heat
+          parent_id: 6000190148
+          position: 5
+          updated_at: '2015-09-03T01:28:02-04:00'
+          visibility: 1
+        folder_id: 6000190148
+        hits: 0
+        id: 6000076082
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-08T20:43:18-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000076082
+        position: 8
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Heat Actions
+        updated_at: '2015-10-08T20:43:18-04:00'
+        user_id: 6002464727
+  html: "<h1>Actions that can be performed</h1>\n<p>The following is the list of actions\
+    \ that you can perform on or with your stacks.\nThey are all available from the\
+    \ command line. Only some are available via the dashboard.</p>\n<h2>With templates</h2>\n\
+    <ul>\n<li><strong>Show</strong> - display the particular template that was used\
+    \ to create the stack.</li>\n<li><strong>Validate</strong> - check a template\
+    \ for errors.</li>\n</ul>\n<h2>On stacks</h2>\n<ul>\n<li><strong>Create</strong>\
+    \ - build a running stack up from a template.</li>\n<li><strong>Delete</strong>\
+    \ - remove a stack and resources from existence.</li>\n<li><strong>Suspend</strong>\
+    \ - moves a stacks resources to a suspended state (powered off,\n  but still present).\
+    \ If you suspend as stack with an already suspended VM this\n  command will fail.\
+    \ The only way to recover is to delete the stack.</li>\n<li><strong>Resume</strong>\
+    \ - takes a stack that's in a suspended state back to powered on.</li>\n<li><strong>List</strong>\
+    \ - list the stacks that you have created.</li>\n<li><strong>Show</strong> - show\
+    \ a lot of detail about a particular stack.</li>\n<li><strong>Update</strong>\
+    \ - modify an existing running stack. You will have to understand the\n  update\
+    \ action on each resource to know how this will affect the stack.</li>\n</ul>\n\
+    <h2>On resources</h2>\n<ul>\n<li><strong>List</strong> - list the resources that\
+    \ a stack is using</li>\n<li><strong>Show</strong> - show the details of a particular\
+    \ resource</li>\n<li><strong>Metadata</strong> - show the metadata associated\
+    \ with a particular resource</li>\n</ul>\n<h2>On events</h2>\n<ul>\n<li><strong>List</strong>\
+    \ - list all the events a stack has experienced.</li>\n<li><strong>Show</strong>\
+    \ - show the details of a particular resource.</li>\n</ul>"
+  parent: 42
+  sha1: 5fe40b8d23dab31c94978688fa9f5608cf655b64
+  title: Heat Actions
