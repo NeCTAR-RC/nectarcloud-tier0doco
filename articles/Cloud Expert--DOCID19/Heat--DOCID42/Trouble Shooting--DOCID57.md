@@ -1,4 +1,4 @@
-# Debugging Heat templates
+# Trouble shooting Heat
 
 Beyond the OpenStack [tips](https://wiki.openstack.org/wiki/Heat/TroubleShooting)
 we have the following heuristics.
