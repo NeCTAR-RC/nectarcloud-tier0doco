@@ -7823,7 +7823,7 @@
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-06T19:44:43-04:00'
+        modified_at: '2015-10-14T07:19:27-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000074218
@@ -7835,8 +7835,8 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: Heat Commandline Client
-        updated_at: '2015-10-06T19:44:43-04:00'
+        title: API
+        updated_at: '2015-10-14T07:19:27-04:00'
         user_id: 6002464727
   html: '<h1>The Heat command line client</h1>
 
@@ -7955,7 +7955,7 @@
     heat stack-delete teststack</code></p>'
   parent: 42
   sha1: 7f5681a9438808069ac9e0ba6b0a6f87a6d0177c
-  title: Heat Commandline Client
+  title: API
 63:
   freshdesk:
     fd_attributes:
@@ -11623,3 +11623,219 @@
   parent: 43
   sha1: ac55360179d9e08115e5cd9e597d4d52bd9add95
   title: More Info
+77:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-14T07:19:28-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Security Assessment \n After you have applied all your security\
+          \ steps, you can use some tools to test\nwhether there are still potential\
+          \ security risks within the system. The below\nprovides some basic information\
+          \ about how to use these tools. The tools used\nbelow are just common tools,\
+          \ you will find there are more tools available to do\nthe security assessment.\
+          \ \n System log files \n Linux system comes with log files to records all\
+          \ system activities under /var/log.\nYou can exam auth.log file for checking\
+          \ ssh logins and exam syslog file for any\nsystem wide activities.  \n OpenVAS\
+          \ \n Open Vulnerability Assessment System (OpenVAS) is a set of tools and\
+          \ services\nthat can be used to scan for vulnerabilities and vulnerability\
+          \ management.\nOpenVAS uses a security scanner that makes use of over 33\
+          \ thousand daily-updated\ntests to conduct the security test. You can download\
+          \ and install the software from\nits website and also if you want to learn\
+          \ more about it, you can look\nat its documentation link. \n Nmap \n Nmap\
+          \ is a tool that you can use to determine the layout of a network and it\
+          \ is\nvery useful to collect information about the system for security use.\
+          \ You can run man nmap\nto get more detailed descriptions of its options\
+          \ and usage.\nYou can also find out open ports on the system and to check\
+          \ whether any ports\nhave potential security risks. It is a good starting\
+          \ point for making a security\npolicy and restricting unused services. \n\
+          \ To install Nmap, run the yum install nmap or apt-get install nmap\ncommand\
+          \ as the root user. \n To scan a host, you can use nmap <hostname> \n The\
+          \ results return a list ports of listening or waiting services and this\
+          \ can\nhelp to close unnecessary or unused services.  \n To find out more\
+          \ information, you can see the official homepage at the following\nURL:\
+          \ http://www.insecure.org/ "
+        description: '<h2>Security Assessment</h2>
+
+          <p>After you have applied all your security steps, you can use some tools
+          to test
+
+          whether there are still potential security risks within the system. The
+          below
+
+          provides some basic information about how to use these tools. The tools
+          used
+
+          below are just common tools, you will find there are more tools available
+          to do
+
+          the security assessment.</p>
+
+          <h2>System log files</h2>
+
+          <p>Linux system comes with log files to records all system activities under
+          /var/log.
+
+          You can exam auth.log file for checking ssh logins and exam syslog file
+          for any
+
+          system wide activities. </p>
+
+          <h2>OpenVAS</h2>
+
+          <p>Open Vulnerability Assessment System (OpenVAS) is a set of tools and
+          services
+
+          that can be used to scan for vulnerabilities and vulnerability management.
+
+          OpenVAS uses a security scanner that makes use of over 33 thousand daily-updated
+
+          tests to conduct the security test. You can download and install the software
+          from
+
+          its <a href="http://www.openvas.org/">website</a> and also if you want to
+          learn more about it, you can look
+
+          at its documentation <a href="http://docs.greenbone.net/index.html#user_documentation">link</a>.</p>
+
+          <h2>Nmap</h2>
+
+          <p>Nmap is a tool that you can use to determine the layout of a network
+          and it is
+
+          very useful to collect information about the system for security use. You
+          can run <code>man nmap</code>
+
+          to get more detailed descriptions of its options and usage.
+
+          You can also find out open ports on the system and to check whether any
+          ports
+
+          have potential security risks. It is a good starting point for making a
+          security
+
+          policy and restricting unused services.</p>
+
+          <p>To install Nmap, run the <code>yum install nmap</code> or <code>apt-get
+          install nmap</code>
+
+          command as the root user.</p>
+
+          <p>To scan a host, you can use <code>nmap &lt;hostname&gt;</code></p>
+
+          <p>The results return a list ports of listening or waiting services and
+          this can
+
+          help to close unnecessary or unused services. </p>
+
+          <p>To find out more information, you can see the official homepage at the
+          following
+
+          URL: <a href="http://www.insecure.org/">http://www.insecure.org/</a></p>'
+        folder:
+          category_id: 6000122279
+          created_at: '2015-10-01T22:28:23-04:00'
+          customer_folders: []
+          description: Security Guidelines
+          id: 6000203455
+          is_default: false
+          language_id: 6
+          name: Security Guidelines
+          parent_id: 6000203455
+          position: 6
+          updated_at: '2015-10-01T22:28:23-04:00'
+          visibility: 1
+        folder_id: 6000203455
+        hits: 0
+        id: 6000077798
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-14T07:19:28-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000077798
+        position: 4
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Security Assessment
+        updated_at: '2015-10-14T07:19:28-04:00'
+        user_id: 6002464727
+  html: '<h2>Security Assessment</h2>
+
+    <p>After you have applied all your security steps, you can use some tools to test
+
+    whether there are still potential security risks within the system. The below
+
+    provides some basic information about how to use these tools. The tools used
+
+    below are just common tools, you will find there are more tools available to do
+
+    the security assessment.</p>
+
+    <h2>System log files</h2>
+
+    <p>Linux system comes with log files to records all system activities under /var/log.
+
+    You can exam auth.log file for checking ssh logins and exam syslog file for any
+
+    system wide activities. </p>
+
+    <h2>OpenVAS</h2>
+
+    <p>Open Vulnerability Assessment System (OpenVAS) is a set of tools and services
+
+    that can be used to scan for vulnerabilities and vulnerability management.
+
+    OpenVAS uses a security scanner that makes use of over 33 thousand daily-updated
+
+    tests to conduct the security test. You can download and install the software
+    from
+
+    its <a href="http://www.openvas.org/">website</a> and also if you want to learn
+    more about it, you can look
+
+    at its documentation <a href="http://docs.greenbone.net/index.html#user_documentation">link</a>.</p>
+
+    <h2>Nmap</h2>
+
+    <p>Nmap is a tool that you can use to determine the layout of a network and it
+    is
+
+    very useful to collect information about the system for security use. You can
+    run <code>man nmap</code>
+
+    to get more detailed descriptions of its options and usage.
+
+    You can also find out open ports on the system and to check whether any ports
+
+    have potential security risks. It is a good starting point for making a security
+
+    policy and restricting unused services.</p>
+
+    <p>To install Nmap, run the <code>yum install nmap</code> or <code>apt-get install
+    nmap</code>
+
+    command as the root user.</p>
+
+    <p>To scan a host, you can use <code>nmap &lt;hostname&gt;</code></p>
+
+    <p>The results return a list ports of listening or waiting services and this can
+
+    help to close unnecessary or unused services. </p>
+
+    <p>To find out more information, you can see the official homepage at the following
+
+    URL: <a href="http://www.insecure.org/">http://www.insecure.org/</a></p>'
+  parent: 43
+  sha1: 6c51b368dc674664f9f41472da80a2bda244f563
+  title: Security Assessment
