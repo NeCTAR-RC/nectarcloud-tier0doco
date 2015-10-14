@@ -6485,27 +6485,27 @@
         created_at: '2015-09-28T20:44:47-04:00'
         datetime_01: null
         delta: true
-        desc_un_html: " Debugging Heat templates \n Beyond the OpenStack tips\nwe\
-          \ have the following heuristics. \n There are four possible locations in\
-          \ which defects can be found: \n \n In the template(s) \n In the automated\
-          \ installation of software \n Infrastructure problems \n Incorrect usage\
-          \ of resources \n \n We believe that the command line client gives far better\
-          \ feedback than\nthe dashboard. Thus preference it when developing your\
-          \ templates. \n If the stack fails at start up first check that you don't\
-          \ have a template\nformatting error. \n If you get a YAML error ('Template\
-          \ not in valid format'), an online YAML parser\nsuch as the ones at YAML\
-          \ Lint or the Online Yaml Parser\ncan be useful in finding the syntax error.\
-          \ \n To convert from JSON to YAML, an online converter such as the one at\n\
-          Convert JSON to YAML Online\ncan be useful in porting between the two formats.\
-          \ \n To debug JSON syntax errors the following command set is useful: \n\
-          \ bash\ncat template.json | python -m json.tool \n Where template.json is\
-          \ the name of your template. The command simply pipes the\nfile into python,\
-          \ which in turn will invoke the json module that finally will\nvalidate\
-          \ and pretty print the file. \n Similarly, if you have the pyaml module\
-          \ installed\nyou can validate yaml files: \n bash\ncat template.yaml | python\
-          \ -m pyaml \n Where template.yaml is the name of your template. \n The form\
-          \ of the command in both of the above is useful, in that you can\nverify\
-          \ remote files: \n bash\ncurl -s https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/json/Fedora/WordPress_2_Instances.json\
+        desc_un_html: " Trouble shooting Heat \n Beyond the OpenStack tips\nwe have\
+          \ the following heuristics. \n There are four possible locations in which\
+          \ defects can be found: \n \n In the template(s) \n In the automated installation\
+          \ of software \n Infrastructure problems \n Incorrect usage of resources\
+          \ \n \n We believe that the command line client gives far better feedback\
+          \ than\nthe dashboard. Thus preference it when developing your templates.\
+          \ \n If the stack fails at start up first check that you don't have a template\n\
+          formatting error. \n If you get a YAML error ('Template not in valid format'),\
+          \ an online YAML parser\nsuch as the ones at YAML Lint or the Online Yaml\
+          \ Parser\ncan be useful in finding the syntax error. \n To convert from\
+          \ JSON to YAML, an online converter such as the one at\nConvert JSON to\
+          \ YAML Online\ncan be useful in porting between the two formats. \n To debug\
+          \ JSON syntax errors the following command set is useful: \n bash\ncat template.json\
+          \ | python -m json.tool \n Where template.json is the name of your template.\
+          \ The command simply pipes the\nfile into python, which in turn will invoke\
+          \ the json module that finally will\nvalidate and pretty print the file.\
+          \ \n Similarly, if you have the pyaml module installed\nyou can validate\
+          \ yaml files: \n bash\ncat template.yaml | python -m pyaml \n Where template.yaml\
+          \ is the name of your template. \n The form of the command in both of the\
+          \ above is useful, in that you can\nverify remote files: \n bash\ncurl -s\
+          \ https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/json/Fedora/WordPress_2_Instances.json\
           \ | python -m json.tool \n If the stack launches, and reports no error,\
           \ suspicion falls on\nthe automated installation of software. \n In this\
           \ scenario turn to on instances log files and scripts. \n On the newly launched\
@@ -6524,7 +6524,7 @@
           \ the events for a given resource: \n bash\nheat event-list -r <resource\
           \ name> <template id> \n And then examine a specific event for more detail:\
           \ \n bash\nheat event-show <template id> <resource name> <event id> "
-        description: '<h1>Debugging Heat templates</h1>
+        description: '<h1>Trouble shooting Heat</h1>
 
           <p>Beyond the OpenStack <a href="https://wiki.openstack.org/wiki/Heat/TroubleShooting">tips</a>
 
@@ -6672,13 +6672,13 @@
           updated_at: '2015-09-03T01:28:02-04:00'
           visibility: 1
         folder_id: 6000190148
-        hits: 0
+        hits: 3
         id: 6000068002
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-09-28T20:44:47-04:00'
+        modified_at: '2015-10-14T07:18:21-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000068002
@@ -6690,10 +6690,10 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: Heat Debugging
-        updated_at: '2015-09-28T20:44:47-04:00'
+        title: Trouble Shooting
+        updated_at: '2015-10-14T07:18:21-04:00'
         user_id: 6002464727
-  html: '<h1>Debugging Heat templates</h1>
+  html: '<h1>Trouble shooting Heat</h1>
 
     <p>Beyond the OpenStack <a href="https://wiki.openstack.org/wiki/Heat/TroubleShooting">tips</a>
 
@@ -6824,8 +6824,8 @@
 
     heat event-show &lt;template id&gt; &lt;resource name&gt; &lt;event id&gt;</code></p>'
   parent: 42
-  sha1: 08103cd647be93e52f873b4ffd739f1e908f28a6
-  title: Heat Debugging
+  sha1: 930631d54473946038c5e96492d4b4e7b62c1bfc
+  title: Trouble Shooting
 58:
   freshdesk:
     fd_attributes:
