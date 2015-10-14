@@ -11839,3 +11839,301 @@
   parent: 43
   sha1: 6c51b368dc674664f9f41472da80a2bda244f563
   title: Security Assessment
+78:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-14T07:19:43-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Security API \n The NeCTAR Cloud doesn't provide a specific\
+          \ API for security purpose. The only\nsecurity relevant operation is to\
+          \ manage security groups through the Nova API.\nIf you want to know the\
+          \ Nova API, You can find the related information from the\narticles in Instance\
+          \ Management section. \n This article describes some techniques to help\
+          \ you to secure a Linux based\nvirtual machine in NeCTAR cloud. \n As security\
+          \ is really large topic, the techniques showed here only provides some\n\
+          basic introduction. You can always go to Internet and find more useful information\n\
+          about Security. \n The below assumes your operating system is debian/ubuntu.\
+          \ \n Securing ssh \n You need to encourage all the users on your system\
+          \ to use ssh certificate\nauthentication and disable password login. In\
+          \ addition, you need to avoid logging\ninto the system using ssh as root\
+          \ and use alternative methods to become root,\nsuch as su or sudo. \n To\
+          \ change the ssh configuration, you can edit the sshd_config file, in /etc/ssh.\n\
+          The below gives basic description about some important configuration items:\
+          \ \n \n \n PermitRootLogin no\n You need to set this to no to avoid root\
+          \ access via ssh \n \n \n Port 22\n For better security, you can change\
+          \ the ssh port to other port number \n \n \n PermitEmptyPasswords no\n \
+          \ This should be always no, for non empty password access \n \n \n AllowUsers\n\
+          \  This directive allows only certain users to have access via ssh to this\
+          \ machine. \n \n \n PasswordAuthentication No\n  You should set this to\
+          \ no to disable user logging using password \n \n \n After you have changed\
+          \ the /etc/ssh/sshd_config file, you can execute sudo service ssh restart\n\
+          to apply the new changes. \n If you are using an SSH client to access your\
+          \ Virtual Machine, you need to make\nsure both SSH server and client are\
+          \ using the same version of protocols. \n You can also restrict access to\
+          \ file transfer only if you want to allow accounts\non your Virtual Machine\
+          \ to transfer files. You can do it by giving users a\nrestricted shell such\
+          \ as scpoly or rssh. These shells restrict the commands\navailable to the\
+          \ users to execute. You can change an account's shell by editing\n/etc/passwd\
+          \ file. \n Securing Apache \n If you don't want your Apache web service\
+          \ available to public, you can use the\nListen or BindAddress directives\
+          \ in /etc/apache2/apache2.conf. \n Using Listen:\n    Listen 127.0.0.1:80\n\
+          Using BindAddress:\n    BindAddress 127.0.0.1 \n Then you can restart your\
+          \ apache service with sudo service apache2 restart \n The default Apache\
+          \ installation in Debian permits users to publish content\nunder the $HOME/public_html.\
+          \ This content can be retrieved remotely using an\nURL such as: http://your_apache_server/~user.\
+          \ \n You can restrict the default configuration by editing /etc/apache2/mods-enabled/userdir.conf\
+          \ \n You can also make sure the permission of log files can only be read/write\
+          \ by\nrequired user and groups. The default permission for the log files\
+          \ may be readable\nby anyone. \n By default, Apache web files are located\
+          \ under /var/www. The default file provides\nsome hints on the system like\
+          \ what is the operating system. You should substitute\nthe default web pages\
+          \ with your own. \n to further harder the Apache security, you can run Apache\
+          \ by chroot. See this\ninstruction to set up Apache. \n Keep System Update\
+          \ to Date \n In debian/ubuntu, you run sudo apt-get update regularly to\
+          \ keep system\nsecurity patch update to date. \n Setup Local Firewall \n\
+          \ A local firewall can also be installed with filtering rules to protect\
+          \ access to\nthe system. You can use iptable tools to create rules to filter\
+          \ network traffic.\nIt is advised to use Security Group to manage which\
+          \ ports to open as it is simple\nto do. The below only provides basic introduction\
+          \ to IPtables, for more\ninformation, please refer to IPtables MAN page.\
+          \ \n To list all current rules, execute:  sudo iptables --list \n By default,\
+          \ the IPtables defines 3 chains. The INPUT Chain is for incoming traffic\n\
+          , the Forward Chain is for forwarded traffic and the OUTPUT Chain is for\
+          \ outgoing\ntraffic. Which chains you need to add rules depends on what\
+          \ traffic you want to\nfilter. \n IPtables also defines policies that defines\
+          \ actions for rules: \n \n \n Accept, accept traffic \n \n \n Reject, reject\
+          \ traffic by sending back an error packet \n \n \n Drop, reject traffic\
+          \ by dropping traffic \n \n \n The below shows an example how to enable\
+          \ SSH and HTTP/HTTPS traffic in IPtables. \n Firstly, you need to allow\
+          \ connections that are already connected to your server: \n sudo iptables\
+          \ - I INPUT 1 -p tcp --dport 22 -j ACCEPT \n Secondly, you need to allow\
+          \ SSH connections: \n sudo iptables -I INPUT 1 -p tcp --dport 22 -j ACCEPT\
+          \ \n Thirdly, you can allow HTTP/HTTPS traffic: \n sudo iptables -I INPUT\
+          \ 1 -p tcp -dport 80 -j ACCEPT\nsudo iptables -I INPUT 1 -p tcp --dport\
+          \ 443 -j ACCEPT \n Finally, you need to drop all other traffic. You need\
+          \ to make sure you have set\nto allow SSH connection, otherwise you will\
+          \ lose access to the Virtual Machine: \n ``` \n sudo iptables -P INPUT DROP\
+          \ \n ``` \n You can save your IPtables changes by (Ubuntu):  \n ```  \n\
+          \ iptables-save > /etc/iptables.rules \n ``` \n Install fail2ban \n The\
+          \ SSH daemon itself is a Linux service that exposed to the Internet and\
+          \ creates\na security risk for the system. fail2ban can mitigate this problem\
+          \ by creating\nrules that can automatically alter your your iptables firewall\
+          \ and ban\nunsuccessful login attempts based on a predefined number.  \n\
+          \ You can use the below commands to install fail2ban in Ubuntu: \n ``` \n\
+          \ sudo apt-get update\nsudo apt-get install fail2ban \n ``` \n To setup\
+          \ the fail2ban, please follow this instruction. \n Disable Unneeded Services\
+          \ \n Unneeded services are a potential security risk, so you can execute\
+          \ sudo service --status-all\nto list all available services.  You can exam\
+          \ the output carefully and disable\nany services not desired. "
+        description: "<h2>Security API</h2>\n<p>The NeCTAR Cloud doesn't provide a\
+          \ specific API for security purpose. The only\nsecurity relevant operation\
+          \ is to manage security groups through the Nova API.\nIf you want to know\
+          \ the Nova API, You can find the related information from the\narticles\
+          \ in Instance Management section.</p>\n<p>This article describes some techniques\
+          \ to help you to secure a Linux based\nvirtual machine in NeCTAR cloud.</p>\n\
+          <p>As security is really large topic, the techniques showed here only provides\
+          \ some\nbasic introduction. You can always go to Internet and find more\
+          \ useful information\nabout Security.</p>\n<p>The below assumes your operating\
+          \ system is debian/ubuntu.</p>\n<h2>Securing ssh</h2>\n<p>You need to encourage\
+          \ all the users on your system to use ssh certificate\nauthentication and\
+          \ disable password login. In addition, you need to avoid logging\ninto the\
+          \ system using ssh as root and use alternative methods to become root,\n\
+          such as su or sudo.</p>\n<p>To change the ssh configuration, you can edit\
+          \ the sshd_config file, in /etc/ssh.\nThe below gives basic description\
+          \ about some important configuration items:</p>\n<ul>\n<li>\n<p>PermitRootLogin\
+          \ no\n You need to set this to no to avoid root access via ssh</p>\n</li>\n\
+          <li>\n<p>Port 22\n For better security, you can change the ssh port to other\
+          \ port number</p>\n</li>\n<li>\n<p>PermitEmptyPasswords no\n  This should\
+          \ be always no, for non empty password access</p>\n</li>\n<li>\n<p>AllowUsers\n\
+          \  This directive allows only certain users to have access via ssh to this\
+          \ machine.</p>\n</li>\n<li>\n<p>PasswordAuthentication No\n  You should\
+          \ set this to no to disable user logging using password</p>\n</li>\n</ul>\n\
+          <p>After you have changed the /etc/ssh/sshd_config file, you can execute\
+          \ <code>sudo service ssh restart</code>\nto apply the new changes.</p>\n\
+          <p>If you are using an SSH client to access your Virtual Machine, you need\
+          \ to make\nsure both SSH server and client are using the same version of\
+          \ protocols.</p>\n<p>You can also restrict access to file transfer only\
+          \ if you want to allow accounts\non your Virtual Machine to transfer files.\
+          \ You can do it by giving users a\nrestricted shell such as scpoly or rssh.\
+          \ These shells restrict the commands\navailable to the users to execute.\
+          \ You can change an account's shell by editing\n/etc/passwd file.</p>\n\
+          <h2>Securing Apache</h2>\n<p>If you don't want your Apache web service available\
+          \ to public, you can use the\nListen or BindAddress directives in /etc/apache2/apache2.conf.</p>\n\
+          <p>Using Listen:\n    Listen 127.0.0.1:80\nUsing BindAddress:\n    BindAddress\
+          \ 127.0.0.1</p>\n<p>Then you can restart your apache service with <code>sudo\
+          \ service apache2 restart</code></p>\n<p>The default Apache installation\
+          \ in Debian permits users to publish content\nunder the $HOME/public_html.\
+          \ This content can be retrieved remotely using an\nURL such as: http://your_apache_server/~user.</p>\n\
+          <p>You can restrict the default configuration by editing /etc/apache2/mods-enabled/userdir.conf</p>\n\
+          <p>You can also make sure the permission of log files can only be read/write\
+          \ by\nrequired user and groups. The default permission for the log files\
+          \ may be readable\nby anyone.</p>\n<p>By default, Apache web files are located\
+          \ under /var/www. The default file provides\nsome hints on the system like\
+          \ what is the operating system. You should substitute\nthe default web pages\
+          \ with your own.</p>\n<p>to further harder the Apache security, you can\
+          \ run Apache by chroot. See this\n<a href=\"https://www.debian.org/doc/manuals/securing-debian-howto/ap-chroot-apache-env.en.html\"\
+          >instruction</a> to set up Apache.</p>\n<h2>Keep System Update to Date</h2>\n\
+          <p>In debian/ubuntu, you run <code>sudo apt-get update</code> regularly\
+          \ to keep system\nsecurity patch update to date.</p>\n<h2>Setup Local Firewall</h2>\n\
+          <p>A local firewall can also be installed with filtering rules to protect\
+          \ access to\nthe system. You can use iptable tools to create rules to filter\
+          \ network traffic.\nIt is advised to use Security Group to manage which\
+          \ ports to open as it is simple\nto do. The below only provides basic introduction\
+          \ to IPtables, for more\ninformation, please refer to IPtables <a href=\"\
+          http://linux.die.net/man/8/iptables\">MAN page</a>.</p>\n<p>To list all\
+          \ current rules, execute:  <code>sudo iptables --list</code></p>\n<p>By\
+          \ default, the IPtables defines 3 chains. The INPUT Chain is for incoming\
+          \ traffic\n, the Forward Chain is for forwarded traffic and the OUTPUT Chain\
+          \ is for outgoing\ntraffic. Which chains you need to add rules depends on\
+          \ what traffic you want to\nfilter.</p>\n<p>IPtables also defines policies\
+          \ that defines actions for rules:</p>\n<ul>\n<li>\n<p>Accept, accept traffic</p>\n\
+          </li>\n<li>\n<p>Reject, reject traffic by sending back an error packet</p>\n\
+          </li>\n<li>\n<p>Drop, reject traffic by dropping traffic</p>\n</li>\n</ul>\n\
+          <p>The below shows an example how to enable SSH and HTTP/HTTPS traffic in\
+          \ IPtables.</p>\n<p>Firstly, you need to allow connections that are already\
+          \ connected to your server:</p>\n<p><code>sudo iptables - I INPUT 1 -p tcp\
+          \ --dport 22 -j ACCEPT</code></p>\n<p>Secondly, you need to allow SSH connections:</p>\n\
+          <p><code>sudo iptables -I INPUT 1 -p tcp --dport 22 -j ACCEPT</code></p>\n\
+          <p>Thirdly, you can allow HTTP/HTTPS traffic:</p>\n<p><code>sudo iptables\
+          \ -I INPUT 1 -p tcp -dport 80 -j ACCEPT</code>\n<code>sudo iptables -I INPUT\
+          \ 1 -p tcp --dport 443 -j ACCEPT</code></p>\n<p>Finally, you need to drop\
+          \ all other traffic. You need to make sure you have set\nto allow SSH connection,\
+          \ otherwise you will lose access to the Virtual Machine:</p>\n<p>```</p>\n\
+          <p>sudo iptables -P INPUT DROP</p>\n<p>```</p>\n<p>You can save your IPtables\
+          \ changes by (Ubuntu): </p>\n<p>``` </p>\n<p>iptables-save &gt; /etc/iptables.rules</p>\n\
+          <p>```</p>\n<h2>Install fail2ban</h2>\n<p>The SSH daemon itself is a Linux\
+          \ service that exposed to the Internet and creates\na security risk for\
+          \ the system. fail2ban can mitigate this problem by creating\nrules that\
+          \ can automatically alter your your iptables firewall and ban\nunsuccessful\
+          \ login attempts based on a predefined number. </p>\n<p>You can use the\
+          \ below commands to install fail2ban in Ubuntu:</p>\n<p>```</p>\n<p>sudo\
+          \ apt-get update\nsudo apt-get install fail2ban</p>\n<p>```</p>\n<p>To setup\
+          \ the fail2ban, please follow this <a href=\"https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04\"\
+          >instruction</a>.</p>\n<h2>Disable Unneeded Services</h2>\n<p>Unneeded services\
+          \ are a potential security risk, so you can execute <code>sudo service --status-all</code>\n\
+          to list all available services.  You can exam the output carefully and disable\n\
+          any services not desired.</p>"
+        folder:
+          category_id: 6000122279
+          created_at: '2015-10-01T22:28:23-04:00'
+          customer_folders: []
+          description: Security Guidelines
+          id: 6000203455
+          is_default: false
+          language_id: 6
+          name: Security Guidelines
+          parent_id: 6000203455
+          position: 6
+          updated_at: '2015-10-01T22:28:23-04:00'
+          visibility: 1
+        folder_id: 6000203455
+        hits: 0
+        id: 6000077799
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-14T07:19:43-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000077799
+        position: 5
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: API
+        updated_at: '2015-10-14T07:19:43-04:00'
+        user_id: 6002464727
+  html: "<h2>Security API</h2>\n<p>The NeCTAR Cloud doesn't provide a specific API\
+    \ for security purpose. The only\nsecurity relevant operation is to manage security\
+    \ groups through the Nova API.\nIf you want to know the Nova API, You can find\
+    \ the related information from the\narticles in Instance Management section.</p>\n\
+    <p>This article describes some techniques to help you to secure a Linux based\n\
+    virtual machine in NeCTAR cloud.</p>\n<p>As security is really large topic, the\
+    \ techniques showed here only provides some\nbasic introduction. You can always\
+    \ go to Internet and find more useful information\nabout Security.</p>\n<p>The\
+    \ below assumes your operating system is debian/ubuntu.</p>\n<h2>Securing ssh</h2>\n\
+    <p>You need to encourage all the users on your system to use ssh certificate\n\
+    authentication and disable password login. In addition, you need to avoid logging\n\
+    into the system using ssh as root and use alternative methods to become root,\n\
+    such as su or sudo.</p>\n<p>To change the ssh configuration, you can edit the\
+    \ sshd_config file, in /etc/ssh.\nThe below gives basic description about some\
+    \ important configuration items:</p>\n<ul>\n<li>\n<p>PermitRootLogin no\n You\
+    \ need to set this to no to avoid root access via ssh</p>\n</li>\n<li>\n<p>Port\
+    \ 22\n For better security, you can change the ssh port to other port number</p>\n\
+    </li>\n<li>\n<p>PermitEmptyPasswords no\n  This should be always no, for non empty\
+    \ password access</p>\n</li>\n<li>\n<p>AllowUsers\n  This directive allows only\
+    \ certain users to have access via ssh to this machine.</p>\n</li>\n<li>\n<p>PasswordAuthentication\
+    \ No\n  You should set this to no to disable user logging using password</p>\n\
+    </li>\n</ul>\n<p>After you have changed the /etc/ssh/sshd_config file, you can\
+    \ execute <code>sudo service ssh restart</code>\nto apply the new changes.</p>\n\
+    <p>If you are using an SSH client to access your Virtual Machine, you need to\
+    \ make\nsure both SSH server and client are using the same version of protocols.</p>\n\
+    <p>You can also restrict access to file transfer only if you want to allow accounts\n\
+    on your Virtual Machine to transfer files. You can do it by giving users a\nrestricted\
+    \ shell such as scpoly or rssh. These shells restrict the commands\navailable\
+    \ to the users to execute. You can change an account's shell by editing\n/etc/passwd\
+    \ file.</p>\n<h2>Securing Apache</h2>\n<p>If you don't want your Apache web service\
+    \ available to public, you can use the\nListen or BindAddress directives in /etc/apache2/apache2.conf.</p>\n\
+    <p>Using Listen:\n    Listen 127.0.0.1:80\nUsing BindAddress:\n    BindAddress\
+    \ 127.0.0.1</p>\n<p>Then you can restart your apache service with <code>sudo service\
+    \ apache2 restart</code></p>\n<p>The default Apache installation in Debian permits\
+    \ users to publish content\nunder the $HOME/public_html. This content can be retrieved\
+    \ remotely using an\nURL such as: http://your_apache_server/~user.</p>\n<p>You\
+    \ can restrict the default configuration by editing /etc/apache2/mods-enabled/userdir.conf</p>\n\
+    <p>You can also make sure the permission of log files can only be read/write by\n\
+    required user and groups. The default permission for the log files may be readable\n\
+    by anyone.</p>\n<p>By default, Apache web files are located under /var/www. The\
+    \ default file provides\nsome hints on the system like what is the operating system.\
+    \ You should substitute\nthe default web pages with your own.</p>\n<p>to further\
+    \ harder the Apache security, you can run Apache by chroot. See this\n<a href=\"\
+    https://www.debian.org/doc/manuals/securing-debian-howto/ap-chroot-apache-env.en.html\"\
+    >instruction</a> to set up Apache.</p>\n<h2>Keep System Update to Date</h2>\n\
+    <p>In debian/ubuntu, you run <code>sudo apt-get update</code> regularly to keep\
+    \ system\nsecurity patch update to date.</p>\n<h2>Setup Local Firewall</h2>\n\
+    <p>A local firewall can also be installed with filtering rules to protect access\
+    \ to\nthe system. You can use iptable tools to create rules to filter network\
+    \ traffic.\nIt is advised to use Security Group to manage which ports to open\
+    \ as it is simple\nto do. The below only provides basic introduction to IPtables,\
+    \ for more\ninformation, please refer to IPtables <a href=\"http://linux.die.net/man/8/iptables\"\
+    >MAN page</a>.</p>\n<p>To list all current rules, execute:  <code>sudo iptables\
+    \ --list</code></p>\n<p>By default, the IPtables defines 3 chains. The INPUT Chain\
+    \ is for incoming traffic\n, the Forward Chain is for forwarded traffic and the\
+    \ OUTPUT Chain is for outgoing\ntraffic. Which chains you need to add rules depends\
+    \ on what traffic you want to\nfilter.</p>\n<p>IPtables also defines policies\
+    \ that defines actions for rules:</p>\n<ul>\n<li>\n<p>Accept, accept traffic</p>\n\
+    </li>\n<li>\n<p>Reject, reject traffic by sending back an error packet</p>\n</li>\n\
+    <li>\n<p>Drop, reject traffic by dropping traffic</p>\n</li>\n</ul>\n<p>The below\
+    \ shows an example how to enable SSH and HTTP/HTTPS traffic in IPtables.</p>\n\
+    <p>Firstly, you need to allow connections that are already connected to your server:</p>\n\
+    <p><code>sudo iptables - I INPUT 1 -p tcp --dport 22 -j ACCEPT</code></p>\n<p>Secondly,\
+    \ you need to allow SSH connections:</p>\n<p><code>sudo iptables -I INPUT 1 -p\
+    \ tcp --dport 22 -j ACCEPT</code></p>\n<p>Thirdly, you can allow HTTP/HTTPS traffic:</p>\n\
+    <p><code>sudo iptables -I INPUT 1 -p tcp -dport 80 -j ACCEPT</code>\n<code>sudo\
+    \ iptables -I INPUT 1 -p tcp --dport 443 -j ACCEPT</code></p>\n<p>Finally, you\
+    \ need to drop all other traffic. You need to make sure you have set\nto allow\
+    \ SSH connection, otherwise you will lose access to the Virtual Machine:</p>\n\
+    <p>```</p>\n<p>sudo iptables -P INPUT DROP</p>\n<p>```</p>\n<p>You can save your\
+    \ IPtables changes by (Ubuntu): </p>\n<p>``` </p>\n<p>iptables-save &gt; /etc/iptables.rules</p>\n\
+    <p>```</p>\n<h2>Install fail2ban</h2>\n<p>The SSH daemon itself is a Linux service\
+    \ that exposed to the Internet and creates\na security risk for the system. fail2ban\
+    \ can mitigate this problem by creating\nrules that can automatically alter your\
+    \ your iptables firewall and ban\nunsuccessful login attempts based on a predefined\
+    \ number. </p>\n<p>You can use the below commands to install fail2ban in Ubuntu:</p>\n\
+    <p>```</p>\n<p>sudo apt-get update\nsudo apt-get install fail2ban</p>\n<p>```</p>\n\
+    <p>To setup the fail2ban, please follow this <a href=\"https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04\"\
+    >instruction</a>.</p>\n<h2>Disable Unneeded Services</h2>\n<p>Unneeded services\
+    \ are a potential security risk, so you can execute <code>sudo service --status-all</code>\n\
+    to list all available services.  You can exam the output carefully and disable\n\
+    any services not desired.</p>"
+  parent: 43
+  sha1: 696d8247f47de69fbed10dfa7e81d8b734895a07
+  title: API
