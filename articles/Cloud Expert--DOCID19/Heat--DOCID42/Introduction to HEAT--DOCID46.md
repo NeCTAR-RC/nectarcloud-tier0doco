@@ -58,7 +58,7 @@ At that point all the provisioned infrastructure will be destroyed, its
 resources released, and then the template and its parameters will be removed
 from the Heat database
 
-## More information
+## In depth
 
 The following pages offer more in depth technical information on using Heat in
 the NeCTAR cloud.
@@ -72,14 +72,4 @@ the NeCTAR cloud.
 * [Good practices](Heat Good Practices.md)
 * [Debugging](Heat Debugging.md)
 * Oddities and gotcha's
-* [Supported resources](https://github.com/NeCTAR-RC/heat-templates)
 
-## Further links
-
-* [NeCTAR sample templates](https://github.com/NeCTAR-RC/heat-templates) -
-  a set of templates that have been run against the NeCTAR cloud.
-* The OpenStack End User Guide [Heat](http://docs.openstack.org/user-guide/dashboard_stacks.html)
-  page.
-* The Heat [wiki](https://wiki.openstack.org/wiki/Heat)
-* The Heat [template guide](http://docs.openstack.org/developer/heat/template_guide/)
-* The [command line client](http://docs.openstack.org/user-guide/cli_create_and_manage_stacks.html)
