@@ -11433,3 +11433,193 @@
   parent: 41
   sha1: 0b8ee926b37ac477397c3f6d70cdaab0838c036f
   title: Introduction to Authentication
+76:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-14T07:17:45-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Videos \n The following videos provides useful information\
+          \ about NeCTAR Cloud security: \n \n \n Security on Openstack \n \n \n Building\
+          \ an OpenStack Security Group \n \n \n State of OpenStack Security \n \n\
+          \ \n Documentation \n The following documentations provides reference and\
+          \ guidance information for\nLinux security: \n \n \n A guide to securing\
+          \ red hat enterprise linux 7 \n \n \n Securing debian manual \n \n \n OpenStack\
+          \ security guide \n \n \n NeCTAR Support \n If you have a problem and you\
+          \ cannot resolve it, you can always go to NecTAR\nHelpDesk to log a support\
+          \ ticket and the NeCTAR support staff are\nmore than happy to help you. "
+        description: '<h2>Videos</h2>
+
+          <p>The following videos provides useful information about NeCTAR Cloud security:</p>
+
+          <ul>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=rI0XLWjEqPc">Security on Openstack</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=5zT4RfOfrJg">Building an OpenStack
+          Security Group</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=tYfa7GnSwz8">State of OpenStack
+          Security</a></p>
+
+          </li>
+
+          </ul>
+
+          <h2>Documentation</h2>
+
+          <p>The following documentations provides reference and guidance information
+          for
+
+          Linux security:</p>
+
+          <ul>
+
+          <li>
+
+          <p><a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Security_Guide/index.html">A
+          guide to securing red hat enterprise linux 7</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://www.debian.org/doc/manuals/securing-debian-howto/">Securing
+          debian manual</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/security-guide/">OpenStack security
+          guide</a></p>
+
+          </li>
+
+          </ul>
+
+          <h2>NeCTAR Support</h2>
+
+          <p>If you have a problem and you cannot resolve it, you can always go to
+          NecTAR
+
+          <a href="https://support.nectar.org.au/support/home">HelpDesk</a> to log
+          a support ticket and the NeCTAR support staff are
+
+          more than happy to help you.</p>'
+        folder:
+          category_id: 6000122279
+          created_at: '2015-10-01T22:28:23-04:00'
+          customer_folders: []
+          description: Security Guidelines
+          id: 6000203455
+          is_default: false
+          language_id: 6
+          name: Security Guidelines
+          parent_id: 6000203455
+          position: 6
+          updated_at: '2015-10-01T22:28:23-04:00'
+          visibility: 1
+        folder_id: 6000203455
+        hits: 0
+        id: 6000077797
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-14T07:17:45-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000077797
+        position: 3
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: More Info
+        updated_at: '2015-10-14T07:17:45-04:00'
+        user_id: 6002464727
+  html: '<h2>Videos</h2>
+
+    <p>The following videos provides useful information about NeCTAR Cloud security:</p>
+
+    <ul>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=rI0XLWjEqPc">Security on Openstack</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=5zT4RfOfrJg">Building an OpenStack
+    Security Group</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=tYfa7GnSwz8">State of OpenStack Security</a></p>
+
+    </li>
+
+    </ul>
+
+    <h2>Documentation</h2>
+
+    <p>The following documentations provides reference and guidance information for
+
+    Linux security:</p>
+
+    <ul>
+
+    <li>
+
+    <p><a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Security_Guide/index.html">A
+    guide to securing red hat enterprise linux 7</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://www.debian.org/doc/manuals/securing-debian-howto/">Securing
+    debian manual</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/security-guide/">OpenStack security guide</a></p>
+
+    </li>
+
+    </ul>
+
+    <h2>NeCTAR Support</h2>
+
+    <p>If you have a problem and you cannot resolve it, you can always go to NecTAR
+
+    <a href="https://support.nectar.org.au/support/home">HelpDesk</a> to log a support
+    ticket and the NeCTAR support staff are
+
+    more than happy to help you.</p>'
+  parent: 43
+  sha1: ac55360179d9e08115e5cd9e597d4d52bd9add95
+  title: More Info
