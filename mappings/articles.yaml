@@ -8969,13 +8969,13 @@
           updated_at: '2015-09-03T01:27:59-04:00'
           visibility: 1
         folder_id: 6000190145
-        hits: 0
+        hits: 1
         id: 6000075752
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-08T02:01:21-04:00'
+        modified_at: '2015-10-14T07:19:08-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000075752
@@ -8987,8 +8987,8 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: Trouble Shotting
-        updated_at: '2015-10-08T02:01:22-04:00'
+        title: Trouble Shooting
+        updated_at: '2015-10-14T07:19:08-04:00'
         user_id: 6002464727
   html: '<h2>Debugging Nova Command line Client</h2>
 
@@ -9180,7 +9180,7 @@
     receiving response. It is also used by the command line Nova client. </p>'
   parent: 39
   sha1: 343ee2b5838147e62152f2381afcd028ada5ae2c
-  title: Trouble Shotting
+  title: Trouble Shooting
 66:
   freshdesk:
     fd_attributes:
