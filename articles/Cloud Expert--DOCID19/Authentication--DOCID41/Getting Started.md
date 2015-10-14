@@ -1,0 +1,125 @@
+## Getting Started
+
+This section is going to show you how to use AAF to authenticate to NeCTAR
+Dashboard and use SSH to login to Virtual Machine.
+
+## Dashboard Authentication
+
+NeCTAR Dashboard uses AAF to authenticate users. Please follow the below
+instructions to login to NeCTAR [Dashboard][dashboard].
+
+- Click [here][dashboard] to go to the NeCTAR Dashboard and you will see the
+ below screenshot and it shows you need to use AAF to login:
+
+![`aaf1`](images/aaf1.png)
+
+- Click 'Log In' button for next and you will see the below screenshot:
+
+![`aaf2`](images/aaf2.png)
+
+- Select the institution or the organization and click 'select' button, you will
+ see a login page provided by your selected institution/organization:
+
+![`aaf3`](images/aaf3.png)
+
+- Type in username/password supplied by your institution/organization and click
+ 'Continue' button, if successful, you should see the NeCTAR Dashboard
+
+Note, if your institution or organization is not the list, you can contact the
+help desk in your institution or organization to see whether there is AAF support.
+Or you can contact NecTAR [HelpDesk][helpdesk] to arrange an alternative way to
+login.
+
+
+## Virtual Machine Authentication
+
+To create a key pair in NecTAR Cloud, please see the below instruction:
+
+- Login to NeCTAR Dashboard[dashboard]
+
+- Select a project from the project drop down list and click 'Access & Security',
+ you should see the below screenshots which have a list of existing keys:
+![`key1`](images/key1.png)
+![`key2`](images/key2.png)
+
+- You can click the 'Create Key Pair' button to create a new key pair, see the
+ below screenshot:
+![`key3`](images/key3.png)
+
+- After entering the key pair name and click 'Create Key Pair' button, the system
+ will ask you to save the private key. You should download the private key and
+ save it in a secuire place.
+ 
+- You can also click the 'Import Key Pair' button to import an existing public
+ key, see the below screenshot:
+![`key4`](images/key4.png)  
+
+- You can copy and paste the public key into the 'Public Key' text area and give
+ a key pair name. Then you click 'Import Key Pair' button to upload the public key.
+
+This key pair can be used later when you launch a new Virtual Machine for
+authentication. Please see relevant articles about how to use the key in launching
+a new Virtual Machine.  
+
+### Windows Authentication
+
+For Windows users, you need to use [putty][putty] for key based authentication
+to access Virtual Machines. Windows uses different file format for the private
+key You download from the NeCTAR Dashboard. You can use [puttygen][putty] for
+the key conversion.
+
+After you download the files from the above links, you can double click the
+puttygen.exe file to launch puttygen and you should see the below screenshot:
+
+![`puttygen1`](images/puttygen1.png) 
+
+
+Then you can click 'Import Key' item from the 'Conversions' menu. Please see the
+below screenshot:
+
+![`puttygen2`](images/puttygen2.png) 
+
+You select the private key you saved before and click 'Ok'.
+
+You can then click 'Export OpenSSH Key' from the 'Conversions'. Click yes for not
+saving key with a password and provide a file name for the key. Please see the
+below screenshot:
+
+![`puttygen3`](images/puttygen3.png)
+
+After you successfully converted the key, you can use it in putty to login to
+Virtual Machines. Please see the below instructions for how to login using key
+via putty.
+
+- Double click putty.exe to launch putty. See below screenshot:
+
+![`putty1`](images/putty1.png)
+
+- You can click 'Auth' under 'Connection' and then click 'Browse' button to load
+ the private key you generated from above. See the below screenshot: 
+
+![`putty2`](images/putty2.png)
+
+- Click 'Section' and you can enter Virtual Machine IP Adddress in the 'Host Name'
+ text field
+ 
+- Click 'Open' button to login
+
+![`putty3`](images/putty3.png)
+
+### Linux Authentication
+
+In Linux, you can use the following command to login to the Virtual Machine:
+
+```
+ssh -i private_key_file_name ip_address
+
+``` 
+
+where, private_key_file_name is the private key You download from the NeCTAR
+Dashboard. the ip_address is the address for the Virtual Machine You want to
+access.
+
+[dashboard]: https://dashboard.rc.nectar.org.au/
+[helpdesk]: https://support.nectar.org.au/support/home
+[putty]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
