@@ -7,15 +7,6 @@
         visibility: 1}
   parent: 16
   title: Cloud Basics
-22:
-  freshdesk:
-    fd_attributes:
-      folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:05-04:00', description: Cloud
-          Expert, id: 6000190151, is_default: false, language_id: null, name: Cloud
-          Expert, parent_id: null, position: 3, updated_at: '2015-09-03T01:28:05-04:00',
-        visibility: 1}
-  parent: 16
-  title: Cloud Expert
 24:
   freshdesk:
     fd_attributes:
