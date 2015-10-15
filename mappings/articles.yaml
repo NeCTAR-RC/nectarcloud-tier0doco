@@ -9588,42 +9588,41 @@
         created_at: '2015-10-08T20:25:50-04:00'
         datetime_01: null
         delta: true
-        desc_un_html: " Good Practices \n When writing templates \n \n Always use\
-          \ the version indicator; \n Use UTF-8 encoding; \n Don't use the TAB character\
-          \ anywhere in your YAML; \n Remember to use a plain text editor; \n Use\
-          \ a mono spaced font such as Courier New or Fixedsys to improve readability;\
-          \ \n YAML is more expressive than JSON. And the YAML format is favoured\
-          \ in the\n  OpenStack world. So, if possible, prefer the YAML format. A\
-          \ point to note\n  here is that JSON is a subset of the latest YAML versions\
-          \ (> 1.2). Hence\n  a YAML templates can provide more information to readers\
-          \ than a JSON equivalent. \n \n When designing templates \n \n Preference\
-          \ image id's over image names. This will tie your template to\n  a specific\
-          \ image, which means that changes or upgrades to the base image\n  will\
-          \ not affect your template. However, it does mean that you take on the\n\
-          \  responsibility of ensuring that security updates are applied; \n Hence\
-          \ always get your scripts to apply an update/upgrade when they launch; \n\
-          \ If your software is to run in a variety of locations, try to use the user\n\
-          \  data section as little as possible: preference tools such as puppet/chef/ansible\n\
-          \  if possible. This separation of concerns will make debugging problems\
-          \ far\n  easier - and allow you to fire up your applications in other environments,\n\
-          \  such as Vagrant/Virtualbox. \n "
-        description: "<h1>Good Practices</h1>\n<p>When writing templates</p>\n<ul>\n\
-          <li>Always use the version indicator;</li>\n<li>Use UTF-8 encoding;</li>\n\
-          <li>Don't use the TAB character anywhere in your YAML;</li>\n<li>Remember\
-          \ to use a plain text editor;</li>\n<li>Use a mono spaced font such as Courier\
-          \ New or Fixedsys to improve readability;</li>\n<li>YAML is more expressive\
-          \ than JSON. And the YAML format is favoured in the\n  OpenStack world.\
-          \ So, if possible, prefer the YAML format. A point to note\n  here is that\
-          \ JSON is a subset of the latest YAML versions (&gt; 1.2). Hence\n  a YAML\
-          \ templates can provide more information to readers than a JSON equivalent.</li>\n\
-          </ul>\n<p>When designing templates</p>\n<ul>\n<li>Preference image id's\
+        desc_un_html: " When writing templates \n \n Always use the version indicator;\
+          \ \n Use UTF-8 encoding; \n Don't use the TAB character anywhere in your\
+          \ YAML; \n Remember to use a plain text editor; \n Use a mono spaced font\
+          \ such as Courier New or Fixedsys to improve readability; \n YAML is more\
+          \ expressive than JSON. And the YAML format is favoured in the\n  OpenStack\
+          \ world. So, if possible, prefer the YAML format. A point to note\n  here\
+          \ is that JSON is a subset of the latest YAML versions (> 1.2). Hence\n\
+          \  a YAML templates can provide more information to readers than a JSON\
+          \ equivalent. \n \n When designing templates \n \n Preference image id's\
           \ over image names. This will tie your template to\n  a specific image,\
           \ which means that changes or upgrades to the base image\n  will not affect\
           \ your template. However, it does mean that you take on the\n  responsibility\
-          \ of ensuring that security updates are applied;</li>\n<li>Hence always\
-          \ get your scripts to apply an update/upgrade when they launch;</li>\n<li>If\
-          \ your software is to run in a variety of locations, try to use the user\n\
-          \  data section as little as possible: preference tools such as puppet/chef/ansible\n\
+          \ of ensuring that security updates are applied; \n Hence always get your\
+          \ scripts to apply an update/upgrade when they launch; \n If your software\
+          \ is to run in a variety of locations, try to use the user\n  data section\
+          \ as little as possible: preference tools such as puppet/chef/ansible\n\
+          \  if possible. This separation of concerns will make debugging problems\
+          \ far\n  easier - and allow you to fire up your applications in other environments,\n\
+          \  such as Vagrant/Virtualbox. \n "
+        description: "<p>When writing templates</p>\n<ul>\n<li>Always use the version\
+          \ indicator;</li>\n<li>Use UTF-8 encoding;</li>\n<li>Don't use the TAB character\
+          \ anywhere in your YAML;</li>\n<li>Remember to use a plain text editor;</li>\n\
+          <li>Use a mono spaced font such as Courier New or Fixedsys to improve readability;</li>\n\
+          <li>YAML is more expressive than JSON. And the YAML format is favoured in\
+          \ the\n  OpenStack world. So, if possible, prefer the YAML format. A point\
+          \ to note\n  here is that JSON is a subset of the latest YAML versions (&gt;\
+          \ 1.2). Hence\n  a YAML templates can provide more information to readers\
+          \ than a JSON equivalent.</li>\n</ul>\n<p>When designing templates</p>\n\
+          <ul>\n<li>Preference image id's over image names. This will tie your template\
+          \ to\n  a specific image, which means that changes or upgrades to the base\
+          \ image\n  will not affect your template. However, it does mean that you\
+          \ take on the\n  responsibility of ensuring that security updates are applied;</li>\n\
+          <li>Hence always get your scripts to apply an update/upgrade when they launch;</li>\n\
+          <li>If your software is to run in a variety of locations, try to use the\
+          \ user\n  data section as little as possible: preference tools such as puppet/chef/ansible\n\
           \  if possible. This separation of concerns will make debugging problems\
           \ far\n  easier - and allow you to fire up your applications in other environments,\n\
           \  such as Vagrant/Virtualbox.</li>\n</ul>"
@@ -9641,13 +9640,13 @@
           updated_at: '2015-09-03T01:28:02-04:00'
           visibility: 1
         folder_id: 6000190148
-        hits: 0
+        hits: 1
         id: 6000076079
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-08T20:25:50-04:00'
+        modified_at: '2015-10-14T20:05:37-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000076079
@@ -9659,31 +9658,30 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: Heat Good Practices
-        updated_at: '2015-10-08T20:25:50-04:00'
+        title: Best Practice
+        updated_at: '2015-10-14T20:05:37-04:00'
         user_id: 6002464727
-  html: "<h1>Good Practices</h1>\n<p>When writing templates</p>\n<ul>\n<li>Always\
-    \ use the version indicator;</li>\n<li>Use UTF-8 encoding;</li>\n<li>Don't use\
-    \ the TAB character anywhere in your YAML;</li>\n<li>Remember to use a plain text\
-    \ editor;</li>\n<li>Use a mono spaced font such as Courier New or Fixedsys to\
-    \ improve readability;</li>\n<li>YAML is more expressive than JSON. And the YAML\
-    \ format is favoured in the\n  OpenStack world. So, if possible, prefer the YAML\
-    \ format. A point to note\n  here is that JSON is a subset of the latest YAML\
-    \ versions (&gt; 1.2). Hence\n  a YAML templates can provide more information\
-    \ to readers than a JSON equivalent.</li>\n</ul>\n<p>When designing templates</p>\n\
-    <ul>\n<li>Preference image id's over image names. This will tie your template\
-    \ to\n  a specific image, which means that changes or upgrades to the base image\n\
-    \  will not affect your template. However, it does mean that you take on the\n\
-    \  responsibility of ensuring that security updates are applied;</li>\n<li>Hence\
-    \ always get your scripts to apply an update/upgrade when they launch;</li>\n\
-    <li>If your software is to run in a variety of locations, try to use the user\n\
-    \  data section as little as possible: preference tools such as puppet/chef/ansible\n\
-    \  if possible. This separation of concerns will make debugging problems far\n\
-    \  easier - and allow you to fire up your applications in other environments,\n\
-    \  such as Vagrant/Virtualbox.</li>\n</ul>"
+  html: "<p>When writing templates</p>\n<ul>\n<li>Always use the version indicator;</li>\n\
+    <li>Use UTF-8 encoding;</li>\n<li>Don't use the TAB character anywhere in your\
+    \ YAML;</li>\n<li>Remember to use a plain text editor;</li>\n<li>Use a mono spaced\
+    \ font such as Courier New or Fixedsys to improve readability;</li>\n<li>YAML\
+    \ is more expressive than JSON. And the YAML format is favoured in the\n  OpenStack\
+    \ world. So, if possible, prefer the YAML format. A point to note\n  here is that\
+    \ JSON is a subset of the latest YAML versions (&gt; 1.2). Hence\n  a YAML templates\
+    \ can provide more information to readers than a JSON equivalent.</li>\n</ul>\n\
+    <p>When designing templates</p>\n<ul>\n<li>Preference image id's over image names.\
+    \ This will tie your template to\n  a specific image, which means that changes\
+    \ or upgrades to the base image\n  will not affect your template. However, it\
+    \ does mean that you take on the\n  responsibility of ensuring that security updates\
+    \ are applied;</li>\n<li>Hence always get your scripts to apply an update/upgrade\
+    \ when they launch;</li>\n<li>If your software is to run in a variety of locations,\
+    \ try to use the user\n  data section as little as possible: preference tools\
+    \ such as puppet/chef/ansible\n  if possible. This separation of concerns will\
+    \ make debugging problems far\n  easier - and allow you to fire up your applications\
+    \ in other environments,\n  such as Vagrant/Virtualbox.</li>\n</ul>"
   parent: 42
-  sha1: a14cc710196e142aa244c181ef48f9af1b646bd2
-  title: Heat Good Practices
+  sha1: cea02667f65d5b3332e0fe3e72705a2bb88ad285
+  title: Best Practice
 69:
   freshdesk:
     fd_attributes:
