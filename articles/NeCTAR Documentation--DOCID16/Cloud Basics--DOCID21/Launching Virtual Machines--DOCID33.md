@@ -41,11 +41,10 @@ the Nectar Cloud dashboard before use.
 
 - Click 'Import Key Pair' button
 
-- Type in a keypair name and paste the contents of the public key. For Windows
- users, open PuTTYgen and click 'Load' button to load the related private key and
- copy/paste the public key contents. For Linux/Mac user, type
- cat ~/.ssh/id_rsa.pub and copy/paste the public key contents from the terminal
- output
+- Type in a keypair name and paste the contents of the public key. 
+
+  - For Windows users, open PuTTYgen and click 'Load' button to load the related private key and copy/paste the public key contents.
+  - For Linux/Mac user, type `cat ~/.ssh/id_rsa.pub` and copy/paste the public key contents from the terminal output.
 
 ### Nectar Cloud Dashboard
 
