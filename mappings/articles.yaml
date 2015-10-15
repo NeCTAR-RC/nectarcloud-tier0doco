@@ -12353,3 +12353,228 @@
   parent: 41
   sha1: 417a1a3331e112d954d7182c84c14ac8be38a169
   title: API
+81:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-10-14T20:50:46-04:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Videos \n The following videos provides useful information\
+          \ about Authentication: \n \n \n OpenStack Authentication Overview \n \n\
+          \ \n Keystone advanced authentication methods \n \n \n OpenStack Fundamentals\
+          \ OpenStack Identity Services \n \n \n OpenStack: Keystone Deep Dive Presentation\
+          \ \n \n \n OpenStack Bootstrapping Hour - Authentication in Keystone \n\
+          \ \n \n Documentation \n The following documentations provides reference\
+          \ and guidance information for\nLinux security: \n \n \n OpenStack APIs\
+          \ \n \n \n OpenStack Identity API \n \n \n OpenStack Python bindings to\
+          \ the Identity API \n \n \n NeCTAR Support \n If you have a problem and\
+          \ you cannot resolve it, you can always go to NecTAR\nHelpDesk to log a\
+          \ support ticket and the NeCTAR support staff are\nmore than happy to help\
+          \ you. "
+        description: '<h2>Videos</h2>
+
+          <p>The following videos provides useful information about Authentication:</p>
+
+          <ul>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=TbkpGXzxl4E">OpenStack Authentication
+          Overview</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=ZLHGGpRAHgE">Keystone advanced
+          authentication methods</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=H_m369ZqEf4">OpenStack Fundamentals
+          OpenStack Identity Services</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=nHCxcN3pgQw">OpenStack: Keystone
+          Deep Dive Presentation</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=Th61TgUVnzU">OpenStack Bootstrapping
+          Hour - Authentication in Keystone</a></p>
+
+          </li>
+
+          </ul>
+
+          <h2>Documentation</h2>
+
+          <p>The following documentations provides reference and guidance information
+          for
+
+          Linux security:</p>
+
+          <ul>
+
+          <li>
+
+          <p><a href="http://developer.openstack.org/api-guide/quick-start/api-quick-start.html#authentication-and-api-request-workflow">OpenStack
+          APIs</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://developer.openstack.org/api-ref-identity-v3.html">OpenStack
+          Identity API</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/developer/python-keystoneclient/">OpenStack
+          Python bindings to the Identity API</a></p>
+
+          </li>
+
+          </ul>
+
+          <h2>NeCTAR Support</h2>
+
+          <p>If you have a problem and you cannot resolve it, you can always go to
+          NecTAR
+
+          <a href="https://support.nectar.org.au/support/home">HelpDesk</a> to log
+          a support ticket and the NeCTAR support staff are
+
+          more than happy to help you.</p>'
+        folder:
+          category_id: 6000122279
+          created_at: '2015-09-03T01:28:01-04:00'
+          customer_folders: []
+          description: Authentication
+          id: 6000190147
+          is_default: false
+          language_id: 6
+          name: Authentication
+          parent_id: 6000190147
+          position: 3
+          updated_at: '2015-09-03T01:28:01-04:00'
+          visibility: 1
+        folder_id: 6000190147
+        hits: 0
+        id: 6000078071
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-10-14T20:50:46-04:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000078071
+        position: 4
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: More Info
+        updated_at: '2015-10-14T20:50:46-04:00'
+        user_id: 6002464727
+  html: '<h2>Videos</h2>
+
+    <p>The following videos provides useful information about Authentication:</p>
+
+    <ul>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=TbkpGXzxl4E">OpenStack Authentication
+    Overview</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=ZLHGGpRAHgE">Keystone advanced authentication
+    methods</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=H_m369ZqEf4">OpenStack Fundamentals
+    OpenStack Identity Services</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=nHCxcN3pgQw">OpenStack: Keystone Deep
+    Dive Presentation</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=Th61TgUVnzU">OpenStack Bootstrapping
+    Hour - Authentication in Keystone</a></p>
+
+    </li>
+
+    </ul>
+
+    <h2>Documentation</h2>
+
+    <p>The following documentations provides reference and guidance information for
+
+    Linux security:</p>
+
+    <ul>
+
+    <li>
+
+    <p><a href="http://developer.openstack.org/api-guide/quick-start/api-quick-start.html#authentication-and-api-request-workflow">OpenStack
+    APIs</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://developer.openstack.org/api-ref-identity-v3.html">OpenStack
+    Identity API</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/developer/python-keystoneclient/">OpenStack
+    Python bindings to the Identity API</a></p>
+
+    </li>
+
+    </ul>
+
+    <h2>NeCTAR Support</h2>
+
+    <p>If you have a problem and you cannot resolve it, you can always go to NecTAR
+
+    <a href="https://support.nectar.org.au/support/home">HelpDesk</a> to log a support
+    ticket and the NeCTAR support staff are
+
+    more than happy to help you.</p>'
+  parent: 41
+  sha1: 72a60e59f1612bf38c706d80dd49230706a52992
+  title: More Info
