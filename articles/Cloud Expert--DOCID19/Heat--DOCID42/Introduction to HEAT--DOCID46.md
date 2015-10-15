@@ -58,18 +58,4 @@ At that point all the provisioned infrastructure will be destroyed, its
 resources released, and then the template and its parameters will be removed
 from the Heat database
 
-## In depth
-
-The following pages offer more in depth technical information on using Heat in
-the NeCTAR cloud.
-
-* [Enough YAML to read a template](Introduction to YAML--DOCID48.md) (useful if you don't know YAML)
-* [A walk through of a YAML template](Heat Template Walk Through--DOCID47.md)
-* [Actions that can be performed](Heat Actions.md)
-* [The command line client](Heat Commandline Client.md)
-* [The dashboard](Heat Dashboard Introduction.md)
-* Preparing your images - you need more than just cloud-init!
-* [Good practices](Heat Good Practices.md)
-* [Debugging](Heat Debugging.md)
-* Oddities and gotcha's
-
+For more on Heat, read the other articles on this site.
