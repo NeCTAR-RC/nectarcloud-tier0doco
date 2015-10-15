@@ -1,4 +1,3 @@
-# Good Practices
 
 When writing templates
 
