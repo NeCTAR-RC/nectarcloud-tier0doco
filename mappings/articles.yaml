@@ -2651,18 +2651,18 @@
         delta: true
         desc_un_html: " Incoming network access to your machines is usually required.\
           \ Security Groups\nare how to add network access. If you can't reach your\
-          \ instance by SSH to login\nor by browser if it runs a Webserver additional\
+          \ instance by SSH to login\nor by browser if it runs a Webserver, additional\
           \ Security Group settings could\nbe needed. \n Adding Network Access \n\
           \ The default Security Group is empty and no incoming access is configured\
           \ until\nyou add rules to specify: \n \n which ports are available for connection\
           \ to your instance and... \n from which addresses your instance will accept\
           \ inbound traffic to the\n  open ports \n \n \n NOTE: If you do not specify\
-          \ a security group at boot the default security\ngroup will be applied \n\
-          \ \n \n Each rule adds further access, it never cancels or overrides another\
-          \ rule. \n Rules can have overlapping ranges and addresses. \n Rules for\
-          \ the same ports and addresses can be added to more than one\n  Security\
+          \ a security group at boot, the default security\ngroup will be applied\
+          \ \n \n \n Each rule adds further access; it never cancels or overrides\
+          \ another rule. \n Rules can have overlapping ranges and addresses. \n Rules\
+          \ for the same ports and addresses can be added to more than one\n  Security\
           \ Group \n \n Removing Network Access \n To remove access to a port or from\
-          \ an address locate all security groups with\nrules relating to that port\
+          \ an address, locate all security groups with\nrules relating to that port\
           \ or address, then \n \n remove or edit each applicable rule, OR \n do not\
           \ apply those Security Groups that contain the applicable rule(s) \n \n\
           \ Pre-Defined and Default Security Groups \n For Project Trials (pt-xxxx)\
@@ -2680,33 +2680,33 @@
           \ \n users experimenting with network access can remove groups and re-apply\n\
           \  them without re-creating rules each time \n testing rules on a temporary\
           \ security group and test Instance before\n  adding the same rules to Security\
-          \ Groups already in use.\n  rules can appear in more than one Security Group\
+          \ Groups already in use.\n  Rules can appear in more than one Security Group\
           \ \n \n Applying Security Groups \n Security Groups are most conveniently\
-          \ applied before Launching your\ninstance, multiple security groups can\
-          \ be selected.\nHowever Security Groups can also be added or removed on\
-          \ running instances. \n Click Launch then click the Security Groups field.\
-          \ The default group is\npre-selected \n Outgoing traffic \n Outgoing traffic\
+          \ applied before Launching your\ninstance. Multiple security groups can\
+          \ be selected.\nSecurity Groups can also be added or removed on running\
+          \ instances. \n Click 'Launch' then click the 'Security Groups' field. The\
+          \ default group is\npre-selected. \n Outgoing traffic \n Outgoing traffic\
           \ is not blocked on any port:  connections that originate\nfrom your instance\
-          \ to the outside world, are not blocked by Nectar\nOpenStack configuration\
+          \ to the outside world are not blocked by Nectar\nOpenStack configuration\
           \ \n \n Security Note \n Using the Research Cloud creates a publicly accessible\
           \ server (depending on\nSecurity Groups) and therefore that machine can\
           \ be exploited. All users must\nread & follow our Security Guidelines. \n\
           \ "
         description: "<p>Incoming network access to your machines is usually required.\
           \ Security Groups\nare how to add network access. If you can't reach your\
-          \ instance by SSH to login\nor by browser if it runs a Webserver additional\
+          \ instance by SSH to login\nor by browser if it runs a Webserver, additional\
           \ Security Group settings could\nbe needed.</p>\n<h2>Adding Network Access</h2>\n\
           <p>The default Security Group is empty and no incoming access is configured\
           \ until\nyou add rules to specify:</p>\n<ul>\n<li>which ports are available\
           \ for connection to your instance and...</li>\n<li>from which addresses\
           \ your instance will accept inbound traffic to the\n  open ports</li>\n\
           </ul>\n<blockquote>\n<p>NOTE: If you do not specify a security group at\
-          \ boot the default security\ngroup will be applied</p>\n</blockquote>\n\
-          <ul>\n<li>Each rule adds further access, it never cancels or overrides another\
+          \ boot, the default security\ngroup will be applied</p>\n</blockquote>\n\
+          <ul>\n<li>Each rule adds further access; it never cancels or overrides another\
           \ rule.</li>\n<li>Rules can have overlapping ranges and addresses.</li>\n\
           <li>Rules for the same ports and addresses can be added to more than one\n\
           \  Security Group</li>\n</ul>\n<h2>Removing Network Access</h2>\n<p>To remove\
-          \ access to a port or from an address locate all security groups with\n\
+          \ access to a port or from an address, locate all security groups with\n\
           rules relating to that port or address, then</p>\n<ul>\n<li>remove or edit\
           \ each applicable rule, OR</li>\n<li>do not apply those Security Groups\
           \ that contain the applicable rule(s)</li>\n</ul>\n<h2>Pre-Defined and Default\
@@ -2726,14 +2726,14 @@
           \ with network access can remove groups and re-apply\n  them without re-creating\
           \ rules each time</li>\n<li>testing rules on a temporary security group\
           \ and test Instance before\n  adding the same rules to Security Groups already\
-          \ in use.\n  rules can appear in more than one Security Group</li>\n</ul>\n\
+          \ in use.\n  Rules can appear in more than one Security Group</li>\n</ul>\n\
           <h2>Applying Security Groups</h2>\n<p>Security Groups are most conveniently\
-          \ applied before Launching your\ninstance, multiple security groups can\
-          \ be selected.\nHowever Security Groups can also be added or removed on\
-          \ running instances.</p>\n<p>Click Launch then click the Security Groups\
-          \ field. The default group is\npre-selected</p>\n<h2>Outgoing traffic</h2>\n\
-          <p>Outgoing traffic is not blocked on any port:  connections that originate\n\
-          from your instance to the outside world, are not blocked by Nectar\nOpenStack\
+          \ applied before Launching your\ninstance. Multiple security groups can\
+          \ be selected.\nSecurity Groups can also be added or removed on running\
+          \ instances.</p>\n<p>Click 'Launch' then click the 'Security Groups' field.\
+          \ The default group is\npre-selected.</p>\n<h2>Outgoing traffic</h2>\n<p>Outgoing\
+          \ traffic is not blocked on any port:  connections that originate\nfrom\
+          \ your instance to the outside world are not blocked by Nectar\nOpenStack\
           \ configuration</p>\n<blockquote>\n<p>Security Note</p>\n<p>Using the Research\
           \ Cloud creates a publicly accessible server (depending on\nSecurity Groups)\
           \ and therefore that machine can be exploited. All users must\nread &amp;\
@@ -2749,21 +2749,21 @@
           language_id: 6
           name: NeCTAR Fundamentals
           parent_id: 6000190155
-          position: 7
-          updated_at: '2015-09-03T01:28:09-04:00'
+          position: 2
+          updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190155
-        hits: 0
+        hits: 5
         id: 6000055387
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-09-03T01:28:24-04:00'
+        modified_at: '2015-10-16T00:56:02-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055387
-        position: 2
+        position: 3
         seo_data: {}
         status: 2
         string_01: null
@@ -2772,28 +2772,28 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Security Groups
-        updated_at: '2015-09-03T01:28:24-04:00'
+        updated_at: '2015-10-16T00:56:02-04:00'
         user_id: 6002464727
   html: "<p>Incoming network access to your machines is usually required. Security\
     \ Groups\nare how to add network access. If you can't reach your instance by SSH\
-    \ to login\nor by browser if it runs a Webserver additional Security Group settings\
+    \ to login\nor by browser if it runs a Webserver, additional Security Group settings\
     \ could\nbe needed.</p>\n<h2>Adding Network Access</h2>\n<p>The default Security\
     \ Group is empty and no incoming access is configured until\nyou add rules to\
     \ specify:</p>\n<ul>\n<li>which ports are available for connection to your instance\
     \ and...</li>\n<li>from which addresses your instance will accept inbound traffic\
     \ to the\n  open ports</li>\n</ul>\n<blockquote>\n<p>NOTE: If you do not specify\
-    \ a security group at boot the default security\ngroup will be applied</p>\n</blockquote>\n\
-    <ul>\n<li>Each rule adds further access, it never cancels or overrides another\
-    \ rule.</li>\n<li>Rules can have overlapping ranges and addresses.</li>\n<li>Rules\
-    \ for the same ports and addresses can be added to more than one\n  Security Group</li>\n\
-    </ul>\n<h2>Removing Network Access</h2>\n<p>To remove access to a port or from\
-    \ an address locate all security groups with\nrules relating to that port or address,\
-    \ then</p>\n<ul>\n<li>remove or edit each applicable rule, OR</li>\n<li>do not\
-    \ apply those Security Groups that contain the applicable rule(s)</li>\n</ul>\n\
-    <h2>Pre-Defined and Default Security Groups</h2>\n<p>For Project Trials (pt-xxxx)\
-    \ there are pre-defined security groups for\nconvenience.</p>\n<ul>\n<li>SSH opens\
-    \ tcp port 22 to traffic from all sources (for logging via ssh)</li>\n<li>HTTP\
-    \ opens tcp ports 80 and 443 to traffic from all sources (for\n  web servers)</li>\n\
+    \ a security group at boot, the default security\ngroup will be applied</p>\n\
+    </blockquote>\n<ul>\n<li>Each rule adds further access; it never cancels or overrides\
+    \ another rule.</li>\n<li>Rules can have overlapping ranges and addresses.</li>\n\
+    <li>Rules for the same ports and addresses can be added to more than one\n  Security\
+    \ Group</li>\n</ul>\n<h2>Removing Network Access</h2>\n<p>To remove access to\
+    \ a port or from an address, locate all security groups with\nrules relating to\
+    \ that port or address, then</p>\n<ul>\n<li>remove or edit each applicable rule,\
+    \ OR</li>\n<li>do not apply those Security Groups that contain the applicable\
+    \ rule(s)</li>\n</ul>\n<h2>Pre-Defined and Default Security Groups</h2>\n<p>For\
+    \ Project Trials (pt-xxxx) there are pre-defined security groups for\nconvenience.</p>\n\
+    <ul>\n<li>SSH opens tcp port 22 to traffic from all sources (for logging via ssh)</li>\n\
+    <li>HTTP opens tcp ports 80 and 443 to traffic from all sources (for\n  web servers)</li>\n\
     <li>ICMP opens all ICMP traffic from all sources (etc. to allow pinging your\n\
     \  VMs IP address)</li>\n</ul>\n<p>For all other shared projects that are created\
     \ after an allocation request,\nthere is only the empty 'default' security group\
@@ -2805,20 +2805,20 @@
     \ with network access can remove groups and re-apply\n  them without re-creating\
     \ rules each time</li>\n<li>testing rules on a temporary security group and test\
     \ Instance before\n  adding the same rules to Security Groups already in use.\n\
-    \  rules can appear in more than one Security Group</li>\n</ul>\n<h2>Applying\
+    \  Rules can appear in more than one Security Group</li>\n</ul>\n<h2>Applying\
     \ Security Groups</h2>\n<p>Security Groups are most conveniently applied before\
-    \ Launching your\ninstance, multiple security groups can be selected.\nHowever\
-    \ Security Groups can also be added or removed on running instances.</p>\n<p>Click\
-    \ Launch then click the Security Groups field. The default group is\npre-selected</p>\n\
+    \ Launching your\ninstance. Multiple security groups can be selected.\nSecurity\
+    \ Groups can also be added or removed on running instances.</p>\n<p>Click 'Launch'\
+    \ then click the 'Security Groups' field. The default group is\npre-selected.</p>\n\
     <h2>Outgoing traffic</h2>\n<p>Outgoing traffic is not blocked on any port:  connections\
-    \ that originate\nfrom your instance to the outside world, are not blocked by\
-    \ Nectar\nOpenStack configuration</p>\n<blockquote>\n<p>Security Note</p>\n<p>Using\
-    \ the Research Cloud creates a publicly accessible server (depending on\nSecurity\
+    \ that originate\nfrom your instance to the outside world are not blocked by Nectar\n\
+    OpenStack configuration</p>\n<blockquote>\n<p>Security Note</p>\n<p>Using the\
+    \ Research Cloud creates a publicly accessible server (depending on\nSecurity\
     \ Groups) and therefore that machine can be exploited. All users must\nread &amp;\
     \ follow our <a href=\"../NeCTAR%20Fundamentals/Security%20Guidelines.md\">Security\
     \ Guidelines</a>.</p>\n</blockquote>"
   parent: 26
-  sha1: 15ab2093bd4301131866f3bb7429dfc73ee75715
+  sha1: ad8f96847d5620f67f64ba8b5c18efff2481fd67
   title: Security Groups
 52:
   freshdesk:
