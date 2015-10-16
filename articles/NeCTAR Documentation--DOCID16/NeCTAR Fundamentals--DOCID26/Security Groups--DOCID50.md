@@ -1,6 +1,6 @@
 Incoming network access to your machines is usually required. Security Groups
 are how to add network access. If you can't reach your instance by SSH to login
-or by browser if it runs a Webserver additional Security Group settings could
+or by browser if it runs a Webserver, additional Security Group settings could
 be needed.
 
 ## Adding Network Access
@@ -12,17 +12,17 @@ you add rules to specify:
 - from which addresses your instance will accept inbound traffic to the
   open ports
 
-> NOTE: If you do not specify a security group at boot the default security
+> NOTE: If you do not specify a security group at boot, the default security
 > group will be applied
 
-- Each rule adds further access, it never cancels or overrides another rule.
+- Each rule adds further access; it never cancels or overrides another rule.
 - Rules can have overlapping ranges and addresses.
 - Rules for the same ports and addresses can be added to more than one
   Security Group
 
 ## Removing Network Access
 
-To remove access to a port or from an address locate all security groups with
+To remove access to a port or from an address, locate all security groups with
 rules relating to that port or address, then
 
 - remove or edit each applicable rule, OR
@@ -55,21 +55,21 @@ for example
   them without re-creating rules each time
 - testing rules on a temporary security group and test Instance before
   adding the same rules to Security Groups already in use.
-  rules can appear in more than one Security Group
+  Rules can appear in more than one Security Group
 
 ## Applying Security Groups
 
 Security Groups are most conveniently applied before Launching your
-instance, multiple security groups can be selected.
-However Security Groups can also be added or removed on running instances.
+instance. Multiple security groups can be selected.
+Security Groups can also be added or removed on running instances.
 
-Click Launch then click the Security Groups field. The default group is
-pre-selected
+Click 'Launch' then click the 'Security Groups' field. The default group is
+pre-selected.
 
 ## Outgoing traffic
 
 Outgoing traffic is not blocked on any port:  connections that originate
-from your instance to the outside world, are not blocked by Nectar
+from your instance to the outside world are not blocked by Nectar
 OpenStack configuration
 
 > Security Note
