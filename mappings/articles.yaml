@@ -709,255 +709,148 @@
         delta: true
         desc_un_html: " Welcome to the Nectar Cloud knowledge base. Browse or search\
           \ our\nuser documentation, and if you can't find what you're looking\nfor\
-          \ contact our support team at [email] or [phone]. \n What is the Nectar\
-          \ Cloud \n Nectar (National eResearch Collaboration Tools and Resources)\
-          \ is an Australian Government project funded to build new infrastructure\
-          \ specifically for the needs of Australian researchers.  The Nectar Cloud\
-          \ provides supported computing infrastructure, giving researchers access\
-          \ to computing resources without the need to purchase or host their own\
-          \ hardware. \nAll Australian researchers have access to the Nectar Cloud\
-          \ via the AAF. \n To access the cloud all users must first login through\
-          \ the\nNectar Cloud dashboard:\nhttps://dashboard.rc.nectar.org.au/ \n Instances\
-          \ \n Instances running inside the Research Cloud are just like real-life\
-          \ machines but\nin a remote location. The Research Cloud is used to start,\
-          \ copy and delete\ninstances. They have an operating system (you select\
-          \ it from a list), network\naccess (a real IP address & you specify any\
-          \ access), and hard disk storage.\nWith no hardware to maintain you can\
-          \ copy (Snapshot) and customise new\nmachines rapidly. \n Tools \n The Nectar\
-          \ Cloud Dashboard \n The Dashboard provides a web interface to get all the\
-          \ basic\nResearch Cloud related jobs done. \n Use the dashboard: \n \n for\
-          \ basic Cloud operations: (launching, duplicating & terminating ) instances\
-          \ \n to get [Credentials] you can use with other [API clients] \n to make\
-          \ an allocation request for a larger ongoing share of Research Cloud Resources.\
-          \ \n \n More about instances \n If you are familiar with connecting to remote\
-          \ machines already\nthe same tools and techniques apply when connecting\
-          \ to running\ninstances. Your instance has a public IP address and, if\n\
-          configured, can be reached and controlled with any remote\naccess tools\
-          \ you wish to use. Example SSH. \n More information about launching and\
-          \ managing instances is here \n Images \n Instances originate from Images\
+          \ contact our support team by either raising a ticket,\nor by sending an\
+          \ email to support@nectar.org.au,\nor finally, by giving us a call: 1300\
+          \ 080 431. \n What is the Nectar Cloud \n Nectar (National eResearch Collaboration\
+          \ Tools and Resources) is an\nAustralian Government project funded to build\
+          \ new infrastructure specifically for the needs of\nAustralian researchers.\
+          \ The Nectar Cloud provides supported computing infrastructure, giving\n\
+          researchers access to computing resources without the need to purchase or\
+          \ host their own hardware. \nAll Australian researchers have access to the\
+          \ Nectar Cloud via the AAF. \n To access the cloud all users must first\
+          \ login through the\nNectar Cloud dashboard:\nhttps://dashboard.rc.nectar.org.au/\
+          \ \n Instances \n Instances running inside the Research Cloud are just like\
+          \ real-life machines but\nin a remote location. The Research Cloud is used\
+          \ to start, copy and delete\ninstances. They have an operating system (you\
+          \ select it from a list), network\naccess (a real IP address & you specify\
+          \ any access), and hard disk storage.\nWith no hardware to maintain you\
+          \ can copy (Snapshot) and customise new\nmachines rapidly. \n Tools \n The\
+          \ Nectar Cloud Dashboard \n The Dashboard provides a web interface to get\
+          \ all the basic\nResearch Cloud related jobs done. \n Use the dashboard:\
+          \ \n \n for basic Cloud operations: (launching, duplicating & terminating\
+          \ ) instances; \n to get Credentials\n  you can use with other API clients;\
+          \ \n to make an allocation request for a larger ongoing share of Research\
+          \ Cloud Resources. \n \n More about instances \n If you are familiar with\
+          \ connecting to remote machines already\nthe same tools and techniques apply\
+          \ when connecting to running\ninstances. Your instance has a public IP address\
+          \ and, if\nconfigured, can be reached and controlled with any remote\naccess\
+          \ tools you wish to use. For example, SSH. \n More information about launching\
+          \ and managing instances is here \n Images \n Instances originate from Images\
           \ and can be a plain \"off the\nshelf\" Operating System or include software\
-          \ packages and\nconfig changes to suit a particular purpose (eg Webserving).\n\
-          There are publicly available images in the cloud ready for\nyou to use.\
-          \ \n To suit your specific purposes an instance may need some\ncustomisation,\
+          \ packages and\nconfig changes to suit a particular purpose (e.g.: serving\
+          \ web pages).\nThere are publicly available images in the cloud ready for\n\
+          you to use. \n To suit your specific purposes an instance may need some\n\
+          customisation, configuration changes or software installation.\nIts a good\
+          \ idea to make a copy of the instance if you wish to\nre-use its current\
+          \ state as a starting point for new instances.\nIf you are experimenting\
+          \ and making changes, a copy allows you\nto return to the copied state and\
+          \ dispose of the experiment\nwithout having to undo/redo configuration changes.\
+          \ \n You can create an Image from scratch, but usually its easier\nto customise\
+          \ & copy a running instance that is close\nto what you need. \n Copies of\
+          \ instances are called Snapshots and can be used\nlike other Images to start\
+          \ new instances. Making a Snapshot\nis simple: \n \n Go to the Dashboard\
+          \ \"Instances\" \n   tab; \n Click \"Create Snapshot\" for the running instance\
+          \ you wish to copy. \n \n Key Pairs \n Key pairs enable you to communicate\
+          \ with your instance via\nSSH. When launching an instance you specify an\
+          \ existing key\npair. The public key is injected into the running\ninstance's\
+          \ authorized_keys file. \n You can manage your key pairs through the Dashboard\
+          \ or via\nthe nova CLI client. \n In the dashboard under the Access & Security\n\
+          tab you can manage your keys. You have the option of: \n \n Importing an\
+          \ existing SSH key you own; \n Creating a new SSH Key. \n \n Important:\
+          \ Key pairs can only be specified on instance\ncreation, if you don't specify\
+          \ a keypair on creation you will\nnot be able to add it later. \n Security\
+          \ groups \n Incoming network access to your machines is usually required.\n\
+          Security Groups are how to add network access. If you can't\nreach your\
+          \ instance by SSH to login or by browser if it\nruns a web server additional\
+          \ Security Group settings could be\nneeded. \n The OpenStack article title\
+          \ \"Security Groups\"\ngives more information. \n Storage in the cloud \n\
+          \ The NeCTAR Research Cloud provides instances for research\nuse. While\
+          \ resources like processing cores, RAM and the\namount of storage you get\
+          \ are dedicated to a particular\ninstance, other resources like the network\
+          \ and the underlying\nstorage system are shared among instances. Furthermore,\
+          \ not\nall storage is created equal, the Research Cloud offers: \n \n \n\
+          Object storage; \n \nBlock storage; \n Transient/Ephemeral storage. \n \n\
+          \ You can decide which suits your needs best by reading the OpenStack article\n\
+          titled \"Storage Decisions\" "
+        description: "<p>Welcome to the Nectar Cloud knowledge base. Browse or search\
+          \ our\nuser documentation, and if you can't find what you're looking\nfor\
+          \ contact our support team by either raising a <a href=\"https://support.nectar.org.au/support/tickets/new\"\
+          >ticket</a>,\nor by sending an email to <a href=\"mailto:support@nectar.org.au\"\
+          >support@nectar.org.au</a>,\nor finally, by giving us a call: <a>1300 080\
+          \ 431</a>.</p>\n<h2>What is the Nectar Cloud</h2>\n<p><a href=\"http://nectar.org.au/\"\
+          >Nectar</a> (National eResearch Collaboration Tools and Resources) is an\n\
+          Australian Government project funded to build new infrastructure specifically\
+          \ for the needs of\nAustralian researchers. The Nectar Cloud provides supported\
+          \ computing infrastructure, giving\nresearchers access to computing resources\
+          \ without the need to purchase or host their own hardware.<br>\nAll Australian\
+          \ researchers have access to the Nectar Cloud via the <a href=\"http://support.rc.nectar.org.au/node/111\"\
+          >AAF</a>.</p>\n<p>To access the cloud all users must first login through\
+          \ the\nNectar Cloud dashboard:\n<a href=\"https://dashboard.rc.nectar.org.au/\"\
+          >https://dashboard.rc.nectar.org.au/</a></p>\n<h2>Instances</h2>\n<p>Instances\
+          \ running inside the Research Cloud are just like real-life machines but\n\
+          in a remote location. The Research Cloud is used to start, copy and delete\n\
+          instances. They have an operating system (you select it from a list), network\n\
+          access (a real IP address &amp; you specify any access), and hard disk storage.\n\
+          With no hardware to maintain you can copy (Snapshot) and customise new\n\
+          machines rapidly.</p>\n<h2>Tools</h2>\n<h3>The Nectar Cloud Dashboard</h3>\n\
+          <p>The Dashboard provides a web interface to get all the basic\nResearch\
+          \ Cloud related jobs done.</p>\n<p>Use the dashboard:</p>\n<ul>\n<li>for\
+          \ basic Cloud operations: (launching, duplicating &amp; terminating ) instances;</li>\n\
+          <li>to get <a href=\"https://dashboard.rc.nectar.org.au/project/access_and_security/\"\
+          >Credentials</a>\n  you can use with other <a href=\"http://docs.openstack.org/cli-reference/content/ch_cli.html\"\
+          >API clients</a>;</li>\n<li>to make an allocation request for a larger ongoing\
+          \ share of Research Cloud Resources.</li>\n</ul>\n<h3>More about instances</h3>\n\
+          <p>If you are familiar with connecting to remote machines already\nthe same\
+          \ tools and techniques apply when connecting to running\ninstances. Your\
+          \ instance has a public IP address and, if\nconfigured, can be reached and\
+          \ controlled with any remote\naccess tools you wish to use. For example,\
+          \ <a href=\"https://en.wikipedia.org/wiki/Secure_Shell\">SSH</a>.</p>\n\
+          <p>More information about launching and managing instances is <a href=\"\
+          https://support.nectar.org.au/support/solutions/articles/6000073471-introduction-to-instance-management\"\
+          >here</a></p>\n<h3>Images</h3>\n<p>Instances originate from Images and can\
+          \ be a plain \"off the\nshelf\" Operating System or include software packages\
+          \ and\nconfig changes to suit a particular purpose (e.g.: serving web pages).\n\
+          There are publicly available images in the cloud ready for\nyou to use.</p>\n\
+          <p>To suit your specific purposes an instance may need some\ncustomisation,\
           \ configuration changes or software installation.\nIts a good idea to make\
           \ a copy of the instance if you wish to\nre-use its current state as a starting\
           \ point for new instances.\nIf you are experimenting and making changes,\
           \ a copy allows you\nto return to the copied state and dispose of the experiment\n\
-          without having to undo/redo configuration changes. \n You can create an\
-          \ Image from scratch, but usually its easier\nto customise & copy a running\
-          \ instance that is close\nto what you need. \n Copies of instances are called\
-          \ Snapshots and can be used\nlike other Images to start new instances. Making\
-          \ a Snapshot\nis simple: \n \n Go to the Dashboard \"Instances\" tab \n\
-          \ Click \"Create Snapshot\" for the running instance you wish to copy. \n\
-          \ \n Keypairs \n Key Pairs enable you to communicate with your instance\
-          \ via\nSSH. When launching an instance you specify an existing key\npair.\
-          \ The public key is injected into the running\ninstance's authorized_keys\
-          \ file. \n You can manage your keypairs through the Dashboard or via\nthe\
-          \ nova CLI client. \n In the dashboard under the Access & Security tab you\
-          \ can\nmanage your keys. You have the option of: \n \n Importing an existing\
-          \ SSH key you own \n Creating a new SSH Key \n \n Important: Keypairs can\
+          without having to undo/redo configuration changes.</p>\n<p>You can create\
+          \ an Image from scratch, but usually its easier\nto customise &amp; copy\
+          \ a running instance that is close\nto what you need.</p>\n<p>Copies of\
+          \ instances are called Snapshots and can be used\nlike other Images to start\
+          \ new instances. Making a Snapshot\nis simple:</p>\n<ol>\n<li>Go to the\
+          \ Dashboard \"<a href=\"https://dashboard.rc.nectar.org.au/project/instances/\"\
+          >Instances</a>\" \n   tab;</li>\n<li>Click \"Create Snapshot\" for the running\
+          \ instance you wish to copy.</li>\n</ol>\n<h2>Key Pairs</h2>\n<p>Key pairs\
+          \ enable you to communicate with your instance via\nSSH. When launching\
+          \ an instance you specify an existing key\npair. The public key is injected\
+          \ into the running\ninstance's authorized_keys file.</p>\n<p>You can manage\
+          \ your key pairs through the Dashboard or via\nthe nova CLI client.</p>\n\
+          <p>In the dashboard under the <a href=\"https://dashboard.rc.nectar.org.au/project/access_and_security/\"\
+          >Access &amp; Security</a>\ntab you can manage your keys. You have the option\
+          \ of:</p>\n<ul>\n<li>Importing an existing SSH key you own;</li>\n<li>Creating\
+          \ a new SSH Key.</li>\n</ul>\n<p><strong>Important:</strong> Key pairs can\
           \ only be specified on instance\ncreation, if you don't specify a keypair\
-          \ on creation you will\nnot be able to add it later. \n Security groups\
-          \ \n Incoming network access to your machines is usually required.\nSecurity\
+          \ on creation you will\nnot be able to add it later.</p>\n<h2>Security groups</h2>\n\
+          <p>Incoming network access to your machines is usually required.\nSecurity\
           \ Groups are how to add network access. If you can't\nreach your instance\
-          \ by SSH to login or by browser if it\nruns a Webserver additional Security\
-          \ Group settings could be\nneeded. \n [Add link to more info] \n Storage\
-          \ in the cloud \n The NeCTAR Research Cloud provides instances for research\n\
+          \ by SSH to login or by browser if it\nruns a web server additional Security\
+          \ Group settings could be\nneeded.</p>\n<p>The OpenStack article title \"\
+          <a href=\"http://docs.openstack.org/openstack-ops/content/security_groups.html\"\
+          >Security Groups</a>\"\ngives more information.</p>\n<h2>Storage in the\
+          \ cloud</h2>\n<p>The NeCTAR Research Cloud provides instances for research\n\
           use. While resources like processing cores, RAM and the\namount of storage\
           \ you get are dedicated to a particular\ninstance, other resources like\
           \ the network and the underlying\nstorage system are shared among instances.\
-          \ Furthermore, not\nall storage is created equal, and Research Cloud users\n\
-          have a few different types of storage available which differ\naccording\
-          \ to performance, persistence and data safety. \n To find out which storage\
-          \ option is right for you. We need\nto write the documentation for it. [LINK] "
-        description: '<p>Welcome to the Nectar Cloud knowledge base. Browse or search
-          our
-
-          user documentation, and if you can''t find what you''re looking
-
-          for contact our support team at [email] or [phone].</p>
-
-          <h2>What is the Nectar Cloud</h2>
-
-          <p><a href="http://nectar.org.au/">Nectar</a> (National eResearch Collaboration
-          Tools and Resources) is an Australian Government project funded to build
-          new infrastructure specifically for the needs of Australian researchers.  The
-          Nectar Cloud provides supported computing infrastructure, giving researchers
-          access to computing resources without the need to purchase or host their
-          own hardware.<br>
-
-          All Australian researchers have access to the Nectar Cloud via the <a href="http://support.rc.nectar.org.au/node/111">AAF</a>.</p>
-
-          <p>To access the cloud all users must first login through the
-
-          Nectar Cloud dashboard:
-
-          <a href="https://dashboard.rc.nectar.org.au/">https://dashboard.rc.nectar.org.au/</a></p>
-
-          <h2>Instances</h2>
-
-          <p>Instances running inside the Research Cloud are just like real-life machines
-          but
-
-          in a remote location. The Research Cloud is used to start, copy and delete
-
-          instances. They have an operating system (you select it from a list), network
-
-          access (a real IP address &amp; you specify any access), and hard disk storage.
-
-          With no hardware to maintain you can copy (Snapshot) and customise new
-
-          machines rapidly.</p>
-
-          <h2>Tools</h2>
-
-          <h3>The Nectar Cloud Dashboard</h3>
-
-          <p>The Dashboard provides a web interface to get all the basic
-
-          Research Cloud related jobs done.</p>
-
-          <p>Use the dashboard:</p>
-
-          <ul>
-
-          <li>for basic Cloud operations: (launching, duplicating &amp; terminating
-          ) instances</li>
-
-          <li>to get [Credentials] you can use with other [API clients]</li>
-
-          <li>to make an allocation request for a larger ongoing share of Research
-          Cloud Resources.</li>
-
-          </ul>
-
-          <h3>More about instances</h3>
-
-          <p>If you are familiar with connecting to remote machines already
-
-          the same tools and techniques apply when connecting to running
-
-          instances. Your instance has a public IP address and, if
-
-          configured, can be reached and controlled with any remote
-
-          access tools you wish to use. Example SSH.</p>
-
-          <p>More information about launching and managing instances is here</p>
-
-          <h3>Images</h3>
-
-          <p>Instances originate from Images and can be a plain "off the
-
-          shelf" Operating System or include software packages and
-
-          config changes to suit a particular purpose (eg Webserving).
-
-          There are publicly available images in the cloud ready for
-
-          you to use.</p>
-
-          <p>To suit your specific purposes an instance may need some
-
-          customisation, configuration changes or software installation.
-
-          Its a good idea to make a copy of the instance if you wish to
-
-          re-use its current state as a starting point for new instances.
-
-          If you are experimenting and making changes, a copy allows you
-
-          to return to the copied state and dispose of the experiment
-
-          without having to undo/redo configuration changes.</p>
-
-          <p>You can create an Image from scratch, but usually its easier
-
-          to customise &amp; copy a running instance that is close
-
-          to what you need.</p>
-
-          <p>Copies of instances are called Snapshots and can be used
-
-          like other Images to start new instances. Making a Snapshot
-
-          is simple:</p>
-
-          <ol>
-
-          <li>Go to the Dashboard "Instances" tab</li>
-
-          <li>Click "Create Snapshot" for the running instance you wish to copy.</li>
-
-          </ol>
-
-          <h2>Keypairs</h2>
-
-          <p>Key Pairs enable you to communicate with your instance via
-
-          SSH. When launching an instance you specify an existing key
-
-          pair. The public key is injected into the running
-
-          instance''s authorized_keys file.</p>
-
-          <p>You can manage your keypairs through the Dashboard or via
-
-          the nova CLI client.</p>
-
-          <p>In the dashboard under the Access &amp; Security tab you can
-
-          manage your keys. You have the option of:</p>
-
-          <ul>
-
-          <li>Importing an existing SSH key you own</li>
-
-          <li>Creating a new SSH Key</li>
-
-          </ul>
-
-          <p><strong>Important:</strong> Keypairs can only be specified on instance
-
-          creation, if you don''t specify a keypair on creation you will
-
-          not be able to add it later.</p>
-
-          <h2>Security groups</h2>
-
-          <p>Incoming network access to your machines is usually required.
-
-          Security Groups are how to add network access. If you can''t
-
-          reach your instance by SSH to login or by browser if it
-
-          runs a Webserver additional Security Group settings could be
-
-          needed.</p>
-
-          <p>[Add link to more info]</p>
-
-          <h2>Storage in the cloud</h2>
-
-          <p>The NeCTAR Research Cloud provides instances for research
-
-          use. While resources like processing cores, RAM and the
-
-          amount of storage you get are dedicated to a particular
-
-          instance, other resources like the network and the underlying
-
-          storage system are shared among instances. Furthermore, not
-
-          all storage is created equal, and Research Cloud users
-
-          have a few different types of storage available which differ
-
-          according to performance, persistence and data safety.</p>
-
-          <p>To find out which storage option is right for you. We need
-
-          to write the documentation for it. [LINK]</p>'
+          \ Furthermore, not\nall storage is created equal, the Research Cloud offers:</p>\n\
+          <ul>\n<li>\n<a href=\"https://dashboard.rc.nectar.org.au/project/containers/\"\
+          >Object storage</a>;</li>\n<li>\n<a href=\"https://dashboard.rc.nectar.org.au/project/volumes/\"\
+          >Block storage</a>;</li>\n<li>Transient/Ephemeral storage.</li>\n</ul>\n\
+          <p>You can decide which suits your needs best by reading the OpenStack article\n\
+          titled \"<a href=\"http://docs.openstack.org/openstack-ops/content/storage_decision.html\"\
+          >Storage Decisions</a>\"</p>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:04-04:00'
@@ -968,21 +861,21 @@
           language_id: 6
           name: Cloud Basics
           parent_id: 6000190150
-          position: 2
-          updated_at: '2015-09-03T01:28:04-04:00'
+          position: 1
+          updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 0
+        hits: 26
         id: 6000055378
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-09-03T01:28:13-04:00'
+        modified_at: '2015-10-15T20:04:35-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055378
-        position: 3
+        position: 1
         seo_data: {}
         status: 2
         string_01: null
@@ -991,195 +884,84 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Welcome
-        updated_at: '2015-09-03T01:28:13-04:00'
+        updated_at: '2015-10-15T20:04:35-04:00'
         user_id: 6002464727
-  html: '<p>Welcome to the Nectar Cloud knowledge base. Browse or search our
-
-    user documentation, and if you can''t find what you''re looking
-
-    for contact our support team at [email] or [phone].</p>
-
-    <h2>What is the Nectar Cloud</h2>
-
-    <p><a href="http://nectar.org.au/">Nectar</a> (National eResearch Collaboration
-    Tools and Resources) is an Australian Government project funded to build new infrastructure
-    specifically for the needs of Australian researchers.  The Nectar Cloud provides
-    supported computing infrastructure, giving researchers access to computing resources
-    without the need to purchase or host their own hardware.<br>
-
-    All Australian researchers have access to the Nectar Cloud via the <a href="http://support.rc.nectar.org.au/node/111">AAF</a>.</p>
-
-    <p>To access the cloud all users must first login through the
-
-    Nectar Cloud dashboard:
-
-    <a href="https://dashboard.rc.nectar.org.au/">https://dashboard.rc.nectar.org.au/</a></p>
-
-    <h2>Instances</h2>
-
-    <p>Instances running inside the Research Cloud are just like real-life machines
-    but
-
-    in a remote location. The Research Cloud is used to start, copy and delete
-
-    instances. They have an operating system (you select it from a list), network
-
-    access (a real IP address &amp; you specify any access), and hard disk storage.
-
-    With no hardware to maintain you can copy (Snapshot) and customise new
-
-    machines rapidly.</p>
-
-    <h2>Tools</h2>
-
-    <h3>The Nectar Cloud Dashboard</h3>
-
-    <p>The Dashboard provides a web interface to get all the basic
-
-    Research Cloud related jobs done.</p>
-
-    <p>Use the dashboard:</p>
-
-    <ul>
-
-    <li>for basic Cloud operations: (launching, duplicating &amp; terminating ) instances</li>
-
-    <li>to get [Credentials] you can use with other [API clients]</li>
-
-    <li>to make an allocation request for a larger ongoing share of Research Cloud
-    Resources.</li>
-
-    </ul>
-
-    <h3>More about instances</h3>
-
-    <p>If you are familiar with connecting to remote machines already
-
-    the same tools and techniques apply when connecting to running
-
-    instances. Your instance has a public IP address and, if
-
-    configured, can be reached and controlled with any remote
-
-    access tools you wish to use. Example SSH.</p>
-
-    <p>More information about launching and managing instances is here</p>
-
-    <h3>Images</h3>
-
-    <p>Instances originate from Images and can be a plain "off the
-
-    shelf" Operating System or include software packages and
-
-    config changes to suit a particular purpose (eg Webserving).
-
-    There are publicly available images in the cloud ready for
-
-    you to use.</p>
-
-    <p>To suit your specific purposes an instance may need some
-
-    customisation, configuration changes or software installation.
-
-    Its a good idea to make a copy of the instance if you wish to
-
-    re-use its current state as a starting point for new instances.
-
-    If you are experimenting and making changes, a copy allows you
-
-    to return to the copied state and dispose of the experiment
-
-    without having to undo/redo configuration changes.</p>
-
-    <p>You can create an Image from scratch, but usually its easier
-
-    to customise &amp; copy a running instance that is close
-
-    to what you need.</p>
-
-    <p>Copies of instances are called Snapshots and can be used
-
-    like other Images to start new instances. Making a Snapshot
-
-    is simple:</p>
-
-    <ol>
-
-    <li>Go to the Dashboard "Instances" tab</li>
-
-    <li>Click "Create Snapshot" for the running instance you wish to copy.</li>
-
-    </ol>
-
-    <h2>Keypairs</h2>
-
-    <p>Key Pairs enable you to communicate with your instance via
-
-    SSH. When launching an instance you specify an existing key
-
-    pair. The public key is injected into the running
-
-    instance''s authorized_keys file.</p>
-
-    <p>You can manage your keypairs through the Dashboard or via
-
-    the nova CLI client.</p>
-
-    <p>In the dashboard under the Access &amp; Security tab you can
-
-    manage your keys. You have the option of:</p>
-
-    <ul>
-
-    <li>Importing an existing SSH key you own</li>
-
-    <li>Creating a new SSH Key</li>
-
-    </ul>
-
-    <p><strong>Important:</strong> Keypairs can only be specified on instance
-
-    creation, if you don''t specify a keypair on creation you will
-
-    not be able to add it later.</p>
-
-    <h2>Security groups</h2>
-
-    <p>Incoming network access to your machines is usually required.
-
-    Security Groups are how to add network access. If you can''t
-
-    reach your instance by SSH to login or by browser if it
-
-    runs a Webserver additional Security Group settings could be
-
-    needed.</p>
-
-    <p>[Add link to more info]</p>
-
-    <h2>Storage in the cloud</h2>
-
-    <p>The NeCTAR Research Cloud provides instances for research
-
-    use. While resources like processing cores, RAM and the
-
-    amount of storage you get are dedicated to a particular
-
-    instance, other resources like the network and the underlying
-
-    storage system are shared among instances. Furthermore, not
-
-    all storage is created equal, and Research Cloud users
-
-    have a few different types of storage available which differ
-
-    according to performance, persistence and data safety.</p>
-
-    <p>To find out which storage option is right for you. We need
-
-    to write the documentation for it. [LINK]</p>'
+  html: "<p>Welcome to the Nectar Cloud knowledge base. Browse or search our\nuser\
+    \ documentation, and if you can't find what you're looking\nfor contact our support\
+    \ team by either raising a <a href=\"https://support.nectar.org.au/support/tickets/new\"\
+    >ticket</a>,\nor by sending an email to <a href=\"mailto:support@nectar.org.au\"\
+    >support@nectar.org.au</a>,\nor finally, by giving us a call: <a href=\"tel:1300\
+    \ 080 431\">1300 080 431</a>.</p>\n<h2>What is the Nectar Cloud</h2>\n<p><a href=\"\
+    http://nectar.org.au/\">Nectar</a> (National eResearch Collaboration Tools and\
+    \ Resources) is an\nAustralian Government project funded to build new infrastructure\
+    \ specifically for the needs of\nAustralian researchers. The Nectar Cloud provides\
+    \ supported computing infrastructure, giving\nresearchers access to computing\
+    \ resources without the need to purchase or host their own hardware.<br>\nAll\
+    \ Australian researchers have access to the Nectar Cloud via the <a href=\"http://support.rc.nectar.org.au/node/111\"\
+    >AAF</a>.</p>\n<p>To access the cloud all users must first login through the\n\
+    Nectar Cloud dashboard:\n<a href=\"https://dashboard.rc.nectar.org.au/\">https://dashboard.rc.nectar.org.au/</a></p>\n\
+    <h2>Instances</h2>\n<p>Instances running inside the Research Cloud are just like\
+    \ real-life machines but\nin a remote location. The Research Cloud is used to\
+    \ start, copy and delete\ninstances. They have an operating system (you select\
+    \ it from a list), network\naccess (a real IP address &amp; you specify any access),\
+    \ and hard disk storage.\nWith no hardware to maintain you can copy (Snapshot)\
+    \ and customise new\nmachines rapidly.</p>\n<h2>Tools</h2>\n<h3>The Nectar Cloud\
+    \ Dashboard</h3>\n<p>The Dashboard provides a web interface to get all the basic\n\
+    Research Cloud related jobs done.</p>\n<p>Use the dashboard:</p>\n<ul>\n<li>for\
+    \ basic Cloud operations: (launching, duplicating &amp; terminating ) instances;</li>\n\
+    <li>to get <a href=\"https://dashboard.rc.nectar.org.au/project/access_and_security/\"\
+    >Credentials</a>\n  you can use with other <a href=\"http://docs.openstack.org/cli-reference/content/ch_cli.html\"\
+    >API clients</a>;</li>\n<li>to make an allocation request for a larger ongoing\
+    \ share of Research Cloud Resources.</li>\n</ul>\n<h3>More about instances</h3>\n\
+    <p>If you are familiar with connecting to remote machines already\nthe same tools\
+    \ and techniques apply when connecting to running\ninstances. Your instance has\
+    \ a public IP address and, if\nconfigured, can be reached and controlled with\
+    \ any remote\naccess tools you wish to use. For example, <a href=\"https://en.wikipedia.org/wiki/Secure_Shell\"\
+    >SSH</a>.</p>\n<p>More information about launching and managing instances is <a\
+    \ href=\"https://support.nectar.org.au/support/solutions/articles/6000073471-introduction-to-instance-management\"\
+    >here</a></p>\n<h3>Images</h3>\n<p>Instances originate from Images and can be\
+    \ a plain \"off the\nshelf\" Operating System or include software packages and\n\
+    config changes to suit a particular purpose (e.g.: serving web pages).\nThere\
+    \ are publicly available images in the cloud ready for\nyou to use.</p>\n<p>To\
+    \ suit your specific purposes an instance may need some\ncustomisation, configuration\
+    \ changes or software installation.\nIts a good idea to make a copy of the instance\
+    \ if you wish to\nre-use its current state as a starting point for new instances.\n\
+    If you are experimenting and making changes, a copy allows you\nto return to the\
+    \ copied state and dispose of the experiment\nwithout having to undo/redo configuration\
+    \ changes.</p>\n<p>You can create an Image from scratch, but usually its easier\n\
+    to customise &amp; copy a running instance that is close\nto what you need.</p>\n\
+    <p>Copies of instances are called Snapshots and can be used\nlike other Images\
+    \ to start new instances. Making a Snapshot\nis simple:</p>\n<ol>\n<li>Go to the\
+    \ Dashboard \"<a href=\"https://dashboard.rc.nectar.org.au/project/instances/\"\
+    >Instances</a>\" \n   tab;</li>\n<li>Click \"Create Snapshot\" for the running\
+    \ instance you wish to copy.</li>\n</ol>\n<h2>Key Pairs</h2>\n<p>Key pairs enable\
+    \ you to communicate with your instance via\nSSH. When launching an instance you\
+    \ specify an existing key\npair. The public key is injected into the running\n\
+    instance's authorized_keys file.</p>\n<p>You can manage your key pairs through\
+    \ the Dashboard or via\nthe nova CLI client.</p>\n<p>In the dashboard under the\
+    \ <a href=\"https://dashboard.rc.nectar.org.au/project/access_and_security/\"\
+    >Access &amp; Security</a>\ntab you can manage your keys. You have the option\
+    \ of:</p>\n<ul>\n<li>Importing an existing SSH key you own;</li>\n<li>Creating\
+    \ a new SSH Key.</li>\n</ul>\n<p><strong>Important:</strong> Key pairs can only\
+    \ be specified on instance\ncreation, if you don't specify a keypair on creation\
+    \ you will\nnot be able to add it later.</p>\n<h2>Security groups</h2>\n<p>Incoming\
+    \ network access to your machines is usually required.\nSecurity Groups are how\
+    \ to add network access. If you can't\nreach your instance by SSH to login or\
+    \ by browser if it\nruns a web server additional Security Group settings could\
+    \ be\nneeded.</p>\n<p>The OpenStack article title \"<a href=\"http://docs.openstack.org/openstack-ops/content/security_groups.html\"\
+    >Security Groups</a>\"\ngives more information.</p>\n<h2>Storage in the cloud</h2>\n\
+    <p>The NeCTAR Research Cloud provides instances for research\nuse. While resources\
+    \ like processing cores, RAM and the\namount of storage you get are dedicated\
+    \ to a particular\ninstance, other resources like the network and the underlying\n\
+    storage system are shared among instances. Furthermore, not\nall storage is created\
+    \ equal, the Research Cloud offers:</p>\n<ul>\n<li><a href=\"https://dashboard.rc.nectar.org.au/project/containers/\"\
+    >Object storage</a>;</li>\n<li><a href=\"https://dashboard.rc.nectar.org.au/project/volumes/\"\
+    >Block storage</a>;</li>\n<li>Transient/Ephemeral storage.</li>\n</ul>\n<p>You\
+    \ can decide which suits your needs best by reading the OpenStack article\ntitled\
+    \ \"<a href=\"http://docs.openstack.org/openstack-ops/content/storage_decision.html\"\
+    >Storage Decisions</a>\"</p>"
   parent: 21
-  sha1: 3948767f7053219dd717f36be1f665be992cb195
+  sha1: 5107317db550e4e09840ae5c0eb92ed58fde7f74
   title: Welcome
 36:
   freshdesk:
