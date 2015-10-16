@@ -20,17 +20,21 @@ You can use a SSH client to log into the virtual machine created earlier.
 
 ## Linux/Mac User
 
-- Type ssh -i privatkeyname ubuntu@XX.XX.XX.XX in console
+- Type the following command into the console:
 
-- Replace privatekeyname with the created private key name earlier. You also
- need to specify the full path for the private key
+```
+ssh -i privatkeyname ubuntu@XX.XX.XX.XX
+```
+
+- Replace privatekeyname with the created private key name earlier. You may also
+ need to specify the full path for the private key (usually '~/.ssh/privatekeyname')
 
 - Replace ubuntu with root if you are not using Ubuntu image
 
 - Replace XX.XX.XX.XX with the IP address located in Instances page
 
-Note:
-Type chmod 600 privatekey to set permission for the private key and your
-account is the owner of the private key file.
+Note: For the security of your private key, ensuring only the user can read the file:
+On you local computer, enter `chmod 600 ~/.ssh/privatekeyname`. (You may need to 
+adjust the path to the private key.)
 
 [putty]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
