@@ -3,41 +3,34 @@
 An instance (virtual machine) is a computing environment completed with virtual
 hardware devices which simulates the real computer system. The instance normally
 runs as a process in a physical computer system called host and you can boot an
-operating system inside the virtual machine. The instance will be tricked as it
-is running on a real computer system and it will run just as it would on a real,
-physical machine.
+operating system inside the virtual machine. The instance will generally behave
+as if it were a real, physical machine.
 
-Your instance's operating system is stored on a virtual hard drive and it is
-called image. The image is a big, multi-gigabtye file storage stored on storage.
-You can launch a instance by using different images (operating system) and you
-can access it through SSH. As the instance thinks it runs in a 'real' computer
-system, you can do anything just like a normal computer system. However, there
-are still some cases that can be restricted by underline virtual hardware support
+Your instance's operating system is stored on a virtual hard drive it is called
+an image. You can launch a instance by using different images (operating system) 
+and you can access it through SSH. As the instance thinks it runs in a 'real' computer
+system, you can do most things as with a normal computer system. However, there
+are still some cases that can be restricted by underlying virtual hardware support
 such as 3D graphics.
 
-The instance doesn't have any knowledge about the underline hardware and all
-hardware are done by virtualization. The instance only thinks that it uses the
-real hardware.
-
-Instances add some overhead as there are virtualization layer to support required
+Instances add some overhead as there are virtualization layers to support required
 functions, so they won't be as fast as if you run operating system on real
 hardware.
 
 ## Why is virtualization useful
 
-The virtualization is useful in the below scenarios:
+The virtualization is useful in the following scenarios:
 
 - flexibility. If you need more instances or more computing power, simply launch
- more instances or launch a instance with more CPUs and RAMs. This makes it is
- easy to copy with changes.
+ more instances or launch a instance with more CPUs and RAMs.
  
-- easier software installations. Instances can be used to ship entire software
- configuration. The instances can be made as a image after configuration, and
- then other users can use the image to launch new virtual machines.
+- easier software installations. Instances can be used to ship the entire software
+ configuration. The instances can be 'snapshot' into an image after configuration, and
+ then other users can use the image to launch new virtual machines that are already set up.
 
 - testing and disaster recovery. Once installed, a virtual machine can be
  consider as a "container" (snapshot) that can be arbitrarily frozen, woken up, copied,
- backed up and, transported between hosts. 
+ backed up, and transported between hosts. 
  
 - infrastructure consolidation. Virtual machines can significantly
  reduce hardware and electricity costs.
