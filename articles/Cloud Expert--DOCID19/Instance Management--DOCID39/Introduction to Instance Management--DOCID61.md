@@ -1,4 +1,4 @@
-## What is instance (Virtual Machine)
+## What is an instance (Virtual Machine)
 
 An instance (virtual machine) is a computing environment completed with virtual
 hardware devices which simulates the real computer system. The instance normally
