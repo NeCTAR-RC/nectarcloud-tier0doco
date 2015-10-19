@@ -1,7 +1,7 @@
 ## Getting Started
 
-This section is going to show you how to use AAF to authenticate to NeCTAR
-Dashboard and use SSH to login to Virtual Machine.
+This section is going to show you how to use your AAF (Australian Access Federation) 
+credentials to authenticate to NeCTAR Dashboard and use SSH to login to Virtual Machine.
 
 ## Dashboard Authentication
 
@@ -9,16 +9,15 @@ NeCTAR Dashboard uses AAF to authenticate users. Please follow the below
 instructions to login to NeCTAR [Dashboard][dashboard].
 
 - Click [here][dashboard] to go to the NeCTAR Dashboard and you will see the
- below screenshot and it shows you need to use AAF to login:
+ following screen:
 
 ![`aaf1`](images/aaf1.png)
 
-- Click 'Log In' button for next and you will see the below screenshot:
+- Click 'Log In' button, then select your AAF organisation from the menu:
 
 ![`aaf2`](images/aaf2.png)
 
-- Select the institution or the organization and click 'select' button, you will
- see a login page provided by your selected institution/organization:
+- You will be redirected to a login page provided by your selected institution/organization:
 
 ![`aaf3`](images/aaf3.png)
 
@@ -33,17 +32,19 @@ login.
 
 ## Virtual Machine Authentication
 
-To create a key pair in NecTAR Cloud, please see the below instruction:
+To create a key pair in NecTAR Cloud:
 
-- Login to NeCTAR Dashboard[dashboard]
+- Login to NeCTAR [Dashboard][dashboard]
 
 - Select a project from the project drop down list and click 'Access & Security',
- you should see the below screenshots which have a list of existing keys:
+ your screen should look similar to the following screenshots, which have a list 
+ of existing keys:
+ 
 ![`key1`](images/key1.png)
 ![`key2`](images/key2.png)
 
-- You can click the 'Create Key Pair' button to create a new key pair, see the
- below screenshot:
+- You can click the 'Create Key Pair' button to create a new key pair:
+
 ![`key3`](images/key3.png)
 
 - After entering the key pair name and click 'Create Key Pair' button, the system
