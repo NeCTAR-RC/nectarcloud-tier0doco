@@ -1,9 +1,9 @@
 ## Introduction to Authentication
 
-Authentication is the process to verify the identify of a user that is requesting
-to access a computer system. In the context of NecTAR Cloud, the identifies of
+Authentication is the process of verifying the identify of a user that is requesting
+to access a computer system. In the context of NeCTAR Cloud, the identities of
 users or host computers must be established before accessing the Cloud resources
-such as Dashboard, APIs and Virtual Machines and etc.
+such as Dashboard, APIs, Virtual Machines, etc.
 
 ## Methods of Authentication
 
@@ -15,11 +15,11 @@ for virtual machines and PKI token based authentication for APIs.
 
 Single sign on authentication is the process that gives users the ability to access
 distributed multiple protected computer system with a single authentication.
-NecTAR Cloud uses Australian Access Federation (AAF) as the single sign on
+NeCTAR Cloud uses Australian Access Federation (AAF) as the single sign on
 authentication solution for access of the Dashboard. The AAF provides the ability
 for users to log into a number of eResearch services including NeCTAR Cloud using
 the same username and password you would usually use when logging into your
-institution's or organiztion's computer system. The authentications involves
+institution's or organization's computer system. The authentications involves
 2 steps, select your institution or organization and provide your username/password.
 To get more information about AAF, you can visit their website at
 [http://aaf.edu.au][aaf].
@@ -31,13 +31,13 @@ a computer service, rather than typing a username and password. It is more secur
 and flexible, but more difficult to set up.
 
 You generate a key pair, consisting of public key and a private key. The private
-key can generate an unique signature and only the relevant public key can verify
+key can generate an unique signature and only the relevant public key can verify if
 the signature is genuine.
 
 After generating a key pair, you copy the public the key to the Virtual Machine.
 Then, when the Virtual Machines asks you to prove who you are, you can provide
 the private key and the Virtual Machine can verify the signature and allow you
-to log in. Even the Virtual Machine is hacked and your public key is stolen, the
+to log in. Even if the Virtual Machine is hacked and your public key is stolen, the
 public key cannot be used to do authentication and you are still safe. 
 
 By default, virtual machines in NeCTAR Cloud uses this authentication method and
