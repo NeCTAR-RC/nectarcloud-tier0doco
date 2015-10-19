@@ -9326,63 +9326,59 @@
         created_at: '2015-10-09T00:35:39-04:00'
         datetime_01: null
         delta: true
-        desc_un_html: " Best Practice \n The below are the general rules you should\
-          \ follow when use command line API: \n \n \n Look at the help page for the\
-          \ command before use \n \n \n Always look at the output to learn what happened\
-          \ \n \n \n Always check your command before you execute a command that changes\
-          \ the state\n of the storage such as delete and update \n \n \n Keep your\
-          \ authentication credential secure \n \n \n The below are the general rules\
-          \ you should follow when use Python API: \n \n \n Use Python PEP-8 for code\
-          \ style guide \n \n \n Use logging to record what has been done and later\
-          \ reference \n \n \n Be caution about code that update the state of the\
-          \ object storage \n \n \n Backup sensitive data \n \n \n Keep your authentication\
-          \ credential secure \n \n \n The below are the general rules for the Object\
-          \ Storage: \n \n \n Using Object Storage for static files, as opposed to\
-          \ files that are frequently\n updated \n \n \n To have a basic organization\
-          \ structure and separate your content into\n different containers based\
-          \ on object type (for example): images, videos, etc.\n This structure enables\
-          \ quick location of objects when you need them. \n \n \n Using multiple\
-          \ containers if you have an extremely large number of objects. \n \n \n\
-          \ Always give you container a meaningful name for easy use. \n \n \n If\
-          \ you have large number of files, it is recommend to keep a local copy of\
-          \ the\n container structure and listing so that you are not waiting on the\
-          \ container to\n list all the objects. This can be done by using database.\
-          \ \n \n \n Keep track of object count and usage and this should improve\
-          \ performance\n when you need to frequently update the object storage. \n\
-          \ \n \n Provide a virtual path for objects and this allows for better subdivision\
-          \ of\n slow growth closely-grouped data. This also overcomes the problem\
-          \ as Objects do\n not nest, and all objects in a single container are subject\
-          \ to the same\n limitations. \n \n "
-        description: "<h2>Best Practice</h2>\n<p>The below are the general rules you\
-          \ should follow when use command line API:</p>\n<ul>\n<li>\n<p>Look at the\
-          \ help page for the command before use</p>\n</li>\n<li>\n<p>Always look\
-          \ at the output to learn what happened</p>\n</li>\n<li>\n<p>Always check\
-          \ your command before you execute a command that changes the state\n of\
-          \ the storage such as delete and update</p>\n</li>\n<li>\n<p>Keep your authentication\
-          \ credential secure</p>\n</li>\n</ul>\n<p>The below are the general rules\
-          \ you should follow when use Python API:</p>\n<ul>\n<li>\n<p>Use Python\
-          \ PEP-8 for code style guide</p>\n</li>\n<li>\n<p>Use logging to record\
-          \ what has been done and later reference</p>\n</li>\n<li>\n<p>Be caution\
-          \ about code that update the state of the object storage</p>\n</li>\n<li>\n\
-          <p>Backup sensitive data</p>\n</li>\n<li>\n<p>Keep your authentication credential\
-          \ secure</p>\n</li>\n</ul>\n<p>The below are the general rules for the Object\
-          \ Storage:</p>\n<ul>\n<li>\n<p>Using Object Storage for static files, as\
-          \ opposed to files that are frequently\n updated</p>\n</li>\n<li>\n<p>To\
-          \ have a basic organization structure and separate your content into\n different\
+        desc_un_html: " Best Practice - general rules to follow \n Command line API:\
+          \ \n \n \n Look at the help page for the command before use \n \n \n Always\
+          \ look at the output to learn what happened \n \n \n Always check your command\
+          \ before you execute a command that changes the state\n of the storage such\
+          \ as delete and update \n \n \n Keep your authentication credential secure\
+          \ \n \n \n Python API: \n \n \n Use Python PEP-8 for code style guide \n\
+          \ \n \n Use logging to record what has been done for later reference \n\
+          \ \n \n Be cautious with code that updates the state of the object storage\
+          \ \n \n \n Backup sensitive data \n \n \n Keep your authentication credential\
+          \ secure \n \n \n Object Storage: \n \n \n Use Object Storage for static\
+          \ files, as opposed to files that are frequently\n updated \n \n \n Have\
+          \ a basic organization structure and separate your content into\n different\
           \ containers based on object type (for example): images, videos, etc.\n\
-          \ This structure enables quick location of objects when you need them.</p>\n\
-          </li>\n<li>\n<p>Using multiple containers if you have an extremely large\
-          \ number of objects.</p>\n</li>\n<li>\n<p>Always give you container a meaningful\
-          \ name for easy use.</p>\n</li>\n<li>\n<p>If you have large number of files,\
-          \ it is recommend to keep a local copy of the\n container structure and\
-          \ listing so that you are not waiting on the container to\n list all the\
-          \ objects. This can be done by using database.</p>\n</li>\n<li>\n<p>Keep\
-          \ track of object count and usage and this should improve performance\n\
-          \ when you need to frequently update the object storage.</p>\n</li>\n<li>\n\
-          <p>Provide a virtual path for objects and this allows for better subdivision\
-          \ of\n slow growth closely-grouped data. This also overcomes the problem\
-          \ as Objects do\n not nest, and all objects in a single container are subject\
-          \ to the same\n limitations.</p>\n</li>\n</ul>"
+          \ This structure enables quick location of objects when you need them. \n\
+          \ \n \n Use multiple containers if you have an extremely large number of\
+          \ objects. \n \n \n Always give your container a meaningful name for easy\
+          \ use. \n \n \n If you have large number of files, it is recommend to keep\
+          \ a local copy of the\n container structure and listing so that you are\
+          \ not waiting on the container to\n list all the objects. This can be done\
+          \ by using a database. \n \n \n Keep track of object count and usage and\
+          \ this should improve performance\n when you need to frequently update the\
+          \ object storage. \n \n \n Provide a virtual path for objects and this allows\
+          \ for better subdivision of\n slow growth closely-grouped data. This also\
+          \ overcomes the problem as Objects do\n not nest, and all objects in a single\
+          \ container are subject to the same\n limitations. \n \n "
+        description: "<h2>Best Practice - general rules to follow</h2>\n<p>Command\
+          \ line API:</p>\n<ul>\n<li>\n<p>Look at the help page for the command before\
+          \ use</p>\n</li>\n<li>\n<p>Always look at the output to learn what happened</p>\n\
+          </li>\n<li>\n<p>Always check your command before you execute a command that\
+          \ changes the state\n of the storage such as delete and update</p>\n</li>\n\
+          <li>\n<p>Keep your authentication credential secure</p>\n</li>\n</ul>\n\
+          <p>Python API:</p>\n<ul>\n<li>\n<p>Use Python PEP-8 for code style guide</p>\n\
+          </li>\n<li>\n<p>Use logging to record what has been done for later reference</p>\n\
+          </li>\n<li>\n<p>Be cautious with code that updates the state of the object\
+          \ storage</p>\n</li>\n<li>\n<p>Backup sensitive data</p>\n</li>\n<li>\n\
+          <p>Keep your authentication credential secure</p>\n</li>\n</ul>\n<p>Object\
+          \ Storage:</p>\n<ul>\n<li>\n<p>Use Object Storage for static files, as opposed\
+          \ to files that are frequently\n updated</p>\n</li>\n<li>\n<p>Have a basic\
+          \ organization structure and separate your content into\n different containers\
+          \ based on object type (for example): images, videos, etc.\n This structure\
+          \ enables quick location of objects when you need them.</p>\n</li>\n<li>\n\
+          <p>Use multiple containers if you have an extremely large number of objects.</p>\n\
+          </li>\n<li>\n<p>Always give your container a meaningful name for easy use.</p>\n\
+          </li>\n<li>\n<p>If you have large number of files, it is recommend to keep\
+          \ a local copy of the\n container structure and listing so that you are\
+          \ not waiting on the container to\n list all the objects. This can be done\
+          \ by using a database.</p>\n</li>\n<li>\n<p>Keep track of object count and\
+          \ usage and this should improve performance\n when you need to frequently\
+          \ update the object storage.</p>\n</li>\n<li>\n<p>Provide a virtual path\
+          \ for objects and this allows for better subdivision of\n slow growth closely-grouped\
+          \ data. This also overcomes the problem as Objects do\n not nest, and all\
+          \ objects in a single container are subject to the same\n limitations.</p>\n\
+          </li>\n</ul>"
         folder:
           category_id: 6000122279
           created_at: '2015-09-03T01:28:00-04:00'
@@ -9393,17 +9389,17 @@
           language_id: 6
           name: Object Storage
           parent_id: 6000190146
-          position: 3
+          position: 2
           updated_at: '2015-09-03T01:28:00-04:00'
           visibility: 1
         folder_id: 6000190146
-        hits: 0
+        hits: 2
         id: 6000076113
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-09T00:35:39-04:00'
+        modified_at: '2015-10-19T04:33:52-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000076113
@@ -9416,38 +9412,36 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Best Practice
-        updated_at: '2015-10-09T00:35:39-04:00'
+        updated_at: '2015-10-19T04:33:52-04:00'
         user_id: 6002464727
-  html: "<h2>Best Practice</h2>\n<p>The below are the general rules you should follow\
-    \ when use command line API:</p>\n<ul>\n<li>\n<p>Look at the help page for the\
-    \ command before use</p>\n</li>\n<li>\n<p>Always look at the output to learn what\
-    \ happened</p>\n</li>\n<li>\n<p>Always check your command before you execute a\
-    \ command that changes the state\n of the storage such as delete and update</p>\n\
-    </li>\n<li>\n<p>Keep your authentication credential secure</p>\n</li>\n</ul>\n\
-    <p>The below are the general rules you should follow when use Python API:</p>\n\
-    <ul>\n<li>\n<p>Use Python PEP-8 for code style guide</p>\n</li>\n<li>\n<p>Use\
-    \ logging to record what has been done and later reference</p>\n</li>\n<li>\n\
-    <p>Be caution about code that update the state of the object storage</p>\n</li>\n\
-    <li>\n<p>Backup sensitive data</p>\n</li>\n<li>\n<p>Keep your authentication credential\
-    \ secure</p>\n</li>\n</ul>\n<p>The below are the general rules for the Object\
-    \ Storage:</p>\n<ul>\n<li>\n<p>Using Object Storage for static files, as opposed\
-    \ to files that are frequently\n updated</p>\n</li>\n<li>\n<p>To have a basic\
-    \ organization structure and separate your content into\n different containers\
-    \ based on object type (for example): images, videos, etc.\n This structure enables\
-    \ quick location of objects when you need them.</p>\n</li>\n<li>\n<p>Using multiple\
-    \ containers if you have an extremely large number of objects.</p>\n</li>\n<li>\n\
-    <p>Always give you container a meaningful name for easy use.</p>\n</li>\n<li>\n\
-    <p>If you have large number of files, it is recommend to keep a local copy of\
-    \ the\n container structure and listing so that you are not waiting on the container\
-    \ to\n list all the objects. This can be done by using database.</p>\n</li>\n\
-    <li>\n<p>Keep track of object count and usage and this should improve performance\n\
+  html: "<h2>Best Practice - general rules to follow</h2>\n<p>Command line API:</p>\n\
+    <ul>\n<li>\n<p>Look at the help page for the command before use</p>\n</li>\n<li>\n\
+    <p>Always look at the output to learn what happened</p>\n</li>\n<li>\n<p>Always\
+    \ check your command before you execute a command that changes the state\n of\
+    \ the storage such as delete and update</p>\n</li>\n<li>\n<p>Keep your authentication\
+    \ credential secure</p>\n</li>\n</ul>\n<p>Python API:</p>\n<ul>\n<li>\n<p>Use\
+    \ Python PEP-8 for code style guide</p>\n</li>\n<li>\n<p>Use logging to record\
+    \ what has been done for later reference</p>\n</li>\n<li>\n<p>Be cautious with\
+    \ code that updates the state of the object storage</p>\n</li>\n<li>\n<p>Backup\
+    \ sensitive data</p>\n</li>\n<li>\n<p>Keep your authentication credential secure</p>\n\
+    </li>\n</ul>\n<p>Object Storage:</p>\n<ul>\n<li>\n<p>Use Object Storage for static\
+    \ files, as opposed to files that are frequently\n updated</p>\n</li>\n<li>\n\
+    <p>Have a basic organization structure and separate your content into\n different\
+    \ containers based on object type (for example): images, videos, etc.\n This structure\
+    \ enables quick location of objects when you need them.</p>\n</li>\n<li>\n<p>Use\
+    \ multiple containers if you have an extremely large number of objects.</p>\n\
+    </li>\n<li>\n<p>Always give your container a meaningful name for easy use.</p>\n\
+    </li>\n<li>\n<p>If you have large number of files, it is recommend to keep a local\
+    \ copy of the\n container structure and listing so that you are not waiting on\
+    \ the container to\n list all the objects. This can be done by using a database.</p>\n\
+    </li>\n<li>\n<p>Keep track of object count and usage and this should improve performance\n\
     \ when you need to frequently update the object storage.</p>\n</li>\n<li>\n<p>Provide\
     \ a virtual path for objects and this allows for better subdivision of\n slow\
     \ growth closely-grouped data. This also overcomes the problem as Objects do\n\
     \ not nest, and all objects in a single container are subject to the same\n limitations.</p>\n\
     </li>\n</ul>"
   parent: 40
-  sha1: 3f4348664ede502a45b91c522929398a5e858aa1
+  sha1: a876cb0246d6366e5903292435fd27bb28cd306a
   title: Best Practice
 74:
   freshdesk:
