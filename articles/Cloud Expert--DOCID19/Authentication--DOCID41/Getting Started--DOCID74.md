@@ -1,29 +1,28 @@
 ## Getting Started
 
-This section is going to show you how to use AAF to authenticate to NeCTAR
-Dashboard and use SSH to login to Virtual Machine.
+This section is going to show you how to use your AAF (Australian Access Federation) 
+credentials to authenticate to NeCTAR Dashboard and use SSH to login to Virtual Machine.
 
 ## Dashboard Authentication
 
-NeCTAR Dashboard uses AAF to authenticate users. Please follow the below
+NeCTAR Dashboard uses AAF to authenticate users. Please follow these
 instructions to login to NeCTAR [Dashboard][dashboard].
 
 - Click [here][dashboard] to go to the NeCTAR Dashboard and you will see the
- below screenshot and it shows you need to use AAF to login:
+ following screen:
 
 ![`aaf1`](images/aaf1.png)
 
-- Click 'Log In' button for next and you will see the below screenshot:
+- Click 'Log In' button, then select your AAF organisation from the menu:
 
 ![`aaf2`](images/aaf2.png)
 
-- Select the institution or the organization and click 'select' button, you will
- see a login page provided by your selected institution/organization:
+- You will be redirected to a login page provided by your selected institution/organization:
 
 ![`aaf3`](images/aaf3.png)
 
 - Type in username/password supplied by your institution/organization and click
- 'Continue' button, if successful, you should see the NeCTAR Dashboard
+ 'Continue' button. If successful, you should see the NeCTAR Dashboard.
 
 Note, if your institution or organization is not the list, you can contact the
 help desk in your institution or organization to see whether there is AAF support.
@@ -33,22 +32,22 @@ login.
 
 ## Virtual Machine Authentication
 
-To create a key pair in NecTAR Cloud, please see the below instruction:
+To create a key pair in NecTAR Cloud:
 
-- Login to NeCTAR Dashboard[dashboard]
+- Login to NeCTAR [Dashboard][dashboard]
 
 - Select a project from the project drop down list and click 'Access & Security',
- you should see the below screenshots which have a list of existing keys:
+ your screen should look similar to the following screenshots, which have a list 
+ of existing keys:
 ![`key1`](images/key1.png)
 ![`key2`](images/key2.png)
 
-- You can click the 'Create Key Pair' button to create a new key pair, see the
- below screenshot:
+- You can click the 'Create Key Pair' button to create a new key pair:
 ![`key3`](images/key3.png)
 
-- After entering the key pair name and click 'Create Key Pair' button, the system
+- After entering the key pair name and clicking 'Create Key Pair' button, the system
  will ask you to save the private key. You should download the private key and
- save it in a secuire place.
+ save it in a secure place.
  
 - You can also click the 'Import Key Pair' button to import an existing public
  key, see the below screenshot:
@@ -59,7 +58,21 @@ To create a key pair in NecTAR Cloud, please see the below instruction:
 
 This key pair can be used later when you launch a new Virtual Machine for
 authentication. Please see relevant articles about how to use the key in launching
-a new Virtual Machine.  
+a new Virtual Machine.
+
+### Linux and MacOSX Authentication
+
+In Linux, you can use the following command to login to the Virtual Machine:
+
+```
+ssh -i private_key_file_name ip_address
+
+``` 
+
+The 'private_key_file_name' is the private key you download from the NeCTAR
+Dashboard (you may also need to specify the path to the key, if it is not in 
+the '~/.ssh/' directory). The ip_address for the instance is found on the 
+'Instances' tab of the [NeCTAR dashboard][dashboard].
 
 ### Windows Authentication
 
@@ -69,34 +82,30 @@ key You download from the NeCTAR Dashboard. You can use [puttygen][putty] for
 the key conversion.
 
 After you download the files from the above links, you can double click the
-puttygen.exe file to launch puttygen and you should see the below screenshot:
+puttygen.exe file to launch puttygen and you should see the following window:
 
 ![`puttygen1`](images/puttygen1.png) 
 
 
-Then you can click 'Import Key' item from the 'Conversions' menu. Please see the
-below screenshot:
+Then you can click 'Import Key' item from the 'Conversions' menu:
 
 ![`puttygen2`](images/puttygen2.png) 
 
 You select the private key you saved before and click 'Ok'.
 
-You can then click 'Export OpenSSH Key' from the 'Conversions'. Click yes for not
-saving key with a password and provide a file name for the key. Please see the
-below screenshot:
+You can then click 'Export OpenSSH Key' from the 'Conversions'. Click 'yes' for not
+saving key with a password, and provide a file name for the key:
 
 ![`puttygen3`](images/puttygen3.png)
 
-After you successfully converted the key, you can use it in putty to login to
-Virtual Machines. Please see the below instructions for how to login using key
-via putty.
+Using putty to log on to the virtual machine:
 
-- Double click putty.exe to launch putty. See below screenshot:
+- Double click putty.exe to launch putty:
 
 ![`putty1`](images/putty1.png)
 
 - You can click 'Auth' under 'Connection' and then click 'Browse' button to load
- the private key you generated from above. See the below screenshot: 
+ the private key you generated from above: 
 
 ![`putty2`](images/putty2.png)
 
@@ -106,19 +115,6 @@ via putty.
 - Click 'Open' button to login
 
 ![`putty3`](images/putty3.png)
-
-### Linux Authentication
-
-In Linux, you can use the following command to login to the Virtual Machine:
-
-```
-ssh -i private_key_file_name ip_address
-
-``` 
-
-where, private_key_file_name is the private key You download from the NeCTAR
-Dashboard. the ip_address is the address for the Virtual Machine You want to
-access.
 
 [dashboard]: https://dashboard.rc.nectar.org.au/
 [helpdesk]: https://support.nectar.org.au/support/home
