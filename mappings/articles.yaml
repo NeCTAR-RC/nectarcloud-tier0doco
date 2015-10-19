@@ -8372,14 +8372,14 @@
         delta: true
         desc_un_html: " Debugging Swift Command line Client \n The below assumes you\
           \ have installed swift command client in a Linux\nenvironment. If you have\
-          \ other operating systems, the debugging process might be\na slightly different,\
-          \ however, the general rules should still apply. \n Swift command line client\
-          \ is very much like other Linux commands, it outputs\nerrors in the standard\
+          \ other operating systems, the debugging process might be\nslightly different,\
+          \ however the general rules should still apply. \n Swift command line client\
+          \ is very much like other Linux commands; error messages\nare sent to standard\
           \ output, which is the monitor. \n If you get an error, you can always read\
-          \ the error message and generally it give\nyou very good hints about what\
-          \ might be wrong. \n For example, if you execute swift list on the command\
-          \ line without\nauthentication, the error message might look like this:\
-          \ \n ```\nAuth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment\
+          \ the error message and generally it will\ngive you very good hints about\
+          \ what might be wrong. \n For example, if you execute swift list on the\
+          \ command line without\nauthentication, the error message might look like\
+          \ this: \n ```\nAuth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment\
           \ variables\nto be set or overridden with -A, -U, or -K. \n Auth version\
           \ 2.0 requires OS_AUTH_URL, OS_USERNAME, OS_PASSWORD, and\nOS_TENANT_NAME\
           \ OS_TENANT_ID to be set or overridden with --os-auth-url,\n--os-username,\
@@ -8390,15 +8390,15 @@
           \ variables you can either source the script\nfile downloaded from NeCTAR\
           \ Dashboard or you can override it by\nusing command line options. \n You\
           \ can always execute man swift`` or simplyswift``` to get more help\ninformation\
-          \ and to learn each supported options. \n If you find a useful command,\
-          \ you can also execute swift command --help,\nthis will give your more specific\
+          \ and to learn about supported options. \n If you find a useful command,\
+          \ you can also execute swift command --help,\nthis will give you more specific\
           \ help for the command. \n Debugging Client Python API \n Debugging client\
-          \ Python API takes more effects as it depends on how familiar\nwith Python\
+          \ Python API takes more effort as it depends on how familiar\nwith Python\
           \ programming and what development environment you use. \n The below provides\
           \ some basic information about how you debug the client Python\nAPI. \n\
           \ You can debug your python code using Python debugger called pdb and you\
-          \ can find\nmore information here. \n The below code uses pdb debuuger to\
-          \ debug a python file contains clinet python\nAPI code. \n pdb file_name.py\
+          \ can find\nmore information here. \n The following code uses pdb debuuger\
+          \ to debug a python file contains clinet python\nAPI code. \n pdb file_name.py\
           \ \n Once you executed the above code, the command line will be stopped\
           \ on the first\nline of code and you can use some commands to control the\
           \ execution flow. \n Some useful ones to use are: \n \n \n b: set a breakpoint\
@@ -8407,7 +8407,7 @@
           \ l: list source code for the current file \n \n \n u : navigate up a stack\
           \ frame \n \n \n d: navigate down a stack frame \n \n \n p: to print the\
           \ value of an expression in the current context \n \n \n Debugging Via HTTP\
-          \ \n The both of command line API and python API are restful web service\
+          \ \n Both command line API and python API are accessed via a web service\
           \ client.\nThus the requests are all made by using HTTP and you can always\
           \ refer to\nOpenStack Service End for further references about what should\
           \ be\npresented in the HTTP requests. The swift API uses requests library\n\
@@ -8415,18 +8415,18 @@
           \ you can add --debug option to print out HTTP request\nheader and HTTP\
           \ response header, which give you a lot of more insight\ninformation. To\
           \ verify parameters in the request header, you can refer to\nOpenStack service\
-          \ {API]api to see what are expected. \n To enable debugging information\
-          \ on the standard out for Python API, you can add\nthe below code: \n ```\n\
-          import logging\nlogger = logging.getLogger(\"swiftclient\")\nlogging.basicConfig(level=logging.DEBUG)\
+          \ API to see what are expected. \n To enable debugging information on the\
+          \ standard out for Python API, you can add\nthe below code: \n ```\nimport\
+          \ logging\nlogger = logging.getLogger(\"swiftclient\")\nlogging.basicConfig(level=logging.DEBUG)\
           \ \n ``` \n The will print the same output as adding --debug option for\
           \ command line API. \n Debugging via Source Code \n If the above techniques\
           \ are still not helpful, you can always look at the source\ncode to find\
-          \ the problems. \n The below source file structure is based on the installation\
+          \ the problems. \n The following source file structure is based on the installation\
           \ in Ubuntu. \n The command line swift command is located in /usr/bin/swift.\
           \ By looking at this\nfile, you should get a idea of how the various options\
           \ are interpreted. This file\nacts as an interface for Python API. \n The\
-          \ Python API files are located under\n/usr/lib/python2.7/dist-packages/swiftclient\
-          \ and the most important file to look\nat is client.py. This is file does\
+          \ Python API files are located under\n'/usr/lib/python2.7/dist-packages/swiftclient'\
+          \ and the most important file to look\nat is 'client.py'. This is file does\
           \ all the request preparation, sending request\nand receiving response.\
           \ It is also used by the command line swift client.  "
         description: '<h2>Debugging Swift Command line Client</h2>
@@ -8436,17 +8436,17 @@
           environment. If you have other operating systems, the debugging process
           might be
 
-          a slightly different, however, the general rules should still apply.</p>
+          slightly different, however the general rules should still apply.</p>
 
-          <p>Swift command line client is very much like other Linux commands, it
-          outputs
+          <p>Swift command line client is very much like other Linux commands; error
+          messages
 
-          errors in the standard output, which is the monitor.</p>
+          are sent to standard output, which is the monitor.</p>
 
           <p>If you get an error, you can always read the error message and generally
-          it give
+          it will
 
-          you very good hints about what might be wrong.</p>
+          give you very good hints about what might be wrong.</p>
 
           <p>For example, if you execute <code>swift list</code> on the command line
           without
@@ -8485,16 +8485,16 @@
           <p>You can always execute <code>man swift`` or simply</code>swift``` to
           get more help
 
-          information and to learn each supported options.</p>
+          information and to learn about supported options.</p>
 
           <p>If you find a useful command, you can also execute <code>swift command
           --help</code>,
 
-          this will give your more specific help for the command.</p>
+          this will give you more specific help for the command.</p>
 
           <h2>Debugging Client Python API</h2>
 
-          <p>Debugging client Python API takes more effects as it depends on how familiar
+          <p>Debugging client Python API takes more effort as it depends on how familiar
 
           with Python programming and what development environment you use.</p>
 
@@ -8508,8 +8508,8 @@
 
           more information <a href="https://docs.python.org/2/library/pdb.html">here</a>.</p>
 
-          <p>The below code uses pdb debuuger to debug a python file contains clinet
-          python
+          <p>The following code uses pdb debuuger to debug a python file contains
+          clinet python
 
           API code.</p>
 
@@ -8576,7 +8576,7 @@
 
           <h2>Debugging Via HTTP</h2>
 
-          <p>The both of command line API and python API are restful web service client.
+          <p>Both command line API and python API are accessed via a web service client.
 
           Thus the requests are all made by using HTTP and you can always refer to
 
@@ -8595,7 +8595,7 @@
 
           information. To verify parameters in the request header, you can refer to
 
-          OpenStack service {API]<a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">api</a>
+          OpenStack service <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">API</a>
           to see what are expected.</p>
 
           <p>To enable debugging information on the standard out for Python API, you
@@ -8623,7 +8623,7 @@
 
           code to find the problems.</p>
 
-          <p>The below source file structure is based on the installation in Ubuntu.</p>
+          <p>The following source file structure is based on the installation in Ubuntu.</p>
 
           <p>The command line swift command is located in /usr/bin/swift. By looking
           at this
@@ -8635,10 +8635,10 @@
 
           <p>The Python API files are located under
 
-          /usr/lib/python2.7/dist-packages/swiftclient and the most important file
-          to look
+          ''/usr/lib/python2.7/dist-packages/swiftclient'' and the most important
+          file to look
 
-          at is client.py. This is file does all the request preparation, sending
+          at is ''client.py''. This is file does all the request preparation, sending
           request
 
           and receiving response. It is also used by the command line swift client.
@@ -8653,17 +8653,17 @@
           language_id: 6
           name: Object Storage
           parent_id: 6000190146
-          position: 3
+          position: 2
           updated_at: '2015-09-03T01:28:00-04:00'
           visibility: 1
         folder_id: 6000190146
-        hits: 0
+        hits: 1
         id: 6000076083
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-08T20:47:14-04:00'
+        modified_at: '2015-10-19T17:15:25-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000076083
@@ -8676,7 +8676,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Trouble Shooting
-        updated_at: '2015-10-08T20:47:14-04:00'
+        updated_at: '2015-10-19T17:15:25-04:00'
         user_id: 6002464727
   html: '<h2>Debugging Swift Command line Client</h2>
 
@@ -8685,16 +8685,16 @@
     environment. If you have other operating systems, the debugging process might
     be
 
-    a slightly different, however, the general rules should still apply.</p>
+    slightly different, however the general rules should still apply.</p>
 
-    <p>Swift command line client is very much like other Linux commands, it outputs
+    <p>Swift command line client is very much like other Linux commands; error messages
 
-    errors in the standard output, which is the monitor.</p>
+    are sent to standard output, which is the monitor.</p>
 
     <p>If you get an error, you can always read the error message and generally it
-    give
+    will
 
-    you very good hints about what might be wrong.</p>
+    give you very good hints about what might be wrong.</p>
 
     <p>For example, if you execute <code>swift list</code> on the command line without
 
@@ -8730,15 +8730,15 @@
     <p>You can always execute <code>man swift`` or simply</code>swift``` to get more
     help
 
-    information and to learn each supported options.</p>
+    information and to learn about supported options.</p>
 
     <p>If you find a useful command, you can also execute <code>swift command --help</code>,
 
-    this will give your more specific help for the command.</p>
+    this will give you more specific help for the command.</p>
 
     <h2>Debugging Client Python API</h2>
 
-    <p>Debugging client Python API takes more effects as it depends on how familiar
+    <p>Debugging client Python API takes more effort as it depends on how familiar
 
     with Python programming and what development environment you use.</p>
 
@@ -8751,7 +8751,8 @@
 
     more information <a href="https://docs.python.org/2/library/pdb.html">here</a>.</p>
 
-    <p>The below code uses pdb debuuger to debug a python file contains clinet python
+    <p>The following code uses pdb debuuger to debug a python file contains clinet
+    python
 
     API code.</p>
 
@@ -8817,7 +8818,7 @@
 
     <h2>Debugging Via HTTP</h2>
 
-    <p>The both of command line API and python API are restful web service client.
+    <p>Both command line API and python API are accessed via a web service client.
 
     Thus the requests are all made by using HTTP and you can always refer to
 
@@ -8835,7 +8836,7 @@
 
     information. To verify parameters in the request header, you can refer to
 
-    OpenStack service {API]<a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">api</a>
+    OpenStack service <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">API</a>
     to see what are expected.</p>
 
     <p>To enable debugging information on the standard out for Python API, you can
@@ -8861,7 +8862,7 @@
 
     code to find the problems.</p>
 
-    <p>The below source file structure is based on the installation in Ubuntu.</p>
+    <p>The following source file structure is based on the installation in Ubuntu.</p>
 
     <p>The command line swift command is located in /usr/bin/swift. By looking at
     this
@@ -8872,13 +8873,14 @@
 
     <p>The Python API files are located under
 
-    /usr/lib/python2.7/dist-packages/swiftclient and the most important file to look
+    ''/usr/lib/python2.7/dist-packages/swiftclient'' and the most important file to
+    look
 
-    at is client.py. This is file does all the request preparation, sending request
+    at is ''client.py''. This is file does all the request preparation, sending request
 
     and receiving response. It is also used by the command line swift client. </p>'
   parent: 40
-  sha1: 019ba245203a10e54d4e7a31b4d0719e15fbf816
+  sha1: 2c07975b9e9306c9b62fedbf218646f09996e7e7
   title: Trouble Shooting
 71:
   freshdesk:
