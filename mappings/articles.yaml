@@ -7282,21 +7282,21 @@
           \ receive HTTP requests/responses. \n For command line client, you can add\
           \ --debug option to print out HTTP request\nheader and HTTP response header,\
           \ which give you a lot of more insight\ninformation. To verify parameters\
-          \ in the request header, you can refer to\nOpenStack service {API]api to\
-          \ see what are expected. \n To enable debugging information on the standard\
+          \ in the request header, you can refer to\nOpenStack service API to see\
+          \ what are expected. \n To enable debugging information on the standard\
           \ out for Python API, you can add\nthe below code: \n ```\nimport logging\n\
           logger = logging.getLogger(\"novaclient\")\nlogging.basicConfig(level=logging.DEBUG)\
           \ \n ``` \n The will print the same output as adding --debug option for\
           \ command line API. \n Debugging via Source Code \n If the above techniques\
           \ are still not helpful, you can always look at the source\ncode to find\
           \ the problems. \n The below source file structure is based on the installation\
-          \ in Ubuntu. \n The command line nova command is located in /usr/bin/nova.\
+          \ in Ubuntu. \n The command line nova command is located in '/usr/bin/nova'.\
           \ By looking at this\nfile, you should get a idea of how the various options\
           \ are interpreted. This file\nacts as an interface for Python API. \n The\
-          \ Python API files are located under\n/usr/lib/python2.7/dist-packages/novaclient\
-          \ and the most important file to look\nat is client.py. This file does all\
-          \ the request preparation, sending request and\nreceiving response. It is\
-          \ also used by the command line Nova client.  "
+          \ Python API files are located under\n'/usr/lib/python2.7/dist-packages/novaclient'\
+          \ and the most important file to look\nat is 'client.py'. This file does\
+          \ all the request preparation, sending request and\nreceiving response.\
+          \ It is also used by the command line Nova client.  "
         description: '<h2>Debugging Nova Command line Client</h2>
 
           <p>The below assumes you have installed Nova command client in a Linux
@@ -7450,7 +7450,7 @@
 
           information. To verify parameters in the request header, you can refer to
 
-          OpenStack service {API]<a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">api</a>
+          OpenStack service <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">API</a>
           to see what are expected.</p>
 
           <p>To enable debugging information on the standard out for Python API, you
@@ -7480,7 +7480,7 @@
 
           <p>The below source file structure is based on the installation in Ubuntu.</p>
 
-          <p>The command line nova command is located in /usr/bin/nova. By looking
+          <p>The command line nova command is located in ''/usr/bin/nova''. By looking
           at this
 
           file, you should get a idea of how the various options are interpreted.
@@ -7490,11 +7490,11 @@
 
           <p>The Python API files are located under
 
-          /usr/lib/python2.7/dist-packages/novaclient and the most important file
+          ''/usr/lib/python2.7/dist-packages/novaclient'' and the most important file
           to look
 
-          at is client.py. This file does all the request preparation, sending request
-          and
+          at is ''client.py''. This file does all the request preparation, sending
+          request and
 
           receiving response. It is also used by the command line Nova client. </p>'
         folder:
@@ -7507,17 +7507,17 @@
           language_id: 6
           name: Instance Management
           parent_id: 6000190145
-          position: 2
+          position: 1
           updated_at: '2015-09-03T01:27:59-04:00'
           visibility: 1
         folder_id: 6000190145
-        hits: 1
+        hits: 2
         id: 6000075752
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-14T07:19:08-04:00'
+        modified_at: '2015-10-19T04:31:40-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000075752
@@ -7530,7 +7530,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Trouble Shooting
-        updated_at: '2015-10-14T07:19:08-04:00'
+        updated_at: '2015-10-19T04:31:40-04:00'
         user_id: 6002464727
   html: '<h2>Debugging Nova Command line Client</h2>
 
@@ -7679,7 +7679,7 @@
 
     information. To verify parameters in the request header, you can refer to
 
-    OpenStack service {API]<a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">api</a>
+    OpenStack service <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">API</a>
     to see what are expected.</p>
 
     <p>To enable debugging information on the standard out for Python API, you can
@@ -7707,7 +7707,8 @@
 
     <p>The below source file structure is based on the installation in Ubuntu.</p>
 
-    <p>The command line nova command is located in /usr/bin/nova. By looking at this
+    <p>The command line nova command is located in ''/usr/bin/nova''. By looking at
+    this
 
     file, you should get a idea of how the various options are interpreted. This file
 
@@ -7715,13 +7716,15 @@
 
     <p>The Python API files are located under
 
-    /usr/lib/python2.7/dist-packages/novaclient and the most important file to look
+    ''/usr/lib/python2.7/dist-packages/novaclient'' and the most important file to
+    look
 
-    at is client.py. This file does all the request preparation, sending request and
+    at is ''client.py''. This file does all the request preparation, sending request
+    and
 
     receiving response. It is also used by the command line Nova client. </p>'
   parent: 39
-  sha1: 343ee2b5838147e62152f2381afcd028ada5ae2c
+  sha1: 44f0ca7866a434cf7b3dbd88e8e99d9fd5c0b9a5
   title: Trouble Shooting
 66:
   freshdesk:
@@ -9456,72 +9459,69 @@
         datetime_01: null
         delta: true
         desc_un_html: " Getting Started \n This section is going to show you how to\
-          \ use AAF to authenticate to NeCTAR\nDashboard and use SSH to login to Virtual\
-          \ Machine. \n Dashboard Authentication \n NeCTAR Dashboard uses AAF to authenticate\
-          \ users. Please follow the below\ninstructions to login to NeCTAR Dashboard.\
-          \ \n \n Click here to go to the NeCTAR Dashboard and you will see the\n\
-          \ below screenshot and it shows you need to use AAF to login: \n \n \n \n\
-          \ Click 'Log In' button for next and you will see the below screenshot:\
-          \ \n \n \n \n Select the institution or the organization and click 'select'\
-          \ button, you will\n see a login page provided by your selected institution/organization:\
-          \ \n \n \n \n Type in username/password supplied by your institution/organization\
-          \ and click\n 'Continue' button, if successful, you should see the NeCTAR\
-          \ Dashboard \n \n Note, if your institution or organization is not the list,\
-          \ you can contact the\nhelp desk in your institution or organization to\
-          \ see whether there is AAF support.\nOr you can contact NecTAR HelpDesk\
-          \ to arrange an alternative way to\nlogin. \n Virtual Machine Authentication\
-          \ \n To create a key pair in NecTAR Cloud, please see the below instruction:\
-          \ \n \n \n Login to NeCTAR Dashboarddashboard \n \n \n Select a project\
-          \ from the project drop down list and click 'Access & Security',\n you should\
-          \ see the below screenshots which have a list of existing keys:\n\n \n \n\
-          \ \n You can click the 'Create Key Pair' button to create a new key pair,\
-          \ see the\n below screenshot:\n \n \n \n After entering the key pair name\
-          \ and click 'Create Key Pair' button, the system\n will ask you to save\
-          \ the private key. You should download the private key and\n save it in\
-          \ a secuire place. \n \n \n You can also click the 'Import Key Pair' button\
-          \ to import an existing public\n key, see the below screenshot:\n   \n \n\
-          \ \n You can copy and paste the public key into the 'Public Key' text area\
+          \ use your AAF (Australian Access Federation) \ncredentials to authenticate\
+          \ to NeCTAR Dashboard and use SSH to login to Virtual Machine. \n Dashboard\
+          \ Authentication \n NeCTAR Dashboard uses AAF to authenticate users. Please\
+          \ follow the below\ninstructions to login to NeCTAR Dashboard. \n \n Click\
+          \ here to go to the NeCTAR Dashboard and you will see the\n following screen:\
+          \ \n \n \n \n Click 'Log In' button, then select your AAF organisation from\
+          \ the menu: \n \n \n \n You will be redirected to a login page provided\
+          \ by your selected institution/organization: \n \n \n \n Type in username/password\
+          \ supplied by your institution/organization and click\n 'Continue' button,\
+          \ if successful, you should see the NeCTAR Dashboard \n \n Note, if your\
+          \ institution or organization is not the list, you can contact the\nhelp\
+          \ desk in your institution or organization to see whether there is AAF support.\n\
+          Or you can contact NecTAR HelpDesk to arrange an alternative way to\nlogin.\
+          \ \n Virtual Machine Authentication \n To create a key pair in NecTAR Cloud:\
+          \ \n \n \n Login to NeCTAR Dashboard \n \n \n Select a project from the\
+          \ project drop down list and click 'Access & Security',\n your screen should\
+          \ look similar to the following screenshots, which have a list \n of existing\
+          \ keys: \n \n \n \n \n \n You can click the 'Create Key Pair' button to\
+          \ create a new key pair: \n \n \n \n \n After entering the key pair name\
+          \ and clicking 'Create Key Pair', the system\n will ask you to save the\
+          \ private key. You should download the private key and\n save it in a secure\
+          \ place. \n \n \n You can also click the 'Import Key Pair' button to import\
+          \ an existing public\n key, see the below screenshot: \n \n \n    \n \n\
+          \ You can copy and paste the public key into the 'Public Key' text area\
           \ and give\n a key pair name. Then you click 'Import Key Pair' button to\
-          \ upload the public key. \n \n \n This key pair can be used later when you\
+          \ upload the public key. \n \n This key pair can be used later when you\
           \ launch a new Virtual Machine for\nauthentication. Please see relevant\
           \ articles about how to use the key in launching\na new Virtual Machine.\
-          \   \n Windows Authentication \n For Windows users, you need to use putty\
-          \ for key based authentication\nto access Virtual Machines. Windows uses\
-          \ different file format for the private\nkey You download from the NeCTAR\
-          \ Dashboard. You can use puttygen for\nthe key conversion. \n After you\
-          \ download the files from the above links, you can double click the\nputtygen.exe\
-          \ file to launch puttygen and you should see the below screenshot: \n  \
-          \ \n Then you can click 'Import Key' item from the 'Conversions' menu. Please\
-          \ see the\nbelow screenshot: \n   \n You select the private key you saved\
-          \ before and click 'Ok'. \n You can then click 'Export OpenSSH Key' from\
-          \ the 'Conversions'. Click yes for not\nsaving key with a password and provide\
-          \ a file name for the key. Please see the\nbelow screenshot: \n \n After\
-          \ you successfully converted the key, you can use it in putty to login to\n\
-          Virtual Machines. Please see the below instructions for how to login using\
-          \ key\nvia putty. \n \n Double click putty.exe to launch putty. See below\
-          \ screenshot: \n \n \n \n You can click 'Auth' under 'Connection' and then\
-          \ click 'Browse' button to load\n the private key you generated from above.\
-          \ See the below screenshot:  \n \n \n \n \n Click 'Section' and you can\
-          \ enter Virtual Machine IP Adddress in the 'Host Name'\n text field \n \n\
-          \ \n Click 'Open' button to login \n \n \n \n Linux Authentication \n In\
-          \ Linux, you can use the following command to login to the Virtual Machine:\
-          \ \n ```\nssh -i private_key_file_name ip_address \n ```  \n where, private_key_file_name\
-          \ is the private key You download from the NeCTAR\nDashboard. the ip_address\
-          \ is the address for the Virtual Machine You want to\naccess. "
+          \   \n Linux and MacOSX Authentication \n In Linux, you can use the following\
+          \ command to login to the Virtual Machine: \n ssh -i private_key_file_name\
+          \ ip_address  \n The 'private_key_file_name' is the private key you download\
+          \ from the NeCTAR\nDashboard (you may also need to specify the path to the\
+          \ key, if it is not in \nthe '~/.ssh/' directory). The ip_address for the\
+          \ instance is found on the \n'Instances' tab of the NeCTAR dashboard. \n\
+          \ Windows Authentication \n For Windows users, you need to use putty for\
+          \ key based authentication\nto access Virtual Machines. Windows uses different\
+          \ file format for the private\nkey You download from the NeCTAR Dashboard.\
+          \ You can use puttygen for\nthe key conversion. \n After you download the\
+          \ files from the above links, you can double click the\nputtygen.exe file\
+          \ to launch puttygen and you should see the below screenshot: \n   \n Then\
+          \ you can click 'Import Key' item from the 'Conversions' menu: \n   \n You\
+          \ select the private key you saved before and click 'Ok'. \n You can then\
+          \ click 'Export OpenSSH Key' from the 'Conversions'. Click 'yes' for not\n\
+          saving key with a password and provide a file name for the key: \n \n Instructions\
+          \ for how to login using the SSH key via putty: \n \n Double click 'putty.exe'\
+          \ to launch putty: \n \n \n \n You can click 'Auth' under 'Connection' and\
+          \ then click 'Browse' button to load\n the private key you generated from\
+          \ above:  \n \n \n \n \n Click 'Section' and you can enter Virtual Machine\
+          \ IP Adddress in the 'Host Name'\n text field \n \n \n Click 'Open' button\
+          \ to login \n \n \n "
         description: "<h2>Getting Started</h2>\n<p>This section is going to show you\
-          \ how to use AAF to authenticate to NeCTAR\nDashboard and use SSH to login\
-          \ to Virtual Machine.</p>\n<h2>Dashboard Authentication</h2>\n<p>NeCTAR\
-          \ Dashboard uses AAF to authenticate users. Please follow the below\ninstructions\
-          \ to login to NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\">Dashboard</a>.</p>\n\
-          <ul>\n<li>Click <a href=\"https://dashboard.rc.nectar.org.au/\">here</a>\
-          \ to go to the NeCTAR Dashboard and you will see the\n below screenshot\
-          \ and it shows you need to use AAF to login:</li>\n</ul>\n<p><img alt=\"\
-          aaf1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/aaf1.png?raw=true\"\
-          ></p>\n<ul>\n<li>Click 'Log In' button for next and you will see the below\
-          \ screenshot:</li>\n</ul>\n<p><img alt=\"aaf2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/aaf2.png?raw=true\"\
-          ></p>\n<ul>\n<li>Select the institution or the organization and click 'select'\
-          \ button, you will\n see a login page provided by your selected institution/organization:</li>\n\
-          </ul>\n<p><img alt=\"aaf3\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/aaf3.png?raw=true\"\
+          \ how to use your AAF (Australian Access Federation) \ncredentials to authenticate\
+          \ to NeCTAR Dashboard and use SSH to login to Virtual Machine.</p>\n<h2>Dashboard\
+          \ Authentication</h2>\n<p>NeCTAR Dashboard uses AAF to authenticate users.\
+          \ Please follow the below\ninstructions to login to NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\"\
+          >Dashboard</a>.</p>\n<ul>\n<li>Click <a href=\"https://dashboard.rc.nectar.org.au/\"\
+          >here</a> to go to the NeCTAR Dashboard and you will see the\n following\
+          \ screen:</li>\n</ul>\n<p><img alt=\"aaf1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/aaf1.png?raw=true\"\
+          ></p>\n<ul>\n<li>Click 'Log In' button, then select your AAF organisation\
+          \ from the menu:</li>\n</ul>\n<p><img alt=\"aaf2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/aaf2.png?raw=true\"\
+          ></p>\n<ul>\n<li>You will be redirected to a login page provided by your\
+          \ selected institution/organization:</li>\n</ul>\n<p><img alt=\"aaf3\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/aaf3.png?raw=true\"\
           ></p>\n<ul>\n<li>Type in username/password supplied by your institution/organization\
           \ and click\n 'Continue' button, if successful, you should see the NeCTAR\
           \ Dashboard</li>\n</ul>\n<p>Note, if your institution or organization is\
@@ -9529,29 +9529,35 @@
           \ to see whether there is AAF support.\nOr you can contact NecTAR <a href=\"\
           https://support.nectar.org.au/support/home\">HelpDesk</a> to arrange an\
           \ alternative way to\nlogin.</p>\n<h2>Virtual Machine Authentication</h2>\n\
-          <p>To create a key pair in NecTAR Cloud, please see the below instruction:</p>\n\
-          <ul>\n<li>\n<p>Login to NeCTAR Dashboard<a href=\"https://dashboard.rc.nectar.org.au/\"\
-          >dashboard</a></p>\n</li>\n<li>\n<p>Select a project from the project drop\
-          \ down list and click 'Access &amp; Security',\n you should see the below\
-          \ screenshots which have a list of existing keys:\n<img alt=\"key1\" src=\"\
-          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/key1.png?raw=true\"\
+          <p>To create a key pair in NecTAR Cloud:</p>\n<ul>\n<li>\n<p>Login to NeCTAR\
+          \ <a href=\"https://dashboard.rc.nectar.org.au/\">Dashboard</a></p>\n</li>\n\
+          <li>\n<p>Select a project from the project drop down list and click 'Access\
+          \ &amp; Security',\n your screen should look similar to the following screenshots,\
+          \ which have a list \n of existing keys:</p>\n</li>\n</ul>\n<p><img alt=\"\
+          key1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/key1.png?raw=true\"\
           >\n<img alt=\"key2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/key2.png?raw=true\"\
-          ></p>\n</li>\n<li>\n<p>You can click the 'Create Key Pair' button to create\
-          \ a new key pair, see the\n below screenshot:\n<img alt=\"key3\" src=\"\
-          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/key3.png?raw=true\"\
-          ></p>\n</li>\n<li>\n<p>After entering the key pair name and click 'Create\
-          \ Key Pair' button, the system\n will ask you to save the private key. You\
-          \ should download the private key and\n save it in a secuire place.</p>\n\
-          </li>\n<li>\n<p>You can also click the 'Import Key Pair' button to import\
-          \ an existing public\n key, see the below screenshot:\n<img alt=\"key4\"\
-          \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/key4.png?raw=true\"\
-          >  </p>\n</li>\n<li>\n<p>You can copy and paste the public key into the\
-          \ 'Public Key' text area and give\n a key pair name. Then you click 'Import\
-          \ Key Pair' button to upload the public key.</p>\n</li>\n</ul>\n<p>This\
-          \ key pair can be used later when you launch a new Virtual Machine for\n\
-          authentication. Please see relevant articles about how to use the key in\
-          \ launching\na new Virtual Machine.  </p>\n<h3>Windows Authentication</h3>\n\
-          <p>For Windows users, you need to use <a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\"\
+          ></p>\n<ul>\n<li>You can click the 'Create Key Pair' button to create a\
+          \ new key pair:</li>\n</ul>\n<p><img alt=\"key3\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/key3.png?raw=true\"\
+          ></p>\n<ul>\n<li>\n<p>After entering the key pair name and clicking 'Create\
+          \ Key Pair', the system\n will ask you to save the private key. You should\
+          \ download the private key and\n save it in a secure place.</p>\n</li>\n\
+          <li>\n<p>You can also click the 'Import Key Pair' button to import an existing\
+          \ public\n key, see the below screenshot:</p>\n</li>\n</ul>\n<p><img alt=\"\
+          key4\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/key4.png?raw=true\"\
+          >  </p>\n<ul>\n<li>You can copy and paste the public key into the 'Public\
+          \ Key' text area and give\n a key pair name. Then you click 'Import Key\
+          \ Pair' button to upload the public key.</li>\n</ul>\n<p>This key pair can\
+          \ be used later when you launch a new Virtual Machine for\nauthentication.\
+          \ Please see relevant articles about how to use the key in launching\na\
+          \ new Virtual Machine.  </p>\n<h3>Linux and MacOSX Authentication</h3>\n\
+          <p>In Linux, you can use the following command to login to the Virtual Machine:</p>\n\
+          <p><code>ssh -i private_key_file_name ip_address</code> </p>\n<p>The 'private_key_file_name'\
+          \ is the private key you download from the NeCTAR\nDashboard (you may also\
+          \ need to specify the path to the key, if it is not in \nthe '~/.ssh/' directory).\
+          \ The ip_address for the instance is found on the \n'Instances' tab of the\
+          \ <a href=\"https://dashboard.rc.nectar.org.au/\">NeCTAR dashboard</a>.</p>\n\
+          <h3>Windows Authentication</h3>\n<p>For Windows users, you need to use <a\
+          \ href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\"\
           >putty</a> for key based authentication\nto access Virtual Machines. Windows\
           \ uses different file format for the private\nkey You download from the\
           \ NeCTAR Dashboard. You can use <a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\"\
@@ -9559,31 +9565,23 @@
           \ from the above links, you can double click the\nputtygen.exe file to launch\
           \ puttygen and you should see the below screenshot:</p>\n<p><img alt=\"\
           puttygen1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/puttygen1.png?raw=true\"\
-          > </p>\n<p>Then you can click 'Import Key' item from the 'Conversions' menu.\
-          \ Please see the\nbelow screenshot:</p>\n<p><img alt=\"puttygen2\" src=\"\
-          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/puttygen2.png?raw=true\"\
+          > </p>\n<p>Then you can click 'Import Key' item from the 'Conversions' menu:</p>\n\
+          <p><img alt=\"puttygen2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/puttygen2.png?raw=true\"\
           > </p>\n<p>You select the private key you saved before and click 'Ok'.</p>\n\
           <p>You can then click 'Export OpenSSH Key' from the 'Conversions'. Click\
-          \ yes for not\nsaving key with a password and provide a file name for the\
-          \ key. Please see the\nbelow screenshot:</p>\n<p><img alt=\"puttygen3\"\
-          \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/puttygen3.png?raw=true\"\
-          ></p>\n<p>After you successfully converted the key, you can use it in putty\
-          \ to login to\nVirtual Machines. Please see the below instructions for how\
-          \ to login using key\nvia putty.</p>\n<ul>\n<li>Double click putty.exe to\
-          \ launch putty. See below screenshot:</li>\n</ul>\n<p><img alt=\"putty1\"\
-          \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/putty1.png?raw=true\"\
+          \ 'yes' for not\nsaving key with a password and provide a file name for\
+          \ the key:</p>\n<p><img alt=\"puttygen3\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/puttygen3.png?raw=true\"\
+          ></p>\n<p>Instructions for how to login using the SSH key via putty:</p>\n\
+          <ul>\n<li>Double click 'putty.exe' to launch putty:</li>\n</ul>\n<p><img\
+          \ alt=\"putty1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/putty1.png?raw=true\"\
           ></p>\n<ul>\n<li>You can click 'Auth' under 'Connection' and then click\
-          \ 'Browse' button to load\n the private key you generated from above. See\
-          \ the below screenshot: </li>\n</ul>\n<p><img alt=\"putty2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/putty2.png?raw=true\"\
+          \ 'Browse' button to load\n the private key you generated from above: </li>\n\
+          </ul>\n<p><img alt=\"putty2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/putty2.png?raw=true\"\
           ></p>\n<ul>\n<li>\n<p>Click 'Section' and you can enter Virtual Machine\
           \ IP Adddress in the 'Host Name'\n text field</p>\n</li>\n<li>\n<p>Click\
           \ 'Open' button to login</p>\n</li>\n</ul>\n<p><img alt=\"putty3\" src=\"\
           https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/putty3.png?raw=true\"\
-          ></p>\n<h3>Linux Authentication</h3>\n<p>In Linux, you can use the following\
-          \ command to login to the Virtual Machine:</p>\n<p>```\nssh -i private_key_file_name\
-          \ ip_address</p>\n<p>``` </p>\n<p>where, private_key_file_name is the private\
-          \ key You download from the NeCTAR\nDashboard. the ip_address is the address\
-          \ for the Virtual Machine You want to\naccess.</p>"
+          ></p>"
         folder:
           category_id: 6000122279
           created_at: '2015-09-03T01:28:01-04:00'
@@ -9594,21 +9592,21 @@
           language_id: 6
           name: Authentication
           parent_id: 6000190147
-          position: 4
+          position: 3
           updated_at: '2015-09-03T01:28:01-04:00'
           visibility: 1
         folder_id: 6000190147
-        hits: 0
+        hits: 4
         id: 6000077794
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-14T07:10:16-04:00'
+        modified_at: '2015-10-19T04:31:42-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000077794
-        position: 1
+        position: 2
         seo_data: {}
         status: 2
         string_01: null
@@ -9617,22 +9615,21 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Getting Started
-        updated_at: '2015-10-14T07:10:16-04:00'
+        updated_at: '2015-10-19T04:31:42-04:00'
         user_id: 6002464727
   html: "<h2>Getting Started</h2>\n<p>This section is going to show you how to use\
-    \ AAF to authenticate to NeCTAR\nDashboard and use SSH to login to Virtual Machine.</p>\n\
-    <h2>Dashboard Authentication</h2>\n<p>NeCTAR Dashboard uses AAF to authenticate\
-    \ users. Please follow the below\ninstructions to login to NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\"\
+    \ your AAF (Australian Access Federation) \ncredentials to authenticate to NeCTAR\
+    \ Dashboard and use SSH to login to Virtual Machine.</p>\n<h2>Dashboard Authentication</h2>\n\
+    <p>NeCTAR Dashboard uses AAF to authenticate users. Please follow the below\n\
+    instructions to login to NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\"\
     >Dashboard</a>.</p>\n<ul>\n<li>Click <a href=\"https://dashboard.rc.nectar.org.au/\"\
-    >here</a> to go to the NeCTAR Dashboard and you will see the\n below screenshot\
-    \ and it shows you need to use AAF to login:</li>\n</ul>\n<p><img alt=\"aaf1\"\
-    \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    >here</a> to go to the NeCTAR Dashboard and you will see the\n following screen:</li>\n\
+    </ul>\n<p><img alt=\"aaf1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Authentication--DOCID41/images/aaf1.png?raw=true\"></p>\n<ul>\n\
-    <li>Click 'Log In' button for next and you will see the below screenshot:</li>\n\
+    <li>Click 'Log In' button, then select your AAF organisation from the menu:</li>\n\
     </ul>\n<p><img alt=\"aaf2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Authentication--DOCID41/images/aaf2.png?raw=true\"></p>\n<ul>\n\
-    <li>Select the institution or the organization and click 'select' button, you\
-    \ will\n see a login page provided by your selected institution/organization:</li>\n\
+    <li>You will be redirected to a login page provided by your selected institution/organization:</li>\n\
     </ul>\n<p><img alt=\"aaf3\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Authentication--DOCID41/images/aaf3.png?raw=true\"></p>\n<ul>\n\
     <li>Type in username/password supplied by your institution/organization and click\n\
@@ -9641,66 +9638,67 @@
     \ the\nhelp desk in your institution or organization to see whether there is AAF\
     \ support.\nOr you can contact NecTAR <a href=\"https://support.nectar.org.au/support/home\"\
     >HelpDesk</a> to arrange an alternative way to\nlogin.</p>\n<h2>Virtual Machine\
-    \ Authentication</h2>\n<p>To create a key pair in NecTAR Cloud, please see the\
-    \ below instruction:</p>\n<ul>\n<li>\n<p>Login to NeCTAR Dashboard<a href=\"https://dashboard.rc.nectar.org.au/\"\
-    >dashboard</a></p>\n</li>\n<li>\n<p>Select a project from the project drop down\
-    \ list and click 'Access &amp; Security',\n you should see the below screenshots\
-    \ which have a list of existing keys:\n<img alt=\"key1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Authentication</h2>\n<p>To create a key pair in NecTAR Cloud:</p>\n<ul>\n<li>\n\
+    <p>Login to NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\">Dashboard</a></p>\n\
+    </li>\n<li>\n<p>Select a project from the project drop down list and click 'Access\
+    \ &amp; Security',\n your screen should look similar to the following screenshots,\
+    \ which have a list \n of existing keys:</p>\n</li>\n</ul>\n<p><img alt=\"key1\"\
+    \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Authentication--DOCID41/images/key1.png?raw=true\">\n<img alt=\"\
     key2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
-    \ Expert--DOCID19/Authentication--DOCID41/images/key2.png?raw=true\"></p>\n</li>\n\
-    <li>\n<p>You can click the 'Create Key Pair' button to create a new key pair,\
-    \ see the\n below screenshot:\n<img alt=\"key3\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
-    \ Expert--DOCID19/Authentication--DOCID41/images/key3.png?raw=true\"></p>\n</li>\n\
-    <li>\n<p>After entering the key pair name and click 'Create Key Pair' button,\
-    \ the system\n will ask you to save the private key. You should download the private\
-    \ key and\n save it in a secuire place.</p>\n</li>\n<li>\n<p>You can also click\
+    \ Expert--DOCID19/Authentication--DOCID41/images/key2.png?raw=true\"></p>\n<ul>\n\
+    <li>You can click the 'Create Key Pair' button to create a new key pair:</li>\n\
+    </ul>\n<p><img alt=\"key3\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ Expert--DOCID19/Authentication--DOCID41/images/key3.png?raw=true\"></p>\n<ul>\n\
+    <li>\n<p>After entering the key pair name and clicking 'Create Key Pair', the\
+    \ system\n will ask you to save the private key. You should download the private\
+    \ key and\n save it in a secure place.</p>\n</li>\n<li>\n<p>You can also click\
     \ the 'Import Key Pair' button to import an existing public\n key, see the below\
-    \ screenshot:\n<img alt=\"key4\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ screenshot:</p>\n</li>\n</ul>\n<p><img alt=\"key4\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Authentication--DOCID41/images/key4.png?raw=true\">  </p>\n\
-    </li>\n<li>\n<p>You can copy and paste the public key into the 'Public Key' text\
-    \ area and give\n a key pair name. Then you click 'Import Key Pair' button to\
-    \ upload the public key.</p>\n</li>\n</ul>\n<p>This key pair can be used later\
-    \ when you launch a new Virtual Machine for\nauthentication. Please see relevant\
-    \ articles about how to use the key in launching\na new Virtual Machine.  </p>\n\
-    <h3>Windows Authentication</h3>\n<p>For Windows users, you need to use <a href=\"\
-    http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\">putty</a> for\
-    \ key based authentication\nto access Virtual Machines. Windows uses different\
-    \ file format for the private\nkey You download from the NeCTAR Dashboard. You\
-    \ can use <a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\"\
+    <ul>\n<li>You can copy and paste the public key into the 'Public Key' text area\
+    \ and give\n a key pair name. Then you click 'Import Key Pair' button to upload\
+    \ the public key.</li>\n</ul>\n<p>This key pair can be used later when you launch\
+    \ a new Virtual Machine for\nauthentication. Please see relevant articles about\
+    \ how to use the key in launching\na new Virtual Machine.  </p>\n<h3>Linux and\
+    \ MacOSX Authentication</h3>\n<p>In Linux, you can use the following command to\
+    \ login to the Virtual Machine:</p>\n<p><code>ssh -i private_key_file_name ip_address</code>\
+    \ </p>\n<p>The 'private_key_file_name' is the private key you download from the\
+    \ NeCTAR\nDashboard (you may also need to specify the path to the key, if it is\
+    \ not in \nthe '~/.ssh/' directory). The ip_address for the instance is found\
+    \ on the \n'Instances' tab of the <a href=\"https://dashboard.rc.nectar.org.au/\"\
+    >NeCTAR dashboard</a>.</p>\n<h3>Windows Authentication</h3>\n<p>For Windows users,\
+    \ you need to use <a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\"\
+    >putty</a> for key based authentication\nto access Virtual Machines. Windows uses\
+    \ different file format for the private\nkey You download from the NeCTAR Dashboard.\
+    \ You can use <a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\"\
     >puttygen</a> for\nthe key conversion.</p>\n<p>After you download the files from\
     \ the above links, you can double click the\nputtygen.exe file to launch puttygen\
     \ and you should see the below screenshot:</p>\n<p><img alt=\"puttygen1\" src=\"\
     https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Authentication--DOCID41/images/puttygen1.png?raw=true\"> </p>\n\
-    <p>Then you can click 'Import Key' item from the 'Conversions' menu. Please see\
-    \ the\nbelow screenshot:</p>\n<p><img alt=\"puttygen2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    <p>Then you can click 'Import Key' item from the 'Conversions' menu:</p>\n<p><img\
+    \ alt=\"puttygen2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Authentication--DOCID41/images/puttygen2.png?raw=true\"> </p>\n\
     <p>You select the private key you saved before and click 'Ok'.</p>\n<p>You can\
-    \ then click 'Export OpenSSH Key' from the 'Conversions'. Click yes for not\n\
-    saving key with a password and provide a file name for the key. Please see the\n\
-    below screenshot:</p>\n<p><img alt=\"puttygen3\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ then click 'Export OpenSSH Key' from the 'Conversions'. Click 'yes' for not\n\
+    saving key with a password and provide a file name for the key:</p>\n<p><img alt=\"\
+    puttygen3\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Authentication--DOCID41/images/puttygen3.png?raw=true\"></p>\n\
-    <p>After you successfully converted the key, you can use it in putty to login\
-    \ to\nVirtual Machines. Please see the below instructions for how to login using\
-    \ key\nvia putty.</p>\n<ul>\n<li>Double click putty.exe to launch putty. See below\
-    \ screenshot:</li>\n</ul>\n<p><img alt=\"putty1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    <p>Instructions for how to login using the SSH key via putty:</p>\n<ul>\n<li>Double\
+    \ click 'putty.exe' to launch putty:</li>\n</ul>\n<p><img alt=\"putty1\" src=\"\
+    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Authentication--DOCID41/images/putty1.png?raw=true\"></p>\n\
     <ul>\n<li>You can click 'Auth' under 'Connection' and then click 'Browse' button\
-    \ to load\n the private key you generated from above. See the below screenshot:\
-    \ </li>\n</ul>\n<p><img alt=\"putty2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ to load\n the private key you generated from above: </li>\n</ul>\n<p><img alt=\"\
+    putty2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Authentication--DOCID41/images/putty2.png?raw=true\"></p>\n\
     <ul>\n<li>\n<p>Click 'Section' and you can enter Virtual Machine IP Adddress in\
     \ the 'Host Name'\n text field</p>\n</li>\n<li>\n<p>Click 'Open' button to login</p>\n\
     </li>\n</ul>\n<p><img alt=\"putty3\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
-    \ Expert--DOCID19/Authentication--DOCID41/images/putty3.png?raw=true\"></p>\n\
-    <h3>Linux Authentication</h3>\n<p>In Linux, you can use the following command\
-    \ to login to the Virtual Machine:</p>\n<p>```\nssh -i private_key_file_name ip_address</p>\n\
-    <p>``` </p>\n<p>where, private_key_file_name is the private key You download from\
-    \ the NeCTAR\nDashboard. the ip_address is the address for the Virtual Machine\
-    \ You want to\naccess.</p>"
+    \ Expert--DOCID19/Authentication--DOCID41/images/putty3.png?raw=true\"></p>"
   parent: 41
-  sha1: e747c4e0cceedcf30303a32469df177f69b58378
+  sha1: 8bf0cd6f62150c2ac27a0abe5d967b52cb893020
   title: Getting Started
 75:
   freshdesk:
