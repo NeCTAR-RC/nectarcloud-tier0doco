@@ -80,7 +80,7 @@ to send and receive HTTP requests/responses.
 For command line client, you can add --debug option to print out HTTP request
 header and HTTP response header, which give you a lot of more insight
 information. To verify parameters in the request header, you can refer to
-OpenStack service {API][api] to see what are expected.
+OpenStack service [API][api] to see what are expected.
 
 
 To enable debugging information on the standard out for Python API, you can add
@@ -102,13 +102,13 @@ code to find the problems.
 
 The below source file structure is based on the installation in Ubuntu.
 
-The command line nova command is located in /usr/bin/nova. By looking at this
+The command line nova command is located in '/usr/bin/nova'. By looking at this
 file, you should get a idea of how the various options are interpreted. This file
 acts as an interface for Python API.
 
 The Python API files are located under
-/usr/lib/python2.7/dist-packages/novaclient and the most important file to look
-at is client.py. This file does all the request preparation, sending request and
+'/usr/lib/python2.7/dist-packages/novaclient' and the most important file to look
+at is 'client.py'. This file does all the request preparation, sending request and
 receiving response. It is also used by the command line Nova client. 
 
 
