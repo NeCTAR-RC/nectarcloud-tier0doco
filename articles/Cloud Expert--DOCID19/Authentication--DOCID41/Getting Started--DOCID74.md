@@ -1,7 +1,7 @@
 ## Getting Started
 
-This section is going to show you how to use AAF to authenticate to NeCTAR
-Dashboard and use SSH to login to Virtual Machine.
+This section is going to show you how to use your AAF (Australian Access Federation) 
+credentials to authenticate to NeCTAR Dashboard and use SSH to login to Virtual Machine.
 
 ## Dashboard Authentication
 
@@ -9,16 +9,15 @@ NeCTAR Dashboard uses AAF to authenticate users. Please follow the below
 instructions to login to NeCTAR [Dashboard][dashboard].
 
 - Click [here][dashboard] to go to the NeCTAR Dashboard and you will see the
- below screenshot and it shows you need to use AAF to login:
+ following screen:
 
 ![`aaf1`](images/aaf1.png)
 
-- Click 'Log In' button for next and you will see the below screenshot:
+- Click 'Log In' button, then select your AAF organisation from the menu:
 
 ![`aaf2`](images/aaf2.png)
 
-- Select the institution or the organization and click 'select' button, you will
- see a login page provided by your selected institution/organization:
+- You will be redirected to a login page provided by your selected institution/organization:
 
 ![`aaf3`](images/aaf3.png)
 
