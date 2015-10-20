@@ -15,8 +15,7 @@ zone)" If you leave this selected Nectar will find a suitable AZ for you.
 ## Scenarios
 
 If your VM uses **persistent volume storage**, your VM and your storage must
-be in compatible Availability Zones. You can find more information about
-storage [here] [Cloud Storage]
+be in compatible Availability Zones. You can find more information on the Cloud Storage page.
 
 In some scenarios you can use **institutionally licensed software**, in which
 case you may need to select the appropriate Availability Zone
@@ -25,4 +24,4 @@ Some participating institutions offer **private availability zones**, for which
 you may be eligible. You will have to contact your Node's local support.
 
 [Launch Dialog AZ Tab]: images/launch_dialog_az_tab.png
-[Cloud Storage]: ../Cloud%20Basics/Introduction%20to%20Cloud%20Storage.md
+
