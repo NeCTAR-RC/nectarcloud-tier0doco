@@ -1,43 +1,45 @@
 ## Security API
 
-The NeCTAR Cloud doesn't provide a specific API for security purpose. The only
+The NeCTAR Cloud doesn't provide a specific API for security purposes. The only
 security relevant operation is to manage security groups through the Nova API.
 If you want to know the Nova API, You can find the related information from the
-articles in Instance Management section.
+articles in the 'Instance Management' section.
 
 This article describes some techniques to help you to secure a Linux based
-virtual machine in NeCTAR cloud.
+virtual machine in the NeCTAR cloud.
 
-As security is really large topic, the techniques showed here only provides some
+As security is a very broad topic, the techniques showed here only provides a
 basic introduction. You can always go to Internet and find more useful information
-about Security.
+about security.
 
-The below assumes your operating system is debian/ubuntu.
+The instructions below assume your operating system is debian/ubuntu.
 
-## Securing ssh
+## Securing SSH
 
-You need to encourage all the users on your system to use ssh certificate
+You need to encourage all the users on your system to use SSH certificate
 authentication and disable password login. In addition, you need to avoid logging
-into the system using ssh as root and use alternative methods to become root,
+into the system using SSH as root and use alternative methods to become root,
 such as su or sudo.
 
-To change the ssh configuration, you can edit the sshd_config file, in /etc/ssh.
-The below gives basic description about some important configuration items:
+To change the SSH configuration, you can edit the configuration file on the virtual
+machine, in '/etc/ssh/sshd_config'.
+
+A basic description of some important configuration items:
 
 - PermitRootLogin no
- You need to set this to no to avoid root access via ssh
+ You need to set this to 'no' to avoid root access via SSH
 
 - Port 22
- For better security, you can change the ssh port to other port number
+ For better security, you can change the SSH port to other port number
  
 - PermitEmptyPasswords no
-  This should be always no, for non empty password access
+  This should be always 'no', for non-empty password access
   
 - AllowUsers
-  This directive allows only certain users to have access via ssh to this machine.
+  This directive allows only certain users to have access via SSH to this machine.
 
 - PasswordAuthentication No
-  You should set this to no to disable user logging using password
+  You should set this to 'no' to disable user loggin using password
 
 After you have changed the /etc/ssh/sshd_config file, you can execute ``` sudo service ssh restart ```
 to apply the new changes.
@@ -49,7 +51,7 @@ You can also restrict access to file transfer only if you want to allow accounts
 on your Virtual Machine to transfer files. You can do it by giving users a
 restricted shell such as scpoly or rssh. These shells restrict the commands
 available to the users to execute. You can change an account's shell by editing
-/etc/passwd file.
+'/etc/passwd' file.
 
 ## Securing Apache
 
@@ -168,5 +170,3 @@ any services not desired.
 [chroot]: https://www.debian.org/doc/manuals/securing-debian-howto/ap-chroot-apache-env.en.html
 [iptables]: http://linux.die.net/man/8/iptables
 [fail2ban]: https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04
-
-
