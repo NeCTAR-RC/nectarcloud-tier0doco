@@ -1,46 +1,48 @@
 ## Security API
 
-The NeCTAR Cloud doesn't provide a specific API for security purpose. The only
+The NeCTAR Cloud doesn't provide a specific API for security purposes. The only
 security relevant operation is to manage security groups through the Nova API.
 If you want to know the Nova API, You can find the related information from the
-articles in Instance Management section.
+articles in the 'Instance Management' section.
 
 This article describes some techniques to help you to secure a Linux based
-virtual machine in NeCTAR cloud.
+virtual machine in the NeCTAR cloud.
 
-As security is really large topic, the techniques showed here only provides some
+As security is a very broad topic, the techniques showed here only provides a
 basic introduction. You can always go to Internet and find more useful information
-about Security.
+about security.
 
-The below assumes your operating system is debian/ubuntu.
+The instructions below assume your operating system is debian/ubuntu.
 
-## Securing ssh
+## Securing SSH
 
-You need to encourage all the users on your system to use ssh certificate
+You need to encourage all the users on your system to use SSH certificate
 authentication and disable password login. In addition, you need to avoid logging
-into the system using ssh as root and use alternative methods to become root,
+into the system using SSH as root and use alternative methods to become root,
 such as su or sudo.
 
-To change the ssh configuration, you can edit the sshd_config file, in /etc/ssh.
-The below gives basic description about some important configuration items:
+To change the SSH configuration, you can edit the configuration file on the virtual
+machine, in '/etc/ssh/sshd_config'.
+
+A basic description of some important configuration items:
 
 - PermitRootLogin no
- You need to set this to no to avoid root access via ssh
+ You need to set this to 'no' to avoid root access via SSH
 
 - Port 22
- For better security, you can change the ssh port to other port number
+ For better security, you can change the SSH port to other port number
  
 - PermitEmptyPasswords no
-  This should be always no, for non empty password access
+  This should be always 'no', for non-empty password access
   
 - AllowUsers
-  This directive allows only certain users to have access via ssh to this machine.
+  This directive allows only certain users to have access via SSH to this machine.
 
 - PasswordAuthentication No
-  You should set this to no to disable user logging using password
+  You should set this to 'no' to disable user loggin using password
 
-After you have changed the /etc/ssh/sshd_config file, you can execute ``` sudo service ssh restart ```
-to apply the new changes.
+After you have changed the '/etc/ssh/sshd_config file', you can execute 
+``` sudo service ssh restart ``` to apply the new changes.
   
 If you are using an SSH client to access your Virtual Machine, you need to make
 sure both SSH server and client are using the same version of protocols.
@@ -49,12 +51,12 @@ You can also restrict access to file transfer only if you want to allow accounts
 on your Virtual Machine to transfer files. You can do it by giving users a
 restricted shell such as scpoly or rssh. These shells restrict the commands
 available to the users to execute. You can change an account's shell by editing
-/etc/passwd file.
+'/etc/passwd' file.
 
 ## Securing Apache
 
 If you don't want your Apache web service available to public, you can use the
-Listen or BindAddress directives in /etc/apache2/apache2.conf.
+Listen or BindAddress directives in '/etc/apache2/apache2.conf'.
 
 Using Listen:
     Listen 127.0.0.1:80
@@ -64,40 +66,40 @@ Using BindAddress:
 Then you can restart your apache service with ``` sudo service apache2 restart ```
 
 The default Apache installation in Debian permits users to publish content
-under the $HOME/public_html. This content can be retrieved remotely using an
+under the '$HOME/public_html'. This content can be retrieved remotely using an
 URL such as: http://your_apache_server/~user.
 
-You can restrict the default configuration by editing /etc/apache2/mods-enabled/userdir.conf
+You can restrict the default configuration by editing '/etc/apache2/mods-enabled/userdir.conf'
 
-You can also make sure the permission of log files can only be read/write by
+You can also make sure the permission of log files can only be read/write by the
 required user and groups. The default permission for the log files may be readable
 by anyone.
 
-By default, Apache web files are located under /var/www. The default file provides
+By default, Apache web files are located under /'var/www'. The default file provides
 some hints on the system like what is the operating system. You should substitute
 the default web pages with your own.
 
-to further harder the Apache security, you can run Apache by chroot. See this
+To further strengthen the Apache security, you can run Apache by chroot. See this
 [instruction][chroot] to set up Apache.
 
 
 ## Keep System Update to Date
 
 In debian/ubuntu, you run ``` sudo apt-get update ``` regularly to keep system
-security patch update to date.
+security patch up to date.
 
 ## Setup Local Firewall
 
 A local firewall can also be installed with filtering rules to protect access to
-the system. You can use iptable tools to create rules to filter network traffic.
+the system. You can use IPtable tools to create rules to filter network traffic.
 It is advised to use Security Group to manage which ports to open as it is simple
 to do. The below only provides basic introduction to IPtables, for more
 information, please refer to IPtables [MAN page][iptables].
 
 To list all current rules, execute:  ``` sudo iptables --list ```
 
-By default, the IPtables defines 3 chains. The INPUT Chain is for incoming traffic
-, the Forward Chain is for forwarded traffic and the OUTPUT Chain is for outgoing
+By default, the IPtables defines 3 chains. The INPUT Chain is for incoming traffic,
+the Forward Chain is for forwarded traffic and the OUTPUT Chain is for outgoing
 traffic. Which chains you need to add rules depends on what traffic you want to
 filter.
 
@@ -109,7 +111,7 @@ IPtables also defines policies that defines actions for rules:
 
 - Drop, reject traffic by dropping traffic
 
-The below shows an example how to enable SSH and HTTP/HTTPS traffic in IPtables.
+Following is an example of how to enable SSH and HTTP/HTTPS traffic in IPtables.
 
 Firstly, you need to allow connections that are already connected to your server:
 
