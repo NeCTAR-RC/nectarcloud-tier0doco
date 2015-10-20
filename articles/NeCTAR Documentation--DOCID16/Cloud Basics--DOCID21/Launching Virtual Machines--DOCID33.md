@@ -192,7 +192,7 @@ window. To launch the popup window, you can go to the Instances tab and
 click 'Launch Instance' button.
 
 To get more information about the terms used, please refer to
-[the glossary][glossary].
+the Glossary.
 
 ## Example Launch of an Instance
 
@@ -235,8 +235,7 @@ size and cloud activity, the length of time required may vary. Your instance
 will have a public IP address and be reachable according to the
 Security Groups selected.
 
-You can connect to your new instance via
-[Accessing Your Instance][accessing your instance]
+Instructions to access the instance are on the 'Accessing Instance' page in Cloud Basics.
 
 ## If Launch is Unsuccessful
 
@@ -256,6 +255,5 @@ Cloud Help Desk. Please find how to lodge a support ticket from
 [putty]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
 [image]: https://wiki.rc.nectar.org.au/wiki/Image_Catalog
 [openstack image]: http://docs.openstack.org/image-guide/content/ch_creating_images_manually.html
-[accessing your instance]: http://bla.bla.bla
 [nectar support]: https://support.rc.nectar.org.au/docs/support
-[glossary]: http://bla.bla.bla
+
