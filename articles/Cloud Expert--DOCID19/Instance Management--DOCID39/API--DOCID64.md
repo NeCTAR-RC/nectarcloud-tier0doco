@@ -5,7 +5,7 @@ cloud provides instance management via API. There are two types of API you can u
 to manage your instance, one is Nova command line API and another is Nova python
 API. Which one to use depends on your needs. The Nova python API is great if you
 want integrate it with python programming to manage instance in a programmatic way.
-If you are a system administrator and you probably will prefer to sue Nova command
+If you are a system administrator and you probably will prefer to use Nova command
 line API through a console to manage instances. Both of them provides more
 management options than you can do through the Dashboard. 
 
@@ -19,24 +19,29 @@ OS X
 
 ```
 sudo easy_install pip
+
 sudo pip install --upgrade setuptools
+
 sudo pip install python-novaclient
 ```
 
 Ubuntu
 
 ```
-sudo aptitude install python-pip
-sudo pip install python-novaclient
+sudo apt-get install python-pip
 
+sudo pip install python-novaclient
 ```
 
 RHEL, CentOS, or Fedora
 
 ```
 sudo yum install python-setuptools
+
 sudo easy_install pip
+
 sudo pip install --upgrade setuptools
+
 sudo pip install python-novaclient
 ```
 
