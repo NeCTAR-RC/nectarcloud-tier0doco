@@ -76,6 +76,5 @@ OpenStack configuration
 >
 > Using the Research Cloud creates a publicly accessible server (depending on
 > Security Groups) and therefore that machine can be exploited. All users must
-> read & follow our [Security Guidelines].
+> read & follow our Security Guidelines.
 
-[Security Guidelines]: ../NeCTAR%20Fundamentals/Security%20Guidelines.md
