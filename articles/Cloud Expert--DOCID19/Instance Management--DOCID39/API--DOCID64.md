@@ -5,7 +5,7 @@ cloud provides instance management via API. There are two types of API you can u
 to manage your instance, one is Nova command line API and another is Nova python
 API. Which one to use depends on your needs. The Nova python API is great if you
 want integrate it with python programming to manage instance in a programmatic way.
-If you are a system administrator and you probably will prefer to sue Nova command
+If you are a system administrator and you probably will prefer to use Nova command
 line API through a console to manage instances. Both of them provides more
 management options than you can do through the Dashboard. 
 
@@ -19,24 +19,29 @@ OS X
 
 ```
 sudo easy_install pip
+
 sudo pip install --upgrade setuptools
+
 sudo pip install python-novaclient
 ```
 
 Ubuntu
 
 ```
-sudo aptitude install python-pip
-sudo pip install python-novaclient
+sudo apt-get install python-pip
 
+sudo pip install python-novaclient
 ```
 
 RHEL, CentOS, or Fedora
 
 ```
 sudo yum install python-setuptools
+
 sudo easy_install pip
+
 sudo pip install --upgrade setuptools
+
 sudo pip install python-novaclient
 ```
 
@@ -106,10 +111,9 @@ obtained from Dashboard.
 You can use the below sample code to get authenticated. 
 
 ```
-
 from novaclient import client
-nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)
 
+nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)
 ```
 
 The VERSION parameter can be "1.1" or "2". You can get USERNAME, PROJECT_NAME and
@@ -150,8 +154,8 @@ information. Then, you can use nova boot command to launch a new instance, the
 format is:
 
 ```
-
 nova boot [instance-name]  --flavor [name] --image [name] --key-name [name]
+
 --security-groups [names separated by space]
 
 ```
@@ -192,20 +196,28 @@ The below shows an sample code to launch a new instance and you need to get
 authentication information first from above:
 
 ```
-
 from novaclient import client
+
 nova = client.Client("2", username, password, project_name, auth_url)
 
 nova.servers.list()
+
 nova.flavors.list()
+
 nova.keypairs.list()
+
 nova.images.list()
+
 nova.security_groups.list()
 
 server_name = 'new instance'
+
 image = 'NeCTAR Ubuntu 14.04 (Trusty) amd64'
+
 flavor = 'm1.small'
+
 security_groups = ['5c8c4dd0-db53-41e3-a53b-9730c764149c', '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff']
+
 key_name = 'ming'
 
 nova.servers.create(server_name, image, flavor, security_groups=security_groups, key_name=)
