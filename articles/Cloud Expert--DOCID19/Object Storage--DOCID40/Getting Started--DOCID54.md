@@ -8,7 +8,9 @@ OS X
 
 ```
 sudo easy_install pip
+
 sudo pip install --upgrade setuptools
+
 sudo pip install python-swiftclient
 ```
 
@@ -16,6 +18,7 @@ Ubuntu
 
 ```
 sudo aptitude install python-pip
+
 sudo pip install python-swiftclient
 ```
 
@@ -23,8 +26,11 @@ RHEL, CentOS, or Fedora
 
 ```
 sudo yum install python-setuptools
+
 sudo easy_install pip
+
 sudo pip install --upgrade setuptools
+
 sudo pip install python-swiftclient
 ```
 
@@ -108,7 +114,7 @@ to get started.
 
 ### Command Line API
 
-you can use swift command to manage your objects storage, you can type:
+You can use swift command to manage your objects storage, you can type:
 
 ``` swift --help ``` to find out all the available options.
 
@@ -118,17 +124,18 @@ You can also use Python Swift API in your python code to access object storage.
 
 See below for a sample code:
 
-```
 
+```
 from swiftclient import client
 
 swift = client.Connection(authurl=url, user=username, key=password,
 tenant_name=project_name, auth_version='2')
 
 container_name=""
-swift.get_container(container_name)
 
+swift.get_container(container_name)
 ```
+
 
 You can find more information in the Object Storage API section. 
 
