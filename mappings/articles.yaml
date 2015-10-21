@@ -102,7 +102,7 @@
           \ the default. \n Notes: The above configuration options can be set in the\
           \ 'Launch Instance' popup\nwindow. To launch the popup window, you can go\
           \ to the Instances tab and\nclick 'Launch Instance' button. \n To get more\
-          \ information about the terms used, please refer to\nthe glossary. \n Example\
+          \ information about the terms used, please refer to\nthe Glossary. \n Example\
           \ Launch of an Instance \n \n \n Login to the Cloud Dashboard \n \n \n Go\
           \ to Dashboard Instances tab \n \n \n Click 'Launch Instance' button \n\
           \ \n \n Type instance name \n \n \n Select a flavour. Flavour indicates\
@@ -123,17 +123,17 @@
           \ from status \"Build\" to \"Active\". Depending on your image\nsize and\
           \ cloud activity, the length of time required may vary. Your instance\n\
           will have a public IP address and be reachable according to the\nSecurity\
-          \ Groups selected. \n You can connect to your new instance via\nAccessing\
-          \ Your Instance \n If Launch is Unsuccessful \n You may get a message that\
-          \ your quota has been exceeded or you have\ninsufficient resources. Check\
-          \ the table to the right on the Launch Instance page\nfor the number of\
-          \ instances you may run simultaneously, then check the\nInstances tab to\
-          \ see how many Instances you already have running. You may have\nto terminate\
-          \ a running Instance to free resources before you can launch another\n(see\
-          \ Instance tab to Terminate). If you need more resources see the allocation\n\
-          tab to apply for an increase. \n If the above doesn't apply to you, alternatively,\
-          \ you can send an email to the\nCloud Help Desk. Please find how to lodge\
-          \ a support ticket from\nNectar Support. "
+          \ Groups selected. \n Instructions to access the instance are on the 'Accessing\
+          \ Instance' page in Cloud Basics. \n If Launch is Unsuccessful \n You may\
+          \ get a message that your quota has been exceeded or you have\ninsufficient\
+          \ resources. Check the table to the right on the Launch Instance page\n\
+          for the number of instances you may run simultaneously, then check the\n\
+          Instances tab to see how many Instances you already have running. You may\
+          \ have\nto terminate a running Instance to free resources before you can\
+          \ launch another\n(see Instance tab to Terminate). If you need more resources\
+          \ see the allocation\ntab to apply for an increase. \n If the above doesn't\
+          \ apply to you, alternatively, you can send an email to the\nCloud Help\
+          \ Desk. Please find how to lodge a support ticket from\nNectar Support. "
         description: "<p>This guide describes launching a running instance (virtual\
           \ machine) with SSH login\nenabled.</p>\n<h2>Preparation</h2>\n<p>You need\
           \ to create a public/private key pair before you can use SSH to login to\
@@ -246,9 +246,9 @@
           \ options can be set in the 'Launch Instance' popup\nwindow. To launch the\
           \ popup window, you can go to the Instances tab and\nclick 'Launch Instance'\
           \ button.</p>\n<p>To get more information about the terms used, please refer\
-          \ to\n<a href=\"http://bla.bla.bla\">the glossary</a>.</p>\n<h2>Example\
-          \ Launch of an Instance</h2>\n<ul>\n<li>\n<p>Login to the <a href=\"https://dashboard.rc.nectar.org.au\"\
-          >Cloud Dashboard</a></p>\n</li>\n<li>\n<p>Go to Dashboard Instances tab</p>\n\
+          \ to\nthe Glossary.</p>\n<h2>Example Launch of an Instance</h2>\n<ul>\n\
+          <li>\n<p>Login to the <a href=\"https://dashboard.rc.nectar.org.au\">Cloud\
+          \ Dashboard</a></p>\n</li>\n<li>\n<p>Go to Dashboard Instances tab</p>\n\
           </li>\n<li>\n<p>Click 'Launch Instance' button</p>\n</li>\n<li>\n<p>Type\
           \ instance name</p>\n</li>\n<li>\n<p>Select a flavour. Flavour indicates\
           \ the specification of a instance. You can\n find more information in the\
@@ -269,19 +269,19 @@
           \ options. The instance\nwill normally pass from status \"Build\" to \"\
           Active\". Depending on your image\nsize and cloud activity, the length of\
           \ time required may vary. Your instance\nwill have a public IP address and\
-          \ be reachable according to the\nSecurity Groups selected.</p>\n<p>You can\
-          \ connect to your new instance via\n<a href=\"http://bla.bla.bla\">Accessing\
-          \ Your Instance</a></p>\n<h2>If Launch is Unsuccessful</h2>\n<p>You may\
-          \ get a message that your quota has been exceeded or you have\ninsufficient\
-          \ resources. Check the table to the right on the Launch Instance page\n\
-          for the number of instances you may run simultaneously, then check the\n\
-          Instances tab to see how many Instances you already have running. You may\
-          \ have\nto terminate a running Instance to free resources before you can\
-          \ launch another\n(see Instance tab to Terminate). If you need more resources\
-          \ see the allocation\ntab to apply for an increase.</p>\n<p>If the above\
-          \ doesn't apply to you, alternatively, you can send an email to the\nCloud\
-          \ Help Desk. Please find how to lodge a support ticket from\n<a href=\"\
-          https://support.rc.nectar.org.au/docs/support\">Nectar Support</a>.</p>"
+          \ be reachable according to the\nSecurity Groups selected.</p>\n<p>Instructions\
+          \ to access the instance are on the 'Accessing Instance' page in Cloud Basics.</p>\n\
+          <h2>If Launch is Unsuccessful</h2>\n<p>You may get a message that your quota\
+          \ has been exceeded or you have\ninsufficient resources. Check the table\
+          \ to the right on the Launch Instance page\nfor the number of instances\
+          \ you may run simultaneously, then check the\nInstances tab to see how many\
+          \ Instances you already have running. You may have\nto terminate a running\
+          \ Instance to free resources before you can launch another\n(see Instance\
+          \ tab to Terminate). If you need more resources see the allocation\ntab\
+          \ to apply for an increase.</p>\n<p>If the above doesn't apply to you, alternatively,\
+          \ you can send an email to the\nCloud Help Desk. Please find how to lodge\
+          \ a support ticket from\n<a href=\"https://support.rc.nectar.org.au/docs/support\"\
+          >Nectar Support</a>.</p>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:04-04:00'
@@ -292,21 +292,21 @@
           language_id: 6
           name: Cloud Basics
           parent_id: 6000190150
-          position: 2
-          updated_at: '2015-09-03T01:28:04-04:00'
+          position: 1
+          updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 0
+        hits: 47
         id: 6000055376
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-09-03T01:28:10-04:00'
+        modified_at: '2015-10-20T21:03:33-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055376
-        position: 1
+        position: 4
         seo_data: {}
         status: 2
         string_01: null
@@ -315,7 +315,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Launching Virtual Machines
-        updated_at: '2015-09-03T01:28:10-04:00'
+        updated_at: '2015-10-20T21:03:33-04:00'
         user_id: 6002464727
   html: "<p>This guide describes launching a running instance (virtual machine) with\
     \ SSH login\nenabled.</p>\n<h2>Preparation</h2>\n<p>You need to create a public/private\
@@ -419,33 +419,32 @@
     <p>Notes: The above configuration options can be set in the 'Launch Instance'\
     \ popup\nwindow. To launch the popup window, you can go to the Instances tab and\n\
     click 'Launch Instance' button.</p>\n<p>To get more information about the terms\
-    \ used, please refer to\n<a href=\"http://bla.bla.bla\">the glossary</a>.</p>\n\
-    <h2>Example Launch of an Instance</h2>\n<ul>\n<li>\n<p>Login to the <a href=\"\
-    https://dashboard.rc.nectar.org.au\">Cloud Dashboard</a></p>\n</li>\n<li>\n<p>Go\
-    \ to Dashboard Instances tab</p>\n</li>\n<li>\n<p>Click 'Launch Instance' button</p>\n\
-    </li>\n<li>\n<p>Type instance name</p>\n</li>\n<li>\n<p>Select a flavour. Flavour\
-    \ indicates the specification of a instance. You can\n find more information in\
-    \ the Flavour Details.</p>\n</li>\n<li>\n<p>Select an NeCTAR offical image (we\
-    \ suggest selecting an Ubuntu image such as\n NeCTAR Ubuntu 14.10 (Utopic) amd64)</p>\n\
-    </li>\n<li>\n<p>Click Access &amp; Security tab</p>\n</li>\n<li>\n<p>Select a\
-    \ key pair created earlier</p>\n</li>\n<li>\n<p>Select security groups to use.\
-    \ Tick 'ssh' and 'http' (these are pre-defined\n groups in the default personal\
-    \ project)</p>\n</li>\n<li>\n<p>Click Availability Zone</p>\n</li>\n<li>\n<p>Select\
-    \ the location of your instance or leave as unselected (the system will\n auto\
-    \ select available location)</p>\n</li>\n<li>\n<p>Click launch button and the\
-    \ page will change to the Instances Tab</p>\n</li>\n<li>\n<p>After a while (usually\
-    \ a couple of minutes), your instance will become active\n and will have an IP\
-    \ address. The IP address is available in the Instances table\n on your Nectar\
-    \ Dashboard.</p>\n</li>\n</ul>\n<p>The launch button begins Cloud provisioning\
-    \ and initialisation of a running\ninstance from the selected image and your configuration\
-    \ options. The instance\nwill normally pass from status \"Build\" to \"Active\"\
-    . Depending on your image\nsize and cloud activity, the length of time required\
-    \ may vary. Your instance\nwill have a public IP address and be reachable according\
-    \ to the\nSecurity Groups selected.</p>\n<p>You can connect to your new instance\
-    \ via\n<a href=\"http://bla.bla.bla\">Accessing Your Instance</a></p>\n<h2>If\
-    \ Launch is Unsuccessful</h2>\n<p>You may get a message that your quota has been\
-    \ exceeded or you have\ninsufficient resources. Check the table to the right on\
-    \ the Launch Instance page\nfor the number of instances you may run simultaneously,\
+    \ used, please refer to\nthe Glossary.</p>\n<h2>Example Launch of an Instance</h2>\n\
+    <ul>\n<li>\n<p>Login to the <a href=\"https://dashboard.rc.nectar.org.au\">Cloud\
+    \ Dashboard</a></p>\n</li>\n<li>\n<p>Go to Dashboard Instances tab</p>\n</li>\n\
+    <li>\n<p>Click 'Launch Instance' button</p>\n</li>\n<li>\n<p>Type instance name</p>\n\
+    </li>\n<li>\n<p>Select a flavour. Flavour indicates the specification of a instance.\
+    \ You can\n find more information in the Flavour Details.</p>\n</li>\n<li>\n<p>Select\
+    \ an NeCTAR offical image (we suggest selecting an Ubuntu image such as\n NeCTAR\
+    \ Ubuntu 14.10 (Utopic) amd64)</p>\n</li>\n<li>\n<p>Click Access &amp; Security\
+    \ tab</p>\n</li>\n<li>\n<p>Select a key pair created earlier</p>\n</li>\n<li>\n\
+    <p>Select security groups to use. Tick 'ssh' and 'http' (these are pre-defined\n\
+    \ groups in the default personal project)</p>\n</li>\n<li>\n<p>Click Availability\
+    \ Zone</p>\n</li>\n<li>\n<p>Select the location of your instance or leave as unselected\
+    \ (the system will\n auto select available location)</p>\n</li>\n<li>\n<p>Click\
+    \ launch button and the page will change to the Instances Tab</p>\n</li>\n<li>\n\
+    <p>After a while (usually a couple of minutes), your instance will become active\n\
+    \ and will have an IP address. The IP address is available in the Instances table\n\
+    \ on your Nectar Dashboard.</p>\n</li>\n</ul>\n<p>The launch button begins Cloud\
+    \ provisioning and initialisation of a running\ninstance from the selected image\
+    \ and your configuration options. The instance\nwill normally pass from status\
+    \ \"Build\" to \"Active\". Depending on your image\nsize and cloud activity, the\
+    \ length of time required may vary. Your instance\nwill have a public IP address\
+    \ and be reachable according to the\nSecurity Groups selected.</p>\n<p>Instructions\
+    \ to access the instance are on the 'Accessing Instance' page in Cloud Basics.</p>\n\
+    <h2>If Launch is Unsuccessful</h2>\n<p>You may get a message that your quota has\
+    \ been exceeded or you have\ninsufficient resources. Check the table to the right\
+    \ on the Launch Instance page\nfor the number of instances you may run simultaneously,\
     \ then check the\nInstances tab to see how many Instances you already have running.\
     \ You may have\nto terminate a running Instance to free resources before you can\
     \ launch another\n(see Instance tab to Terminate). If you need more resources\
@@ -454,7 +453,7 @@
     \ Please find how to lodge a support ticket from\n<a href=\"https://support.rc.nectar.org.au/docs/support\"\
     >Nectar Support</a>.</p>"
   parent: 21
-  sha1: be39e3d6aae9fc279e47f9ff1b7fe26e4b07ef99
+  sha1: 930747e497c36cbccd084cd272896d6f9e499740
   title: Launching Virtual Machines
 34:
   freshdesk:
@@ -1439,11 +1438,11 @@
           \ availability\nzone)\" If you leave this selected Nectar will find a suitable\
           \ AZ for you.\n \n Scenarios \n If your VM uses persistent volume storage,\
           \ your VM and your storage must\nbe in compatible Availability Zones. You\
-          \ can find more information about\nstorage here \n In some scenarios you\
-          \ can use institutionally licensed software, in which\ncase you may need\
-          \ to select the appropriate Availability Zone \n Some participating institutions\
-          \ offer private availability zones, for which\nyou may be eligible. You\
-          \ will have to contact your Node's local support. "
+          \ can find more information on the Cloud Storage page. \n In some scenarios\
+          \ you can use institutionally licensed software, in which\ncase you may\
+          \ need to select the appropriate Availability Zone \n Some participating\
+          \ institutions offer private availability zones, for which\nyou may be eligible.\
+          \ You will have to contact your Node's local support. "
         description: '<p>The Nectar Cloud is organised in Availability Zones, that
           are hosted by the
 
@@ -1475,9 +1474,8 @@
           <p>If your VM uses <strong>persistent volume storage</strong>, your VM and
           your storage must
 
-          be in compatible Availability Zones. You can find more information about
-
-          storage <a href="../Cloud%20Basics/Introduction%20to%20Cloud%20Storage.md">here</a></p>
+          be in compatible Availability Zones. You can find more information on the
+          Cloud Storage page.</p>
 
           <p>In some scenarios you can use <strong>institutionally licensed software</strong>,
           in which
@@ -1498,30 +1496,30 @@
           language_id: 6
           name: NeCTAR Fundamentals
           parent_id: 6000190155
-          position: 7
-          updated_at: '2015-09-03T01:28:09-04:00'
+          position: 2
+          updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190155
-        hits: 0
+        hits: 13
         id: 6000055381
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-09-03T01:28:16-04:00'
+        modified_at: '2015-10-20T21:03:34-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055381
-        position: 1
+        position: 2
         seo_data: {}
         status: 2
         string_01: null
         string_02: null
         tags: []
-        thumbs_down: 0
+        thumbs_down: 2
         thumbs_up: 0
         title: Availability Zones
-        updated_at: '2015-09-03T01:28:16-04:00'
+        updated_at: '2015-10-20T21:03:34-04:00'
         user_id: 6002464727
   html: '<p>The Nectar Cloud is organised in Availability Zones, that are hosted by
     the
@@ -1552,9 +1550,8 @@
     <p>If your VM uses <strong>persistent volume storage</strong>, your VM and your
     storage must
 
-    be in compatible Availability Zones. You can find more information about
-
-    storage <a href="../Cloud%20Basics/Introduction%20to%20Cloud%20Storage.md">here</a></p>
+    be in compatible Availability Zones. You can find more information on the Cloud
+    Storage page.</p>
 
     <p>In some scenarios you can use <strong>institutionally licensed software</strong>,
     in which
@@ -1566,7 +1563,7 @@
 
     you may be eligible. You will have to contact your Node''s local support.</p>'
   parent: 26
-  sha1: f5d14d797b4f2c7f8f08e78b2988746c514f63d6
+  sha1: f3833959eda87b1b543c43245a1f6c223da0f4bf
   title: Availability Zones
 39:
   freshdesk:
@@ -2737,8 +2734,7 @@
           \ configuration</p>\n<blockquote>\n<p>Security Note</p>\n<p>Using the Research\
           \ Cloud creates a publicly accessible server (depending on\nSecurity Groups)\
           \ and therefore that machine can be exploited. All users must\nread &amp;\
-          \ follow our <a href=\"../NeCTAR%20Fundamentals/Security%20Guidelines.md\"\
-          >Security Guidelines</a>.</p>\n</blockquote>"
+          \ follow our Security Guidelines.</p>\n</blockquote>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:09-04:00'
@@ -2753,13 +2749,13 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190155
-        hits: 5
+        hits: 6
         id: 6000055387
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-16T00:56:02-04:00'
+        modified_at: '2015-10-20T21:03:52-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055387
@@ -2772,7 +2768,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Security Groups
-        updated_at: '2015-10-16T00:56:02-04:00'
+        updated_at: '2015-10-20T21:03:52-04:00'
         user_id: 6002464727
   html: "<p>Incoming network access to your machines is usually required. Security\
     \ Groups\nare how to add network access. If you can't reach your instance by SSH\
@@ -2815,10 +2811,9 @@
     OpenStack configuration</p>\n<blockquote>\n<p>Security Note</p>\n<p>Using the\
     \ Research Cloud creates a publicly accessible server (depending on\nSecurity\
     \ Groups) and therefore that machine can be exploited. All users must\nread &amp;\
-    \ follow our <a href=\"../NeCTAR%20Fundamentals/Security%20Guidelines.md\">Security\
-    \ Guidelines</a>.</p>\n</blockquote>"
+    \ follow our Security Guidelines.</p>\n</blockquote>"
   parent: 26
-  sha1: ad8f96847d5620f67f64ba8b5c18efff2481fd67
+  sha1: 1e7bfd723d5df5568137a1694554ae952820aa86
   title: Security Groups
 52:
   freshdesk:
@@ -6931,85 +6926,85 @@
           API. Which one to use depends on your needs. The Nova python API is great\
           \ if you\nwant integrate it with python programming to manage instance in\
           \ a programmatic way.\nIf you are a system administrator and you probably\
-          \ will prefer to sue Nova command\nline API through a console to manage\
+          \ will prefer to use Nova command\nline API through a console to manage\
           \ instances. Both of them provides more\nmanagement options than you can\
           \ do through the Dashboard.  \n Installation \n You can use pip to install\
           \ the python-nova API and the nova command line API. \n See below for the\
-          \ instructions: \n OS X \n sudo easy_install pip\nsudo pip install --upgrade\
-          \ setuptools\nsudo pip install python-novaclient \n Ubuntu \n ```\nsudo\
-          \ aptitude install python-pip\nsudo pip install python-novaclient \n ```\
-          \ \n RHEL, CentOS, or Fedora \n sudo yum install python-setuptools\nsudo\
-          \ easy_install pip\nsudo pip install --upgrade setuptools\nsudo pip install\
-          \ python-novaclient \n Windows \n See pip windows for instructions on installing\
-          \ pip for Windows. \n pip install python-novaclient \n Configuration \n\
-          \ Before you can use the python nova client and command line API you need\
-          \ to be\nauthenticated to the NeCTAR cloud. The below shows the instructions\
-          \ of how to\nget username/password and get authenticated. \n \n \n Login\
-          \ to NeCTAR Cloud Dashboard \n \n \n Click the drop down list beside the\
-          \ top left nectar logo to select a project \n \n \n Click 'Access & Security'\
-          \ \n \n \n On the 'Access & Security' page, click tab 'API Access' \n \n\
-          \ \n Click button \"Download OpenStack RC File\" \n \n \n Save the file\
-          \ into a directory \n \n \n Click the drop down list with your email on\
-          \ the right top of page, then click\n Settings \n \n \n Click 'Reset Password'\
-          \ and save the password appeared on the screen \n \n \n Nova API normally\
-          \ requires 4 environment variables to be set for authentication: \n \n auth\
-          \ URL \n username \n project id or name (most clients can handle either)\
-          \ \n password \n \n When using the script file you downloaded from NeCTAR\
-          \ Dashboard, these\nvariables are set by the script file and you can see\
-          \ these variables\nif you open the file. Example: \n OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/\n\
-          OS_TENANT_NAME=my_science_project\nOS_TENANT_ID=sdfsdfsfwrwewer\nOS_USERNAME=clouduser@example.edu.au\n\
-          OS_PASSWORD=XXXXXX \n Authentication for Command Line API \n The below instruction\
-          \ assumes you use Linux operating system. \n Once you have obtained the\
-          \ authentication script and password, you can execute\nthe script using\
-          \ source file-name.sh. and type in the password you\nobtained from Dashboard.\
-          \ \n Authentication for python swift API \n You can use the below sample\
-          \ code to get authenticated.  \n ``` \n from novaclient import client\n\
-          nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)\
-          \ \n ``` \n The VERSION parameter can be \"1.1\" or \"2\". You can get USERNAME,\
-          \ PROJECT_NAME and\nAUTH_URL from the above .sh file obtained from the NeCTAR\
-          \ Dashboard and you can\nalso get the PASSWORD from above as copied from\
-          \ the NeCTAR Dashboard. \n Nova Command Line API \n you can use nova command\
-          \ to manage your instances in a selected project, you can\ntype nova --help\
-          \ or just nova to find out all the available\noptions and sub commands.\
-          \ \n If you want to know more about a specific sub command,\nexecute nova\
-          \ help command-name for help.  \n To list all active instances, execute\
-          \ nova list. This should return\nall available instances in one project.\
-          \ \n To list all available flavors, execute nova flavor-list. \n To list\
-          \ all available images, execute nova image-list. \n To list all available\
-          \ security groups, execute nova secgroup-list. \n To list all available\
-          \ key pairs, execute nova keypair-list. \n To list all available availability\
-          \ zones, execute nova availability-zone-list. \n Note: not all options are\
-          \ available as there is a security policy applied and\nyour account might\
-          \ not have sufficient permission.  \n The below shows how to create/delete,\
-          \ change state of a instance: \n To boot a new instance, you need to get\
-          \ image name, keypair name, security group\nname and flavor name. You can\
-          \ use the above mentioned commands to acquire these\ninformation. Then,\
-          \ you can use nova boot command to launch a new instance, the\nformat is:\
-          \ \n ``` \n nova boot [instance-name]  --flavor [name] --image [name] --key-name\
-          \ [name]\n--security-groups [names separated by space] \n ``` \n You can\
-          \ also specify option --availability-zone to launch an instance in a\ndesigned\
-          \ zone and option --user-data  for a initialization script\nused only for\
-          \ the first time when instance boots. The user data script can be\nput in\
-          \ a file and then passed to instance creation. You can see check this\n\
-          website to see what script you can use to initialize an instance.  \n To\
-          \ get more help, you can execute nova help boot to see what other\noptions\
-          \ are available. \n To boot a stopped instance, use nova start . \n To stop\
-          \ an instance, use nova stop . \n To suspend an instance ,use nova suspend\
-          \ . \n To show details of an instance, use nova show . \n To resume an instance,\
-          \ use nova resume . \n To create a snapshot of a instance, use nova image-create\
-          \ \n. \n You can also find more information about nova command line API\
-          \ via\nnovaclient. \n Nova Python API \n You can also use Nova Python API\
-          \ to manage instances integrated with Python\nprogramming language. \n The\
-          \ below shows an sample code to launch a new instance and you need to get\n\
-          authentication information first from above: \n ``` \n from novaclient import\
-          \ client\nnova = client.Client(\"2\", username, password, project_name,\
-          \ auth_url) \n nova.servers.list()\nnova.flavors.list()\nnova.keypairs.list()\n\
-          nova.images.list()\nnova.security_groups.list() \n server_name = 'new instance'\n\
-          image = 'NeCTAR Ubuntu 14.04 (Trusty) amd64'\nflavor = 'm1.small'\nsecurity_groups\
-          \ = ['5c8c4dd0-db53-41e3-a53b-9730c764149c', '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff']\n\
-          key_name = 'ming' \n nova.servers.create(server_name, image, flavor, security_groups=security_groups,\
-          \ key_name=) \n ```  \n You can find more information about nova python\
-          \ API from this link "
+          \ instructions: \n OS X \n ``` \n sudo easy_install pip \n sudo pip install\
+          \ --upgrade setuptools \n sudo pip install python-novaclient \n ``` \n Ubuntu\
+          \ \n ``` \n sudo apt-get install python-pip \n sudo pip install python-novaclient\
+          \ \n ``` \n RHEL, CentOS, or Fedora \n ``` \n sudo yum install python-setuptools\
+          \ \n sudo easy_install pip \n sudo pip install --upgrade setuptools \n sudo\
+          \ pip install python-novaclient \n ``` \n Windows \n See pip windows for\
+          \ instructions on installing pip for Windows. \n pip install python-novaclient\
+          \ \n Configuration \n Before you can use the python nova client and command\
+          \ line API you need to be\nauthenticated to the NeCTAR cloud. The below\
+          \ shows the instructions of how to\nget username/password and get authenticated.\
+          \ \n \n \n Login to NeCTAR Cloud Dashboard \n \n \n Click the drop down\
+          \ list beside the top left nectar logo to select a project \n \n \n Click\
+          \ 'Access & Security' \n \n \n On the 'Access & Security' page, click tab\
+          \ 'API Access' \n \n \n Click button \"Download OpenStack RC File\" \n \n\
+          \ \n Save the file into a directory \n \n \n Click the drop down list with\
+          \ your email on the right top of page, then click\n Settings \n \n \n Click\
+          \ 'Reset Password' and save the password appeared on the screen \n \n \n\
+          \ Nova API normally requires 4 environment variables to be set for authentication:\
+          \ \n \n auth URL \n username \n project id or name (most clients can handle\
+          \ either) \n password \n \n When using the script file you downloaded from\
+          \ NeCTAR Dashboard, these\nvariables are set by the script file and you\
+          \ can see these variables\nif you open the file. Example: \n OS_AUTH_URL:\
+          \ https://keystone.rc.nectar.org.au:5000/v2.0/\nOS_TENANT_NAME=my_science_project\n\
+          OS_TENANT_ID=sdfsdfsfwrwewer\nOS_USERNAME=clouduser@example.edu.au\nOS_PASSWORD=XXXXXX\
+          \ \n Authentication for Command Line API \n The below instruction assumes\
+          \ you use Linux operating system. \n Once you have obtained the authentication\
+          \ script and password, you can execute\nthe script using source file-name.sh.\
+          \ and type in the password you\nobtained from Dashboard. \n Authentication\
+          \ for python swift API \n You can use the below sample code to get authenticated.\
+          \  \n ``` \n from novaclient import client \n nova = client.Client(VERSION,\
+          \ USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL) \n ``` \n The VERSION parameter\
+          \ can be \"1.1\" or \"2\". You can get USERNAME, PROJECT_NAME and\nAUTH_URL\
+          \ from the above .sh file obtained from the NeCTAR Dashboard and you can\n\
+          also get the PASSWORD from above as copied from the NeCTAR Dashboard. \n\
+          \ Nova Command Line API \n you can use nova command to manage your instances\
+          \ in a selected project, you can\ntype nova --help or just nova to find\
+          \ out all the available\noptions and sub commands. \n If you want to know\
+          \ more about a specific sub command,\nexecute nova help command-name for\
+          \ help.  \n To list all active instances, execute nova list. This should\
+          \ return\nall available instances in one project. \n To list all available\
+          \ flavors, execute nova flavor-list. \n To list all available images, execute\
+          \ nova image-list. \n To list all available security groups, execute nova\
+          \ secgroup-list. \n To list all available key pairs, execute nova keypair-list.\
+          \ \n To list all available availability zones, execute nova availability-zone-list.\
+          \ \n Note: not all options are available as there is a security policy applied\
+          \ and\nyour account might not have sufficient permission.  \n The below\
+          \ shows how to create/delete, change state of a instance: \n To boot a new\
+          \ instance, you need to get image name, keypair name, security group\nname\
+          \ and flavor name. You can use the above mentioned commands to acquire these\n\
+          information. Then, you can use nova boot command to launch a new instance,\
+          \ the\nformat is: \n ``` \n nova boot [instance-name]  --flavor [name] --image\
+          \ [name] --key-name [name] \n --security-groups [names separated by space]\
+          \ \n ``` \n You can also specify option --availability-zone to launch an\
+          \ instance in a\ndesigned zone and option --user-data  for a initialization\
+          \ script\nused only for the first time when instance boots. The user data\
+          \ script can be\nput in a file and then passed to instance creation. You\
+          \ can see check this\nwebsite to see what script you can use to initialize\
+          \ an instance.  \n To get more help, you can execute nova help boot to see\
+          \ what other\noptions are available. \n To boot a stopped instance, use\
+          \ nova start . \n To stop an instance, use nova stop . \n To suspend an\
+          \ instance ,use nova suspend . \n To show details of an instance, use nova\
+          \ show . \n To resume an instance, use nova resume . \n To create a snapshot\
+          \ of a instance, use nova image-create \n. \n You can also find more information\
+          \ about nova command line API via\nnovaclient. \n Nova Python API \n You\
+          \ can also use Nova Python API to manage instances integrated with Python\n\
+          programming language. \n The below shows an sample code to launch a new\
+          \ instance and you need to get\nauthentication information first from above:\
+          \ \n ``` \n from novaclient import client \n nova = client.Client(\"2\"\
+          , username, password, project_name, auth_url) \n nova.servers.list() \n\
+          \ nova.flavors.list() \n nova.keypairs.list() \n nova.images.list() \n nova.security_groups.list()\
+          \ \n server_name = 'new instance' \n image = 'NeCTAR Ubuntu 14.04 (Trusty)\
+          \ amd64' \n flavor = 'm1.small' \n security_groups = ['5c8c4dd0-db53-41e3-a53b-9730c764149c',\
+          \ '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff'] \n key_name = 'ming' \n nova.servers.create(server_name,\
+          \ image, flavor, security_groups=security_groups, key_name=) \n ```  \n\
+          \ You can find more information about nova python API from this link "
         description: "<h2>Manage instance via API</h2>\n<p>The NeCTAR Dashboard is\
           \ one way to manage your instances in projects and NeCTAR\ncloud provides\
           \ instance management via API. There are two types of API you can use\n\
@@ -7017,17 +7012,18 @@
           \ python\nAPI. Which one to use depends on your needs. The Nova python API\
           \ is great if you\nwant integrate it with python programming to manage instance\
           \ in a programmatic way.\nIf you are a system administrator and you probably\
-          \ will prefer to sue Nova command\nline API through a console to manage\
+          \ will prefer to use Nova command\nline API through a console to manage\
           \ instances. Both of them provides more\nmanagement options than you can\
           \ do through the Dashboard. </p>\n<h2>Installation</h2>\n<p>You can use\
           \ pip to install the python-nova API and the nova command line API.</p>\n\
-          <p>See below for the instructions:</p>\n<p>OS X</p>\n<p><code>sudo easy_install\
-          \ pip\nsudo pip install --upgrade setuptools\nsudo pip install python-novaclient</code></p>\n\
-          <p>Ubuntu</p>\n<p>```\nsudo aptitude install python-pip\nsudo pip install\
-          \ python-novaclient</p>\n<p>```</p>\n<p>RHEL, CentOS, or Fedora</p>\n<p><code>sudo\
-          \ yum install python-setuptools\nsudo easy_install pip\nsudo pip install\
-          \ --upgrade setuptools\nsudo pip install python-novaclient</code></p>\n\
-          <p>Windows</p>\n<p>See <a href=\"http://docs.python-guide.org/en/latest/starting/install/win/\"\
+          <p>See below for the instructions:</p>\n<p>OS X</p>\n<p>```</p>\n<p>sudo\
+          \ easy_install pip</p>\n<p>sudo pip install --upgrade setuptools</p>\n<p>sudo\
+          \ pip install python-novaclient</p>\n<p>```</p>\n<p>Ubuntu</p>\n<p>```</p>\n\
+          <p>sudo apt-get install python-pip</p>\n<p>sudo pip install python-novaclient</p>\n\
+          <p>```</p>\n<p>RHEL, CentOS, or Fedora</p>\n<p>```</p>\n<p>sudo yum install\
+          \ python-setuptools</p>\n<p>sudo easy_install pip</p>\n<p>sudo pip install\
+          \ --upgrade setuptools</p>\n<p>sudo pip install python-novaclient</p>\n\
+          <p>```</p>\n<p>Windows</p>\n<p>See <a href=\"http://docs.python-guide.org/en/latest/starting/install/win/\"\
           >pip windows</a> for instructions on installing pip for Windows.</p>\n<p><code>pip\
           \ install python-novaclient</code></p>\n<h2>Configuration</h2>\n<p>Before\
           \ you can use the python nova client and command line API you need to be\n\
@@ -7054,8 +7050,8 @@
           \ script and password, you can execute\nthe script using <code>source file-name.sh</code>.\
           \ and type in the password you\nobtained from Dashboard.</p>\n<h3>Authentication\
           \ for python swift API</h3>\n<p>You can use the below sample code to get\
-          \ authenticated. </p>\n<p>```</p>\n<p>from novaclient import client\nnova\
-          \ = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)</p>\n\
+          \ authenticated. </p>\n<p>```</p>\n<p>from novaclient import client</p>\n\
+          <p>nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)</p>\n\
           <p>```</p>\n<p>The VERSION parameter can be \"1.1\" or \"2\". You can get\
           \ USERNAME, PROJECT_NAME and\nAUTH_URL from the above .sh file obtained\
           \ from the NeCTAR Dashboard and you can\nalso get the PASSWORD from above\
@@ -7078,12 +7074,12 @@
           name and flavor name. You can use the above mentioned commands to acquire\
           \ these\ninformation. Then, you can use nova boot command to launch a new\
           \ instance, the\nformat is:</p>\n<p>```</p>\n<p>nova boot [instance-name]\
-          \  --flavor [name] --image [name] --key-name [name]\n--security-groups [names\
-          \ separated by space]</p>\n<p>```</p>\n<p>You can also specify option --availability-zone\
-          \ to launch an instance in a\ndesigned zone and option --user-data  for\
-          \ a initialization script\nused only for the first time when instance boots.\
-          \ The user data script can be\nput in a file and then passed to instance\
-          \ creation. You can see check this\n<a href=\"https://cloudinit.readthedocs.org/en/latest/\"\
+          \  --flavor [name] --image [name] --key-name [name]</p>\n<p>--security-groups\
+          \ [names separated by space]</p>\n<p>```</p>\n<p>You can also specify option\
+          \ --availability-zone to launch an instance in a\ndesigned zone and option\
+          \ --user-data  for a initialization script\nused only for the first time\
+          \ when instance boots. The user data script can be\nput in a file and then\
+          \ passed to instance creation. You can see check this\n<a href=\"https://cloudinit.readthedocs.org/en/latest/\"\
           >website</a> to see what script you can use to initialize an instance. </p>\n\
           <p>To get more help, you can execute <code>nova help boot</code> to see\
           \ what other\noptions are available.</p>\n<p>To boot a stopped instance,\
@@ -7097,15 +7093,15 @@
           \ Python API to manage instances integrated with Python\nprogramming language.</p>\n\
           <p>The below shows an sample code to launch a new instance and you need\
           \ to get\nauthentication information first from above:</p>\n<p>```</p>\n\
-          <p>from novaclient import client\nnova = client.Client(\"2\", username,\
-          \ password, project_name, auth_url)</p>\n<p>nova.servers.list()\nnova.flavors.list()\n\
-          nova.keypairs.list()\nnova.images.list()\nnova.security_groups.list()</p>\n\
-          <p>server_name = 'new instance'\nimage = 'NeCTAR Ubuntu 14.04 (Trusty) amd64'\n\
-          flavor = 'm1.small'\nsecurity_groups = ['5c8c4dd0-db53-41e3-a53b-9730c764149c',\
-          \ '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff']\nkey_name = 'ming'</p>\n<p>nova.servers.create(server_name,\
-          \ image, flavor, security_groups=security_groups, key_name=)</p>\n<p>```\
-          \ </p>\n<p>You can find more information about nova python API from this\
-          \ <a href=\"http://docs.openstack.org/developer/python-novaclient/api.html\"\
+          <p>from novaclient import client</p>\n<p>nova = client.Client(\"2\", username,\
+          \ password, project_name, auth_url)</p>\n<p>nova.servers.list()</p>\n<p>nova.flavors.list()</p>\n\
+          <p>nova.keypairs.list()</p>\n<p>nova.images.list()</p>\n<p>nova.security_groups.list()</p>\n\
+          <p>server_name = 'new instance'</p>\n<p>image = 'NeCTAR Ubuntu 14.04 (Trusty)\
+          \ amd64'</p>\n<p>flavor = 'm1.small'</p>\n<p>security_groups = ['5c8c4dd0-db53-41e3-a53b-9730c764149c',\
+          \ '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff']</p>\n<p>key_name = 'ming'</p>\n\
+          <p>nova.servers.create(server_name, image, flavor, security_groups=security_groups,\
+          \ key_name=)</p>\n<p>``` </p>\n<p>You can find more information about nova\
+          \ python API from this <a href=\"http://docs.openstack.org/developer/python-novaclient/api.html\"\
           >link</a></p>"
         folder:
           category_id: 6000122279
@@ -7117,17 +7113,17 @@
           language_id: 6
           name: Instance Management
           parent_id: 6000190145
-          position: 2
+          position: 1
           updated_at: '2015-09-03T01:27:59-04:00'
           visibility: 1
         folder_id: 6000190145
-        hits: 0
+        hits: 3
         id: 6000075747
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-08T00:45:12-04:00'
+        modified_at: '2015-10-20T23:05:03-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000075747
@@ -7140,7 +7136,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-10-08T00:45:12-04:00'
+        updated_at: '2015-10-20T23:05:03-04:00'
         user_id: 6002464727
   html: "<h2>Manage instance via API</h2>\n<p>The NeCTAR Dashboard is one way to manage\
     \ your instances in projects and NeCTAR\ncloud provides instance management via\
@@ -7148,16 +7144,17 @@
     \ Nova command line API and another is Nova python\nAPI. Which one to use depends\
     \ on your needs. The Nova python API is great if you\nwant integrate it with python\
     \ programming to manage instance in a programmatic way.\nIf you are a system administrator\
-    \ and you probably will prefer to sue Nova command\nline API through a console\
+    \ and you probably will prefer to use Nova command\nline API through a console\
     \ to manage instances. Both of them provides more\nmanagement options than you\
     \ can do through the Dashboard. </p>\n<h2>Installation</h2>\n<p>You can use pip\
     \ to install the python-nova API and the nova command line API.</p>\n<p>See below\
-    \ for the instructions:</p>\n<p>OS X</p>\n<p><code>sudo easy_install pip\nsudo\
-    \ pip install --upgrade setuptools\nsudo pip install python-novaclient</code></p>\n\
-    <p>Ubuntu</p>\n<p>```\nsudo aptitude install python-pip\nsudo pip install python-novaclient</p>\n\
-    <p>```</p>\n<p>RHEL, CentOS, or Fedora</p>\n<p><code>sudo yum install python-setuptools\n\
-    sudo easy_install pip\nsudo pip install --upgrade setuptools\nsudo pip install\
-    \ python-novaclient</code></p>\n<p>Windows</p>\n<p>See <a href=\"http://docs.python-guide.org/en/latest/starting/install/win/\"\
+    \ for the instructions:</p>\n<p>OS X</p>\n<p>```</p>\n<p>sudo easy_install pip</p>\n\
+    <p>sudo pip install --upgrade setuptools</p>\n<p>sudo pip install python-novaclient</p>\n\
+    <p>```</p>\n<p>Ubuntu</p>\n<p>```</p>\n<p>sudo apt-get install python-pip</p>\n\
+    <p>sudo pip install python-novaclient</p>\n<p>```</p>\n<p>RHEL, CentOS, or Fedora</p>\n\
+    <p>```</p>\n<p>sudo yum install python-setuptools</p>\n<p>sudo easy_install pip</p>\n\
+    <p>sudo pip install --upgrade setuptools</p>\n<p>sudo pip install python-novaclient</p>\n\
+    <p>```</p>\n<p>Windows</p>\n<p>See <a href=\"http://docs.python-guide.org/en/latest/starting/install/win/\"\
     >pip windows</a> for instructions on installing pip for Windows.</p>\n<p><code>pip\
     \ install python-novaclient</code></p>\n<h2>Configuration</h2>\n<p>Before you\
     \ can use the python nova client and command line API you need to be\nauthenticated\
@@ -7182,8 +7179,8 @@
     \ the authentication script and password, you can execute\nthe script using <code>source\
     \ file-name.sh</code>. and type in the password you\nobtained from Dashboard.</p>\n\
     <h3>Authentication for python swift API</h3>\n<p>You can use the below sample\
-    \ code to get authenticated. </p>\n<p>```</p>\n<p>from novaclient import client\n\
-    nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)</p>\n\
+    \ code to get authenticated. </p>\n<p>```</p>\n<p>from novaclient import client</p>\n\
+    <p>nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)</p>\n\
     <p>```</p>\n<p>The VERSION parameter can be \"1.1\" or \"2\". You can get USERNAME,\
     \ PROJECT_NAME and\nAUTH_URL from the above .sh file obtained from the NeCTAR\
     \ Dashboard and you can\nalso get the PASSWORD from above as copied from the NeCTAR\
@@ -7205,14 +7202,14 @@
     \ You can use the above mentioned commands to acquire these\ninformation. Then,\
     \ you can use nova boot command to launch a new instance, the\nformat is:</p>\n\
     <p>```</p>\n<p>nova boot [instance-name]  --flavor [name] --image [name] --key-name\
-    \ [name]\n--security-groups [names separated by space]</p>\n<p>```</p>\n<p>You\
-    \ can also specify option --availability-zone to launch an instance in a\ndesigned\
-    \ zone and option --user-data <user-data-file> for a initialization script\nused\
-    \ only for the first time when instance boots. The user data script can be\nput\
-    \ in a file and then passed to instance creation. You can see check this\n<a href=\"\
-    https://cloudinit.readthedocs.org/en/latest/\">website</a> to see what script\
-    \ you can use to initialize an instance. </p>\n<p>To get more help, you can execute\
-    \ <code>nova help boot</code> to see what other\noptions are available.</p>\n\
+    \ [name]</p>\n<p>--security-groups [names separated by space]</p>\n<p>```</p>\n\
+    <p>You can also specify option --availability-zone to launch an instance in a\n\
+    designed zone and option --user-data <user-data-file> for a initialization script\n\
+    used only for the first time when instance boots. The user data script can be\n\
+    put in a file and then passed to instance creation. You can see check this\n<a\
+    \ href=\"https://cloudinit.readthedocs.org/en/latest/\">website</a> to see what\
+    \ script you can use to initialize an instance. </p>\n<p>To get more help, you\
+    \ can execute <code>nova help boot</code> to see what other\noptions are available.</p>\n\
     <p>To boot a stopped instance, use nova start <server name or ID>.</p>\n<p>To\
     \ stop an instance, use nova stop <server name or ID>.</p>\n<p>To suspend an instance\
     \ ,use nova suspend <server name or ID>.</p>\n<p>To show details of an instance,\
@@ -7224,17 +7221,17 @@
     \ API to manage instances integrated with Python\nprogramming language.</p>\n\
     <p>The below shows an sample code to launch a new instance and you need to get\n\
     authentication information first from above:</p>\n<p>```</p>\n<p>from novaclient\
-    \ import client\nnova = client.Client(\"2\", username, password, project_name,\
-    \ auth_url)</p>\n<p>nova.servers.list()\nnova.flavors.list()\nnova.keypairs.list()\n\
-    nova.images.list()\nnova.security_groups.list()</p>\n<p>server_name = 'new instance'\n\
-    image = 'NeCTAR Ubuntu 14.04 (Trusty) amd64'\nflavor = 'm1.small'\nsecurity_groups\
-    \ = ['5c8c4dd0-db53-41e3-a53b-9730c764149c', '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff']\n\
-    key_name = 'ming'</p>\n<p>nova.servers.create(server_name, image, flavor, security_groups=security_groups,\
-    \ key_name=)</p>\n<p>``` </p>\n<p>You can find more information about nova python\
-    \ API from this <a href=\"http://docs.openstack.org/developer/python-novaclient/api.html\"\
+    \ import client</p>\n<p>nova = client.Client(\"2\", username, password, project_name,\
+    \ auth_url)</p>\n<p>nova.servers.list()</p>\n<p>nova.flavors.list()</p>\n<p>nova.keypairs.list()</p>\n\
+    <p>nova.images.list()</p>\n<p>nova.security_groups.list()</p>\n<p>server_name\
+    \ = 'new instance'</p>\n<p>image = 'NeCTAR Ubuntu 14.04 (Trusty) amd64'</p>\n\
+    <p>flavor = 'm1.small'</p>\n<p>security_groups = ['5c8c4dd0-db53-41e3-a53b-9730c764149c',\
+    \ '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff']</p>\n<p>key_name = 'ming'</p>\n<p>nova.servers.create(server_name,\
+    \ image, flavor, security_groups=security_groups, key_name=)</p>\n<p>``` </p>\n\
+    <p>You can find more information about nova python API from this <a href=\"http://docs.openstack.org/developer/python-novaclient/api.html\"\
     >link</a></p>"
   parent: 39
-  sha1: d91876465942c513c8d419a5e797f61404ea91fb
+  sha1: 77c742b2e0fcbdcd108b8b5d0fa83abf9ecb6c44
   title: API
 65:
   freshdesk:
@@ -7254,52 +7251,52 @@
           \ the error message and generally it give\nyou very good hints about what\
           \ might be wrong. \n For example, if you execute nova service-list on the\
           \ command line without\nauthentication, the error message might look like\
-          \ this: \n ```\nERROR: You must provide a username via either --os-username\
-          \ or env[OS_USERNAME] \n ``` \n The above message indicates you need to\
-          \ be authenticated before you can use the\nAPI. The authentication requires\
-          \ some environment variables to be set. To set\nthese environment variables\
-          \ you can either source the script file obtained from\nNeCTAR Dashboard\
-          \ or you can override it by using command line options. \n You can always\
-          \ execute man nova`` or simplynova``` to get more help\ninformation and\
-          \ to learn each supported options. \n If you find a useful command, you\
-          \ can also execute nova help command,\nthis will give your more specific\
-          \ help for the command. \n Debugging Nova Python API \n Debugging Nova Python\
-          \ API takes more effects as it depends on how familiar\nwith Python programming\
-          \ and what development environment you use. \n The below provides some basic\
-          \ information about how you debug the Nova Python\nAPI. \n You can debug\
-          \ your python code using Python debugger called pdb and you can find\nmore\
-          \ information here. \n The below code uses pdb debuuger to debug a python\
-          \ file contains clinet python\nAPI code. \n pdb file_name.py \n Once you\
-          \ executed the above code, the command line will be stopped on the first\n\
-          line of code and you can use some commands to control the execution flow.\
-          \ \n Some useful ones to use are: \n \n \n b: set a breakpoint \n \n \n\
-          \ c: continue debugging until you hit a breakpoint \n \n \n s: step through\
-          \ the code \n \n \n n: to go to next line of code \n \n \n l: list source\
-          \ code for the current file \n \n \n u : navigate up a stack frame \n \n\
-          \ \n d: navigate down a stack frame \n \n \n p: to print the value of an\
-          \ expression in the current context \n \n \n Debugging Via HTTP \n The both\
-          \ of command line API and python API are restful web service client.\nThus\
-          \ the requests are all made by using HTTP and you can always refer to\n\
-          OpenStack Service End for further references about what should be\npresented\
-          \ in the HTTP requests. The Nova API uses requests library\nto send and\
-          \ receive HTTP requests/responses. \n For command line client, you can add\
-          \ --debug option to print out HTTP request\nheader and HTTP response header,\
-          \ which give you a lot of more insight\ninformation. To verify parameters\
-          \ in the request header, you can refer to\nOpenStack service API to see\
-          \ what are expected. \n To enable debugging information on the standard\
-          \ out for Python API, you can add\nthe below code: \n ```\nimport logging\n\
-          logger = logging.getLogger(\"novaclient\")\nlogging.basicConfig(level=logging.DEBUG)\
-          \ \n ``` \n The will print the same output as adding --debug option for\
-          \ command line API. \n Debugging via Source Code \n If the above techniques\
-          \ are still not helpful, you can always look at the source\ncode to find\
-          \ the problems. \n The below source file structure is based on the installation\
-          \ in Ubuntu. \n The command line nova command is located in '/usr/bin/nova'.\
-          \ By looking at this\nfile, you should get a idea of how the various options\
-          \ are interpreted. This file\nacts as an interface for Python API. \n The\
-          \ Python API files are located under\n'/usr/lib/python2.7/dist-packages/novaclient'\
-          \ and the most important file to look\nat is 'client.py'. This file does\
-          \ all the request preparation, sending request and\nreceiving response.\
-          \ It is also used by the command line Nova client.  "
+          \ this: \n ERROR: You must provide a username via either --os-username or\
+          \ env[OS_USERNAME] \n The above message indicates you need to be authenticated\
+          \ before you can use the\nAPI. The authentication requires some environment\
+          \ variables to be set. To set\nthese environment variables you can either\
+          \ source the script file obtained from\nNeCTAR Dashboard or you can override\
+          \ it by using command line options. \n You can always execute man nova or\
+          \ simply nova to get more help\ninformation and to learn each supported\
+          \ options. \n If you find a useful command, you can also execute nova help\
+          \ command,\nthis will give your more specific help for the command. \n Debugging\
+          \ Nova Python API \n Debugging Nova Python API takes more effects as it\
+          \ depends on how familiar\nwith Python programming and what development\
+          \ environment you use. \n The below provides some basic information about\
+          \ how you debug the Nova Python\nAPI. \n You can debug your python code\
+          \ using Python debugger called pdb and you can find\nmore information here.\
+          \ \n The below code uses pdb debuuger to debug a python file contains clinet\
+          \ python\nAPI code. \n pdb file_name.py \n Once you executed the above code,\
+          \ the command line will be stopped on the first\nline of code and you can\
+          \ use some commands to control the execution flow. \n Some useful ones to\
+          \ use are: \n \n \n b: set a breakpoint \n \n \n c: continue debugging until\
+          \ you hit a breakpoint \n \n \n s: step through the code \n \n \n n: to\
+          \ go to next line of code \n \n \n l: list source code for the current file\
+          \ \n \n \n u : navigate up a stack frame \n \n \n d: navigate down a stack\
+          \ frame \n \n \n p: to print the value of an expression in the current context\
+          \ \n \n \n Debugging Via HTTP \n The both of command line API and python\
+          \ API are restful web service client.\nThus the requests are all made by\
+          \ using HTTP and you can always refer to\nOpenStack Service End for further\
+          \ references about what should be\npresented in the HTTP requests. The Nova\
+          \ API uses requests library\nto send and receive HTTP requests/responses.\
+          \ \n For command line client, you can add --debug option to print out HTTP\
+          \ request\nheader and HTTP response header, which give you a lot of more\
+          \ insight\ninformation. To verify parameters in the request header, you\
+          \ can refer to\nOpenStack service API to see what are expected. \n To enable\
+          \ debugging information on the standard out for Python API, you can add\n\
+          the below code: \n ```\nimport logging \n logger = logging.getLogger(\"\
+          novaclient\") \n logging.basicConfig(level=logging.DEBUG)\n``` \n The will\
+          \ print the same output as adding --debug option for command line API. \n\
+          \ Debugging via Source Code \n If the above techniques are still not helpful,\
+          \ you can always look at the source\ncode to find the problems. \n The below\
+          \ source file structure is based on the installation in Ubuntu. \n The command\
+          \ line nova command is located in '/usr/bin/nova'. By looking at this\n\
+          file, you should get a idea of how the various options are interpreted.\
+          \ This file\nacts as an interface for Python API. \n The Python API files\
+          \ are located under\n'/usr/lib/python2.7/dist-packages/novaclient' and the\
+          \ most important file to look\nat is 'client.py'. This file does all the\
+          \ request preparation, sending request and\nreceiving response. It is also\
+          \ used by the command line Nova client.  "
         description: '<h2>Debugging Nova Command line Client</h2>
 
           <p>The below assumes you have installed Nova command client in a Linux
@@ -7323,11 +7320,8 @@
 
           authentication, the error message might look like this:</p>
 
-          <p>```
-
-          ERROR: You must provide a username via either --os-username or env[OS_USERNAME]</p>
-
-          <p>```</p>
+          <p><code>ERROR: You must provide a username via either --os-username or
+          env[OS_USERNAME]</code></p>
 
           <p>The above message indicates you need to be authenticated before you can
           use the
@@ -7341,8 +7335,8 @@
           NeCTAR <a href="https://dashboard.rc.nectar.org.au">Dashboard</a> or you
           can override it by using command line options.</p>
 
-          <p>You can always execute <code>man nova`` or simply</code>nova``` to get
-          more help
+          <p>You can always execute <code>man nova</code> or simply <code>nova</code>
+          to get more help
 
           information and to learn each supported options.</p>
 
@@ -7463,13 +7457,13 @@
 
           <p>```
 
-          import logging
+          import logging</p>
 
-          logger = logging.getLogger("novaclient")
+          <p>logger = logging.getLogger("novaclient")</p>
 
-          logging.basicConfig(level=logging.DEBUG)</p>
+          <p>logging.basicConfig(level=logging.DEBUG)
 
-          <p>```</p>
+          ```</p>
 
           <p>The will print the same output as adding --debug option for command line
           API.</p>
@@ -7514,13 +7508,13 @@
           updated_at: '2015-09-03T01:27:59-04:00'
           visibility: 1
         folder_id: 6000190145
-        hits: 2
+        hits: 3
         id: 6000075752
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-19T04:31:40-04:00'
+        modified_at: '2015-10-20T21:04:27-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000075752
@@ -7533,7 +7527,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Trouble Shooting
-        updated_at: '2015-10-19T04:31:40-04:00'
+        updated_at: '2015-10-20T21:04:27-04:00'
         user_id: 6002464727
   html: '<h2>Debugging Nova Command line Client</h2>
 
@@ -7558,11 +7552,7 @@
 
     authentication, the error message might look like this:</p>
 
-    <p>```
-
-    ERROR: You must provide a username via either --os-username or env[OS_USERNAME]</p>
-
-    <p>```</p>
+    <p><code>ERROR: You must provide a username via either --os-username or env[OS_USERNAME]</code></p>
 
     <p>The above message indicates you need to be authenticated before you can use
     the
@@ -7574,8 +7564,8 @@
     NeCTAR <a href="https://dashboard.rc.nectar.org.au">Dashboard</a> or you can override
     it by using command line options.</p>
 
-    <p>You can always execute <code>man nova`` or simply</code>nova``` to get more
-    help
+    <p>You can always execute <code>man nova</code> or simply <code>nova</code> to
+    get more help
 
     information and to learn each supported options.</p>
 
@@ -7692,13 +7682,13 @@
 
     <p>```
 
-    import logging
+    import logging</p>
 
-    logger = logging.getLogger("novaclient")
+    <p>logger = logging.getLogger("novaclient")</p>
 
-    logging.basicConfig(level=logging.DEBUG)</p>
+    <p>logging.basicConfig(level=logging.DEBUG)
 
-    <p>```</p>
+    ```</p>
 
     <p>The will print the same output as adding --debug option for command line API.</p>
 
@@ -7727,7 +7717,7 @@
 
     receiving response. It is also used by the command line Nova client. </p>'
   parent: 39
-  sha1: 44f0ca7866a434cf7b3dbd88e8e99d9fd5c0b9a5
+  sha1: e94896e209aca1f7e1b2320c3c947e72d0503a15
   title: Trouble Shooting
 66:
   freshdesk:
