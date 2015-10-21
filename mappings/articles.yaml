@@ -2734,8 +2734,7 @@
           \ configuration</p>\n<blockquote>\n<p>Security Note</p>\n<p>Using the Research\
           \ Cloud creates a publicly accessible server (depending on\nSecurity Groups)\
           \ and therefore that machine can be exploited. All users must\nread &amp;\
-          \ follow our <a href=\"../NeCTAR%20Fundamentals/Security%20Guidelines.md\"\
-          >Security Guidelines</a>.</p>\n</blockquote>"
+          \ follow our Security Guidelines.</p>\n</blockquote>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:09-04:00'
@@ -2750,13 +2749,13 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190155
-        hits: 5
+        hits: 6
         id: 6000055387
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-16T00:56:02-04:00'
+        modified_at: '2015-10-20T21:03:52-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055387
@@ -2769,7 +2768,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Security Groups
-        updated_at: '2015-10-16T00:56:02-04:00'
+        updated_at: '2015-10-20T21:03:52-04:00'
         user_id: 6002464727
   html: "<p>Incoming network access to your machines is usually required. Security\
     \ Groups\nare how to add network access. If you can't reach your instance by SSH\
@@ -2812,10 +2811,9 @@
     OpenStack configuration</p>\n<blockquote>\n<p>Security Note</p>\n<p>Using the\
     \ Research Cloud creates a publicly accessible server (depending on\nSecurity\
     \ Groups) and therefore that machine can be exploited. All users must\nread &amp;\
-    \ follow our <a href=\"../NeCTAR%20Fundamentals/Security%20Guidelines.md\">Security\
-    \ Guidelines</a>.</p>\n</blockquote>"
+    \ follow our Security Guidelines.</p>\n</blockquote>"
   parent: 26
-  sha1: ad8f96847d5620f67f64ba8b5c18efff2481fd67
+  sha1: 1e7bfd723d5df5568137a1694554ae952820aa86
   title: Security Groups
 52:
   freshdesk:
