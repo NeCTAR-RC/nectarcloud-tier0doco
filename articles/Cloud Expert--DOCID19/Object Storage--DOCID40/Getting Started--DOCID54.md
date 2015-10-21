@@ -4,31 +4,37 @@ You can use pip to install the python-swift API and the swfit command line API.
 
 See below for the instructions:
 
-OS X
+### OS X
 
 ```
 sudo easy_install pip
+
 sudo pip install --upgrade setuptools
+
 sudo pip install python-swiftclient
 ```
 
-Ubuntu
+### Ubuntu
 
 ```
 sudo aptitude install python-pip
+
 sudo pip install python-swiftclient
 ```
 
-RHEL, CentOS, or Fedora
+### RHEL, CentOS, or Fedora
 
 ```
 sudo yum install python-setuptools
+
 sudo easy_install pip
+
 sudo pip install --upgrade setuptools
+
 sudo pip install python-swiftclient
 ```
 
-Windows
+### Windows
 
 See [pip windows][pip windows] for instructions on installing pip for Windows.
 
@@ -60,7 +66,6 @@ get username/password and get authenticated.
 
 - Click 'Reset Password' and save the password appeared on the screen
 
-
 API normally requires 4 environment variables to be set for authentication:
 
 - auth URL
@@ -78,13 +83,12 @@ OS_TENANT_ID=sdfsdfsfwrwewer
 OS_USERNAME=clouduser@example.edu.au
 OS_PASSWORD=XXXXXX
 
-
 ### Authentication for Command Line API
 
 The below instruction assumes you use Linux operating system.
 
 Once you have obtained the authentication script and password, you can execute
-the script suing ``` source file-name.sh ```. and type in the password you
+the script suing ```source file-name.sh```. and type in the password you
 obtained from Dashboard.
 
 ### Authentication for python swift API
@@ -108,9 +112,9 @@ to get started.
 
 ### Command Line API
 
-you can use swift command to manage your objects storage, you can type:
+You can use swift command to manage your objects storage, you can type:
 
-``` swift --help ``` to find out all the available options.
+```swift --help``` to find out all the available options.
 
 ### Python Swift API
 
@@ -119,18 +123,15 @@ You can also use Python Swift API in your python code to access object storage.
 See below for a sample code:
 
 ```
-
 from swiftclient import client
 
-swift = client.Connection(authurl=url, user=username, key=password,
+swift = client.Connection(authurl=url, user=username, key=password, 
 tenant_name=project_name, auth_version='2')
 
 container_name=""
+
 swift.get_container(container_name)
-
 ```
-
 You can find more information in the Object Storage API section. 
-
 
 [dashboard]: https://dashboard.rc.nectar.org.au
