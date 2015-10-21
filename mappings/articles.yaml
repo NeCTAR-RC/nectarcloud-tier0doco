@@ -7284,14 +7284,14 @@
           \ insight\ninformation. To verify parameters in the request header, you\
           \ can refer to\nOpenStack service API to see what are expected. \n To enable\
           \ debugging information on the standard out for Python API, you can add\n\
-          the below code: \n ```\nimport logging \n logger = logging.getLogger(\"\
-          novaclient\") \n logging.basicConfig(level=logging.DEBUG)\n``` \n The will\
-          \ print the same output as adding --debug option for command line API. \n\
-          \ Debugging via Source Code \n If the above techniques are still not helpful,\
-          \ you can always look at the source\ncode to find the problems. \n The below\
-          \ source file structure is based on the installation in Ubuntu. \n The command\
-          \ line nova command is located in '/usr/bin/nova'. By looking at this\n\
-          file, you should get a idea of how the various options are interpreted.\
+          the below code: \n ``` \n import logging \n logger = logging.getLogger(\"\
+          novaclient\") \n logging.basicConfig(level=logging.DEBUG) \n ``` \n The\
+          \ will print the same output as adding --debug option for command line API.\
+          \ \n Debugging via Source Code \n If the above techniques are still not\
+          \ helpful, you can always look at the source\ncode to find the problems.\
+          \ \n The below source file structure is based on the installation in Ubuntu.\
+          \ \n The command line nova command is located in '/usr/bin/nova'. By looking\
+          \ at this\nfile, you should get a idea of how the various options are interpreted.\
           \ This file\nacts as an interface for Python API. \n The Python API files\
           \ are located under\n'/usr/lib/python2.7/dist-packages/novaclient' and the\
           \ most important file to look\nat is 'client.py'. This file does all the\
@@ -7455,15 +7455,15 @@
 
           the below code:</p>
 
-          <p>```
+          <p>```</p>
 
-          import logging</p>
+          <p>import logging</p>
 
           <p>logger = logging.getLogger("novaclient")</p>
 
-          <p>logging.basicConfig(level=logging.DEBUG)
+          <p>logging.basicConfig(level=logging.DEBUG)</p>
 
-          ```</p>
+          <p>```</p>
 
           <p>The will print the same output as adding --debug option for command line
           API.</p>
@@ -7508,13 +7508,13 @@
           updated_at: '2015-09-03T01:27:59-04:00'
           visibility: 1
         folder_id: 6000190145
-        hits: 3
+        hits: 4
         id: 6000075752
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-20T21:04:27-04:00'
+        modified_at: '2015-10-20T23:06:47-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000075752
@@ -7527,7 +7527,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Trouble Shooting
-        updated_at: '2015-10-20T21:04:27-04:00'
+        updated_at: '2015-10-20T23:06:47-04:00'
         user_id: 6002464727
   html: '<h2>Debugging Nova Command line Client</h2>
 
@@ -7680,15 +7680,15 @@
 
     the below code:</p>
 
-    <p>```
+    <p>```</p>
 
-    import logging</p>
+    <p>import logging</p>
 
     <p>logger = logging.getLogger("novaclient")</p>
 
-    <p>logging.basicConfig(level=logging.DEBUG)
+    <p>logging.basicConfig(level=logging.DEBUG)</p>
 
-    ```</p>
+    <p>```</p>
 
     <p>The will print the same output as adding --debug option for command line API.</p>
 
@@ -7717,7 +7717,7 @@
 
     receiving response. It is also used by the command line Nova client. </p>'
   parent: 39
-  sha1: e94896e209aca1f7e1b2320c3c947e72d0503a15
+  sha1: 4cb33573c76dfa54d59428c5902f9521778a4789
   title: Trouble Shooting
 66:
   freshdesk:
