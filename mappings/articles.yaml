@@ -10173,12 +10173,12 @@
         delta: true
         desc_un_html: " Security Assessment \n After you have applied all your security\
           \ steps, you can use some tools to test\nwhether there are still potential\
-          \ security risks within the system. The below\nprovides some basic information\
-          \ about how to use these tools. The tools used\nbelow are just common tools,\
-          \ you will find there are more tools available to do\nthe security assessment.\
-          \ \n System log files \n Linux system comes with log files to records all\
-          \ system activities under /var/log.\nYou can exam auth.log file for checking\
-          \ ssh logins and exam syslog file for any\nsystem wide activities.  \n OpenVAS\
+          \ security risks within the system. Listed below\nis some basic information\
+          \ about how to use some of the common tools. You will \nfind there are more\
+          \ tools available to perform security assessments. \n System log files \n\
+          \ Linux systems come with log files to record all system activities under\
+          \ '/var/log'.\nYou can examine the 'auth.log' file to check SSH logins,\
+          \ and examine the 'syslog' file \nfor any system wide activities.  \n OpenVAS\
           \ \n Open Vulnerability Assessment System (OpenVAS) is a set of tools and\
           \ services\nthat can be used to scan for vulnerabilities and vulnerability\
           \ management.\nOpenVAS uses a security scanner that makes use of over 33\
@@ -10193,87 +10193,38 @@
           \ point for making a security\npolicy and restricting unused services. \n\
           \ To install Nmap, run the yum install nmap or apt-get install nmap\ncommand\
           \ as the root user. \n To scan a host, you can use nmap <hostname> \n The\
-          \ results return a list ports of listening or waiting services and this\
+          \ results return a list ports of listening or waiting services, and this\
           \ can\nhelp to close unnecessary or unused services.  \n To find out more\
           \ information, you can see the official homepage at the following\nURL:\
           \ http://www.insecure.org/ "
-        description: '<h2>Security Assessment</h2>
-
-          <p>After you have applied all your security steps, you can use some tools
-          to test
-
-          whether there are still potential security risks within the system. The
-          below
-
-          provides some basic information about how to use these tools. The tools
-          used
-
-          below are just common tools, you will find there are more tools available
-          to do
-
-          the security assessment.</p>
-
-          <h2>System log files</h2>
-
-          <p>Linux system comes with log files to records all system activities under
-          /var/log.
-
-          You can exam auth.log file for checking ssh logins and exam syslog file
-          for any
-
-          system wide activities. </p>
-
-          <h2>OpenVAS</h2>
-
-          <p>Open Vulnerability Assessment System (OpenVAS) is a set of tools and
-          services
-
-          that can be used to scan for vulnerabilities and vulnerability management.
-
-          OpenVAS uses a security scanner that makes use of over 33 thousand daily-updated
-
-          tests to conduct the security test. You can download and install the software
-          from
-
-          its <a href="http://www.openvas.org/">website</a> and also if you want to
-          learn more about it, you can look
-
-          at its documentation <a href="http://docs.greenbone.net/index.html#user_documentation">link</a>.</p>
-
-          <h2>Nmap</h2>
-
-          <p>Nmap is a tool that you can use to determine the layout of a network
-          and it is
-
-          very useful to collect information about the system for security use. You
-          can run <code>man nmap</code>
-
-          to get more detailed descriptions of its options and usage.
-
-          You can also find out open ports on the system and to check whether any
-          ports
-
-          have potential security risks. It is a good starting point for making a
-          security
-
-          policy and restricting unused services.</p>
-
-          <p>To install Nmap, run the <code>yum install nmap</code> or <code>apt-get
-          install nmap</code>
-
-          command as the root user.</p>
-
-          <p>To scan a host, you can use <code>nmap &lt;hostname&gt;</code></p>
-
-          <p>The results return a list ports of listening or waiting services and
-          this can
-
-          help to close unnecessary or unused services. </p>
-
-          <p>To find out more information, you can see the official homepage at the
-          following
-
-          URL: <a href="http://www.insecure.org/">http://www.insecure.org/</a></p>'
+        description: "<h2>Security Assessment</h2>\n<p>After you have applied all\
+          \ your security steps, you can use some tools to test\nwhether there are\
+          \ still potential security risks within the system. Listed below\nis some\
+          \ basic information about how to use some of the common tools. You will\
+          \ \nfind there are more tools available to perform security assessments.</p>\n\
+          <h2>System log files</h2>\n<p>Linux systems come with log files to record\
+          \ all system activities under '/var/log'.\nYou can examine the 'auth.log'\
+          \ file to check SSH logins, and examine the 'syslog' file \nfor any system\
+          \ wide activities. </p>\n<h2>OpenVAS</h2>\n<p>Open Vulnerability Assessment\
+          \ System (OpenVAS) is a set of tools and services\nthat can be used to scan\
+          \ for vulnerabilities and vulnerability management.\nOpenVAS uses a security\
+          \ scanner that makes use of over 33 thousand daily-updated\ntests to conduct\
+          \ the security test. You can download and install the software from\nits\
+          \ <a href=\"http://www.openvas.org/\">website</a> and also if you want to\
+          \ learn more about it, you can look\nat its documentation <a href=\"http://docs.greenbone.net/index.html#user_documentation\"\
+          >link</a>.</p>\n<h2>Nmap</h2>\n<p>Nmap is a tool that you can use to determine\
+          \ the layout of a network and it is\nvery useful to collect information\
+          \ about the system for security use. You can run <code>man nmap</code>\n\
+          to get more detailed descriptions of its options and usage.\nYou can also\
+          \ find out open ports on the system and to check whether any ports\nhave\
+          \ potential security risks. It is a good starting point for making a security\n\
+          policy and restricting unused services.</p>\n<p>To install Nmap, run the\
+          \ <code>yum install nmap</code> or <code>apt-get install nmap</code>\ncommand\
+          \ as the root user.</p>\n<p>To scan a host, you can use <code>nmap &lt;hostname&gt;</code></p>\n\
+          <p>The results return a list ports of listening or waiting services, and\
+          \ this can\nhelp to close unnecessary or unused services. </p>\n<p>To find\
+          \ out more information, you can see the official homepage at the following\n\
+          URL: <a href=\"http://www.insecure.org/\">http://www.insecure.org/</a></p>"
         folder:
           category_id: 6000122279
           created_at: '2015-10-01T22:28:23-04:00'
@@ -10284,17 +10235,17 @@
           language_id: 6
           name: Security Guidelines
           parent_id: 6000203455
-          position: 6
+          position: 5
           updated_at: '2015-10-01T22:28:23-04:00'
           visibility: 1
         folder_id: 6000203455
-        hits: 0
+        hits: 1
         id: 6000077798
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-14T07:19:28-04:00'
+        modified_at: '2015-10-20T21:03:16-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000077798
@@ -10307,76 +10258,36 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Security Assessment
-        updated_at: '2015-10-14T07:19:28-04:00'
+        updated_at: '2015-10-20T21:03:16-04:00'
         user_id: 6002464727
-  html: '<h2>Security Assessment</h2>
-
-    <p>After you have applied all your security steps, you can use some tools to test
-
-    whether there are still potential security risks within the system. The below
-
-    provides some basic information about how to use these tools. The tools used
-
-    below are just common tools, you will find there are more tools available to do
-
-    the security assessment.</p>
-
-    <h2>System log files</h2>
-
-    <p>Linux system comes with log files to records all system activities under /var/log.
-
-    You can exam auth.log file for checking ssh logins and exam syslog file for any
-
-    system wide activities. </p>
-
-    <h2>OpenVAS</h2>
-
-    <p>Open Vulnerability Assessment System (OpenVAS) is a set of tools and services
-
-    that can be used to scan for vulnerabilities and vulnerability management.
-
-    OpenVAS uses a security scanner that makes use of over 33 thousand daily-updated
-
-    tests to conduct the security test. You can download and install the software
-    from
-
-    its <a href="http://www.openvas.org/">website</a> and also if you want to learn
-    more about it, you can look
-
-    at its documentation <a href="http://docs.greenbone.net/index.html#user_documentation">link</a>.</p>
-
-    <h2>Nmap</h2>
-
-    <p>Nmap is a tool that you can use to determine the layout of a network and it
-    is
-
-    very useful to collect information about the system for security use. You can
-    run <code>man nmap</code>
-
-    to get more detailed descriptions of its options and usage.
-
-    You can also find out open ports on the system and to check whether any ports
-
-    have potential security risks. It is a good starting point for making a security
-
-    policy and restricting unused services.</p>
-
-    <p>To install Nmap, run the <code>yum install nmap</code> or <code>apt-get install
-    nmap</code>
-
-    command as the root user.</p>
-
-    <p>To scan a host, you can use <code>nmap &lt;hostname&gt;</code></p>
-
-    <p>The results return a list ports of listening or waiting services and this can
-
-    help to close unnecessary or unused services. </p>
-
-    <p>To find out more information, you can see the official homepage at the following
-
-    URL: <a href="http://www.insecure.org/">http://www.insecure.org/</a></p>'
+  html: "<h2>Security Assessment</h2>\n<p>After you have applied all your security\
+    \ steps, you can use some tools to test\nwhether there are still potential security\
+    \ risks within the system. Listed below\nis some basic information about how to\
+    \ use some of the common tools. You will \nfind there are more tools available\
+    \ to perform security assessments.</p>\n<h2>System log files</h2>\n<p>Linux systems\
+    \ come with log files to record all system activities under '/var/log'.\nYou can\
+    \ examine the 'auth.log' file to check SSH logins, and examine the 'syslog' file\
+    \ \nfor any system wide activities. </p>\n<h2>OpenVAS</h2>\n<p>Open Vulnerability\
+    \ Assessment System (OpenVAS) is a set of tools and services\nthat can be used\
+    \ to scan for vulnerabilities and vulnerability management.\nOpenVAS uses a security\
+    \ scanner that makes use of over 33 thousand daily-updated\ntests to conduct the\
+    \ security test. You can download and install the software from\nits <a href=\"\
+    http://www.openvas.org/\">website</a> and also if you want to learn more about\
+    \ it, you can look\nat its documentation <a href=\"http://docs.greenbone.net/index.html#user_documentation\"\
+    >link</a>.</p>\n<h2>Nmap</h2>\n<p>Nmap is a tool that you can use to determine\
+    \ the layout of a network and it is\nvery useful to collect information about\
+    \ the system for security use. You can run <code>man nmap</code>\nto get more\
+    \ detailed descriptions of its options and usage.\nYou can also find out open\
+    \ ports on the system and to check whether any ports\nhave potential security\
+    \ risks. It is a good starting point for making a security\npolicy and restricting\
+    \ unused services.</p>\n<p>To install Nmap, run the <code>yum install nmap</code>\
+    \ or <code>apt-get install nmap</code>\ncommand as the root user.</p>\n<p>To scan\
+    \ a host, you can use <code>nmap &lt;hostname&gt;</code></p>\n<p>The results return\
+    \ a list ports of listening or waiting services, and this can\nhelp to close unnecessary\
+    \ or unused services. </p>\n<p>To find out more information, you can see the official\
+    \ homepage at the following\nURL: <a href=\"http://www.insecure.org/\">http://www.insecure.org/</a></p>"
   parent: 43
-  sha1: 6c51b368dc674664f9f41472da80a2bda244f563
+  sha1: 63c25723ed3e8e74971a1f4a7b9b7c4a15faca4e
   title: Security Assessment
 78:
   freshdesk:
@@ -10388,109 +10299,111 @@
         datetime_01: null
         delta: true
         desc_un_html: " Security API \n The NeCTAR Cloud doesn't provide a specific\
-          \ API for security purpose. The only\nsecurity relevant operation is to\
+          \ API for security purposes. The only\nsecurity relevant operation is to\
           \ manage security groups through the Nova API.\nIf you want to know the\
-          \ Nova API, You can find the related information from the\narticles in Instance\
-          \ Management section. \n This article describes some techniques to help\
-          \ you to secure a Linux based\nvirtual machine in NeCTAR cloud. \n As security\
-          \ is really large topic, the techniques showed here only provides some\n\
-          basic introduction. You can always go to Internet and find more useful information\n\
-          about Security. \n The below assumes your operating system is debian/ubuntu.\
-          \ \n Securing ssh \n You need to encourage all the users on your system\
-          \ to use ssh certificate\nauthentication and disable password login. In\
-          \ addition, you need to avoid logging\ninto the system using ssh as root\
-          \ and use alternative methods to become root,\nsuch as su or sudo. \n To\
-          \ change the ssh configuration, you can edit the sshd_config file, in /etc/ssh.\n\
-          The below gives basic description about some important configuration items:\
-          \ \n \n \n PermitRootLogin no\n You need to set this to no to avoid root\
-          \ access via ssh \n \n \n Port 22\n For better security, you can change\
-          \ the ssh port to other port number \n \n \n PermitEmptyPasswords no\n \
-          \ This should be always no, for non empty password access \n \n \n AllowUsers\n\
-          \  This directive allows only certain users to have access via ssh to this\
-          \ machine. \n \n \n PasswordAuthentication No\n  You should set this to\
-          \ no to disable user logging using password \n \n \n After you have changed\
-          \ the /etc/ssh/sshd_config file, you can execute sudo service ssh restart\n\
-          to apply the new changes. \n If you are using an SSH client to access your\
-          \ Virtual Machine, you need to make\nsure both SSH server and client are\
-          \ using the same version of protocols. \n You can also restrict access to\
-          \ file transfer only if you want to allow accounts\non your Virtual Machine\
-          \ to transfer files. You can do it by giving users a\nrestricted shell such\
-          \ as scpoly or rssh. These shells restrict the commands\navailable to the\
-          \ users to execute. You can change an account's shell by editing\n/etc/passwd\
-          \ file. \n Securing Apache \n If you don't want your Apache web service\
-          \ available to public, you can use the\nListen or BindAddress directives\
-          \ in /etc/apache2/apache2.conf. \n Using Listen:\n    Listen 127.0.0.1:80\n\
-          Using BindAddress:\n    BindAddress 127.0.0.1 \n Then you can restart your\
-          \ apache service with sudo service apache2 restart \n The default Apache\
-          \ installation in Debian permits users to publish content\nunder the $HOME/public_html.\
-          \ This content can be retrieved remotely using an\nURL such as: http://your_apache_server/~user.\
-          \ \n You can restrict the default configuration by editing /etc/apache2/mods-enabled/userdir.conf\
+          \ Nova API, You can find the related information from the\narticles in the\
+          \ 'Instance Management' section. \n This article describes some techniques\
+          \ to help you to secure a Linux based\nvirtual machine in the NeCTAR cloud.\
+          \ \n As security is a very broad topic, the techniques showed here only\
+          \ provides a\nbasic introduction. You can always go to Internet and find\
+          \ more useful information\nabout security. \n The instructions below assume\
+          \ your operating system is debian/ubuntu. \n Securing SSH \n You need to\
+          \ encourage all the users on your system to use SSH certificate\nauthentication\
+          \ and disable password login. In addition, you need to avoid logging\ninto\
+          \ the system using SSH as root and use alternative methods to become root,\n\
+          such as su or sudo. \n To change the SSH configuration, you can edit the\
+          \ configuration file on the virtual\nmachine, in '/etc/ssh/sshd_config'.\
+          \ \n A basic description of some important configuration items: \n \n \n\
+          \ PermitRootLogin no\n You need to set this to 'no' to avoid root access\
+          \ via SSH \n \n \n Port 22\n For better security, you can change the SSH\
+          \ port to other port number \n \n \n PermitEmptyPasswords no\n  This should\
+          \ be always 'no', for non-empty password access \n \n \n AllowUsers\n  This\
+          \ directive allows only certain users to have access via SSH to this machine.\
+          \ \n \n \n PasswordAuthentication No\n  You should set this to 'no' to disable\
+          \ user loggin using password \n \n \n After you have changed the /etc/ssh/sshd_config\
+          \ file, you can execute sudo service ssh restart\nto apply the new changes.\
+          \ \n If you are using an SSH client to access your Virtual Machine, you\
+          \ need to make\nsure both SSH server and client are using the same version\
+          \ of protocols. \n You can also restrict access to file transfer only if\
+          \ you want to allow accounts\non your Virtual Machine to transfer files.\
+          \ You can do it by giving users a\nrestricted shell such as scpoly or rssh.\
+          \ These shells restrict the commands\navailable to the users to execute.\
+          \ You can change an account's shell by editing\n'/etc/passwd' file. \n Securing\
+          \ Apache \n If you don't want your Apache web service available to public,\
+          \ you can use the\nListen or BindAddress directives in '/etc/apache2/apache2.conf'.\
+          \ \n Using Listen:\n    Listen 127.0.0.1:80\nUsing BindAddress:\n    BindAddress\
+          \ 127.0.0.1 \n Then you can restart your apache service with sudo service\
+          \ apache2 restart \n The default Apache installation in Debian permits users\
+          \ to publish content\nunder the '$HOME/public_html'. This content can be\
+          \ retrieved remotely using an\nURL such as: http://your_apache_server/~user.\
+          \ \n You can restrict the default configuration by editing '/etc/apache2/mods-enabled/userdir.conf'\
           \ \n You can also make sure the permission of log files can only be read/write\
-          \ by\nrequired user and groups. The default permission for the log files\
+          \ by the\nrequired user and groups. The default permission for the log files\
           \ may be readable\nby anyone. \n By default, Apache web files are located\
-          \ under /var/www. The default file provides\nsome hints on the system like\
-          \ what is the operating system. You should substitute\nthe default web pages\
-          \ with your own. \n to further harder the Apache security, you can run Apache\
-          \ by chroot. See this\ninstruction to set up Apache. \n Keep System Update\
-          \ to Date \n In debian/ubuntu, you run sudo apt-get update regularly to\
-          \ keep system\nsecurity patch update to date. \n Setup Local Firewall \n\
-          \ A local firewall can also be installed with filtering rules to protect\
-          \ access to\nthe system. You can use iptable tools to create rules to filter\
-          \ network traffic.\nIt is advised to use Security Group to manage which\
-          \ ports to open as it is simple\nto do. The below only provides basic introduction\
-          \ to IPtables, for more\ninformation, please refer to IPtables MAN page.\
-          \ \n To list all current rules, execute:  sudo iptables --list \n By default,\
-          \ the IPtables defines 3 chains. The INPUT Chain is for incoming traffic\n\
-          , the Forward Chain is for forwarded traffic and the OUTPUT Chain is for\
-          \ outgoing\ntraffic. Which chains you need to add rules depends on what\
-          \ traffic you want to\nfilter. \n IPtables also defines policies that defines\
-          \ actions for rules: \n \n \n Accept, accept traffic \n \n \n Reject, reject\
-          \ traffic by sending back an error packet \n \n \n Drop, reject traffic\
-          \ by dropping traffic \n \n \n The below shows an example how to enable\
-          \ SSH and HTTP/HTTPS traffic in IPtables. \n Firstly, you need to allow\
-          \ connections that are already connected to your server: \n sudo iptables\
-          \ - I INPUT 1 -p tcp --dport 22 -j ACCEPT \n Secondly, you need to allow\
-          \ SSH connections: \n sudo iptables -I INPUT 1 -p tcp --dport 22 -j ACCEPT\
-          \ \n Thirdly, you can allow HTTP/HTTPS traffic: \n sudo iptables -I INPUT\
-          \ 1 -p tcp -dport 80 -j ACCEPT\nsudo iptables -I INPUT 1 -p tcp --dport\
-          \ 443 -j ACCEPT \n Finally, you need to drop all other traffic. You need\
-          \ to make sure you have set\nto allow SSH connection, otherwise you will\
-          \ lose access to the Virtual Machine: \n ``` \n sudo iptables -P INPUT DROP\
-          \ \n ``` \n You can save your IPtables changes by (Ubuntu):  \n ```  \n\
-          \ iptables-save > /etc/iptables.rules \n ``` \n Install fail2ban \n The\
-          \ SSH daemon itself is a Linux service that exposed to the Internet and\
-          \ creates\na security risk for the system. fail2ban can mitigate this problem\
-          \ by creating\nrules that can automatically alter your your iptables firewall\
-          \ and ban\nunsuccessful login attempts based on a predefined number.  \n\
-          \ You can use the below commands to install fail2ban in Ubuntu: \n ``` \n\
-          \ sudo apt-get update\nsudo apt-get install fail2ban \n ``` \n To setup\
-          \ the fail2ban, please follow this instruction. \n Disable Unneeded Services\
-          \ \n Unneeded services are a potential security risk, so you can execute\
-          \ sudo service --status-all\nto list all available services.  You can exam\
-          \ the output carefully and disable\nany services not desired. "
+          \ under /'var/www'. The default file provides\nsome hints on the system\
+          \ like what is the operating system. You should substitute\nthe default\
+          \ web pages with your own. \n To further strengthen the Apache security,\
+          \ you can run Apache by chroot. See this\ninstruction to set up Apache.\
+          \ \n Keep System Update to Date \n In debian/ubuntu, you run sudo apt-get\
+          \ update regularly to keep system\nsecurity patch update to date. \n Setup\
+          \ Local Firewall \n A local firewall can also be installed with filtering\
+          \ rules to protect access to\nthe system. You can use IPtable tools to create\
+          \ rules to filter network traffic.\nIt is advised to use Security Group\
+          \ to manage which ports to open as it is simple\nto do. The below only provides\
+          \ basic introduction to IPtables, for more\ninformation, please refer to\
+          \ IPtables MAN page. \n To list all current rules, execute:  sudo iptables\
+          \ --list \n By default, the IPtables defines 3 chains. The INPUT Chain is\
+          \ for incoming traffic\n, the Forward Chain is for forwarded traffic and\
+          \ the OUTPUT Chain is for outgoing\ntraffic. Which chains you need to add\
+          \ rules depends on what traffic you want to\nfilter. \n IPtables also defines\
+          \ policies that defines actions for rules: \n \n \n Accept, accept traffic\
+          \ \n \n \n Reject, reject traffic by sending back an error packet \n \n\
+          \ \n Drop, reject traffic by dropping traffic \n \n \n The below shows an\
+          \ example how to enable SSH and HTTP/HTTPS traffic in IPtables. \n Firstly,\
+          \ you need to allow connections that are already connected to your server:\
+          \ \n sudo iptables - I INPUT 1 -p tcp --dport 22 -j ACCEPT \n Secondly,\
+          \ you need to allow SSH connections: \n sudo iptables -I INPUT 1 -p tcp\
+          \ --dport 22 -j ACCEPT \n Thirdly, you can allow HTTP/HTTPS traffic: \n\
+          \ sudo iptables -I INPUT 1 -p tcp -dport 80 -j ACCEPT\nsudo iptables -I\
+          \ INPUT 1 -p tcp --dport 443 -j ACCEPT \n Finally, you need to drop all\
+          \ other traffic. You need to make sure you have set\nto allow SSH connection,\
+          \ otherwise you will lose access to the Virtual Machine: \n ``` \n sudo\
+          \ iptables -P INPUT DROP \n ``` \n You can save your IPtables changes by\
+          \ (Ubuntu):  \n ```  \n iptables-save > /etc/iptables.rules \n ``` \n Install\
+          \ fail2ban \n The SSH daemon itself is a Linux service that exposed to the\
+          \ Internet and creates\na security risk for the system. fail2ban can mitigate\
+          \ this problem by creating\nrules that can automatically alter your your\
+          \ IPtables firewall and ban\nunsuccessful login attempts based on a predefined\
+          \ number.  \n You can use the below commands to install fail2ban in Ubuntu:\
+          \ \n ``` \n sudo apt-get update\nsudo apt-get install fail2ban \n ``` \n\
+          \ To setup the fail2ban, please follow this instruction. \n Disable Unneeded\
+          \ Services \n Unneeded services are a potential security risk, so you can\
+          \ execute sudo service --status-all\nto list all available services.  You\
+          \ can examine the output carefully and disable\nany services not desired. "
         description: "<h2>Security API</h2>\n<p>The NeCTAR Cloud doesn't provide a\
-          \ specific API for security purpose. The only\nsecurity relevant operation\
+          \ specific API for security purposes. The only\nsecurity relevant operation\
           \ is to manage security groups through the Nova API.\nIf you want to know\
           \ the Nova API, You can find the related information from the\narticles\
-          \ in Instance Management section.</p>\n<p>This article describes some techniques\
-          \ to help you to secure a Linux based\nvirtual machine in NeCTAR cloud.</p>\n\
-          <p>As security is really large topic, the techniques showed here only provides\
-          \ some\nbasic introduction. You can always go to Internet and find more\
-          \ useful information\nabout Security.</p>\n<p>The below assumes your operating\
-          \ system is debian/ubuntu.</p>\n<h2>Securing ssh</h2>\n<p>You need to encourage\
-          \ all the users on your system to use ssh certificate\nauthentication and\
-          \ disable password login. In addition, you need to avoid logging\ninto the\
-          \ system using ssh as root and use alternative methods to become root,\n\
-          such as su or sudo.</p>\n<p>To change the ssh configuration, you can edit\
-          \ the sshd_config file, in /etc/ssh.\nThe below gives basic description\
-          \ about some important configuration items:</p>\n<ul>\n<li>\n<p>PermitRootLogin\
-          \ no\n You need to set this to no to avoid root access via ssh</p>\n</li>\n\
-          <li>\n<p>Port 22\n For better security, you can change the ssh port to other\
+          \ in the 'Instance Management' section.</p>\n<p>This article describes some\
+          \ techniques to help you to secure a Linux based\nvirtual machine in the\
+          \ NeCTAR cloud.</p>\n<p>As security is a very broad topic, the techniques\
+          \ showed here only provides a\nbasic introduction. You can always go to\
+          \ Internet and find more useful information\nabout security.</p>\n<p>The\
+          \ instructions below assume your operating system is debian/ubuntu.</p>\n\
+          <h2>Securing SSH</h2>\n<p>You need to encourage all the users on your system\
+          \ to use SSH certificate\nauthentication and disable password login. In\
+          \ addition, you need to avoid logging\ninto the system using SSH as root\
+          \ and use alternative methods to become root,\nsuch as su or sudo.</p>\n\
+          <p>To change the SSH configuration, you can edit the configuration file\
+          \ on the virtual\nmachine, in '/etc/ssh/sshd_config'.</p>\n<p>A basic description\
+          \ of some important configuration items:</p>\n<ul>\n<li>\n<p>PermitRootLogin\
+          \ no\n You need to set this to 'no' to avoid root access via SSH</p>\n</li>\n\
+          <li>\n<p>Port 22\n For better security, you can change the SSH port to other\
           \ port number</p>\n</li>\n<li>\n<p>PermitEmptyPasswords no\n  This should\
-          \ be always no, for non empty password access</p>\n</li>\n<li>\n<p>AllowUsers\n\
-          \  This directive allows only certain users to have access via ssh to this\
+          \ be always 'no', for non-empty password access</p>\n</li>\n<li>\n<p>AllowUsers\n\
+          \  This directive allows only certain users to have access via SSH to this\
           \ machine.</p>\n</li>\n<li>\n<p>PasswordAuthentication No\n  You should\
-          \ set this to no to disable user logging using password</p>\n</li>\n</ul>\n\
+          \ set this to 'no' to disable user loggin using password</p>\n</li>\n</ul>\n\
           <p>After you have changed the /etc/ssh/sshd_config file, you can execute\
           \ <code>sudo service ssh restart</code>\nto apply the new changes.</p>\n\
           <p>If you are using an SSH client to access your Virtual Machine, you need\
@@ -10499,27 +10412,27 @@
           \ if you want to allow accounts\non your Virtual Machine to transfer files.\
           \ You can do it by giving users a\nrestricted shell such as scpoly or rssh.\
           \ These shells restrict the commands\navailable to the users to execute.\
-          \ You can change an account's shell by editing\n/etc/passwd file.</p>\n\
+          \ You can change an account's shell by editing\n'/etc/passwd' file.</p>\n\
           <h2>Securing Apache</h2>\n<p>If you don't want your Apache web service available\
-          \ to public, you can use the\nListen or BindAddress directives in /etc/apache2/apache2.conf.</p>\n\
+          \ to public, you can use the\nListen or BindAddress directives in '/etc/apache2/apache2.conf'.</p>\n\
           <p>Using Listen:\n    Listen 127.0.0.1:80\nUsing BindAddress:\n    BindAddress\
           \ 127.0.0.1</p>\n<p>Then you can restart your apache service with <code>sudo\
           \ service apache2 restart</code></p>\n<p>The default Apache installation\
-          \ in Debian permits users to publish content\nunder the $HOME/public_html.\
+          \ in Debian permits users to publish content\nunder the '$HOME/public_html'.\
           \ This content can be retrieved remotely using an\nURL such as: http://your_apache_server/~user.</p>\n\
-          <p>You can restrict the default configuration by editing /etc/apache2/mods-enabled/userdir.conf</p>\n\
+          <p>You can restrict the default configuration by editing '/etc/apache2/mods-enabled/userdir.conf'</p>\n\
           <p>You can also make sure the permission of log files can only be read/write\
-          \ by\nrequired user and groups. The default permission for the log files\
+          \ by the\nrequired user and groups. The default permission for the log files\
           \ may be readable\nby anyone.</p>\n<p>By default, Apache web files are located\
-          \ under /var/www. The default file provides\nsome hints on the system like\
-          \ what is the operating system. You should substitute\nthe default web pages\
-          \ with your own.</p>\n<p>to further harder the Apache security, you can\
-          \ run Apache by chroot. See this\n<a href=\"https://www.debian.org/doc/manuals/securing-debian-howto/ap-chroot-apache-env.en.html\"\
+          \ under /'var/www'. The default file provides\nsome hints on the system\
+          \ like what is the operating system. You should substitute\nthe default\
+          \ web pages with your own.</p>\n<p>To further strengthen the Apache security,\
+          \ you can run Apache by chroot. See this\n<a href=\"https://www.debian.org/doc/manuals/securing-debian-howto/ap-chroot-apache-env.en.html\"\
           >instruction</a> to set up Apache.</p>\n<h2>Keep System Update to Date</h2>\n\
           <p>In debian/ubuntu, you run <code>sudo apt-get update</code> regularly\
           \ to keep system\nsecurity patch update to date.</p>\n<h2>Setup Local Firewall</h2>\n\
           <p>A local firewall can also be installed with filtering rules to protect\
-          \ access to\nthe system. You can use iptable tools to create rules to filter\
+          \ access to\nthe system. You can use IPtable tools to create rules to filter\
           \ network traffic.\nIt is advised to use Security Group to manage which\
           \ ports to open as it is simple\nto do. The below only provides basic introduction\
           \ to IPtables, for more\ninformation, please refer to IPtables <a href=\"\
@@ -10547,15 +10460,15 @@
           <p>```</p>\n<h2>Install fail2ban</h2>\n<p>The SSH daemon itself is a Linux\
           \ service that exposed to the Internet and creates\na security risk for\
           \ the system. fail2ban can mitigate this problem by creating\nrules that\
-          \ can automatically alter your your iptables firewall and ban\nunsuccessful\
+          \ can automatically alter your your IPtables firewall and ban\nunsuccessful\
           \ login attempts based on a predefined number. </p>\n<p>You can use the\
           \ below commands to install fail2ban in Ubuntu:</p>\n<p>```</p>\n<p>sudo\
           \ apt-get update\nsudo apt-get install fail2ban</p>\n<p>```</p>\n<p>To setup\
           \ the fail2ban, please follow this <a href=\"https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04\"\
           >instruction</a>.</p>\n<h2>Disable Unneeded Services</h2>\n<p>Unneeded services\
           \ are a potential security risk, so you can execute <code>sudo service --status-all</code>\n\
-          to list all available services.  You can exam the output carefully and disable\n\
-          any services not desired.</p>"
+          to list all available services.  You can examine the output carefully and\
+          \ disable\nany services not desired.</p>"
         folder:
           category_id: 6000122279
           created_at: '2015-10-01T22:28:23-04:00'
@@ -10566,17 +10479,17 @@
           language_id: 6
           name: Security Guidelines
           parent_id: 6000203455
-          position: 6
+          position: 5
           updated_at: '2015-10-01T22:28:23-04:00'
           visibility: 1
         folder_id: 6000203455
-        hits: 0
+        hits: 1
         id: 6000077799
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-14T07:19:43-04:00'
+        modified_at: '2015-10-20T21:03:17-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000077799
@@ -10589,57 +10502,58 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-10-14T07:19:43-04:00'
+        updated_at: '2015-10-20T21:03:17-04:00'
         user_id: 6002464727
   html: "<h2>Security API</h2>\n<p>The NeCTAR Cloud doesn't provide a specific API\
-    \ for security purpose. The only\nsecurity relevant operation is to manage security\
+    \ for security purposes. The only\nsecurity relevant operation is to manage security\
     \ groups through the Nova API.\nIf you want to know the Nova API, You can find\
-    \ the related information from the\narticles in Instance Management section.</p>\n\
+    \ the related information from the\narticles in the 'Instance Management' section.</p>\n\
     <p>This article describes some techniques to help you to secure a Linux based\n\
-    virtual machine in NeCTAR cloud.</p>\n<p>As security is really large topic, the\
-    \ techniques showed here only provides some\nbasic introduction. You can always\
-    \ go to Internet and find more useful information\nabout Security.</p>\n<p>The\
-    \ below assumes your operating system is debian/ubuntu.</p>\n<h2>Securing ssh</h2>\n\
-    <p>You need to encourage all the users on your system to use ssh certificate\n\
+    virtual machine in the NeCTAR cloud.</p>\n<p>As security is a very broad topic,\
+    \ the techniques showed here only provides a\nbasic introduction. You can always\
+    \ go to Internet and find more useful information\nabout security.</p>\n<p>The\
+    \ instructions below assume your operating system is debian/ubuntu.</p>\n<h2>Securing\
+    \ SSH</h2>\n<p>You need to encourage all the users on your system to use SSH certificate\n\
     authentication and disable password login. In addition, you need to avoid logging\n\
-    into the system using ssh as root and use alternative methods to become root,\n\
-    such as su or sudo.</p>\n<p>To change the ssh configuration, you can edit the\
-    \ sshd_config file, in /etc/ssh.\nThe below gives basic description about some\
-    \ important configuration items:</p>\n<ul>\n<li>\n<p>PermitRootLogin no\n You\
-    \ need to set this to no to avoid root access via ssh</p>\n</li>\n<li>\n<p>Port\
-    \ 22\n For better security, you can change the ssh port to other port number</p>\n\
-    </li>\n<li>\n<p>PermitEmptyPasswords no\n  This should be always no, for non empty\
-    \ password access</p>\n</li>\n<li>\n<p>AllowUsers\n  This directive allows only\
-    \ certain users to have access via ssh to this machine.</p>\n</li>\n<li>\n<p>PasswordAuthentication\
-    \ No\n  You should set this to no to disable user logging using password</p>\n\
-    </li>\n</ul>\n<p>After you have changed the /etc/ssh/sshd_config file, you can\
-    \ execute <code>sudo service ssh restart</code>\nto apply the new changes.</p>\n\
-    <p>If you are using an SSH client to access your Virtual Machine, you need to\
-    \ make\nsure both SSH server and client are using the same version of protocols.</p>\n\
-    <p>You can also restrict access to file transfer only if you want to allow accounts\n\
-    on your Virtual Machine to transfer files. You can do it by giving users a\nrestricted\
-    \ shell such as scpoly or rssh. These shells restrict the commands\navailable\
-    \ to the users to execute. You can change an account's shell by editing\n/etc/passwd\
-    \ file.</p>\n<h2>Securing Apache</h2>\n<p>If you don't want your Apache web service\
-    \ available to public, you can use the\nListen or BindAddress directives in /etc/apache2/apache2.conf.</p>\n\
+    into the system using SSH as root and use alternative methods to become root,\n\
+    such as su or sudo.</p>\n<p>To change the SSH configuration, you can edit the\
+    \ configuration file on the virtual\nmachine, in '/etc/ssh/sshd_config'.</p>\n\
+    <p>A basic description of some important configuration items:</p>\n<ul>\n<li>\n\
+    <p>PermitRootLogin no\n You need to set this to 'no' to avoid root access via\
+    \ SSH</p>\n</li>\n<li>\n<p>Port 22\n For better security, you can change the SSH\
+    \ port to other port number</p>\n</li>\n<li>\n<p>PermitEmptyPasswords no\n  This\
+    \ should be always 'no', for non-empty password access</p>\n</li>\n<li>\n<p>AllowUsers\n\
+    \  This directive allows only certain users to have access via SSH to this machine.</p>\n\
+    </li>\n<li>\n<p>PasswordAuthentication No\n  You should set this to 'no' to disable\
+    \ user loggin using password</p>\n</li>\n</ul>\n<p>After you have changed the\
+    \ /etc/ssh/sshd_config file, you can execute <code>sudo service ssh restart</code>\n\
+    to apply the new changes.</p>\n<p>If you are using an SSH client to access your\
+    \ Virtual Machine, you need to make\nsure both SSH server and client are using\
+    \ the same version of protocols.</p>\n<p>You can also restrict access to file\
+    \ transfer only if you want to allow accounts\non your Virtual Machine to transfer\
+    \ files. You can do it by giving users a\nrestricted shell such as scpoly or rssh.\
+    \ These shells restrict the commands\navailable to the users to execute. You can\
+    \ change an account's shell by editing\n'/etc/passwd' file.</p>\n<h2>Securing\
+    \ Apache</h2>\n<p>If you don't want your Apache web service available to public,\
+    \ you can use the\nListen or BindAddress directives in '/etc/apache2/apache2.conf'.</p>\n\
     <p>Using Listen:\n    Listen 127.0.0.1:80\nUsing BindAddress:\n    BindAddress\
     \ 127.0.0.1</p>\n<p>Then you can restart your apache service with <code>sudo service\
     \ apache2 restart</code></p>\n<p>The default Apache installation in Debian permits\
-    \ users to publish content\nunder the $HOME/public_html. This content can be retrieved\
-    \ remotely using an\nURL such as: http://your_apache_server/~user.</p>\n<p>You\
-    \ can restrict the default configuration by editing /etc/apache2/mods-enabled/userdir.conf</p>\n\
-    <p>You can also make sure the permission of log files can only be read/write by\n\
-    required user and groups. The default permission for the log files may be readable\n\
-    by anyone.</p>\n<p>By default, Apache web files are located under /var/www. The\
-    \ default file provides\nsome hints on the system like what is the operating system.\
-    \ You should substitute\nthe default web pages with your own.</p>\n<p>to further\
-    \ harder the Apache security, you can run Apache by chroot. See this\n<a href=\"\
-    https://www.debian.org/doc/manuals/securing-debian-howto/ap-chroot-apache-env.en.html\"\
+    \ users to publish content\nunder the '$HOME/public_html'. This content can be\
+    \ retrieved remotely using an\nURL such as: http://your_apache_server/~user.</p>\n\
+    <p>You can restrict the default configuration by editing '/etc/apache2/mods-enabled/userdir.conf'</p>\n\
+    <p>You can also make sure the permission of log files can only be read/write by\
+    \ the\nrequired user and groups. The default permission for the log files may\
+    \ be readable\nby anyone.</p>\n<p>By default, Apache web files are located under\
+    \ /'var/www'. The default file provides\nsome hints on the system like what is\
+    \ the operating system. You should substitute\nthe default web pages with your\
+    \ own.</p>\n<p>To further strengthen the Apache security, you can run Apache by\
+    \ chroot. See this\n<a href=\"https://www.debian.org/doc/manuals/securing-debian-howto/ap-chroot-apache-env.en.html\"\
     >instruction</a> to set up Apache.</p>\n<h2>Keep System Update to Date</h2>\n\
     <p>In debian/ubuntu, you run <code>sudo apt-get update</code> regularly to keep\
     \ system\nsecurity patch update to date.</p>\n<h2>Setup Local Firewall</h2>\n\
     <p>A local firewall can also be installed with filtering rules to protect access\
-    \ to\nthe system. You can use iptable tools to create rules to filter network\
+    \ to\nthe system. You can use IPtable tools to create rules to filter network\
     \ traffic.\nIt is advised to use Security Group to manage which ports to open\
     \ as it is simple\nto do. The below only provides basic introduction to IPtables,\
     \ for more\ninformation, please refer to IPtables <a href=\"http://linux.die.net/man/8/iptables\"\
@@ -10665,16 +10579,16 @@
     <p>```</p>\n<h2>Install fail2ban</h2>\n<p>The SSH daemon itself is a Linux service\
     \ that exposed to the Internet and creates\na security risk for the system. fail2ban\
     \ can mitigate this problem by creating\nrules that can automatically alter your\
-    \ your iptables firewall and ban\nunsuccessful login attempts based on a predefined\
+    \ your IPtables firewall and ban\nunsuccessful login attempts based on a predefined\
     \ number. </p>\n<p>You can use the below commands to install fail2ban in Ubuntu:</p>\n\
     <p>```</p>\n<p>sudo apt-get update\nsudo apt-get install fail2ban</p>\n<p>```</p>\n\
     <p>To setup the fail2ban, please follow this <a href=\"https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04\"\
     >instruction</a>.</p>\n<h2>Disable Unneeded Services</h2>\n<p>Unneeded services\
     \ are a potential security risk, so you can execute <code>sudo service --status-all</code>\n\
-    to list all available services.  You can exam the output carefully and disable\n\
+    to list all available services.  You can examine the output carefully and disable\n\
     any services not desired.</p>"
   parent: 43
-  sha1: 696d8247f47de69fbed10dfa7e81d8b734895a07
+  sha1: 2b4ab65752d20ecc73b3932c00ac23d780ffa970
   title: API
 79:
   freshdesk:
