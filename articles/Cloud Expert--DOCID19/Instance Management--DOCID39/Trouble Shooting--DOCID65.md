@@ -13,9 +13,8 @@ you very good hints about what might be wrong.
 For example, if you execute ```nova service-list``` on the command line without
 authentication, the error message might look like this:
 
-```
+``` 
 ERROR: You must provide a username via either --os-username or env[OS_USERNAME]
-
 ```
 
 The above message indicates you need to be authenticated before you can use the
@@ -23,10 +22,10 @@ API. The authentication requires some environment variables to be set. To set
 these environment variables you can either source the script file obtained from
 NeCTAR [Dashboard][dashboard] or you can override it by using command line options.
 
-You can always execute ```man nova`` or simply ```nova``` to get more help
+You can always execute ```man nova``` or simply ```nova``` to get more help
 information and to learn each supported options.
 
-If you find a useful command, you can also execute ```nova help command ```,
+If you find a useful command, you can also execute ```nova help command```,
 this will give your more specific help for the command.
 
 ## Debugging Nova Python API
@@ -43,7 +42,7 @@ more information [here][pdb].
 The below code uses pdb debuuger to debug a python file contains clinet python
 API code.
 
-```
+``` 
 pdb file_name.py
 ```
 
@@ -88,9 +87,10 @@ the below code:
 
 ```
 import logging
-logger = logging.getLogger("novaclient")
-logging.basicConfig(level=logging.DEBUG)
 
+logger = logging.getLogger("novaclient")
+
+logging.basicConfig(level=logging.DEBUG)
 ```
 
 The will print the same output as adding --debug option for command line API.
