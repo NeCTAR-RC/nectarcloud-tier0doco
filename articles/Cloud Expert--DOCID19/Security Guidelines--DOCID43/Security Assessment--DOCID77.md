@@ -1,16 +1,15 @@
 ## Security Assessment
 
 After you have applied all your security steps, you can use some tools to test
-whether there are still potential security risks within the system. The below
-provides some basic information about how to use these tools. The tools used
-below are just common tools, you will find there are more tools available to do
-the security assessment.
+whether there are still potential security risks within the system. Listed below
+is some basic information about how to use some of the common tools. You will 
+find there are more tools available to perform security assessments.
 
 ## System log files
 
-Linux system comes with log files to records all system activities under /var/log.
-You can exam auth.log file for checking ssh logins and exam syslog file for any
-system wide activities. 
+Linux systems come with log files to record all system activities under '/var/log'.
+You can examine the 'auth.log' file to check SSH logins, and examine the 'syslog' file 
+for any system wide activities. 
 
 
 ## OpenVAS
@@ -36,7 +35,7 @@ command as the root user.
 
 To scan a host, you can use ``` nmap <hostname> ```
 
-The results return a list ports of listening or waiting services and this can
+The results return a list ports of listening or waiting services, and this can
 help to close unnecessary or unused services. 
 
 To find out more information, you can see the official homepage at the following
