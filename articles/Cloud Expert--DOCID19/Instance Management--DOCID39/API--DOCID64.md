@@ -17,25 +17,33 @@ See below for the instructions:
 
 OS X
 
+
 ```
+
 sudo easy_install pip
 
 sudo pip install --upgrade setuptools
 
 sudo pip install python-novaclient
+
 ```
 
 Ubuntu
 
+
 ```
+
 sudo apt-get install python-pip
 
 sudo pip install python-novaclient
+
 ```
 
 RHEL, CentOS, or Fedora
 
+
 ```
+
 sudo yum install python-setuptools
 
 sudo easy_install pip
@@ -43,6 +51,7 @@ sudo easy_install pip
 sudo pip install --upgrade setuptools
 
 sudo pip install python-novaclient
+
 ```
 
 Windows
@@ -111,9 +120,11 @@ obtained from Dashboard.
 You can use the below sample code to get authenticated. 
 
 ```
+
 from novaclient import client
 
 nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)
+
 ```
 
 The VERSION parameter can be "1.1" or "2". You can get USERNAME, PROJECT_NAME and
@@ -154,6 +165,7 @@ information. Then, you can use nova boot command to launch a new instance, the
 format is:
 
 ```
+
 nova boot [instance-name]  --flavor [name] --image [name] --key-name [name]
 
 --security-groups [names separated by space]
@@ -196,6 +208,7 @@ The below shows an sample code to launch a new instance and you need to get
 authentication information first from above:
 
 ```
+
 from novaclient import client
 
 nova = client.Client("2", username, password, project_name, auth_url)
