@@ -13,15 +13,15 @@ give you very good hints about what might be wrong.
 For example, if you execute ```swift list``` on the command line without
 authentication, the error message might look like this:
 
-```
-Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment variables
-to be set or overridden with -A, -U, or -K.
 
-Auth version 2.0 requires OS_AUTH_URL, OS_USERNAME, OS_PASSWORD, and
-OS_TENANT_NAME OS_TENANT_ID to be set or overridden with --os-auth-url,
---os-username, --os-password, --os-tenant-name or os-tenant-id. Note:
-adding "-V 2" is necessary for this.
-```
+> Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment variables
+> to be set or overridden with -A, -U, or -K.
+> 
+> Auth version 2.0 requires OS_AUTH_URL, OS_USERNAME, OS_PASSWORD, and
+> OS_TENANT_NAME OS_TENANT_ID to be set or overridden with --os-auth-url,
+> --os-username, --os-password, --os-tenant-name or os-tenant-id. Note:
+> adding "-V 2" is necessary for this.
+
 
 The above message indicates you that there are 2 authentication versions that
 swift currently supports and each version requires some environment variables
@@ -92,12 +92,17 @@ OpenStack service [API][api] to see what are expected.
 To enable debugging information on the standard out for Python API, you can add
 the below code:
 
+
 ```
+
 import logging
+
 logger = logging.getLogger("swiftclient")
+
 logging.basicConfig(level=logging.DEBUG)
 
 ```
+
 
 The will print the same output as adding --debug option for command line API.
 
