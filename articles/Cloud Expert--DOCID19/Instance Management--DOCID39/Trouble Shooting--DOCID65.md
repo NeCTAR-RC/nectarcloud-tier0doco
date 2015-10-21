@@ -85,13 +85,17 @@ OpenStack service [API][api] to see what are expected.
 To enable debugging information on the standard out for Python API, you can add
 the below code:
 
+
 ```
+
 import logging
 
 logger = logging.getLogger("novaclient")
 
 logging.basicConfig(level=logging.DEBUG)
+
 ```
+
 
 The will print the same output as adding --debug option for command line API.
 
