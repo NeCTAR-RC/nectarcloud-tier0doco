@@ -102,7 +102,7 @@
           \ the default. \n Notes: The above configuration options can be set in the\
           \ 'Launch Instance' popup\nwindow. To launch the popup window, you can go\
           \ to the Instances tab and\nclick 'Launch Instance' button. \n To get more\
-          \ information about the terms used, please refer to\nthe glossary. \n Example\
+          \ information about the terms used, please refer to\nthe Glossary. \n Example\
           \ Launch of an Instance \n \n \n Login to the Cloud Dashboard \n \n \n Go\
           \ to Dashboard Instances tab \n \n \n Click 'Launch Instance' button \n\
           \ \n \n Type instance name \n \n \n Select a flavour. Flavour indicates\
@@ -123,17 +123,17 @@
           \ from status \"Build\" to \"Active\". Depending on your image\nsize and\
           \ cloud activity, the length of time required may vary. Your instance\n\
           will have a public IP address and be reachable according to the\nSecurity\
-          \ Groups selected. \n You can connect to your new instance via\nAccessing\
-          \ Your Instance \n If Launch is Unsuccessful \n You may get a message that\
-          \ your quota has been exceeded or you have\ninsufficient resources. Check\
-          \ the table to the right on the Launch Instance page\nfor the number of\
-          \ instances you may run simultaneously, then check the\nInstances tab to\
-          \ see how many Instances you already have running. You may have\nto terminate\
-          \ a running Instance to free resources before you can launch another\n(see\
-          \ Instance tab to Terminate). If you need more resources see the allocation\n\
-          tab to apply for an increase. \n If the above doesn't apply to you, alternatively,\
-          \ you can send an email to the\nCloud Help Desk. Please find how to lodge\
-          \ a support ticket from\nNectar Support. "
+          \ Groups selected. \n Instructions to access the instance are on the 'Accessing\
+          \ Instance' page in Cloud Basics. \n If Launch is Unsuccessful \n You may\
+          \ get a message that your quota has been exceeded or you have\ninsufficient\
+          \ resources. Check the table to the right on the Launch Instance page\n\
+          for the number of instances you may run simultaneously, then check the\n\
+          Instances tab to see how many Instances you already have running. You may\
+          \ have\nto terminate a running Instance to free resources before you can\
+          \ launch another\n(see Instance tab to Terminate). If you need more resources\
+          \ see the allocation\ntab to apply for an increase. \n If the above doesn't\
+          \ apply to you, alternatively, you can send an email to the\nCloud Help\
+          \ Desk. Please find how to lodge a support ticket from\nNectar Support. "
         description: "<p>This guide describes launching a running instance (virtual\
           \ machine) with SSH login\nenabled.</p>\n<h2>Preparation</h2>\n<p>You need\
           \ to create a public/private key pair before you can use SSH to login to\
@@ -246,9 +246,9 @@
           \ options can be set in the 'Launch Instance' popup\nwindow. To launch the\
           \ popup window, you can go to the Instances tab and\nclick 'Launch Instance'\
           \ button.</p>\n<p>To get more information about the terms used, please refer\
-          \ to\n<a href=\"http://bla.bla.bla\">the glossary</a>.</p>\n<h2>Example\
-          \ Launch of an Instance</h2>\n<ul>\n<li>\n<p>Login to the <a href=\"https://dashboard.rc.nectar.org.au\"\
-          >Cloud Dashboard</a></p>\n</li>\n<li>\n<p>Go to Dashboard Instances tab</p>\n\
+          \ to\nthe Glossary.</p>\n<h2>Example Launch of an Instance</h2>\n<ul>\n\
+          <li>\n<p>Login to the <a href=\"https://dashboard.rc.nectar.org.au\">Cloud\
+          \ Dashboard</a></p>\n</li>\n<li>\n<p>Go to Dashboard Instances tab</p>\n\
           </li>\n<li>\n<p>Click 'Launch Instance' button</p>\n</li>\n<li>\n<p>Type\
           \ instance name</p>\n</li>\n<li>\n<p>Select a flavour. Flavour indicates\
           \ the specification of a instance. You can\n find more information in the\
@@ -269,19 +269,19 @@
           \ options. The instance\nwill normally pass from status \"Build\" to \"\
           Active\". Depending on your image\nsize and cloud activity, the length of\
           \ time required may vary. Your instance\nwill have a public IP address and\
-          \ be reachable according to the\nSecurity Groups selected.</p>\n<p>You can\
-          \ connect to your new instance via\n<a href=\"http://bla.bla.bla\">Accessing\
-          \ Your Instance</a></p>\n<h2>If Launch is Unsuccessful</h2>\n<p>You may\
-          \ get a message that your quota has been exceeded or you have\ninsufficient\
-          \ resources. Check the table to the right on the Launch Instance page\n\
-          for the number of instances you may run simultaneously, then check the\n\
-          Instances tab to see how many Instances you already have running. You may\
-          \ have\nto terminate a running Instance to free resources before you can\
-          \ launch another\n(see Instance tab to Terminate). If you need more resources\
-          \ see the allocation\ntab to apply for an increase.</p>\n<p>If the above\
-          \ doesn't apply to you, alternatively, you can send an email to the\nCloud\
-          \ Help Desk. Please find how to lodge a support ticket from\n<a href=\"\
-          https://support.rc.nectar.org.au/docs/support\">Nectar Support</a>.</p>"
+          \ be reachable according to the\nSecurity Groups selected.</p>\n<p>Instructions\
+          \ to access the instance are on the 'Accessing Instance' page in Cloud Basics.</p>\n\
+          <h2>If Launch is Unsuccessful</h2>\n<p>You may get a message that your quota\
+          \ has been exceeded or you have\ninsufficient resources. Check the table\
+          \ to the right on the Launch Instance page\nfor the number of instances\
+          \ you may run simultaneously, then check the\nInstances tab to see how many\
+          \ Instances you already have running. You may have\nto terminate a running\
+          \ Instance to free resources before you can launch another\n(see Instance\
+          \ tab to Terminate). If you need more resources see the allocation\ntab\
+          \ to apply for an increase.</p>\n<p>If the above doesn't apply to you, alternatively,\
+          \ you can send an email to the\nCloud Help Desk. Please find how to lodge\
+          \ a support ticket from\n<a href=\"https://support.rc.nectar.org.au/docs/support\"\
+          >Nectar Support</a>.</p>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:04-04:00'
@@ -292,21 +292,21 @@
           language_id: 6
           name: Cloud Basics
           parent_id: 6000190150
-          position: 2
-          updated_at: '2015-09-03T01:28:04-04:00'
+          position: 1
+          updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 0
+        hits: 47
         id: 6000055376
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-09-03T01:28:10-04:00'
+        modified_at: '2015-10-20T21:03:33-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055376
-        position: 1
+        position: 4
         seo_data: {}
         status: 2
         string_01: null
@@ -315,7 +315,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Launching Virtual Machines
-        updated_at: '2015-09-03T01:28:10-04:00'
+        updated_at: '2015-10-20T21:03:33-04:00'
         user_id: 6002464727
   html: "<p>This guide describes launching a running instance (virtual machine) with\
     \ SSH login\nenabled.</p>\n<h2>Preparation</h2>\n<p>You need to create a public/private\
@@ -419,33 +419,32 @@
     <p>Notes: The above configuration options can be set in the 'Launch Instance'\
     \ popup\nwindow. To launch the popup window, you can go to the Instances tab and\n\
     click 'Launch Instance' button.</p>\n<p>To get more information about the terms\
-    \ used, please refer to\n<a href=\"http://bla.bla.bla\">the glossary</a>.</p>\n\
-    <h2>Example Launch of an Instance</h2>\n<ul>\n<li>\n<p>Login to the <a href=\"\
-    https://dashboard.rc.nectar.org.au\">Cloud Dashboard</a></p>\n</li>\n<li>\n<p>Go\
-    \ to Dashboard Instances tab</p>\n</li>\n<li>\n<p>Click 'Launch Instance' button</p>\n\
-    </li>\n<li>\n<p>Type instance name</p>\n</li>\n<li>\n<p>Select a flavour. Flavour\
-    \ indicates the specification of a instance. You can\n find more information in\
-    \ the Flavour Details.</p>\n</li>\n<li>\n<p>Select an NeCTAR offical image (we\
-    \ suggest selecting an Ubuntu image such as\n NeCTAR Ubuntu 14.10 (Utopic) amd64)</p>\n\
-    </li>\n<li>\n<p>Click Access &amp; Security tab</p>\n</li>\n<li>\n<p>Select a\
-    \ key pair created earlier</p>\n</li>\n<li>\n<p>Select security groups to use.\
-    \ Tick 'ssh' and 'http' (these are pre-defined\n groups in the default personal\
-    \ project)</p>\n</li>\n<li>\n<p>Click Availability Zone</p>\n</li>\n<li>\n<p>Select\
-    \ the location of your instance or leave as unselected (the system will\n auto\
-    \ select available location)</p>\n</li>\n<li>\n<p>Click launch button and the\
-    \ page will change to the Instances Tab</p>\n</li>\n<li>\n<p>After a while (usually\
-    \ a couple of minutes), your instance will become active\n and will have an IP\
-    \ address. The IP address is available in the Instances table\n on your Nectar\
-    \ Dashboard.</p>\n</li>\n</ul>\n<p>The launch button begins Cloud provisioning\
-    \ and initialisation of a running\ninstance from the selected image and your configuration\
-    \ options. The instance\nwill normally pass from status \"Build\" to \"Active\"\
-    . Depending on your image\nsize and cloud activity, the length of time required\
-    \ may vary. Your instance\nwill have a public IP address and be reachable according\
-    \ to the\nSecurity Groups selected.</p>\n<p>You can connect to your new instance\
-    \ via\n<a href=\"http://bla.bla.bla\">Accessing Your Instance</a></p>\n<h2>If\
-    \ Launch is Unsuccessful</h2>\n<p>You may get a message that your quota has been\
-    \ exceeded or you have\ninsufficient resources. Check the table to the right on\
-    \ the Launch Instance page\nfor the number of instances you may run simultaneously,\
+    \ used, please refer to\nthe Glossary.</p>\n<h2>Example Launch of an Instance</h2>\n\
+    <ul>\n<li>\n<p>Login to the <a href=\"https://dashboard.rc.nectar.org.au\">Cloud\
+    \ Dashboard</a></p>\n</li>\n<li>\n<p>Go to Dashboard Instances tab</p>\n</li>\n\
+    <li>\n<p>Click 'Launch Instance' button</p>\n</li>\n<li>\n<p>Type instance name</p>\n\
+    </li>\n<li>\n<p>Select a flavour. Flavour indicates the specification of a instance.\
+    \ You can\n find more information in the Flavour Details.</p>\n</li>\n<li>\n<p>Select\
+    \ an NeCTAR offical image (we suggest selecting an Ubuntu image such as\n NeCTAR\
+    \ Ubuntu 14.10 (Utopic) amd64)</p>\n</li>\n<li>\n<p>Click Access &amp; Security\
+    \ tab</p>\n</li>\n<li>\n<p>Select a key pair created earlier</p>\n</li>\n<li>\n\
+    <p>Select security groups to use. Tick 'ssh' and 'http' (these are pre-defined\n\
+    \ groups in the default personal project)</p>\n</li>\n<li>\n<p>Click Availability\
+    \ Zone</p>\n</li>\n<li>\n<p>Select the location of your instance or leave as unselected\
+    \ (the system will\n auto select available location)</p>\n</li>\n<li>\n<p>Click\
+    \ launch button and the page will change to the Instances Tab</p>\n</li>\n<li>\n\
+    <p>After a while (usually a couple of minutes), your instance will become active\n\
+    \ and will have an IP address. The IP address is available in the Instances table\n\
+    \ on your Nectar Dashboard.</p>\n</li>\n</ul>\n<p>The launch button begins Cloud\
+    \ provisioning and initialisation of a running\ninstance from the selected image\
+    \ and your configuration options. The instance\nwill normally pass from status\
+    \ \"Build\" to \"Active\". Depending on your image\nsize and cloud activity, the\
+    \ length of time required may vary. Your instance\nwill have a public IP address\
+    \ and be reachable according to the\nSecurity Groups selected.</p>\n<p>Instructions\
+    \ to access the instance are on the 'Accessing Instance' page in Cloud Basics.</p>\n\
+    <h2>If Launch is Unsuccessful</h2>\n<p>You may get a message that your quota has\
+    \ been exceeded or you have\ninsufficient resources. Check the table to the right\
+    \ on the Launch Instance page\nfor the number of instances you may run simultaneously,\
     \ then check the\nInstances tab to see how many Instances you already have running.\
     \ You may have\nto terminate a running Instance to free resources before you can\
     \ launch another\n(see Instance tab to Terminate). If you need more resources\
@@ -454,7 +453,7 @@
     \ Please find how to lodge a support ticket from\n<a href=\"https://support.rc.nectar.org.au/docs/support\"\
     >Nectar Support</a>.</p>"
   parent: 21
-  sha1: be39e3d6aae9fc279e47f9ff1b7fe26e4b07ef99
+  sha1: 930747e497c36cbccd084cd272896d6f9e499740
   title: Launching Virtual Machines
 34:
   freshdesk:
@@ -1439,11 +1438,11 @@
           \ availability\nzone)\" If you leave this selected Nectar will find a suitable\
           \ AZ for you.\n \n Scenarios \n If your VM uses persistent volume storage,\
           \ your VM and your storage must\nbe in compatible Availability Zones. You\
-          \ can find more information about\nstorage here \n In some scenarios you\
-          \ can use institutionally licensed software, in which\ncase you may need\
-          \ to select the appropriate Availability Zone \n Some participating institutions\
-          \ offer private availability zones, for which\nyou may be eligible. You\
-          \ will have to contact your Node's local support. "
+          \ can find more information on the Cloud Storage page. \n In some scenarios\
+          \ you can use institutionally licensed software, in which\ncase you may\
+          \ need to select the appropriate Availability Zone \n Some participating\
+          \ institutions offer private availability zones, for which\nyou may be eligible.\
+          \ You will have to contact your Node's local support. "
         description: '<p>The Nectar Cloud is organised in Availability Zones, that
           are hosted by the
 
@@ -1475,9 +1474,8 @@
           <p>If your VM uses <strong>persistent volume storage</strong>, your VM and
           your storage must
 
-          be in compatible Availability Zones. You can find more information about
-
-          storage <a href="../Cloud%20Basics/Introduction%20to%20Cloud%20Storage.md">here</a></p>
+          be in compatible Availability Zones. You can find more information on the
+          Cloud Storage page.</p>
 
           <p>In some scenarios you can use <strong>institutionally licensed software</strong>,
           in which
@@ -1498,30 +1496,30 @@
           language_id: 6
           name: NeCTAR Fundamentals
           parent_id: 6000190155
-          position: 7
-          updated_at: '2015-09-03T01:28:09-04:00'
+          position: 2
+          updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190155
-        hits: 0
+        hits: 13
         id: 6000055381
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-09-03T01:28:16-04:00'
+        modified_at: '2015-10-20T21:03:34-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055381
-        position: 1
+        position: 2
         seo_data: {}
         status: 2
         string_01: null
         string_02: null
         tags: []
-        thumbs_down: 0
+        thumbs_down: 2
         thumbs_up: 0
         title: Availability Zones
-        updated_at: '2015-09-03T01:28:16-04:00'
+        updated_at: '2015-10-20T21:03:34-04:00'
         user_id: 6002464727
   html: '<p>The Nectar Cloud is organised in Availability Zones, that are hosted by
     the
@@ -1552,9 +1550,8 @@
     <p>If your VM uses <strong>persistent volume storage</strong>, your VM and your
     storage must
 
-    be in compatible Availability Zones. You can find more information about
-
-    storage <a href="../Cloud%20Basics/Introduction%20to%20Cloud%20Storage.md">here</a></p>
+    be in compatible Availability Zones. You can find more information on the Cloud
+    Storage page.</p>
 
     <p>In some scenarios you can use <strong>institutionally licensed software</strong>,
     in which
@@ -1566,7 +1563,7 @@
 
     you may be eligible. You will have to contact your Node''s local support.</p>'
   parent: 26
-  sha1: f5d14d797b4f2c7f8f08e78b2988746c514f63d6
+  sha1: f3833959eda87b1b543c43245a1f6c223da0f4bf
   title: Availability Zones
 39:
   freshdesk:
