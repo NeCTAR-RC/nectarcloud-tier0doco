@@ -79,26 +79,37 @@ run ```swift command -h``` find out more information about a command.
 You can also use swift python API to access and manage the object storage.
 The below shows the sample Pthon code:
 
-```
+
+```bash
+
 from swiftclient import client
 
 swift = client.Connection(authurl=url, user=username, key=password,
 tenant_name=project_name, auth_version='2')
 
 container_name=""
+
 swift.get_container(container_name)
 
+
 container_name="first container"
+
 swift.put_container(container_name)
+
 
 swift.delete_container(container_name)
 
+
 container_name = "container"
+
 object_name = "object"
+
 swift.get_object(container_name, object_name)
 
 swift.put_object(container_name, object)
+
 ```
+
 
 Please refer to above instruction about how to obtain authurl, user, password and
 tenant_name.
