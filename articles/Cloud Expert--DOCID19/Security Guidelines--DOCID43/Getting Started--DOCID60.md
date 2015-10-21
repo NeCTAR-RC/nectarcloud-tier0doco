@@ -8,7 +8,7 @@ follow these.
 The NecTAR team conduct routine and random audits to determine the integrity
 of machine images and running instances. If you have discovered a critical
 security flaw, or believe your machine has been compromised, please email
-<security@rc.nectar.org.au>, or for non-urgent security questions go to NeCTAR
+<security@rc.nectar.org.au>; or for non-urgent security questions go to NeCTAR
 [support][support] to lodge a ticket.
 
 ## Mail Servers
@@ -26,7 +26,7 @@ easy to turn this on. Please do so, and ask us if you need help.
 
 ## Upgrade your kernel
 
-Some updates, such as a kernel upgrade require a reboot of the instance. Please
+Some updates, such as a kernel upgrade, require a reboot of the instance. Please
 schedule this into your regular maintenance.
 
 ## No open recursive name servers
@@ -74,7 +74,7 @@ The cloud provides a metadata service so you can download keys on boot, so
 you don't need to copy keys manually. This ensures that if your key is
 compromised, not all running instances of that image are compromised.
 
-## Install ssh attack banning tools
+## Install SSH attack banning tools
 
 Install a tools like fail2ban or denyhosts, which checks log files for
 attempted breaches and then blocks malicious IP addresses.
@@ -103,12 +103,12 @@ services available to public, you need to open certain ports for it. Before you
 open a open, you need to think carefully about what service associated with it
 and what is the intention. Never open ports for non-service binded to it.
 
-## Only grand sufficient permission to user account
+## Only grant sufficient permission to user account
 
-When creating user account, make sure only grand the permission sufficient for 
-its use. Never grant extra permission if it is not needed.
+When creating user account, make sure only permission sufficient for its use 
+is granted. Never grant extra permission if it is not needed.
 
-## Disable root access from ssh and use sudo if possible
+## Disable root access from SSH and use sudo if possible
 
 Disable root user SSH login and setup user account with sudo permission to
 perform administrator tasks.
