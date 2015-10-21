@@ -119,7 +119,8 @@ obtained from Dashboard.
 
 You can use the below sample code to get authenticated. 
 
-```
+
+```bash
 
 from novaclient import client
 
@@ -164,10 +165,10 @@ name and flavor name. You can use the above mentioned commands to acquire these
 information. Then, you can use nova boot command to launch a new instance, the
 format is:
 
-```
+
+```bash
 
 nova boot [instance-name]  --flavor [name] --image [name] --key-name [name]
-
 --security-groups [names separated by space]
 
 ```
@@ -207,6 +208,7 @@ programming language.
 The below shows an sample code to launch a new instance and you need to get
 authentication information first from above:
 
+
 ```
 
 from novaclient import client
@@ -236,6 +238,7 @@ key_name = 'ming'
 nova.servers.create(server_name, image, flavor, security_groups=security_groups, key_name=)
 
 ``` 
+
 
 You can find more information about nova python API from this [link][pythonapi]
 
