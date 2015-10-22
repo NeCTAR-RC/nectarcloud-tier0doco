@@ -17,7 +17,7 @@ one project on the Nectar cloud this selector will determine which project
 your dashboard information relates to.
 
 
-![Dashboard Overview]
+![Dashboard Overview](images/dashboard_overview.png)
 
 
 ## Instances
@@ -36,7 +36,7 @@ Actions on each VM by making a selection from the instance's corresponding
 You can find similar information screens for information about your
 **Volumes**, **Images** and **Access & Security** using the navigation panel.
 
-![Dashboard Instances]
+![Dashboard Instances](images/dashboard_instances.png)
 
 ## Allocations
 
@@ -46,7 +46,7 @@ information about any existing request that you may have on the My Request
 screen. You can also use the My Request screen to request amendments to any
 of your allocations, should you need additional resources.
 
-![Dashboard Allocations]
+![Dashboard Allocations](images/dashboard_allocations.png)
 
 ## Other features
 
@@ -56,7 +56,5 @@ the Nectar Dashboard. Additional features can be accessed using Command
 Line Interface or one of the OpenStack APIs.
 
 [The Dashboard]: https://dashboard.rc.nectar.org.au/
-[Dashboard Overview]: images/dashboard_overview.png
-[Dashboard Instances]: images/dashboard_instances.png
-[Dashboard Allocations]: images/dashboard_allocations.png
+
 
