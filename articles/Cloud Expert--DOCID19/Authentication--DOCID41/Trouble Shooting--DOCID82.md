@@ -62,9 +62,13 @@ The below shows a code to get token:
 ```
 
 curl -s -X POST https://keystone.rc.nectar.org.au:5000/v2.0/tokens \
+
             -H "Content-Type: application/json" \
+            
             -d '{"auth": {"tenantName": "'"$OS_TENANT_NAME"'", "passwordCredentials":
+            
             {"username": "'"$OS_USERNAME"'", "password": "'"$OS_PASSWORD"'"}}}' \
+            
             | python -m json.tool
 
 ```
@@ -144,8 +148,11 @@ Following is an example of how to use the token in using Nova API to list flavor
 ```
 
 curl -s -H \
+
             "X-Auth-Token:token" \
+            
             http://8.21.28.222:8774/v2/tenant_id/flavors \
+            
             | python -m json.tool
 
 ```
