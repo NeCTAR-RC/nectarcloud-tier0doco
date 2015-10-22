@@ -6959,7 +6959,7 @@
           \ script and password, you can execute\nthe script using source file-name.sh.\
           \ and type in the password you\nobtained from Dashboard. \n Authentication\
           \ for python swift API \n You can use the below sample code to get authenticated.\
-          \  \n ``` \n from novaclient import client \n nova = client.Client(VERSION,\
+          \  \n ```bash \n from novaclient import client \n nova = client.Client(VERSION,\
           \ USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL) \n ``` \n The VERSION parameter\
           \ can be \"1.1\" or \"2\". You can get USERNAME, PROJECT_NAME and\nAUTH_URL\
           \ from the above .sh file obtained from the NeCTAR Dashboard and you can\n\
@@ -6980,10 +6980,10 @@
           \ instance, you need to get image name, keypair name, security group\nname\
           \ and flavor name. You can use the above mentioned commands to acquire these\n\
           information. Then, you can use nova boot command to launch a new instance,\
-          \ the\nformat is: \n ``` \n nova boot [instance-name]  --flavor [name] --image\
-          \ [name] --key-name [name] \n --security-groups [names separated by space]\
-          \ \n ``` \n You can also specify option --availability-zone to launch an\
-          \ instance in a\ndesigned zone and option --user-data  for a initialization\
+          \ the\nformat is: \n ```bash \n nova boot [instance-name]  --flavor [name]\
+          \ --image [name] --key-name [name]\n--security-groups [names separated by\
+          \ space] \n ``` \n You can also specify option --availability-zone to launch\
+          \ an instance in a\ndesigned zone and option --user-data  for a initialization\
           \ script\nused only for the first time when instance boots. The user data\
           \ script can be\nput in a file and then passed to instance creation. You\
           \ can see check this\nwebsite to see what script you can use to initialize\
@@ -7050,7 +7050,7 @@
           \ script and password, you can execute\nthe script using <code>source file-name.sh</code>.\
           \ and type in the password you\nobtained from Dashboard.</p>\n<h3>Authentication\
           \ for python swift API</h3>\n<p>You can use the below sample code to get\
-          \ authenticated. </p>\n<p>```</p>\n<p>from novaclient import client</p>\n\
+          \ authenticated. </p>\n<p>```bash</p>\n<p>from novaclient import client</p>\n\
           <p>nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)</p>\n\
           <p>```</p>\n<p>The VERSION parameter can be \"1.1\" or \"2\". You can get\
           \ USERNAME, PROJECT_NAME and\nAUTH_URL from the above .sh file obtained\
@@ -7073,13 +7073,13 @@
           \ a new instance, you need to get image name, keypair name, security group\n\
           name and flavor name. You can use the above mentioned commands to acquire\
           \ these\ninformation. Then, you can use nova boot command to launch a new\
-          \ instance, the\nformat is:</p>\n<p>```</p>\n<p>nova boot [instance-name]\
-          \  --flavor [name] --image [name] --key-name [name]</p>\n<p>--security-groups\
-          \ [names separated by space]</p>\n<p>```</p>\n<p>You can also specify option\
-          \ --availability-zone to launch an instance in a\ndesigned zone and option\
-          \ --user-data  for a initialization script\nused only for the first time\
-          \ when instance boots. The user data script can be\nput in a file and then\
-          \ passed to instance creation. You can see check this\n<a href=\"https://cloudinit.readthedocs.org/en/latest/\"\
+          \ instance, the\nformat is:</p>\n<p>```bash</p>\n<p>nova boot [instance-name]\
+          \  --flavor [name] --image [name] --key-name [name]\n--security-groups [names\
+          \ separated by space]</p>\n<p>```</p>\n<p>You can also specify option --availability-zone\
+          \ to launch an instance in a\ndesigned zone and option --user-data  for\
+          \ a initialization script\nused only for the first time when instance boots.\
+          \ The user data script can be\nput in a file and then passed to instance\
+          \ creation. You can see check this\n<a href=\"https://cloudinit.readthedocs.org/en/latest/\"\
           >website</a> to see what script you can use to initialize an instance. </p>\n\
           <p>To get more help, you can execute <code>nova help boot</code> to see\
           \ what other\noptions are available.</p>\n<p>To boot a stopped instance,\
@@ -7117,13 +7117,13 @@
           updated_at: '2015-09-03T01:27:59-04:00'
           visibility: 1
         folder_id: 6000190145
-        hits: 3
+        hits: 5
         id: 6000075747
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-20T23:05:03-04:00'
+        modified_at: '2015-10-21T20:05:09-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000075747
@@ -7136,7 +7136,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-10-20T23:05:03-04:00'
+        updated_at: '2015-10-21T20:05:09-04:00'
         user_id: 6002464727
   html: "<h2>Manage instance via API</h2>\n<p>The NeCTAR Dashboard is one way to manage\
     \ your instances in projects and NeCTAR\ncloud provides instance management via\
@@ -7179,7 +7179,7 @@
     \ the authentication script and password, you can execute\nthe script using <code>source\
     \ file-name.sh</code>. and type in the password you\nobtained from Dashboard.</p>\n\
     <h3>Authentication for python swift API</h3>\n<p>You can use the below sample\
-    \ code to get authenticated. </p>\n<p>```</p>\n<p>from novaclient import client</p>\n\
+    \ code to get authenticated. </p>\n<p>```bash</p>\n<p>from novaclient import client</p>\n\
     <p>nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)</p>\n\
     <p>```</p>\n<p>The VERSION parameter can be \"1.1\" or \"2\". You can get USERNAME,\
     \ PROJECT_NAME and\nAUTH_URL from the above .sh file obtained from the NeCTAR\
@@ -7201,15 +7201,15 @@
     \ you need to get image name, keypair name, security group\nname and flavor name.\
     \ You can use the above mentioned commands to acquire these\ninformation. Then,\
     \ you can use nova boot command to launch a new instance, the\nformat is:</p>\n\
-    <p>```</p>\n<p>nova boot [instance-name]  --flavor [name] --image [name] --key-name\
-    \ [name]</p>\n<p>--security-groups [names separated by space]</p>\n<p>```</p>\n\
-    <p>You can also specify option --availability-zone to launch an instance in a\n\
-    designed zone and option --user-data <user-data-file> for a initialization script\n\
-    used only for the first time when instance boots. The user data script can be\n\
-    put in a file and then passed to instance creation. You can see check this\n<a\
-    \ href=\"https://cloudinit.readthedocs.org/en/latest/\">website</a> to see what\
-    \ script you can use to initialize an instance. </p>\n<p>To get more help, you\
-    \ can execute <code>nova help boot</code> to see what other\noptions are available.</p>\n\
+    <p>```bash</p>\n<p>nova boot [instance-name]  --flavor [name] --image [name] --key-name\
+    \ [name]\n--security-groups [names separated by space]</p>\n<p>```</p>\n<p>You\
+    \ can also specify option --availability-zone to launch an instance in a\ndesigned\
+    \ zone and option --user-data <user-data-file> for a initialization script\nused\
+    \ only for the first time when instance boots. The user data script can be\nput\
+    \ in a file and then passed to instance creation. You can see check this\n<a href=\"\
+    https://cloudinit.readthedocs.org/en/latest/\">website</a> to see what script\
+    \ you can use to initialize an instance. </p>\n<p>To get more help, you can execute\
+    \ <code>nova help boot</code> to see what other\noptions are available.</p>\n\
     <p>To boot a stopped instance, use nova start <server name or ID>.</p>\n<p>To\
     \ stop an instance, use nova stop <server name or ID>.</p>\n<p>To suspend an instance\
     \ ,use nova suspend <server name or ID>.</p>\n<p>To show details of an instance,\
@@ -7231,7 +7231,7 @@
     <p>You can find more information about nova python API from this <a href=\"http://docs.openstack.org/developer/python-novaclient/api.html\"\
     >link</a></p>"
   parent: 39
-  sha1: 77c742b2e0fcbdcd108b8b5d0fa83abf9ecb6c44
+  sha1: 42bcffc9af6ddd19f40f2792de35a006e9167e22
   title: API
 65:
   freshdesk:
