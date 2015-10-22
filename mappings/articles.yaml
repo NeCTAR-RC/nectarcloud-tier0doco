@@ -4484,54 +4484,57 @@
         delta: true
         desc_un_html: " Installation \n You can use pip to install the python-swift\
           \ API and the swfit command line API. \n See below for the instructions:\
-          \ \n OS X \n sudo easy_install pip\nsudo pip install --upgrade setuptools\n\
-          sudo pip install python-swiftclient \n Ubuntu \n sudo aptitude install python-pip\n\
-          sudo pip install python-swiftclient \n RHEL, CentOS, or Fedora \n sudo yum\
-          \ install python-setuptools\nsudo easy_install pip\nsudo pip install --upgrade\
-          \ setuptools\nsudo pip install python-swiftclient \n Windows \n See pip\
-          \ windows for instructions on installing pip for Windows. \n pip install\
-          \ python-swiftclient \n Configuration \n Before you can use the python swift\
-          \ client and command line API you need to be\nauthenticated to the NeCTAR\
-          \ cloud. The below shows the instructions of how to\nget username/password\
-          \ and get authenticated. \n \n \n Login to NeCTAR Cloud Dashboard \n \n\
-          \ \n Click 'Access & Security' \n \n \n On the 'Access & Security' page,\
-          \ click tab 'API Access' \n \n \n Click button \"Download OpenStack RC File\"\
-          \ \n \n \n Save the file into a directory \n \n \n Click the drop down list\
-          \ with your email on the right top of page, then click\n Settings \n \n\
-          \ \n Click 'Reset Password' and save the password appeared on the screen\
-          \ \n \n \n API normally requires 4 environment variables to be set for authentication:\
-          \ \n \n auth URL \n username \n project id or name (most clients can handle\
-          \ either) \n password \n \n When using the script file you downloaded from\
-          \ NeCTAR Dashboard, these\nvarilabels are set by the script file and you\
-          \ can see these variables\nif you open the file. Example: \n OS_AUTH_URL:\
-          \ https://keystone.rc.nectar.org.au:5000/v2.0/\nOS_TENANT_NAME=my_science_project\n\
-          OS_TENANT_ID=sdfsdfsfwrwewer\nOS_USERNAME=clouduser@example.edu.au\nOS_PASSWORD=XXXXXX\
-          \ \n Authentication for Command Line API \n The below instruction assumes\
-          \ you use Linux operating system. \n Once you have obtained the authentication\
-          \ script and password, you can execute\nthe script suing source file-name.sh.\
-          \ and type in the password you\nobtained from Dashboard. \n Authentication\
-          \ for python swift API \n You can use the below sample code to get authenticated.\
-          \  \n ```\nfrom swiftclient import client \n swift = client.Connection(authurl=url,\
-          \ user=username, key=password,\ntenant_name=project_name, auth_version='2')\n\
-          ``` \n You can get authurl, user, key and tenant_name from the above .sh\
-          \ file obtained\nfrom the NeCTAR Dashboard. \n How to use \n Once the client\
-          \ is authenticated, you can start to use them. See below for how\nto get\
-          \ started. \n Command Line API \n you can use swift command to manage your\
-          \ objects storage, you can type: \n swift --help to find out all the available\
-          \ options. \n Python Swift API \n You can also use Python Swift API in your\
-          \ python code to access object storage. \n See below for a sample code:\
-          \ \n ``` \n from swiftclient import client \n swift = client.Connection(authurl=url,\
-          \ user=username, key=password,\ntenant_name=project_name, auth_version='2')\
-          \ \n container_name=\"\"\nswift.get_container(container_name) \n ``` \n\
-          \ You can find more information in the Object Storage API section.  "
+          \ \n OS X \n ``` \n sudo easy_install pip \n sudo pip install --upgrade\
+          \ setuptools \n sudo pip install python-swiftclient \n ``` \n Ubuntu \n\
+          \ ``` \n sudo aptitude install python-pip \n sudo pip install python-swiftclient\
+          \ \n ``` \n RHEL, CentOS, or Fedora \n ``` \n sudo yum install python-setuptools\
+          \ \n sudo easy_install pip \n sudo pip install --upgrade setuptools \n sudo\
+          \ pip install python-swiftclient \n ``` \n Windows \n See pip windows for\
+          \ instructions on installing pip for Windows. \n pip install python-swiftclient\
+          \ \n Configuration \n Before you can use the python swift client and command\
+          \ line API you need to be\nauthenticated to the NeCTAR cloud. The below\
+          \ shows the instructions of how to\nget username/password and get authenticated.\
+          \ \n \n \n Login to NeCTAR Cloud Dashboard \n \n \n Click 'Access & Security'\
+          \ \n \n \n On the 'Access & Security' page, click tab 'API Access' \n \n\
+          \ \n Click button \"Download OpenStack RC File\" \n \n \n Save the file\
+          \ into a directory \n \n \n Click the drop down list with your email on\
+          \ the right top of page, then click\n Settings \n \n \n Click 'Reset Password'\
+          \ and save the password appeared on the screen \n \n \n API normally requires\
+          \ 4 environment variables to be set for authentication: \n \n auth URL \n\
+          \ username \n project id or name (most clients can handle either) \n password\
+          \ \n \n When using the script file you downloaded from NeCTAR Dashboard,\
+          \ these\nvarilabels are set by the script file and you can see these variables\n\
+          if you open the file. Example: \n OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/\n\
+          OS_TENANT_NAME=my_science_project\nOS_TENANT_ID=sdfsdfsfwrwewer\nOS_USERNAME=clouduser@example.edu.au\n\
+          OS_PASSWORD=XXXXXX \n Authentication for Command Line API \n The below instruction\
+          \ assumes you use Linux operating system. \n Once you have obtained the\
+          \ authentication script and password, you can execute\nthe script suing\
+          \ source file-name.sh. and type in the password you\nobtained from Dashboard.\
+          \ \n Authentication for python swift API \n You can use the below sample\
+          \ code to get authenticated.  \n ``` \n from swiftclient import client \n\
+          \ swift = client.Connection(authurl=url, user=username, key=password,\n\
+          tenant_name=project_name, auth_version='2') \n ``` \n You can get authurl,\
+          \ user, key and tenant_name from the above .sh file obtained\nfrom the NeCTAR\
+          \ Dashboard. \n How to use \n Once the client is authenticated, you can\
+          \ start to use them. See below for how\nto get started. \n Command Line\
+          \ API \n You can use swift command to manage your objects storage, you can\
+          \ type: \n swift --help to find out all the available options. \n Python\
+          \ Swift API \n You can also use Python Swift API in your python code to\
+          \ access object storage. \n See below for a sample code: \n ``` \n from\
+          \ swiftclient import client \n swift = client.Connection(authurl=url, user=username,\
+          \ key=password,\ntenant_name=project_name, auth_version='2') \n container_name=\"\
+          \" \n swift.get_container(container_name) \n ``` \n You can find more information\
+          \ in the Object Storage API section.  "
         description: "<h2>Installation</h2>\n<p>You can use pip to install the python-swift\
           \ API and the swfit command line API.</p>\n<p>See below for the instructions:</p>\n\
-          <p>OS X</p>\n<p><code>sudo easy_install pip\nsudo pip install --upgrade\
-          \ setuptools\nsudo pip install python-swiftclient</code></p>\n<p>Ubuntu</p>\n\
-          <p><code>sudo aptitude install python-pip\nsudo pip install python-swiftclient</code></p>\n\
-          <p>RHEL, CentOS, or Fedora</p>\n<p><code>sudo yum install python-setuptools\n\
-          sudo easy_install pip\nsudo pip install --upgrade setuptools\nsudo pip install\
-          \ python-swiftclient</code></p>\n<p>Windows</p>\n<p>See <a href=\"http://docs.python-guide.org/en/latest/starting/install/win.html#distribute-pip\"\
+          <p>OS X</p>\n<p>```</p>\n<p>sudo easy_install pip</p>\n<p>sudo pip install\
+          \ --upgrade setuptools</p>\n<p>sudo pip install python-swiftclient</p>\n\
+          <p>```</p>\n<p>Ubuntu</p>\n<p>```</p>\n<p>sudo aptitude install python-pip</p>\n\
+          <p>sudo pip install python-swiftclient</p>\n<p>```</p>\n<p>RHEL, CentOS,\
+          \ or Fedora</p>\n<p>```</p>\n<p>sudo yum install python-setuptools</p>\n\
+          <p>sudo easy_install pip</p>\n<p>sudo pip install --upgrade setuptools</p>\n\
+          <p>sudo pip install python-swiftclient</p>\n<p>```</p>\n<p>Windows</p>\n\
+          <p>See <a href=\"http://docs.python-guide.org/en/latest/starting/install/win.html#distribute-pip\"\
           >pip windows</a> for instructions on installing pip for Windows.</p>\n<p><code>pip\
           \ install python-swiftclient</code></p>\n<h2>Configuration</h2>\n<p>Before\
           \ you can use the python swift client and command line API you need to be\n\
@@ -4557,20 +4560,21 @@
           the script suing <code>source file-name.sh</code>. and type in the password\
           \ you\nobtained from Dashboard.</p>\n<h3>Authentication for python swift\
           \ API</h3>\n<p>You can use the below sample code to get authenticated. </p>\n\
-          <p>```\nfrom swiftclient import client</p>\n<p>swift = client.Connection(authurl=url,\
-          \ user=username, key=password,\ntenant_name=project_name, auth_version='2')\n\
-          ```</p>\n<p>You can get authurl, user, key and tenant_name from the above\
+          <p>```</p>\n<p>from swiftclient import client</p>\n<p>swift = client.Connection(authurl=url,\
+          \ user=username, key=password,\ntenant_name=project_name, auth_version='2')</p>\n\
+          <p>```</p>\n<p>You can get authurl, user, key and tenant_name from the above\
           \ .sh file obtained\nfrom the NeCTAR Dashboard.</p>\n<h2>How to use</h2>\n\
           <p>Once the client is authenticated, you can start to use them. See below\
-          \ for how\nto get started.</p>\n<h3>Command Line API</h3>\n<p>you can use\
+          \ for how\nto get started.</p>\n<h3>Command Line API</h3>\n<p>You can use\
           \ swift command to manage your objects storage, you can type:</p>\n<p><code>swift\
           \ --help</code> to find out all the available options.</p>\n<h3>Python Swift\
           \ API</h3>\n<p>You can also use Python Swift API in your python code to\
           \ access object storage.</p>\n<p>See below for a sample code:</p>\n<p>```</p>\n\
           <p>from swiftclient import client</p>\n<p>swift = client.Connection(authurl=url,\
           \ user=username, key=password,\ntenant_name=project_name, auth_version='2')</p>\n\
-          <p>container_name=\"\"\nswift.get_container(container_name)</p>\n<p>```</p>\n\
-          <p>You can find more information in the Object Storage API section. </p>"
+          <p>container_name=\"\"</p>\n<p>swift.get_container(container_name)</p>\n\
+          <p>```</p>\n<p>You can find more information in the Object Storage API section.\
+          \ </p>"
         folder:
           category_id: 6000122279
           created_at: '2015-09-03T01:28:00-04:00'
@@ -4581,21 +4585,21 @@
           language_id: 6
           name: Object Storage
           parent_id: 6000190146
-          position: 3
+          position: 2
           updated_at: '2015-09-03T01:28:00-04:00'
           visibility: 1
         folder_id: 6000190146
-        hits: 0
+        hits: 12
         id: 6000061931
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-09-15T23:43:00-04:00'
+        modified_at: '2015-10-21T20:09:13-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000061931
-        position: 1
+        position: 2
         seo_data: {}
         status: 2
         string_01: null
@@ -4604,16 +4608,17 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Getting Started
-        updated_at: '2015-09-15T23:43:00-04:00'
+        updated_at: '2015-10-21T20:09:13-04:00'
         user_id: 6002464727
   html: "<h2>Installation</h2>\n<p>You can use pip to install the python-swift API\
     \ and the swfit command line API.</p>\n<p>See below for the instructions:</p>\n\
-    <p>OS X</p>\n<p><code>sudo easy_install pip\nsudo pip install --upgrade setuptools\n\
-    sudo pip install python-swiftclient</code></p>\n<p>Ubuntu</p>\n<p><code>sudo aptitude\
-    \ install python-pip\nsudo pip install python-swiftclient</code></p>\n<p>RHEL,\
-    \ CentOS, or Fedora</p>\n<p><code>sudo yum install python-setuptools\nsudo easy_install\
-    \ pip\nsudo pip install --upgrade setuptools\nsudo pip install python-swiftclient</code></p>\n\
-    <p>Windows</p>\n<p>See <a href=\"http://docs.python-guide.org/en/latest/starting/install/win.html#distribute-pip\"\
+    <p>OS X</p>\n<p>```</p>\n<p>sudo easy_install pip</p>\n<p>sudo pip install --upgrade\
+    \ setuptools</p>\n<p>sudo pip install python-swiftclient</p>\n<p>```</p>\n<p>Ubuntu</p>\n\
+    <p>```</p>\n<p>sudo aptitude install python-pip</p>\n<p>sudo pip install python-swiftclient</p>\n\
+    <p>```</p>\n<p>RHEL, CentOS, or Fedora</p>\n<p>```</p>\n<p>sudo yum install python-setuptools</p>\n\
+    <p>sudo easy_install pip</p>\n<p>sudo pip install --upgrade setuptools</p>\n<p>sudo\
+    \ pip install python-swiftclient</p>\n<p>```</p>\n<p>Windows</p>\n<p>See <a href=\"\
+    http://docs.python-guide.org/en/latest/starting/install/win.html#distribute-pip\"\
     >pip windows</a> for instructions on installing pip for Windows.</p>\n<p><code>pip\
     \ install python-swiftclient</code></p>\n<h2>Configuration</h2>\n<p>Before you\
     \ can use the python swift client and command line API you need to be\nauthenticated\
@@ -4637,22 +4642,22 @@
     \ the authentication script and password, you can execute\nthe script suing <code>source\
     \ file-name.sh</code>. and type in the password you\nobtained from Dashboard.</p>\n\
     <h3>Authentication for python swift API</h3>\n<p>You can use the below sample\
-    \ code to get authenticated. </p>\n<p>```\nfrom swiftclient import client</p>\n\
+    \ code to get authenticated. </p>\n<p>```</p>\n<p>from swiftclient import client</p>\n\
     <p>swift = client.Connection(authurl=url, user=username, key=password,\ntenant_name=project_name,\
-    \ auth_version='2')\n```</p>\n<p>You can get authurl, user, key and tenant_name\
+    \ auth_version='2')</p>\n<p>```</p>\n<p>You can get authurl, user, key and tenant_name\
     \ from the above .sh file obtained\nfrom the NeCTAR Dashboard.</p>\n<h2>How to\
     \ use</h2>\n<p>Once the client is authenticated, you can start to use them. See\
-    \ below for how\nto get started.</p>\n<h3>Command Line API</h3>\n<p>you can use\
+    \ below for how\nto get started.</p>\n<h3>Command Line API</h3>\n<p>You can use\
     \ swift command to manage your objects storage, you can type:</p>\n<p><code>swift\
     \ --help</code> to find out all the available options.</p>\n<h3>Python Swift API</h3>\n\
     <p>You can also use Python Swift API in your python code to access object storage.</p>\n\
     <p>See below for a sample code:</p>\n<p>```</p>\n<p>from swiftclient import client</p>\n\
     <p>swift = client.Connection(authurl=url, user=username, key=password,\ntenant_name=project_name,\
-    \ auth_version='2')</p>\n<p>container_name=\"\"\nswift.get_container(container_name)</p>\n\
+    \ auth_version='2')</p>\n<p>container_name=\"\"</p>\n<p>swift.get_container(container_name)</p>\n\
     <p>```</p>\n<p>You can find more information in the Object Storage API section.\
     \ </p>"
   parent: 40
-  sha1: 48b62875d7a25f4cf58fa2d80c09c3ee2bad1eb3
+  sha1: be01f2205e5aa12f872591df69ce0bee3625363c
   title: Getting Started
 55:
   freshdesk:
@@ -8374,12 +8379,12 @@
           \ the error message and generally it will\ngive you very good hints about\
           \ what might be wrong. \n For example, if you execute swift list on the\
           \ command line without\nauthentication, the error message might look like\
-          \ this: \n ```\nAuth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment\
+          \ this: \n \n Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment\
           \ variables\nto be set or overridden with -A, -U, or -K. \n Auth version\
           \ 2.0 requires OS_AUTH_URL, OS_USERNAME, OS_PASSWORD, and\nOS_TENANT_NAME\
           \ OS_TENANT_ID to be set or overridden with --os-auth-url,\n--os-username,\
           \ --os-password, --os-tenant-name or os-tenant-id. Note:\nadding \"-V 2\"\
-          \ is necessary for this.\n``` \n The above message indicates you that there\
+          \ is necessary for this. \n \n The above message indicates you that there\
           \ are 2 authentication versions that\nswift currently supports and each\
           \ version requires some environment variables\nto be set. To set these environment\
           \ variables you can either source the script\nfile downloaded from NeCTAR\
@@ -8411,8 +8416,8 @@
           \ response header, which give you a lot of more insight\ninformation. To\
           \ verify parameters in the request header, you can refer to\nOpenStack service\
           \ API to see what are expected. \n To enable debugging information on the\
-          \ standard out for Python API, you can add\nthe below code: \n ```\nimport\
-          \ logging\nlogger = logging.getLogger(\"swiftclient\")\nlogging.basicConfig(level=logging.DEBUG)\
+          \ standard out for Python API, you can add\nthe below code: \n ``` \n import\
+          \ logging \n logger = logging.getLogger(\"swiftclient\") \n logging.basicConfig(level=logging.DEBUG)\
           \ \n ``` \n The will print the same output as adding --debug option for\
           \ command line API. \n Debugging via Source Code \n If the above techniques\
           \ are still not helpful, you can always look at the source\ncode to find\
@@ -8448,9 +8453,9 @@
 
           authentication, the error message might look like this:</p>
 
-          <p>```
+          <blockquote>
 
-          Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment variables
+          <p>Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment variables
 
           to be set or overridden with -A, -U, or -K.</p>
 
@@ -8460,9 +8465,9 @@
 
           --os-username, --os-password, --os-tenant-name or os-tenant-id. Note:
 
-          adding "-V 2" is necessary for this.
+          adding "-V 2" is necessary for this.</p>
 
-          ```</p>
+          </blockquote>
 
           <p>The above message indicates you that there are 2 authentication versions
           that
@@ -8598,13 +8603,13 @@
 
           the below code:</p>
 
-          <p>```
+          <p>```</p>
 
-          import logging
+          <p>import logging</p>
 
-          logger = logging.getLogger("swiftclient")
+          <p>logger = logging.getLogger("swiftclient")</p>
 
-          logging.basicConfig(level=logging.DEBUG)</p>
+          <p>logging.basicConfig(level=logging.DEBUG)</p>
 
           <p>```</p>
 
@@ -8652,13 +8657,13 @@
           updated_at: '2015-09-03T01:28:00-04:00'
           visibility: 1
         folder_id: 6000190146
-        hits: 1
+        hits: 2
         id: 6000076083
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-19T17:15:25-04:00'
+        modified_at: '2015-10-21T20:05:48-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000076083
@@ -8671,7 +8676,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Trouble Shooting
-        updated_at: '2015-10-19T17:15:25-04:00'
+        updated_at: '2015-10-21T20:05:48-04:00'
         user_id: 6002464727
   html: '<h2>Debugging Swift Command line Client</h2>
 
@@ -8695,9 +8700,9 @@
 
     authentication, the error message might look like this:</p>
 
-    <p>```
+    <blockquote>
 
-    Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment variables
+    <p>Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment variables
 
     to be set or overridden with -A, -U, or -K.</p>
 
@@ -8707,9 +8712,9 @@
 
     --os-username, --os-password, --os-tenant-name or os-tenant-id. Note:
 
-    adding "-V 2" is necessary for this.
+    adding "-V 2" is necessary for this.</p>
 
-    ```</p>
+    </blockquote>
 
     <p>The above message indicates you that there are 2 authentication versions that
 
@@ -8839,13 +8844,13 @@
 
     the below code:</p>
 
-    <p>```
+    <p>```</p>
 
-    import logging
+    <p>import logging</p>
 
-    logger = logging.getLogger("swiftclient")
+    <p>logger = logging.getLogger("swiftclient")</p>
 
-    logging.basicConfig(level=logging.DEBUG)</p>
+    <p>logging.basicConfig(level=logging.DEBUG)</p>
 
     <p>```</p>
 
@@ -8875,7 +8880,7 @@
 
     and receiving response. It is also used by the command line swift client. </p>'
   parent: 40
-  sha1: 2c07975b9e9306c9b62fedbf218646f09996e7e7
+  sha1: 30d69bc3345b6ac25828af0f4c277b4c4cf54904
   title: Trouble Shooting
 71:
   freshdesk:
