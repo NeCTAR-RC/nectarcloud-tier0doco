@@ -5054,15 +5054,14 @@
           \ Parser\ncan be useful in finding the syntax error. \n To convert from\
           \ JSON to YAML, an online converter such as the one at\nConvert JSON to\
           \ YAML Online\ncan be useful in porting between the two formats. \n To debug\
-          \ JSON syntax errors the following command set is useful: \n bash\ncat template.json\
+          \ JSON syntax errors the following command set is useful: \n cat template.json\
           \ | python -m json.tool \n Where template.json is the name of your template.\
           \ The command simply pipes the\nfile into python, which in turn will invoke\
           \ the json module that finally will\nvalidate and pretty print the file.\
           \ \n Similarly, if you have the pyaml module installed\nyou can validate\
-          \ yaml files: \n bash\ncat template.yaml | python -m pyaml \n Where template.yaml\
+          \ yaml files: \n cat template.yaml | python -m pyaml \n Where template.yaml\
           \ is the name of your template. \n The form of the command in both of the\
-          \ above is useful, in that you can\nverify remote files: \n bash\ncurl -s\
-          \ https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/json/Fedora/WordPress_2_Instances.json\
+          \ above is useful, in that you can\nverify remote files: \n curl -s https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/json/Fedora/WordPress_2_Instances.json\
           \ | python -m json.tool \n If the stack launches, and reports no error,\
           \ suspicion falls on\nthe automated installation of software. \n In this\
           \ scenario turn to on instances log files and scripts. \n On the newly launched\
@@ -5075,12 +5074,12 @@
           \ \n \n If the stack state does reveal an error start by trying to understand\
           \ the\ncommand line client error messages. \n If you have nested templates,\
           \ you can find the ones that failed to launch with\nthe following command:\
-          \ \n bash\nheat stack-list --show-nested -f \"status=FAILED\" \n For a given\
-          \ template, you can see the list of events associated with the\ntemplate:\
-          \ \n bash\nheat event-list <template id> \n You can then drill down into\
-          \ the events for a given resource: \n bash\nheat event-list -r <resource\
-          \ name> <template id> \n And then examine a specific event for more detail:\
-          \ \n bash\nheat event-show <template id> <resource name> <event id> "
+          \ \n heat stack-list --show-nested -f \"status=FAILED\" \n For a given template,\
+          \ you can see the list of events associated with the\ntemplate: \n heat\
+          \ event-list <template id> \n You can then drill down into the events for\
+          \ a given resource: \n heat event-list -r <resource name> <template id>\
+          \ \n And then examine a specific event for more detail: \n heat event-show\
+          \ <template id> <resource name> <event id> "
         description: '<h1>Trouble shooting Heat</h1>
 
           <p>Beyond the OpenStack <a href="https://wiki.openstack.org/wiki/Heat/TroubleShooting">tips</a>
@@ -5125,9 +5124,7 @@
 
           <p>To debug JSON syntax errors the following command set is useful:</p>
 
-          <p><code>bash
-
-          cat template.json | python -m json.tool</code></p>
+          <p><code>cat template.json | python -m json.tool</code></p>
 
           <p>Where <code>template.json</code> is the name of your template. The command
           simply pipes the
@@ -5142,9 +5139,7 @@
 
           you can validate yaml files:</p>
 
-          <p><code>bash
-
-          cat template.yaml | python -m pyaml</code></p>
+          <p><code>cat template.yaml | python -m pyaml</code></p>
 
           <p>Where <code>template.yaml</code> is the name of your template.</p>
 
@@ -5152,9 +5147,7 @@
 
           verify remote files:</p>
 
-          <p><code>bash
-
-          curl -s https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/json/Fedora/WordPress_2_Instances.json
+          <p><code>curl -s https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/json/Fedora/WordPress_2_Instances.json
           | python -m json.tool</code></p>
 
           <p>If the stack launches, and reports no error, suspicion falls on
@@ -5191,30 +5184,23 @@
 
           the following command:</p>
 
-          <p><code>bash
-
-          heat stack-list --show-nested -f "status=FAILED"</code></p>
+          <p><code>heat stack-list --show-nested -f "status=FAILED"</code></p>
 
           <p>For a given template, you can see the list of events associated with
           the
 
           template:</p>
 
-          <p><code>bash
-
-          heat event-list &lt;template id&gt;</code></p>
+          <p><code>heat event-list &lt;template id&gt;</code></p>
 
           <p>You can then drill down into the events for a given resource:</p>
 
-          <p><code>bash
-
-          heat event-list -r &lt;resource name&gt; &lt;template id&gt;</code></p>
+          <p><code>heat event-list -r &lt;resource name&gt; &lt;template id&gt;</code></p>
 
           <p>And then examine a specific event for more detail:</p>
 
-          <p><code>bash
-
-          heat event-show &lt;template id&gt; &lt;resource name&gt; &lt;event id&gt;</code></p>'
+          <p><code>heat event-show &lt;template id&gt; &lt;resource name&gt; &lt;event
+          id&gt;</code></p>'
         folder:
           category_id: 6000122279
           created_at: '2015-09-03T01:28:02-04:00'
@@ -5225,21 +5211,21 @@
           language_id: 6
           name: Heat
           parent_id: 6000190148
-          position: 5
+          position: 4
           updated_at: '2015-09-03T01:28:02-04:00'
           visibility: 1
         folder_id: 6000190148
-        hits: 3
+        hits: 5
         id: 6000068002
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-14T07:18:21-04:00'
+        modified_at: '2015-10-22T00:56:55-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000068002
-        position: 4
+        position: 7
         seo_data: {}
         status: 2
         string_01: null
@@ -5248,7 +5234,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Trouble Shooting
-        updated_at: '2015-10-14T07:18:21-04:00'
+        updated_at: '2015-10-22T00:56:55-04:00'
         user_id: 6002464727
   html: '<h1>Trouble shooting Heat</h1>
 
@@ -5294,9 +5280,7 @@
 
     <p>To debug JSON syntax errors the following command set is useful:</p>
 
-    <p><code>bash
-
-    cat template.json | python -m json.tool</code></p>
+    <p><code>cat template.json | python -m json.tool</code></p>
 
     <p>Where <code>template.json</code> is the name of your template. The command
     simply pipes the
@@ -5310,9 +5294,7 @@
 
     you can validate yaml files:</p>
 
-    <p><code>bash
-
-    cat template.yaml | python -m pyaml</code></p>
+    <p><code>cat template.yaml | python -m pyaml</code></p>
 
     <p>Where <code>template.yaml</code> is the name of your template.</p>
 
@@ -5320,9 +5302,7 @@
 
     verify remote files:</p>
 
-    <p><code>bash
-
-    curl -s https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/json/Fedora/WordPress_2_Instances.json
+    <p><code>curl -s https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/json/Fedora/WordPress_2_Instances.json
     | python -m json.tool</code></p>
 
     <p>If the stack launches, and reports no error, suspicion falls on
@@ -5357,31 +5337,23 @@
 
     the following command:</p>
 
-    <p><code>bash
-
-    heat stack-list --show-nested -f "status=FAILED"</code></p>
+    <p><code>heat stack-list --show-nested -f "status=FAILED"</code></p>
 
     <p>For a given template, you can see the list of events associated with the
 
     template:</p>
 
-    <p><code>bash
-
-    heat event-list &lt;template id&gt;</code></p>
+    <p><code>heat event-list &lt;template id&gt;</code></p>
 
     <p>You can then drill down into the events for a given resource:</p>
 
-    <p><code>bash
-
-    heat event-list -r &lt;resource name&gt; &lt;template id&gt;</code></p>
+    <p><code>heat event-list -r &lt;resource name&gt; &lt;template id&gt;</code></p>
 
     <p>And then examine a specific event for more detail:</p>
 
-    <p><code>bash
-
-    heat event-show &lt;template id&gt; &lt;resource name&gt; &lt;event id&gt;</code></p>'
+    <p><code>heat event-show &lt;template id&gt; &lt;resource name&gt; &lt;event id&gt;</code></p>'
   parent: 42
-  sha1: 930631d54473946038c5e96492d4b4e7b62c1bfc
+  sha1: 49018f63c2365519bbb102f7706503b28c97870e
   title: Trouble Shooting
 58:
   freshdesk:
@@ -10309,19 +10281,19 @@
           \ sudo iptables -I INPUT 1 -p tcp -dport 80 -j ACCEPT\nsudo iptables -I\
           \ INPUT 1 -p tcp --dport 443 -j ACCEPT \n Finally, you need to drop all\
           \ other traffic. You need to make sure you have set\nto allow SSH connection,\
-          \ otherwise you will lose access to the Virtual Machine: \n ``` \n sudo\
-          \ iptables -P INPUT DROP \n ``` \n You can save your IPtables changes by\
-          \ (Ubuntu):  \n ```  \n iptables-save > /etc/iptables.rules \n ``` \n Install\
-          \ fail2ban \n The SSH daemon itself is a Linux service that exposed to the\
-          \ Internet and creates\na security risk for the system. fail2ban can mitigate\
-          \ this problem by creating\nrules that can automatically alter your your\
-          \ IPtables firewall and ban\nunsuccessful login attempts based on a predefined\
-          \ number.  \n You can use the below commands to install fail2ban in Ubuntu:\
-          \ \n ``` \n sudo apt-get update\nsudo apt-get install fail2ban \n ``` \n\
-          \ To setup the fail2ban, please follow this instruction. \n Disable Unneeded\
-          \ Services \n Unneeded services are a potential security risk, so you can\
-          \ execute sudo service --status-all\nto list all available services.  You\
-          \ can examine the output carefully and disable\nany services not desired. "
+          \ otherwise you will lose access to the Virtual Machine: \n sudo iptables\
+          \ -P INPUT DROP \n You can save your IPtables changes by (Ubuntu):  \n iptables-save\
+          \ > /etc/iptables.rules \n Install fail2ban \n The SSH daemon itself is\
+          \ a Linux service that exposed to the Internet and creates\na security risk\
+          \ for the system. fail2ban can mitigate this problem by creating\nrules\
+          \ that can automatically alter your your IPtables firewall and ban\nunsuccessful\
+          \ login attempts based on a predefined number.  \n You can use the below\
+          \ commands to install fail2ban in Ubuntu: \n sudo apt-get update\nsudo apt-get\
+          \ install fail2ban \n To setup the fail2ban, please follow this instruction.\
+          \ \n Disable Unneeded Services \n Unneeded services are a potential security\
+          \ risk, so you can execute sudo service --status-all\nto list all available\
+          \ services.  You can examine the output carefully and disable\nany services\
+          \ not desired. "
         description: "<h2>Security API</h2>\n<p>The NeCTAR Cloud doesn't provide a\
           \ specific API for security purposes. The only\nsecurity relevant operation\
           \ is to manage security groups through the Nova API.\nIf you want to know\
@@ -10396,17 +10368,17 @@
           \ -I INPUT 1 -p tcp -dport 80 -j ACCEPT</code>\n<code>sudo iptables -I INPUT\
           \ 1 -p tcp --dport 443 -j ACCEPT</code></p>\n<p>Finally, you need to drop\
           \ all other traffic. You need to make sure you have set\nto allow SSH connection,\
-          \ otherwise you will lose access to the Virtual Machine:</p>\n<p>```</p>\n\
-          <p>sudo iptables -P INPUT DROP</p>\n<p>```</p>\n<p>You can save your IPtables\
-          \ changes by (Ubuntu): </p>\n<p>``` </p>\n<p>iptables-save &gt; /etc/iptables.rules</p>\n\
-          <p>```</p>\n<h2>Install fail2ban</h2>\n<p>The SSH daemon itself is a Linux\
-          \ service that exposed to the Internet and creates\na security risk for\
-          \ the system. fail2ban can mitigate this problem by creating\nrules that\
-          \ can automatically alter your your IPtables firewall and ban\nunsuccessful\
-          \ login attempts based on a predefined number. </p>\n<p>You can use the\
-          \ below commands to install fail2ban in Ubuntu:</p>\n<p>```</p>\n<p>sudo\
-          \ apt-get update\nsudo apt-get install fail2ban</p>\n<p>```</p>\n<p>To setup\
-          \ the fail2ban, please follow this <a href=\"https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04\"\
+          \ otherwise you will lose access to the Virtual Machine:</p>\n<p><code>sudo\
+          \ iptables -P INPUT DROP</code></p>\n<p>You can save your IPtables changes\
+          \ by (Ubuntu): </p>\n<p><code>iptables-save &gt; /etc/iptables.rules</code></p>\n\
+          <h2>Install fail2ban</h2>\n<p>The SSH daemon itself is a Linux service that\
+          \ exposed to the Internet and creates\na security risk for the system. fail2ban\
+          \ can mitigate this problem by creating\nrules that can automatically alter\
+          \ your your IPtables firewall and ban\nunsuccessful login attempts based\
+          \ on a predefined number. </p>\n<p>You can use the below commands to install\
+          \ fail2ban in Ubuntu:</p>\n<p><code>sudo apt-get update</code>\n<code>sudo\
+          \ apt-get install fail2ban</code></p>\n<p>To setup the fail2ban, please\
+          \ follow this <a href=\"https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04\"\
           >instruction</a>.</p>\n<h2>Disable Unneeded Services</h2>\n<p>Unneeded services\
           \ are a potential security risk, so you can execute <code>sudo service --status-all</code>\n\
           to list all available services.  You can examine the output carefully and\
@@ -10425,13 +10397,13 @@
           updated_at: '2015-10-01T22:28:23-04:00'
           visibility: 1
         folder_id: 6000203455
-        hits: 1
+        hits: 2
         id: 6000077799
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-20T21:03:17-04:00'
+        modified_at: '2015-10-22T00:56:57-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000077799
@@ -10444,7 +10416,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-10-20T21:03:17-04:00'
+        updated_at: '2015-10-22T00:56:57-04:00'
         user_id: 6002464727
   html: "<h2>Security API</h2>\n<p>The NeCTAR Cloud doesn't provide a specific API\
     \ for security purposes. The only\nsecurity relevant operation is to manage security\
@@ -10516,21 +10488,21 @@
     \ iptables -I INPUT 1 -p tcp --dport 443 -j ACCEPT</code></p>\n<p>Finally, you\
     \ need to drop all other traffic. You need to make sure you have set\nto allow\
     \ SSH connection, otherwise you will lose access to the Virtual Machine:</p>\n\
-    <p>```</p>\n<p>sudo iptables -P INPUT DROP</p>\n<p>```</p>\n<p>You can save your\
-    \ IPtables changes by (Ubuntu): </p>\n<p>``` </p>\n<p>iptables-save &gt; /etc/iptables.rules</p>\n\
-    <p>```</p>\n<h2>Install fail2ban</h2>\n<p>The SSH daemon itself is a Linux service\
-    \ that exposed to the Internet and creates\na security risk for the system. fail2ban\
-    \ can mitigate this problem by creating\nrules that can automatically alter your\
-    \ your IPtables firewall and ban\nunsuccessful login attempts based on a predefined\
-    \ number. </p>\n<p>You can use the below commands to install fail2ban in Ubuntu:</p>\n\
-    <p>```</p>\n<p>sudo apt-get update\nsudo apt-get install fail2ban</p>\n<p>```</p>\n\
+    <p><code>sudo iptables -P INPUT DROP</code></p>\n<p>You can save your IPtables\
+    \ changes by (Ubuntu): </p>\n<p><code>iptables-save &gt; /etc/iptables.rules</code></p>\n\
+    <h2>Install fail2ban</h2>\n<p>The SSH daemon itself is a Linux service that exposed\
+    \ to the Internet and creates\na security risk for the system. fail2ban can mitigate\
+    \ this problem by creating\nrules that can automatically alter your your IPtables\
+    \ firewall and ban\nunsuccessful login attempts based on a predefined number.\
+    \ </p>\n<p>You can use the below commands to install fail2ban in Ubuntu:</p>\n\
+    <p><code>sudo apt-get update</code>\n<code>sudo apt-get install fail2ban</code></p>\n\
     <p>To setup the fail2ban, please follow this <a href=\"https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04\"\
     >instruction</a>.</p>\n<h2>Disable Unneeded Services</h2>\n<p>Unneeded services\
     \ are a potential security risk, so you can execute <code>sudo service --status-all</code>\n\
     to list all available services.  You can examine the output carefully and disable\n\
     any services not desired.</p>"
   parent: 43
-  sha1: 2b4ab65752d20ecc73b3932c00ac23d780ffa970
+  sha1: 98a72972bdfac85d3ddcd9a7fa0a4547dc8772bd
   title: API
 79:
   freshdesk:
