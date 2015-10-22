@@ -9704,39 +9704,39 @@
           \ computers must be established before accessing the Cloud resources\nsuch\
           \ as Dashboard, APIs, Virtual Machines, etc. \n Methods of Authentication\
           \ \n The NecTAR Cloud uses three basic types of authentication for users\
-          \ to access\nthe Cloud: single sign on authentication (AAF), certificate\
-          \ based authentication\nfor virtual machines and PKI token based authentication\
-          \ for APIs. \n Single Sign on Authentication \n Single sign on authentication\
-          \ is the process that gives users the ability to access\ndistributed multiple\
-          \ protected computer system with a single authentication.\nNeCTAR Cloud\
-          \ uses Australian Access Federation (AAF) as the single sign on\nauthentication\
-          \ solution for access of the Dashboard. The AAF provides the ability\nfor\
-          \ users to log into a number of eResearch services including NeCTAR Cloud\
-          \ using\nthe same username and password you would usually use when logging\
-          \ into your\ninstitution's or organization's computer system. The authentications\
-          \ involves\n2 steps, select your institution or organization and provide\
-          \ your username/password.\nTo get more information about AAF, you can visit\
-          \ their website at\nhttp://aaf.edu.au. \n Certificate Based Authentication\
-          \ \n Certificate based authentication is an alternative way to identify\
-          \ yourself to\na computer service, rather than typing a username and password.\
-          \ It is more secure\nand flexible, but more difficult to set up. \n You\
-          \ generate a key pair, consisting of public key and a private key. The private\n\
-          key can generate an unique signature and only the relevant public key can\
-          \ verify if\nthe signature is genuine. \n After generating a key pair, you\
-          \ copy the public the key to the Virtual Machine.\nThen, when the Virtual\
-          \ Machines asks you to prove who you are, you can provide\nthe private key\
-          \ and the Virtual Machine can verify the signature and allow you\nto log\
-          \ in. Even if the Virtual Machine is hacked and your public key is stolen,\
-          \ the\npublic key cannot be used to do authentication and you are still\
-          \ safe.  \n By default, virtual machines in NeCTAR Cloud uses this authentication\
-          \ method and\nit requires you to generate a public/private key pairs before\
-          \ you can login. \n PKI token based authentication \n NeCTAR Cloud APIs\
-          \ use Token based authentication. The token is temporary and\nshort lived,\
-          \ which means it is safer to cache them than username/password pairs. \n\
-          \ A token is a piece of data given to a user by the Cloud after a valid\
-          \ username/password\npair has been provided. The token also has an associated\
-          \ expiration date to indicate\nits validation. Then, the user can use this\
-          \ token in the API request and the token\nis validated on the API end point. "
+          \ to access\nthe Cloud: single sign on authentication (AAF), SSH based authentication\n\
+          for virtual machines and token based authentication for APIs. \n Single\
+          \ Sign on Authentication \n Single sign on authentication is the process\
+          \ that gives users the ability to access\ndistributed multiple protected\
+          \ computer system with a single authentication.\nNeCTAR Cloud uses Australian\
+          \ Access Federation (AAF) as the single sign on\nauthentication solution\
+          \ for access of the Dashboard. The AAF provides the ability\nfor users to\
+          \ log into a number of eResearch services including NeCTAR Cloud using\n\
+          the same username and password you would usually use when logging into your\n\
+          institution's or organization's computer system. The authentications involves\n\
+          2 steps, select your institution or organization and provide your username/password.\n\
+          To get more information about AAF, you can visit their website at\nhttp://aaf.edu.au.\
+          \ \n SSH Based Authentication \n SSH (Secure SHell) based authentication\
+          \ is an alternative way to identify\nyourself to a computer service, rather\
+          \ than typing a username and password. It\nis more secure and flexible,\
+          \ but more difficult to set up. \n You generate a key pair, consisting of\
+          \ public key and a private key. The private\nkey can generate an unique\
+          \ signature and only the relevant public key can\nverify if the signature\
+          \ is genuine. \n After generating a key pair, you copy the public the key\
+          \ to the Virtual Machine.\nThen, when the Virtual Machines asks you to prove\
+          \ who you are, you use\nthe private key to sign a message and the Virtual\
+          \ Machine can verify the\nsignature and allow you to log in. Even if the\
+          \ Virtual Machine is hacked and\nyour public key is stolen, the public key\
+          \ cannot be used to do authentication\nand you are still safe. \n By default,\
+          \ virtual machines in NeCTAR Cloud uses this authentication method and\n\
+          it requires you to generate a public/private key pairs before you can login.\
+          \ \n Token based authentication \n NeCTAR Cloud APIs use Token based authentication.\
+          \ The token is temporary and\nshort lived, which means it is safer to cache\
+          \ them than username/password pairs. \n A token is a piece of data given\
+          \ to a user by the Cloud after a valid username/password\npair has been\
+          \ provided. The token also has an associated expiration date to indicate\n\
+          its validation. Then, the user can use this token in the API request and\
+          \ the token\nis validated on the API end point. "
         description: '<h2>Introduction to Authentication</h2>
 
           <p>Authentication is the process of verifying the identify of a user that
@@ -9754,9 +9754,9 @@
           <p>The NecTAR Cloud uses three basic types of authentication for users to
           access
 
-          the Cloud: single sign on authentication (AAF), certificate based authentication
+          the Cloud: single sign on authentication (AAF), SSH based authentication
 
-          for virtual machines and PKI token based authentication for APIs.</p>
+          for virtual machines and token based authentication for APIs.</p>
 
           <h3>Single Sign on Authentication</h3>
 
@@ -9784,43 +9784,42 @@
 
           <a href="http://aaf.edu.au/">http://aaf.edu.au</a>.</p>
 
-          <h3>Certificate Based Authentication</h3>
+          <h3>SSH Based Authentication</h3>
 
-          <p>Certificate based authentication is an alternative way to identify yourself
-          to
+          <p>SSH (Secure SHell) based authentication is an alternative way to identify
 
-          a computer service, rather than typing a username and password. It is more
-          secure
+          yourself to a computer service, rather than typing a username and password.
+          It
 
-          and flexible, but more difficult to set up.</p>
+          is more secure and flexible, but more difficult to set up.</p>
 
           <p>You generate a key pair, consisting of public key and a private key.
           The private
 
           key can generate an unique signature and only the relevant public key can
-          verify if
 
-          the signature is genuine.</p>
+          verify if the signature is genuine.</p>
 
           <p>After generating a key pair, you copy the public the key to the Virtual
           Machine.
 
-          Then, when the Virtual Machines asks you to prove who you are, you can provide
+          Then, when the Virtual Machines asks you to prove who you are, you use
 
-          the private key and the Virtual Machine can verify the signature and allow
-          you
+          the private key to sign a message and the Virtual Machine can verify the
 
-          to log in. Even if the Virtual Machine is hacked and your public key is
-          stolen, the
+          signature and allow you to log in. Even if the Virtual Machine is hacked
+          and
 
-          public key cannot be used to do authentication and you are still safe. </p>
+          your public key is stolen, the public key cannot be used to do authentication
+
+          and you are still safe.</p>
 
           <p>By default, virtual machines in NeCTAR Cloud uses this authentication
           method and
 
           it requires you to generate a public/private key pairs before you can login.</p>
 
-          <h3>PKI token based authentication</h3>
+          <h3>Token based authentication</h3>
 
           <p>NeCTAR Cloud APIs use Token based authentication. The token is temporary
           and
@@ -9852,13 +9851,13 @@
           updated_at: '2015-09-03T01:28:01-04:00'
           visibility: 1
         folder_id: 6000190147
-        hits: 1
+        hits: 3
         id: 6000077795
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-20T21:02:14-04:00'
+        modified_at: '2015-10-21T20:00:22-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000077795
@@ -9871,7 +9870,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction to Authentication
-        updated_at: '2015-10-20T21:02:14-04:00'
+        updated_at: '2015-10-21T20:00:22-04:00'
         user_id: 6002464727
   html: '<h2>Introduction to Authentication</h2>
 
@@ -9887,9 +9886,9 @@
 
     <p>The NecTAR Cloud uses three basic types of authentication for users to access
 
-    the Cloud: single sign on authentication (AAF), certificate based authentication
+    the Cloud: single sign on authentication (AAF), SSH based authentication
 
-    for virtual machines and PKI token based authentication for APIs.</p>
+    for virtual machines and token based authentication for APIs.</p>
 
     <h3>Single Sign on Authentication</h3>
 
@@ -9914,39 +9913,38 @@
 
     <a href="http://aaf.edu.au/">http://aaf.edu.au</a>.</p>
 
-    <h3>Certificate Based Authentication</h3>
+    <h3>SSH Based Authentication</h3>
 
-    <p>Certificate based authentication is an alternative way to identify yourself
-    to
+    <p>SSH (Secure SHell) based authentication is an alternative way to identify
 
-    a computer service, rather than typing a username and password. It is more secure
+    yourself to a computer service, rather than typing a username and password. It
 
-    and flexible, but more difficult to set up.</p>
+    is more secure and flexible, but more difficult to set up.</p>
 
     <p>You generate a key pair, consisting of public key and a private key. The private
 
-    key can generate an unique signature and only the relevant public key can verify
-    if
+    key can generate an unique signature and only the relevant public key can
 
-    the signature is genuine.</p>
+    verify if the signature is genuine.</p>
 
     <p>After generating a key pair, you copy the public the key to the Virtual Machine.
 
-    Then, when the Virtual Machines asks you to prove who you are, you can provide
+    Then, when the Virtual Machines asks you to prove who you are, you use
 
-    the private key and the Virtual Machine can verify the signature and allow you
+    the private key to sign a message and the Virtual Machine can verify the
 
-    to log in. Even if the Virtual Machine is hacked and your public key is stolen,
-    the
+    signature and allow you to log in. Even if the Virtual Machine is hacked and
 
-    public key cannot be used to do authentication and you are still safe. </p>
+    your public key is stolen, the public key cannot be used to do authentication
+
+    and you are still safe.</p>
 
     <p>By default, virtual machines in NeCTAR Cloud uses this authentication method
     and
 
     it requires you to generate a public/private key pairs before you can login.</p>
 
-    <h3>PKI token based authentication</h3>
+    <h3>Token based authentication</h3>
 
     <p>NeCTAR Cloud APIs use Token based authentication. The token is temporary and
 
@@ -9960,7 +9958,7 @@
 
     is validated on the API end point.</p>'
   parent: 41
-  sha1: 528539fe4b87be8d188aeb3cc63df6e83eabeb9b
+  sha1: 0625128a66318e3b7dc0886b244435ce2a03c6c8
   title: Introduction to Authentication
 76:
   freshdesk:
