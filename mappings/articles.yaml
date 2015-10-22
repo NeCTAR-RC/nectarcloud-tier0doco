@@ -6959,7 +6959,7 @@
           \ script and password, you can execute\nthe script using source file-name.sh.\
           \ and type in the password you\nobtained from Dashboard. \n Authentication\
           \ for python swift API \n You can use the below sample code to get authenticated.\
-          \  \n ``` \n from novaclient import client \n nova = client.Client(VERSION,\
+          \  \n ```bash \n from novaclient import client \n nova = client.Client(VERSION,\
           \ USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL) \n ``` \n The VERSION parameter\
           \ can be \"1.1\" or \"2\". You can get USERNAME, PROJECT_NAME and\nAUTH_URL\
           \ from the above .sh file obtained from the NeCTAR Dashboard and you can\n\
@@ -6980,10 +6980,10 @@
           \ instance, you need to get image name, keypair name, security group\nname\
           \ and flavor name. You can use the above mentioned commands to acquire these\n\
           information. Then, you can use nova boot command to launch a new instance,\
-          \ the\nformat is: \n ``` \n nova boot [instance-name]  --flavor [name] --image\
-          \ [name] --key-name [name] \n --security-groups [names separated by space]\
-          \ \n ``` \n You can also specify option --availability-zone to launch an\
-          \ instance in a\ndesigned zone and option --user-data  for a initialization\
+          \ the\nformat is: \n ```bash \n nova boot [instance-name]  --flavor [name]\
+          \ --image [name] --key-name [name]\n--security-groups [names separated by\
+          \ space] \n ``` \n You can also specify option --availability-zone to launch\
+          \ an instance in a\ndesigned zone and option --user-data  for a initialization\
           \ script\nused only for the first time when instance boots. The user data\
           \ script can be\nput in a file and then passed to instance creation. You\
           \ can see check this\nwebsite to see what script you can use to initialize\
@@ -7050,7 +7050,7 @@
           \ script and password, you can execute\nthe script using <code>source file-name.sh</code>.\
           \ and type in the password you\nobtained from Dashboard.</p>\n<h3>Authentication\
           \ for python swift API</h3>\n<p>You can use the below sample code to get\
-          \ authenticated. </p>\n<p>```</p>\n<p>from novaclient import client</p>\n\
+          \ authenticated. </p>\n<p>```bash</p>\n<p>from novaclient import client</p>\n\
           <p>nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)</p>\n\
           <p>```</p>\n<p>The VERSION parameter can be \"1.1\" or \"2\". You can get\
           \ USERNAME, PROJECT_NAME and\nAUTH_URL from the above .sh file obtained\
@@ -7073,13 +7073,13 @@
           \ a new instance, you need to get image name, keypair name, security group\n\
           name and flavor name. You can use the above mentioned commands to acquire\
           \ these\ninformation. Then, you can use nova boot command to launch a new\
-          \ instance, the\nformat is:</p>\n<p>```</p>\n<p>nova boot [instance-name]\
-          \  --flavor [name] --image [name] --key-name [name]</p>\n<p>--security-groups\
-          \ [names separated by space]</p>\n<p>```</p>\n<p>You can also specify option\
-          \ --availability-zone to launch an instance in a\ndesigned zone and option\
-          \ --user-data  for a initialization script\nused only for the first time\
-          \ when instance boots. The user data script can be\nput in a file and then\
-          \ passed to instance creation. You can see check this\n<a href=\"https://cloudinit.readthedocs.org/en/latest/\"\
+          \ instance, the\nformat is:</p>\n<p>```bash</p>\n<p>nova boot [instance-name]\
+          \  --flavor [name] --image [name] --key-name [name]\n--security-groups [names\
+          \ separated by space]</p>\n<p>```</p>\n<p>You can also specify option --availability-zone\
+          \ to launch an instance in a\ndesigned zone and option --user-data  for\
+          \ a initialization script\nused only for the first time when instance boots.\
+          \ The user data script can be\nput in a file and then passed to instance\
+          \ creation. You can see check this\n<a href=\"https://cloudinit.readthedocs.org/en/latest/\"\
           >website</a> to see what script you can use to initialize an instance. </p>\n\
           <p>To get more help, you can execute <code>nova help boot</code> to see\
           \ what other\noptions are available.</p>\n<p>To boot a stopped instance,\
@@ -7117,13 +7117,13 @@
           updated_at: '2015-09-03T01:27:59-04:00'
           visibility: 1
         folder_id: 6000190145
-        hits: 3
+        hits: 5
         id: 6000075747
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-20T23:05:03-04:00'
+        modified_at: '2015-10-21T20:05:09-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000075747
@@ -7136,7 +7136,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-10-20T23:05:03-04:00'
+        updated_at: '2015-10-21T20:05:09-04:00'
         user_id: 6002464727
   html: "<h2>Manage instance via API</h2>\n<p>The NeCTAR Dashboard is one way to manage\
     \ your instances in projects and NeCTAR\ncloud provides instance management via\
@@ -7179,7 +7179,7 @@
     \ the authentication script and password, you can execute\nthe script using <code>source\
     \ file-name.sh</code>. and type in the password you\nobtained from Dashboard.</p>\n\
     <h3>Authentication for python swift API</h3>\n<p>You can use the below sample\
-    \ code to get authenticated. </p>\n<p>```</p>\n<p>from novaclient import client</p>\n\
+    \ code to get authenticated. </p>\n<p>```bash</p>\n<p>from novaclient import client</p>\n\
     <p>nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)</p>\n\
     <p>```</p>\n<p>The VERSION parameter can be \"1.1\" or \"2\". You can get USERNAME,\
     \ PROJECT_NAME and\nAUTH_URL from the above .sh file obtained from the NeCTAR\
@@ -7201,15 +7201,15 @@
     \ you need to get image name, keypair name, security group\nname and flavor name.\
     \ You can use the above mentioned commands to acquire these\ninformation. Then,\
     \ you can use nova boot command to launch a new instance, the\nformat is:</p>\n\
-    <p>```</p>\n<p>nova boot [instance-name]  --flavor [name] --image [name] --key-name\
-    \ [name]</p>\n<p>--security-groups [names separated by space]</p>\n<p>```</p>\n\
-    <p>You can also specify option --availability-zone to launch an instance in a\n\
-    designed zone and option --user-data <user-data-file> for a initialization script\n\
-    used only for the first time when instance boots. The user data script can be\n\
-    put in a file and then passed to instance creation. You can see check this\n<a\
-    \ href=\"https://cloudinit.readthedocs.org/en/latest/\">website</a> to see what\
-    \ script you can use to initialize an instance. </p>\n<p>To get more help, you\
-    \ can execute <code>nova help boot</code> to see what other\noptions are available.</p>\n\
+    <p>```bash</p>\n<p>nova boot [instance-name]  --flavor [name] --image [name] --key-name\
+    \ [name]\n--security-groups [names separated by space]</p>\n<p>```</p>\n<p>You\
+    \ can also specify option --availability-zone to launch an instance in a\ndesigned\
+    \ zone and option --user-data <user-data-file> for a initialization script\nused\
+    \ only for the first time when instance boots. The user data script can be\nput\
+    \ in a file and then passed to instance creation. You can see check this\n<a href=\"\
+    https://cloudinit.readthedocs.org/en/latest/\">website</a> to see what script\
+    \ you can use to initialize an instance. </p>\n<p>To get more help, you can execute\
+    \ <code>nova help boot</code> to see what other\noptions are available.</p>\n\
     <p>To boot a stopped instance, use nova start <server name or ID>.</p>\n<p>To\
     \ stop an instance, use nova stop <server name or ID>.</p>\n<p>To suspend an instance\
     \ ,use nova suspend <server name or ID>.</p>\n<p>To show details of an instance,\
@@ -7231,7 +7231,7 @@
     <p>You can find more information about nova python API from this <a href=\"http://docs.openstack.org/developer/python-novaclient/api.html\"\
     >link</a></p>"
   parent: 39
-  sha1: 77c742b2e0fcbdcd108b8b5d0fa83abf9ecb6c44
+  sha1: 42bcffc9af6ddd19f40f2792de35a006e9167e22
   title: API
 65:
   freshdesk:
@@ -11112,7 +11112,7 @@
           $OS_PASSWORD\"'\"}}}' \\\n            | python -m json.tool \n ``` \n You\
           \ need to replace the username, password and tenantname with the values\
           \ in\nthe authentication script file you obtained from the NeCTAR Dashboard.\
-          \ \n The response would look like below: \n ```\n{\n    \"access\": {\n\
+          \ \n The response would look like below: \n ``` \n {\n    \"access\": {\n\
           \        \"metadata\": {\n            \"is_admin\": 0,\n            \"roles\"\
           : [\n                \"22\",\n                \"143\"\n            ]\n \
           \       },\n        \"serviceCatalog\": [\n            {\n             \
@@ -11126,27 +11126,27 @@
           \n            }\n        ],\n        \"token\": {\n            \"audit_ids\"\
           : [\n                \"SUtsLIdWQJ634dfdsfdsffdszVe6D2ijg\"\n           \
           \ ],\n            \"expires\": \"2015-10-15T10:08:53Z\",\n            \"\
-          id\": \"MIIUsdfsfsd2AYJKoZIhvcNAQcCoIIUyTCCFMUCAQExDTALBglghkgBZQMEAgEwghOnBgkqhkiG9sdfdsfsfdsw0BBwGgghOYBIITlHsiYWNjZXNzIjp7InRva2VuIjp7Imlzcdsfdsfsd3VlZF9hdCI6IjIwMTsdfsdfUtMTAtMTVUMDQ6MDg6NTMuMjMxNTc2IiwiZXhwaXJlcyI6IjIwMTUtMTAtMTVUMTA6MDg6NTNaIiwiaWQiOiJwbGFjZWhvbGRlciIsInRlbmFudCI6eyJkZXNjcmlwdGlvbiI6bnVsbCwiYWxsb2NhdGlvbl9pZCI6MTcwLCJleHBpcmVzIjoiMjAxOC0wNy0wMSIsImVuYWJsZWQiOnRydWUsImlkIjoiZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAiLCJuYW1lIjoiTWFyaW5lLVZMIn0sImF1ZGl0X2lkcyI6WyJTVXRzTElkV1FKNjM0elZlNkQyaWpnIl19LCJzZXJ2aWNlQ2F0YWxvZyI6W3siZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vZGVzaWduYXRlLnJjLm5lY3Rhci5vcmcuYXU6OTAwMS92MSIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vZGVzaWduYXRlLnJjLm5lY3Rhci5vcmcuYXU6OTAwMS92MSIsImludGVybmFsVVJMIjoiaHR0cHM6Ly9kZXNpZ25hdGUucmMubmVjdGFyLm9yZy5hdTo5MDAxL3YxIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoiZG5zIiwibmFtZSI6IkROUyBTZXJ2aWNlIn0seyJlbmRwb2ludHMiOlt7ImFkbWluVVJMIjoiaHR0cHM6Ly9ub3ZhLnJjLm5lY3Rhci5vcmcuYXU6ODc3NC92MS4xL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9ub3ZhLnJjLm5lY3Rhci5vcmcuYXU6ODc3NC92MS4xL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL25vdmEucmMubmVjdGFyLm9yZy5hdTo4Nzc0L3YxLjEvZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAifV0sImVuZHBvaW50c19saW5rcyI6W10sInR5cGUiOiJjb21wdXRlIiwibmFtZSI6IkNvbXB1dGUgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vbmV1dHJvbi5yYy5uZWN0YXIub3JnLmF1Ojk2OTYvIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9uZXV0cm9uLnJjLm5lY3Rhci5vcmcuYXU6OTY5Ni8iLCJpbnRlcm5hbFVSTCI6Imh0dHBzOi8vbmV1dHJvbi5yYy5uZWN0YXIub3JnLmF1Ojk2OTYvIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoibmV0d29yayIsIm5hbWUiOiJuZXR3b3JrIn0seyJlbmRwb2ludHMiOlt7ImFkbWluVVJMIjoiaHR0cHM6Ly9jaW5kZXIucmMubmVjdGFyLm9yZy5hdTo4Nzc2L3YyL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9jaW5kZXIucmMubmVjdGFyLm9yZy5hdTo4Nzc2L3YyL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL2NpbmRlci5yYy5uZWN0YXIub3JnLmF1Ojg3NzYvdjIvZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAifV0sImVuZHBvaW50c19saW5rcyI6W10sInR5cGUiOiJ2b2x1bWV2MiIsIm5hbWUiOiJWb2x1bWUgU2VydmljZSB2MiJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vc3dpZnQucmMubmVjdGFyLm9yZy5hdTo4ODg4LyIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vc3dpZnQucmMubmVjdGFyLm9yZy5hdTo4ODg4LyIsImludGVybmFsVVJMIjoiaHR0cHM6Ly9zd2lmdC5yYy5uZWN0YXIub3JnLmF1Ojg4ODgvIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoiczMiLCJuYW1lIjoiUzMgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHA6Ly9nbGFuY2UucmMubmVjdGFyLm9yZy5hdTo5MjkyL3YxIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cDovL2dsYW5jZS5yYy5uZWN0YXIub3JnLmF1OjkyOTIvdjEiLCJpbnRlcm5hbFVSTCI6Imh0dHA6Ly9nbGFuY2UucmMubmVjdGFyLm9yZy5hdTo5MjkyL3YxIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoiaW1hZ2UiLCJuYW1lIjoiSW1hZ2UgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vY2VpbG9tZXRlci5yYy5uZWN0YXIub3JnLmF1Ojg3NzcvIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9jZWlsb21ldGVyLnJjLm5lY3Rhci5vcmcuYXU6ODc3Ny8iLCJpbnRlcm5hbFVSTCI6Imh0dHBzOi8vY2VpbG9tZXRlci5yYy5uZWN0YXIub3JnLmF1Ojg3NzcvIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoibWV0ZXJpbmciLCJuYW1lIjoiTWV0ZXJpbmcgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vaGVhdC5yYy5uZWN0YXIub3JnLmF1OjgwMDAvdjEiLCJyZWdpb24iOiJNZWxib3VybmUiLCJwdWJsaWNVUkwiOiJodHRwczovL2hlYXQucmMubmVjdGFyLm9yZy5hdTo4MDAwL3YxIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL2hlYXQucmMubmVjdGFyLm9yZy5hdTo4MDAwL3YxIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoiY2xvdWRmb3JtYXRpb24iLCJuYW1lIjoiQ2xvdWRmb3JtYXRpb24gU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vY2luZGVyLnJjLm5lY3Rhci5vcmcuYXU6ODc3Ni92MS9lNGMxZTRlODJjZDU0OTVkODlkNTJkNjk0ZWE2MmU1MCIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vY2luZGVyLnJjLm5lY3Rhci5vcmcuYXU6ODc3Ni92MS9lNGMxZTRlODJjZDU0OTVkODlkNTJkNjk0ZWE2MmU1MCIsImludGVybmFsVVJMIjoiaHR0cHM6Ly9jaW5kZXIucmMubmVjdGFyLm9yZy5hdTo4Nzc2L3YxL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoidm9sdW1lIiwibmFtZSI6IlZvbHVtZSBTZXJ2aWNlIn0seyJlbmRwb2ludHMiOlt7ImFkbWluVVJMIjoiaHR0cHM6Ly9ub3ZhLnJjLm5lY3Rhci5vcmcuYXU6ODc3My9zZXJ2aWNlcy9BZG1pbiIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vbm92YS5yYy5uZWN0YXIub3JnLmF1Ojg3NzMvc2VydmljZXMvQ2xvdWQiLCJpbnRlcm5hbFVSTCI6Imh0dHBzOi8vbm92YS5yYy5uZWN0YXIub3JnLmF1Ojg3NzMvc2VydmljZXMvQ2xvdWQifV0sImVuZHBvaW50c19saW5rcyI6W10sInR5cGUiOiJlYzIiLCJuYW1lIjoiRUMyIFNlcnZpY2UifSx7ImVuZHBvaW50cyI6W3siYWRtaW5VUkwiOiJodHRwczovL2hlYXQucmMubmVjdGFyLm9yZy5hdTo4MDA0L3YxL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9oZWF0LnJjLm5lY3Rhci5vcmcuYXU6ODAwNC92MS9lNGMxZTRlODJjZDU0OTVkODlkNTJkNjk0ZWE2MmU1MCIsImludGVybmFsVVJMIjoiaHR0cHM6Ly9oZWF0LnJjLm5lY3Rhci5vcmcuYXU6ODAwNC92MS9lNGMxZTRlODJjZDU0OTVkODlkNTJkNjk0ZWE2MmU1MCJ9XSwiZW5kcG9pbnRzX2xpbmtzIjpbXSwidHlwZSI6Im9yY2hlc3RyYXRpb24iLCJuYW1lIjoiT3JjaGVzdHJhdGlvbiBTZXJ2aWNlIn0seyJlbmRwb2ludHMiOlt7ImFkbWluVVJMIjoiaHR0cHM6Ly9zd2lmdC5yYy5uZWN0YXIub3JnLmF1Ojg4ODgvdjEuMC8iLCJyZWdpb24iOiJNZWxib3VybmUiLCJwdWJsaWNVUkwiOiJodHRwczovL3N3aWZ0LnJjLm5lY3Rhci5vcmcuYXU6ODg4OC92MS9BVVRIX2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL3N3aWZ0LnJjLm5lY3Rhci5vcmcuYXU6ODg4OC92MS9BVVRIX2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIn0seyJhZG1pblVSTCI6Imh0dHBzOi8vdmF1bHQubWVsYm91cm5lLnZpY25vZGUub3JnLmF1Ojg4ODgvdjEuMC8iLCJyZWdpb24iOiJWaWNOb2RlIiwicHVibGljVVJMIjoiaHR0cHM6Ly92YXVsdC5tZWxib3VybmUudmljbm9kZS5vcmcuYXU6ODg4OC92MS9BVVRIX2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL3ZhdWx0Lm1lbGJvdXJuZS52aWNub2RlLm9yZy5hdTo4ODg4L3YxL0FVVEhfZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAifSx7ImFkbWluVVJMIjoiaHR0cHM6Ly9zd2lmdC5zYS5uZWN0YXIub3JnLmF1Ojg4ODgvdjEuMC8iLCJyZWdpb24iOiJTQSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vc3dpZnQuc2EubmVjdGFyLm9yZy5hdTo4ODg4L3YxL0FVVEhfZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAiLCJpbnRlcm5hbFVSTCI6Imh0dHBzOi8vc3dpZnQuc2EubmVjdGFyLm9yZy5hdTo4ODg4L3YxL0FVVEhfZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAifV0sImVuZHBvaW50c19saW5rcyI6W10sInR5cGUiOiJvYmplY3Qtc3RvcmUiLCJuYW1lIjoiT2JqZWN0IFN0b3JhZ2UgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8va2V5c3RvbmUucmMubmVjdGFyLm9yZy5hdTozNTM1Ny92Mi4wLyIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8va2V5c3RvbmUucmMubmVjdGFyLm9yZy5hdTo1MDAwL3YyLjAvIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL2tleXN0b25lLnJjLm5lY3Rhci5vcmcuYXU6NTAwMC92Mi4wLyJ9XSwiZW5kcG9pbnRzX2xpbmtzIjpbXSwidHlwZSI6ImlkZW50aXR5IiwibmFtZSI6IklkZW50aXR5IFNlcnZpY2UifV0sInVzZXIiOnsidXNlcm5hbWUiOiJYaWFvLkZ1QHV0YXMuZWR1LmF1Iiwicm9sZXNfbGlua3MiOltdLCJpZCI6IjMxNSIsInJvbGVzIjpbeyJuYW1lIjoiTWVtYmVyIn0seyJuYW1lIjoiVGVuYW50TWFuYWdlciJ9XSwibmFtZSI6IlhpYW8uRnVAdXRhcy5lZHUuYXUifSwibWV0YWRhdGEiOnsiaXNfYWRtaW4iOjAsInJvbGVzIjpbIjIiLCIxNCJdfX19MYIBBDCCAQACAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEDMAsGCWCGSAFlAwQCATANBgkqhkiGdsfsfsfdfdss9w0BAQEFAASBgKCY1zMegj6ZkXsdfdsfs8pZn7MPQ2Xno8dbOS2e0nZ-SdS07CGS1csdfsdfsOGHZe1gO-4Te-adu+1aL0GEYTgNpeW+sfdsfBk0k5+vCoVgqub6lpx2Dl0Knxak4bY3PH8bRz1G5NWvNBQ18-F6HUIbkyptv1n9EMmPl0YU0jXXGNYAuctgi0rTeaL6Z8h\"\
-          ,\n            \"issued_at\": \"2015-10-15T04:08:53.231576\",\n        \
-          \    \"tenant\": {\n                \"allocation_id\": 170,\n          \
-          \      \"description\": null,\n                \"enabled\": true,\n    \
-          \            \"expires\": \"2018-07-01\",\n                \"id\": \"e4c1e4e82cd5495d89d52d694ea62e50sdadsweqe\"\
+          id\": \"MIIUsdfsfsd2AYJKoZIhvcNAQcCoIIUyTCCFMUCAQ.........eaL6Z8h\",\n \
+          \           \"issued_at\": \"2015-10-15T04:08:53.231576\",\n           \
+          \ \"tenant\": {\n                \"allocation_id\": 170,\n             \
+          \   \"description\": null,\n                \"enabled\": true,\n       \
+          \         \"expires\": \"2018-07-01\",\n                \"id\": \"e4c1e4e82cd5495d89d52d694ea62e50sdadsweqe\"\
           ,\n                \"name\": \"Marine-VL\"\n            }\n        },\n\
           \        \"user\": {\n            \"id\": \"\",\n            \"name\": \"\
           \",\n            \"roles\": [\n                {\n                    \"\
           name\": \"Member\"\n                },\n                {\n            \
           \        \"name\": \"TenantManager\"\n                }\n            ],\n\
           \            \"roles_links\": [],\n            \"username\": \"\"\n    \
-          \    }\n    }\n} \n ``` \n Then you can use the token obtained from the\
-          \ above in the API for authentication. \n The below shows a example of how\
-          \ to use the token in using Nova API to list flavors: \n ```\ncurl -s -H\
-          \ \\\n            \"X-Auth-Token:token\" \\\n            http://8.21.28.222:8774/v2/tenant_id/flavors\
+          \    }\n    }\n} \n ``` \n Then you can use the token obtained from this\
+          \ output in the API for authentication. \n Following is an example of how\
+          \ to use the token in using Nova API to list flavors: \n ``` \n curl -s\
+          \ -H \\\n            \"X-Auth-Token:token\" \\\n            http://8.21.28.222:8774/v2/tenant_id/flavors\
           \ \\\n            | python -m json.tool \n ``` \n You need to replace the\
           \ token and the URL. You can find the Nova API endpoint\nURL from the NeCTAR\
-          \ Dashboard. The above request would return the\nbelow output: \n ``` \n\
-          \ {\n    \"flavors\": [\n        {\n            \"id\": \"1\",\n       \
-          \     \"links\": [\n                {\n                    \"href\": \"\
-          http://8.21.28.222:8774/v2/f9828a18c6484624b571e85728780ba8/flavors/1\"\
+          \ Dashboard. The above request would return the\nfollowing output: \n ```\
+          \ \n {\n    \"flavors\": [\n        {\n            \"id\": \"1\",\n    \
+          \        \"links\": [\n                {\n                    \"href\":\
+          \ \"http://8.21.28.222:8774/v2/f9828a18c6484624b571e85728780ba8/flavors/1\"\
           ,\n                    \"rel\": \"self\"\n                },\n         \
           \       {\n                    \"href\": \"http://8.21.28.222:8774/f9828a18c6484624b571e85728780ba8/flavors/1\"\
           ,\n                    \"rel\": \"bookmark\"\n                }\n      \
@@ -11217,21 +11217,21 @@
           $OS_PASSWORD\"'\"}}}' \\\n            | python -m json.tool</p>\n<p>```</p>\n\
           <p>You need to replace the username, password and tenantname with the values\
           \ in\nthe authentication script file you obtained from the NeCTAR Dashboard.</p>\n\
-          <p>The response would look like below:</p>\n<p>```\n{\n    \"access\": {\n\
-          \        \"metadata\": {\n            \"is_admin\": 0,\n            \"roles\"\
-          : [\n                \"22\",\n                \"143\"\n            ]\n \
-          \       },\n        \"serviceCatalog\": [\n            {\n             \
-          \   \"endpoints\": [\n                    {\n                        \"\
-          adminURL\": \"https://nova.rc.abc:8774/v1.1/\",\n                      \
-          \  \"internalURL\": \"https://nova.rc.abc:8774/v1.1/\",\n              \
-          \          \"publicURL\": \"https://nova.rc.abc:8774/v1.1/\",\n        \
-          \                \"region\": \"Melbourne\"\n                    }\n    \
-          \            ],\n                \"endpoints_links\": [],\n            \
-          \    \"name\": \"Compute Service\",\n                \"type\": \"compute\"\
-          \n            }\n        ],\n        \"token\": {\n            \"audit_ids\"\
-          : [\n                \"SUtsLIdWQJ634dfdsfdsffdszVe6D2ijg\"\n           \
-          \ ],\n            \"expires\": \"2015-10-15T10:08:53Z\",\n            \"\
-          id\": \"MIIUsdfsfsd2AYJKoZIhvcNAQcCoIIUyTCCFMUCAQExDTALBglghkgBZQMEAgEwghOnBgkqhkiG9sdfdsfsfdsw0BBwGgghOYBIITlHsiYWNjZXNzIjp7InRva2VuIjp7Imlzcdsfdsfsd3VlZF9hdCI6IjIwMTsdfsdfUtMTAtMTVUMDQ6MDg6NTMuMjMxNTc2IiwiZXhwaXJlcyI6IjIwMTUtMTAtMTVUMTA6MDg6NTNaIiwiaWQiOiJwbGFjZWhvbGRlciIsInRlbmFudCI6eyJkZXNjcmlwdGlvbiI6bnVsbCwiYWxsb2NhdGlvbl9pZCI6MTcwLCJleHBpcmVzIjoiMjAxOC0wNy0wMSIsImVuYWJsZWQiOnRydWUsImlkIjoiZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAiLCJuYW1lIjoiTWFyaW5lLVZMIn0sImF1ZGl0X2lkcyI6WyJTVXRzTElkV1FKNjM0elZlNkQyaWpnIl19LCJzZXJ2aWNlQ2F0YWxvZyI6W3siZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vZGVzaWduYXRlLnJjLm5lY3Rhci5vcmcuYXU6OTAwMS92MSIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vZGVzaWduYXRlLnJjLm5lY3Rhci5vcmcuYXU6OTAwMS92MSIsImludGVybmFsVVJMIjoiaHR0cHM6Ly9kZXNpZ25hdGUucmMubmVjdGFyLm9yZy5hdTo5MDAxL3YxIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoiZG5zIiwibmFtZSI6IkROUyBTZXJ2aWNlIn0seyJlbmRwb2ludHMiOlt7ImFkbWluVVJMIjoiaHR0cHM6Ly9ub3ZhLnJjLm5lY3Rhci5vcmcuYXU6ODc3NC92MS4xL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9ub3ZhLnJjLm5lY3Rhci5vcmcuYXU6ODc3NC92MS4xL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL25vdmEucmMubmVjdGFyLm9yZy5hdTo4Nzc0L3YxLjEvZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAifV0sImVuZHBvaW50c19saW5rcyI6W10sInR5cGUiOiJjb21wdXRlIiwibmFtZSI6IkNvbXB1dGUgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vbmV1dHJvbi5yYy5uZWN0YXIub3JnLmF1Ojk2OTYvIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9uZXV0cm9uLnJjLm5lY3Rhci5vcmcuYXU6OTY5Ni8iLCJpbnRlcm5hbFVSTCI6Imh0dHBzOi8vbmV1dHJvbi5yYy5uZWN0YXIub3JnLmF1Ojk2OTYvIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoibmV0d29yayIsIm5hbWUiOiJuZXR3b3JrIn0seyJlbmRwb2ludHMiOlt7ImFkbWluVVJMIjoiaHR0cHM6Ly9jaW5kZXIucmMubmVjdGFyLm9yZy5hdTo4Nzc2L3YyL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9jaW5kZXIucmMubmVjdGFyLm9yZy5hdTo4Nzc2L3YyL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL2NpbmRlci5yYy5uZWN0YXIub3JnLmF1Ojg3NzYvdjIvZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAifV0sImVuZHBvaW50c19saW5rcyI6W10sInR5cGUiOiJ2b2x1bWV2MiIsIm5hbWUiOiJWb2x1bWUgU2VydmljZSB2MiJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vc3dpZnQucmMubmVjdGFyLm9yZy5hdTo4ODg4LyIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vc3dpZnQucmMubmVjdGFyLm9yZy5hdTo4ODg4LyIsImludGVybmFsVVJMIjoiaHR0cHM6Ly9zd2lmdC5yYy5uZWN0YXIub3JnLmF1Ojg4ODgvIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoiczMiLCJuYW1lIjoiUzMgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHA6Ly9nbGFuY2UucmMubmVjdGFyLm9yZy5hdTo5MjkyL3YxIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cDovL2dsYW5jZS5yYy5uZWN0YXIub3JnLmF1OjkyOTIvdjEiLCJpbnRlcm5hbFVSTCI6Imh0dHA6Ly9nbGFuY2UucmMubmVjdGFyLm9yZy5hdTo5MjkyL3YxIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoiaW1hZ2UiLCJuYW1lIjoiSW1hZ2UgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vY2VpbG9tZXRlci5yYy5uZWN0YXIub3JnLmF1Ojg3NzcvIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9jZWlsb21ldGVyLnJjLm5lY3Rhci5vcmcuYXU6ODc3Ny8iLCJpbnRlcm5hbFVSTCI6Imh0dHBzOi8vY2VpbG9tZXRlci5yYy5uZWN0YXIub3JnLmF1Ojg3NzcvIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoibWV0ZXJpbmciLCJuYW1lIjoiTWV0ZXJpbmcgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vaGVhdC5yYy5uZWN0YXIub3JnLmF1OjgwMDAvdjEiLCJyZWdpb24iOiJNZWxib3VybmUiLCJwdWJsaWNVUkwiOiJodHRwczovL2hlYXQucmMubmVjdGFyLm9yZy5hdTo4MDAwL3YxIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL2hlYXQucmMubmVjdGFyLm9yZy5hdTo4MDAwL3YxIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoiY2xvdWRmb3JtYXRpb24iLCJuYW1lIjoiQ2xvdWRmb3JtYXRpb24gU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vY2luZGVyLnJjLm5lY3Rhci5vcmcuYXU6ODc3Ni92MS9lNGMxZTRlODJjZDU0OTVkODlkNTJkNjk0ZWE2MmU1MCIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vY2luZGVyLnJjLm5lY3Rhci5vcmcuYXU6ODc3Ni92MS9lNGMxZTRlODJjZDU0OTVkODlkNTJkNjk0ZWE2MmU1MCIsImludGVybmFsVVJMIjoiaHR0cHM6Ly9jaW5kZXIucmMubmVjdGFyLm9yZy5hdTo4Nzc2L3YxL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoidm9sdW1lIiwibmFtZSI6IlZvbHVtZSBTZXJ2aWNlIn0seyJlbmRwb2ludHMiOlt7ImFkbWluVVJMIjoiaHR0cHM6Ly9ub3ZhLnJjLm5lY3Rhci5vcmcuYXU6ODc3My9zZXJ2aWNlcy9BZG1pbiIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vbm92YS5yYy5uZWN0YXIub3JnLmF1Ojg3NzMvc2VydmljZXMvQ2xvdWQiLCJpbnRlcm5hbFVSTCI6Imh0dHBzOi8vbm92YS5yYy5uZWN0YXIub3JnLmF1Ojg3NzMvc2VydmljZXMvQ2xvdWQifV0sImVuZHBvaW50c19saW5rcyI6W10sInR5cGUiOiJlYzIiLCJuYW1lIjoiRUMyIFNlcnZpY2UifSx7ImVuZHBvaW50cyI6W3siYWRtaW5VUkwiOiJodHRwczovL2hlYXQucmMubmVjdGFyLm9yZy5hdTo4MDA0L3YxL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9oZWF0LnJjLm5lY3Rhci5vcmcuYXU6ODAwNC92MS9lNGMxZTRlODJjZDU0OTVkODlkNTJkNjk0ZWE2MmU1MCIsImludGVybmFsVVJMIjoiaHR0cHM6Ly9oZWF0LnJjLm5lY3Rhci5vcmcuYXU6ODAwNC92MS9lNGMxZTRlODJjZDU0OTVkODlkNTJkNjk0ZWE2MmU1MCJ9XSwiZW5kcG9pbnRzX2xpbmtzIjpbXSwidHlwZSI6Im9yY2hlc3RyYXRpb24iLCJuYW1lIjoiT3JjaGVzdHJhdGlvbiBTZXJ2aWNlIn0seyJlbmRwb2ludHMiOlt7ImFkbWluVVJMIjoiaHR0cHM6Ly9zd2lmdC5yYy5uZWN0YXIub3JnLmF1Ojg4ODgvdjEuMC8iLCJyZWdpb24iOiJNZWxib3VybmUiLCJwdWJsaWNVUkwiOiJodHRwczovL3N3aWZ0LnJjLm5lY3Rhci5vcmcuYXU6ODg4OC92MS9BVVRIX2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL3N3aWZ0LnJjLm5lY3Rhci5vcmcuYXU6ODg4OC92MS9BVVRIX2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIn0seyJhZG1pblVSTCI6Imh0dHBzOi8vdmF1bHQubWVsYm91cm5lLnZpY25vZGUub3JnLmF1Ojg4ODgvdjEuMC8iLCJyZWdpb24iOiJWaWNOb2RlIiwicHVibGljVVJMIjoiaHR0cHM6Ly92YXVsdC5tZWxib3VybmUudmljbm9kZS5vcmcuYXU6ODg4OC92MS9BVVRIX2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL3ZhdWx0Lm1lbGJvdXJuZS52aWNub2RlLm9yZy5hdTo4ODg4L3YxL0FVVEhfZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAifSx7ImFkbWluVVJMIjoiaHR0cHM6Ly9zd2lmdC5zYS5uZWN0YXIub3JnLmF1Ojg4ODgvdjEuMC8iLCJyZWdpb24iOiJTQSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vc3dpZnQuc2EubmVjdGFyLm9yZy5hdTo4ODg4L3YxL0FVVEhfZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAiLCJpbnRlcm5hbFVSTCI6Imh0dHBzOi8vc3dpZnQuc2EubmVjdGFyLm9yZy5hdTo4ODg4L3YxL0FVVEhfZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAifV0sImVuZHBvaW50c19saW5rcyI6W10sInR5cGUiOiJvYmplY3Qtc3RvcmUiLCJuYW1lIjoiT2JqZWN0IFN0b3JhZ2UgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8va2V5c3RvbmUucmMubmVjdGFyLm9yZy5hdTozNTM1Ny92Mi4wLyIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8va2V5c3RvbmUucmMubmVjdGFyLm9yZy5hdTo1MDAwL3YyLjAvIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL2tleXN0b25lLnJjLm5lY3Rhci5vcmcuYXU6NTAwMC92Mi4wLyJ9XSwiZW5kcG9pbnRzX2xpbmtzIjpbXSwidHlwZSI6ImlkZW50aXR5IiwibmFtZSI6IklkZW50aXR5IFNlcnZpY2UifV0sInVzZXIiOnsidXNlcm5hbWUiOiJYaWFvLkZ1QHV0YXMuZWR1LmF1Iiwicm9sZXNfbGlua3MiOltdLCJpZCI6IjMxNSIsInJvbGVzIjpbeyJuYW1lIjoiTWVtYmVyIn0seyJuYW1lIjoiVGVuYW50TWFuYWdlciJ9XSwibmFtZSI6IlhpYW8uRnVAdXRhcy5lZHUuYXUifSwibWV0YWRhdGEiOnsiaXNfYWRtaW4iOjAsInJvbGVzIjpbIjIiLCIxNCJdfX19MYIBBDCCAQACAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEDMAsGCWCGSAFlAwQCATANBgkqhkiGdsfsfsfdfdss9w0BAQEFAASBgKCY1zMegj6ZkXsdfdsfs8pZn7MPQ2Xno8dbOS2e0nZ-SdS07CGS1csdfsdfsOGHZe1gO-4Te-adu+1aL0GEYTgNpeW+sfdsfBk0k5+vCoVgqub6lpx2Dl0Knxak4bY3PH8bRz1G5NWvNBQ18-F6HUIbkyptv1n9EMmPl0YU0jXXGNYAuctgi0rTeaL6Z8h\"\
+          <p>The response would look like below:</p>\n<p>```</p>\n<p>{\n    \"access\"\
+          : {\n        \"metadata\": {\n            \"is_admin\": 0,\n           \
+          \ \"roles\": [\n                \"22\",\n                \"143\"\n     \
+          \       ]\n        },\n        \"serviceCatalog\": [\n            {\n  \
+          \              \"endpoints\": [\n                    {\n               \
+          \         \"adminURL\": \"https://nova.rc.abc:8774/v1.1/\",\n          \
+          \              \"internalURL\": \"https://nova.rc.abc:8774/v1.1/\",\n  \
+          \                      \"publicURL\": \"https://nova.rc.abc:8774/v1.1/\"\
+          ,\n                        \"region\": \"Melbourne\"\n                 \
+          \   }\n                ],\n                \"endpoints_links\": [],\n  \
+          \              \"name\": \"Compute Service\",\n                \"type\"\
+          : \"compute\"\n            }\n        ],\n        \"token\": {\n       \
+          \     \"audit_ids\": [\n                \"SUtsLIdWQJ634dfdsfdsffdszVe6D2ijg\"\
+          \n            ],\n            \"expires\": \"2015-10-15T10:08:53Z\",\n \
+          \           \"id\": \"MIIUsdfsfsd2AYJKoZIhvcNAQcCoIIUyTCCFMUCAQ.........eaL6Z8h\"\
           ,\n            \"issued_at\": \"2015-10-15T04:08:53.231576\",\n        \
           \    \"tenant\": {\n                \"allocation_id\": 170,\n          \
           \      \"description\": null,\n                \"enabled\": true,\n    \
@@ -11243,16 +11243,16 @@
           \        \"name\": \"TenantManager\"\n                }\n            ],\n\
           \            \"roles_links\": [],\n            \"username\": \"\"\n    \
           \    }\n    }\n}</p>\n<p>```</p>\n<p>Then you can use the token obtained\
-          \ from the above in the API for authentication.</p>\n<p>The below shows\
-          \ a example of how to use the token in using Nova API to list flavors:</p>\n\
-          <p>```\ncurl -s -H \\\n            \"X-Auth-Token:token\" \\\n         \
-          \   http://8.21.28.222:8774/v2/tenant_id/flavors \\\n            | python\
-          \ -m json.tool</p>\n<p>```</p>\n<p>You need to replace the token and the\
-          \ URL. You can find the Nova API endpoint\nURL from the NeCTAR <a href=\"\
-          https://dashboard.rc.nectar.org.au\">Dashboard</a>. The above request would\
-          \ return the\nbelow output:</p>\n<p>```</p>\n<p>{\n    \"flavors\": [\n\
-          \        {\n            \"id\": \"1\",\n            \"links\": [\n     \
-          \           {\n                    \"href\": \"http://8.21.28.222:8774/v2/f9828a18c6484624b571e85728780ba8/flavors/1\"\
+          \ from this output in the API for authentication.</p>\n<p>Following is an\
+          \ example of how to use the token in using Nova API to list flavors:</p>\n\
+          <p>```</p>\n<p>curl -s -H \\\n            \"X-Auth-Token:token\" \\\n  \
+          \          http://8.21.28.222:8774/v2/tenant_id/flavors \\\n           \
+          \ | python -m json.tool</p>\n<p>```</p>\n<p>You need to replace the token\
+          \ and the URL. You can find the Nova API endpoint\nURL from the NeCTAR <a\
+          \ href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a>. The above request\
+          \ would return the\nfollowing output:</p>\n<p>```</p>\n<p>{\n    \"flavors\"\
+          : [\n        {\n            \"id\": \"1\",\n            \"links\": [\n \
+          \               {\n                    \"href\": \"http://8.21.28.222:8774/v2/f9828a18c6484624b571e85728780ba8/flavors/1\"\
           ,\n                    \"rel\": \"self\"\n                },\n         \
           \       {\n                    \"href\": \"http://8.21.28.222:8774/f9828a18c6484624b571e85728780ba8/flavors/1\"\
           ,\n                    \"rel\": \"bookmark\"\n                }\n      \
@@ -11296,13 +11296,13 @@
           updated_at: '2015-09-03T01:28:01-04:00'
           visibility: 1
         folder_id: 6000190147
-        hits: 0
+        hits: 1
         id: 6000078086
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-15T00:41:22-04:00'
+        modified_at: '2015-10-21T20:04:36-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000078086
@@ -11315,7 +11315,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Trouble Shooting
-        updated_at: '2015-10-15T00:41:22-04:00'
+        updated_at: '2015-10-21T20:04:36-04:00'
         user_id: 6002464727
   html: "<h2>Debugging Dashboard Authentication</h2>\n<p>The NeCTAR Dashboard uses\
     \ <a href=\"http://aaf.edu.au/\">Australian Access Federation</a> for its authentication.\n\
@@ -11357,9 +11357,9 @@
     '\"}}}' \\\n            | python -m json.tool</p>\n<p>```</p>\n<p>You need to\
     \ replace the username, password and tenantname with the values in\nthe authentication\
     \ script file you obtained from the NeCTAR Dashboard.</p>\n<p>The response would\
-    \ look like below:</p>\n<p>```\n{\n    \"access\": {\n        \"metadata\": {\n\
-    \            \"is_admin\": 0,\n            \"roles\": [\n                \"22\"\
-    ,\n                \"143\"\n            ]\n        },\n        \"serviceCatalog\"\
+    \ look like below:</p>\n<p>```</p>\n<p>{\n    \"access\": {\n        \"metadata\"\
+    : {\n            \"is_admin\": 0,\n            \"roles\": [\n                \"\
+    22\",\n                \"143\"\n            ]\n        },\n        \"serviceCatalog\"\
     : [\n            {\n                \"endpoints\": [\n                    {\n\
     \                        \"adminURL\": \"https://nova.rc.abc:8774/v1.1/\",\n \
     \                       \"internalURL\": \"https://nova.rc.abc:8774/v1.1/\",\n\
@@ -11369,7 +11369,7 @@
     name\": \"Compute Service\",\n                \"type\": \"compute\"\n        \
     \    }\n        ],\n        \"token\": {\n            \"audit_ids\": [\n     \
     \           \"SUtsLIdWQJ634dfdsfdsffdszVe6D2ijg\"\n            ],\n          \
-    \  \"expires\": \"2015-10-15T10:08:53Z\",\n            \"id\": \"MIIUsdfsfsd2AYJKoZIhvcNAQcCoIIUyTCCFMUCAQExDTALBglghkgBZQMEAgEwghOnBgkqhkiG9sdfdsfsfdsw0BBwGgghOYBIITlHsiYWNjZXNzIjp7InRva2VuIjp7Imlzcdsfdsfsd3VlZF9hdCI6IjIwMTsdfsdfUtMTAtMTVUMDQ6MDg6NTMuMjMxNTc2IiwiZXhwaXJlcyI6IjIwMTUtMTAtMTVUMTA6MDg6NTNaIiwiaWQiOiJwbGFjZWhvbGRlciIsInRlbmFudCI6eyJkZXNjcmlwdGlvbiI6bnVsbCwiYWxsb2NhdGlvbl9pZCI6MTcwLCJleHBpcmVzIjoiMjAxOC0wNy0wMSIsImVuYWJsZWQiOnRydWUsImlkIjoiZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAiLCJuYW1lIjoiTWFyaW5lLVZMIn0sImF1ZGl0X2lkcyI6WyJTVXRzTElkV1FKNjM0elZlNkQyaWpnIl19LCJzZXJ2aWNlQ2F0YWxvZyI6W3siZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vZGVzaWduYXRlLnJjLm5lY3Rhci5vcmcuYXU6OTAwMS92MSIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vZGVzaWduYXRlLnJjLm5lY3Rhci5vcmcuYXU6OTAwMS92MSIsImludGVybmFsVVJMIjoiaHR0cHM6Ly9kZXNpZ25hdGUucmMubmVjdGFyLm9yZy5hdTo5MDAxL3YxIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoiZG5zIiwibmFtZSI6IkROUyBTZXJ2aWNlIn0seyJlbmRwb2ludHMiOlt7ImFkbWluVVJMIjoiaHR0cHM6Ly9ub3ZhLnJjLm5lY3Rhci5vcmcuYXU6ODc3NC92MS4xL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9ub3ZhLnJjLm5lY3Rhci5vcmcuYXU6ODc3NC92MS4xL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL25vdmEucmMubmVjdGFyLm9yZy5hdTo4Nzc0L3YxLjEvZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAifV0sImVuZHBvaW50c19saW5rcyI6W10sInR5cGUiOiJjb21wdXRlIiwibmFtZSI6IkNvbXB1dGUgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vbmV1dHJvbi5yYy5uZWN0YXIub3JnLmF1Ojk2OTYvIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9uZXV0cm9uLnJjLm5lY3Rhci5vcmcuYXU6OTY5Ni8iLCJpbnRlcm5hbFVSTCI6Imh0dHBzOi8vbmV1dHJvbi5yYy5uZWN0YXIub3JnLmF1Ojk2OTYvIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoibmV0d29yayIsIm5hbWUiOiJuZXR3b3JrIn0seyJlbmRwb2ludHMiOlt7ImFkbWluVVJMIjoiaHR0cHM6Ly9jaW5kZXIucmMubmVjdGFyLm9yZy5hdTo4Nzc2L3YyL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9jaW5kZXIucmMubmVjdGFyLm9yZy5hdTo4Nzc2L3YyL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL2NpbmRlci5yYy5uZWN0YXIub3JnLmF1Ojg3NzYvdjIvZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAifV0sImVuZHBvaW50c19saW5rcyI6W10sInR5cGUiOiJ2b2x1bWV2MiIsIm5hbWUiOiJWb2x1bWUgU2VydmljZSB2MiJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vc3dpZnQucmMubmVjdGFyLm9yZy5hdTo4ODg4LyIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vc3dpZnQucmMubmVjdGFyLm9yZy5hdTo4ODg4LyIsImludGVybmFsVVJMIjoiaHR0cHM6Ly9zd2lmdC5yYy5uZWN0YXIub3JnLmF1Ojg4ODgvIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoiczMiLCJuYW1lIjoiUzMgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHA6Ly9nbGFuY2UucmMubmVjdGFyLm9yZy5hdTo5MjkyL3YxIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cDovL2dsYW5jZS5yYy5uZWN0YXIub3JnLmF1OjkyOTIvdjEiLCJpbnRlcm5hbFVSTCI6Imh0dHA6Ly9nbGFuY2UucmMubmVjdGFyLm9yZy5hdTo5MjkyL3YxIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoiaW1hZ2UiLCJuYW1lIjoiSW1hZ2UgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vY2VpbG9tZXRlci5yYy5uZWN0YXIub3JnLmF1Ojg3NzcvIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9jZWlsb21ldGVyLnJjLm5lY3Rhci5vcmcuYXU6ODc3Ny8iLCJpbnRlcm5hbFVSTCI6Imh0dHBzOi8vY2VpbG9tZXRlci5yYy5uZWN0YXIub3JnLmF1Ojg3NzcvIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoibWV0ZXJpbmciLCJuYW1lIjoiTWV0ZXJpbmcgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vaGVhdC5yYy5uZWN0YXIub3JnLmF1OjgwMDAvdjEiLCJyZWdpb24iOiJNZWxib3VybmUiLCJwdWJsaWNVUkwiOiJodHRwczovL2hlYXQucmMubmVjdGFyLm9yZy5hdTo4MDAwL3YxIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL2hlYXQucmMubmVjdGFyLm9yZy5hdTo4MDAwL3YxIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoiY2xvdWRmb3JtYXRpb24iLCJuYW1lIjoiQ2xvdWRmb3JtYXRpb24gU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8vY2luZGVyLnJjLm5lY3Rhci5vcmcuYXU6ODc3Ni92MS9lNGMxZTRlODJjZDU0OTVkODlkNTJkNjk0ZWE2MmU1MCIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vY2luZGVyLnJjLm5lY3Rhci5vcmcuYXU6ODc3Ni92MS9lNGMxZTRlODJjZDU0OTVkODlkNTJkNjk0ZWE2MmU1MCIsImludGVybmFsVVJMIjoiaHR0cHM6Ly9jaW5kZXIucmMubmVjdGFyLm9yZy5hdTo4Nzc2L3YxL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIn1dLCJlbmRwb2ludHNfbGlua3MiOltdLCJ0eXBlIjoidm9sdW1lIiwibmFtZSI6IlZvbHVtZSBTZXJ2aWNlIn0seyJlbmRwb2ludHMiOlt7ImFkbWluVVJMIjoiaHR0cHM6Ly9ub3ZhLnJjLm5lY3Rhci5vcmcuYXU6ODc3My9zZXJ2aWNlcy9BZG1pbiIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vbm92YS5yYy5uZWN0YXIub3JnLmF1Ojg3NzMvc2VydmljZXMvQ2xvdWQiLCJpbnRlcm5hbFVSTCI6Imh0dHBzOi8vbm92YS5yYy5uZWN0YXIub3JnLmF1Ojg3NzMvc2VydmljZXMvQ2xvdWQifV0sImVuZHBvaW50c19saW5rcyI6W10sInR5cGUiOiJlYzIiLCJuYW1lIjoiRUMyIFNlcnZpY2UifSx7ImVuZHBvaW50cyI6W3siYWRtaW5VUkwiOiJodHRwczovL2hlYXQucmMubmVjdGFyLm9yZy5hdTo4MDA0L3YxL2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwicmVnaW9uIjoiTWVsYm91cm5lIiwicHVibGljVVJMIjoiaHR0cHM6Ly9oZWF0LnJjLm5lY3Rhci5vcmcuYXU6ODAwNC92MS9lNGMxZTRlODJjZDU0OTVkODlkNTJkNjk0ZWE2MmU1MCIsImludGVybmFsVVJMIjoiaHR0cHM6Ly9oZWF0LnJjLm5lY3Rhci5vcmcuYXU6ODAwNC92MS9lNGMxZTRlODJjZDU0OTVkODlkNTJkNjk0ZWE2MmU1MCJ9XSwiZW5kcG9pbnRzX2xpbmtzIjpbXSwidHlwZSI6Im9yY2hlc3RyYXRpb24iLCJuYW1lIjoiT3JjaGVzdHJhdGlvbiBTZXJ2aWNlIn0seyJlbmRwb2ludHMiOlt7ImFkbWluVVJMIjoiaHR0cHM6Ly9zd2lmdC5yYy5uZWN0YXIub3JnLmF1Ojg4ODgvdjEuMC8iLCJyZWdpb24iOiJNZWxib3VybmUiLCJwdWJsaWNVUkwiOiJodHRwczovL3N3aWZ0LnJjLm5lY3Rhci5vcmcuYXU6ODg4OC92MS9BVVRIX2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL3N3aWZ0LnJjLm5lY3Rhci5vcmcuYXU6ODg4OC92MS9BVVRIX2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIn0seyJhZG1pblVSTCI6Imh0dHBzOi8vdmF1bHQubWVsYm91cm5lLnZpY25vZGUub3JnLmF1Ojg4ODgvdjEuMC8iLCJyZWdpb24iOiJWaWNOb2RlIiwicHVibGljVVJMIjoiaHR0cHM6Ly92YXVsdC5tZWxib3VybmUudmljbm9kZS5vcmcuYXU6ODg4OC92MS9BVVRIX2U0YzFlNGU4MmNkNTQ5NWQ4OWQ1MmQ2OTRlYTYyZTUwIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL3ZhdWx0Lm1lbGJvdXJuZS52aWNub2RlLm9yZy5hdTo4ODg4L3YxL0FVVEhfZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAifSx7ImFkbWluVVJMIjoiaHR0cHM6Ly9zd2lmdC5zYS5uZWN0YXIub3JnLmF1Ojg4ODgvdjEuMC8iLCJyZWdpb24iOiJTQSIsInB1YmxpY1VSTCI6Imh0dHBzOi8vc3dpZnQuc2EubmVjdGFyLm9yZy5hdTo4ODg4L3YxL0FVVEhfZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAiLCJpbnRlcm5hbFVSTCI6Imh0dHBzOi8vc3dpZnQuc2EubmVjdGFyLm9yZy5hdTo4ODg4L3YxL0FVVEhfZTRjMWU0ZTgyY2Q1NDk1ZDg5ZDUyZDY5NGVhNjJlNTAifV0sImVuZHBvaW50c19saW5rcyI6W10sInR5cGUiOiJvYmplY3Qtc3RvcmUiLCJuYW1lIjoiT2JqZWN0IFN0b3JhZ2UgU2VydmljZSJ9LHsiZW5kcG9pbnRzIjpbeyJhZG1pblVSTCI6Imh0dHBzOi8va2V5c3RvbmUucmMubmVjdGFyLm9yZy5hdTozNTM1Ny92Mi4wLyIsInJlZ2lvbiI6Ik1lbGJvdXJuZSIsInB1YmxpY1VSTCI6Imh0dHBzOi8va2V5c3RvbmUucmMubmVjdGFyLm9yZy5hdTo1MDAwL3YyLjAvIiwiaW50ZXJuYWxVUkwiOiJodHRwczovL2tleXN0b25lLnJjLm5lY3Rhci5vcmcuYXU6NTAwMC92Mi4wLyJ9XSwiZW5kcG9pbnRzX2xpbmtzIjpbXSwidHlwZSI6ImlkZW50aXR5IiwibmFtZSI6IklkZW50aXR5IFNlcnZpY2UifV0sInVzZXIiOnsidXNlcm5hbWUiOiJYaWFvLkZ1QHV0YXMuZWR1LmF1Iiwicm9sZXNfbGlua3MiOltdLCJpZCI6IjMxNSIsInJvbGVzIjpbeyJuYW1lIjoiTWVtYmVyIn0seyJuYW1lIjoiVGVuYW50TWFuYWdlciJ9XSwibmFtZSI6IlhpYW8uRnVAdXRhcy5lZHUuYXUifSwibWV0YWRhdGEiOnsiaXNfYWRtaW4iOjAsInJvbGVzIjpbIjIiLCIxNCJdfX19MYIBBDCCAQACAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEDMAsGCWCGSAFlAwQCATANBgkqhkiGdsfsfsfdfdss9w0BAQEFAASBgKCY1zMegj6ZkXsdfdsfs8pZn7MPQ2Xno8dbOS2e0nZ-SdS07CGS1csdfsdfsOGHZe1gO-4Te-adu+1aL0GEYTgNpeW+sfdsfBk0k5+vCoVgqub6lpx2Dl0Knxak4bY3PH8bRz1G5NWvNBQ18-F6HUIbkyptv1n9EMmPl0YU0jXXGNYAuctgi0rTeaL6Z8h\"\
+    \  \"expires\": \"2015-10-15T10:08:53Z\",\n            \"id\": \"MIIUsdfsfsd2AYJKoZIhvcNAQcCoIIUyTCCFMUCAQ.........eaL6Z8h\"\
     ,\n            \"issued_at\": \"2015-10-15T04:08:53.231576\",\n            \"\
     tenant\": {\n                \"allocation_id\": 170,\n                \"description\"\
     : null,\n                \"enabled\": true,\n                \"expires\": \"2018-07-01\"\
@@ -11380,15 +11380,15 @@
     \                },\n                {\n                    \"name\": \"TenantManager\"\
     \n                }\n            ],\n            \"roles_links\": [],\n      \
     \      \"username\": \"\"\n        }\n    }\n}</p>\n<p>```</p>\n<p>Then you can\
-    \ use the token obtained from the above in the API for authentication.</p>\n<p>The\
-    \ below shows a example of how to use the token in using Nova API to list flavors:</p>\n\
-    <p>```\ncurl -s -H \\\n            \"X-Auth-Token:token\" \\\n            http://8.21.28.222:8774/v2/tenant_id/flavors\
-    \ \\\n            | python -m json.tool</p>\n<p>```</p>\n<p>You need to replace\
-    \ the token and the URL. You can find the Nova API endpoint\nURL from the NeCTAR\
-    \ <a href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a>. The above request\
-    \ would return the\nbelow output:</p>\n<p>```</p>\n<p>{\n    \"flavors\": [\n\
-    \        {\n            \"id\": \"1\",\n            \"links\": [\n           \
-    \     {\n                    \"href\": \"http://8.21.28.222:8774/v2/f9828a18c6484624b571e85728780ba8/flavors/1\"\
+    \ use the token obtained from this output in the API for authentication.</p>\n\
+    <p>Following is an example of how to use the token in using Nova API to list flavors:</p>\n\
+    <p>```</p>\n<p>curl -s -H \\\n            \"X-Auth-Token:token\" \\\n        \
+    \    http://8.21.28.222:8774/v2/tenant_id/flavors \\\n            | python -m\
+    \ json.tool</p>\n<p>```</p>\n<p>You need to replace the token and the URL. You\
+    \ can find the Nova API endpoint\nURL from the NeCTAR <a href=\"https://dashboard.rc.nectar.org.au\"\
+    >Dashboard</a>. The above request would return the\nfollowing output:</p>\n<p>```</p>\n\
+    <p>{\n    \"flavors\": [\n        {\n            \"id\": \"1\",\n            \"\
+    links\": [\n                {\n                    \"href\": \"http://8.21.28.222:8774/v2/f9828a18c6484624b571e85728780ba8/flavors/1\"\
     ,\n                    \"rel\": \"self\"\n                },\n               \
     \ {\n                    \"href\": \"http://8.21.28.222:8774/f9828a18c6484624b571e85728780ba8/flavors/1\"\
     ,\n                    \"rel\": \"bookmark\"\n                }\n            ],\n\
@@ -11418,5 +11418,5 @@
     ,\n                    \"rel\": \"bookmark\"\n                }\n            ],\n\
     \            \"name\": \"m1.xlarge\"\n        }\n    ]\n}</p>\n<p>```</p>"
   parent: 41
-  sha1: 2d05ebf8b4ac3ce4d7db025cea024f2b4efd0187
+  sha1: 2c6a84f80c936a5097bfb3b3fe5a534954a9bf6d
   title: Trouble Shooting
