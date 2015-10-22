@@ -8374,12 +8374,12 @@
           \ the error message and generally it will\ngive you very good hints about\
           \ what might be wrong. \n For example, if you execute swift list on the\
           \ command line without\nauthentication, the error message might look like\
-          \ this: \n ```\nAuth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment\
+          \ this: \n \n Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment\
           \ variables\nto be set or overridden with -A, -U, or -K. \n Auth version\
           \ 2.0 requires OS_AUTH_URL, OS_USERNAME, OS_PASSWORD, and\nOS_TENANT_NAME\
           \ OS_TENANT_ID to be set or overridden with --os-auth-url,\n--os-username,\
           \ --os-password, --os-tenant-name or os-tenant-id. Note:\nadding \"-V 2\"\
-          \ is necessary for this.\n``` \n The above message indicates you that there\
+          \ is necessary for this. \n \n The above message indicates you that there\
           \ are 2 authentication versions that\nswift currently supports and each\
           \ version requires some environment variables\nto be set. To set these environment\
           \ variables you can either source the script\nfile downloaded from NeCTAR\
@@ -8411,8 +8411,8 @@
           \ response header, which give you a lot of more insight\ninformation. To\
           \ verify parameters in the request header, you can refer to\nOpenStack service\
           \ API to see what are expected. \n To enable debugging information on the\
-          \ standard out for Python API, you can add\nthe below code: \n ```\nimport\
-          \ logging\nlogger = logging.getLogger(\"swiftclient\")\nlogging.basicConfig(level=logging.DEBUG)\
+          \ standard out for Python API, you can add\nthe below code: \n ``` \n import\
+          \ logging \n logger = logging.getLogger(\"swiftclient\") \n logging.basicConfig(level=logging.DEBUG)\
           \ \n ``` \n The will print the same output as adding --debug option for\
           \ command line API. \n Debugging via Source Code \n If the above techniques\
           \ are still not helpful, you can always look at the source\ncode to find\
@@ -8448,9 +8448,9 @@
 
           authentication, the error message might look like this:</p>
 
-          <p>```
+          <blockquote>
 
-          Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment variables
+          <p>Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment variables
 
           to be set or overridden with -A, -U, or -K.</p>
 
@@ -8460,9 +8460,9 @@
 
           --os-username, --os-password, --os-tenant-name or os-tenant-id. Note:
 
-          adding "-V 2" is necessary for this.
+          adding "-V 2" is necessary for this.</p>
 
-          ```</p>
+          </blockquote>
 
           <p>The above message indicates you that there are 2 authentication versions
           that
@@ -8598,13 +8598,13 @@
 
           the below code:</p>
 
-          <p>```
+          <p>```</p>
 
-          import logging
+          <p>import logging</p>
 
-          logger = logging.getLogger("swiftclient")
+          <p>logger = logging.getLogger("swiftclient")</p>
 
-          logging.basicConfig(level=logging.DEBUG)</p>
+          <p>logging.basicConfig(level=logging.DEBUG)</p>
 
           <p>```</p>
 
@@ -8652,13 +8652,13 @@
           updated_at: '2015-09-03T01:28:00-04:00'
           visibility: 1
         folder_id: 6000190146
-        hits: 1
+        hits: 2
         id: 6000076083
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-19T17:15:25-04:00'
+        modified_at: '2015-10-21T20:05:48-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000076083
@@ -8671,7 +8671,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Trouble Shooting
-        updated_at: '2015-10-19T17:15:25-04:00'
+        updated_at: '2015-10-21T20:05:48-04:00'
         user_id: 6002464727
   html: '<h2>Debugging Swift Command line Client</h2>
 
@@ -8695,9 +8695,9 @@
 
     authentication, the error message might look like this:</p>
 
-    <p>```
+    <blockquote>
 
-    Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment variables
+    <p>Auth version 1.0 requires ST_AUTH, ST_USER, and ST_KEY environment variables
 
     to be set or overridden with -A, -U, or -K.</p>
 
@@ -8707,9 +8707,9 @@
 
     --os-username, --os-password, --os-tenant-name or os-tenant-id. Note:
 
-    adding "-V 2" is necessary for this.
+    adding "-V 2" is necessary for this.</p>
 
-    ```</p>
+    </blockquote>
 
     <p>The above message indicates you that there are 2 authentication versions that
 
@@ -8839,13 +8839,13 @@
 
     the below code:</p>
 
-    <p>```
+    <p>```</p>
 
-    import logging
+    <p>import logging</p>
 
-    logger = logging.getLogger("swiftclient")
+    <p>logger = logging.getLogger("swiftclient")</p>
 
-    logging.basicConfig(level=logging.DEBUG)</p>
+    <p>logging.basicConfig(level=logging.DEBUG)</p>
 
     <p>```</p>
 
@@ -8875,7 +8875,7 @@
 
     and receiving response. It is also used by the command line swift client. </p>'
   parent: 40
-  sha1: 2c07975b9e9306c9b62fedbf218646f09996e7e7
+  sha1: 30d69bc3345b6ac25828af0f4c277b4c4cf54904
   title: Trouble Shooting
 71:
   freshdesk:
