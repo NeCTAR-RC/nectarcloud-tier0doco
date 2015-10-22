@@ -26,7 +26,7 @@ can be useful in porting between the two formats.
 
 To debug JSON syntax errors the following command set is useful:
 
-```bash
+```
 cat template.json | python -m json.tool
 ```
 
@@ -37,7 +37,7 @@ validate and pretty print the file.
 Similarly, if you have the [pyaml](https://pypi.python.org/pypi/pyaml/) module installed
 you can validate yaml files:
 
-```bash
+```
 cat template.yaml | python -m pyaml
 ```
 
@@ -46,7 +46,7 @@ Where `template.yaml` is the name of your template.
 The form of the command in both of the above is useful, in that you can
 verify remote files:
 
-```bash
+```
 curl -s https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/json/Fedora/WordPress_2_Instances.json | python -m json.tool
 ```
 
@@ -70,25 +70,25 @@ command line client error messages.
 If you have nested templates, you can find the ones that failed to launch with
 the following command:
 
-```bash
+```
 heat stack-list --show-nested -f "status=FAILED"
 ```
 
 For a given template, you can see the list of events associated with the
 template:
 
-```bash
+```
 heat event-list <template id>
 ```
 
 You can then drill down into the events for a given resource:
 
-```bash
+```
 heat event-list -r <resource name> <template id>
 ```
 
 And then examine a specific event for more detail:
 
-```bash
+```
 heat event-show <template id> <resource name> <event id>
 ```
