@@ -86,7 +86,7 @@ To enable debugging information on the standard out for Python API, you can add
 the below code:
 
 
-```
+```bash
 
 import logging
 
