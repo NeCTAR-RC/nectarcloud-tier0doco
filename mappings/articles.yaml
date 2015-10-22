@@ -4881,14 +4881,14 @@
           \ to see what commands are avaiable and\nrun swift command -h find out more\
           \ information about a command. \n Client python API \n You can also use\
           \ swift python API to access and manage the object storage.\nThe below shows\
-          \ the sample Pthon code: \n ```\nfrom swiftclient import client \n swift\
+          \ the sample Pthon code: \n ``` \n from swiftclient import client \n swift\
           \ = client.Connection(authurl=url, user=username, key=password,\ntenant_name=project_name,\
-          \ auth_version='2') \n container_name=\"\"\nswift.get_container(container_name)\
-          \ \n container_name=\"first container\"\nswift.put_container(container_name)\
+          \ auth_version='2') \n container_name=\"\" \n swift.get_container(container_name)\
+          \ \n container_name=\"first container\" \n swift.put_container(container_name)\
           \ \n swift.delete_container(container_name) \n container_name = \"container\"\
-          \nobject_name = \"object\"\nswift.get_object(container_name, object_name)\
-          \ \n swift.put_object(container_name, object)\n``` \n Please refer to above\
-          \ instruction about how to obtain authurl, user, password and\ntenant_name.\
+          \ \n object_name = \"object\" \n swift.get_object(container_name, object_name)\
+          \ \n swift.put_object(container_name, object) \n ``` \n Please refer to\
+          \ above instruction about how to obtain authurl, user, password and\ntenant_name.\
           \ \n To get a container, use swift.get_container(container_name) method,\
           \ if you\nprovide a empty string to the container_name parameter, it returns\
           \ all\ncontainers in your project. \n To create a container, use swift.post_container(container_name)\
@@ -4927,17 +4927,18 @@
           \ and\nrun <code>swift command -h</code> find out more information about\
           \ a command.</p>\n<h2>Client python API</h2>\n<p>You can also use swift\
           \ python API to access and manage the object storage.\nThe below shows the\
-          \ sample Pthon code:</p>\n<p>```\nfrom swiftclient import client</p>\n<p>swift\
-          \ = client.Connection(authurl=url, user=username, key=password,\ntenant_name=project_name,\
-          \ auth_version='2')</p>\n<p>container_name=\"\"\nswift.get_container(container_name)</p>\n\
-          <p>container_name=\"first container\"\nswift.put_container(container_name)</p>\n\
-          <p>swift.delete_container(container_name)</p>\n<p>container_name = \"container\"\
-          \nobject_name = \"object\"\nswift.get_object(container_name, object_name)</p>\n\
-          <p>swift.put_object(container_name, object)\n```</p>\n<p>Please refer to\
-          \ above instruction about how to obtain authurl, user, password and\ntenant_name.</p>\n\
-          <p>To get a container, use swift.get_container(container_name) method, if\
-          \ you\nprovide a empty string to the container_name parameter, it returns\
-          \ all\ncontainers in your project.</p>\n<p>To create a container, use swift.post_container(container_name)\
+          \ sample Pthon code:</p>\n<p>```</p>\n<p>from swiftclient import client</p>\n\
+          <p>swift = client.Connection(authurl=url, user=username, key=password,\n\
+          tenant_name=project_name, auth_version='2')</p>\n<p>container_name=\"\"\
+          </p>\n<p>swift.get_container(container_name)</p>\n<p>container_name=\"first\
+          \ container\"</p>\n<p>swift.put_container(container_name)</p>\n<p>swift.delete_container(container_name)</p>\n\
+          <p>container_name = \"container\"</p>\n<p>object_name = \"object\"</p>\n\
+          <p>swift.get_object(container_name, object_name)</p>\n<p>swift.put_object(container_name,\
+          \ object)</p>\n<p>```</p>\n<p>Please refer to above instruction about how\
+          \ to obtain authurl, user, password and\ntenant_name.</p>\n<p>To get a container,\
+          \ use swift.get_container(container_name) method, if you\nprovide a empty\
+          \ string to the container_name parameter, it returns all\ncontainers in\
+          \ your project.</p>\n<p>To create a container, use swift.post_container(container_name)\
           \ method.</p>\n<p>To delete a container, use swift.delete_container(container_name)\
           \ method.</p>\n<p>To get a object, use swift.get_object(container_name,\
           \ object_name) method.</p>\n<p>To upload a object, use swift.put_object(container_name,\
@@ -4953,17 +4954,17 @@
           language_id: 6
           name: Object Storage
           parent_id: 6000190146
-          position: 3
+          position: 2
           updated_at: '2015-09-03T01:28:00-04:00'
           visibility: 1
         folder_id: 6000190146
-        hits: 0
+        hits: 9
         id: 6000061933
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-09-15T23:45:20-04:00'
+        modified_at: '2015-10-21T20:05:29-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000061933
@@ -4976,7 +4977,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-09-15T23:45:20-04:00'
+        updated_at: '2015-10-21T20:05:29-04:00'
         user_id: 6002464727
   html: "<h2>Swift Command Line Client</h2>\n<p>The swift client is the command-line\
     \ interface (CLI) for the OpenStack Object\nStorage API and its extensions.</p>\n\
@@ -5005,15 +5006,15 @@
     \ <code>swift</code> to see what commands are avaiable and\nrun <code>swift command\
     \ -h</code> find out more information about a command.</p>\n<h2>Client python\
     \ API</h2>\n<p>You can also use swift python API to access and manage the object\
-    \ storage.\nThe below shows the sample Pthon code:</p>\n<p>```\nfrom swiftclient\
+    \ storage.\nThe below shows the sample Pthon code:</p>\n<p>```</p>\n<p>from swiftclient\
     \ import client</p>\n<p>swift = client.Connection(authurl=url, user=username,\
     \ key=password,\ntenant_name=project_name, auth_version='2')</p>\n<p>container_name=\"\
-    \"\nswift.get_container(container_name)</p>\n<p>container_name=\"first container\"\
-    \nswift.put_container(container_name)</p>\n<p>swift.delete_container(container_name)</p>\n\
-    <p>container_name = \"container\"\nobject_name = \"object\"\nswift.get_object(container_name,\
-    \ object_name)</p>\n<p>swift.put_object(container_name, object)\n```</p>\n<p>Please\
-    \ refer to above instruction about how to obtain authurl, user, password and\n\
-    tenant_name.</p>\n<p>To get a container, use swift.get_container(container_name)\
+    \"</p>\n<p>swift.get_container(container_name)</p>\n<p>container_name=\"first\
+    \ container\"</p>\n<p>swift.put_container(container_name)</p>\n<p>swift.delete_container(container_name)</p>\n\
+    <p>container_name = \"container\"</p>\n<p>object_name = \"object\"</p>\n<p>swift.get_object(container_name,\
+    \ object_name)</p>\n<p>swift.put_object(container_name, object)</p>\n<p>```</p>\n\
+    <p>Please refer to above instruction about how to obtain authurl, user, password\
+    \ and\ntenant_name.</p>\n<p>To get a container, use swift.get_container(container_name)\
     \ method, if you\nprovide a empty string to the container_name parameter, it returns\
     \ all\ncontainers in your project.</p>\n<p>To create a container, use swift.post_container(container_name)\
     \ method.</p>\n<p>To delete a container, use swift.delete_container(container_name)\
@@ -5022,7 +5023,7 @@
     \ method.</p>\n<p>Please refer to the <a href=\"http://docs.openstack.org/developer/python-swiftclient/index.html\"\
     >swift python cliet document</a> for more\ninformation.</p>"
   parent: 40
-  sha1: 7834687f4506e0008d2ae1e593aca67c69cec19d
+  sha1: 51e105849deaddbc9458fc561367e2ad91b804aa
   title: API
 57:
   freshdesk:
