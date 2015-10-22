@@ -51,12 +51,19 @@ enter:
 Then in the Environment Source field select "Direct Input", then in the environment
 data edit box type the following `yaml` (taking care to enter the correct values):
 
-```yaml
+
+```
+
 parameters:
+
   # your nectar keypair name instead of 'nectar_demo'
+  
   key_name: nectar_demo
+  
   # the latest nectar fedora image id
+  
   fedora_image_id: db354243-aba2-4831-81c7-a155b9089291
+  
 ```
 
 Once you are done press the "Next" button.
