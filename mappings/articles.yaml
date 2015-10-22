@@ -6211,28 +6211,28 @@
           \ through some the actions the command line tool can perform,\nusing one\
           \ of the NeCTAR Heat sample templates. \n To list all the stacks you have\
           \ created do (don't forget to source your\nRC file before you start!): \n\
-          \ bash\nheat stack-list \n Repeat the above command liberally as you step\
-          \ through the following commands! \n To validate the template (all one line):\
-          \ \n bash\nheat template-validate --template-url https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml\
+          \ heat stack-list \n Repeat the above command liberally as you step through\
+          \ the following commands! \n To validate the template (all one line): \n\
+          \ heat template-validate --template-url https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml\
           \ \n Then to use the template to create a stack named \"teststack\" (again,\
-          \ all one line): \n bash\nheat create teststack --template-url=https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml\
+          \ all one line): \n heat create teststack --template-url=https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml\
           \ --parameters=\"InstanceType=m1.small;DBUsername=dbuser;DBPassword=verybadpassword;DBRootPassword=anotherverybadpassword;KeyName=nectar_dev\"\
           \ \n PS: Don't forget to customise the command: e.g.: replace the passwords\
           \ with far\nbetter ones, and also to change the key name to match one of\
-          \ your keys.\nThe to show all the stacks that have been created: \n bash\n\
-          heat stack-list \n To show all details for the newly created stack: \n bash\n\
-          heat stack-show teststack \n To list all the events that have occurred in\
-          \ the stacks life to date: \n bash\nheat event-list teststack \n To drill\
-          \ down into a particular event, make a note of its id and replace\n<ID>\
-          \ with it in the following command: \n bash\nheat event-show teststack WikiDatabase\
-          \ <ID> \n To suspend the stack: \n bash\nheat action-suspend teststack \n\
-          \ To resume it: \n bash\nheat action-resume teststack \n To list the resources\
-          \ being used by the stack: \n bash\nheat resource-list teststack \n To drill\
-          \ down on a particular resource: \n bash\nheat resource-show teststack WikiDatabase\
-          \ \n To show the metadata associated with a particular resource: \n bash\n\
-          heat resource-metadata teststack WikiDatabase \n To show the template that\
-          \ was used to create the stack: \n bash\nheat template-show teststack \n\
-          \ And finally, to delete the stack, do: \n bash\nheat stack-delete teststack "
+          \ your keys.\nThe to show all the stacks that have been created: \n heat\
+          \ stack-list \n To show all details for the newly created stack: \n heat\
+          \ stack-show teststack \n To list all the events that have occurred in the\
+          \ stacks life to date: \n heat event-list teststack \n To drill down into\
+          \ a particular event, make a note of its id and replace\n<ID> with it in\
+          \ the following command: \n heat event-show teststack WikiDatabase <ID>\
+          \ \n To suspend the stack: \n heat action-suspend teststack \n To resume\
+          \ it: \n heat action-resume teststack \n To list the resources being used\
+          \ by the stack: \n heat resource-list teststack \n To drill down on a particular\
+          \ resource: \n heat resource-show teststack WikiDatabase \n To show the\
+          \ metadata associated with a particular resource: \n heat resource-metadata\
+          \ teststack WikiDatabase \n To show the template that was used to create\
+          \ the stack: \n heat template-show teststack \n And finally, to delete the\
+          \ stack, do: \n heat stack-delete teststack "
         description: '<h1>The Heat command line client</h1>
 
           <p>In true OpenStack fashion there is a <a href="http://docs.openstack.org/user-guide/cli.html">Heat
@@ -6256,25 +6256,19 @@
 
           RC file before you start!):</p>
 
-          <p><code>bash
-
-          heat stack-list</code></p>
+          <p><code>heat stack-list</code></p>
 
           <p>Repeat the above command liberally as you step through the following
           commands!</p>
 
           <p>To validate the template (all one line):</p>
 
-          <p><code>bash
-
-          heat template-validate --template-url https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml</code></p>
+          <p><code>heat template-validate --template-url https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml</code></p>
 
           <p>Then to use the template to create a stack named "teststack" (again,
           all one line):</p>
 
-          <p><code>bash
-
-          heat create teststack --template-url=https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml
+          <p><code>heat create teststack --template-url=https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml
           --parameters="InstanceType=m1.small;DBUsername=dbuser;DBPassword=verybadpassword;DBRootPassword=anotherverybadpassword;KeyName=nectar_dev"</code></p>
 
           <p><em>PS</em>: Don''t forget to customise the command: e.g.: replace the
@@ -6284,71 +6278,49 @@
 
           The to show all the stacks that have been created:</p>
 
-          <p><code>bash
-
-          heat stack-list</code></p>
+          <p><code>heat stack-list</code></p>
 
           <p>To show all details for the newly created stack:</p>
 
-          <p><code>bash
-
-          heat stack-show teststack</code></p>
+          <p><code>heat stack-show teststack</code></p>
 
           <p>To list all the events that have occurred in the stacks life to date:</p>
 
-          <p><code>bash
-
-          heat event-list teststack</code></p>
+          <p><code>heat event-list teststack</code></p>
 
           <p>To drill down into a particular event, make a note of its id and replace
 
           &lt;ID&gt; with it in the following command:</p>
 
-          <p><code>bash
-
-          heat event-show teststack WikiDatabase &lt;ID&gt;</code></p>
+          <p><code>heat event-show teststack WikiDatabase &lt;ID&gt;</code></p>
 
           <p>To suspend the stack:</p>
 
-          <p><code>bash
-
-          heat action-suspend teststack</code></p>
+          <p><code>heat action-suspend teststack</code></p>
 
           <p>To resume it:</p>
 
-          <p><code>bash
-
-          heat action-resume teststack</code></p>
+          <p><code>heat action-resume teststack</code></p>
 
           <p>To list the resources being used by the stack:</p>
 
-          <p><code>bash
-
-          heat resource-list teststack</code></p>
+          <p><code>heat resource-list teststack</code></p>
 
           <p>To drill down on a particular resource:</p>
 
-          <p><code>bash
-
-          heat resource-show teststack WikiDatabase</code></p>
+          <p><code>heat resource-show teststack WikiDatabase</code></p>
 
           <p>To show the metadata associated with a particular resource:</p>
 
-          <p><code>bash
-
-          heat resource-metadata teststack WikiDatabase</code></p>
+          <p><code>heat resource-metadata teststack WikiDatabase</code></p>
 
           <p>To show the template that was used to create the stack:</p>
 
-          <p><code>bash
-
-          heat template-show teststack</code></p>
+          <p><code>heat template-show teststack</code></p>
 
           <p>And finally, to delete the stack, do:</p>
 
-          <p><code>bash
-
-          heat stack-delete teststack</code></p>'
+          <p><code>heat stack-delete teststack</code></p>'
         folder:
           category_id: 6000122279
           created_at: '2015-09-03T01:28:02-04:00'
@@ -6359,21 +6331,21 @@
           language_id: 6
           name: Heat
           parent_id: 6000190148
-          position: 5
+          position: 4
           updated_at: '2015-09-03T01:28:02-04:00'
           visibility: 1
         folder_id: 6000190148
-        hits: 0
+        hits: 4
         id: 6000074218
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-14T07:19:27-04:00'
+        modified_at: '2015-10-21T20:10:07-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000074218
-        position: 5
+        position: 6
         seo_data: {}
         status: 2
         string_01: null
@@ -6382,7 +6354,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-10-14T07:19:27-04:00'
+        updated_at: '2015-10-21T20:10:07-04:00'
         user_id: 6002464727
   html: '<h1>The Heat command line client</h1>
 
@@ -6407,24 +6379,18 @@
 
     RC file before you start!):</p>
 
-    <p><code>bash
-
-    heat stack-list</code></p>
+    <p><code>heat stack-list</code></p>
 
     <p>Repeat the above command liberally as you step through the following commands!</p>
 
     <p>To validate the template (all one line):</p>
 
-    <p><code>bash
-
-    heat template-validate --template-url https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml</code></p>
+    <p><code>heat template-validate --template-url https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml</code></p>
 
     <p>Then to use the template to create a stack named "teststack" (again, all one
     line):</p>
 
-    <p><code>bash
-
-    heat create teststack --template-url=https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml
+    <p><code>heat create teststack --template-url=https://raw.github.com/NeCTAR-RC/heat-templates/master/yaml/Fedora/WordPress_Single_Instance.yaml
     --parameters="InstanceType=m1.small;DBUsername=dbuser;DBPassword=verybadpassword;DBRootPassword=anotherverybadpassword;KeyName=nectar_dev"</code></p>
 
     <p><em>PS</em>: Don''t forget to customise the command: e.g.: replace the passwords
@@ -6434,73 +6400,51 @@
 
     The to show all the stacks that have been created:</p>
 
-    <p><code>bash
-
-    heat stack-list</code></p>
+    <p><code>heat stack-list</code></p>
 
     <p>To show all details for the newly created stack:</p>
 
-    <p><code>bash
-
-    heat stack-show teststack</code></p>
+    <p><code>heat stack-show teststack</code></p>
 
     <p>To list all the events that have occurred in the stacks life to date:</p>
 
-    <p><code>bash
-
-    heat event-list teststack</code></p>
+    <p><code>heat event-list teststack</code></p>
 
     <p>To drill down into a particular event, make a note of its id and replace
 
     &lt;ID&gt; with it in the following command:</p>
 
-    <p><code>bash
-
-    heat event-show teststack WikiDatabase &lt;ID&gt;</code></p>
+    <p><code>heat event-show teststack WikiDatabase &lt;ID&gt;</code></p>
 
     <p>To suspend the stack:</p>
 
-    <p><code>bash
-
-    heat action-suspend teststack</code></p>
+    <p><code>heat action-suspend teststack</code></p>
 
     <p>To resume it:</p>
 
-    <p><code>bash
-
-    heat action-resume teststack</code></p>
+    <p><code>heat action-resume teststack</code></p>
 
     <p>To list the resources being used by the stack:</p>
 
-    <p><code>bash
-
-    heat resource-list teststack</code></p>
+    <p><code>heat resource-list teststack</code></p>
 
     <p>To drill down on a particular resource:</p>
 
-    <p><code>bash
-
-    heat resource-show teststack WikiDatabase</code></p>
+    <p><code>heat resource-show teststack WikiDatabase</code></p>
 
     <p>To show the metadata associated with a particular resource:</p>
 
-    <p><code>bash
-
-    heat resource-metadata teststack WikiDatabase</code></p>
+    <p><code>heat resource-metadata teststack WikiDatabase</code></p>
 
     <p>To show the template that was used to create the stack:</p>
 
-    <p><code>bash
-
-    heat template-show teststack</code></p>
+    <p><code>heat template-show teststack</code></p>
 
     <p>And finally, to delete the stack, do:</p>
 
-    <p><code>bash
-
-    heat stack-delete teststack</code></p>'
+    <p><code>heat stack-delete teststack</code></p>'
   parent: 42
-  sha1: 7f5681a9438808069ac9e0ba6b0a6f87a6d0177c
+  sha1: bcda1bfe9f553386ffc61813e43239d088929c39
   title: API
 63:
   freshdesk:
