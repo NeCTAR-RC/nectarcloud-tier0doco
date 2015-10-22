@@ -130,17 +130,13 @@ Finally, you need to drop all other traffic. You need to make sure you have set
 to allow SSH connection, otherwise you will lose access to the Virtual Machine:
 
 ```
-
 sudo iptables -P INPUT DROP
-
 ```
 
 You can save your IPtables changes by (Ubuntu): 
 
 ``` 
-
 iptables-save > /etc/iptables.rules
-
 ```
 
 ## Install fail2ban
@@ -152,12 +148,8 @@ unsuccessful login attempts based on a predefined number.
 
 You can use the below commands to install fail2ban in Ubuntu:
 
-```
-
-sudo apt-get update
-sudo apt-get install fail2ban
-
-```
+```sudo apt-get update```
+```sudo apt-get install fail2ban```
 
 To setup the fail2ban, please follow this [instruction][fail2ban].
 
