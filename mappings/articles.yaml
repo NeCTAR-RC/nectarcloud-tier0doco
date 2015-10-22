@@ -7284,7 +7284,7 @@
           \ insight\ninformation. To verify parameters in the request header, you\
           \ can refer to\nOpenStack service API to see what are expected. \n To enable\
           \ debugging information on the standard out for Python API, you can add\n\
-          the below code: \n ``` \n import logging \n logger = logging.getLogger(\"\
+          the below code: \n ```bash \n import logging \n logger = logging.getLogger(\"\
           novaclient\") \n logging.basicConfig(level=logging.DEBUG) \n ``` \n The\
           \ will print the same output as adding --debug option for command line API.\
           \ \n Debugging via Source Code \n If the above techniques are still not\
@@ -7455,7 +7455,7 @@
 
           the below code:</p>
 
-          <p>```</p>
+          <p>```bash</p>
 
           <p>import logging</p>
 
@@ -7508,13 +7508,13 @@
           updated_at: '2015-09-03T01:27:59-04:00'
           visibility: 1
         folder_id: 6000190145
-        hits: 4
+        hits: 5
         id: 6000075752
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-20T23:06:47-04:00'
+        modified_at: '2015-10-21T20:04:00-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000075752
@@ -7527,7 +7527,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Trouble Shooting
-        updated_at: '2015-10-20T23:06:47-04:00'
+        updated_at: '2015-10-21T20:04:00-04:00'
         user_id: 6002464727
   html: '<h2>Debugging Nova Command line Client</h2>
 
@@ -7680,7 +7680,7 @@
 
     the below code:</p>
 
-    <p>```</p>
+    <p>```bash</p>
 
     <p>import logging</p>
 
@@ -7717,7 +7717,7 @@
 
     receiving response. It is also used by the command line Nova client. </p>'
   parent: 39
-  sha1: 4cb33573c76dfa54d59428c5902f9521778a4789
+  sha1: 5827c526b1fe6f3a40a9bf76dc6c911d78bffde5
   title: Trouble Shooting
 66:
   freshdesk:
