@@ -7943,11 +7943,11 @@
           \ URL\" field\nenter: \n https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/juno/Fedora/wordpress_single_instance.yaml\
           \ \n Then in the Environment Source field select \"Direct Input\", then\
           \ in the environment\ndata edit box type the following yaml (taking care\
-          \ to enter the correct values): \n yaml\nparameters:\n  # your nectar keypair\
-          \ name instead of 'nectar_demo'\n  key_name: nectar_demo\n  # the latest\
-          \ nectar fedora image id\n  fedora_image_id: db354243-aba2-4831-81c7-a155b9089291\
-          \ \n Once you are done press the \"Next\" button. \n All going well, you\
-          \ should now be presented with a page titled \"Launch Stack\".\nIt will\
+          \ to enter the correct values): \n ``` \n parameters: \n # your nectar keypair\
+          \ name instead of 'nectar_demo' \n key_name: nectar_demo \n # the latest\
+          \ nectar fedora image id \n fedora_image_id: db354243-aba2-4831-81c7-a155b9089291\
+          \ \n ``` \n Once you are done press the \"Next\" button. \n All going well,\
+          \ you should now be presented with a page titled \"Launch Stack\".\nIt will\
           \ be a form that is made up of fields that are taken from your template's\n\
           parameters. \n Next to each field is a small question mark icon. As it gains\
           \ focus, so the user\nwill be shows the parameters comment field as a help\
@@ -8007,16 +8007,17 @@
           >https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/juno/Fedora/wordpress_single_instance.yaml</a></p>\n\
           <p>Then in the Environment Source field select \"Direct Input\", then in\
           \ the environment\ndata edit box type the following <code>yaml</code> (taking\
-          \ care to enter the correct values):</p>\n<p><code>yaml\nparameters:\n \
-          \ # your nectar keypair name instead of 'nectar_demo'\n  key_name: nectar_demo\n\
-          \  # the latest nectar fedora image id\n  fedora_image_id: db354243-aba2-4831-81c7-a155b9089291</code></p>\n\
-          <p>Once you are done press the \"Next\" button.</p>\n<p>All going well,\
-          \ you should now be presented with a page titled \"Launch Stack\".\nIt will\
-          \ be a form that is made up of fields that are taken from your template's\n\
-          parameters.</p>\n<p>Next to each field is a small question mark icon. As\
-          \ it gains focus, so the user\nwill be shows the parameters comment field\
-          \ as a help bubble to the right.</p>\n<p><img alt=\"Heat launch template\
-          \ dialog\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_dash_launch.png?raw=true\"\
+          \ care to enter the correct values):</p>\n<p>```</p>\n<p>parameters:</p>\n\
+          <p># your nectar keypair name instead of 'nectar_demo'</p>\n<p>key_name:\
+          \ nectar_demo</p>\n<p># the latest nectar fedora image id</p>\n<p>fedora_image_id:\
+          \ db354243-aba2-4831-81c7-a155b9089291</p>\n<p>```</p>\n<p>Once you are\
+          \ done press the \"Next\" button.</p>\n<p>All going well, you should now\
+          \ be presented with a page titled \"Launch Stack\".\nIt will be a form that\
+          \ is made up of fields that are taken from your template's\nparameters.</p>\n\
+          <p>Next to each field is a small question mark icon. As it gains focus,\
+          \ so the user\nwill be shows the parameters comment field as a help bubble\
+          \ to the right.</p>\n<p><img alt=\"Heat launch template dialog\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/heat_dash_launch.png?raw=true\"\
           ></p>\n<p>The value entered into the \"Stack Name\" field is used to give\
           \ a name to the stack\nthat is going to be launched by Heat. This name must\
           \ start with a letter and may\nonly contain letters, numbers, underscores,\
@@ -8046,21 +8047,21 @@
           language_id: 6
           name: Heat
           parent_id: 6000190148
-          position: 5
+          position: 4
           updated_at: '2015-09-03T01:28:02-04:00'
           visibility: 1
         folder_id: 6000190148
-        hits: 0
+        hits: 5
         id: 6000076074
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-08T19:42:07-04:00'
+        modified_at: '2015-10-21T20:04:18-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000076074
-        position: 6
+        position: 2
         seo_data: {}
         status: 2
         string_01: null
@@ -8069,7 +8070,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Heat Dashboard Introduction
-        updated_at: '2015-10-08T19:42:07-04:00'
+        updated_at: '2015-10-21T20:04:18-04:00'
         user_id: 6002464727
   html: "<h1>Heat: the dashboard</h1>\n<p>On the research cloud <a href=\"https://dashboard.rc.nectar.org.au/project/\"\
     >dashboard project panel</a>\nthere is a side menu heading named \"Orchestration\"\
@@ -8106,14 +8107,14 @@
     >https://raw.githubusercontent.com/NeCTAR-RC/heat-templates/master/juno/Fedora/wordpress_single_instance.yaml</a></p>\n\
     <p>Then in the Environment Source field select \"Direct Input\", then in the environment\n\
     data edit box type the following <code>yaml</code> (taking care to enter the correct\
-    \ values):</p>\n<p><code>yaml\nparameters:\n  # your nectar keypair name instead\
-    \ of 'nectar_demo'\n  key_name: nectar_demo\n  # the latest nectar fedora image\
-    \ id\n  fedora_image_id: db354243-aba2-4831-81c7-a155b9089291</code></p>\n<p>Once\
-    \ you are done press the \"Next\" button.</p>\n<p>All going well, you should now\
-    \ be presented with a page titled \"Launch Stack\".\nIt will be a form that is\
-    \ made up of fields that are taken from your template's\nparameters.</p>\n<p>Next\
-    \ to each field is a small question mark icon. As it gains focus, so the user\n\
-    will be shows the parameters comment field as a help bubble to the right.</p>\n\
+    \ values):</p>\n<p>```</p>\n<p>parameters:</p>\n<p># your nectar keypair name\
+    \ instead of 'nectar_demo'</p>\n<p>key_name: nectar_demo</p>\n<p># the latest\
+    \ nectar fedora image id</p>\n<p>fedora_image_id: db354243-aba2-4831-81c7-a155b9089291</p>\n\
+    <p>```</p>\n<p>Once you are done press the \"Next\" button.</p>\n<p>All going\
+    \ well, you should now be presented with a page titled \"Launch Stack\".\nIt will\
+    \ be a form that is made up of fields that are taken from your template's\nparameters.</p>\n\
+    <p>Next to each field is a small question mark icon. As it gains focus, so the\
+    \ user\nwill be shows the parameters comment field as a help bubble to the right.</p>\n\
     <p><img alt=\"Heat launch template dialog\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Heat--DOCID42/images/heat_dash_launch.png?raw=true\"></p>\n\
     <p>The value entered into the \"Stack Name\" field is used to give a name to the\
@@ -8135,7 +8136,7 @@
     \ If you want to delete more than one\nstack, select the checkboxes next to them\
     \ and hit the \"\u2716 Delete Stack\"\nbutton.</p>"
   parent: 42
-  sha1: 82abbdcee3af6319380154f6cee2d38c2d2968f4
+  sha1: 0eea9066a878cc69f0e9ed9da8dcdb06a6e7a350
   title: Heat Dashboard Introduction
 68:
   freshdesk:
