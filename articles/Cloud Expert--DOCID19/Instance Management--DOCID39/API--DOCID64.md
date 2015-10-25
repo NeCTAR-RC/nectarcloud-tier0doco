@@ -179,23 +179,15 @@ used only for the first time when instance boots. The user data script can be
 put in a file and then passed to instance creation. You can see check this
 [website][cloudinit] to see what script you can use to initialize an instance. 
 
-
-To get more help, you can execute ``` nova help boot ``` to see what other
-options are available.
-
-
-To boot a stopped instance, use nova start <server name or ID>.
-
-To stop an instance, use nova stop <server name or ID>.
-
-To suspend an instance ,use nova suspend <server name or ID>.
-
-To show details of an instance, use nova show <server name or ID>.
-
-To resume an instance, use nova resume <server name or ID>.
-
-To create a snapshot of a instance, use nova image-create <server name or ID>
-<snapstho name>.
+| Commands for instance management  | Action |
+| ------------- | ------------- |
+| ```nova help boot ```  | Discover the available options |
+| ```nova start <server name or ID>``` | To boot a stopped instance |
+| ```nova stop <server name or ID>``` | To stop an instance |
+| ```nova suspend <server name or ID>``` | To suspend an instance |
+| ```nova resume <server name or ID>``` | To resume an instance |
+| ```nova show <server name or ID>``` | To show details of an instance |
+| ```nova image-create <server name or ID> <snapshot name>```  | To create a snapshot of a instance |
 
 You can also find more information about nova command line API via
 [novaclient][novaclient].
