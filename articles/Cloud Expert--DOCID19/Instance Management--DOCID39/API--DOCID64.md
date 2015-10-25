@@ -135,25 +135,18 @@ also get the PASSWORD from above as copied from the NeCTAR Dashboard.
 
 ## Nova Command Line API
 
-you can use nova command to manage your instances in a selected project, you can
-type ``` nova --help ``` or just ``` nova ``` to find out all the available
-options and sub commands.
+**To get information about about managing instances in a selected project:**
 
-If you want to know more about a specific sub command,
-execute ```nova help command-name ``` for help. 
-
-To list all active instances, execute ``` nova list ```. This should return
-all available instances in one project.
-
-To list all available flavors, execute ``` nova flavor-list ```.
-
-To list all available images, execute ``` nova image-list ```.
-
-To list all available security groups, execute ``` nova secgroup-list ```.
-
-To list all available key pairs, execute ``` nova keypair-list ```.
-
-To list all available availability zones, execute ``` nova availability-zone-list ```.
+| Command  | Action |
+| ------------- | ------------- |
+| ```nova --help``` or ```nova```   | Discover the available options and sub-commands |
+| ```nova help <command-name>```  | Information on a specific sub-command |
+| ```nova list ``` | To list all active instances in one project |
+| ```nova flavor-list ``` | To list all available flavors |
+| ```nova image-list ``` | To list all available images |
+| ```nova secgroup-list ``` | To list all available security groups |
+| ```nova keypair-list ``` | To list all available key pairs |
+| ```nova availability-zone-list ``` | To list all available availability zones |
 
 Note: not all options are available as there is a security policy applied and
 your account might not have sufficient permission. 
@@ -179,23 +172,15 @@ used only for the first time when instance boots. The user data script can be
 put in a file and then passed to instance creation. You can see check this
 [website][cloudinit] to see what script you can use to initialize an instance. 
 
-
-To get more help, you can execute ``` nova help boot ``` to see what other
-options are available.
-
-
-To boot a stopped instance, use nova start <server name or ID>.
-
-To stop an instance, use nova stop <server name or ID>.
-
-To suspend an instance ,use nova suspend <server name or ID>.
-
-To show details of an instance, use nova show <server name or ID>.
-
-To resume an instance, use nova resume <server name or ID>.
-
-To create a snapshot of a instance, use nova image-create <server name or ID>
-<snapstho name>.
+| Commands for instance management  | Action |
+| ------------- | ------------- |
+| ```nova help boot ```  | Discover the available options |
+| ```nova start <server name or ID>``` | To boot a stopped instance |
+| ```nova stop <server name or ID>``` | To stop an instance |
+| ```nova suspend <server name or ID>``` | To suspend an instance |
+| ```nova resume <server name or ID>``` | To resume an instance |
+| ```nova show <server name or ID>``` | To show details of an instance |
+| ```nova image-create <server name or ID> <snapshot name>```  | To create a snapshot of a instance |
 
 You can also find more information about nova command line API via
 [novaclient][novaclient].
