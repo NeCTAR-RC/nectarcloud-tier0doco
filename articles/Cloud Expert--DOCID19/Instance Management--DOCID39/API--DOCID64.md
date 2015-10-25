@@ -19,13 +19,11 @@ OS X
 
 
 ```
-
 sudo easy_install pip
 
 sudo pip install --upgrade setuptools
 
 sudo pip install python-novaclient
-
 ```
 
 Ubuntu
@@ -184,18 +182,18 @@ To get more help, you can execute ``` nova help boot ``` to see what other
 options are available.
 
 
-To boot a stopped instance, use nova start <server name or ID>.
+To boot a stopped instance, use ```nova start <server name or ID>```
 
-To stop an instance, use nova stop <server name or ID>.
+To stop an instance, use ```nova stop <server name or ID>```
 
-To suspend an instance ,use nova suspend <server name or ID>.
+To suspend an instance ,use ```nova suspend <server name or ID>```
 
-To show details of an instance, use nova show <server name or ID>.
+To show details of an instance, use ```nova show <server name or ID>```
 
-To resume an instance, use nova resume <server name or ID>.
+To resume an instance, use ```nova resume <server name or ID>```
 
-To create a snapshot of a instance, use nova image-create <server name or ID>
-<snapstho name>.
+To create a snapshot of a instance, use 
+```nova image-create <server name or ID> <snapstho name>```
 
 You can also find more information about nova command line API via
 [novaclient][novaclient].
