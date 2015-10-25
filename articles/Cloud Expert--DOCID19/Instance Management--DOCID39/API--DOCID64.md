@@ -19,13 +19,11 @@ OS X
 
 
 ```
-
 sudo easy_install pip
 
 sudo pip install --upgrade setuptools
 
 sudo pip install python-novaclient
-
 ```
 
 Ubuntu
@@ -135,30 +133,21 @@ also get the PASSWORD from above as copied from the NeCTAR Dashboard.
 
 ## Nova Command Line API
 
-you can use nova command to manage your instances in a selected project, you can
-type ``` nova --help ``` or just ``` nova ``` to find out all the available
-options and sub commands.
-
-If you want to know more about a specific sub command,
-execute ```nova help command-name ``` for help. 
-
-To list all active instances, execute ``` nova list ```. This should return
-all available instances in one project.
-
-To list all available flavors, execute ``` nova flavor-list ```.
-
-To list all available images, execute ``` nova image-list ```.
-
-To list all available security groups, execute ``` nova secgroup-list ```.
-
-To list all available key pairs, execute ``` nova keypair-list ```.
-
-To list all available availability zones, execute ``` nova availability-zone-list ```.
+Command  | Action
+------------- | -------------
+```nova --help``` or ```nova```   | Discover the available options and sub-commands
+```nova help <command-name>```  | Information on a specific sub-command
+```nova list ``` | To list all active instances in one project
+```nova flavor-list ``` | To list all available flavors
+```nova image-list ``` | To list all available images
+```nova secgroup-list ``` | To list all available security groups
+```nova keypair-list ``` | To list all available key pairs
+```nova availability-zone-list ``` | To list all available availability zones
 
 Note: not all options are available as there is a security policy applied and
 your account might not have sufficient permission. 
 
-The below shows how to create/delete, change state of a instance:
+The following shows how to create/delete, change state of a instance:
 
 To boot a new instance, you need to get image name, keypair name, security group
 name and flavor name. You can use the above mentioned commands to acquire these
@@ -184,18 +173,18 @@ To get more help, you can execute ``` nova help boot ``` to see what other
 options are available.
 
 
-To boot a stopped instance, use nova start <server name or ID>.
+To boot a stopped instance, use ```nova start <server name or ID>```
 
-To stop an instance, use nova stop <server name or ID>.
+To stop an instance, use ```nova stop <server name or ID>```
 
-To suspend an instance ,use nova suspend <server name or ID>.
+To suspend an instance ,use ```nova suspend <server name or ID>```
 
-To show details of an instance, use nova show <server name or ID>.
+To show details of an instance, use ```nova show <server name or ID>```
 
-To resume an instance, use nova resume <server name or ID>.
+To resume an instance, use ```nova resume <server name or ID>```
 
-To create a snapshot of a instance, use nova image-create <server name or ID>
-<snapstho name>.
+To create a snapshot of a instance, use 
+```nova image-create <server name or ID> <snapstho name>```
 
 You can also find more information about nova command line API via
 [novaclient][novaclient].
