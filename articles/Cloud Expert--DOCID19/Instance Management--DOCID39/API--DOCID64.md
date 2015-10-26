@@ -100,11 +100,11 @@ When using the script file you downloaded from NeCTAR Dashboard, these
 variables are set by the script file and you can see these variables
 if you open the file. Example:
 
-OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
-OS_TENANT_NAME=my_science_project
-OS_TENANT_ID=sdfsdfsfwrwewer
-OS_USERNAME=clouduser@example.edu.au
-OS_PASSWORD=XXXXXX
+  OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/ 
+  OS_TENANT_NAME=my_science_project 
+  OS_TENANT_ID=sdfsdfsfwrwewer 
+  OS_USERNAME=clouduser@example.edu.au 
+  OS_PASSWORD=XXXXXX
 
 
 ### Authentication for Command Line API
@@ -120,13 +120,10 @@ obtained from Dashboard.
 You can use the below sample code to get authenticated. 
 
 
-```bash
+```from novaclient import client```
 
-from novaclient import client
+```nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)```
 
-nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)
-
-```
 
 The VERSION parameter can be "1.1" or "2". You can get USERNAME, PROJECT_NAME and
 AUTH_URL from the above .sh file obtained from the NeCTAR Dashboard and you can
@@ -151,7 +148,7 @@ To get information about about managing instances in a selected project:
 Note: not all options are available as there is a security policy applied and
 your account might not have sufficient permission. 
 
-The below shows how to create/delete, change state of a instance:
+### Managing an Instance
 
 To boot a new instance, you need to get image name, keypair name, security group
 name and flavor name. You can use the above mentioned commands to acquire these
@@ -159,12 +156,7 @@ information. Then, you can use nova boot command to launch a new instance, the
 format is:
 
 
-```bash
-
-nova boot [instance-name]  --flavor [name] --image [name] --key-name [name]
---security-groups [names separated by space]
-
-```
+```nova boot [instance-name]  --flavor [name] --image [name] --key-name [name] --security-groups [names separated by space]```
 
 You can also specify option --availability-zone to launch an instance in a
 designed zone and option --user-data <user-data-file> for a initialization script
@@ -190,9 +182,7 @@ You can also find more information about nova command line API via
 You can also use Nova Python API to manage instances integrated with Python
 programming language.
 
-The below shows an sample code to launch a new instance and you need to get
-authentication information first from above:
-
+Example of code to launch a new instance:
 
 ```
 
