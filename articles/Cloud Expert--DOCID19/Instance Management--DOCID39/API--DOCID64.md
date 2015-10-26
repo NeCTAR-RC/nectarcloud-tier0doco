@@ -15,7 +15,7 @@ You can use pip to install the python-nova API and the nova command line API.
 
 See below for the instructions:
 
-OS X
+### OS X
 
 
 ```
@@ -28,7 +28,7 @@ sudo pip install python-novaclient
 
 ```
 
-Ubuntu
+### Ubuntu
 
 
 ```
@@ -39,7 +39,7 @@ sudo pip install python-novaclient
 
 ```
 
-RHEL, CentOS, or Fedora
+### RHEL, CentOS, or Fedora
 
 
 ```
@@ -54,7 +54,7 @@ sudo pip install python-novaclient
 
 ```
 
-Windows
+### Windows
 
 See [pip windows][pip windows] for instructions on installing pip for Windows.
 
@@ -100,11 +100,19 @@ When using the script file you downloaded from NeCTAR Dashboard, these
 variables are set by the script file and you can see these variables
 if you open the file. Example:
 
+<<<<<<< HEAD
   OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/ 
   OS_TENANT_NAME=my_science_project 
   OS_TENANT_ID=sdfsdfsfwrwewer 
   OS_USERNAME=clouduser@example.edu.au 
   OS_PASSWORD=XXXXXX
+=======
+> OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/ 
+> OS_TENANT_NAME=my_science_project 
+> OS_TENANT_ID=sdfsdfsfwrwewer 
+> OS_USERNAME=clouduser@example.edu.au 
+> OS_PASSWORD=XXXXXX
+>>>>>>> 0777133... formatting fix - DOCID64
 
 
 ### Authentication for Command Line API
