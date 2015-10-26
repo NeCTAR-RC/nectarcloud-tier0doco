@@ -100,12 +100,11 @@ When using the script file you downloaded from NeCTAR Dashboard, these
 variables are set by the script file and you can see these variables
 if you open the file. Example:
 
-  OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/ 
-  OS_TENANT_NAME=my_science_project 
-  OS_TENANT_ID=sdfsdfsfwrwewer 
-  OS_USERNAME=clouduser@example.edu.au 
-  OS_PASSWORD=XXXXXX
-
+> OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/ 
+> OS_TENANT_NAME=my_science_project 
+> OS_TENANT_ID=sdfsdfsfwrwewer 
+> OS_USERNAME=clouduser@example.edu.au 
+> OS_PASSWORD=XXXXXX
 
 ### Authentication for Command Line API
 
