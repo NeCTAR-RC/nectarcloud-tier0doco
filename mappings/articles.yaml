@@ -6889,47 +6889,48 @@
           \ can be \"1.1\" or \"2\". You can get USERNAME, PROJECT_NAME and\nAUTH_URL\
           \ from the above .sh file obtained from the NeCTAR Dashboard and you can\n\
           also get the PASSWORD from above as copied from the NeCTAR Dashboard. \n\
-          \ Nova Command Line API \n you can use nova command to manage your instances\
-          \ in a selected project, you can\ntype nova --help or just nova to find\
-          \ out all the available\noptions and sub commands. \n If you want to know\
-          \ more about a specific sub command,\nexecute nova help command-name for\
-          \ help.  \n To list all active instances, execute nova list. This should\
-          \ return\nall available instances in one project. \n To list all available\
-          \ flavors, execute nova flavor-list. \n To list all available images, execute\
-          \ nova image-list. \n To list all available security groups, execute nova\
-          \ secgroup-list. \n To list all available key pairs, execute nova keypair-list.\
-          \ \n To list all available availability zones, execute nova availability-zone-list.\
-          \ \n Note: not all options are available as there is a security policy applied\
-          \ and\nyour account might not have sufficient permission.  \n The below\
-          \ shows how to create/delete, change state of a instance: \n To boot a new\
-          \ instance, you need to get image name, keypair name, security group\nname\
-          \ and flavor name. You can use the above mentioned commands to acquire these\n\
-          information. Then, you can use nova boot command to launch a new instance,\
-          \ the\nformat is: \n ```bash \n nova boot [instance-name]  --flavor [name]\
-          \ --image [name] --key-name [name]\n--security-groups [names separated by\
-          \ space] \n ``` \n You can also specify option --availability-zone to launch\
-          \ an instance in a\ndesigned zone and option --user-data  for a initialization\
-          \ script\nused only for the first time when instance boots. The user data\
-          \ script can be\nput in a file and then passed to instance creation. You\
-          \ can see check this\nwebsite to see what script you can use to initialize\
-          \ an instance.  \n To get more help, you can execute nova help boot to see\
-          \ what other\noptions are available. \n To boot a stopped instance, use\
-          \ nova start . \n To stop an instance, use nova stop . \n To suspend an\
-          \ instance ,use nova suspend . \n To show details of an instance, use nova\
-          \ show . \n To resume an instance, use nova resume . \n To create a snapshot\
-          \ of a instance, use nova image-create \n. \n You can also find more information\
-          \ about nova command line API via\nnovaclient. \n Nova Python API \n You\
-          \ can also use Nova Python API to manage instances integrated with Python\n\
-          programming language. \n The below shows an sample code to launch a new\
-          \ instance and you need to get\nauthentication information first from above:\
-          \ \n ``` \n from novaclient import client \n nova = client.Client(\"2\"\
-          , username, password, project_name, auth_url) \n nova.servers.list() \n\
-          \ nova.flavors.list() \n nova.keypairs.list() \n nova.images.list() \n nova.security_groups.list()\
-          \ \n server_name = 'new instance' \n image = 'NeCTAR Ubuntu 14.04 (Trusty)\
-          \ amd64' \n flavor = 'm1.small' \n security_groups = ['5c8c4dd0-db53-41e3-a53b-9730c764149c',\
-          \ '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff'] \n key_name = 'ming' \n nova.servers.create(server_name,\
-          \ image, flavor, security_groups=security_groups, key_name=) \n ```  \n\
-          \ You can find more information about nova python API from this link "
+          \ Nova Command Line API \n To get information about about managing instances\
+          \ in a selected project: \n\n\n\nCommand\nAction\n\n\n\n\n\nnova --help\
+          \ or nova\n\nDiscover the available options and sub-commands\n\n\nnova help\
+          \ <command-name>\nInformation on a specific sub-command\n\n\nnova list\n\
+          To list all active instances in one project\n\n\nnova flavor-list\nTo list\
+          \ all available flavors\n\n\nnova image-list\nTo list all available images\n\
+          \n\nnova secgroup-list\nTo list all available security groups\n\n\nnova\
+          \ keypair-list\nTo list all available key pairs\n\n\nnova availability-zone-list\n\
+          To list all available availability zones\n\n\n\n Note: not all options are\
+          \ available as there is a security policy applied and\nyour account might\
+          \ not have sufficient permission.  \n The below shows how to create/delete,\
+          \ change state of a instance: \n To boot a new instance, you need to get\
+          \ image name, keypair name, security group\nname and flavor name. You can\
+          \ use the above mentioned commands to acquire these\ninformation. Then,\
+          \ you can use nova boot command to launch a new instance, the\nformat is:\
+          \ \n ```bash \n nova boot [instance-name]  --flavor [name] --image [name]\
+          \ --key-name [name]\n--security-groups [names separated by space] \n ```\
+          \ \n You can also specify option --availability-zone to launch an instance\
+          \ in a\ndesigned zone and option --user-data  for a initialization script\n\
+          used only for the first time when instance boots. The user data script can\
+          \ be\nput in a file and then passed to instance creation. You can see check\
+          \ this\nwebsite to see what script you can use to initialize an instance.\
+          \  \n\n\n\nCommands for instance management\nAction\n\n\n\n\nnova help boot\n\
+          Discover the available options\n\n\nnova start <server name or ID>\nTo boot\
+          \ a stopped instance\n\n\nnova stop <server name or ID>\nTo stop an instance\n\
+          \n\nnova suspend <server name or ID>\nTo suspend an instance\n\n\nnova resume\
+          \ <server name or ID>\nTo resume an instance\n\n\nnova show <server name\
+          \ or ID>\nTo show details of an instance\n\n\nnova image-create <server\
+          \ name or ID> <snapshot name>\nTo create a snapshot of a instance\n\n\n\n\
+          \ You can also find more information about nova command line API via\nnovaclient.\
+          \ \n Nova Python API \n You can also use Nova Python API to manage instances\
+          \ integrated with Python\nprogramming language. \n The below shows an sample\
+          \ code to launch a new instance and you need to get\nauthentication information\
+          \ first from above: \n ``` \n from novaclient import client \n nova = client.Client(\"\
+          2\", username, password, project_name, auth_url) \n nova.servers.list()\
+          \ \n nova.flavors.list() \n nova.keypairs.list() \n nova.images.list() \n\
+          \ nova.security_groups.list() \n server_name = 'new instance' \n image =\
+          \ 'NeCTAR Ubuntu 14.04 (Trusty) amd64' \n flavor = 'm1.small' \n security_groups\
+          \ = ['5c8c4dd0-db53-41e3-a53b-9730c764149c', '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff']\
+          \ \n key_name = 'ming' \n nova.servers.create(server_name, image, flavor,\
+          \ security_groups=security_groups, key_name=) \n ```  \n You can find more\
+          \ information about nova python API from this link "
         description: "<h2>Manage instance via API</h2>\n<p>The NeCTAR Dashboard is\
           \ one way to manage your instances in projects and NeCTAR\ncloud provides\
           \ instance management via API. There are two types of API you can use\n\
@@ -6981,17 +6982,19 @@
           \ USERNAME, PROJECT_NAME and\nAUTH_URL from the above .sh file obtained\
           \ from the NeCTAR Dashboard and you can\nalso get the PASSWORD from above\
           \ as copied from the NeCTAR Dashboard.</p>\n<h2>Nova Command Line API</h2>\n\
-          <p>you can use nova command to manage your instances in a selected project,\
-          \ you can\ntype <code>nova --help</code> or just <code>nova</code> to find\
-          \ out all the available\noptions and sub commands.</p>\n<p>If you want to\
-          \ know more about a specific sub command,\nexecute <code>nova help command-name</code>\
-          \ for help. </p>\n<p>To list all active instances, execute <code>nova list</code>.\
-          \ This should return\nall available instances in one project.</p>\n<p>To\
-          \ list all available flavors, execute <code>nova flavor-list</code>.</p>\n\
-          <p>To list all available images, execute <code>nova image-list</code>.</p>\n\
-          <p>To list all available security groups, execute <code>nova secgroup-list</code>.</p>\n\
-          <p>To list all available key pairs, execute <code>nova keypair-list</code>.</p>\n\
-          <p>To list all available availability zones, execute <code>nova availability-zone-list</code>.</p>\n\
+          <p>To get information about about managing instances in a selected project:</p>\n\
+          <table>\n<thead>\n<tr>\n<th>Command</th>\n<th>Action</th>\n</tr>\n</thead>\n\
+          <tbody>\n<tr>\n<td>\n<code>nova --help</code> or <code>nova</code>\n</td>\n\
+          <td>Discover the available options and sub-commands</td>\n</tr>\n<tr>\n\
+          <td><code>nova help &lt;command-name&gt;</code></td>\n<td>Information on\
+          \ a specific sub-command</td>\n</tr>\n<tr>\n<td><code>nova list</code></td>\n\
+          <td>To list all active instances in one project</td>\n</tr>\n<tr>\n<td><code>nova\
+          \ flavor-list</code></td>\n<td>To list all available flavors</td>\n</tr>\n\
+          <tr>\n<td><code>nova image-list</code></td>\n<td>To list all available images</td>\n\
+          </tr>\n<tr>\n<td><code>nova secgroup-list</code></td>\n<td>To list all available\
+          \ security groups</td>\n</tr>\n<tr>\n<td><code>nova keypair-list</code></td>\n\
+          <td>To list all available key pairs</td>\n</tr>\n<tr>\n<td><code>nova availability-zone-list</code></td>\n\
+          <td>To list all available availability zones</td>\n</tr>\n</tbody>\n</table>\n\
           <p>Note: not all options are available as there is a security policy applied\
           \ and\nyour account might not have sufficient permission. </p>\n<p>The below\
           \ shows how to create/delete, change state of a instance:</p>\n<p>To boot\
@@ -7006,14 +7009,20 @@
           \ The user data script can be\nput in a file and then passed to instance\
           \ creation. You can see check this\n<a href=\"https://cloudinit.readthedocs.org/en/latest/\"\
           >website</a> to see what script you can use to initialize an instance. </p>\n\
-          <p>To get more help, you can execute <code>nova help boot</code> to see\
-          \ what other\noptions are available.</p>\n<p>To boot a stopped instance,\
-          \ use nova start .</p>\n<p>To stop an instance, use nova stop .</p>\n<p>To\
-          \ suspend an instance ,use nova suspend .</p>\n<p>To show details of an\
-          \ instance, use nova show .</p>\n<p>To resume an instance, use nova resume\
-          \ .</p>\n<p>To create a snapshot of a instance, use nova image-create \n\
-          .</p>\n<p>You can also find more information about nova command line API\
-          \ via\n<a href=\"http://docs.openstack.org/cli-reference/content/novaclient_commands.html\"\
+          <table>\n<thead>\n<tr>\n<th>Commands for instance management</th>\n<th>Action</th>\n\
+          </tr>\n</thead>\n<tbody>\n<tr>\n<td><code>nova help boot</code></td>\n<td>Discover\
+          \ the available options</td>\n</tr>\n<tr>\n<td><code>nova start &lt;server\
+          \ name or ID&gt;</code></td>\n<td>To boot a stopped instance</td>\n</tr>\n\
+          <tr>\n<td><code>nova stop &lt;server name or ID&gt;</code></td>\n<td>To\
+          \ stop an instance</td>\n</tr>\n<tr>\n<td><code>nova suspend &lt;server\
+          \ name or ID&gt;</code></td>\n<td>To suspend an instance</td>\n</tr>\n<tr>\n\
+          <td><code>nova resume &lt;server name or ID&gt;</code></td>\n<td>To resume\
+          \ an instance</td>\n</tr>\n<tr>\n<td><code>nova show &lt;server name or\
+          \ ID&gt;</code></td>\n<td>To show details of an instance</td>\n</tr>\n<tr>\n\
+          <td><code>nova image-create &lt;server name or ID&gt; &lt;snapshot name&gt;</code></td>\n\
+          <td>To create a snapshot of a instance</td>\n</tr>\n</tbody>\n</table>\n\
+          <p>You can also find more information about nova command line API via\n\
+          <a href=\"http://docs.openstack.org/cli-reference/content/novaclient_commands.html\"\
           >novaclient</a>.</p>\n<h2>Nova Python API</h2>\n<p>You can also use Nova\
           \ Python API to manage instances integrated with Python\nprogramming language.</p>\n\
           <p>The below shows an sample code to launch a new instance and you need\
@@ -7042,13 +7051,13 @@
           updated_at: '2015-09-03T01:27:59-04:00'
           visibility: 1
         folder_id: 6000190145
-        hits: 5
+        hits: 12
         id: 6000075747
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-21T20:05:09-04:00'
+        modified_at: '2015-10-25T22:01:23-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000075747
@@ -7061,7 +7070,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-10-21T20:05:09-04:00'
+        updated_at: '2015-10-25T22:01:23-04:00'
         user_id: 6002464727
   html: "<h2>Manage instance via API</h2>\n<p>The NeCTAR Dashboard is one way to manage\
     \ your instances in projects and NeCTAR\ncloud provides instance management via\
@@ -7109,17 +7118,19 @@
     <p>```</p>\n<p>The VERSION parameter can be \"1.1\" or \"2\". You can get USERNAME,\
     \ PROJECT_NAME and\nAUTH_URL from the above .sh file obtained from the NeCTAR\
     \ Dashboard and you can\nalso get the PASSWORD from above as copied from the NeCTAR\
-    \ Dashboard.</p>\n<h2>Nova Command Line API</h2>\n<p>you can use nova command\
-    \ to manage your instances in a selected project, you can\ntype <code>nova --help</code>\
-    \ or just <code>nova</code> to find out all the available\noptions and sub commands.</p>\n\
-    <p>If you want to know more about a specific sub command,\nexecute <code>nova\
-    \ help command-name</code> for help. </p>\n<p>To list all active instances, execute\
-    \ <code>nova list</code>. This should return\nall available instances in one project.</p>\n\
-    <p>To list all available flavors, execute <code>nova flavor-list</code>.</p>\n\
-    <p>To list all available images, execute <code>nova image-list</code>.</p>\n<p>To\
-    \ list all available security groups, execute <code>nova secgroup-list</code>.</p>\n\
-    <p>To list all available key pairs, execute <code>nova keypair-list</code>.</p>\n\
-    <p>To list all available availability zones, execute <code>nova availability-zone-list</code>.</p>\n\
+    \ Dashboard.</p>\n<h2>Nova Command Line API</h2>\n<p>To get information about\
+    \ about managing instances in a selected project:</p>\n<table>\n<thead>\n<tr>\n\
+    <th>Command</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>nova\
+    \ --help</code> or <code>nova</code></td>\n<td>Discover the available options\
+    \ and sub-commands</td>\n</tr>\n<tr>\n<td><code>nova help &lt;command-name&gt;</code></td>\n\
+    <td>Information on a specific sub-command</td>\n</tr>\n<tr>\n<td><code>nova list</code></td>\n\
+    <td>To list all active instances in one project</td>\n</tr>\n<tr>\n<td><code>nova\
+    \ flavor-list</code></td>\n<td>To list all available flavors</td>\n</tr>\n<tr>\n\
+    <td><code>nova image-list</code></td>\n<td>To list all available images</td>\n\
+    </tr>\n<tr>\n<td><code>nova secgroup-list</code></td>\n<td>To list all available\
+    \ security groups</td>\n</tr>\n<tr>\n<td><code>nova keypair-list</code></td>\n\
+    <td>To list all available key pairs</td>\n</tr>\n<tr>\n<td><code>nova availability-zone-list</code></td>\n\
+    <td>To list all available availability zones</td>\n</tr>\n</tbody>\n</table>\n\
     <p>Note: not all options are available as there is a security policy applied and\n\
     your account might not have sufficient permission. </p>\n<p>The below shows how\
     \ to create/delete, change state of a instance:</p>\n<p>To boot a new instance,\
@@ -7133,15 +7144,19 @@
     \ only for the first time when instance boots. The user data script can be\nput\
     \ in a file and then passed to instance creation. You can see check this\n<a href=\"\
     https://cloudinit.readthedocs.org/en/latest/\">website</a> to see what script\
-    \ you can use to initialize an instance. </p>\n<p>To get more help, you can execute\
-    \ <code>nova help boot</code> to see what other\noptions are available.</p>\n\
-    <p>To boot a stopped instance, use nova start <server name or ID>.</p>\n<p>To\
-    \ stop an instance, use nova stop <server name or ID>.</p>\n<p>To suspend an instance\
-    \ ,use nova suspend <server name or ID>.</p>\n<p>To show details of an instance,\
-    \ use nova show <server name or ID>.</p>\n<p>To resume an instance, use nova resume\
-    \ <server name or ID>.</p>\n<p>To create a snapshot of a instance, use nova image-create\
-    \ <server name or ID>\n<snapstho name>.</p>\n<p>You can also find more information\
-    \ about nova command line API via\n<a href=\"http://docs.openstack.org/cli-reference/content/novaclient_commands.html\"\
+    \ you can use to initialize an instance. </p>\n<table>\n<thead>\n<tr>\n<th>Commands\
+    \ for instance management</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n\
+    <td><code>nova help boot</code></td>\n<td>Discover the available options</td>\n\
+    </tr>\n<tr>\n<td><code>nova start &lt;server name or ID&gt;</code></td>\n<td>To\
+    \ boot a stopped instance</td>\n</tr>\n<tr>\n<td><code>nova stop &lt;server name\
+    \ or ID&gt;</code></td>\n<td>To stop an instance</td>\n</tr>\n<tr>\n<td><code>nova\
+    \ suspend &lt;server name or ID&gt;</code></td>\n<td>To suspend an instance</td>\n\
+    </tr>\n<tr>\n<td><code>nova resume &lt;server name or ID&gt;</code></td>\n<td>To\
+    \ resume an instance</td>\n</tr>\n<tr>\n<td><code>nova show &lt;server name or\
+    \ ID&gt;</code></td>\n<td>To show details of an instance</td>\n</tr>\n<tr>\n<td><code>nova\
+    \ image-create &lt;server name or ID&gt; &lt;snapshot name&gt;</code></td>\n<td>To\
+    \ create a snapshot of a instance</td>\n</tr>\n</tbody>\n</table>\n<p>You can\
+    \ also find more information about nova command line API via\n<a href=\"http://docs.openstack.org/cli-reference/content/novaclient_commands.html\"\
     >novaclient</a>.</p>\n<h2>Nova Python API</h2>\n<p>You can also use Nova Python\
     \ API to manage instances integrated with Python\nprogramming language.</p>\n\
     <p>The below shows an sample code to launch a new instance and you need to get\n\
@@ -7156,7 +7171,7 @@
     <p>You can find more information about nova python API from this <a href=\"http://docs.openstack.org/developer/python-novaclient/api.html\"\
     >link</a></p>"
   parent: 39
-  sha1: 42bcffc9af6ddd19f40f2792de35a006e9167e22
+  sha1: ee6e0aa52a437d4a32c58a9bb681b99dbacef445
   title: API
 65:
   freshdesk:
