@@ -6877,60 +6877,58 @@
           \ either) \n password \n \n When using the script file you downloaded from\
           \ NeCTAR Dashboard, these\nvariables are set by the script file and you\
           \ can see these variables\nif you open the file. Example: \n OS_AUTH_URL:\
-          \ https://keystone.rc.nectar.org.au:5000/v2.0/\nOS_TENANT_NAME=my_science_project\n\
-          OS_TENANT_ID=sdfsdfsfwrwewer\nOS_USERNAME=clouduser@example.edu.au\nOS_PASSWORD=XXXXXX\
-          \ \n Authentication for Command Line API \n The below instruction assumes\
-          \ you use Linux operating system. \n Once you have obtained the authentication\
-          \ script and password, you can execute\nthe script using source file-name.sh.\
-          \ and type in the password you\nobtained from Dashboard. \n Authentication\
-          \ for python swift API \n You can use the below sample code to get authenticated.\
-          \  \n ```bash \n from novaclient import client \n nova = client.Client(VERSION,\
-          \ USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL) \n ``` \n The VERSION parameter\
-          \ can be \"1.1\" or \"2\". You can get USERNAME, PROJECT_NAME and\nAUTH_URL\
-          \ from the above .sh file obtained from the NeCTAR Dashboard and you can\n\
-          also get the PASSWORD from above as copied from the NeCTAR Dashboard. \n\
-          \ Nova Command Line API \n To get information about about managing instances\
-          \ in a selected project: \n\n\n\nCommand\nAction\n\n\n\n\n\nnova --help\
-          \ or nova\n\nDiscover the available options and sub-commands\n\n\nnova help\
-          \ <command-name>\nInformation on a specific sub-command\n\n\nnova list\n\
-          To list all active instances in one project\n\n\nnova flavor-list\nTo list\
-          \ all available flavors\n\n\nnova image-list\nTo list all available images\n\
-          \n\nnova secgroup-list\nTo list all available security groups\n\n\nnova\
-          \ keypair-list\nTo list all available key pairs\n\n\nnova availability-zone-list\n\
+          \ https://keystone.rc.nectar.org.au:5000/v2.0/ \n  OS_TENANT_NAME=my_science_project\
+          \ \n  OS_TENANT_ID=sdfsdfsfwrwewer \n  OS_USERNAME=clouduser@example.edu.au\
+          \ \n  OS_PASSWORD=XXXXXX \n Authentication for Command Line API \n The below\
+          \ instruction assumes you use Linux operating system. \n Once you have obtained\
+          \ the authentication script and password, you can execute\nthe script using\
+          \ source file-name.sh. and type in the password you\nobtained from Dashboard.\
+          \ \n Authentication for python swift API \n You can use the below sample\
+          \ code to get authenticated.  \n from novaclient import client \n nova =\
+          \ client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL) \n\
+          \ The VERSION parameter can be \"1.1\" or \"2\". You can get USERNAME, PROJECT_NAME\
+          \ and\nAUTH_URL from the above .sh file obtained from the NeCTAR Dashboard\
+          \ and you can\nalso get the PASSWORD from above as copied from the NeCTAR\
+          \ Dashboard. \n Nova Command Line API \n To get information about about\
+          \ managing instances in a selected project: \n\n\n\nCommand\nAction\n\n\n\
+          \n\n\nnova --help or nova\n\nDiscover the available options and sub-commands\n\
+          \n\nnova help <command-name>\nInformation on a specific sub-command\n\n\n\
+          nova list\nTo list all active instances in one project\n\n\nnova flavor-list\n\
+          To list all available flavors\n\n\nnova image-list\nTo list all available\
+          \ images\n\n\nnova secgroup-list\nTo list all available security groups\n\
+          \n\nnova keypair-list\nTo list all available key pairs\n\n\nnova availability-zone-list\n\
           To list all available availability zones\n\n\n\n Note: not all options are\
           \ available as there is a security policy applied and\nyour account might\
-          \ not have sufficient permission.  \n The below shows how to create/delete,\
-          \ change state of a instance: \n To boot a new instance, you need to get\
-          \ image name, keypair name, security group\nname and flavor name. You can\
-          \ use the above mentioned commands to acquire these\ninformation. Then,\
-          \ you can use nova boot command to launch a new instance, the\nformat is:\
-          \ \n ```bash \n nova boot [instance-name]  --flavor [name] --image [name]\
-          \ --key-name [name]\n--security-groups [names separated by space] \n ```\
-          \ \n You can also specify option --availability-zone to launch an instance\
-          \ in a\ndesigned zone and option --user-data  for a initialization script\n\
-          used only for the first time when instance boots. The user data script can\
-          \ be\nput in a file and then passed to instance creation. You can see check\
-          \ this\nwebsite to see what script you can use to initialize an instance.\
-          \  \n\n\n\nCommands for instance management\nAction\n\n\n\n\nnova help boot\n\
-          Discover the available options\n\n\nnova start <server name or ID>\nTo boot\
-          \ a stopped instance\n\n\nnova stop <server name or ID>\nTo stop an instance\n\
-          \n\nnova suspend <server name or ID>\nTo suspend an instance\n\n\nnova resume\
-          \ <server name or ID>\nTo resume an instance\n\n\nnova show <server name\
-          \ or ID>\nTo show details of an instance\n\n\nnova image-create <server\
-          \ name or ID> <snapshot name>\nTo create a snapshot of a instance\n\n\n\n\
-          \ You can also find more information about nova command line API via\nnovaclient.\
-          \ \n Nova Python API \n You can also use Nova Python API to manage instances\
-          \ integrated with Python\nprogramming language. \n The below shows an sample\
-          \ code to launch a new instance and you need to get\nauthentication information\
-          \ first from above: \n ``` \n from novaclient import client \n nova = client.Client(\"\
-          2\", username, password, project_name, auth_url) \n nova.servers.list()\
-          \ \n nova.flavors.list() \n nova.keypairs.list() \n nova.images.list() \n\
-          \ nova.security_groups.list() \n server_name = 'new instance' \n image =\
-          \ 'NeCTAR Ubuntu 14.04 (Trusty) amd64' \n flavor = 'm1.small' \n security_groups\
-          \ = ['5c8c4dd0-db53-41e3-a53b-9730c764149c', '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff']\
-          \ \n key_name = 'ming' \n nova.servers.create(server_name, image, flavor,\
-          \ security_groups=security_groups, key_name=) \n ```  \n You can find more\
-          \ information about nova python API from this link "
+          \ not have sufficient permission.  \n Managing an Instance \n To boot a\
+          \ new instance, you need to get image name, keypair name, security group\n\
+          name and flavor name. You can use the above mentioned commands to acquire\
+          \ these\ninformation. Then, you can use nova boot command to launch a new\
+          \ instance, the\nformat is: \n nova boot [instance-name]  --flavor [name]\
+          \ --image [name] --key-name [name] --security-groups [names separated by\
+          \ space] \n You can also specify option --availability-zone to launch an\
+          \ instance in a\ndesigned zone and option --user-data  for a initialization\
+          \ script\nused only for the first time when instance boots. The user data\
+          \ script can be\nput in a file and then passed to instance creation. You\
+          \ can see check this\nwebsite to see what script you can use to initialize\
+          \ an instance.  \n\n\n\nCommands for instance management\nAction\n\n\n\n\
+          \nnova help boot\nDiscover the available options\n\n\nnova start <server\
+          \ name or ID>\nTo boot a stopped instance\n\n\nnova stop <server name or\
+          \ ID>\nTo stop an instance\n\n\nnova suspend <server name or ID>\nTo suspend\
+          \ an instance\n\n\nnova resume <server name or ID>\nTo resume an instance\n\
+          \n\nnova show <server name or ID>\nTo show details of an instance\n\n\n\
+          nova image-create <server name or ID> <snapshot name>\nTo create a snapshot\
+          \ of a instance\n\n\n\n You can also find more information about nova command\
+          \ line API via\nnovaclient. \n Nova Python API \n You can also use Nova\
+          \ Python API to manage instances integrated with Python\nprogramming language.\
+          \ \n Example of code to launch a new instance: \n ``` \n from novaclient\
+          \ import client \n nova = client.Client(\"2\", username, password, project_name,\
+          \ auth_url) \n nova.servers.list() \n nova.flavors.list() \n nova.keypairs.list()\
+          \ \n nova.images.list() \n nova.security_groups.list() \n server_name =\
+          \ 'new instance' \n image = 'NeCTAR Ubuntu 14.04 (Trusty) amd64' \n flavor\
+          \ = 'm1.small' \n security_groups = ['5c8c4dd0-db53-41e3-a53b-9730c764149c',\
+          \ '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff'] \n key_name = 'ming' \n nova.servers.create(server_name,\
+          \ image, flavor, security_groups=security_groups, key_name=) \n ```  \n\
+          \ You can find more information about nova python API from this link "
         description: "<h2>Manage instance via API</h2>\n<p>The NeCTAR Dashboard is\
           \ one way to manage your instances in projects and NeCTAR\ncloud provides\
           \ instance management via API. There are two types of API you can use\n\
@@ -6969,47 +6967,48 @@
           <li>password</li>\n</ul>\n<p>When using the script file you downloaded from\
           \ NeCTAR Dashboard, these\nvariables are set by the script file and you\
           \ can see these variables\nif you open the file. Example:</p>\n<p>OS_AUTH_URL:\
-          \ https://keystone.rc.nectar.org.au:5000/v2.0/\nOS_TENANT_NAME=my_science_project\n\
-          OS_TENANT_ID=sdfsdfsfwrwewer\nOS_USERNAME=clouduser@example.edu.au\nOS_PASSWORD=XXXXXX</p>\n\
-          <h3>Authentication for Command Line API</h3>\n<p>The below instruction assumes\
-          \ you use Linux operating system.</p>\n<p>Once you have obtained the authentication\
-          \ script and password, you can execute\nthe script using <code>source file-name.sh</code>.\
-          \ and type in the password you\nobtained from Dashboard.</p>\n<h3>Authentication\
-          \ for python swift API</h3>\n<p>You can use the below sample code to get\
-          \ authenticated. </p>\n<p>```bash</p>\n<p>from novaclient import client</p>\n\
-          <p>nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)</p>\n\
-          <p>```</p>\n<p>The VERSION parameter can be \"1.1\" or \"2\". You can get\
-          \ USERNAME, PROJECT_NAME and\nAUTH_URL from the above .sh file obtained\
-          \ from the NeCTAR Dashboard and you can\nalso get the PASSWORD from above\
-          \ as copied from the NeCTAR Dashboard.</p>\n<h2>Nova Command Line API</h2>\n\
-          <p>To get information about about managing instances in a selected project:</p>\n\
-          <table>\n<thead>\n<tr>\n<th>Command</th>\n<th>Action</th>\n</tr>\n</thead>\n\
-          <tbody>\n<tr>\n<td>\n<code>nova --help</code> or <code>nova</code>\n</td>\n\
-          <td>Discover the available options and sub-commands</td>\n</tr>\n<tr>\n\
-          <td><code>nova help &lt;command-name&gt;</code></td>\n<td>Information on\
-          \ a specific sub-command</td>\n</tr>\n<tr>\n<td><code>nova list</code></td>\n\
-          <td>To list all active instances in one project</td>\n</tr>\n<tr>\n<td><code>nova\
-          \ flavor-list</code></td>\n<td>To list all available flavors</td>\n</tr>\n\
-          <tr>\n<td><code>nova image-list</code></td>\n<td>To list all available images</td>\n\
-          </tr>\n<tr>\n<td><code>nova secgroup-list</code></td>\n<td>To list all available\
-          \ security groups</td>\n</tr>\n<tr>\n<td><code>nova keypair-list</code></td>\n\
-          <td>To list all available key pairs</td>\n</tr>\n<tr>\n<td><code>nova availability-zone-list</code></td>\n\
-          <td>To list all available availability zones</td>\n</tr>\n</tbody>\n</table>\n\
-          <p>Note: not all options are available as there is a security policy applied\
-          \ and\nyour account might not have sufficient permission. </p>\n<p>The below\
-          \ shows how to create/delete, change state of a instance:</p>\n<p>To boot\
-          \ a new instance, you need to get image name, keypair name, security group\n\
-          name and flavor name. You can use the above mentioned commands to acquire\
-          \ these\ninformation. Then, you can use nova boot command to launch a new\
-          \ instance, the\nformat is:</p>\n<p>```bash</p>\n<p>nova boot [instance-name]\
-          \  --flavor [name] --image [name] --key-name [name]\n--security-groups [names\
-          \ separated by space]</p>\n<p>```</p>\n<p>You can also specify option --availability-zone\
-          \ to launch an instance in a\ndesigned zone and option --user-data  for\
-          \ a initialization script\nused only for the first time when instance boots.\
-          \ The user data script can be\nput in a file and then passed to instance\
-          \ creation. You can see check this\n<a href=\"https://cloudinit.readthedocs.org/en/latest/\"\
-          >website</a> to see what script you can use to initialize an instance. </p>\n\
-          <table>\n<thead>\n<tr>\n<th>Commands for instance management</th>\n<th>Action</th>\n\
+          \ https://keystone.rc.nectar.org.au:5000/v2.0/ \n  OS_TENANT_NAME=my_science_project\
+          \ \n  OS_TENANT_ID=sdfsdfsfwrwewer \n  OS_USERNAME=clouduser@example.edu.au\
+          \ \n  OS_PASSWORD=XXXXXX</p>\n<h3>Authentication for Command Line API</h3>\n\
+          <p>The below instruction assumes you use Linux operating system.</p>\n<p>Once\
+          \ you have obtained the authentication script and password, you can execute\n\
+          the script using <code>source file-name.sh</code>. and type in the password\
+          \ you\nobtained from Dashboard.</p>\n<h3>Authentication for python swift\
+          \ API</h3>\n<p>You can use the below sample code to get authenticated. </p>\n\
+          <p><code>from novaclient import client</code></p>\n<p><code>nova = client.Client(VERSION,\
+          \ USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)</code></p>\n<p>The VERSION\
+          \ parameter can be \"1.1\" or \"2\". You can get USERNAME, PROJECT_NAME\
+          \ and\nAUTH_URL from the above .sh file obtained from the NeCTAR Dashboard\
+          \ and you can\nalso get the PASSWORD from above as copied from the NeCTAR\
+          \ Dashboard.</p>\n<h2>Nova Command Line API</h2>\n<p>To get information\
+          \ about about managing instances in a selected project:</p>\n<table>\n<thead>\n\
+          <tr>\n<th>Command</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n\
+          <td>\n<code>nova --help</code> or <code>nova</code>\n</td>\n<td>Discover\
+          \ the available options and sub-commands</td>\n</tr>\n<tr>\n<td><code>nova\
+          \ help &lt;command-name&gt;</code></td>\n<td>Information on a specific sub-command</td>\n\
+          </tr>\n<tr>\n<td><code>nova list</code></td>\n<td>To list all active instances\
+          \ in one project</td>\n</tr>\n<tr>\n<td><code>nova flavor-list</code></td>\n\
+          <td>To list all available flavors</td>\n</tr>\n<tr>\n<td><code>nova image-list</code></td>\n\
+          <td>To list all available images</td>\n</tr>\n<tr>\n<td><code>nova secgroup-list</code></td>\n\
+          <td>To list all available security groups</td>\n</tr>\n<tr>\n<td><code>nova\
+          \ keypair-list</code></td>\n<td>To list all available key pairs</td>\n</tr>\n\
+          <tr>\n<td><code>nova availability-zone-list</code></td>\n<td>To list all\
+          \ available availability zones</td>\n</tr>\n</tbody>\n</table>\n<p>Note:\
+          \ not all options are available as there is a security policy applied and\n\
+          your account might not have sufficient permission. </p>\n<h3>Managing an\
+          \ Instance</h3>\n<p>To boot a new instance, you need to get image name,\
+          \ keypair name, security group\nname and flavor name. You can use the above\
+          \ mentioned commands to acquire these\ninformation. Then, you can use nova\
+          \ boot command to launch a new instance, the\nformat is:</p>\n<p><code>nova\
+          \ boot [instance-name]  --flavor [name] --image [name] --key-name [name]\
+          \ --security-groups [names separated by space]</code></p>\n<p>You can also\
+          \ specify option --availability-zone to launch an instance in a\ndesigned\
+          \ zone and option --user-data  for a initialization script\nused only for\
+          \ the first time when instance boots. The user data script can be\nput in\
+          \ a file and then passed to instance creation. You can see check this\n\
+          <a href=\"https://cloudinit.readthedocs.org/en/latest/\">website</a> to\
+          \ see what script you can use to initialize an instance. </p>\n<table>\n\
+          <thead>\n<tr>\n<th>Commands for instance management</th>\n<th>Action</th>\n\
           </tr>\n</thead>\n<tbody>\n<tr>\n<td><code>nova help boot</code></td>\n<td>Discover\
           \ the available options</td>\n</tr>\n<tr>\n<td><code>nova start &lt;server\
           \ name or ID&gt;</code></td>\n<td>To boot a stopped instance</td>\n</tr>\n\
@@ -7025,10 +7024,9 @@
           <a href=\"http://docs.openstack.org/cli-reference/content/novaclient_commands.html\"\
           >novaclient</a>.</p>\n<h2>Nova Python API</h2>\n<p>You can also use Nova\
           \ Python API to manage instances integrated with Python\nprogramming language.</p>\n\
-          <p>The below shows an sample code to launch a new instance and you need\
-          \ to get\nauthentication information first from above:</p>\n<p>```</p>\n\
-          <p>from novaclient import client</p>\n<p>nova = client.Client(\"2\", username,\
-          \ password, project_name, auth_url)</p>\n<p>nova.servers.list()</p>\n<p>nova.flavors.list()</p>\n\
+          <p>Example of code to launch a new instance:</p>\n<p>```</p>\n<p>from novaclient\
+          \ import client</p>\n<p>nova = client.Client(\"2\", username, password,\
+          \ project_name, auth_url)</p>\n<p>nova.servers.list()</p>\n<p>nova.flavors.list()</p>\n\
           <p>nova.keypairs.list()</p>\n<p>nova.images.list()</p>\n<p>nova.security_groups.list()</p>\n\
           <p>server_name = 'new instance'</p>\n<p>image = 'NeCTAR Ubuntu 14.04 (Trusty)\
           \ amd64'</p>\n<p>flavor = 'm1.small'</p>\n<p>security_groups = ['5c8c4dd0-db53-41e3-a53b-9730c764149c',\
@@ -7051,13 +7049,13 @@
           updated_at: '2015-09-03T01:27:59-04:00'
           visibility: 1
         folder_id: 6000190145
-        hits: 12
+        hits: 15
         id: 6000075747
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-25T22:01:23-04:00'
+        modified_at: '2015-10-25T22:39:01-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000075747
@@ -7070,7 +7068,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-10-25T22:01:23-04:00'
+        updated_at: '2015-10-25T22:39:01-04:00'
         user_id: 6002464727
   html: "<h2>Manage instance via API</h2>\n<p>The NeCTAR Dashboard is one way to manage\
     \ your instances in projects and NeCTAR\ncloud provides instance management via\
@@ -7106,23 +7104,23 @@
     <li>username</li>\n<li>project id or name (most clients can handle either)</li>\n\
     <li>password</li>\n</ul>\n<p>When using the script file you downloaded from NeCTAR\
     \ Dashboard, these\nvariables are set by the script file and you can see these\
-    \ variables\nif you open the file. Example:</p>\n<p>OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/\n\
-    OS_TENANT_NAME=my_science_project\nOS_TENANT_ID=sdfsdfsfwrwewer\nOS_USERNAME=clouduser@example.edu.au\n\
-    OS_PASSWORD=XXXXXX</p>\n<h3>Authentication for Command Line API</h3>\n<p>The below\
-    \ instruction assumes you use Linux operating system.</p>\n<p>Once you have obtained\
-    \ the authentication script and password, you can execute\nthe script using <code>source\
-    \ file-name.sh</code>. and type in the password you\nobtained from Dashboard.</p>\n\
-    <h3>Authentication for python swift API</h3>\n<p>You can use the below sample\
-    \ code to get authenticated. </p>\n<p>```bash</p>\n<p>from novaclient import client</p>\n\
-    <p>nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)</p>\n\
-    <p>```</p>\n<p>The VERSION parameter can be \"1.1\" or \"2\". You can get USERNAME,\
-    \ PROJECT_NAME and\nAUTH_URL from the above .sh file obtained from the NeCTAR\
-    \ Dashboard and you can\nalso get the PASSWORD from above as copied from the NeCTAR\
-    \ Dashboard.</p>\n<h2>Nova Command Line API</h2>\n<p>To get information about\
-    \ about managing instances in a selected project:</p>\n<table>\n<thead>\n<tr>\n\
-    <th>Command</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>nova\
-    \ --help</code> or <code>nova</code></td>\n<td>Discover the available options\
-    \ and sub-commands</td>\n</tr>\n<tr>\n<td><code>nova help &lt;command-name&gt;</code></td>\n\
+    \ variables\nif you open the file. Example:</p>\n<p>OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/\
+    \ \n  OS_TENANT_NAME=my_science_project \n  OS_TENANT_ID=sdfsdfsfwrwewer \n  OS_USERNAME=clouduser@example.edu.au\
+    \ \n  OS_PASSWORD=XXXXXX</p>\n<h3>Authentication for Command Line API</h3>\n<p>The\
+    \ below instruction assumes you use Linux operating system.</p>\n<p>Once you have\
+    \ obtained the authentication script and password, you can execute\nthe script\
+    \ using <code>source file-name.sh</code>. and type in the password you\nobtained\
+    \ from Dashboard.</p>\n<h3>Authentication for python swift API</h3>\n<p>You can\
+    \ use the below sample code to get authenticated. </p>\n<p><code>from novaclient\
+    \ import client</code></p>\n<p><code>nova = client.Client(VERSION, USERNAME, PASSWORD,\
+    \ PROJECT_NAME, AUTH_URL)</code></p>\n<p>The VERSION parameter can be \"1.1\"\
+    \ or \"2\". You can get USERNAME, PROJECT_NAME and\nAUTH_URL from the above .sh\
+    \ file obtained from the NeCTAR Dashboard and you can\nalso get the PASSWORD from\
+    \ above as copied from the NeCTAR Dashboard.</p>\n<h2>Nova Command Line API</h2>\n\
+    <p>To get information about about managing instances in a selected project:</p>\n\
+    <table>\n<thead>\n<tr>\n<th>Command</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n\
+    <tr>\n<td><code>nova --help</code> or <code>nova</code></td>\n<td>Discover the\
+    \ available options and sub-commands</td>\n</tr>\n<tr>\n<td><code>nova help &lt;command-name&gt;</code></td>\n\
     <td>Information on a specific sub-command</td>\n</tr>\n<tr>\n<td><code>nova list</code></td>\n\
     <td>To list all active instances in one project</td>\n</tr>\n<tr>\n<td><code>nova\
     \ flavor-list</code></td>\n<td>To list all available flavors</td>\n</tr>\n<tr>\n\
@@ -7132,24 +7130,23 @@
     <td>To list all available key pairs</td>\n</tr>\n<tr>\n<td><code>nova availability-zone-list</code></td>\n\
     <td>To list all available availability zones</td>\n</tr>\n</tbody>\n</table>\n\
     <p>Note: not all options are available as there is a security policy applied and\n\
-    your account might not have sufficient permission. </p>\n<p>The below shows how\
-    \ to create/delete, change state of a instance:</p>\n<p>To boot a new instance,\
-    \ you need to get image name, keypair name, security group\nname and flavor name.\
-    \ You can use the above mentioned commands to acquire these\ninformation. Then,\
-    \ you can use nova boot command to launch a new instance, the\nformat is:</p>\n\
-    <p>```bash</p>\n<p>nova boot [instance-name]  --flavor [name] --image [name] --key-name\
-    \ [name]\n--security-groups [names separated by space]</p>\n<p>```</p>\n<p>You\
-    \ can also specify option --availability-zone to launch an instance in a\ndesigned\
-    \ zone and option --user-data <user-data-file> for a initialization script\nused\
-    \ only for the first time when instance boots. The user data script can be\nput\
-    \ in a file and then passed to instance creation. You can see check this\n<a href=\"\
-    https://cloudinit.readthedocs.org/en/latest/\">website</a> to see what script\
-    \ you can use to initialize an instance. </p>\n<table>\n<thead>\n<tr>\n<th>Commands\
-    \ for instance management</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n\
-    <td><code>nova help boot</code></td>\n<td>Discover the available options</td>\n\
-    </tr>\n<tr>\n<td><code>nova start &lt;server name or ID&gt;</code></td>\n<td>To\
-    \ boot a stopped instance</td>\n</tr>\n<tr>\n<td><code>nova stop &lt;server name\
-    \ or ID&gt;</code></td>\n<td>To stop an instance</td>\n</tr>\n<tr>\n<td><code>nova\
+    your account might not have sufficient permission. </p>\n<h3>Managing an Instance</h3>\n\
+    <p>To boot a new instance, you need to get image name, keypair name, security\
+    \ group\nname and flavor name. You can use the above mentioned commands to acquire\
+    \ these\ninformation. Then, you can use nova boot command to launch a new instance,\
+    \ the\nformat is:</p>\n<p><code>nova boot [instance-name]  --flavor [name] --image\
+    \ [name] --key-name [name] --security-groups [names separated by space]</code></p>\n\
+    <p>You can also specify option --availability-zone to launch an instance in a\n\
+    designed zone and option --user-data <user-data-file> for a initialization script\n\
+    used only for the first time when instance boots. The user data script can be\n\
+    put in a file and then passed to instance creation. You can see check this\n<a\
+    \ href=\"https://cloudinit.readthedocs.org/en/latest/\">website</a> to see what\
+    \ script you can use to initialize an instance. </p>\n<table>\n<thead>\n<tr>\n\
+    <th>Commands for instance management</th>\n<th>Action</th>\n</tr>\n</thead>\n\
+    <tbody>\n<tr>\n<td><code>nova help boot</code></td>\n<td>Discover the available\
+    \ options</td>\n</tr>\n<tr>\n<td><code>nova start &lt;server name or ID&gt;</code></td>\n\
+    <td>To boot a stopped instance</td>\n</tr>\n<tr>\n<td><code>nova stop &lt;server\
+    \ name or ID&gt;</code></td>\n<td>To stop an instance</td>\n</tr>\n<tr>\n<td><code>nova\
     \ suspend &lt;server name or ID&gt;</code></td>\n<td>To suspend an instance</td>\n\
     </tr>\n<tr>\n<td><code>nova resume &lt;server name or ID&gt;</code></td>\n<td>To\
     \ resume an instance</td>\n</tr>\n<tr>\n<td><code>nova show &lt;server name or\
@@ -7159,8 +7156,7 @@
     \ also find more information about nova command line API via\n<a href=\"http://docs.openstack.org/cli-reference/content/novaclient_commands.html\"\
     >novaclient</a>.</p>\n<h2>Nova Python API</h2>\n<p>You can also use Nova Python\
     \ API to manage instances integrated with Python\nprogramming language.</p>\n\
-    <p>The below shows an sample code to launch a new instance and you need to get\n\
-    authentication information first from above:</p>\n<p>```</p>\n<p>from novaclient\
+    <p>Example of code to launch a new instance:</p>\n<p>```</p>\n<p>from novaclient\
     \ import client</p>\n<p>nova = client.Client(\"2\", username, password, project_name,\
     \ auth_url)</p>\n<p>nova.servers.list()</p>\n<p>nova.flavors.list()</p>\n<p>nova.keypairs.list()</p>\n\
     <p>nova.images.list()</p>\n<p>nova.security_groups.list()</p>\n<p>server_name\
@@ -7171,7 +7167,7 @@
     <p>You can find more information about nova python API from this <a href=\"http://docs.openstack.org/developer/python-novaclient/api.html\"\
     >link</a></p>"
   parent: 39
-  sha1: ee6e0aa52a437d4a32c58a9bb681b99dbacef445
+  sha1: 1835ef3d7df04283b502d8ff8da45454bb7d92f8
   title: API
 65:
   freshdesk:
