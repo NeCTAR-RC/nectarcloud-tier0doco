@@ -473,56 +473,19 @@
           \ is a member of the AAF check the\ncomplete AAF member list here. \n If\
           \ your institution is not a member of the AAF, talk to your local IT team\n\
           to arrange access. \n Logging in \n Once you have obtained your AAF credentials,\
-          \ you can follow these steps to\nlogin to NeCTAR Dashboard: \n \n \n Click\
-          \ 'log in' \n \n \n In dropdown list, select the name of your research institution\
-          \ \n \n \n Click 'Select' \n \n \n Wait until the selected institutional\
-          \ login page appears \n \n \n Type in your username and password \n \n \n\
-          \ Click 'Continue' \n \n \n If you have any issues contact the Nectar help\
-          \ team. \n API Credentials \n The first time you login to the dashboard\
-          \ a NeCTAR Cloud account is created\nfor you. You will need this account\
-          \ if you want to access the Cloud outside of\nthe dashboard through the\
-          \ API. The API is a programming interface providing\nmore flexibility of\
-          \ utilising the power of the cloud. \n There are two types of API credentials\
-          \ and which one you use will depend on\nthe API client you use. The below\
-          \ section only works for Linux/Unix users. \n Openstack API \n It requires\
-          \ 6 variables to be set in order to authenticate against\nthe NeCTAR Cloud:\
-          \ \n \n \n OS_AUTH_URL: authentication URL \n \n \n OS_TENANT_ID: tenant\
-          \ id \n \n \n OS_TENANT_NAME: tenant name (optional) \n \n \n OS_USERNAME:\
-          \ username \n \n \n OS_PASSWORD: password \n \n \n OS_REGION_NAME:  location\
-          \ of your configuration (optional) \n \n \n You can set these variables\
-          \ through\nenvironment variables. For example: \n OS_AUTH_URL: URL \n OS_TENANT_NAME=my_science_project\
-          \ \n OS_USERNAME=clouduser@example.edu.au \n OS_PASSWORD=XXXXXX \n If you\
-          \ are a member of multiple projects (tenants) you may also want to set:\n\
-          OS_NO_CACHE=True \n The Dashboard provides a convenient way to help you\
-          \ setting up these variables\nvia a shell script file. You can follow the\
-          \ below steps to obtain it: \n \n \n Go To Dashboard \n \n \n Login to dashboard\
-          \ via AAF Credentials \n \n \n Click 'Access & Security' \n \n \n Click\
-          \ 'API Access' tap \n \n \n Click 'Download OpenStack RC File' \n \n \n\
-          \ Save the shell script file in your local computer/laptop \n \n \n The\
-          \ password is not automatically set for you for security reason. You can\
-          \ also\nobtain the API password from NeCTAR cloud. Please follow the below\
-          \ steps to get\nthe password: \n \n \n Go To Dashboard \n \n \n Login to\
-          \ dashboard via AAF Credentials \n \n \n On the right top of the page, click\
-          \ drop down list containing your email\n address \n \n \n Click 'Settings'\
-          \ \n \n \n Click 'Reset Password' button \n \n \n The copy/paste the password\
-          \ appeared on the screen to a text file, then save\n the text file in your\
-          \ local computer/laptop. \n \n \n To execute the shell script file, type\
-          \ source filename, then enter the password\nyou obtained earlier from NeCTAR\
-          \ dashboard. \n Now, you are authenticated and please refer to\nrelevant\
-          \ API document to see how to interact with the\nNeCTAR Cloud. \n EC2 API\
-          \ \n There are 2 variables needed when using EC2 API clients: \n \n \n EC2_ACCESS_KEY:\
-          \ username \n \n \n EC2_SECRET_KEY: password \n \n \n You can obtain these\
-          \ 2 variables via the NeTCAR Dashboard: \n \n \n Go To Dashboard \n \n \n\
-          \ Login to dashboard via AAF Credentials \n \n \n Click 'Access & Security'\
-          \ \n \n \n Click 'API Access' tap \n \n \n Click 'Download EC2 Credentials'\
-          \ \n \n \n Save the zip file in your local computer/laptop \n \n \n Unzip\
-          \ the saved zip file and open ec2rc.sh file via a text editor \n \n \n You\
-          \ can find EC2_ACCESS_KEY and EC2_SECRET_KEY in the file \n \n \n Login\
-          \ Problems \n If your login details are rejected first\ncheck your Research\
-          \ Institution is a member of the AAF. \n If your research institution is\
-          \ a member but you still can't login, you can\ncontact IT Service department\
-          \ of your own research institution.\nThey can provide support for issues\
-          \ with your login credentials. Alternatively,\nyou can email to support@rc.nectar.org.au. "
+          \ you can follow these steps to\nlogin to the NeCTAR Dashboard: \n \n Click\
+          \ here to go to the NeCTAR Dashboard and you will see the\n following screen:\
+          \ \n \n \n \n Click 'Log In' button, then select your AAF organisation from\
+          \ the menu: \n \n \n \n You will be redirected to a login page provided\
+          \ by your selected institution/organization: \n \n \n \n Type in username/password\
+          \ supplied by your institution/organization and click\n 'Continue' button,\
+          \ if successful, you should see the NeCTAR Dashboard \n \n If you have any\
+          \ issues contact the NecTAR HelpDesk. \n Login Problems \n If your login\
+          \ details are rejected first\ncheck your Research Institution is a member\
+          \ of the AAF. \n If your research institution is a member but you still\
+          \ can't login, you can\ncontact IT Service department of your own research\
+          \ institution.\nThey can provide support for issues with your login credentials.\
+          \ Alternatively,\nyou can email to support@rc.nectar.org.au. "
         description: "<p>If you work or study at an Australian University you will\
           \ be able to login to\nthe Nectar Cloud using your institutional credentials.\
           \ Access to the Nectar\nCloud is enabled by the <a href=\"http://aaf.edu.au/\"\
@@ -533,68 +496,25 @@
           \ member list here</a>.</p>\n<p>If your institution is not a member of the\
           \ AAF, talk to your local IT team\nto arrange access.</p>\n<h2>Logging in</h2>\n\
           <p>Once you have obtained your AAF credentials, you can follow these steps\
-          \ to\nlogin to <a href=\"https://dashboard.rc.nectar.org.au/\">NeCTAR Dashboard</a>:</p>\n\
-          <ul>\n<li>\n<p>Click 'log in'</p>\n</li>\n<li>\n<p>In dropdown list, select\
-          \ the name of your research institution</p>\n</li>\n<li>\n<p>Click 'Select'</p>\n\
-          </li>\n<li>\n<p>Wait until the selected institutional login page appears</p>\n\
-          </li>\n<li>\n<p>Type in your username and password</p>\n</li>\n<li>\n<p>Click\
-          \ 'Continue'</p>\n</li>\n</ul>\n<p>If you have any issues contact the Nectar\
-          \ help team.</p>\n<h2>API Credentials</h2>\n<p>The first time you login\
-          \ to the dashboard a NeCTAR Cloud account is created\nfor you. You will\
-          \ need this account if you want to access the Cloud outside of\nthe dashboard\
-          \ through the API. The API is a programming interface providing\nmore flexibility\
-          \ of utilising the power of the cloud.</p>\n<p>There are two types of API\
-          \ credentials and which one you use will depend on\nthe API client you use.\
-          \ The below section only works for Linux/Unix users.</p>\n<h3>Openstack\
-          \ API</h3>\n<p>It requires 6 variables to be set in order to authenticate\
-          \ against\nthe NeCTAR Cloud:</p>\n<ul>\n<li>\n<p>OS_AUTH_URL: authentication\
-          \ URL</p>\n</li>\n<li>\n<p>OS_TENANT_ID: tenant id</p>\n</li>\n<li>\n<p>OS_TENANT_NAME:\
-          \ tenant name (optional)</p>\n</li>\n<li>\n<p>OS_USERNAME: username</p>\n\
-          </li>\n<li>\n<p>OS_PASSWORD: password</p>\n</li>\n<li>\n<p>OS_REGION_NAME:\
-          \  location of your configuration (optional)</p>\n</li>\n</ul>\n<p>You can\
-          \ set these variables through\n<a href=\"https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps\"\
-          >environment variables</a>. For example:</p>\n<p>OS_AUTH_URL: URL</p>\n\
-          <p>OS_TENANT_NAME=my_science_project</p>\n<p>OS_USERNAME=clouduser@example.edu.au</p>\n\
-          <p>OS_PASSWORD=XXXXXX</p>\n<p>If you are a member of multiple projects (tenants)\
-          \ you may also want to set:\nOS_NO_CACHE=True</p>\n<p>The Dashboard provides\
-          \ a convenient way to help you setting up these variables\nvia a shell script\
-          \ file. You can follow the below steps to obtain it:</p>\n<ul>\n<li>\n<p>Go\
-          \ To <a href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n\
-          </li>\n<li>\n<p>Login to dashboard via AAF Credentials</p>\n</li>\n<li>\n\
-          <p>Click 'Access &amp; Security'</p>\n</li>\n<li>\n<p>Click 'API Access'\
-          \ tap</p>\n</li>\n<li>\n<p>Click 'Download OpenStack RC File'</p>\n</li>\n\
-          <li>\n<p>Save the shell script file in your local computer/laptop</p>\n\
-          </li>\n</ul>\n<p>The password is not automatically set for you for security\
-          \ reason. You can also\nobtain the API password from NeCTAR cloud. Please\
-          \ follow the below steps to get\nthe password:</p>\n<ul>\n<li>\n<p>Go To\
-          \ <a href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n</li>\n\
-          <li>\n<p>Login to dashboard via AAF Credentials</p>\n</li>\n<li>\n<p>On\
-          \ the right top of the page, click drop down list containing your email\n\
-          \ address</p>\n</li>\n<li>\n<p>Click 'Settings'</p>\n</li>\n<li>\n<p>Click\
-          \ 'Reset Password' button</p>\n</li>\n<li>\n<p>The copy/paste the password\
-          \ appeared on the screen to a text file, then save\n the text file in your\
-          \ local computer/laptop.</p>\n</li>\n</ul>\n<p>To execute the shell script\
-          \ file, type source filename, then enter the password\nyou obtained earlier\
-          \ from NeCTAR dashboard.</p>\n<p>Now, you are authenticated and please refer\
-          \ to\n<a href=\"http://developer.openstack.org/api-ref.html\">relevant API\
-          \ document</a> to see how to interact with the\nNeCTAR Cloud.</p>\n<h3>EC2\
-          \ API</h3>\n<p>There are 2 variables needed when using EC2 API clients:</p>\n\
-          <ul>\n<li>\n<p>EC2_ACCESS_KEY: username</p>\n</li>\n<li>\n<p>EC2_SECRET_KEY:\
-          \ password</p>\n</li>\n</ul>\n<p>You can obtain these 2 variables via the\
-          \ NeTCAR Dashboard:</p>\n<ul>\n<li>\n<p>Go To <a href=\"https://dashboard.rc.nectar.org.au\"\
-          >Dashboard</a></p>\n</li>\n<li>\n<p>Login to dashboard via AAF Credentials</p>\n\
-          </li>\n<li>\n<p>Click 'Access &amp; Security'</p>\n</li>\n<li>\n<p>Click\
-          \ 'API Access' tap</p>\n</li>\n<li>\n<p>Click 'Download EC2 Credentials'</p>\n\
-          </li>\n<li>\n<p>Save the zip file in your local computer/laptop</p>\n</li>\n\
-          <li>\n<p>Unzip the saved zip file and open ec2rc.sh file via a text editor</p>\n\
-          </li>\n<li>\n<p>You can find EC2_ACCESS_KEY and EC2_SECRET_KEY in the file</p>\n\
-          </li>\n</ul>\n<h2>Login Problems</h2>\n<p>If your login details are rejected\
-          \ first\n<a href=\"http://aaf.edu.au/subscribe/subscribers/\">check your\
-          \ Research Institution is a member of the AAF</a>.</p>\n<p>If your research\
-          \ institution is a member but you still can't login, you can\ncontact IT\
-          \ Service department of your own research institution.\nThey can provide\
-          \ support for issues with your login credentials. Alternatively,\nyou can\
-          \ email to support@rc.nectar.org.au.</p>"
+          \ to\nlogin to the <a href=\"https://dashboard.rc.nectar.org.au/\">NeCTAR\
+          \ Dashboard</a>:</p>\n<ul>\n<li>Click <a href=\"https://dashboard.rc.nectar.org.au\"\
+          >here</a> to go to the NeCTAR Dashboard and you will see the\n following\
+          \ screen:</li>\n</ul>\n<p><img alt=\"aaf1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/aaf1.png?raw=true\"\
+          ></p>\n<ul>\n<li>Click 'Log In' button, then select your AAF organisation\
+          \ from the menu:</li>\n</ul>\n<p><img alt=\"aaf2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/aaf2.png?raw=true\"\
+          ></p>\n<ul>\n<li>You will be redirected to a login page provided by your\
+          \ selected institution/organization:</li>\n</ul>\n<p><img alt=\"aaf3\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/aaf3.png?raw=true\"\
+          ></p>\n<ul>\n<li>Type in username/password supplied by your institution/organization\
+          \ and click\n 'Continue' button, if successful, you should see the NeCTAR\
+          \ Dashboard</li>\n</ul>\n<p>If you have any issues contact the NecTAR <a\
+          \ href=\"https://support.nectar.org.au/support/home\">HelpDesk</a>.</p>\n\
+          <h2>Login Problems</h2>\n<p>If your login details are rejected first\n<a\
+          \ href=\"http://aaf.edu.au/subscribe/subscribers/\">check your Research\
+          \ Institution is a member of the AAF</a>.</p>\n<p>If your research institution\
+          \ is a member but you still can't login, you can\ncontact IT Service department\
+          \ of your own research institution.\nThey can provide support for issues\
+          \ with your login credentials. Alternatively,\nyou can email to support@rc.nectar.org.au.</p>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:04-04:00'
@@ -605,17 +525,17 @@
           language_id: 6
           name: Cloud Basics
           parent_id: 6000190150
-          position: 2
-          updated_at: '2015-09-03T01:28:04-04:00'
+          position: 1
+          updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 0
+        hits: 17
         id: 6000055377
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-09-03T01:28:12-04:00'
+        modified_at: '2015-10-25T23:55:34-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000055377
@@ -628,7 +548,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Getting an account
-        updated_at: '2015-09-03T01:28:12-04:00'
+        updated_at: '2015-10-25T23:55:34-04:00'
         user_id: 6002464727
   html: "<p>If you work or study at an Australian University you will be able to login\
     \ to\nthe Nectar Cloud using your institutional credentials. Access to the Nectar\n\
@@ -639,64 +559,28 @@
     >complete AAF member list here</a>.</p>\n<p>If your institution is not a member\
     \ of the AAF, talk to your local IT team\nto arrange access.</p>\n<h2>Logging\
     \ in</h2>\n<p>Once you have obtained your AAF credentials, you can follow these\
-    \ steps to\nlogin to <a href=\"https://dashboard.rc.nectar.org.au/\">NeCTAR Dashboard</a>:</p>\n\
-    <ul>\n<li>\n<p>Click 'log in'</p>\n</li>\n<li>\n<p>In dropdown list, select the\
-    \ name of your research institution</p>\n</li>\n<li>\n<p>Click 'Select'</p>\n\
-    </li>\n<li>\n<p>Wait until the selected institutional login page appears</p>\n\
-    </li>\n<li>\n<p>Type in your username and password</p>\n</li>\n<li>\n<p>Click\
-    \ 'Continue'</p>\n</li>\n</ul>\n<p>If you have any issues contact the Nectar help\
-    \ team.</p>\n<h2>API Credentials</h2>\n<p>The first time you login to the dashboard\
-    \ a NeCTAR Cloud account is created\nfor you. You will need this account if you\
-    \ want to access the Cloud outside of\nthe dashboard through the API. The API\
-    \ is a programming interface providing\nmore flexibility of utilising the power\
-    \ of the cloud.</p>\n<p>There are two types of API credentials and which one you\
-    \ use will depend on\nthe API client you use. The below section only works for\
-    \ Linux/Unix users.</p>\n<h3>Openstack API</h3>\n<p>It requires 6 variables to\
-    \ be set in order to authenticate against\nthe NeCTAR Cloud:</p>\n<ul>\n<li>\n\
-    <p>OS_AUTH_URL: authentication URL</p>\n</li>\n<li>\n<p>OS_TENANT_ID: tenant id</p>\n\
-    </li>\n<li>\n<p>OS_TENANT_NAME: tenant name (optional)</p>\n</li>\n<li>\n<p>OS_USERNAME:\
-    \ username</p>\n</li>\n<li>\n<p>OS_PASSWORD: password</p>\n</li>\n<li>\n<p>OS_REGION_NAME:\
-    \  location of your configuration (optional)</p>\n</li>\n</ul>\n<p>You can set\
-    \ these variables through\n<a href=\"https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps\"\
-    >environment variables</a>. For example:</p>\n<p>OS_AUTH_URL: URL</p>\n<p>OS_TENANT_NAME=my_science_project</p>\n\
-    <p>OS_USERNAME=clouduser@example.edu.au</p>\n<p>OS_PASSWORD=XXXXXX</p>\n<p>If\
-    \ you are a member of multiple projects (tenants) you may also want to set:\n\
-    OS_NO_CACHE=True</p>\n<p>The Dashboard provides a convenient way to help you setting\
-    \ up these variables\nvia a shell script file. You can follow the below steps\
-    \ to obtain it:</p>\n<ul>\n<li>\n<p>Go To <a href=\"https://dashboard.rc.nectar.org.au\"\
-    >Dashboard</a></p>\n</li>\n<li>\n<p>Login to dashboard via AAF Credentials</p>\n\
-    </li>\n<li>\n<p>Click 'Access &amp; Security'</p>\n</li>\n<li>\n<p>Click 'API\
-    \ Access' tap</p>\n</li>\n<li>\n<p>Click 'Download OpenStack RC File'</p>\n</li>\n\
-    <li>\n<p>Save the shell script file in your local computer/laptop</p>\n</li>\n\
-    </ul>\n<p>The password is not automatically set for you for security reason. You\
-    \ can also\nobtain the API password from NeCTAR cloud. Please follow the below\
-    \ steps to get\nthe password:</p>\n<ul>\n<li>\n<p>Go To <a href=\"https://dashboard.rc.nectar.org.au\"\
-    >Dashboard</a></p>\n</li>\n<li>\n<p>Login to dashboard via AAF Credentials</p>\n\
-    </li>\n<li>\n<p>On the right top of the page, click drop down list containing\
-    \ your email\n address</p>\n</li>\n<li>\n<p>Click 'Settings'</p>\n</li>\n<li>\n\
-    <p>Click 'Reset Password' button</p>\n</li>\n<li>\n<p>The copy/paste the password\
-    \ appeared on the screen to a text file, then save\n the text file in your local\
-    \ computer/laptop.</p>\n</li>\n</ul>\n<p>To execute the shell script file, type\
-    \ source filename, then enter the password\nyou obtained earlier from NeCTAR dashboard.</p>\n\
-    <p>Now, you are authenticated and please refer to\n<a href=\"http://developer.openstack.org/api-ref.html\"\
-    >relevant API document</a> to see how to interact with the\nNeCTAR Cloud.</p>\n\
-    <h3>EC2 API</h3>\n<p>There are 2 variables needed when using EC2 API clients:</p>\n\
-    <ul>\n<li>\n<p>EC2_ACCESS_KEY: username</p>\n</li>\n<li>\n<p>EC2_SECRET_KEY: password</p>\n\
-    </li>\n</ul>\n<p>You can obtain these 2 variables via the NeTCAR Dashboard:</p>\n\
-    <ul>\n<li>\n<p>Go To <a href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n\
-    </li>\n<li>\n<p>Login to dashboard via AAF Credentials</p>\n</li>\n<li>\n<p>Click\
-    \ 'Access &amp; Security'</p>\n</li>\n<li>\n<p>Click 'API Access' tap</p>\n</li>\n\
-    <li>\n<p>Click 'Download EC2 Credentials'</p>\n</li>\n<li>\n<p>Save the zip file\
-    \ in your local computer/laptop</p>\n</li>\n<li>\n<p>Unzip the saved zip file\
-    \ and open ec2rc.sh file via a text editor</p>\n</li>\n<li>\n<p>You can find EC2_ACCESS_KEY\
-    \ and EC2_SECRET_KEY in the file</p>\n</li>\n</ul>\n<h2>Login Problems</h2>\n\
-    <p>If your login details are rejected first\n<a href=\"http://aaf.edu.au/subscribe/subscribers/\"\
-    >check your Research Institution is a member of the AAF</a>.</p>\n<p>If your research\
-    \ institution is a member but you still can't login, you can\ncontact IT Service\
-    \ department of your own research institution.\nThey can provide support for issues\
-    \ with your login credentials. Alternatively,\nyou can email to support@rc.nectar.org.au.</p>"
+    \ steps to\nlogin to the <a href=\"https://dashboard.rc.nectar.org.au/\">NeCTAR\
+    \ Dashboard</a>:</p>\n<ul>\n<li>Click <a href=\"https://dashboard.rc.nectar.org.au\"\
+    >here</a> to go to the NeCTAR Dashboard and you will see the\n following screen:</li>\n\
+    </ul>\n<p><img alt=\"aaf1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/aaf1.png?raw=true\"></p>\n\
+    <ul>\n<li>Click 'Log In' button, then select your AAF organisation from the menu:</li>\n\
+    </ul>\n<p><img alt=\"aaf2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/aaf2.png?raw=true\"></p>\n\
+    <ul>\n<li>You will be redirected to a login page provided by your selected institution/organization:</li>\n\
+    </ul>\n<p><img alt=\"aaf3\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/aaf3.png?raw=true\"></p>\n\
+    <ul>\n<li>Type in username/password supplied by your institution/organization\
+    \ and click\n 'Continue' button, if successful, you should see the NeCTAR Dashboard</li>\n\
+    </ul>\n<p>If you have any issues contact the NecTAR <a href=\"https://support.nectar.org.au/support/home\"\
+    >HelpDesk</a>.</p>\n<h2>Login Problems</h2>\n<p>If your login details are rejected\
+    \ first\n<a href=\"http://aaf.edu.au/subscribe/subscribers/\">check your Research\
+    \ Institution is a member of the AAF</a>.</p>\n<p>If your research institution\
+    \ is a member but you still can't login, you can\ncontact IT Service department\
+    \ of your own research institution.\nThey can provide support for issues with\
+    \ your login credentials. Alternatively,\nyou can email to support@rc.nectar.org.au.</p>"
   parent: 21
-  sha1: 06f70595a408bd9c58ee0c83949d02da2a2e27b4
+  sha1: f10da9763e9420b97a4186bd8d50fe20f34e4f82
   title: Getting an account
 35:
   freshdesk:
