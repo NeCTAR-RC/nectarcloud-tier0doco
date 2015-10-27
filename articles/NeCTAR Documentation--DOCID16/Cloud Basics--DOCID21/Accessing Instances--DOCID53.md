@@ -1,40 +1,85 @@
-You can use a SSH client to log into the virtual machine created earlier.
+- [Windows User](#Windows)
+- [Mac / Linux User](#unix)
+- [Access via web browser](#password)
 
-## Windows User
 
-- Download PuTTY(putty.exe) from [PuTTY download page][putty]
+This section enables you to access the virtual machine (VM) created earlier.
+This will give you a console for entering Shell commands to your Linux VM.
+Later sections will help you start to use your VM.
 
-- Double click putty.exe
+## IP Address
 
-- Copy/paste the IP address to Host Name
+You can use an SSH client to log into the virtual machine created earlier.
+To do this you will need to enter the IP Address of the VM.
 
-- Expand the SSH item under Connection on the right side Category and click Auth
+1. Log on to the Nectar [Dashboard][dashboard]
+1. Click the 'Instances' tab
+1. Select and copy the IP Address of the instance you want to access
 
-- Click the Browse button and select the created private key earlier
+![`ipaddress`](images/ipaddress.png)
 
-- Click Session on the right side Category
+---
 
-- Click Open button
+## Windows User <a name="Windows"></a>
 
-- Type username ubuntu for Ubuntu image and root for other images
+1. Download PuTTY(putty.exe) from [PuTTY download page][putty]
+1. Double click putty.exe
 
-## Linux/Mac User
+  ![`putty1`](images/putty1.png)
 
-- Type the following command into the console:
+1. Copy/paste the IP address to 'Host Name'
+1. Under 'Connection' on the right side, expand 'SSH' and click 'Auth'
+
+  ![`putty2`](images/putty2.png)
+
+1. Click the Browse button and select the private key created earlier
+1. Click 'Session' on the right side Category
+1. Click 'Open' button
+1. Type username 'ubuntu' for Ubuntu image and 'root' for other images
+
+---
+
+## Linux/Mac User <a name="unix"></a>
+
+Type the following command into the console:
 
 ```
-ssh -i privatkeyname ubuntu@XX.XX.XX.XX
+ssh -i Nectar_Key ubuntu@XX.XX.XX.XX
 ```
 
-- Replace privatekeyname with the created private key name earlier. You may also
- need to specify the full path for the private key (usually '~/.ssh/privatekeyname')
+- Replace 'Nectar_Key' with the created private key name earlier. You may also
+ need to specify the full path for the private key (usually '~/.ssh/Nectar_Key')
+- Replace 'ubuntu' with 'root' if you are not using an Ubuntu image
+- Replace XX.XX.XX.XX with the IP address
 
-- Replace ubuntu with root if you are not using Ubuntu image
+---
 
-- Replace XX.XX.XX.XX with the IP address located in Instances page
+## Access through your web browser <a name="password"></a>
 
-Note: For the security of your private key, ensuring only the user can read the file:
-On you local computer, enter `chmod 600 ~/.ssh/privatekeyname`. (You may need to 
-adjust the path to the private key.)
+Your VM console can also be accessed via the NeCTAR dashboard in your web browser.
+This console is not as user-friendly as the SSH clients, but has the advantage of 
+being accessible from any computer, without needing the private key to be saved on it.
+
+1. First, you need to get SSH access to the VM command line in order to set a password.
+1. In PuTTY or Terminal, enter `sudo passwd ubuntu` (or 'root' if your OS isn't Ubuntu)
+1. Enter a password, that you will use to access the VM through a browser.
+
+1. Log on to the NeCTAR [dashboard][dashboard]
+1. Click on the name of the Instance you want to access
+1. Click on the 'Console' tab at the top of the screen
+1. Log on with the username 'ubuntu' (or 'root') and the password you set
+
+![`click`](images/click_console.png)
+
+![`login`](images/console_login.png)
+
+NOTE:
+If you later choose to install a [desktop environment][desktop] on your instance, the remote
+desktop will appear in your browser instead of the commandline console.
+
 
 [putty]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+[dashboard]: https://dashboard.rc.nectar.org.au/
+[desktop]: http://training.nectar.org.au/package07/sections/remoteDesktop.html
+
+
