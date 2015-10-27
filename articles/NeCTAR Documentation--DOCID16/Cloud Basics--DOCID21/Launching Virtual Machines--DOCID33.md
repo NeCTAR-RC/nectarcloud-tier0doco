@@ -76,6 +76,7 @@ the Nectar Cloud dashboard before use.
 - For **Linux/Mac** user, type `cat ~/.ssh/id_rsa.pub` and copy/paste the public key contents from the terminal output.
 
 
+
 ## 2. Alternatively: Create Keys on the Nectar Cloud Dashboard
 
 ![`create_keypair`](images/create_keypair.png)
@@ -87,6 +88,7 @@ the Nectar Cloud dashboard before use.
  button. The private key will be downloaded.
 1. Save the private key into a directory on your local computer.
 
+---
 
 ### Mac / Linux
 
@@ -96,6 +98,7 @@ the '.ssh' folder (change 'Nectar_Key' to the name of your keypair).
 Note: For the security of your private key, ensuring only the user can read the file:
 On you local computer, enter `chmod 600 ~/.ssh/Nectar_Key`. 
 
+---
 
 ### Windows
 
