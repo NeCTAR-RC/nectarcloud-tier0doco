@@ -8363,7 +8363,7 @@
           \ version requires some environment variables\nto be set. To set these environment\
           \ variables you can either source the script\nfile downloaded from NeCTAR\
           \ Dashboard or you can override it by\nusing command line options. \n You\
-          \ can always execute man swift`` or simplyswift``` to get more help\ninformation\
+          \ can always execute man swift or simply swift to get more help\ninformation\
           \ and to learn about supported options. \n If you find a useful command,\
           \ you can also execute swift command --help,\nthis will give you more specific\
           \ help for the command. \n Debugging Client Python API \n Debugging client\
@@ -8371,8 +8371,8 @@
           \ programming and what development environment you use. \n The below provides\
           \ some basic information about how you debug the client Python\nAPI. \n\
           \ You can debug your python code using Python debugger called pdb and you\
-          \ can find\nmore information here. \n The following code uses pdb debuuger\
-          \ to debug a python file contains clinet python\nAPI code. \n pdb file_name.py\
+          \ can find\nmore information here. \n The following code uses pdb debugger\
+          \ to debug a python file contains client python\nAPI code. \n pdb file_name.py\
           \ \n Once you executed the above code, the command line will be stopped\
           \ on the first\nline of code and you can use some commands to control the\
           \ execution flow. \n Some useful ones to use are: \n \n \n b: set a breakpoint\
@@ -8456,8 +8456,8 @@
 
           using command line options.</p>
 
-          <p>You can always execute <code>man swift`` or simply</code>swift``` to
-          get more help
+          <p>You can always execute <code>man swift</code> or simply <code>swift</code>
+          to get more help
 
           information and to learn about supported options.</p>
 
@@ -8482,8 +8482,8 @@
 
           more information <a href="https://docs.python.org/2/library/pdb.html">here</a>.</p>
 
-          <p>The following code uses pdb debuuger to debug a python file contains
-          clinet python
+          <p>The following code uses pdb debugger to debug a python file contains
+          client python
 
           API code.</p>
 
@@ -8631,13 +8631,13 @@
           updated_at: '2015-09-03T01:28:00-04:00'
           visibility: 1
         folder_id: 6000190146
-        hits: 2
+        hits: 6
         id: 6000076083
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-21T20:05:48-04:00'
+        modified_at: '2015-11-01T18:00:30-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000076083
@@ -8650,7 +8650,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Trouble Shooting
-        updated_at: '2015-10-21T20:05:48-04:00'
+        updated_at: '2015-11-01T18:00:30-05:00'
         user_id: 6002464727
   html: '<h2>Debugging Swift Command line Client</h2>
 
@@ -8701,8 +8701,8 @@
 
     using command line options.</p>
 
-    <p>You can always execute <code>man swift`` or simply</code>swift``` to get more
-    help
+    <p>You can always execute <code>man swift</code> or simply <code>swift</code>
+    to get more help
 
     information and to learn about supported options.</p>
 
@@ -8725,7 +8725,7 @@
 
     more information <a href="https://docs.python.org/2/library/pdb.html">here</a>.</p>
 
-    <p>The following code uses pdb debuuger to debug a python file contains clinet
+    <p>The following code uses pdb debugger to debug a python file contains client
     python
 
     API code.</p>
@@ -8854,7 +8854,7 @@
 
     and receiving response. It is also used by the command line swift client. </p>'
   parent: 40
-  sha1: 30d69bc3345b6ac25828af0f4c277b4c4cf54904
+  sha1: 496ac562b7b3af0493d2855a7d5d21335d4c028a
   title: Trouble Shooting
 71:
   freshdesk:
