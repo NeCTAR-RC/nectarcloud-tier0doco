@@ -29,7 +29,7 @@ to be set. To set these environment variables you can either source the script
 file downloaded from NeCTAR [Dashboard][dashboard] or you can override it by
 using command line options.
 
-You can always execute ```man swift`` or simply ```swift``` to get more help
+You can always execute ```man swift``` or simply ```swift``` to get more help
 information and to learn about supported options.
 
 If you find a useful command, you can also execute ```swift command --help```,
@@ -46,7 +46,7 @@ API.
 You can debug your python code using Python debugger called pdb and you can find
 more information [here][pdb].
 
-The following code uses pdb debuuger to debug a python file contains clinet python
+The following code uses pdb debugger to debug a python file contains client python
 API code.
 
 ```
