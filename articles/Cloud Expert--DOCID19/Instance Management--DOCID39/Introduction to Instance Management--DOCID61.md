@@ -1,4 +1,4 @@
-## What is instance (Virtual Machine)
+## Defining an Instance (Virtual Machine) 
 
 An instance (virtual machine) is a computing environment completed with virtual
 hardware devices which simulates the real computer system. The instance normally
@@ -14,25 +14,25 @@ are still some cases that can be restricted by underlying virtual hardware suppo
 such as 3D graphics.
 
 Instances add some overhead as there are virtualization layers to support required
-functions, so they won't be as fast as if you run operating system on real
+functions, so they won't be as fast as if you run the operating system on real
 hardware.
 
 ## Why is virtualization useful
 
 Virtualization is useful in the following scenarios:
 
-- Flexibility. If you need more instances or more computing power, simply launch
+- **Flexibility:** If you need more instances or more computing power, simply launch
  more instances or launch a instance with more CPUs and RAMs.
  
-- Easier software installations. Instances can be used to ship the entire software
+- **Easier software installations:** Instances can be used to ship the entire software
  configuration. The instances can be 'snapshot' into an image after configuration, and
  then other users can use the image to launch new virtual machines that are already set up.
 
-- Testing and disaster recovery. Once installed, a virtual machine can be
+- **Testing and disaster recovery:** Once installed, a virtual machine can be
  consider as a "container" (snapshot) that can be arbitrarily frozen, woken up, copied,
  backed up, and transported between hosts. 
  
-- Infrastructure consolidation. Virtual machines can significantly
+- **Infrastructure consolidation:** Virtual machines can significantly
  reduce hardware and electricity costs.
 
 ## Some terminology
@@ -40,13 +40,13 @@ Virtualization is useful in the following scenarios:
 It is helpful to understand some crucial terminology, especially the following
 terms:
 
-- host: This is the computer system where your virtual machine is running on top
+- **host:** This is the computer system where your virtual machine is running on top
  of it.
 
-- guest operation system: This is the operation system that is running inside
+- **guest operating system:** This is the operating system that is running inside
  the virtual machine.
  
-- virtual machine image: a single file which contains a virtual disk that has
+- **virtual machine image:** a single file which contains a virtual disk that has
  bootable operation system installed on it. 
 
 ## Target audience
