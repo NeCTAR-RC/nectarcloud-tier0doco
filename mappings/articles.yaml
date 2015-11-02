@@ -6796,20 +6796,17 @@
           \ --parameters=\"InstanceType=m1.small;DBUsername=dbuser;DBPassword=verybadpassword;DBRootPassword=anotherverybadpassword;KeyName=nectar_dev\"\
           \ \n PS: Don't forget to customise the command: e.g.: replace the passwords\
           \ with far\nbetter ones, and also to change the key name to match one of\
-          \ your keys.\nThe to show all the stacks that have been created: \n heat\
-          \ stack-list \n To show all details for the newly created stack: \n heat\
-          \ stack-show teststack \n To list all the events that have occurred in the\
-          \ stacks life to date: \n heat event-list teststack \n To drill down into\
-          \ a particular event, make a note of its id and replace\n<ID> with it in\
-          \ the following command: \n heat event-show teststack WikiDatabase <ID>\
-          \ \n To suspend the stack: \n heat action-suspend teststack \n To resume\
-          \ it: \n heat action-resume teststack \n To list the resources being used\
-          \ by the stack: \n heat resource-list teststack \n To drill down on a particular\
-          \ resource: \n heat resource-show teststack WikiDatabase \n To show the\
-          \ metadata associated with a particular resource: \n heat resource-metadata\
-          \ teststack WikiDatabase \n To show the template that was used to create\
-          \ the stack: \n heat template-show teststack \n And finally, to delete the\
-          \ stack, do: \n heat stack-delete teststack "
+          \ your keys. \n Shell commands for exploring stacks: \n\n\n\nCommand\nAction\n\
+          \n\n\n\nheat stack-list\nlist all the stacks you have created\n\n\nheat\
+          \ stack-show\nshow all details for the stack\n\n\nheat event-list \nlist\
+          \ events in the history of the stack\n\n\nheat event-show   \ninformation\
+          \ on a particular event (using the event ID)\n\n\nheat action-suspend \n\
+          suspend the stack\n\n\nheat action-resume \nresume the stack\n\n\nheat resource-list\
+          \ \nlist the resources being used by the stack\n\n\nheat resource-show \
+          \ \ninformation on a particular resource\n\n\nheat resource-metadata  \n\
+          show metadata on a resource\n\n\nheat template-show \nshow the template\
+          \ that was used to create the stack\n\n\nheat stack-delete \ndelete the\
+          \ stack\n\n\n"
         description: '<h1>The Heat command line client</h1>
 
           <p>In true OpenStack fashion there is a <a href="http://docs.openstack.org/user-guide/cli.html">Heat
@@ -6851,53 +6848,117 @@
           <p><em>PS</em>: Don''t forget to customise the command: e.g.: replace the
           passwords with far
 
-          better ones, and also to change the key name to match one of your keys.
+          better ones, and also to change the key name to match one of your keys.</p>
 
-          The to show all the stacks that have been created:</p>
+          <p>Shell commands for exploring stacks:</p>
 
-          <p><code>heat stack-list</code></p>
+          <table>
 
-          <p>To show all details for the newly created stack:</p>
+          <thead>
 
-          <p><code>heat stack-show teststack</code></p>
+          <tr>
 
-          <p>To list all the events that have occurred in the stacks life to date:</p>
+          <th>Command</th>
 
-          <p><code>heat event-list teststack</code></p>
+          <th>Action</th>
 
-          <p>To drill down into a particular event, make a note of its id and replace
+          </tr>
 
-          &lt;ID&gt; with it in the following command:</p>
+          </thead>
 
-          <p><code>heat event-show teststack WikiDatabase &lt;ID&gt;</code></p>
+          <tbody>
 
-          <p>To suspend the stack:</p>
+          <tr>
 
-          <p><code>heat action-suspend teststack</code></p>
+          <td>heat stack-list</td>
 
-          <p>To resume it:</p>
+          <td>list all the stacks you have created</td>
 
-          <p><code>heat action-resume teststack</code></p>
+          </tr>
 
-          <p>To list the resources being used by the stack:</p>
+          <tr>
 
-          <p><code>heat resource-list teststack</code></p>
+          <td>heat stack-show</td>
 
-          <p>To drill down on a particular resource:</p>
+          <td>show all details for the stack</td>
 
-          <p><code>heat resource-show teststack WikiDatabase</code></p>
+          </tr>
 
-          <p>To show the metadata associated with a particular resource:</p>
+          <tr>
 
-          <p><code>heat resource-metadata teststack WikiDatabase</code></p>
+          <td>heat event-list </td>
 
-          <p>To show the template that was used to create the stack:</p>
+          <td>list events in the history of the stack</td>
 
-          <p><code>heat template-show teststack</code></p>
+          </tr>
 
-          <p>And finally, to delete the stack, do:</p>
+          <tr>
 
-          <p><code>heat stack-delete teststack</code></p>'
+          <td>heat event-show   </td>
+
+          <td>information on a particular event (using the event ID)</td>
+
+          </tr>
+
+          <tr>
+
+          <td>heat action-suspend </td>
+
+          <td>suspend the stack</td>
+
+          </tr>
+
+          <tr>
+
+          <td>heat action-resume </td>
+
+          <td>resume the stack</td>
+
+          </tr>
+
+          <tr>
+
+          <td>heat resource-list </td>
+
+          <td>list the resources being used by the stack</td>
+
+          </tr>
+
+          <tr>
+
+          <td>heat resource-show  </td>
+
+          <td>information on a particular resource</td>
+
+          </tr>
+
+          <tr>
+
+          <td>heat resource-metadata  </td>
+
+          <td>show metadata on a resource</td>
+
+          </tr>
+
+          <tr>
+
+          <td>heat template-show </td>
+
+          <td>show the template that was used to create the stack</td>
+
+          </tr>
+
+          <tr>
+
+          <td>heat stack-delete </td>
+
+          <td>delete the stack</td>
+
+          </tr>
+
+          </tbody>
+
+          </table>'
         folder:
           category_id: 6000122279
           created_at: '2015-09-03T01:28:02-04:00'
@@ -6912,13 +6973,13 @@
           updated_at: '2015-09-03T01:28:02-04:00'
           visibility: 1
         folder_id: 6000190148
-        hits: 4
+        hits: 14
         id: 6000074218
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-21T20:10:07-04:00'
+        modified_at: '2015-11-01T23:21:30-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000074218
@@ -6931,7 +6992,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-10-21T20:10:07-04:00'
+        updated_at: '2015-11-01T23:21:30-05:00'
         user_id: 6002464727
   html: '<h1>The Heat command line client</h1>
 
@@ -6973,55 +7034,119 @@
     <p><em>PS</em>: Don''t forget to customise the command: e.g.: replace the passwords
     with far
 
-    better ones, and also to change the key name to match one of your keys.
+    better ones, and also to change the key name to match one of your keys.</p>
 
-    The to show all the stacks that have been created:</p>
+    <p>Shell commands for exploring stacks:</p>
 
-    <p><code>heat stack-list</code></p>
+    <table>
 
-    <p>To show all details for the newly created stack:</p>
+    <thead>
 
-    <p><code>heat stack-show teststack</code></p>
+    <tr>
 
-    <p>To list all the events that have occurred in the stacks life to date:</p>
+    <th>Command</th>
 
-    <p><code>heat event-list teststack</code></p>
+    <th>Action</th>
 
-    <p>To drill down into a particular event, make a note of its id and replace
+    </tr>
 
-    &lt;ID&gt; with it in the following command:</p>
+    </thead>
 
-    <p><code>heat event-show teststack WikiDatabase &lt;ID&gt;</code></p>
+    <tbody>
 
-    <p>To suspend the stack:</p>
+    <tr>
 
-    <p><code>heat action-suspend teststack</code></p>
+    <td>heat stack-list</td>
 
-    <p>To resume it:</p>
+    <td>list all the stacks you have created</td>
 
-    <p><code>heat action-resume teststack</code></p>
+    </tr>
 
-    <p>To list the resources being used by the stack:</p>
+    <tr>
 
-    <p><code>heat resource-list teststack</code></p>
+    <td>heat stack-show</td>
 
-    <p>To drill down on a particular resource:</p>
+    <td>show all details for the stack</td>
 
-    <p><code>heat resource-show teststack WikiDatabase</code></p>
+    </tr>
 
-    <p>To show the metadata associated with a particular resource:</p>
+    <tr>
 
-    <p><code>heat resource-metadata teststack WikiDatabase</code></p>
+    <td>heat event-list <stackname></td>
 
-    <p>To show the template that was used to create the stack:</p>
+    <td>list events in the history of the stack</td>
 
-    <p><code>heat template-show teststack</code></p>
+    </tr>
 
-    <p>And finally, to delete the stack, do:</p>
+    <tr>
 
-    <p><code>heat stack-delete teststack</code></p>'
+    <td>heat event-show <stackname> <resource> <eventID></td>
+
+    <td>information on a particular event (using the event ID)</td>
+
+    </tr>
+
+    <tr>
+
+    <td>heat action-suspend <stackname></td>
+
+    <td>suspend the stack</td>
+
+    </tr>
+
+    <tr>
+
+    <td>heat action-resume <stackname></td>
+
+    <td>resume the stack</td>
+
+    </tr>
+
+    <tr>
+
+    <td>heat resource-list <stackname></td>
+
+    <td>list the resources being used by the stack</td>
+
+    </tr>
+
+    <tr>
+
+    <td>heat resource-show <stackname> <resource></td>
+
+    <td>information on a particular resource</td>
+
+    </tr>
+
+    <tr>
+
+    <td>heat resource-metadata <stackname> <resource></td>
+
+    <td>show metadata on a resource</td>
+
+    </tr>
+
+    <tr>
+
+    <td>heat template-show <stackname></td>
+
+    <td>show the template that was used to create the stack</td>
+
+    </tr>
+
+    <tr>
+
+    <td>heat stack-delete <stackname></td>
+
+    <td>delete the stack</td>
+
+    </tr>
+
+    </tbody>
+
+    </table>'
   parent: 42
-  sha1: bcda1bfe9f553386ffc61813e43239d088929c39
+  sha1: 609cb8d376304d1b696d290ac1c98512ddd6d16d
   title: API
 63:
   freshdesk:
