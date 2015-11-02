@@ -6,7 +6,7 @@ updated if necessary. It is independent of a particular Virtual Machine and can
 be updated and used without having any Virtual Machine running. It is designed
 to be redundant and scalable.
 
-### Concept
+## Concept
 
 Think about that dataset comprised of 2GB files that you read in and analyze
 many times, but in general it doesn't change. Or the images you want to use on
@@ -25,28 +25,28 @@ tools.
 Object Storage has the following features which are quite different from the
 traditional file systems:
 
-- Access via API at application-level, rather than via OS at file-system-level.
+- **Access via API** at application-level, rather than via OS at file-system-level.
   This means, byte-level interaction is not possible and interaction can occur
   via a single API end point.
 
-- No directory tree, object storage uses a flat structure and objects are stored
+- **No directory tree:** object storage uses a flat structure and objects are stored
   in containers.
 
-- Metadata lives directly with object.
+- **Metadata** lives directly with object.
 
-- Scalability. Object storage systems can scale very well when data reaches
+- **Scalability:** Object storage systems can scale very well when data reaches
   hundreds of TB and moves into the PB range and beyond.
 
-- Durability. Object Storage systems have mechanisms to check file consistency,
+- **Durability:** Object Storage systems have mechanisms to check file consistency,
   and handle failed drives, bit-rot, server and cabinet failures, etc. These
   features allow the system to automatically replicate data as needed to retain
   the desired number of replicas, which results in extremely high durability
   and availability of data.
   
-- Cost. Object storage systems are designed to run on commodity hardware, it is
+- **Cost:** Object storage systems are designed to run on commodity hardware, it is
   cheaper compared to block or file storage.
 
-### Swift
+## Swift
 
 Swift is the component that provides object storage for OpenStack. With your
 credentials and via a URL you can request Swift to reserve & create storage
