@@ -63,20 +63,13 @@ Before you can use the python swift client and command line API you need to be
 authenticated to the NeCTAR cloud. The below shows the instructions of how to
 get username/password and get authenticated.
 
-- Login to NeCTAR Cloud [Dashboard][dashboard]
-
-- Click 'Access & Security'
-
-- On the 'Access & Security' page, click tab 'API Access'
-
-- Click button "Download OpenStack RC File"
-
-- Save the file into a directory
-
-- Click the drop down list with your email on the right top of page, then click
- Settings
-
-- Click 'Reset Password' and save the password appeared on the screen
+1. Login to NeCTAR Cloud [Dashboard][dashboard]
+1. Click 'Access & Security'
+1. On the 'Access & Security' page, click tab 'API Access'
+1. Click button "Download OpenStack RC File"
+1. Save the file into a directory
+1. Click the drop down list with your email on the right top of page, then click 'Settings'
+1. Click 'Reset Password' and save the password appeared on the screen
 
 
 API normally requires 4 environment variables to be set for authentication:
@@ -90,16 +83,20 @@ When using the script file you downloaded from NeCTAR Dashboard, these
 varilabels are set by the script file and you can see these variables
 if you open the file. Example:
 
-OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
-OS_TENANT_NAME=my_science_project
-OS_TENANT_ID=sdfsdfsfwrwewer
-OS_USERNAME=clouduser@example.edu.au
-OS_PASSWORD=XXXXXX
+>OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
+>
+>OS_TENANT_NAME=my_science_project
+>
+>OS_TENANT_ID=sdfsdfsfwrwewer
+>
+>OS_USERNAME=clouduser@example.edu.au
+>
+>OS_PASSWORD=XXXXXX
 
 
-### Authentication for Command Line API
+## Authentication for Command Line API
 
-The below instruction assumes you use Linux operating system.
+The following instruction assume you use Linux operating system.
 
 Once you have obtained the authentication script and password, you can execute
 the script suing ``` source file-name.sh ```. and type in the password you
