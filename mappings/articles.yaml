@@ -10939,28 +10939,28 @@
           such as su or sudo. \n To change the SSH configuration, you can edit the\
           \ configuration file on the virtual\nmachine, in '/etc/ssh/sshd_config'.\
           \ \n A basic description of some important configuration items: \n \n \n\
-          \ PermitRootLogin no\n You need to set this to 'no' to avoid root access\
-          \ via SSH \n \n \n Port 22\n For better security, you can change the SSH\
-          \ port to other port number \n \n \n PermitEmptyPasswords no\n  This should\
-          \ be always 'no', for non-empty password access \n \n \n AllowUsers\n  This\
-          \ directive allows only certain users to have access via SSH to this machine.\
-          \ \n \n \n PasswordAuthentication No\n  You should set this to 'no' to disable\
-          \ user loggin using password \n \n \n After you have changed the /etc/ssh/sshd_config\
-          \ file, you can execute sudo service ssh restart\nto apply the new changes.\
-          \ \n If you are using an SSH client to access your Virtual Machine, you\
-          \ need to make\nsure both SSH server and client are using the same version\
-          \ of protocols. \n You can also restrict access to file transfer only if\
-          \ you want to allow accounts\non your Virtual Machine to transfer files.\
-          \ You can do it by giving users a\nrestricted shell such as scpoly or rssh.\
-          \ These shells restrict the commands\navailable to the users to execute.\
-          \ You can change an account's shell by editing\n'/etc/passwd' file. \n Securing\
-          \ Apache \n If you don't want your Apache web service available to public,\
-          \ you can use the\nListen or BindAddress directives in '/etc/apache2/apache2.conf'.\
-          \ \n Using Listen:\n    Listen 127.0.0.1:80\nUsing BindAddress:\n    BindAddress\
-          \ 127.0.0.1 \n Then you can restart your apache service with sudo service\
-          \ apache2 restart \n The default Apache installation in Debian permits users\
-          \ to publish content\nunder the '$HOME/public_html'. This content can be\
-          \ retrieved remotely using an\nURL such as: http://your_apache_server/~user.\
+          \ PermitRootLogin no \n You need to set this to 'no' to avoid root access\
+          \ via SSH \n \n \n Port 22 \n For better security, you can change the SSH\
+          \ port to other port number \n \n \n PermitEmptyPasswords no \n  This should\
+          \ be always 'no', for non-empty password access \n \n \n AllowUsers \n \
+          \ This directive allows only certain users to have access via SSH to this\
+          \ machine. \n \n \n PasswordAuthentication no \n  You should set this to\
+          \ 'no' to disable user loggin using password \n \n \n After you have changed\
+          \ the '/etc/ssh/sshd_config file', you can execute sudo service ssh restart\n\
+          to apply the new changes. \n If you are using an SSH client to access your\
+          \ Virtual Machine, you need to make\nsure both SSH server and client are\
+          \ using the same version of protocols. \n You can also restrict access to\
+          \ file transfer only if you want to allow accounts\non your Virtual Machine\
+          \ to transfer files. You can do it by giving users a\nrestricted shell such\
+          \ as scpoly or rssh. These shells restrict the commands\navailable to the\
+          \ users to execute. You can change an account's shell by editing\n'/etc/passwd'\
+          \ file. \n Securing Apache \n If you don't want your Apache web service\
+          \ available to public, you can use the\nListen or BindAddress directives\
+          \ in '/etc/apache2/apache2.conf'. \n Using Listen:\n    Listen 127.0.0.1:80\n\
+          Using BindAddress:\n    BindAddress 127.0.0.1 \n Then you can restart your\
+          \ apache service with sudo service apache2 restart \n The default Apache\
+          \ installation in Debian permits users to publish content\nunder the '$HOME/public_html'.\
+          \ This content can be retrieved remotely using an\nURL such as: http://your_apache_server/~user.\
           \ \n You can restrict the default configuration by editing '/etc/apache2/mods-enabled/userdir.conf'\
           \ \n You can also make sure the permission of log files can only be read/write\
           \ by the\nrequired user and groups. The default permission for the log files\
@@ -11021,25 +11021,27 @@
           \ and use alternative methods to become root,\nsuch as su or sudo.</p>\n\
           <p>To change the SSH configuration, you can edit the configuration file\
           \ on the virtual\nmachine, in '/etc/ssh/sshd_config'.</p>\n<p>A basic description\
-          \ of some important configuration items:</p>\n<ul>\n<li>\n<p>PermitRootLogin\
-          \ no\n You need to set this to 'no' to avoid root access via SSH</p>\n</li>\n\
-          <li>\n<p>Port 22\n For better security, you can change the SSH port to other\
-          \ port number</p>\n</li>\n<li>\n<p>PermitEmptyPasswords no\n  This should\
-          \ be always 'no', for non-empty password access</p>\n</li>\n<li>\n<p>AllowUsers\n\
-          \  This directive allows only certain users to have access via SSH to this\
-          \ machine.</p>\n</li>\n<li>\n<p>PasswordAuthentication No\n  You should\
-          \ set this to 'no' to disable user loggin using password</p>\n</li>\n</ul>\n\
-          <p>After you have changed the /etc/ssh/sshd_config file, you can execute\
-          \ <code>sudo service ssh restart</code>\nto apply the new changes.</p>\n\
-          <p>If you are using an SSH client to access your Virtual Machine, you need\
-          \ to make\nsure both SSH server and client are using the same version of\
-          \ protocols.</p>\n<p>You can also restrict access to file transfer only\
-          \ if you want to allow accounts\non your Virtual Machine to transfer files.\
-          \ You can do it by giving users a\nrestricted shell such as scpoly or rssh.\
-          \ These shells restrict the commands\navailable to the users to execute.\
-          \ You can change an account's shell by editing\n'/etc/passwd' file.</p>\n\
-          <h2>Securing Apache</h2>\n<p>If you don't want your Apache web service available\
-          \ to public, you can use the\nListen or BindAddress directives in '/etc/apache2/apache2.conf'.</p>\n\
+          \ of some important configuration items:</p>\n<ul>\n<li>\n<p><strong>PermitRootLogin</strong>\
+          \ <strong><em>no</em></strong><br>\n You need to set this to 'no' to avoid\
+          \ root access via SSH</p>\n</li>\n<li>\n<p><strong>Port 22</strong><br>\n\
+          \ For better security, you can change the SSH port to other port number</p>\n\
+          </li>\n<li>\n<p><strong>PermitEmptyPasswords</strong> <strong><em>no</em></strong><br>\n\
+          \  This should be always 'no', for non-empty password access</p>\n</li>\n\
+          <li>\n<p><strong>AllowUsers</strong><br>\n  This directive allows only certain\
+          \ users to have access via SSH to this machine.</p>\n</li>\n<li>\n<p><strong>PasswordAuthentication</strong>\
+          \ <strong><em>no</em></strong><br>\n  You should set this to 'no' to disable\
+          \ user loggin using password</p>\n</li>\n</ul>\n<p>After you have changed\
+          \ the '/etc/ssh/sshd_config file', you can execute <code>sudo service ssh\
+          \ restart</code>\nto apply the new changes.</p>\n<p>If you are using an\
+          \ SSH client to access your Virtual Machine, you need to make\nsure both\
+          \ SSH server and client are using the same version of protocols.</p>\n<p>You\
+          \ can also restrict access to file transfer only if you want to allow accounts\n\
+          on your Virtual Machine to transfer files. You can do it by giving users\
+          \ a\nrestricted shell such as scpoly or rssh. These shells restrict the\
+          \ commands\navailable to the users to execute. You can change an account's\
+          \ shell by editing\n'/etc/passwd' file.</p>\n<h2>Securing Apache</h2>\n\
+          <p>If you don't want your Apache web service available to public, you can\
+          \ use the\nListen or BindAddress directives in '/etc/apache2/apache2.conf'.</p>\n\
           <p>Using Listen:\n    Listen 127.0.0.1:80\nUsing BindAddress:\n    BindAddress\
           \ 127.0.0.1</p>\n<p>Then you can restart your apache service with <code>sudo\
           \ service apache2 restart</code></p>\n<p>The default Apache installation\
@@ -11067,13 +11069,14 @@
           \ traffic\n, the Forward Chain is for forwarded traffic and the OUTPUT Chain\
           \ is for outgoing\ntraffic. Which chains you need to add rules depends on\
           \ what traffic you want to\nfilter.</p>\n<p>IPtables also defines policies\
-          \ that defines actions for rules:</p>\n<ul>\n<li>\n<p>Accept, accept traffic</p>\n\
-          </li>\n<li>\n<p>Reject, reject traffic by sending back an error packet</p>\n\
-          </li>\n<li>\n<p>Drop, reject traffic by dropping traffic</p>\n</li>\n</ul>\n\
-          <p>The below shows an example how to enable SSH and HTTP/HTTPS traffic in\
-          \ IPtables.</p>\n<p>Firstly, you need to allow connections that are already\
-          \ connected to your server:</p>\n<p><code>sudo iptables - I INPUT 1 -p tcp\
-          \ --dport 22 -j ACCEPT</code></p>\n<p>Secondly, you need to allow SSH connections:</p>\n\
+          \ that defines actions for rules:</p>\n<ul>\n<li>\n<p><strong>Accept</strong>,\
+          \ accept traffic</p>\n</li>\n<li>\n<p><strong>Reject</strong>, reject traffic\
+          \ by sending back an error packet</p>\n</li>\n<li>\n<p><strong>Drop</strong>,\
+          \ reject traffic by dropping traffic</p>\n</li>\n</ul>\n<p>The below shows\
+          \ an example how to enable SSH and HTTP/HTTPS traffic in IPtables.</p>\n\
+          <p>Firstly, you need to allow connections that are already connected to\
+          \ your server:</p>\n<p><code>sudo iptables - I INPUT 1 -p tcp --dport 22\
+          \ -j ACCEPT</code></p>\n<p>Secondly, you need to allow SSH connections:</p>\n\
           <p><code>sudo iptables -I INPUT 1 -p tcp --dport 22 -j ACCEPT</code></p>\n\
           <p>Thirdly, you can allow HTTP/HTTPS traffic:</p>\n<p><code>sudo iptables\
           \ -I INPUT 1 -p tcp -dport 80 -j ACCEPT</code>\n<code>sudo iptables -I INPUT\
@@ -11108,13 +11111,13 @@
           updated_at: '2015-10-01T22:28:23-04:00'
           visibility: 1
         folder_id: 6000203455
-        hits: 2
+        hits: 8
         id: 6000077799
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-22T00:56:57-04:00'
+        modified_at: '2015-11-02T17:26:53-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000077799
@@ -11127,7 +11130,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-10-22T00:56:57-04:00'
+        updated_at: '2015-11-02T17:26:53-05:00'
         user_id: 6002464727
   html: "<h2>Security API</h2>\n<p>The NeCTAR Cloud doesn't provide a specific API\
     \ for security purposes. The only\nsecurity relevant operation is to manage security\
@@ -11144,23 +11147,25 @@
     such as su or sudo.</p>\n<p>To change the SSH configuration, you can edit the\
     \ configuration file on the virtual\nmachine, in '/etc/ssh/sshd_config'.</p>\n\
     <p>A basic description of some important configuration items:</p>\n<ul>\n<li>\n\
-    <p>PermitRootLogin no\n You need to set this to 'no' to avoid root access via\
-    \ SSH</p>\n</li>\n<li>\n<p>Port 22\n For better security, you can change the SSH\
-    \ port to other port number</p>\n</li>\n<li>\n<p>PermitEmptyPasswords no\n  This\
-    \ should be always 'no', for non-empty password access</p>\n</li>\n<li>\n<p>AllowUsers\n\
-    \  This directive allows only certain users to have access via SSH to this machine.</p>\n\
-    </li>\n<li>\n<p>PasswordAuthentication No\n  You should set this to 'no' to disable\
-    \ user loggin using password</p>\n</li>\n</ul>\n<p>After you have changed the\
-    \ /etc/ssh/sshd_config file, you can execute <code>sudo service ssh restart</code>\n\
-    to apply the new changes.</p>\n<p>If you are using an SSH client to access your\
-    \ Virtual Machine, you need to make\nsure both SSH server and client are using\
-    \ the same version of protocols.</p>\n<p>You can also restrict access to file\
-    \ transfer only if you want to allow accounts\non your Virtual Machine to transfer\
-    \ files. You can do it by giving users a\nrestricted shell such as scpoly or rssh.\
-    \ These shells restrict the commands\navailable to the users to execute. You can\
-    \ change an account's shell by editing\n'/etc/passwd' file.</p>\n<h2>Securing\
-    \ Apache</h2>\n<p>If you don't want your Apache web service available to public,\
-    \ you can use the\nListen or BindAddress directives in '/etc/apache2/apache2.conf'.</p>\n\
+    <p><strong>PermitRootLogin</strong> <strong><em>no</em></strong><br>\n You need\
+    \ to set this to 'no' to avoid root access via SSH</p>\n</li>\n<li>\n<p><strong>Port\
+    \ 22</strong><br>\n For better security, you can change the SSH port to other\
+    \ port number</p>\n</li>\n<li>\n<p><strong>PermitEmptyPasswords</strong> <strong><em>no</em></strong><br>\n\
+    \  This should be always 'no', for non-empty password access</p>\n</li>\n<li>\n\
+    <p><strong>AllowUsers</strong><br>\n  This directive allows only certain users\
+    \ to have access via SSH to this machine.</p>\n</li>\n<li>\n<p><strong>PasswordAuthentication</strong>\
+    \ <strong><em>no</em></strong><br>\n  You should set this to 'no' to disable user\
+    \ loggin using password</p>\n</li>\n</ul>\n<p>After you have changed the '/etc/ssh/sshd_config\
+    \ file', you can execute <code>sudo service ssh restart</code>\nto apply the new\
+    \ changes.</p>\n<p>If you are using an SSH client to access your Virtual Machine,\
+    \ you need to make\nsure both SSH server and client are using the same version\
+    \ of protocols.</p>\n<p>You can also restrict access to file transfer only if\
+    \ you want to allow accounts\non your Virtual Machine to transfer files. You can\
+    \ do it by giving users a\nrestricted shell such as scpoly or rssh. These shells\
+    \ restrict the commands\navailable to the users to execute. You can change an\
+    \ account's shell by editing\n'/etc/passwd' file.</p>\n<h2>Securing Apache</h2>\n\
+    <p>If you don't want your Apache web service available to public, you can use\
+    \ the\nListen or BindAddress directives in '/etc/apache2/apache2.conf'.</p>\n\
     <p>Using Listen:\n    Listen 127.0.0.1:80\nUsing BindAddress:\n    BindAddress\
     \ 127.0.0.1</p>\n<p>Then you can restart your apache service with <code>sudo service\
     \ apache2 restart</code></p>\n<p>The default Apache installation in Debian permits\
@@ -11187,11 +11192,12 @@
     \ is for incoming traffic\n, the Forward Chain is for forwarded traffic and the\
     \ OUTPUT Chain is for outgoing\ntraffic. Which chains you need to add rules depends\
     \ on what traffic you want to\nfilter.</p>\n<p>IPtables also defines policies\
-    \ that defines actions for rules:</p>\n<ul>\n<li>\n<p>Accept, accept traffic</p>\n\
-    </li>\n<li>\n<p>Reject, reject traffic by sending back an error packet</p>\n</li>\n\
-    <li>\n<p>Drop, reject traffic by dropping traffic</p>\n</li>\n</ul>\n<p>The below\
-    \ shows an example how to enable SSH and HTTP/HTTPS traffic in IPtables.</p>\n\
-    <p>Firstly, you need to allow connections that are already connected to your server:</p>\n\
+    \ that defines actions for rules:</p>\n<ul>\n<li>\n<p><strong>Accept</strong>,\
+    \ accept traffic</p>\n</li>\n<li>\n<p><strong>Reject</strong>, reject traffic\
+    \ by sending back an error packet</p>\n</li>\n<li>\n<p><strong>Drop</strong>,\
+    \ reject traffic by dropping traffic</p>\n</li>\n</ul>\n<p>The below shows an\
+    \ example how to enable SSH and HTTP/HTTPS traffic in IPtables.</p>\n<p>Firstly,\
+    \ you need to allow connections that are already connected to your server:</p>\n\
     <p><code>sudo iptables - I INPUT 1 -p tcp --dport 22 -j ACCEPT</code></p>\n<p>Secondly,\
     \ you need to allow SSH connections:</p>\n<p><code>sudo iptables -I INPUT 1 -p\
     \ tcp --dport 22 -j ACCEPT</code></p>\n<p>Thirdly, you can allow HTTP/HTTPS traffic:</p>\n\
@@ -11213,7 +11219,7 @@
     to list all available services.  You can examine the output carefully and disable\n\
     any services not desired.</p>"
   parent: 43
-  sha1: 98a72972bdfac85d3ddcd9a7fa0a4547dc8772bd
+  sha1: 920adae78777a39c1d474e2f709cacb3343e520f
   title: API
 79:
   freshdesk:
