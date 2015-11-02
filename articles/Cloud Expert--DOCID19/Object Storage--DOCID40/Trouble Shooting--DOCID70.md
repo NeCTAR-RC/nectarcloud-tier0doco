@@ -58,21 +58,17 @@ line of code and you can use some commands to control the execution flow.
 
 Some useful ones to use are:
 
-- b: set a breakpoint
 
-- c: continue debugging until you hit a breakpoint
-
-- s: step through the code
-
-- n: to go to next line of code
-
-- l: list source code for the current file
-
-- u : navigate up a stack frame
-
-- d: navigate down a stack frame
-
-- p: to print the value of an expression in the current context
+| Command  | Action |
+| -------------:|:------------- |
+| b | set a breakpoint |
+| c | continue debugging until you hit a breakpoint |
+| s | step through the code |
+| n | to go to next line of code |
+| l | list source code for the current file |
+| u | navigate up a stack frame |
+| d | navigate down a stack frame |
+| p | to print the value of an expression in the current context |
 
 
 ## Debugging Via HTTP
@@ -83,10 +79,10 @@ Thus the requests are all made by using HTTP and you can always refer to
 presented in the HTTP requests. The swift API uses [requests][requests] library
 to send and receive HTTP requests/responses.
 
-For command line client, you can add --debug option to print out HTTP request
+For command line client, you can add `--debug` option to print out HTTP request
 header and HTTP response header, which give you a lot of more insight
 information. To verify parameters in the request header, you can refer to
-OpenStack service [API][api] to see what are expected.
+[OpenStack service API][api] to see what are expected.
 
 
 To enable debugging information on the standard out for Python API, you can add
@@ -113,7 +109,7 @@ code to find the problems.
 
 The following source file structure is based on the installation in Ubuntu.
 
-The command line swift command is located in /usr/bin/swift. By looking at this
+The command line swift command is located in '/usr/bin/swift'. By looking at this
 file, you should get a idea of how the various options are interpreted. This file
 acts as an interface for Python API.
 
