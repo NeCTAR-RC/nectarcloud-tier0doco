@@ -7,7 +7,7 @@ Command line API:
   - Always look at the output to learn what happened
 
   - Always check your command before you execute a command that changes the state
- of the storage such as delete and update
+ of the storage such as `delete` and `update`
   
   - Keep your authentication credential secure
 
@@ -32,7 +32,7 @@ Object Storage:
  different containers based on object type (for example): images, videos, etc.
  This structure enables quick location of objects when you need them.
 
-  - Use multiple containers if you have an extremely large number of objects.
+  - Use multiple containers if you have a large number of objects.
 
   - Always give your container a meaningful name for easy use.
 
