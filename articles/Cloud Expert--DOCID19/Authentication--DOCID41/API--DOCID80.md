@@ -18,11 +18,15 @@ You can download the authentication script from the NeCTAR Dashboard. These
 variables are set by the script file and you can see these variables
 if you open the file. Example:
 
-OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
-OS_TENANT_NAME=my_science_project
-OS_TENANT_ID=sdfsdfsfwrwewer
-OS_USERNAME=clouduser@example.edu.au
-OS_PASSWORD=XXXXXX
+>OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
+>
+>OS_TENANT_NAME=my_science_project
+>
+>OS_TENANT_ID=sdfsdfsfwrwewer
+>
+>OS_USERNAME=clouduser@example.edu.au
+>
+>OS_PASSWORD=XXXXXX
 
 Instructions for downloading the OpenStack authentication script file:
 
@@ -57,11 +61,12 @@ variables from the authentication script file and pass them to the API calls.
 
 EC2 authentication requires 2 variables to be set:
 
-EC2_ACCESS_KEY
-EC2_SECRET_KEY
+>EC2_ACCESS_KEY
+>
+>EC2_SECRET_KEY
 
 The EC2_ACCESS_KEY is the account number and EC2_SECRET_KEY is the password. You
-can get these 2 variables from the NeCTAR Dashboard. please see the following
+can get these 2 variables from the NeCTAR Dashboard using the following
 instructions:
 
 - Login to the NeCTAR Cloud [Dashboard][dashboard]
@@ -70,8 +75,8 @@ instructions:
 
 - Click 'Access & Security'
 
-- On the 'Access & Security' page, click tab 'API Access' and you should see the
- below screenshot: 
+- On the 'Access & Security' page, click tab 'API Access' and the screen should
+look like this: 
 
 ![`api1`](images/api1.png)
 
