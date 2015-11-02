@@ -10517,33 +10517,33 @@
           \ \n \n auth URL \n username \n project id or name (most clients can handle\
           \ either) \n password \n \n You can download the authentication script from\
           \ the NeCTAR Dashboard. These\nvariables are set by the script file and\
-          \ you can see these variables\nif you open the file. Example: \n OS_AUTH_URL:\
-          \ https://keystone.rc.nectar.org.au:5000/v2.0/\nOS_TENANT_NAME=my_science_project\n\
-          OS_TENANT_ID=sdfsdfsfwrwewer\nOS_USERNAME=clouduser@example.edu.au\nOS_PASSWORD=XXXXXX\
-          \ \n Instructions for downloading the OpenStack authentication script file:\
+          \ you can see these variables\nif you open the file. Example: \n \n OS_AUTH_URL:\
+          \ https://keystone.rc.nectar.org.au:5000/v2.0/ \n OS_TENANT_NAME=my_science_project\
+          \ \n OS_TENANT_ID=sdfsdfsfwrwewer \n OS_USERNAME=clouduser@example.edu.au\
+          \ \n OS_PASSWORD=XXXXXX \n \n Instructions for downloading the OpenStack\
+          \ authentication script file: \n \n \n Login to the NeCTAR Cloud Dashboard\
+          \ \n \n \n Select a project name from the project drop down list \n \n \n\
+          \ Click 'Access & Security' \n \n \n On the 'Access & Security' page, click\
+          \ tab 'API Access' and you should see the\n following screen:  \n \n \n\
+          \ \n \n \n Click the button: \"Download OpenStack RC File\" \n \n \n Save\
+          \ the file into a directory \n \n \n Click the drop down list with your\
+          \ email on the right top of page, then click\n Settings. You should see\
+          \ the following screen: \n \n \n \n \n Click the 'Reset Password' button\
+          \ and save the password that appears on the screen.\n This is the API password.\
+          \ \n \n You use this script file to get authenticated before using the API.\n\
+          One way is to run source script_file ; or you can grab the required\nvariables\
+          \ from the authentication script file and pass them to the API calls. \n\
+          \ EC2 authentication \n EC2 authentication requires 2 variables to be set:\
+          \ \n \n EC2_ACCESS_KEY \n EC2_SECRET_KEY \n \n The EC2_ACCESS_KEY is the\
+          \ account number and EC2_SECRET_KEY is the password. You\ncan get these\
+          \ 2 variables from the NeCTAR Dashboard using the following\ninstructions:\
           \ \n \n \n Login to the NeCTAR Cloud Dashboard \n \n \n Select a project\
           \ name from the project drop down list \n \n \n Click 'Access & Security'\
-          \ \n \n \n On the 'Access & Security' page, click tab 'API Access' and you\
-          \ should see the\n following screen:  \n \n \n \n \n \n Click the button:\
-          \ \"Download OpenStack RC File\" \n \n \n Save the file into a directory\
-          \ \n \n \n Click the drop down list with your email on the right top of\
-          \ page, then click\n Settings. You should see the following screen: \n \n\
-          \ \n \n \n Click the 'Reset Password' button and save the password that\
-          \ appears on the screen.\n This is the API password. \n \n You use this\
-          \ script file to get authenticated before using the API.\nOne way is to\
-          \ run source script_file ; or you can grab the required\nvariables from\
-          \ the authentication script file and pass them to the API calls. \n EC2\
-          \ authentication \n EC2 authentication requires 2 variables to be set: \n\
-          \ EC2_ACCESS_KEY\nEC2_SECRET_KEY \n The EC2_ACCESS_KEY is the account number\
-          \ and EC2_SECRET_KEY is the password. You\ncan get these 2 variables from\
-          \ the NeCTAR Dashboard. please see the following\ninstructions: \n \n \n\
-          \ Login to the NeCTAR Cloud Dashboard \n \n \n Select a project name from\
-          \ the project drop down list \n \n \n Click 'Access & Security' \n \n \n\
-          \ On the 'Access & Security' page, click tab 'API Access' and you should\
-          \ see the\n below screenshot:  \n \n \n \n \n \n Click the button: \"Download\
-          \ EC2 Credentials\" \n \n \n Save the file into a directory  \n \n \n You\
-          \ can find the 2 variables from the file you just downloaded. You can then\n\
-          pass these 2 variables to API calls. "
+          \ \n \n \n On the 'Access & Security' page, click tab 'API Access' and the\
+          \ screen should look like this:  \n \n \n \n \n \n Click the button: \"\
+          Download EC2 Credentials\" \n \n \n Save the file into a directory  \n \n\
+          \ \n You can find the 2 variables from the file you just downloaded. You\
+          \ can then\npass these 2 variables to API calls. "
         description: "<h2>API Authentication</h2>\n<p>All NecTAR Cloud APIs such as\
           \ Nova, Cinder, etc., require authentication before\nyou can use them. NeCTAR\
           \ Cloud API supports 2 styles of authentication,\nOpenStack authentication\
@@ -10553,9 +10553,10 @@
           \ clients can handle either)</li>\n<li>password</li>\n</ul>\n<p>You can\
           \ download the authentication script from the NeCTAR Dashboard. These\n\
           variables are set by the script file and you can see these variables\nif\
-          \ you open the file. Example:</p>\n<p>OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/\n\
-          OS_TENANT_NAME=my_science_project\nOS_TENANT_ID=sdfsdfsfwrwewer\nOS_USERNAME=clouduser@example.edu.au\n\
-          OS_PASSWORD=XXXXXX</p>\n<p>Instructions for downloading the OpenStack authentication\
+          \ you open the file. Example:</p>\n<blockquote>\n<p>OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/</p>\n\
+          <p>OS_TENANT_NAME=my_science_project</p>\n<p>OS_TENANT_ID=sdfsdfsfwrwewer</p>\n\
+          <p>OS_USERNAME=clouduser@example.edu.au</p>\n<p>OS_PASSWORD=XXXXXX</p>\n\
+          </blockquote>\n<p>Instructions for downloading the OpenStack authentication\
           \ script file:</p>\n<ul>\n<li>\n<p>Login to the NeCTAR Cloud <a href=\"\
           https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n</li>\n<li>\n<p>Select\
           \ a project name from the project drop down list</p>\n</li>\n<li>\n<p>Click\
@@ -10573,15 +10574,16 @@
           One way is to run <code>source script_file</code> ; or you can grab the\
           \ required\nvariables from the authentication script file and pass them\
           \ to the API calls.</p>\n<h3>EC2 authentication</h3>\n<p>EC2 authentication\
-          \ requires 2 variables to be set:</p>\n<p>EC2_ACCESS_KEY\nEC2_SECRET_KEY</p>\n\
-          <p>The EC2_ACCESS_KEY is the account number and EC2_SECRET_KEY is the password.\
-          \ You\ncan get these 2 variables from the NeCTAR Dashboard. please see the\
-          \ following\ninstructions:</p>\n<ul>\n<li>\n<p>Login to the NeCTAR Cloud\
-          \ <a href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n</li>\n\
-          <li>\n<p>Select a project name from the project drop down list</p>\n</li>\n\
-          <li>\n<p>Click 'Access &amp; Security'</p>\n</li>\n<li>\n<p>On the 'Access\
-          \ &amp; Security' page, click tab 'API Access' and you should see the\n\
-          \ below screenshot: </p>\n</li>\n</ul>\n<p><img alt=\"api1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/api1.png?raw=true\"\
+          \ requires 2 variables to be set:</p>\n<blockquote>\n<p>EC2_ACCESS_KEY</p>\n\
+          <p>EC2_SECRET_KEY</p>\n</blockquote>\n<p>The EC2_ACCESS_KEY is the account\
+          \ number and EC2_SECRET_KEY is the password. You\ncan get these 2 variables\
+          \ from the NeCTAR Dashboard using the following\ninstructions:</p>\n<ul>\n\
+          <li>\n<p>Login to the NeCTAR Cloud <a href=\"https://dashboard.rc.nectar.org.au\"\
+          >Dashboard</a></p>\n</li>\n<li>\n<p>Select a project name from the project\
+          \ drop down list</p>\n</li>\n<li>\n<p>Click 'Access &amp; Security'</p>\n\
+          </li>\n<li>\n<p>On the 'Access &amp; Security' page, click tab 'API Access'\
+          \ and the screen should look like this: </p>\n</li>\n</ul>\n<p><img alt=\"\
+          api1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Authentication--DOCID41/images/api1.png?raw=true\"\
           ></p>\n<ul>\n<li>\n<p>Click the button: \"Download EC2 Credentials\"</p>\n\
           </li>\n<li>\n<p>Save the file into a directory </p>\n</li>\n</ul>\n<p>You\
           \ can find the 2 variables from the file you just downloaded. You can then\n\
@@ -10600,13 +10602,13 @@
           updated_at: '2015-09-03T01:28:01-04:00'
           visibility: 1
         folder_id: 6000190147
-        hits: 1
+        hits: 6
         id: 6000078065
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-20T21:02:42-04:00'
+        modified_at: '2015-11-01T20:22:38-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000078065
@@ -10619,7 +10621,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-10-20T21:02:42-04:00'
+        updated_at: '2015-11-01T20:22:38-05:00'
         user_id: 6002464727
   html: "<h2>API Authentication</h2>\n<p>All NecTAR Cloud APIs such as Nova, Cinder,\
     \ etc., require authentication before\nyou can use them. NeCTAR Cloud API supports\
@@ -10629,15 +10631,16 @@
     <li>username</li>\n<li>project id or name (most clients can handle either)</li>\n\
     <li>password</li>\n</ul>\n<p>You can download the authentication script from the\
     \ NeCTAR Dashboard. These\nvariables are set by the script file and you can see\
-    \ these variables\nif you open the file. Example:</p>\n<p>OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/\n\
-    OS_TENANT_NAME=my_science_project\nOS_TENANT_ID=sdfsdfsfwrwewer\nOS_USERNAME=clouduser@example.edu.au\n\
-    OS_PASSWORD=XXXXXX</p>\n<p>Instructions for downloading the OpenStack authentication\
-    \ script file:</p>\n<ul>\n<li>\n<p>Login to the NeCTAR Cloud <a href=\"https://dashboard.rc.nectar.org.au\"\
-    >Dashboard</a></p>\n</li>\n<li>\n<p>Select a project name from the project drop\
-    \ down list</p>\n</li>\n<li>\n<p>Click 'Access &amp; Security'</p>\n</li>\n<li>\n\
-    <p>On the 'Access &amp; Security' page, click tab 'API Access' and you should\
-    \ see the\n following screen: </p>\n</li>\n</ul>\n<p><img alt=\"api1\" src=\"\
-    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ these variables\nif you open the file. Example:</p>\n<blockquote>\n<p>OS_AUTH_URL:\
+    \ https://keystone.rc.nectar.org.au:5000/v2.0/</p>\n<p>OS_TENANT_NAME=my_science_project</p>\n\
+    <p>OS_TENANT_ID=sdfsdfsfwrwewer</p>\n<p>OS_USERNAME=clouduser@example.edu.au</p>\n\
+    <p>OS_PASSWORD=XXXXXX</p>\n</blockquote>\n<p>Instructions for downloading the\
+    \ OpenStack authentication script file:</p>\n<ul>\n<li>\n<p>Login to the NeCTAR\
+    \ Cloud <a href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n</li>\n\
+    <li>\n<p>Select a project name from the project drop down list</p>\n</li>\n<li>\n\
+    <p>Click 'Access &amp; Security'</p>\n</li>\n<li>\n<p>On the 'Access &amp; Security'\
+    \ page, click tab 'API Access' and you should see the\n following screen: </p>\n\
+    </li>\n</ul>\n<p><img alt=\"api1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Authentication--DOCID41/images/api1.png?raw=true\"></p>\n<ul>\n\
     <li>\n<p>Click the button: \"Download OpenStack RC File\"</p>\n</li>\n<li>\n<p>Save\
     \ the file into a directory</p>\n</li>\n<li>\n<p>Click the drop down list with\
@@ -10649,22 +10652,22 @@
     \ to get authenticated before using the API.\nOne way is to run <code>source script_file</code>\
     \ ; or you can grab the required\nvariables from the authentication script file\
     \ and pass them to the API calls.</p>\n<h3>EC2 authentication</h3>\n<p>EC2 authentication\
-    \ requires 2 variables to be set:</p>\n<p>EC2_ACCESS_KEY\nEC2_SECRET_KEY</p>\n\
-    <p>The EC2_ACCESS_KEY is the account number and EC2_SECRET_KEY is the password.\
-    \ You\ncan get these 2 variables from the NeCTAR Dashboard. please see the following\n\
-    instructions:</p>\n<ul>\n<li>\n<p>Login to the NeCTAR Cloud <a href=\"https://dashboard.rc.nectar.org.au\"\
-    >Dashboard</a></p>\n</li>\n<li>\n<p>Select a project name from the project drop\
-    \ down list</p>\n</li>\n<li>\n<p>Click 'Access &amp; Security'</p>\n</li>\n<li>\n\
-    <p>On the 'Access &amp; Security' page, click tab 'API Access' and you should\
-    \ see the\n below screenshot: </p>\n</li>\n</ul>\n<p><img alt=\"api1\" src=\"\
-    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
+    \ requires 2 variables to be set:</p>\n<blockquote>\n<p>EC2_ACCESS_KEY</p>\n<p>EC2_SECRET_KEY</p>\n\
+    </blockquote>\n<p>The EC2_ACCESS_KEY is the account number and EC2_SECRET_KEY\
+    \ is the password. You\ncan get these 2 variables from the NeCTAR Dashboard using\
+    \ the following\ninstructions:</p>\n<ul>\n<li>\n<p>Login to the NeCTAR Cloud <a\
+    \ href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n</li>\n<li>\n\
+    <p>Select a project name from the project drop down list</p>\n</li>\n<li>\n<p>Click\
+    \ 'Access &amp; Security'</p>\n</li>\n<li>\n<p>On the 'Access &amp; Security'\
+    \ page, click tab 'API Access' and the screen should look like this: </p>\n</li>\n\
+    </ul>\n<p><img alt=\"api1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
     \ Expert--DOCID19/Authentication--DOCID41/images/api1.png?raw=true\"></p>\n<ul>\n\
     <li>\n<p>Click the button: \"Download EC2 Credentials\"</p>\n</li>\n<li>\n<p>Save\
     \ the file into a directory </p>\n</li>\n</ul>\n<p>You can find the 2 variables\
     \ from the file you just downloaded. You can then\npass these 2 variables to API\
     \ calls.</p>"
   parent: 41
-  sha1: 68684ab69efb4e0c194d6387449198e44043ad91
+  sha1: a0a89025845b291ff839964ddc5e31321d6be8bf
   title: API
 81:
   freshdesk:
