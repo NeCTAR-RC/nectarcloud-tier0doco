@@ -26,22 +26,22 @@ machine, in '/etc/ssh/sshd_config'.
 
 A basic description of some important configuration items:
 
-- PermitRootLogin no
+- **PermitRootLogin** ***no***  
  You need to set this to 'no' to avoid root access via SSH
 
-- Port 22
+- **Port 22**  
  For better security, you can change the SSH port to other port number
  
-- PermitEmptyPasswords no
+- **PermitEmptyPasswords** ***no***  
   This should be always 'no', for non-empty password access
   
-- AllowUsers
+- **AllowUsers**  
   This directive allows only certain users to have access via SSH to this machine.
 
-- PasswordAuthentication No
+- **PasswordAuthentication** ***no***  
   You should set this to 'no' to disable user loggin using password
 
-After you have changed the /etc/ssh/sshd_config file, you can execute ``` sudo service ssh restart ```
+After you have changed the '/etc/ssh/sshd_config file', you can execute ` sudo service ssh restart `
 to apply the new changes.
   
 If you are using an SSH client to access your Virtual Machine, you need to make
@@ -63,7 +63,7 @@ Using Listen:
 Using BindAddress:
     BindAddress 127.0.0.1
 
-Then you can restart your apache service with ``` sudo service apache2 restart ```
+Then you can restart your apache service with ` sudo service apache2 restart `
 
 The default Apache installation in Debian permits users to publish content
 under the '$HOME/public_html'. This content can be retrieved remotely using an
@@ -85,7 +85,7 @@ To further strengthen the Apache security, you can run Apache by chroot. See thi
 
 ## Keep System Update to Date
 
-In debian/ubuntu, you run ``` sudo apt-get update ``` regularly to keep system
+In debian/ubuntu, you run ` sudo apt-get update ` regularly to keep system
 security patch update to date.
 
 ## Setup Local Firewall
@@ -96,7 +96,7 @@ It is advised to use Security Group to manage which ports to open as it is simpl
 to do. The below only provides basic introduction to IPtables, for more
 information, please refer to IPtables [MAN page][iptables].
 
-To list all current rules, execute:  ``` sudo iptables --list ```
+To list all current rules, execute:  ` sudo iptables --list `
 
 By default, the IPtables defines 3 chains. The INPUT Chain is for incoming traffic
 , the Forward Chain is for forwarded traffic and the OUTPUT Chain is for outgoing
@@ -105,11 +105,11 @@ filter.
 
 IPtables also defines policies that defines actions for rules:
 
-- Accept, accept traffic
+- **Accept**, accept traffic
 
-- Reject, reject traffic by sending back an error packet
+- **Reject**, reject traffic by sending back an error packet
 
-- Drop, reject traffic by dropping traffic
+- **Drop**, reject traffic by dropping traffic
 
 The below shows an example how to enable SSH and HTTP/HTTPS traffic in IPtables.
 
