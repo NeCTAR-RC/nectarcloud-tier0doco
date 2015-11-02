@@ -7219,49 +7219,49 @@
         created_at: '2015-10-08T02:01:22-04:00'
         datetime_01: null
         delta: true
-        desc_un_html: " Debugging Nova Command line Client \n The below assumes you\
-          \ have installed Nova command client in a Linux\nenvironment. If you have\
-          \ other operating systems, the debugging process might be\na slightly different,\
-          \ however, the general rules should still apply. \n Nova command line client\
-          \ is very much like other Linux commands, it outputs\nerrors in the standard\
-          \ output, which is the monitor. \n If you get an error, you can always read\
-          \ the error message and generally it give\nyou very good hints about what\
-          \ might be wrong. \n For example, if you execute nova service-list on the\
-          \ command line without\nauthentication, the error message might look like\
-          \ this: \n ERROR: You must provide a username via either --os-username or\
-          \ env[OS_USERNAME] \n The above message indicates you need to be authenticated\
-          \ before you can use the\nAPI. The authentication requires some environment\
-          \ variables to be set. To set\nthese environment variables you can either\
-          \ source the script file obtained from\nNeCTAR Dashboard or you can override\
-          \ it by using command line options. \n You can always execute man nova or\
-          \ simply nova to get more help\ninformation and to learn each supported\
-          \ options. \n If you find a useful command, you can also execute nova help\
-          \ command,\nthis will give your more specific help for the command. \n Debugging\
-          \ Nova Python API \n Debugging Nova Python API takes more effects as it\
-          \ depends on how familiar\nwith Python programming and what development\
-          \ environment you use. \n The below provides some basic information about\
-          \ how you debug the Nova Python\nAPI. \n You can debug your python code\
-          \ using Python debugger called pdb and you can find\nmore information here.\
-          \ \n The below code uses pdb debuuger to debug a python file contains clinet\
-          \ python\nAPI code. \n pdb file_name.py \n Once you executed the above code,\
-          \ the command line will be stopped on the first\nline of code and you can\
-          \ use some commands to control the execution flow. \n Some useful ones to\
-          \ use are: \n \n \n b: set a breakpoint \n \n \n c: continue debugging until\
-          \ you hit a breakpoint \n \n \n s: step through the code \n \n \n n: to\
-          \ go to next line of code \n \n \n l: list source code for the current file\
-          \ \n \n \n u : navigate up a stack frame \n \n \n d: navigate down a stack\
-          \ frame \n \n \n p: to print the value of an expression in the current context\
-          \ \n \n \n Debugging Via HTTP \n The both of command line API and python\
-          \ API are restful web service client.\nThus the requests are all made by\
-          \ using HTTP and you can always refer to\nOpenStack Service End for further\
-          \ references about what should be\npresented in the HTTP requests. The Nova\
-          \ API uses requests library\nto send and receive HTTP requests/responses.\
-          \ \n For command line client, you can add --debug option to print out HTTP\
-          \ request\nheader and HTTP response header, which give you a lot of more\
-          \ insight\ninformation. To verify parameters in the request header, you\
-          \ can refer to\nOpenStack service API to see what are expected. \n To enable\
-          \ debugging information on the standard out for Python API, you can add\n\
-          the below code: \n ```bash \n import logging \n logger = logging.getLogger(\"\
+        desc_un_html: " Debugging Nova Command line Client \n These instructions assume\
+          \ you have installed Nova command client in a Linux\nenvironment. If you\
+          \ have other operating systems, the debugging process might be\na slightly\
+          \ different, however, the general rules should still apply. \n Nova command\
+          \ line client is very much like other Linux commands, it outputs\nerrors\
+          \ in the standard output, which is the monitor. \n If you get an error,\
+          \ you can always read the error message and generally it give\nyou very\
+          \ good hints about what might be wrong. \n For example, if you execute nova\
+          \ service-list on the command line without\nauthentication, the error message\
+          \ might look like this: \n ERROR: You must provide a username via either\
+          \ --os-username or env[OS_USERNAME] \n The above message indicates you need\
+          \ to be authenticated before you can use the\nAPI. The authentication requires\
+          \ some environment variables to be set. To set\nthese environment variables\
+          \ you can either source the script file obtained from\nNeCTAR Dashboard\
+          \ or you can override it by using command line options. \n You can always\
+          \ execute man nova or simply nova to get more help\ninformation and to learn\
+          \ each supported options. \n If you find a useful command, you can also\
+          \ execute nova help command,\nthis will give your more specific help for\
+          \ the command. \n Debugging Nova Python API \n Debugging Nova Python API\
+          \ takes more effects as it depends on how familiar\nwith Python programming\
+          \ and what development environment you use. \n The below provides some basic\
+          \ information about how you debug the Nova Python\nAPI. \n You can debug\
+          \ your python code using Python debugger called pdb and you can find\nmore\
+          \ information here. \n The below code uses pdb debuuger to debug a python\
+          \ file contains clinet python\nAPI code. \n pdb file_name.py \n Once you\
+          \ executed the above code, the command line will be stopped on the first\n\
+          line of code and you can use some commands to control the execution flow.\
+          \ \n Some useful ones to use are: \n\n\n\nCommand\nAction\n\n\n\n\nb\nset\
+          \ a breakpoint\n\n\nc\ncontinue debugging until you hit a breakpoint\n\n\
+          \ns\nstep through the code\n\n\nn\nto go to next line of code\n\n\nl\nlist\
+          \ source code for the current file\n\n\nu\nnavigate up a stack frame\n\n\
+          \nd\nnavigate down a stack frame\n\n\np\nto print the value of an expression\
+          \ in the current context\n\n\n\n Debugging Via HTTP \n The both of command\
+          \ line API and python API are restful web service client.\nThus the requests\
+          \ are all made by using HTTP and you can always refer to\nOpenStack Service\
+          \ End for further references about what should be\npresented in the HTTP\
+          \ requests. The Nova API uses requests library\nto send and receive HTTP\
+          \ requests/responses. \n For command line client, you can add --debug option\
+          \ to print out HTTP request\nheader and HTTP response header, which give\
+          \ you a lot of more insight\ninformation. To verify parameters in the request\
+          \ header, you can refer to\nOpenStack service API to see what are expected.\
+          \ \n To enable debugging information on the standard out for Python API,\
+          \ you can add\nthe below code: \n ``` \n import logging \n logger = logging.getLogger(\"\
           novaclient\") \n logging.basicConfig(level=logging.DEBUG) \n ``` \n The\
           \ will print the same output as adding --debug option for command line API.\
           \ \n Debugging via Source Code \n If the above techniques are still not\
@@ -7276,7 +7276,8 @@
           \ used by the command line Nova client.  "
         description: '<h2>Debugging Nova Command line Client</h2>
 
-          <p>The below assumes you have installed Nova command client in a Linux
+          <p>These instructions assume you have installed Nova command client in a
+          Linux
 
           environment. If you have other operating systems, the debugging process
           might be
@@ -7351,57 +7352,89 @@
 
           <p>Some useful ones to use are:</p>
 
-          <ul>
+          <table>
 
-          <li>
+          <thead>
 
-          <p>b: set a breakpoint</p>
+          <tr>
 
-          </li>
+          <th align="right">Command</th>
 
-          <li>
+          <th align="left">Action</th>
 
-          <p>c: continue debugging until you hit a breakpoint</p>
+          </tr>
 
-          </li>
+          </thead>
 
-          <li>
+          <tbody>
 
-          <p>s: step through the code</p>
+          <tr>
 
-          </li>
+          <td align="right">b</td>
 
-          <li>
+          <td align="left">set a breakpoint</td>
 
-          <p>n: to go to next line of code</p>
+          </tr>
 
-          </li>
+          <tr>
 
-          <li>
+          <td align="right">c</td>
 
-          <p>l: list source code for the current file</p>
+          <td align="left">continue debugging until you hit a breakpoint</td>
 
-          </li>
+          </tr>
 
-          <li>
+          <tr>
 
-          <p>u : navigate up a stack frame</p>
+          <td align="right">s</td>
 
-          </li>
+          <td align="left">step through the code</td>
 
-          <li>
+          </tr>
 
-          <p>d: navigate down a stack frame</p>
+          <tr>
 
-          </li>
+          <td align="right">n</td>
 
-          <li>
+          <td align="left">to go to next line of code</td>
 
-          <p>p: to print the value of an expression in the current context</p>
+          </tr>
 
-          </li>
+          <tr>
 
-          </ul>
+          <td align="right">l</td>
+
+          <td align="left">list source code for the current file</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">u</td>
+
+          <td align="left">navigate up a stack frame</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">d</td>
+
+          <td align="left">navigate down a stack frame</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">p</td>
+
+          <td align="left">to print the value of an expression in the current context</td>
+
+          </tr>
+
+          </tbody>
+
+          </table>
 
           <h2>Debugging Via HTTP</h2>
 
@@ -7432,7 +7465,7 @@
 
           the below code:</p>
 
-          <p>```bash</p>
+          <p>```</p>
 
           <p>import logging</p>
 
@@ -7485,13 +7518,13 @@
           updated_at: '2015-09-03T01:27:59-04:00'
           visibility: 1
         folder_id: 6000190145
-        hits: 5
+        hits: 16
         id: 6000075752
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-21T20:04:00-04:00'
+        modified_at: '2015-11-01T21:03:07-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000075752
@@ -7504,11 +7537,11 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Trouble Shooting
-        updated_at: '2015-10-21T20:04:00-04:00'
+        updated_at: '2015-11-01T21:03:07-05:00'
         user_id: 6002464727
   html: '<h2>Debugging Nova Command line Client</h2>
 
-    <p>The below assumes you have installed Nova command client in a Linux
+    <p>These instructions assume you have installed Nova command client in a Linux
 
     environment. If you have other operating systems, the debugging process might
     be
@@ -7577,57 +7610,89 @@
 
     <p>Some useful ones to use are:</p>
 
-    <ul>
+    <table>
 
-    <li>
+    <thead>
 
-    <p>b: set a breakpoint</p>
+    <tr>
 
-    </li>
+    <th align="right">Command</th>
 
-    <li>
+    <th align="left">Action</th>
 
-    <p>c: continue debugging until you hit a breakpoint</p>
+    </tr>
 
-    </li>
+    </thead>
 
-    <li>
+    <tbody>
 
-    <p>s: step through the code</p>
+    <tr>
 
-    </li>
+    <td align="right">b</td>
 
-    <li>
+    <td align="left">set a breakpoint</td>
 
-    <p>n: to go to next line of code</p>
+    </tr>
 
-    </li>
+    <tr>
 
-    <li>
+    <td align="right">c</td>
 
-    <p>l: list source code for the current file</p>
+    <td align="left">continue debugging until you hit a breakpoint</td>
 
-    </li>
+    </tr>
 
-    <li>
+    <tr>
 
-    <p>u : navigate up a stack frame</p>
+    <td align="right">s</td>
 
-    </li>
+    <td align="left">step through the code</td>
 
-    <li>
+    </tr>
 
-    <p>d: navigate down a stack frame</p>
+    <tr>
 
-    </li>
+    <td align="right">n</td>
 
-    <li>
+    <td align="left">to go to next line of code</td>
 
-    <p>p: to print the value of an expression in the current context</p>
+    </tr>
 
-    </li>
+    <tr>
 
-    </ul>
+    <td align="right">l</td>
+
+    <td align="left">list source code for the current file</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">u</td>
+
+    <td align="left">navigate up a stack frame</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">d</td>
+
+    <td align="left">navigate down a stack frame</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">p</td>
+
+    <td align="left">to print the value of an expression in the current context</td>
+
+    </tr>
+
+    </tbody>
+
+    </table>
 
     <h2>Debugging Via HTTP</h2>
 
@@ -7657,7 +7722,7 @@
 
     the below code:</p>
 
-    <p>```bash</p>
+    <p>```</p>
 
     <p>import logging</p>
 
@@ -7694,7 +7759,7 @@
 
     receiving response. It is also used by the command line Nova client. </p>'
   parent: 39
-  sha1: 5827c526b1fe6f3a40a9bf76dc6c911d78bffde5
+  sha1: fb3ab57b531b8f5119c4b1f7d9fecf66000bc209
   title: Trouble Shooting
 66:
   freshdesk:
