@@ -1,6 +1,6 @@
 ## Debugging Nova Command line Client
 
-The below assumes you have installed Nova command client in a Linux
+These instructions assume you have installed Nova command client in a Linux
 environment. If you have other operating systems, the debugging process might be
 a slightly different, however, the general rules should still apply.
 
@@ -51,21 +51,16 @@ line of code and you can use some commands to control the execution flow.
 
 Some useful ones to use are:
 
-- b: set a breakpoint
-
-- c: continue debugging until you hit a breakpoint
-
-- s: step through the code
-
-- n: to go to next line of code
-
-- l: list source code for the current file
-
-- u : navigate up a stack frame
-
-- d: navigate down a stack frame
-
-- p: to print the value of an expression in the current context
+| Command  | Action |
+| -------------:|:------------- |
+| b | set a breakpoint |
+| c | continue debugging until you hit a breakpoint |
+| s | step through the code |
+| n | to go to next line of code |
+| l | list source code for the current file |
+| u | navigate up a stack frame |
+| d | navigate down a stack frame |
+| p | to print the value of an expression in the current context |
 
 
 ## Debugging Via HTTP
@@ -86,7 +81,7 @@ To enable debugging information on the standard out for Python API, you can add
 the below code:
 
 
-```bash
+```
 
 import logging
 
