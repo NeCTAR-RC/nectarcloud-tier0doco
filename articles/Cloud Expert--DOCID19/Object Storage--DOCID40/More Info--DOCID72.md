@@ -1,17 +1,14 @@
 ## Videos
 
-You can find userful Videos on [SwiftStack][swiftstack], which is the company
-who built the Object Storage for OpenStack.
+The object storage for OpenStack was built by SwiftStack, and they have published 
+several useful videos on the [SwiftStack website][swiftstack]
 
-You can also visit this YouTube [link][os-101] and it has very good introduction
-about Object Storage.
+They have also published a good [introductory video][os-101] about object storage on YouTube
 
-For more deep introduction, you can visit this YouTube [link][os-video] and it
-provides a serials of videos about Object Storage.
+This series of [swiftstack videos][os-video] provides a more thorough introduction.
 
-You can also search [YouTube][youtube] by keywords 'object storage' or 'swift',
-you will find that there are large amount of videos about this topic and which
-can certainly help you. 
+You can also search [YouTube][youtube] by keywords 'object storage' or 'swift'.
+You will find that there are large amount of videos about this topic which can certainly help you. 
 
 ## Documentation
 
