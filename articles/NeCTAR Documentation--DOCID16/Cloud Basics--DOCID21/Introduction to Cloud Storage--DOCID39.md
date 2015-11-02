@@ -167,7 +167,16 @@ The following command gives permission for the user 'ubuntu' to write to the eph
 Notes:
 Volumes must be detached before deletion.
 
+## Check your Storage 
 
+Here are some commands that can allow you to look at your mounted storage blocks
+and keep track of their usage:
+
+`lsblk -l  `  for info : `man lsblk`
+
+`df -hT  `  for info : `man df`
+
+`du -h <path/to/directory>  `  for info : `man du`
 
 ## Object Storage
 
