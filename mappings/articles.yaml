@@ -4387,16 +4387,17 @@
           \ browser \n \n Your VM console can also be accessed via the NeCTAR dashboard\
           \ in your web browser.\nThis console is not as user-friendly as the SSH\
           \ clients, but has the advantage of \nbeing accessible from any computer,\
-          \ without needing the private key to be saved on it. \n \n First, you need\
-          \ to get SSH access to the VM command line in order to set a password. \n\
-          \ In PuTTY or Terminal, enter sudo passwd ubuntu (or 'root' if your OS isn't\
-          \ Ubuntu) \n \n Enter a password, that you will use to access the VM through\
-          \ a browser. \n \n \n Log on to the NeCTAR dashboard \n \n Click on the\
-          \ name of the Instance you want to access \n Click on the 'Console' tab\
-          \ at the top of the screen \n Log on with the username 'ubuntu' (or 'root')\
-          \ and the password you set \n \n \n \n NOTE:\nIf you later choose to install\
-          \ a desktop environment on your instance, the remote\ndesktop will appear\
-          \ in your browser instead of the commandline console. "
+          \ without needing the private key to be saved on it. \n Set a user password\
+          \ \n \n First, you need to get SSH access to the VM command line in order\
+          \ to set a password. \n In PuTTY or Terminal, enter sudo passwd ubuntu (or\
+          \ 'root' if your OS isn't Ubuntu) \n Enter a password, that you will use\
+          \ to access the VM through a browser. \n \n Log on through the dashboard\
+          \ \n \n Log on to the NeCTAR dashboard\n \n Click on the name of the Instance\
+          \ you want to access \n Click on the 'Console' tab at the top of the screen\
+          \ \n Log on with the username 'ubuntu' (or 'root') and the password you\
+          \ set \n \n \n \n NOTE:\nIf you later choose to install a desktop environment\
+          \ on your instance, the remote\ndesktop will appear in your browser instead\
+          \ of the commandline console. "
         description: "<ul>\n<li><a href=\"#Windows\">Windows User</a></li>\n<li><a\
           \ href=\"#unix\">Mac / Linux User</a></li>\n<li><a href=\"#password\">Access\
           \ via web browser</a></li>\n</ul>\n<p>This section enables you to access\
@@ -4409,17 +4410,17 @@
           </li>\n<li>Click the 'Instances' tab</li>\n<li>Select and copy the IP Address\
           \ of the instance you want to access</li>\n</ol>\n<p><img alt=\"ipaddress\"\
           \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/ipaddress.png?raw=true\"\
-          ></p>\n<hr>\n<h2>Windows User <a name=\"Windows\"></a>\n</h2>\n<ol>\n<li>Download\
+          ></p>\n<hr>\n<h2>Windows User <a name=\"Windows\"></a>\n</h2>\n<ul>\n<li>Download\
           \ PuTTY(putty.exe) from <a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\"\
-          >PuTTY download page</a>\n</li>\n<li>Double click putty.exe</li>\n</ol>\n\
+          >PuTTY download page</a>\n</li>\n<li>Double click putty.exe</li>\n</ul>\n\
           <p><img alt=\"putty1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/putty1.png?raw=true\"\
-          ></p>\n<ol>\n<li>Copy/paste the IP address to 'Host Name'</li>\n<li>Under\
-          \ 'Connection' on the right side, expand 'SSH' and click 'Auth'</li>\n</ol>\n\
+          ></p>\n<ul>\n<li>Copy/paste the IP address to 'Host Name'</li>\n<li>Under\
+          \ 'Connection' on the right side, expand 'SSH' and click 'Auth'</li>\n</ul>\n\
           <p><img alt=\"putty2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/putty2.png?raw=true\"\
-          ></p>\n<ol>\n<li>Click the Browse button and select the private key created\
+          ></p>\n<ul>\n<li>Click the Browse button and select the private key created\
           \ earlier</li>\n<li>Click 'Session' on the right side Category</li>\n<li>Click\
           \ 'Open' button</li>\n<li>Type username 'ubuntu' for Ubuntu image and 'root'\
-          \ for other images</li>\n</ol>\n<hr>\n<h2>Linux/Mac User <a name=\"unix\"\
+          \ for other images</li>\n</ul>\n<hr>\n<h2>Linux/Mac User <a name=\"unix\"\
           ></a>\n</h2>\n<p>Type the following command into the console:</p>\n<p><code>ssh\
           \ -i Nectar_Key ubuntu@XX.XX.XX.XX</code></p>\n<ul>\n<li>Replace 'Nectar_Key'\
           \ with the created private key name earlier. You may also\n need to specify\
@@ -4430,16 +4431,16 @@
           \ console can also be accessed via the NeCTAR dashboard in your web browser.\n\
           This console is not as user-friendly as the SSH clients, but has the advantage\
           \ of \nbeing accessible from any computer, without needing the private key\
-          \ to be saved on it.</p>\n<ol>\n<li>First, you need to get SSH access to\
-          \ the VM command line in order to set a password.</li>\n<li>In PuTTY or\
-          \ Terminal, enter <code>sudo passwd ubuntu</code> (or 'root' if your OS\
-          \ isn't Ubuntu)</li>\n<li>\n<p>Enter a password, that you will use to access\
-          \ the VM through a browser.</p>\n</li>\n<li>\n<p>Log on to the NeCTAR <a\
-          \ href=\"https://dashboard.rc.nectar.org.au/\">dashboard</a></p>\n</li>\n\
-          <li>Click on the name of the Instance you want to access</li>\n<li>Click\
-          \ on the 'Console' tab at the top of the screen</li>\n<li>Log on with the\
-          \ username 'ubuntu' (or 'root') and the password you set</li>\n</ol>\n<p><img\
-          \ alt=\"click\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/click_console.png?raw=true\"\
+          \ to be saved on it.</p>\n<h3>Set a user password</h3>\n<ol>\n<li>First,\
+          \ you need to get SSH access to the VM command line in order to set a password.</li>\n\
+          <li>In PuTTY or Terminal, enter <code>sudo passwd ubuntu</code> (or 'root'\
+          \ if your OS isn't Ubuntu)</li>\n<li>Enter a password, that you will use\
+          \ to access the VM through a browser.</li>\n</ol>\n<h3>Log on through the\
+          \ dashboard</h3>\n<ol>\n<li>Log on to the NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\"\
+          >dashboard</a>\n</li>\n<li>Click on the name of the Instance you want to\
+          \ access</li>\n<li>Click on the 'Console' tab at the top of the screen</li>\n\
+          <li>Log on with the username 'ubuntu' (or 'root') and the password you set</li>\n\
+          </ol>\n<p><img alt=\"click\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/click_console.png?raw=true\"\
           ></p>\n<p><img alt=\"login\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/console_login.png?raw=true\"\
           ></p>\n<p>NOTE:\nIf you later choose to install a <a href=\"http://training.nectar.org.au/package07/sections/remoteDesktop.html\"\
           >desktop environment</a> on your instance, the remote\ndesktop will appear\
@@ -4458,13 +4459,13 @@
           updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 15
+        hits: 19
         id: 6000055446
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-27T00:42:12-04:00'
+        modified_at: '2015-11-02T17:53:32-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000055446
@@ -4477,7 +4478,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Accessing Instances
-        updated_at: '2015-10-27T00:42:12-04:00'
+        updated_at: '2015-11-02T17:53:32-05:00'
         user_id: 6002464727
   html: "<ul>\n<li><a href=\"#Windows\">Windows User</a></li>\n<li><a href=\"#unix\"\
     >Mac / Linux User</a></li>\n<li><a href=\"#password\">Access via web browser</a></li>\n\
@@ -4490,19 +4491,19 @@
     <li>Click the 'Instances' tab</li>\n<li>Select and copy the IP Address of the\
     \ instance you want to access</li>\n</ol>\n<p><img alt=\"ipaddress\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Cloud Basics--DOCID21/images/ipaddress.png?raw=true\"\
-    ></p>\n<hr>\n<h2>Windows User <a name=\"Windows\"></a></h2>\n<ol>\n<li>Download\
+    ></p>\n<hr>\n<h2>Windows User <a name=\"Windows\"></a></h2>\n<ul>\n<li>Download\
     \ PuTTY(putty.exe) from <a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\"\
-    >PuTTY download page</a></li>\n<li>Double click putty.exe</li>\n</ol>\n<p><img\
+    >PuTTY download page</a></li>\n<li>Double click putty.exe</li>\n</ul>\n<p><img\
     \ alt=\"putty1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Cloud Basics--DOCID21/images/putty1.png?raw=true\"></p>\n\
-    <ol>\n<li>Copy/paste the IP address to 'Host Name'</li>\n<li>Under 'Connection'\
-    \ on the right side, expand 'SSH' and click 'Auth'</li>\n</ol>\n<p><img alt=\"\
+    <ul>\n<li>Copy/paste the IP address to 'Host Name'</li>\n<li>Under 'Connection'\
+    \ on the right side, expand 'SSH' and click 'Auth'</li>\n</ul>\n<p><img alt=\"\
     putty2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Cloud Basics--DOCID21/images/putty2.png?raw=true\"></p>\n\
-    <ol>\n<li>Click the Browse button and select the private key created earlier</li>\n\
+    <ul>\n<li>Click the Browse button and select the private key created earlier</li>\n\
     <li>Click 'Session' on the right side Category</li>\n<li>Click 'Open' button</li>\n\
     <li>Type username 'ubuntu' for Ubuntu image and 'root' for other images</li>\n\
-    </ol>\n<hr>\n<h2>Linux/Mac User <a name=\"unix\"></a></h2>\n<p>Type the following\
+    </ul>\n<hr>\n<h2>Linux/Mac User <a name=\"unix\"></a></h2>\n<p>Type the following\
     \ command into the console:</p>\n<p><code>ssh -i Nectar_Key ubuntu@XX.XX.XX.XX</code></p>\n\
     <ul>\n<li>Replace 'Nectar_Key' with the created private key name earlier. You\
     \ may also\n need to specify the full path for the private key (usually '~/.ssh/Nectar_Key')</li>\n\
@@ -4511,15 +4512,16 @@
     \ browser <a name=\"password\"></a></h2>\n<p>Your VM console can also be accessed\
     \ via the NeCTAR dashboard in your web browser.\nThis console is not as user-friendly\
     \ as the SSH clients, but has the advantage of \nbeing accessible from any computer,\
-    \ without needing the private key to be saved on it.</p>\n<ol>\n<li>First, you\
-    \ need to get SSH access to the VM command line in order to set a password.</li>\n\
-    <li>In PuTTY or Terminal, enter <code>sudo passwd ubuntu</code> (or 'root' if\
-    \ your OS isn't Ubuntu)</li>\n<li>\n<p>Enter a password, that you will use to\
-    \ access the VM through a browser.</p>\n</li>\n<li>\n<p>Log on to the NeCTAR <a\
-    \ href=\"https://dashboard.rc.nectar.org.au/\">dashboard</a></p>\n</li>\n<li>Click\
-    \ on the name of the Instance you want to access</li>\n<li>Click on the 'Console'\
-    \ tab at the top of the screen</li>\n<li>Log on with the username 'ubuntu' (or\
-    \ 'root') and the password you set</li>\n</ol>\n<p><img alt=\"click\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ without needing the private key to be saved on it.</p>\n<h3>Set a user password</h3>\n\
+    <ol>\n<li>First, you need to get SSH access to the VM command line in order to\
+    \ set a password.</li>\n<li>In PuTTY or Terminal, enter <code>sudo passwd ubuntu</code>\
+    \ (or 'root' if your OS isn't Ubuntu)</li>\n<li>Enter a password, that you will\
+    \ use to access the VM through a browser.</li>\n</ol>\n<h3>Log on through the\
+    \ dashboard</h3>\n<ol>\n<li>Log on to the NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\"\
+    >dashboard</a></li>\n<li>Click on the name of the Instance you want to access</li>\n\
+    <li>Click on the 'Console' tab at the top of the screen</li>\n<li>Log on with\
+    \ the username 'ubuntu' (or 'root') and the password you set</li>\n</ol>\n<p><img\
+    \ alt=\"click\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Cloud Basics--DOCID21/images/click_console.png?raw=true\"\
     ></p>\n<p><img alt=\"login\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Cloud Basics--DOCID21/images/console_login.png?raw=true\"\
@@ -4527,7 +4529,7 @@
     >desktop environment</a> on your instance, the remote\ndesktop will appear in\
     \ your browser instead of the commandline console.</p>"
   parent: 21
-  sha1: cb7ba308c5365f1312c48a9074ffe07b4cf3f339
+  sha1: 654c8267329e977abc6512e5ba453d3807613354
   title: Accessing Instances
 54:
   freshdesk:
