@@ -5172,90 +5172,229 @@
           \ \n It is same as nova client and cinder client, you need to authenticate\
           \ before you\ncan use it. Please refer the getting started to see how to\
           \ get authenticated. \n Please also refer getting started for how to install\
-          \ the swift client. \n To list all containers, execute: \n swift list \n\
-          \ To list all objects under a container, execute: \n swift list [container]\
-          \ \n Positional arguments: \n \n container: Name of container to list object\
-          \ in \n \n To create a container, execute \n swift post [container] \n Positional\
-          \ arguments: \n \n container: Name of container to create \n \n To delete\
-          \ a container and a object within it, execute: \n swift delete <container><object>\
-          \ \n Positional arguments:\ncontainer: Name of container to delete from\n\
-          object: Name of object ot delete. Specify multiple times for multiple objects\
-          \ \n To upload files or directories to the given container, execute: \n\
-          \ swift upload <container> <file_or_directory> \n Positional arguments:\
-          \ \n \n \n container: Name of container to upload to \n \n \n file_or_directory:\
-          \ Name of file or directory to uploaded. Specify multiple\n times for multiple\
-          \ uploads \n \n \n To download objects from a given container, execute:\
-          \ \n swift download <container> [object] \n Positional arguments: \n \n\
-          \ \n container: Name of container to download from. To download a whole\
-          \ account,\n omit this and specify --all \n \n \n object: Name of object\
-          \ to download. Specify multiple times for multiple\n objects. Omit this\
-          \ to download all objects from the container \n \n \n You can execute swift\
-          \ to see what commands are avaiable and\nrun swift command -h find out more\
-          \ information about a command. \n Client python API \n You can also use\
-          \ swift python API to access and manage the object storage.\nThe below shows\
-          \ the sample Pthon code: \n ``` \n from swiftclient import client \n swift\
-          \ = client.Connection(authurl=url, user=username, key=password,\ntenant_name=project_name,\
-          \ auth_version='2') \n container_name=\"\" \n swift.get_container(container_name)\
+          \ the swift client. \n\n\n\nShell Command\nAction\n\n\n\n\nswift list\n\
+          list all containers\n\n\nswift list <container>\nlist all objects in a container\n\
+          \n\nswift post <container>\ncreate a container\n\n\nswift delete <container>\
+          \ [object/s]\ndelete a container, or objects within a container\n\n\nswift\
+          \ upload <container> <file/s_or_directory>\nupload data to the container\n\
+          \n\nswift download <container> <object/s>\ndownload objects from a container\n\
+          \n\n\n You can execute swift to see what commands are avaiable and\nrun\
+          \ swift <command> -h find out more information about a command. \n Client\
+          \ python API \n You can also use swift python API to access and manage the\
+          \ object storage.\nSample Python code: \n ``` \n from swiftclient import\
+          \ client \n swift = client.Connection(authurl=url, user=username, key=password,\n\
+          tenant_name=project_name, auth_version='2') \n container_name=\"\" \n swift.get_container(container_name)\
           \ \n container_name=\"first container\" \n swift.put_container(container_name)\
           \ \n swift.delete_container(container_name) \n container_name = \"container\"\
           \ \n object_name = \"object\" \n swift.get_object(container_name, object_name)\
           \ \n swift.put_object(container_name, object) \n ``` \n Please refer to\
           \ above instruction about how to obtain authurl, user, password and\ntenant_name.\
-          \ \n To get a container, use swift.get_container(container_name) method,\
-          \ if you\nprovide a empty string to the container_name parameter, it returns\
-          \ all\ncontainers in your project. \n To create a container, use swift.post_container(container_name)\
-          \ method. \n To delete a container, use swift.delete_container(container_name)\
-          \ method. \n To get a object, use swift.get_object(container_name, object_name)\
-          \ method. \n To upload a object, use swift.put_object(container_name, object)\
-          \ method. \n Please refer to the swift python cliet document for more\n\
-          information. "
-        description: "<h2>Swift Command Line Client</h2>\n<p>The swift client is the\
-          \ command-line interface (CLI) for the OpenStack Object\nStorage API and\
-          \ its extensions.</p>\n<p>It is same as nova client and cinder client, you\
-          \ need to authenticate before you\ncan use it. Please refer the getting\
-          \ started to see how to get authenticated.</p>\n<p>Please also refer getting\
-          \ started for how to install the swift client.</p>\n<p>To list all containers,\
-          \ execute:</p>\n<p><code>swift list</code></p>\n<p>To list all objects under\
-          \ a container, execute:</p>\n<p><code>swift list [container]</code></p>\n\
-          <p>Positional arguments:</p>\n<ul>\n<li>container: Name of container to\
-          \ list object in</li>\n</ul>\n<p>To create a container, execute</p>\n<p><code>swift\
-          \ post [container]</code></p>\n<p>Positional arguments:</p>\n<ul>\n<li>container:\
-          \ Name of container to create</li>\n</ul>\n<p>To delete a container and\
-          \ a object within it, execute:</p>\n<p><code>swift delete &lt;container&gt;&lt;object&gt;</code></p>\n\
-          <p>Positional arguments:\ncontainer: Name of container to delete from\n\
-          object: Name of object ot delete. Specify multiple times for multiple objects</p>\n\
-          <p>To upload files or directories to the given container, execute:</p>\n\
-          <p><code>swift upload &lt;container&gt; &lt;file_or_directory&gt;</code></p>\n\
-          <p>Positional arguments:</p>\n<ul>\n<li>\n<p>container: Name of container\
-          \ to upload to</p>\n</li>\n<li>\n<p>file_or_directory: Name of file or directory\
-          \ to uploaded. Specify multiple\n times for multiple uploads</p>\n</li>\n\
-          </ul>\n<p>To download objects from a given container, execute:</p>\n<p><code>swift\
-          \ download &lt;container&gt; [object]</code></p>\n<p>Positional arguments:</p>\n\
-          <ul>\n<li>\n<p>container: Name of container to download from. To download\
-          \ a whole account,\n omit this and specify --all</p>\n</li>\n<li>\n<p>object:\
-          \ Name of object to download. Specify multiple times for multiple\n objects.\
-          \ Omit this to download all objects from the container</p>\n</li>\n</ul>\n\
-          <p>You can execute <code>swift</code> to see what commands are avaiable\
-          \ and\nrun <code>swift command -h</code> find out more information about\
-          \ a command.</p>\n<h2>Client python API</h2>\n<p>You can also use swift\
-          \ python API to access and manage the object storage.\nThe below shows the\
-          \ sample Pthon code:</p>\n<p>```</p>\n<p>from swiftclient import client</p>\n\
-          <p>swift = client.Connection(authurl=url, user=username, key=password,\n\
-          tenant_name=project_name, auth_version='2')</p>\n<p>container_name=\"\"\
-          </p>\n<p>swift.get_container(container_name)</p>\n<p>container_name=\"first\
-          \ container\"</p>\n<p>swift.put_container(container_name)</p>\n<p>swift.delete_container(container_name)</p>\n\
-          <p>container_name = \"container\"</p>\n<p>object_name = \"object\"</p>\n\
-          <p>swift.get_object(container_name, object_name)</p>\n<p>swift.put_object(container_name,\
-          \ object)</p>\n<p>```</p>\n<p>Please refer to above instruction about how\
-          \ to obtain authurl, user, password and\ntenant_name.</p>\n<p>To get a container,\
-          \ use swift.get_container(container_name) method, if you\nprovide a empty\
-          \ string to the container_name parameter, it returns all\ncontainers in\
-          \ your project.</p>\n<p>To create a container, use swift.post_container(container_name)\
-          \ method.</p>\n<p>To delete a container, use swift.delete_container(container_name)\
-          \ method.</p>\n<p>To get a object, use swift.get_object(container_name,\
-          \ object_name) method.</p>\n<p>To upload a object, use swift.put_object(container_name,\
-          \ object) method.</p>\n<p>Please refer to the <a href=\"http://docs.openstack.org/developer/python-swiftclient/index.html\"\
-          >swift python cliet document</a> for more\ninformation.</p>"
+          \ \n\n\n\nPython Command\nAction\n\n\n\n\nswift.get_container\nlist all\
+          \ containers\n\n\nswift.get_container(container_name)\nlist all objects\
+          \ in a container\n\n\nswift.post_container(container_name)\ncreate a container\n\
+          \n\nswift.delete_container(container_name)\ndelete a container\n\n\nswift.put_object(container_name,\
+          \ file_name)\nupload data to the container\n\n\nswift.get_object(container_name,\
+          \ object_name)\ndownload objects from a container\n\n\n\n Please refer to\
+          \ the swift python client document for more\ninformation. "
+        description: '<h2>Swift Command Line Client</h2>
+
+          <p>The swift client is the command-line interface (CLI) for the OpenStack
+          Object
+
+          Storage API and its extensions.</p>
+
+          <p>It is same as nova client and cinder client, you need to authenticate
+          before you
+
+          can use it. Please refer the getting started to see how to get authenticated.</p>
+
+          <p>Please also refer getting started for how to install the swift client.</p>
+
+          <table>
+
+          <thead>
+
+          <tr>
+
+          <th>Shell Command</th>
+
+          <th>Action</th>
+
+          </tr>
+
+          </thead>
+
+          <tbody>
+
+          <tr>
+
+          <td><code>swift list</code></td>
+
+          <td>list all containers</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>swift list &lt;container&gt;</code></td>
+
+          <td>list all objects in a container</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>swift post &lt;container&gt;</code></td>
+
+          <td>create a container</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>swift delete &lt;container&gt; [object/s]</code></td>
+
+          <td>delete a container, or objects within a container</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>swift upload &lt;container&gt; &lt;file/s_or_directory&gt;</code></td>
+
+          <td>upload data to the container</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>swift download &lt;container&gt; &lt;object/s&gt;</code></td>
+
+          <td>download objects from a container</td>
+
+          </tr>
+
+          </tbody>
+
+          </table>
+
+          <p>You can execute <code>swift</code> to see what commands are avaiable
+          and
+
+          run <code>swift &lt;command&gt; -h</code> find out more information about
+          a command.</p>
+
+          <h2>Client python API</h2>
+
+          <p>You can also use swift python API to access and manage the object storage.
+
+          <strong>Sample Python code:</strong></p>
+
+          <p>```</p>
+
+          <p>from swiftclient import client</p>
+
+          <p>swift = client.Connection(authurl=url, user=username, key=password,
+
+          tenant_name=project_name, auth_version=''2'')</p>
+
+          <p>container_name=""</p>
+
+          <p>swift.get_container(container_name)</p>
+
+          <p>container_name="first container"</p>
+
+          <p>swift.put_container(container_name)</p>
+
+          <p>swift.delete_container(container_name)</p>
+
+          <p>container_name = "container"</p>
+
+          <p>object_name = "object"</p>
+
+          <p>swift.get_object(container_name, object_name)</p>
+
+          <p>swift.put_object(container_name, object)</p>
+
+          <p>```</p>
+
+          <p>Please refer to above instruction about how to obtain authurl, user,
+          password and
+
+          tenant_name.</p>
+
+          <table>
+
+          <thead>
+
+          <tr>
+
+          <th>Python Command</th>
+
+          <th>Action</th>
+
+          </tr>
+
+          </thead>
+
+          <tbody>
+
+          <tr>
+
+          <td><code>swift.get_container</code></td>
+
+          <td>list all containers</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>swift.get_container(container_name)</code></td>
+
+          <td>list all objects in a container</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>swift.post_container(container_name)</code></td>
+
+          <td>create a container</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>swift.delete_container(container_name)</code></td>
+
+          <td>delete a container</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>swift.put_object(container_name, file_name)</code></td>
+
+          <td>upload data to the container</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>swift.get_object(container_name, object_name)</code></td>
+
+          <td>download objects from a container</td>
+
+          </tr>
+
+          </tbody>
+
+          </table>
+
+          <p>Please refer to the <a href="http://docs.openstack.org/developer/python-swiftclient/index.html">swift
+          python client document</a> for more
+
+          information.</p>'
         folder:
           category_id: 6000122279
           created_at: '2015-09-03T01:28:00-04:00'
@@ -5270,13 +5409,13 @@
           updated_at: '2015-09-03T01:28:00-04:00'
           visibility: 1
         folder_id: 6000190146
-        hits: 9
+        hits: 23
         id: 6000061933
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-21T20:05:29-04:00'
+        modified_at: '2015-11-01T22:23:43-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000061933
@@ -5289,53 +5428,206 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-10-21T20:05:29-04:00'
+        updated_at: '2015-11-01T22:23:43-05:00'
         user_id: 6002464727
-  html: "<h2>Swift Command Line Client</h2>\n<p>The swift client is the command-line\
-    \ interface (CLI) for the OpenStack Object\nStorage API and its extensions.</p>\n\
-    <p>It is same as nova client and cinder client, you need to authenticate before\
-    \ you\ncan use it. Please refer the getting started to see how to get authenticated.</p>\n\
-    <p>Please also refer getting started for how to install the swift client.</p>\n\
-    <p>To list all containers, execute:</p>\n<p><code>swift list</code></p>\n<p>To\
-    \ list all objects under a container, execute:</p>\n<p><code>swift list [container]</code></p>\n\
-    <p>Positional arguments:</p>\n<ul>\n<li>container: Name of container to list object\
-    \ in</li>\n</ul>\n<p>To create a container, execute</p>\n<p><code>swift post [container]</code></p>\n\
-    <p>Positional arguments:</p>\n<ul>\n<li>container: Name of container to create</li>\n\
-    </ul>\n<p>To delete a container and a object within it, execute:</p>\n<p><code>swift\
-    \ delete &lt;container&gt;&lt;object&gt;</code></p>\n<p>Positional arguments:\n\
-    container: Name of container to delete from\nobject: Name of object ot delete.\
-    \ Specify multiple times for multiple objects</p>\n<p>To upload files or directories\
-    \ to the given container, execute:</p>\n<p><code>swift upload &lt;container&gt;\
-    \ &lt;file_or_directory&gt;</code></p>\n<p>Positional arguments:</p>\n<ul>\n<li>\n\
-    <p>container: Name of container to upload to</p>\n</li>\n<li>\n<p>file_or_directory:\
-    \ Name of file or directory to uploaded. Specify multiple\n times for multiple\
-    \ uploads</p>\n</li>\n</ul>\n<p>To download objects from a given container, execute:</p>\n\
-    <p><code>swift download &lt;container&gt; [object]</code></p>\n<p>Positional arguments:</p>\n\
-    <ul>\n<li>\n<p>container: Name of container to download from. To download a whole\
-    \ account,\n omit this and specify --all</p>\n</li>\n<li>\n<p>object: Name of\
-    \ object to download. Specify multiple times for multiple\n objects. Omit this\
-    \ to download all objects from the container</p>\n</li>\n</ul>\n<p>You can execute\
-    \ <code>swift</code> to see what commands are avaiable and\nrun <code>swift command\
-    \ -h</code> find out more information about a command.</p>\n<h2>Client python\
-    \ API</h2>\n<p>You can also use swift python API to access and manage the object\
-    \ storage.\nThe below shows the sample Pthon code:</p>\n<p>```</p>\n<p>from swiftclient\
-    \ import client</p>\n<p>swift = client.Connection(authurl=url, user=username,\
-    \ key=password,\ntenant_name=project_name, auth_version='2')</p>\n<p>container_name=\"\
-    \"</p>\n<p>swift.get_container(container_name)</p>\n<p>container_name=\"first\
-    \ container\"</p>\n<p>swift.put_container(container_name)</p>\n<p>swift.delete_container(container_name)</p>\n\
-    <p>container_name = \"container\"</p>\n<p>object_name = \"object\"</p>\n<p>swift.get_object(container_name,\
-    \ object_name)</p>\n<p>swift.put_object(container_name, object)</p>\n<p>```</p>\n\
-    <p>Please refer to above instruction about how to obtain authurl, user, password\
-    \ and\ntenant_name.</p>\n<p>To get a container, use swift.get_container(container_name)\
-    \ method, if you\nprovide a empty string to the container_name parameter, it returns\
-    \ all\ncontainers in your project.</p>\n<p>To create a container, use swift.post_container(container_name)\
-    \ method.</p>\n<p>To delete a container, use swift.delete_container(container_name)\
-    \ method.</p>\n<p>To get a object, use swift.get_object(container_name, object_name)\
-    \ method.</p>\n<p>To upload a object, use swift.put_object(container_name, object)\
-    \ method.</p>\n<p>Please refer to the <a href=\"http://docs.openstack.org/developer/python-swiftclient/index.html\"\
-    >swift python cliet document</a> for more\ninformation.</p>"
+  html: '<h2>Swift Command Line Client</h2>
+
+    <p>The swift client is the command-line interface (CLI) for the OpenStack Object
+
+    Storage API and its extensions.</p>
+
+    <p>It is same as nova client and cinder client, you need to authenticate before
+    you
+
+    can use it. Please refer the getting started to see how to get authenticated.</p>
+
+    <p>Please also refer getting started for how to install the swift client.</p>
+
+    <table>
+
+    <thead>
+
+    <tr>
+
+    <th>Shell Command</th>
+
+    <th>Action</th>
+
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr>
+
+    <td><code>swift list</code></td>
+
+    <td>list all containers</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>swift list &lt;container&gt;</code></td>
+
+    <td>list all objects in a container</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>swift post &lt;container&gt;</code></td>
+
+    <td>create a container</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>swift delete &lt;container&gt; [object/s]</code></td>
+
+    <td>delete a container, or objects within a container</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>swift upload &lt;container&gt; &lt;file/s_or_directory&gt;</code></td>
+
+    <td>upload data to the container</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>swift download &lt;container&gt; &lt;object/s&gt;</code></td>
+
+    <td>download objects from a container</td>
+
+    </tr>
+
+    </tbody>
+
+    </table>
+
+    <p>You can execute <code>swift</code> to see what commands are avaiable and
+
+    run <code>swift &lt;command&gt; -h</code> find out more information about a command.</p>
+
+    <h2>Client python API</h2>
+
+    <p>You can also use swift python API to access and manage the object storage.
+
+    <strong>Sample Python code:</strong></p>
+
+    <p>```</p>
+
+    <p>from swiftclient import client</p>
+
+    <p>swift = client.Connection(authurl=url, user=username, key=password,
+
+    tenant_name=project_name, auth_version=''2'')</p>
+
+    <p>container_name=""</p>
+
+    <p>swift.get_container(container_name)</p>
+
+    <p>container_name="first container"</p>
+
+    <p>swift.put_container(container_name)</p>
+
+    <p>swift.delete_container(container_name)</p>
+
+    <p>container_name = "container"</p>
+
+    <p>object_name = "object"</p>
+
+    <p>swift.get_object(container_name, object_name)</p>
+
+    <p>swift.put_object(container_name, object)</p>
+
+    <p>```</p>
+
+    <p>Please refer to above instruction about how to obtain authurl, user, password
+    and
+
+    tenant_name.</p>
+
+    <table>
+
+    <thead>
+
+    <tr>
+
+    <th>Python Command</th>
+
+    <th>Action</th>
+
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr>
+
+    <td><code>swift.get_container</code></td>
+
+    <td>list all containers</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>swift.get_container(container_name)</code></td>
+
+    <td>list all objects in a container</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>swift.post_container(container_name)</code></td>
+
+    <td>create a container</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>swift.delete_container(container_name)</code></td>
+
+    <td>delete a container</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>swift.put_object(container_name, file_name)</code></td>
+
+    <td>upload data to the container</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>swift.get_object(container_name, object_name)</code></td>
+
+    <td>download objects from a container</td>
+
+    </tr>
+
+    </tbody>
+
+    </table>
+
+    <p>Please refer to the <a href="http://docs.openstack.org/developer/python-swiftclient/index.html">swift
+    python client document</a> for more
+
+    information.</p>'
   parent: 40
-  sha1: 51e105849deaddbc9458fc561367e2ad91b804aa
+  sha1: 26cc67a2fa8c966ea904e5b79206fa9e765c9ac2
   title: API
 57:
   freshdesk:
