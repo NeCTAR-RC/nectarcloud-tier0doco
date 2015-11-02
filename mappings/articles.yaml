@@ -6798,15 +6798,16 @@
           \ with far\nbetter ones, and also to change the key name to match one of\
           \ your keys. \n Shell commands for exploring stacks: \n\n\n\nCommand\nAction\n\
           \n\n\n\nheat stack-list\nlist all the stacks you have created\n\n\nheat\
-          \ stack-show\nshow all details for the stack\n\n\nheat event-list \nlist\
-          \ events in the history of the stack\n\n\nheat event-show   \ninformation\
-          \ on a particular event (using the event ID)\n\n\nheat action-suspend \n\
-          suspend the stack\n\n\nheat action-resume \nresume the stack\n\n\nheat resource-list\
-          \ \nlist the resources being used by the stack\n\n\nheat resource-show \
-          \ \ninformation on a particular resource\n\n\nheat resource-metadata  \n\
-          show metadata on a resource\n\n\nheat template-show \nshow the template\
-          \ that was used to create the stack\n\n\nheat stack-delete \ndelete the\
-          \ stack\n\n\n"
+          \ stack-show\nshow all details for the stack\n\n\nheat event-list <stackname>\n\
+          list events in the history of the stack\n\n\nheat event-show <stackname>\
+          \ <resource> <eventID>\ninformation on a particular event (using the event\
+          \ ID)\n\n\nheat action-suspend <stackname>\nsuspend the stack\n\n\nheat\
+          \ action-resume <stackname>\nresume the stack\n\n\nheat resource-list <stackname>\n\
+          list the resources being used by the stack\n\n\nheat resource-show <stackname>\
+          \ <resource>\ninformation on a particular resource\n\n\nheat resource-metadata\
+          \ <stackname> <resource>\nshow metadata on a resource\n\n\nheat template-show\
+          \ <stackname>\nshow the template that was used to create the stack\n\n\n\
+          heat stack-delete <stackname>\ndelete the stack\n\n\n"
         description: '<h1>The Heat command line client</h1>
 
           <p>In true OpenStack fashion there is a <a href="http://docs.openstack.org/user-guide/cli.html">Heat
@@ -6870,7 +6871,7 @@
 
           <tr>
 
-          <td>heat stack-list</td>
+          <td><code>heat stack-list</code></td>
 
           <td>list all the stacks you have created</td>
 
@@ -6878,7 +6879,7 @@
 
           <tr>
 
-          <td>heat stack-show</td>
+          <td><code>heat stack-show</code></td>
 
           <td>show all details for the stack</td>
 
@@ -6886,7 +6887,7 @@
 
           <tr>
 
-          <td>heat event-list </td>
+          <td><code>heat event-list &lt;stackname&gt;</code></td>
 
           <td>list events in the history of the stack</td>
 
@@ -6894,7 +6895,7 @@
 
           <tr>
 
-          <td>heat event-show   </td>
+          <td><code>heat event-show &lt;stackname&gt; &lt;resource&gt; &lt;eventID&gt;</code></td>
 
           <td>information on a particular event (using the event ID)</td>
 
@@ -6902,7 +6903,7 @@
 
           <tr>
 
-          <td>heat action-suspend </td>
+          <td><code>heat action-suspend &lt;stackname&gt;</code></td>
 
           <td>suspend the stack</td>
 
@@ -6910,7 +6911,7 @@
 
           <tr>
 
-          <td>heat action-resume </td>
+          <td><code>heat action-resume &lt;stackname&gt;</code></td>
 
           <td>resume the stack</td>
 
@@ -6918,7 +6919,7 @@
 
           <tr>
 
-          <td>heat resource-list </td>
+          <td><code>heat resource-list &lt;stackname&gt;</code></td>
 
           <td>list the resources being used by the stack</td>
 
@@ -6926,7 +6927,7 @@
 
           <tr>
 
-          <td>heat resource-show  </td>
+          <td><code>heat resource-show &lt;stackname&gt; &lt;resource&gt;</code></td>
 
           <td>information on a particular resource</td>
 
@@ -6934,7 +6935,7 @@
 
           <tr>
 
-          <td>heat resource-metadata  </td>
+          <td><code>heat resource-metadata &lt;stackname&gt; &lt;resource&gt;</code></td>
 
           <td>show metadata on a resource</td>
 
@@ -6942,7 +6943,7 @@
 
           <tr>
 
-          <td>heat template-show </td>
+          <td><code>heat template-show &lt;stackname&gt;</code></td>
 
           <td>show the template that was used to create the stack</td>
 
@@ -6950,7 +6951,7 @@
 
           <tr>
 
-          <td>heat stack-delete </td>
+          <td><code>heat stack-delete &lt;stackname&gt;</code></td>
 
           <td>delete the stack</td>
 
@@ -6973,13 +6974,13 @@
           updated_at: '2015-09-03T01:28:02-04:00'
           visibility: 1
         folder_id: 6000190148
-        hits: 14
+        hits: 21
         id: 6000074218
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-01T23:21:30-05:00'
+        modified_at: '2015-11-01T23:26:30-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000074218
@@ -6992,7 +6993,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: API
-        updated_at: '2015-11-01T23:21:30-05:00'
+        updated_at: '2015-11-01T23:26:30-05:00'
         user_id: 6002464727
   html: '<h1>The Heat command line client</h1>
 
@@ -7056,7 +7057,7 @@
 
     <tr>
 
-    <td>heat stack-list</td>
+    <td><code>heat stack-list</code></td>
 
     <td>list all the stacks you have created</td>
 
@@ -7064,7 +7065,7 @@
 
     <tr>
 
-    <td>heat stack-show</td>
+    <td><code>heat stack-show</code></td>
 
     <td>show all details for the stack</td>
 
@@ -7072,7 +7073,7 @@
 
     <tr>
 
-    <td>heat event-list <stackname></td>
+    <td><code>heat event-list &lt;stackname&gt;</code></td>
 
     <td>list events in the history of the stack</td>
 
@@ -7080,7 +7081,7 @@
 
     <tr>
 
-    <td>heat event-show <stackname> <resource> <eventID></td>
+    <td><code>heat event-show &lt;stackname&gt; &lt;resource&gt; &lt;eventID&gt;</code></td>
 
     <td>information on a particular event (using the event ID)</td>
 
@@ -7088,7 +7089,7 @@
 
     <tr>
 
-    <td>heat action-suspend <stackname></td>
+    <td><code>heat action-suspend &lt;stackname&gt;</code></td>
 
     <td>suspend the stack</td>
 
@@ -7096,7 +7097,7 @@
 
     <tr>
 
-    <td>heat action-resume <stackname></td>
+    <td><code>heat action-resume &lt;stackname&gt;</code></td>
 
     <td>resume the stack</td>
 
@@ -7104,7 +7105,7 @@
 
     <tr>
 
-    <td>heat resource-list <stackname></td>
+    <td><code>heat resource-list &lt;stackname&gt;</code></td>
 
     <td>list the resources being used by the stack</td>
 
@@ -7112,7 +7113,7 @@
 
     <tr>
 
-    <td>heat resource-show <stackname> <resource></td>
+    <td><code>heat resource-show &lt;stackname&gt; &lt;resource&gt;</code></td>
 
     <td>information on a particular resource</td>
 
@@ -7120,7 +7121,7 @@
 
     <tr>
 
-    <td>heat resource-metadata <stackname> <resource></td>
+    <td><code>heat resource-metadata &lt;stackname&gt; &lt;resource&gt;</code></td>
 
     <td>show metadata on a resource</td>
 
@@ -7128,7 +7129,7 @@
 
     <tr>
 
-    <td>heat template-show <stackname></td>
+    <td><code>heat template-show &lt;stackname&gt;</code></td>
 
     <td>show the template that was used to create the stack</td>
 
@@ -7136,7 +7137,7 @@
 
     <tr>
 
-    <td>heat stack-delete <stackname></td>
+    <td><code>heat stack-delete &lt;stackname&gt;</code></td>
 
     <td>delete the stack</td>
 
@@ -7146,7 +7147,7 @@
 
     </table>'
   parent: 42
-  sha1: 609cb8d376304d1b696d290ac1c98512ddd6d16d
+  sha1: e5724c0fd44f2de8e3a66b69344905e82ff5e26c
   title: API
 63:
   freshdesk:
