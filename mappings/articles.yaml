@@ -2459,19 +2459,20 @@
           \ the format of the content gives the meaning. There\nare no embedded tags!\
           \ Hence indentation and justification are important. \n Comments are preceded\
           \ by a hash. A hash can appear anywhere on a line, and will\nmark everything\
-          \ to the end of the line as being part of the comment. \n ``` \n this is\
-          \ a comment \n ``` \n Data is stored in key value maps, wiht the key value\
-          \ pairs separated by a colon. \n date: 2014-01-14 \n String values can be\
-          \ indicated by no quotes, single quotes, or double quotes. \n ``` \n first-name:\
-          \ 'Verity' \n surname: \"Stobs\" \n publication: The Register \n ``` \n\
-          \ Hashes in string values demarcated by quotes are not seen as the start\
-          \ of a comment. \n example: \"# this is not a comment\" # but this is \n\
-          \ Double quoted strings can contain escaped characters, such as '\\n' (newline).\
-          \ \n example: \"This is \\n a new line\" \n '>' Indicates that the following\
-          \ block of lines is a string value that will\nhave each line break folded\
-          \ into a space. \n ```` \n example: > \n This\n\nhas a value # and it is\
-          \ 'This has a value'\n \n ``` \n '|' indicates that the following block\
-          \ of lines is a string value that will\nhave the line breaks preserved.\
+          \ to the end of the line as being part of the comment. \n # this is a comment,\
+          \ it won't be read as YAML input, but is useful for people reading the YAML\
+          \ document \n Data is stored in key value maps, with the key value pairs\
+          \ separated by a colon. \n date: 2014-01-14 \n String values can be indicated\
+          \ by no quotes, single quotes, or double quotes. \n ``` \n first-name: 'Verity'\
+          \ \n surname: \"Stobs\" \n publication: The Register \n ``` \n Hashes in\
+          \ string values demarcated by quotes are not seen as the start of a comment.\
+          \ \n example:   \"# this is not a comment\"    # but this is \n Double quoted\
+          \ strings can contain escaped characters, such as '\\n' (newline). \n example:\
+          \ \"This is \\n a new line\" \n '>' Indicates that the following block of\
+          \ lines is a string value that will\nhave each line break folded into a\
+          \ space. \n ``` \n example: > \n This\n\nhas a value # and it is 'This has\
+          \ a value'\n \n ``` \n '|' (vertical bar) indicates that the following block\
+          \ of lines is a string value \nthat will have the line breaks preserved.\
           \ \n ``` \n example: | \n This\n\nhas a value # and it is 'This\\nhas a\
           \ value'\n \n ```` \n The value associated with a key can be another map\
           \ of key value pairs. \n If this is the case then don't provide a value:\
@@ -2499,41 +2500,42 @@
           \ Hence indentation and justification are important.</p>\n<p>Comments are\
           \ preceded by a hash. A hash can appear anywhere on a line, and will\nmark\
           \ everything to the end of the line as being part of the comment.</p>\n\
-          <p>```</p>\n<h1>this is a comment</h1>\n<p>```</p>\n<p>Data is stored in\
-          \ key value maps, wiht the key value pairs separated by a colon.</p>\n<p><code>date:\
+          <p><code># this is a comment, it won't be read as YAML input, but is useful\
+          \ for people reading the YAML document</code></p>\n<p>Data is stored in\
+          \ key value maps, with the key value pairs separated by a colon.</p>\n<p><code>date:\
           \ 2014-01-14</code></p>\n<p>String values can be indicated by no quotes,\
           \ single quotes, or double quotes.</p>\n<p>```</p>\n<p>first-name: 'Verity'</p>\n\
           <p>surname: \"Stobs\"</p>\n<p>publication: The Register</p>\n<p>```</p>\n\
           <p>Hashes in string values demarcated by quotes are not seen as the start\
-          \ of a comment.</p>\n<p><code>example: \"# this is not a comment\" # but\
-          \ this is</code></p>\n<p>Double quoted strings can contain escaped characters,\
-          \ such as <code>'\\n'</code> (newline).</p>\n<p><code>example: \"This is\
-          \ \\n a new line\"</code></p>\n<p><code>'&gt;'</code> Indicates that the\
-          \ following block of lines is a string value that will\nhave each line break\
-          \ folded into a space.</p>\n<p>````</p>\n<p>example: &gt;</p>\n<pre><code>This\n\
-          \nhas a value # and it is 'This has a value'\n</code></pre>\n<p>```</p>\n\
-          <p><code>'|'</code> indicates that the following block of lines is a string\
-          \ value that will\nhave the line breaks preserved.</p>\n<p>```</p>\n<p>example:\
-          \ |</p>\n<pre><code>This\n\nhas a value # and it is 'This\\nhas a value'\n\
-          </code></pre>\n<p>````</p>\n<p>The value associated with a key can be another\
-          \ map of key value pairs.</p>\n<p>If this is the case then don't provide\
-          \ a value: simply indent the new set of\nkey value pairs on the following\
-          \ lines. So all lines prefixed by more space\nthan the parent key are contained\
-          \ inside the parent key as a map of key value\npairs.</p>\n<p>All lines\
-          \ in the same map have to have the same level of indentation.</p>\n<p>```</p>\n\
-          <p>name:</p>\n<pre><code>first: Verity\n\nlast: Stob\n</code></pre>\n<p>```</p>\n\
-          <p>Key value pairs have an alternate compact syntax: <code>{key: value,\
-          \ key: value, ...}</code></p>\n<p><code>name: {first: Verity, last: Stob}</code></p>\n\
-          <p>Lists are simply collections of ordered values: hence the values in a\
-          \ list have\nno key. But the parent list must belong to a key.</p>\n<p>List\
-          \ elements are indicated by a <code>'-'</code>.</p>\n<p>```</p>\n<p>publications:</p>\n\
-          <pre><code>- '.EXE'\n\n- 'Dr. Dobb's Journal'\n\n- 'The Register'\n</code></pre>\n\
-          <p>```</p>\n<p>Lists have an alternate compact syntax: <code>[value, value,\
-          \ value,...]</code>.</p>\n<p><code>publications: ['.EXE', 'Dr. Dobb's Journal',\
-          \ 'The Register']</code></p>\n<p>Lists and Maps can be nested in any order.</p>\n\
-          <p>```</p>\n<p>name:</p>\n<pre><code>first: Verity\n\nlast: Stob\n\npublications:\n\
-          \n    - '.EXE'\n\n    - 'Dr. Dobb's Journal'\n\n    - 'The Register'\n</code></pre>\n\
-          <p>```</p>"
+          \ of a comment.</p>\n<p><code>example:   \"# this is not a comment\"   \
+          \ # but this is</code></p>\n<p>Double quoted strings can contain escaped\
+          \ characters, such as <code>'\\n'</code> (newline).</p>\n<p><code>example:\
+          \ \"This is \\n a new line\"</code></p>\n<p><code>'&gt;'</code> Indicates\
+          \ that the following block of lines is a string value that will\nhave each\
+          \ line break folded into a space.</p>\n<p>```</p>\n<p>example: &gt;</p>\n\
+          <pre><code>This\n\nhas a value # and it is 'This has a value'\n</code></pre>\n\
+          <p>```</p>\n<p><code>'|'</code> (vertical bar) indicates that the following\
+          \ block of lines is a string value \nthat will have the line breaks preserved.</p>\n\
+          <p>```</p>\n<p>example: |</p>\n<pre><code>This\n\nhas a value # and it is\
+          \ 'This\\nhas a value'\n</code></pre>\n<p>````</p>\n<p>The value associated\
+          \ with a key can be another map of key value pairs.</p>\n<p>If this is the\
+          \ case then don't provide a value: simply indent the new set of\nkey value\
+          \ pairs on the following lines. So all lines prefixed by more space\nthan\
+          \ the parent key are contained inside the parent key as a map of key value\n\
+          pairs.</p>\n<p>All lines in the same map have to have the same level of\
+          \ indentation.</p>\n<p>```</p>\n<p>name:</p>\n<pre><code>first: Verity\n\
+          \nlast: Stob\n</code></pre>\n<p>```</p>\n<p>Key value pairs have an alternate\
+          \ compact syntax: <code>{key: value, key: value, ...}</code></p>\n<p><code>name:\
+          \ {first: Verity, last: Stob}</code></p>\n<p>Lists are simply collections\
+          \ of ordered values: hence the values in a list have\nno key. But the parent\
+          \ list must belong to a key.</p>\n<p>List elements are indicated by a <code>'-'</code>.</p>\n\
+          <p>```</p>\n<p>publications:</p>\n<pre><code>- '.EXE'\n\n- 'Dr. Dobb's Journal'\n\
+          \n- 'The Register'\n</code></pre>\n<p>```</p>\n<p>Lists have an alternate\
+          \ compact syntax: <code>[value, value, value,...]</code>.</p>\n<p><code>publications:\
+          \ ['.EXE', 'Dr. Dobb's Journal', 'The Register']</code></p>\n<p>Lists and\
+          \ Maps can be nested in any order.</p>\n<p>```</p>\n<p>name:</p>\n<pre><code>first:\
+          \ Verity\n\nlast: Stob\n\npublications:\n\n    - '.EXE'\n\n    - 'Dr. Dobb's\
+          \ Journal'\n\n    - 'The Register'\n</code></pre>\n<p>```</p>"
         folder:
           category_id: 6000122279
           created_at: '2015-09-03T01:28:02-04:00'
@@ -2548,13 +2550,13 @@
           updated_at: '2015-09-03T01:28:02-04:00'
           visibility: 1
         folder_id: 6000190148
-        hits: 4
+        hits: 9
         id: 6000055385
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-21T20:10:59-04:00'
+        modified_at: '2015-11-01T22:50:52-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000055385
@@ -2567,7 +2569,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction to YAML
-        updated_at: '2015-10-21T20:10:59-04:00'
+        updated_at: '2015-11-01T22:50:52-05:00'
         user_id: 6002464727
   html: "<h1>Just enough YAML to read a template</h1>\n<p>Heat templates are written\
     \ in a format named '<a href=\"http://yaml.org/\">YAML</a>'. This\nis a short\
@@ -2577,40 +2579,42 @@
     are no embedded tags! Hence indentation and justification are important.</p>\n\
     <p>Comments are preceded by a hash. A hash can appear anywhere on a line, and\
     \ will\nmark everything to the end of the line as being part of the comment.</p>\n\
-    <p>```</p>\n<h1>this is a comment</h1>\n<p>```</p>\n<p>Data is stored in key value\
-    \ maps, wiht the key value pairs separated by a colon.</p>\n<p><code>date: 2014-01-14</code></p>\n\
+    <p><code># this is a comment, it won't be read as YAML input, but is useful for\
+    \ people reading the YAML document</code></p>\n<p>Data is stored in key value\
+    \ maps, with the key value pairs separated by a colon.</p>\n<p><code>date: 2014-01-14</code></p>\n\
     <p>String values can be indicated by no quotes, single quotes, or double quotes.</p>\n\
     <p>```</p>\n<p>first-name: 'Verity'</p>\n<p>surname: \"Stobs\"</p>\n<p>publication:\
     \ The Register</p>\n<p>```</p>\n<p>Hashes in string values demarcated by quotes\
-    \ are not seen as the start of a comment.</p>\n<p><code>example: \"# this is not\
-    \ a comment\" # but this is</code></p>\n<p>Double quoted strings can contain escaped\
-    \ characters, such as <code>'\\n'</code> (newline).</p>\n<p><code>example: \"\
-    This is \\n a new line\"</code></p>\n<p><code>'&gt;'</code> Indicates that the\
-    \ following block of lines is a string value that will\nhave each line break folded\
-    \ into a space.</p>\n<p>````</p>\n<p>example: &gt;</p>\n<pre><code>This\n\nhas\
-    \ a value # and it is 'This has a value'\n</code></pre>\n<p>```</p>\n<p><code>'|'</code>\
-    \ indicates that the following block of lines is a string value that will\nhave\
-    \ the line breaks preserved.</p>\n<p>```</p>\n<p>example: |</p>\n<pre><code>This\n\
-    \nhas a value # and it is 'This\\nhas a value'\n</code></pre>\n<p>````</p>\n<p>The\
-    \ value associated with a key can be another map of key value pairs.</p>\n<p>If\
-    \ this is the case then don't provide a value: simply indent the new set of\n\
-    key value pairs on the following lines. So all lines prefixed by more space\n\
-    than the parent key are contained inside the parent key as a map of key value\n\
-    pairs.</p>\n<p>All lines in the same map have to have the same level of indentation.</p>\n\
-    <p>```</p>\n<p>name:</p>\n<pre><code>first: Verity\n\nlast: Stob\n</code></pre>\n\
-    <p>```</p>\n<p>Key value pairs have an alternate compact syntax: <code>{key: value,\
-    \ key: value, ...}</code></p>\n<p><code>name: {first: Verity, last: Stob}</code></p>\n\
-    <p>Lists are simply collections of ordered values: hence the values in a list\
-    \ have\nno key. But the parent list must belong to a key.</p>\n<p>List elements\
-    \ are indicated by a <code>'-'</code>.</p>\n<p>```</p>\n<p>publications:</p>\n\
-    <pre><code>- '.EXE'\n\n- 'Dr. Dobb's Journal'\n\n- 'The Register'\n</code></pre>\n\
-    <p>```</p>\n<p>Lists have an alternate compact syntax: <code>[value, value, value,...]</code>.</p>\n\
-    <p><code>publications: ['.EXE', 'Dr. Dobb's Journal', 'The Register']</code></p>\n\
-    <p>Lists and Maps can be nested in any order.</p>\n<p>```</p>\n<p>name:</p>\n\
-    <pre><code>first: Verity\n\nlast: Stob\n\npublications:\n\n    - '.EXE'\n\n  \
-    \  - 'Dr. Dobb's Journal'\n\n    - 'The Register'\n</code></pre>\n<p>```</p>"
+    \ are not seen as the start of a comment.</p>\n<p><code>example:   \"# this is\
+    \ not a comment\"    # but this is</code></p>\n<p>Double quoted strings can contain\
+    \ escaped characters, such as <code>'\\n'</code> (newline).</p>\n<p><code>example:\
+    \ \"This is \\n a new line\"</code></p>\n<p><code>'&gt;'</code> Indicates that\
+    \ the following block of lines is a string value that will\nhave each line break\
+    \ folded into a space.</p>\n<p>```</p>\n<p>example: &gt;</p>\n<pre><code>This\n\
+    \nhas a value # and it is 'This has a value'\n</code></pre>\n<p>```</p>\n<p><code>'|'</code>\
+    \ (vertical bar) indicates that the following block of lines is a string value\
+    \ \nthat will have the line breaks preserved.</p>\n<p>```</p>\n<p>example: |</p>\n\
+    <pre><code>This\n\nhas a value # and it is 'This\\nhas a value'\n</code></pre>\n\
+    <p>````</p>\n<p>The value associated with a key can be another map of key value\
+    \ pairs.</p>\n<p>If this is the case then don't provide a value: simply indent\
+    \ the new set of\nkey value pairs on the following lines. So all lines prefixed\
+    \ by more space\nthan the parent key are contained inside the parent key as a\
+    \ map of key value\npairs.</p>\n<p>All lines in the same map have to have the\
+    \ same level of indentation.</p>\n<p>```</p>\n<p>name:</p>\n<pre><code>first:\
+    \ Verity\n\nlast: Stob\n</code></pre>\n<p>```</p>\n<p>Key value pairs have an\
+    \ alternate compact syntax: <code>{key: value, key: value, ...}</code></p>\n<p><code>name:\
+    \ {first: Verity, last: Stob}</code></p>\n<p>Lists are simply collections of ordered\
+    \ values: hence the values in a list have\nno key. But the parent list must belong\
+    \ to a key.</p>\n<p>List elements are indicated by a <code>'-'</code>.</p>\n<p>```</p>\n\
+    <p>publications:</p>\n<pre><code>- '.EXE'\n\n- 'Dr. Dobb's Journal'\n\n- 'The\
+    \ Register'\n</code></pre>\n<p>```</p>\n<p>Lists have an alternate compact syntax:\
+    \ <code>[value, value, value,...]</code>.</p>\n<p><code>publications: ['.EXE',\
+    \ 'Dr. Dobb's Journal', 'The Register']</code></p>\n<p>Lists and Maps can be nested\
+    \ in any order.</p>\n<p>```</p>\n<p>name:</p>\n<pre><code>first: Verity\n\nlast:\
+    \ Stob\n\npublications:\n\n    - '.EXE'\n\n    - 'Dr. Dobb's Journal'\n\n    -\
+    \ 'The Register'\n</code></pre>\n<p>```</p>"
   parent: 42
-  sha1: ed8154c20e20658942296a72f2e13997c6b9a0b5
+  sha1: ecd3e2fb4506878099b3828936b5fd6455e1cdd9
   title: Introduction to YAML
 50:
   freshdesk:
@@ -8990,28 +8994,28 @@
           \ to debug a python file contains client python\nAPI code. \n pdb file_name.py\
           \ \n Once you executed the above code, the command line will be stopped\
           \ on the first\nline of code and you can use some commands to control the\
-          \ execution flow. \n Some useful ones to use are: \n \n \n b: set a breakpoint\
-          \ \n \n \n c: continue debugging until you hit a breakpoint \n \n \n s:\
-          \ step through the code \n \n \n n: to go to next line of code \n \n \n\
-          \ l: list source code for the current file \n \n \n u : navigate up a stack\
-          \ frame \n \n \n d: navigate down a stack frame \n \n \n p: to print the\
-          \ value of an expression in the current context \n \n \n Debugging Via HTTP\
-          \ \n Both command line API and python API are accessed via a web service\
-          \ client.\nThus the requests are all made by using HTTP and you can always\
-          \ refer to\nOpenStack Service End for further references about what should\
-          \ be\npresented in the HTTP requests. The swift API uses requests library\n\
-          to send and receive HTTP requests/responses. \n For command line client,\
-          \ you can add --debug option to print out HTTP request\nheader and HTTP\
-          \ response header, which give you a lot of more insight\ninformation. To\
-          \ verify parameters in the request header, you can refer to\nOpenStack service\
-          \ API to see what are expected. \n To enable debugging information on the\
-          \ standard out for Python API, you can add\nthe below code: \n ``` \n import\
-          \ logging \n logger = logging.getLogger(\"swiftclient\") \n logging.basicConfig(level=logging.DEBUG)\
-          \ \n ``` \n The will print the same output as adding --debug option for\
-          \ command line API. \n Debugging via Source Code \n If the above techniques\
-          \ are still not helpful, you can always look at the source\ncode to find\
-          \ the problems. \n The following source file structure is based on the installation\
-          \ in Ubuntu. \n The command line swift command is located in /usr/bin/swift.\
+          \ execution flow. \n Some useful ones to use are: \n\n\n\nCommand\nAction\n\
+          \n\n\n\nb\nset a breakpoint\n\n\nc\ncontinue debugging until you hit a breakpoint\n\
+          \n\ns\nstep through the code\n\n\nn\nto go to next line of code\n\n\nl\n\
+          list source code for the current file\n\n\nu\nnavigate up a stack frame\n\
+          \n\nd\nnavigate down a stack frame\n\n\np\nto print the value of an expression\
+          \ in the current context\n\n\n\n Debugging Via HTTP \n Both command line\
+          \ API and python API are accessed via a web service client.\nThus the requests\
+          \ are all made by using HTTP and you can always refer to\nOpenStack Service\
+          \ End for further references about what should be\npresented in the HTTP\
+          \ requests. The swift API uses requests library\nto send and receive HTTP\
+          \ requests/responses. \n For command line client, you can add --debug option\
+          \ to print out HTTP request\nheader and HTTP response header, which give\
+          \ you a lot of more insight\ninformation. To verify parameters in the request\
+          \ header, you can refer to\nOpenStack service API to see what are expected.\
+          \ \n To enable debugging information on the standard out for Python API,\
+          \ you can add\nthe below code: \n ``` \n import logging \n logger = logging.getLogger(\"\
+          swiftclient\") \n logging.basicConfig(level=logging.DEBUG) \n ``` \n The\
+          \ will print the same output as adding --debug option for command line API.\
+          \ \n Debugging via Source Code \n If the above techniques are still not\
+          \ helpful, you can always look at the source\ncode to find the problems.\
+          \ \n The following source file structure is based on the installation in\
+          \ Ubuntu. \n The command line swift command is located in '/usr/bin/swift'.\
           \ By looking at this\nfile, you should get a idea of how the various options\
           \ are interpreted. This file\nacts as an interface for Python API. \n The\
           \ Python API files are located under\n'/usr/lib/python2.7/dist-packages/swiftclient'\
@@ -9111,57 +9115,89 @@
 
           <p>Some useful ones to use are:</p>
 
-          <ul>
+          <table>
 
-          <li>
+          <thead>
 
-          <p>b: set a breakpoint</p>
+          <tr>
 
-          </li>
+          <th align="right">Command</th>
 
-          <li>
+          <th align="left">Action</th>
 
-          <p>c: continue debugging until you hit a breakpoint</p>
+          </tr>
 
-          </li>
+          </thead>
 
-          <li>
+          <tbody>
 
-          <p>s: step through the code</p>
+          <tr>
 
-          </li>
+          <td align="right">b</td>
 
-          <li>
+          <td align="left">set a breakpoint</td>
 
-          <p>n: to go to next line of code</p>
+          </tr>
 
-          </li>
+          <tr>
 
-          <li>
+          <td align="right">c</td>
 
-          <p>l: list source code for the current file</p>
+          <td align="left">continue debugging until you hit a breakpoint</td>
 
-          </li>
+          </tr>
 
-          <li>
+          <tr>
 
-          <p>u : navigate up a stack frame</p>
+          <td align="right">s</td>
 
-          </li>
+          <td align="left">step through the code</td>
 
-          <li>
+          </tr>
 
-          <p>d: navigate down a stack frame</p>
+          <tr>
 
-          </li>
+          <td align="right">n</td>
 
-          <li>
+          <td align="left">to go to next line of code</td>
 
-          <p>p: to print the value of an expression in the current context</p>
+          </tr>
 
-          </li>
+          <tr>
 
-          </ul>
+          <td align="right">l</td>
+
+          <td align="left">list source code for the current file</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">u</td>
+
+          <td align="left">navigate up a stack frame</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">d</td>
+
+          <td align="left">navigate down a stack frame</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">p</td>
+
+          <td align="left">to print the value of an expression in the current context</td>
+
+          </tr>
+
+          </tbody>
+
+          </table>
 
           <h2>Debugging Via HTTP</h2>
 
@@ -9177,15 +9213,15 @@
 
           to send and receive HTTP requests/responses.</p>
 
-          <p>For command line client, you can add --debug option to print out HTTP
-          request
+          <p>For command line client, you can add <code>--debug</code> option to print
+          out HTTP request
 
           header and HTTP response header, which give you a lot of more insight
 
           information. To verify parameters in the request header, you can refer to
 
-          OpenStack service <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">API</a>
-          to see what are expected.</p>
+          <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">OpenStack
+          service API</a> to see what are expected.</p>
 
           <p>To enable debugging information on the standard out for Python API, you
           can add
@@ -9214,7 +9250,7 @@
 
           <p>The following source file structure is based on the installation in Ubuntu.</p>
 
-          <p>The command line swift command is located in /usr/bin/swift. By looking
+          <p>The command line swift command is located in ''/usr/bin/swift''. By looking
           at this
 
           file, you should get a idea of how the various options are interpreted.
@@ -9246,13 +9282,13 @@
           updated_at: '2015-09-03T01:28:00-04:00'
           visibility: 1
         folder_id: 6000190146
-        hits: 6
+        hits: 9
         id: 6000076083
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-01T18:00:30-05:00'
+        modified_at: '2015-11-01T22:50:53-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000076083
@@ -9265,7 +9301,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Trouble Shooting
-        updated_at: '2015-11-01T18:00:30-05:00'
+        updated_at: '2015-11-01T22:50:53-05:00'
         user_id: 6002464727
   html: '<h2>Debugging Swift Command line Client</h2>
 
@@ -9353,57 +9389,89 @@
 
     <p>Some useful ones to use are:</p>
 
-    <ul>
+    <table>
 
-    <li>
+    <thead>
 
-    <p>b: set a breakpoint</p>
+    <tr>
 
-    </li>
+    <th align="right">Command</th>
 
-    <li>
+    <th align="left">Action</th>
 
-    <p>c: continue debugging until you hit a breakpoint</p>
+    </tr>
 
-    </li>
+    </thead>
 
-    <li>
+    <tbody>
 
-    <p>s: step through the code</p>
+    <tr>
 
-    </li>
+    <td align="right">b</td>
 
-    <li>
+    <td align="left">set a breakpoint</td>
 
-    <p>n: to go to next line of code</p>
+    </tr>
 
-    </li>
+    <tr>
 
-    <li>
+    <td align="right">c</td>
 
-    <p>l: list source code for the current file</p>
+    <td align="left">continue debugging until you hit a breakpoint</td>
 
-    </li>
+    </tr>
 
-    <li>
+    <tr>
 
-    <p>u : navigate up a stack frame</p>
+    <td align="right">s</td>
 
-    </li>
+    <td align="left">step through the code</td>
 
-    <li>
+    </tr>
 
-    <p>d: navigate down a stack frame</p>
+    <tr>
 
-    </li>
+    <td align="right">n</td>
 
-    <li>
+    <td align="left">to go to next line of code</td>
 
-    <p>p: to print the value of an expression in the current context</p>
+    </tr>
 
-    </li>
+    <tr>
 
-    </ul>
+    <td align="right">l</td>
+
+    <td align="left">list source code for the current file</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">u</td>
+
+    <td align="left">navigate up a stack frame</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">d</td>
+
+    <td align="left">navigate down a stack frame</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">p</td>
+
+    <td align="left">to print the value of an expression in the current context</td>
+
+    </tr>
+
+    </tbody>
+
+    </table>
 
     <h2>Debugging Via HTTP</h2>
 
@@ -9419,14 +9487,15 @@
 
     to send and receive HTTP requests/responses.</p>
 
-    <p>For command line client, you can add --debug option to print out HTTP request
+    <p>For command line client, you can add <code>--debug</code> option to print out
+    HTTP request
 
     header and HTTP response header, which give you a lot of more insight
 
     information. To verify parameters in the request header, you can refer to
 
-    OpenStack service <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">API</a>
-    to see what are expected.</p>
+    <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html">OpenStack
+    service API</a> to see what are expected.</p>
 
     <p>To enable debugging information on the standard out for Python API, you can
     add
@@ -9453,8 +9522,8 @@
 
     <p>The following source file structure is based on the installation in Ubuntu.</p>
 
-    <p>The command line swift command is located in /usr/bin/swift. By looking at
-    this
+    <p>The command line swift command is located in ''/usr/bin/swift''. By looking
+    at this
 
     file, you should get a idea of how the various options are interpreted. This file
 
@@ -9469,7 +9538,7 @@
 
     and receiving response. It is also used by the command line swift client. </p>'
   parent: 40
-  sha1: 496ac562b7b3af0493d2855a7d5d21335d4c028a
+  sha1: 924f2142908742e324041f06f5c3f9692fd30c3d
   title: Trouble Shooting
 71:
   freshdesk:
