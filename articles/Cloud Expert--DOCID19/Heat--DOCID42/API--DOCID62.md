@@ -39,16 +39,16 @@ Shell commands for exploring stacks:
 
 | Command  | Action |
 | ------------- | ------------- |
-| heat stack-list | list all the stacks you have created |
-| heat stack-show | show all details for the stack |
-| heat event-list <stackname> | list events in the history of the stack |
-| heat event-show <stackname> <resource> <eventID> | information on a particular event (using the event ID) |
-| heat action-suspend <stackname> | suspend the stack |
-| heat action-resume <stackname> | resume the stack |
-| heat resource-list <stackname> | list the resources being used by the stack |
-| heat resource-show <stackname> <resource> | information on a particular resource |
-| heat resource-metadata <stackname> <resource> | show metadata on a resource |
-| heat template-show <stackname> | show the template that was used to create the stack |
-| heat stack-delete <stackname> | delete the stack |
+| `heat stack-list` | list all the stacks you have created |
+| `heat stack-show` | show all details for the stack |
+| `heat event-list <stackname>` | list events in the history of the stack |
+| `heat event-show <stackname> <resource> <eventID>` | information on a particular event (using the event ID) |
+| `heat action-suspend <stackname>` | suspend the stack |
+| `heat action-resume <stackname>` | resume the stack |
+| `heat resource-list <stackname>` | list the resources being used by the stack |
+| `heat resource-show <stackname> <resource>` | information on a particular resource |
+| `heat resource-metadata <stackname> <resource>` | show metadata on a resource |
+| `heat template-show <stackname>` | show the template that was used to create the stack |
+| `heat stack-delete <stackname>` | delete the stack |
 
 
