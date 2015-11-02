@@ -51,8 +51,10 @@ is that data on the ephemeral disk are not copied when taking a snapshot of a vi
 machine, which means you cannot use snapshot to save data stored on ephemeral
 disk.
 
-NOTE: You will not be able to save information to the ephemeral disk until you have given permission to write to the disk by entering the following command:
-`sudo chmod 777 /mnt`
+NOTE: At first, you will not be able to save information to the ephemeral disk. 
+The following command gives permission for the user 'ubuntu' to write to the ephemeral disk:
+
+`sudo chown ubuntu /mnt`
 
 #### Backup of Ephemeral Disk
 
@@ -137,7 +139,7 @@ below instruction:
 ### Use Persistent Volume Storage in Virtual Machine
 
 For a standard flavor virtual machine the persistent volume will be attached
-as '/dev/vdc'.
+as '/dev/vdc'. 
 
 A new volume may not have a file system (depending on how it was created) and
 you need to create one before mounting.
@@ -151,11 +153,16 @@ You can use below command to create file system on the new volume:
 WARNING: This can cause data loss if a file system already exists on the target
 Volume.
 
-You can use below command to mount the volume to /mnt
-`sudo mount /dev/vdc /mnt -t auto`
+You can use below command to mount the volume (choose any volume-name).
 
-You will not be able to save information to the volume until you have given permission to write to the disk by entering the following command:
-`sudo chmod 777 /mnt`
+`sudo mkdir /volume_name`
+
+`sudo mount /dev/vdc /volume_name -t auto`
+
+NOTE: At first, you will not be able to save information to the ephemeral disk. 
+The following command gives permission for the user 'ubuntu' to write to the ephemeral disk:
+
+`sudo chown ubuntu /mnt`
 
 Notes:
 Volumes must be detached before deletion.
