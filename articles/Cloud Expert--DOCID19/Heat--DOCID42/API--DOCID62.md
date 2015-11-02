@@ -34,69 +34,21 @@ heat create teststack --template-url=https://raw.github.com/NeCTAR-RC/heat-templ
 
 *PS*: Don't forget to customise the command: e.g.: replace the passwords with far
 better ones, and also to change the key name to match one of your keys.
-The to show all the stacks that have been created:
 
-```
-heat stack-list
-```
+Shell commands for exploring stacks:
 
-To show all details for the newly created stack:
+| Command  | Action |
+| ------------- | ------------- |
+| heat stack-list | list all the stacks you have created |
+| heat stack-show | show all details for the stack |
+| heat event-list <stackname> | list events in the history of the stack |
+| heat event-show <stackname> <resource> <eventID> | information on a particular event (using the event ID) |
+| heat action-suspend <stackname> | suspend the stack |
+| heat action-resume <stackname> | resume the stack |
+| heat resource-list <stackname> | list the resources being used by the stack |
+| heat resource-show <stackname> <resource> | information on a particular resource |
+| heat resource-metadata <stackname> <resource> | show metadata on a resource |
+| heat template-show <stackname> | show the template that was used to create the stack |
+| heat stack-delete <stackname> | delete the stack |
 
-```
-heat stack-show teststack
-```
 
-To list all the events that have occurred in the stacks life to date:
-
-```
-heat event-list teststack
-```
-
-To drill down into a particular event, make a note of its id and replace
-&lt;ID&gt; with it in the following command:
-
-```
-heat event-show teststack WikiDatabase <ID>
-```
-
-To suspend the stack:
-
-```
-heat action-suspend teststack
-```
-
-To resume it:
-
-```
-heat action-resume teststack
-```
-
-To list the resources being used by the stack:
-
-```
-heat resource-list teststack
-```
-
-To drill down on a particular resource:
-
-```
-heat resource-show teststack WikiDatabase
-```
-
-To show the metadata associated with a particular resource:
-
-```
-heat resource-metadata teststack WikiDatabase
-```
-
-To show the template that was used to create the stack:
-
-```
-heat template-show teststack
-```
-
-And finally, to delete the stack, do:
-
-```
-heat stack-delete teststack
-```
