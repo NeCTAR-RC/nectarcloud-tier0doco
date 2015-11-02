@@ -8,76 +8,25 @@ can use it. Please refer the getting started to see how to get authenticated.
 
 Please also refer getting started for how to install the swift client.
 
-To list all containers, execute:
 
-```
-swift list
-```
+| Shell Command  | Action |
+| ------------- | ------------- |
+| `swift list` | list all containers |
+| `swift list <container>` | list all objects in a container |
+| `swift post <container>` | create a container |
+| `swift delete <container> [object/s]` | delete a container, or objects within a container |
+| `swift upload <container> <file/s_or_directory>` | upload data to the container |
+| `swift download <container> <object/s>` | download objects from a container |
 
-To list all objects under a container, execute:
 
-```
-swift list [container]
-```
-
-Positional arguments:
-
-- container: Name of container to list object in
-
-To create a container, execute
-
-```
-swift post [container]
-```
-
-Positional arguments:
-
-- container: Name of container to create
-
-To delete a container and a object within it, execute:
-
-```
-swift delete <container><object>
-```
-
-Positional arguments:
-container: Name of container to delete from
-object: Name of object ot delete. Specify multiple times for multiple objects
-
-To upload files or directories to the given container, execute:
-
-```
-swift upload <container> <file_or_directory>
-```
-
-Positional arguments:
-
-- container: Name of container to upload to
-
-- file_or_directory: Name of file or directory to uploaded. Specify multiple
- times for multiple uploads
-
-To download objects from a given container, execute:
-
-```
-swift download <container> [object]
-```
-
-Positional arguments:
-
-- container: Name of container to download from. To download a whole account,
- omit this and specify --all
-
-- object: Name of object to download. Specify multiple times for multiple
- objects. Omit this to download all objects from the container
 
 You can execute ```swift``` to see what commands are avaiable and
-run ```swift command -h``` find out more information about a command.
+run ```swift <command> -h``` find out more information about a command.
 
 ## Client python API
 
 You can also use swift python API to access and manage the object storage.
-The below shows the sample Pthon code:
+**Sample Python code:**
 
 
 ```
@@ -114,19 +63,17 @@ swift.put_object(container_name, object)
 Please refer to above instruction about how to obtain authurl, user, password and
 tenant_name.
 
-To get a container, use swift.get_container(container_name) method, if you
-provide a empty string to the container_name parameter, it returns all
-containers in your project.
+| Python Command  | Action |
+| ------------- | ------------- |
+| `swift.get_container` | list all containers |
+| `swift.get_container(container_name)` | list all objects in a container |
+| `swift.post_container(container_name)` | create a container |
+| `swift.delete_container(container_name)` | delete a container |
+| `swift.put_object(container_name, file_name)` | upload data to the container |
+| `swift.get_object(container_name, object_name)` | download objects from a container |
 
-To create a container, use swift.post_container(container_name) method.
 
-To delete a container, use swift.delete_container(container_name) method.
-
-To get a object, use swift.get_object(container_name, object_name) method.
-
-To upload a object, use swift.put_object(container_name, object) method.
-
-Please refer to the [swift python cliet document][swift python api] for more
+Please refer to the [swift python client document][swift python api] for more
 information.
 
 [swift python api]: http://docs.openstack.org/developer/python-swiftclient/index.html
