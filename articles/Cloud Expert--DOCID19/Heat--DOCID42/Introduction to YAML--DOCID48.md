@@ -14,11 +14,9 @@ are no embedded tags! Hence indentation and justification are important.
 Comments are preceded by a hash. A hash can appear anywhere on a line, and will
 mark everything to the end of the line as being part of the comment.
 
-```
-# this is a comment
-```
+`# this is a comment, it won't be read as YAML input, but is useful for people reading the YAML document`
 
-Data is stored in key value maps, wiht the key value pairs separated by a colon.
+Data is stored in key value maps, with the key value pairs separated by a colon.
 
 ```
 date: 2014-01-14
@@ -40,7 +38,7 @@ publication: The Register
 Hashes in string values demarcated by quotes are not seen as the start of a comment.
 
 ```
-example: "# this is not a comment" # but this is
+example:   "# this is not a comment"    # but this is
 ```
 
 Double quoted strings can contain escaped characters, such as `'\n'` (newline).
@@ -52,7 +50,7 @@ example: "This is \n a new line"
 `'>'` Indicates that the following block of lines is a string value that will
 have each line break folded into a space.
 
-````
+```
 
 example: >
 
@@ -62,8 +60,8 @@ example: >
     
 ```
 
-`'|'` indicates that the following block of lines is a string value that will
-have the line breaks preserved.
+`'|'` (vertical bar) indicates that the following block of lines is a string value 
+that will have the line breaks preserved.
 
 ```
 
