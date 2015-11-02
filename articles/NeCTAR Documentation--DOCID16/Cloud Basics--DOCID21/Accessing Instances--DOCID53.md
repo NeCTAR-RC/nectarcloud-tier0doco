@@ -22,20 +22,20 @@ To do this you will need to enter the IP Address of the VM.
 
 ## Windows User <a name="Windows"></a>
 
-1. Download PuTTY(putty.exe) from [PuTTY download page][putty]
-1. Double click putty.exe
+- Download PuTTY(putty.exe) from [PuTTY download page][putty]
+- Double click putty.exe
 
   ![`putty1`](images/putty1.png)
 
-1. Copy/paste the IP address to 'Host Name'
-1. Under 'Connection' on the right side, expand 'SSH' and click 'Auth'
+- Copy/paste the IP address to 'Host Name'
+- Under 'Connection' on the right side, expand 'SSH' and click 'Auth'
 
   ![`putty2`](images/putty2.png)
 
-1. Click the Browse button and select the private key created earlier
-1. Click 'Session' on the right side Category
-1. Click 'Open' button
-1. Type username 'ubuntu' for Ubuntu image and 'root' for other images
+- Click the Browse button and select the private key created earlier
+- Click 'Session' on the right side Category
+- Click 'Open' button
+- Type username 'ubuntu' for Ubuntu image and 'root' for other images
 
 ---
 
@@ -60,9 +60,13 @@ Your VM console can also be accessed via the NeCTAR dashboard in your web browse
 This console is not as user-friendly as the SSH clients, but has the advantage of 
 being accessible from any computer, without needing the private key to be saved on it.
 
+### Set a user password
+
 1. First, you need to get SSH access to the VM command line in order to set a password.
-1. In PuTTY or Terminal, enter `sudo passwd ubuntu` (or 'root' if your OS isn't Ubuntu)
+1. In PuTTY or Terminal, enter `  sudo passwd ubuntu  ` (or 'root' if your OS isn't Ubuntu)
 1. Enter a password, that you will use to access the VM through a browser.
+
+### Log on through the dashboard
 
 1. Log on to the NeCTAR [dashboard][dashboard]
 1. Click on the name of the Instance you want to access
