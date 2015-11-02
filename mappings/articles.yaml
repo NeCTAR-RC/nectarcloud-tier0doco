@@ -1647,34 +1647,38 @@
           \ NOTE: At first, you will not be able to save information to the ephemeral\
           \ disk. \nThe following command gives permission for the user 'ubuntu' to\
           \ write to the ephemeral disk: \n sudo chown ubuntu /mnt \n Notes:\nVolumes\
-          \ must be detached before deletion. \n Object Storage \n The NeCTAR Cloud\
-          \ Object Storage is not a traditional file system, but rather a\ndistributed\
-          \ storage system for static data such as virtual machine images,\nphoto\
-          \ storage, email storage, backups and archives. Having no central \"brain\"\
-          \ or\nmaster point of control provides greater scalability, redundancy and\
-          \ durability.\nWhen you put a file in the NeCTAR Cloud Object Store, 3 copies\
-          \ of your data are\ndistributed to different hardware for extra data safety\
-          \ and performance. \n Think about that dataset comprised of 2GB files that\
-          \ you read in and analyse\nmany times, but in general it doesn't change.\
-          \ Or the images you want to use on\nthe cloud. Those are a couple examples\
-          \ of perfect data for Object Storage.\nObjects are written to multiple hardware\
-          \ devices in the data center to ensure\nintegrity, and great performance!\
-          \ \n In general, the object store is great for data you write once and read\
-          \ many\ntimes, but not suitable for applications like databases. It's the\
-          \ safest place\nto put your data on the NeCTAR Research Cloud as multiple\
-          \ redundant copies of\nyour data are made, and it has great performance.\
-          \ You can access the object\nstore from anywhere on the Internet, and data\
-          \ from Object Storage can be\ntransferred to and from your virtual machine\
-          \ with a variety of http-capable\ntools. \n Object Storage is completely\
-          \ decoupled from your virtual machine, so even if you\nreboot, delete or\
-          \ crash your virtual machine, your Object Storage files will\nremain safe\
-          \ (unless you remove them yourself). Object Storage persists\nindependently\
-          \ of the life of an instance. \n Swift \n Swift is the component that provides\
-          \ object storage for OpenStack. With your\ncredentials and via a URL you\
-          \ can request Swift to reserve & create storage\n(called containers or buckets).\
-          \ Files (known as objects when stored in Swift)\ncan then be uploaded and\
-          \ accessed similarly by your running virtual machines. \n The NeCTAR implementation\
-          \ of Swift is geodistributed across Nodes of the NeCTAR\nCloud so that availability\
+          \ must be detached before deletion. \n Check your Storage \n Here are some\
+          \ commands that can allow you to look at your mounted storage blocks\nand\
+          \ keep track of their usage: \n lsblk -l  for info : man lsblk \n df -hT\
+          \  for info : man df \n du -h <path/to/directory>  for info : man du \n\
+          \ Object Storage \n The NeCTAR Cloud Object Storage is not a traditional\
+          \ file system, but rather a\ndistributed storage system for static data\
+          \ such as virtual machine images,\nphoto storage, email storage, backups\
+          \ and archives. Having no central \"brain\" or\nmaster point of control\
+          \ provides greater scalability, redundancy and durability.\nWhen you put\
+          \ a file in the NeCTAR Cloud Object Store, 3 copies of your data are\ndistributed\
+          \ to different hardware for extra data safety and performance. \n Think\
+          \ about that dataset comprised of 2GB files that you read in and analyse\n\
+          many times, but in general it doesn't change. Or the images you want to\
+          \ use on\nthe cloud. Those are a couple examples of perfect data for Object\
+          \ Storage.\nObjects are written to multiple hardware devices in the data\
+          \ center to ensure\nintegrity, and great performance! \n In general, the\
+          \ object store is great for data you write once and read many\ntimes, but\
+          \ not suitable for applications like databases. It's the safest place\n\
+          to put your data on the NeCTAR Research Cloud as multiple redundant copies\
+          \ of\nyour data are made, and it has great performance. You can access the\
+          \ object\nstore from anywhere on the Internet, and data from Object Storage\
+          \ can be\ntransferred to and from your virtual machine with a variety of\
+          \ http-capable\ntools. \n Object Storage is completely decoupled from your\
+          \ virtual machine, so even if you\nreboot, delete or crash your virtual\
+          \ machine, your Object Storage files will\nremain safe (unless you remove\
+          \ them yourself). Object Storage persists\nindependently of the life of\
+          \ an instance. \n Swift \n Swift is the component that provides object storage\
+          \ for OpenStack. With your\ncredentials and via a URL you can request Swift\
+          \ to reserve & create storage\n(called containers or buckets). Files (known\
+          \ as objects when stored in Swift)\ncan then be uploaded and accessed similarly\
+          \ by your running virtual machines. \n The NeCTAR implementation of Swift\
+          \ is geodistributed across Nodes of the NeCTAR\nCloud so that availability\
           \ does not rely on any one data center or network\ninfrastructure. Each\
           \ collection of Swift nodes/hardware is known as a region,\nwhich may or\
           \ may not include a Swift proxy server (the Internet facing and\nserving\
@@ -1792,44 +1796,48 @@
           \ will not be able to save information to the ephemeral disk. \nThe following\
           \ command gives permission for the user 'ubuntu' to write to the ephemeral\
           \ disk:</p>\n<p><code>sudo chown ubuntu /mnt</code></p>\n<p>Notes:\nVolumes\
-          \ must be detached before deletion.</p>\n<h2>Object Storage</h2>\n<p>The\
-          \ NeCTAR Cloud Object Storage is not a traditional file system, but rather\
-          \ a\ndistributed storage system for static data such as virtual machine\
-          \ images,\nphoto storage, email storage, backups and archives. Having no\
-          \ central \"brain\" or\nmaster point of control provides greater scalability,\
-          \ redundancy and durability.\nWhen you put a file in the NeCTAR Cloud Object\
-          \ Store, 3 copies of your data are\ndistributed to different hardware for\
-          \ extra data safety and performance.</p>\n<p>Think about that dataset comprised\
-          \ of 2GB files that you read in and analyse\nmany times, but in general\
-          \ it doesn't change. Or the images you want to use on\nthe cloud. Those\
-          \ are a couple examples of perfect data for Object Storage.\nObjects are\
-          \ written to multiple hardware devices in the data center to ensure\nintegrity,\
-          \ and great performance!</p>\n<p>In general, the object store is great for\
-          \ data you write once and read many\ntimes, but not suitable for applications\
-          \ like databases. It's the safest place\nto put your data on the NeCTAR\
-          \ Research Cloud as multiple redundant copies of\nyour data are made, and\
-          \ it has great performance. You can access the object\nstore from anywhere\
-          \ on the Internet, and data from Object Storage can be\ntransferred to and\
-          \ from your virtual machine with a variety of http-capable\ntools.</p>\n\
-          <p>Object Storage is completely decoupled from your virtual machine, so\
-          \ even if you\nreboot, delete or crash your virtual machine, your Object\
-          \ Storage files will\nremain safe (unless you remove them yourself). Object\
-          \ Storage persists\nindependently of the life of an instance.</p>\n<h3>Swift</h3>\n\
-          <p>Swift is the component that provides object storage for OpenStack. With\
-          \ your\ncredentials and via a URL you can request Swift to reserve &amp;\
-          \ create storage\n(called containers or buckets). Files (known as objects\
-          \ when stored in Swift)\ncan then be uploaded and accessed similarly by\
-          \ your running virtual machines.</p>\n<p>The NeCTAR implementation of Swift\
-          \ is geodistributed across Nodes of the NeCTAR\nCloud so that availability\
-          \ does not rely on any one data center or network\ninfrastructure. Each\
-          \ collection of Swift nodes/hardware is known as a region,\nwhich may or\
-          \ may not include a Swift proxy server (the Internet facing and\nserving\
-          \ component of Swift). With some Swift clients/APIs users can explicitly\n\
-          chose which proxy to connect to, this might be useful e.g. for speeding\
-          \ up\nwrites to object storage by choosing the nearest proxy. Due to NeCTAR's\
-          \ Swift\nhaving multiple regions (some of which are Node private) some clients/APIs\n\
-          require explicit configuration of a default region, which should be \"Melbourne\"\
-          \nfor most users.</p>"
+          \ must be detached before deletion.</p>\n<h2>Check your Storage</h2>\n<p>Here\
+          \ are some commands that can allow you to look at your mounted storage blocks\n\
+          and keep track of their usage:</p>\n<p><code>lsblk -l</code>  for info :\
+          \ <code>man lsblk</code></p>\n<p><code>df -hT</code>  for info : <code>man\
+          \ df</code></p>\n<p><code>du -h &lt;path/to/directory&gt;</code>  for info\
+          \ : <code>man du</code></p>\n<h2>Object Storage</h2>\n<p>The NeCTAR Cloud\
+          \ Object Storage is not a traditional file system, but rather a\ndistributed\
+          \ storage system for static data such as virtual machine images,\nphoto\
+          \ storage, email storage, backups and archives. Having no central \"brain\"\
+          \ or\nmaster point of control provides greater scalability, redundancy and\
+          \ durability.\nWhen you put a file in the NeCTAR Cloud Object Store, 3 copies\
+          \ of your data are\ndistributed to different hardware for extra data safety\
+          \ and performance.</p>\n<p>Think about that dataset comprised of 2GB files\
+          \ that you read in and analyse\nmany times, but in general it doesn't change.\
+          \ Or the images you want to use on\nthe cloud. Those are a couple examples\
+          \ of perfect data for Object Storage.\nObjects are written to multiple hardware\
+          \ devices in the data center to ensure\nintegrity, and great performance!</p>\n\
+          <p>In general, the object store is great for data you write once and read\
+          \ many\ntimes, but not suitable for applications like databases. It's the\
+          \ safest place\nto put your data on the NeCTAR Research Cloud as multiple\
+          \ redundant copies of\nyour data are made, and it has great performance.\
+          \ You can access the object\nstore from anywhere on the Internet, and data\
+          \ from Object Storage can be\ntransferred to and from your virtual machine\
+          \ with a variety of http-capable\ntools.</p>\n<p>Object Storage is completely\
+          \ decoupled from your virtual machine, so even if you\nreboot, delete or\
+          \ crash your virtual machine, your Object Storage files will\nremain safe\
+          \ (unless you remove them yourself). Object Storage persists\nindependently\
+          \ of the life of an instance.</p>\n<h3>Swift</h3>\n<p>Swift is the component\
+          \ that provides object storage for OpenStack. With your\ncredentials and\
+          \ via a URL you can request Swift to reserve &amp; create storage\n(called\
+          \ containers or buckets). Files (known as objects when stored in Swift)\n\
+          can then be uploaded and accessed similarly by your running virtual machines.</p>\n\
+          <p>The NeCTAR implementation of Swift is geodistributed across Nodes of\
+          \ the NeCTAR\nCloud so that availability does not rely on any one data center\
+          \ or network\ninfrastructure. Each collection of Swift nodes/hardware is\
+          \ known as a region,\nwhich may or may not include a Swift proxy server\
+          \ (the Internet facing and\nserving component of Swift). With some Swift\
+          \ clients/APIs users can explicitly\nchose which proxy to connect to, this\
+          \ might be useful e.g. for speeding up\nwrites to object storage by choosing\
+          \ the nearest proxy. Due to NeCTAR's Swift\nhaving multiple regions (some\
+          \ of which are Node private) some clients/APIs\nrequire explicit configuration\
+          \ of a default region, which should be \"Melbourne\"\nfor most users.</p>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:04-04:00'
@@ -1850,7 +1858,7 @@
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-02T17:44:47-05:00'
+        modified_at: '2015-11-02T18:56:03-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000055382
@@ -1863,7 +1871,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction to Cloud Storage
-        updated_at: '2015-11-02T17:44:47-05:00'
+        updated_at: '2015-11-02T18:56:03-05:00'
         user_id: 6002464727
   html: "<p>The NeCTAR virtual machines have many resources binded with them in order\
     \ for it\nto function properly. Among these resources, storage is the fundamental\
@@ -1964,32 +1972,37 @@
     \ -t auto</code></p>\n<p>NOTE: At first, you will not be able to save information\
     \ to the ephemeral disk. \nThe following command gives permission for the user\
     \ 'ubuntu' to write to the ephemeral disk:</p>\n<p><code>sudo chown ubuntu /mnt</code></p>\n\
-    <p>Notes:\nVolumes must be detached before deletion.</p>\n<h2>Object Storage</h2>\n\
-    <p>The NeCTAR Cloud Object Storage is not a traditional file system, but rather\
-    \ a\ndistributed storage system for static data such as virtual machine images,\n\
-    photo storage, email storage, backups and archives. Having no central \"brain\"\
-    \ or\nmaster point of control provides greater scalability, redundancy and durability.\n\
-    When you put a file in the NeCTAR Cloud Object Store, 3 copies of your data are\n\
-    distributed to different hardware for extra data safety and performance.</p>\n\
-    <p>Think about that dataset comprised of 2GB files that you read in and analyse\n\
-    many times, but in general it doesn't change. Or the images you want to use on\n\
-    the cloud. Those are a couple examples of perfect data for Object Storage.\nObjects\
-    \ are written to multiple hardware devices in the data center to ensure\nintegrity,\
-    \ and great performance!</p>\n<p>In general, the object store is great for data\
-    \ you write once and read many\ntimes, but not suitable for applications like\
-    \ databases. It's the safest place\nto put your data on the NeCTAR Research Cloud\
-    \ as multiple redundant copies of\nyour data are made, and it has great performance.\
-    \ You can access the object\nstore from anywhere on the Internet, and data from\
-    \ Object Storage can be\ntransferred to and from your virtual machine with a variety\
-    \ of http-capable\ntools.</p>\n<p>Object Storage is completely decoupled from\
-    \ your virtual machine, so even if you\nreboot, delete or crash your virtual machine,\
-    \ your Object Storage files will\nremain safe (unless you remove them yourself).\
-    \ Object Storage persists\nindependently of the life of an instance.</p>\n<h3>Swift</h3>\n\
-    <p>Swift is the component that provides object storage for OpenStack. With your\n\
-    credentials and via a URL you can request Swift to reserve &amp; create storage\n\
-    (called containers or buckets). Files (known as objects when stored in Swift)\n\
-    can then be uploaded and accessed similarly by your running virtual machines.</p>\n\
-    <p>The NeCTAR implementation of Swift is geodistributed across Nodes of the NeCTAR\n\
+    <p>Notes:\nVolumes must be detached before deletion.</p>\n<h2>Check your Storage</h2>\n\
+    <p>Here are some commands that can allow you to look at your mounted storage blocks\n\
+    and keep track of their usage:</p>\n<p><code>lsblk -l</code>  for info : <code>man\
+    \ lsblk</code></p>\n<p><code>df -hT</code>  for info : <code>man df</code></p>\n\
+    <p><code>du -h &lt;path/to/directory&gt;</code>  for info : <code>man du</code></p>\n\
+    <h2>Object Storage</h2>\n<p>The NeCTAR Cloud Object Storage is not a traditional\
+    \ file system, but rather a\ndistributed storage system for static data such as\
+    \ virtual machine images,\nphoto storage, email storage, backups and archives.\
+    \ Having no central \"brain\" or\nmaster point of control provides greater scalability,\
+    \ redundancy and durability.\nWhen you put a file in the NeCTAR Cloud Object Store,\
+    \ 3 copies of your data are\ndistributed to different hardware for extra data\
+    \ safety and performance.</p>\n<p>Think about that dataset comprised of 2GB files\
+    \ that you read in and analyse\nmany times, but in general it doesn't change.\
+    \ Or the images you want to use on\nthe cloud. Those are a couple examples of\
+    \ perfect data for Object Storage.\nObjects are written to multiple hardware devices\
+    \ in the data center to ensure\nintegrity, and great performance!</p>\n<p>In general,\
+    \ the object store is great for data you write once and read many\ntimes, but\
+    \ not suitable for applications like databases. It's the safest place\nto put\
+    \ your data on the NeCTAR Research Cloud as multiple redundant copies of\nyour\
+    \ data are made, and it has great performance. You can access the object\nstore\
+    \ from anywhere on the Internet, and data from Object Storage can be\ntransferred\
+    \ to and from your virtual machine with a variety of http-capable\ntools.</p>\n\
+    <p>Object Storage is completely decoupled from your virtual machine, so even if\
+    \ you\nreboot, delete or crash your virtual machine, your Object Storage files\
+    \ will\nremain safe (unless you remove them yourself). Object Storage persists\n\
+    independently of the life of an instance.</p>\n<h3>Swift</h3>\n<p>Swift is the\
+    \ component that provides object storage for OpenStack. With your\ncredentials\
+    \ and via a URL you can request Swift to reserve &amp; create storage\n(called\
+    \ containers or buckets). Files (known as objects when stored in Swift)\ncan then\
+    \ be uploaded and accessed similarly by your running virtual machines.</p>\n<p>The\
+    \ NeCTAR implementation of Swift is geodistributed across Nodes of the NeCTAR\n\
     Cloud so that availability does not rely on any one data center or network\ninfrastructure.\
     \ Each collection of Swift nodes/hardware is known as a region,\nwhich may or\
     \ may not include a Swift proxy server (the Internet facing and\nserving component\
@@ -1999,7 +2012,7 @@
     \ (some of which are Node private) some clients/APIs\nrequire explicit configuration\
     \ of a default region, which should be \"Melbourne\"\nfor most users.</p>"
   parent: 21
-  sha1: 25fda50b240bd3913beae89dfc93a1810b5ce7ba
+  sha1: cefb5447304e6dde5e59187590e25598103cc923
   title: Introduction to Cloud Storage
 46:
   freshdesk:
