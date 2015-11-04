@@ -1,3 +1,30 @@
+## Table of Contents
+
+NeCTAR Cloud Tier 0 Documentation  
+__[Licensing](#Licensing)  
+__[Sourcing content and attribution](#Sourcing)  
+__[How to contribute](#How)  
+_____[Initial setup](#Initial)  
+__[Github, Gerrit and the documentation workflow](#Github)  
+_____[Workflow step by step](#Workflow)  
+________[Cloning the project from github](#Cloning)  
+___________[The project directory structure](#The)  
+______________[What are those --DOCID things](#What)  
+___________[Making some changes](#Making)  
+___________[Some words about markdown](#Some)  
+___________[The NeCTAR style guide](#style)  
+______________[Headings](#Headings)  
+______________[Text](#Text)  
+______________[Links](#Links)  
+________[Submitting your changes for review](#Submitting)  
+___________[Authenticating yourself to Gerrit](#Authenticating)  
+___________[Who the heck is Jenkins](#Who)  
+________[Getting Changes accepted](#Getting)  
+___________[What went wrong](#wrong)  
+________[Amending your changes for review](#Amending)  
+________[Cleaning up your local branches](#Cleaning)  
+
+
 # NeCTAR Cloud Tier 0 Documentation
 
 This repository contains documentation aimed at Tier 0 (self help) users of the
@@ -16,12 +43,12 @@ a work in progress.  If you feel any of this content could be improved, please
 do follow this process as best you can, and submit your changes back for
 review.  Together this thing can be awesome :).
 
-## Licensing
+## Licensing <a name='Licensing'></a>
 
 All documentation produced under this repository is licensed under the
 [Apache v2 licence](http://directory.fsf.org/wiki/License:Apache2.0).
 
-## Sourcing content and attribution
+## Sourcing content and attribution <a name='Sourcing'></a>
 
 Any content funded by NeCTAR is available for assimilation and standardization
 into this project.  Where possible the original contributors should be requested
@@ -33,7 +60,7 @@ Copying volumes of content from the Internet is to be avoided, if said content
 is extensively documented at the git website already so we haven't bothered
 trying to replicate it here.
 
-## How to contribute
+## How to contribute <a name='How'></a>
 
 For the uninitiated, the initial setup may seem daunting; there are several new
 tools and concepts to learn.  Some or all of these tools you may have used
@@ -44,7 +71,7 @@ NeCTAR project.
 If you get stuck talk to the nectar docs team or ask on the #nectar IRC channel
  on freenode.
 
-### Initial setup
+### Initial setup <a name='Initial'></a>
 
 Initially you will need to install (or have access to) the following tools;
 
@@ -81,7 +108,7 @@ with a graphical user interface - and whilst one or another graphical front end
  may (or may not) work, how to make them work is outside the scope of this
 document.
 
-## Github, Gerrit and the documentation workflow
+## Github, Gerrit and the documentation workflow <a name='Github'></a>
 
 Unlike other github projects, you can't edit the NeCTAR content directly on
 github.  This is because we use Gerrit to do the peer review and checking of
@@ -120,11 +147,11 @@ doesn't offer a sophisticated enough review system, so for that we use Gerrit.
 
                                                           http://asciiflow.com/
 
-### Workflow step by step
+### Workflow step by step <a name='Workflow'></a>
 
 Take your time and read through this slowly, don't be afraid to ask for help :).
 
-#### Cloning the project from github
+#### Cloning the project from github <a name='Cloning'></a>
 
 Firstly you need to clone the whole documentation project from Gerrit down to
 your own computer so you can make changes to it.
@@ -144,15 +171,17 @@ your own computer so you can make changes to it.
 [Further documentation on cloning repositories](https://help.github.com/articles/cloning-a-repository/)
  can be found at github.
 
-##### The project directory structure
+##### The project directory structure <a name='The'></a>
 
 Now you have the project cloned locally, you can start having a look around and
 hopefully making some valuable changes :) All the content we are creating
 should be created under the correct folders.  That way it can be parsed and
 imported correctly into Freshdesk.
 
-All the content we create should be under
-articles/NeCTAR Documentation--DOCID16/
+All the content we create should be under  
+articles/NeCTAR Documentation--DOCID16/  
+or  
+articles/Cloud Expert--DOCID19
 
 Underneath that your content must be structured in accordance with the
 [action list content google document](https://docs.google.com/spreadsheets/d/1jSReAxlDlqVktTXUbjnprH04vki8ZKBVKXPDQd20JZA/edit#gid=0).
@@ -164,7 +193,7 @@ Name'/'Solution Name'.md
 
 If you are not sure where to create content, then ask one of the tier0 team.
 
-###### What are those --DOCID things
+###### What are those --DOCID things <a name='What'></a>
 
 The --DOCIDX is an internal reference created by the import to Freshdesk.
 If you are creating a new document, that reference will be added automatically
@@ -177,7 +206,7 @@ happen.
 You can rename an article by changing the filename, but do still leave the
 --DOCID alone.
 
-##### Making some changes
+##### Making some changes <a name='Making'></a>
 
 We use the branching feature of git to keep your changes separate from
  other peoples changes.
@@ -186,9 +215,9 @@ We use the branching feature of git to keep your changes separate from
  and explain what your change is about.  For example, the content you are
 reading was created on the "contributing" branch.
 
-    `git branch testing_documentation_workflow`
+    `git branch branch_name`
 
-    `git checkout testing_documentation_workflow`
+    `git checkout branch_name`
 
 - if the file doesn't exist yet, then create it under the starting-doco folder.
 
@@ -198,7 +227,7 @@ it may get moved elsewhere after that, but it's a good start.
 
 - make your changes to the file.
 
-##### Some words about markdown
+##### Some words about markdown <a name='Some'></a>
 
 This README and also the documentation committed to this project were all
 created in github flavoured markdown. Markdown is just a way of making plain
@@ -238,22 +267,22 @@ simple as
 
 `$ grip --gfm --context=NeCTAR-RC/nectarcloud-tier0doco README.md`
 
-And then I simply point my web browser at [http://localhost:5000/](http://localhost:5000/)
+And then I simply point my web browser at [http://localhost:6419/](http://localhost:6419/)
 and voila, there's my markdown rendered into html.
 
-##### The NeCTAR style guide
+##### The NeCTAR style guide <a name='style'></a>
 
 All commits to this repository must pass markdown validation as applied by
 a robot called Jenkins - he's pretty fussy - but can be tamed easily; more
 on that later.  Where markdown may be valid, but stylistic choices are still
 possible, please consider the following.
 
-###### Headings
+###### Headings <a name='Headings'></a>
 
 H1 is for the page title and H2 onwards are for sub-headings. Jenkins will
 prevent you from putting a lower-number heading before a higher-number heading
 
-###### Text
+###### Text <a name='Text'></a>
 
 Markdown defaults to left aligned text, it's important not to change this as
 it's generally accepted that centred text is harder to read.
@@ -262,7 +291,7 @@ Underline is for hyperlinks ONLY. Instead, use bold or italics for emphasis.
 
 Don't change the colour of the headings and paragraph text.
 
-###### Links
+###### Links <a name='Links'></a>
 
 All links should open in the same window, even external links. This ensures the
 website meets basic web accessibility standards. Yes, it's kind of annoying, but
@@ -272,7 +301,7 @@ Link text should be meaningful - don't use phrases like 'click here' - and
 should be embedded behind text where possible; try not to paste full URLs onto
 the page.
 
-#### Submitting your changes for review
+#### Submitting your changes for review <a name='Submitting'></a>
 
 A host of people will be very excited to see your new changes and will help you
 ensure that your content meets the standards.  For them to be able to see your
@@ -293,7 +322,7 @@ upload those changes for review to Gerrit.  But before you can do that, you need
 
 - then you need to commit your changes
 
-    `git commit`
+    `git commit -m 'a meaningful comment about the change you are committing'`
 
 adding a useful message which explains exactly what your commit is about.  You
 should consider formatting your commit message with a less than 10 word subject
@@ -301,7 +330,8 @@ up the top, then if any further explanation is required, do that in a separate
 paragraph underneath.
 
 - now you need to upload this change to Gerrit for review by Jenkins and others 
-  this step will fail, but that's ok for now.
+  this step will fail, but that's ok for now. (Make sure you have installed the 
+  git plugin for Gerrit, [git-review.](https://www.mediawiki.org/wiki/Gerrit/git-review))
 
     `git review`
 
@@ -314,7 +344,7 @@ push to the nectar github repository.
 For further information on making changes to NeCTAR repositories using git
 review, [please refer to the NeCTAR wiki](https://wiki.rc.nectar.org.au/wiki/ChangeWorkflow#Making_changes.)
 
-##### Authenticating yourself to Gerrit
+##### Authenticating yourself to Gerrit <a name='Authenticating'></a>
 
 Okies, so by default, you are a stranger to Gerrit.  When you do your first
 `git review`, git will use your ssh key to talk to the Gerrit server at
@@ -327,7 +357,7 @@ associated username) have permissions to contribute to the tier0doco project.
 If you `git review` fails with an authentication error, then this is your
 issue.  [Log an issue with core services to have your account added.](http://support.rc.nectar.org.au/docs/support)
 
-##### Who the heck is Jenkins
+##### Who the heck is Jenkins <a name='Who'></a>
 
 It will happen sometimes that regardless how hard you try, somebody will find
 fault in your commit, and will ask that you amend it.  It's important to
@@ -340,16 +370,16 @@ will ensure that your markdown meets the standards set by the [lint ruleset](htt
 You may like to keep that link handy; Jenkins is quite fussy, and you'll need
 to understand why he keeps complaining.
 
-Some examples of Jenkins feedback;
-`./README.md:262: MD009 Trailing spaces`
-`./README.md:263: MD009 Trailing spaces`
-`./README.md:31: MD013 Line length`
-`./README.md:138: MD022 Headers should be surrounded by blank lines`
-`./README.md:119: MD024 Multiple headers with the same content`
-`./README.md:237: MD026 Trailing punctuation in header`
-`./README.md:49: MD032 Lists should be surrounded by blank lines`
-`./README.md:51: MD032 Lists should be surrounded by blank lines`
-`./README.md:53: MD032 Lists should be surrounded by blank lines`
+Some examples of Jenkins feedback;  
+`./README.md:262: MD009 Trailing spaces`  
+`./README.md:263: MD009 Trailing spaces`  
+`./README.md:31: MD013 Line length`  
+`./README.md:138: MD022 Headers should be surrounded by blank lines`  
+`./README.md:119: MD024 Multiple headers with the same content`  
+`./README.md:237: MD026 Trailing punctuation in header`  
+`./README.md:49: MD032 Lists should be surrounded by blank lines`  
+`./README.md:51: MD032 Lists should be surrounded by blank lines`  
+`./README.md:53: MD032 Lists should be surrounded by blank lines`  
 
 You'll need to fix each of those and when Jenkins finally accepts your change
 (see amending changes below), Jenkins will automatically vote (or +1) your
@@ -359,13 +389,13 @@ Note; if you want to get really clever, you can install mdl - the same markdown
 parsing tool that Jenkins uses - that way you don't need to bother Jenkins for
 markdown related issues.  You'll probably need ubuntu for this;
 
-`$ sudo apt-get install ruby`
-`$ sudo gem install mdl`
-`$ mdl README.md`
-`README.md:4: MD013 Line length`
-`README.md:4: MD009 Trailing spaces`
-`README.md:51: MD032 Lists should be surrounded by blank lines`
-`README.md:222: MD032 Lists should be surrounded by blank lines`
+`$ sudo apt-get install ruby`  
+`$ sudo gem install mdl`  
+`$ mdl README.md`  
+`README.md:4: MD013 Line length`  
+`README.md:4: MD009 Trailing spaces`  
+`README.md:51: MD032 Lists should be surrounded by blank lines`  
+`README.md:222: MD032 Lists should be surrounded by blank lines`  
 
 or even better, markdown parsing in near realtime with
 `watch mdl README.md`
@@ -375,7 +405,7 @@ Once your markdown is clean, then do your `git commit --amend`
 If you do decide to use mdl locally, there is a file in the root directory of the project named `md_style.rb`
 with rules that match those applied by Jenkins. There are further instructions in the file on how to use it.
 
-#### Getting Changes accepted
+#### Getting Changes accepted <a name='Getting'></a>
 
 As well as Jenkins, actual people will read your changes.  They - like
 Jenkins - will have their suggestions, and you will need to satisfy them as well
@@ -389,7 +419,7 @@ You need two +1 votes (or one +2) for your change to be accepted, merged and to
  amendments before they are finally accepted (but don't worry, that's not
  likely to happen to you - we want your docs!).
 
-##### What went wrong
+##### What went wrong <a name='wrong'></a>
 
 Jenkins should email you advising what was wrong with your submission.  If
 you follow that link you'll see the option on the left for the "console
@@ -401,7 +431,7 @@ You can also get there by finding your submission on the list at our [gerrit](ht
 feedback; click on that and the hyperlink referred to above should be
 visible there too.
 
-#### Amending your changes for review
+#### Amending your changes for review <a name='Amending'></a>
 
 So as we've seen, it's almost guaranteed your first commit will not be accepted
 (or "merged").  It's important that you don't submit your changes as a separate
@@ -421,7 +451,7 @@ And waiting for some more feedback via email.
 
 See the NeCTAR wiki for more documentation on [making changes after commiting](https://wiki.rc.nectar.org.au/wiki/ChangeWorkflow#Making_more_changes_after_committing.).
 
-#### Cleaning up your local branches
+#### Cleaning up your local branches <a name='Cleaning'></a>
 
 This workflow can lead to a lot of local branches on your machine that have been merged into the master branch.
 If you want to delete one, the command
