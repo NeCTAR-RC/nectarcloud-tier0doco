@@ -12087,3 +12087,531 @@
   parent: 41
   sha1: 2fe4990b09f16547777dcccbc4d135ec6397c94b
   title: Trouble Shooting
+83:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-11-03T22:17:26-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Quick reference for shell commands in the Cloud Basics articles\
+          \ \n Although you can set up your VM with a remote desktop (see the NeCTAR\
+          \ Training modules),\nthe most efficient way to use your linux VM is by\
+          \ command-line. \n There are some excellent tutorials for basic shell commands\
+          \ (also called unix or bash commands).\nCodecademy offers an excellent,\
+          \ free, interactive tutorial that you can complete within your browser on\
+          \ any operating system. \n You may also like to print off a cheatsheet of\
+          \ shell commands, such as this simple one page sheet,\nor one of these more\
+          \ thorough references: Learncodethehardway or GitHubGist \n Here are some\
+          \ particular commands used in the Cloud Basics articles, for quick reference.\
+          \ \n Commands to use on your Mac/Linux to set up your NeCTAR connection\
+          \ \n\n\n\nCommand\nAction\n\n\n\n\nssh-keygen -t rsa -f Nectar_Key\ngenerate\
+          \ a keypair locally\n\n\nchmod 600 ~/.ssh/Nectar_Key\nsecure your private\
+          \ key\n\n\nssh -i Nectar_Key ubuntu@XX.XX.XX.XX\nSSH access to the VM\n\n\
+          \n\n Commands to enter on your VM console during set-up \n\n\n\nCommand\n\
+          Action\n\n\n\n\nsudo passwd ubuntu\nset a password for user 'ubuntu'\n\n\
+          \nsudo chown ubuntu /mnt\nmake the ephemeral disk writable\n\n\nsudo mkfs.ext4\
+          \ /dev/vdc\nformat a new, empty volume\n\n\nsudo mkdir /volume_name\ncreate\
+          \ an empty directory for the volume\n\n\nsudo mount /dev/vdc /volume_name\
+          \ -t auto\nmount the volume\n\n\nsudo chown ubuntu /mnt\nmake the mounted\
+          \ volume writable\n\n\nlsblk -l\nlist the block storage\n\n\ndf -hT\ndisplay\
+          \ the disk usage\n\n\ndu -h <path/to/directory>\ndisplay directory and file\
+          \ sizes\n\n\ntop\nactivity monitor for your VM\n\n\nps\nlist the running\
+          \ processes on your VM\n\n\nkill <PID#>\nterminate the process by PID number\n\
+          \n\ncontrol + 'c'\nstops a process running in your terminal\n\n\nsudo apt-get\
+          \ update\nupdates the list of packages available to install\n\n\nsudo apt-get\
+          \ upgrade\nupgrades the installed packages\n\n\n`sudo apt-cache search \n\
+          less`\n\n\nsudo apt-get install <name>\ninstall a package\n\n\n"
+        description: '<h2>Quick reference for shell commands in the Cloud Basics articles</h2>
+
+          <p>Although you can set up your VM with a remote desktop (see the NeCTAR
+          Training modules),
+
+          the most efficient way to use your linux VM is by command-line.</p>
+
+          <p>There are some excellent tutorials for basic shell commands (also called
+          unix or bash commands).
+
+          <a href="https://www.codecademy.com/learn/learn-the-command-line">Codecademy</a>
+          offers an excellent, free, interactive tutorial that you can complete within
+          your browser on any operating system.</p>
+
+          <p>You may also like to print off a cheatsheet of shell commands, such as
+          this <a href="https://ubuntudanmark.dk/filer/fwunixref.pdf">simple one page
+          sheet</a>,
+
+          or one of these more thorough references: <a href="http://cli.learncodethehardway.org/bash_cheat_sheet.pdf">Learncodethehardway</a>
+          or <a href="https://gist.github.com/LeCoupa/122b12050f5fb267e75f">GitHubGist</a></p>
+
+          <p>Here are some particular commands used in the Cloud Basics articles,
+          for quick reference.</p>
+
+          <h3>Commands to use on your Mac/Linux to set up your NeCTAR connection</h3>
+
+          <table>
+
+          <thead>
+
+          <tr>
+
+          <th>Command</th>
+
+          <th>Action</th>
+
+          </tr>
+
+          </thead>
+
+          <tbody>
+
+          <tr>
+
+          <td><code>ssh-keygen -t rsa -f Nectar_Key</code></td>
+
+          <td>generate a keypair locally</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>chmod 600 ~/.ssh/Nectar_Key</code></td>
+
+          <td>secure your private key</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>ssh -i Nectar_Key ubuntu@XX.XX.XX.XX</code></td>
+
+          <td>SSH access to the VM</td>
+
+          </tr>
+
+          </tbody>
+
+          </table>
+
+          <h3>Commands to enter on your VM console during set-up</h3>
+
+          <table>
+
+          <thead>
+
+          <tr>
+
+          <th>Command</th>
+
+          <th>Action</th>
+
+          </tr>
+
+          </thead>
+
+          <tbody>
+
+          <tr>
+
+          <td><code>sudo passwd ubuntu</code></td>
+
+          <td>set a password for user ''ubuntu''</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>sudo chown ubuntu /mnt</code></td>
+
+          <td>make the ephemeral disk writable</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>sudo mkfs.ext4 /dev/vdc</code></td>
+
+          <td>format a new, empty volume</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>sudo mkdir /volume_name</code></td>
+
+          <td>create an empty directory for the volume</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>sudo mount /dev/vdc /volume_name -t auto</code></td>
+
+          <td>mount the volume</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>sudo chown ubuntu /mnt</code></td>
+
+          <td>make the mounted volume writable</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>lsblk -l</code></td>
+
+          <td>list the block storage</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>df -hT</code></td>
+
+          <td>display the disk usage</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>du -h &lt;path/to/directory&gt;</code></td>
+
+          <td>display directory and file sizes</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>top</code></td>
+
+          <td>activity monitor for your VM</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>ps</code></td>
+
+          <td>list the running processes on your VM</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>kill &lt;PID#&gt;</code></td>
+
+          <td>terminate the process by PID number</td>
+
+          </tr>
+
+          <tr>
+
+          <td>control + ''c''</td>
+
+          <td>stops a process running in your terminal</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>sudo apt-get update</code></td>
+
+          <td>updates the list of packages available to install</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>sudo apt-get upgrade</code></td>
+
+          <td>upgrades the installed packages</td>
+
+          </tr>
+
+          <tr>
+
+          <td>`sudo apt-cache search </td>
+
+          <td>less`</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>sudo apt-get install &lt;name&gt;</code></td>
+
+          <td>install a package</td>
+
+          </tr>
+
+          </tbody>
+
+          </table>'
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:04-04:00'
+          customer_folders: []
+          description: Cloud Basics
+          id: 6000190150
+          is_default: false
+          language_id: 6
+          name: Cloud Basics
+          parent_id: 6000190150
+          position: 1
+          updated_at: '2015-10-08T21:02:17-04:00'
+          visibility: 1
+        folder_id: 6000190150
+        hits: 0
+        id: 6000084190
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-11-03T22:17:26-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000084190
+        position: 10
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Quick Reference for Commands
+        updated_at: '2015-11-03T22:17:26-05:00'
+        user_id: 6002464727
+  html: '<h2>Quick reference for shell commands in the Cloud Basics articles</h2>
+
+    <p>Although you can set up your VM with a remote desktop (see the NeCTAR Training
+    modules),
+
+    the most efficient way to use your linux VM is by command-line.</p>
+
+    <p>There are some excellent tutorials for basic shell commands (also called unix
+    or bash commands).
+
+    <a href="https://www.codecademy.com/learn/learn-the-command-line">Codecademy</a>
+    offers an excellent, free, interactive tutorial that you can complete within your
+    browser on any operating system.</p>
+
+    <p>You may also like to print off a cheatsheet of shell commands, such as this
+    <a href="https://ubuntudanmark.dk/filer/fwunixref.pdf">simple one page sheet</a>,
+
+    or one of these more thorough references: <a href="http://cli.learncodethehardway.org/bash_cheat_sheet.pdf">Learncodethehardway</a>
+    or <a href="https://gist.github.com/LeCoupa/122b12050f5fb267e75f">GitHubGist</a></p>
+
+    <p>Here are some particular commands used in the Cloud Basics articles, for quick
+    reference.</p>
+
+    <h3>Commands to use on your Mac/Linux to set up your NeCTAR connection</h3>
+
+    <table>
+
+    <thead>
+
+    <tr>
+
+    <th>Command</th>
+
+    <th>Action</th>
+
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr>
+
+    <td><code>ssh-keygen -t rsa -f Nectar_Key</code></td>
+
+    <td>generate a keypair locally</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>chmod 600 ~/.ssh/Nectar_Key</code></td>
+
+    <td>secure your private key</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>ssh -i Nectar_Key ubuntu@XX.XX.XX.XX</code></td>
+
+    <td>SSH access to the VM</td>
+
+    </tr>
+
+    </tbody>
+
+    </table>
+
+    <h3>Commands to enter on your VM console during set-up</h3>
+
+    <table>
+
+    <thead>
+
+    <tr>
+
+    <th>Command</th>
+
+    <th>Action</th>
+
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr>
+
+    <td><code>sudo passwd ubuntu</code></td>
+
+    <td>set a password for user ''ubuntu''</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>sudo chown ubuntu /mnt</code></td>
+
+    <td>make the ephemeral disk writable</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>sudo mkfs.ext4 /dev/vdc</code></td>
+
+    <td>format a new, empty volume</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>sudo mkdir /volume_name</code></td>
+
+    <td>create an empty directory for the volume</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>sudo mount /dev/vdc /volume_name -t auto</code></td>
+
+    <td>mount the volume</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>sudo chown ubuntu /mnt</code></td>
+
+    <td>make the mounted volume writable</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>lsblk -l</code></td>
+
+    <td>list the block storage</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>df -hT</code></td>
+
+    <td>display the disk usage</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>du -h &lt;path/to/directory&gt;</code></td>
+
+    <td>display directory and file sizes</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>top</code></td>
+
+    <td>activity monitor for your VM</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>ps</code></td>
+
+    <td>list the running processes on your VM</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>kill &lt;PID#&gt;</code></td>
+
+    <td>terminate the process by PID number</td>
+
+    </tr>
+
+    <tr>
+
+    <td>control + ''c''</td>
+
+    <td>stops a process running in your terminal</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>sudo apt-get update</code></td>
+
+    <td>updates the list of packages available to install</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>sudo apt-get upgrade</code></td>
+
+    <td>upgrades the installed packages</td>
+
+    </tr>
+
+    <tr>
+
+    <td>`sudo apt-cache search <name></td>
+
+    <td>less`</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>sudo apt-get install &lt;name&gt;</code></td>
+
+    <td>install a package</td>
+
+    </tr>
+
+    </tbody>
+
+    </table>'
+  parent: 21
+  sha1: cb72b645cb1d4dac0240f8d3f78442cabf5a0cd8
+  title: Quick Reference for Commands
