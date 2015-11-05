@@ -1,29 +1,29 @@
 ## Table of Contents
+ 
 
-NeCTAR Cloud Tier 0 Documentation  
-__[Licensing](#Licensing)  
-__[Sourcing content and attribution](#Sourcing)  
-__[How to contribute](#How)  
-_____[Initial setup](#Initial)  
-__[Github, Gerrit and the documentation workflow](#Github)  
-_____[Workflow step by step](#Workflow)  
-________[Cloning the project from github](#Cloning)  
-___________[The project directory structure](#The)  
-______________[What are those --DOCID things](#What)  
-___________[Making some changes](#Making)  
-___________[Some words about markdown](#Some)  
-___________[The NeCTAR style guide](#style)  
-______________[Headings](#Headings)  
-______________[Text](#Text)  
-______________[Links](#Links)  
-________[Submitting your changes for review](#Submitting)  
-___________[Authenticating yourself to Gerrit](#Authenticating)  
-___________[Who the heck is Jenkins](#Who)  
-________[Getting Changes accepted](#Getting)  
-___________[What went wrong](#wrong)  
-________[Amending your changes for review](#Amending)  
-________[Cleaning up your local branches](#Cleaning)  
-
+- NeCTAR Cloud Tier 0 Documentation  
+  - [Licensing](#Licensing)  
+  - [Sourcing content and attribution](#Sourcing)  
+  - [How to contribute](#How)  
+     - [Initial setup](#Initial)  
+  - [Github, Gerrit and the documentation workflow](#Github)  
+     - [Workflow step by step](#Workflow)  
+        - [Cloning the project from github](#Cloning)  
+           - [The project directory structure](#The)  
+              - [What are those --DOCID things](#What)  
+           - [Making some changes](#Making)  
+           - [Some words about markdown](#Some)  
+           - [The NeCTAR style guide](#style)  
+              - [Headings](#Headings)  
+              - [Text](#Text)  
+              - [Links](#Links)  
+        - [Submitting your changes for review](#Submitting)  
+           - [Authenticating yourself to Gerrit](#Authenticating)  
+           - [Who the heck is Jenkins](#Who)  
+        - [Getting Changes accepted](#Getting)  
+           - [What went wrong](#wrong)  
+        - [Amending your changes for review](#Amending)  
+        - [Cleaning up your local branches](#Cleaning)  
 
 # NeCTAR Cloud Tier 0 Documentation
 
@@ -43,7 +43,9 @@ a work in progress.  If you feel any of this content could be improved, please
 do follow this process as best you can, and submit your changes back for
 review.  Together this thing can be awesome :).
 
-## Licensing <a name='Licensing'></a>
+<a name='Licensing'></a>
+
+## Licensing 
 
 All documentation produced under this repository is licensed under the
 [Apache v2 licence](http://directory.fsf.org/wiki/License:Apache2.0).
@@ -60,7 +62,9 @@ Copying volumes of content from the Internet is to be avoided, if said content
 is extensively documented at the git website already so we haven't bothered
 trying to replicate it here.
 
-## How to contribute <a name='How'></a>
+<a name='How'></a>
+
+## How to contribute 
 
 For the uninitiated, the initial setup may seem daunting; there are several new
 tools and concepts to learn.  Some or all of these tools you may have used
@@ -70,8 +74,10 @@ NeCTAR project.
 
 If you get stuck talk to the nectar docs team or ask on the #nectar IRC channel
  on freenode.
+ 
+ <a name='Initial'></a>
 
-### Initial setup <a name='Initial'></a>
+### Initial setup 
 
 Initially you will need to install (or have access to) the following tools;
 
