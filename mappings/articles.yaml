@@ -12115,15 +12115,16 @@
           \nsudo chown ubuntu /mnt\nmake the ephemeral disk writable\n\n\nsudo mkfs.ext4\
           \ /dev/vdc\nformat a new, empty volume\n\n\nsudo mkdir /volume_name\ncreate\
           \ an empty directory for the volume\n\n\nsudo mount /dev/vdc /volume_name\
-          \ -t auto\nmount the volume\n\n\nsudo chown ubuntu /mnt\nmake the mounted\
-          \ volume writable\n\n\nlsblk -l\nlist the block storage\n\n\ndf -hT\ndisplay\
-          \ the disk usage\n\n\ndu -h <path/to/directory>\ndisplay directory and file\
-          \ sizes\n\n\ntop\nactivity monitor for your VM\n\n\nps\nlist the running\
-          \ processes on your VM\n\n\nkill <PID#>\nterminate the process by PID number\n\
-          \n\ncontrol + 'c'\nstops a process running in your terminal\n\n\nsudo apt-get\
-          \ update\nupdates the list of packages available to install\n\n\nsudo apt-get\
-          \ upgrade\nupgrades the installed packages\n\n\n`sudo apt-cache search \n\
-          less`\n\n\nsudo apt-get install <name>\ninstall a package\n\n\n"
+          \ -t auto\nmount the volume\n\n\nsudo chown ubuntu /volume_name\nmake the\
+          \ mounted volume writable\n\n\nlsblk -l\nlist the block storage\n\n\ndf\
+          \ -hT\ndisplay the disk usage\n\n\ndu -h <path/to/directory>\ndisplay directory\
+          \ and file sizes\n\n\ntop\nactivity monitor for your VM\n\n\nps\nlist the\
+          \ running processes on your VM\n\n\nkill <PID#>\nterminate the process by\
+          \ PID number\n\n\ncontrol + 'c'\nstops a process running in your terminal\n\
+          \n\nsudo apt-get update\nupdates the list of packages available to install\n\
+          \n\nsudo apt-get upgrade\nupgrades the installed packages\n\n\n`sudo apt-cache\
+          \ search \nless`\n\n\nsudo apt-get install <name>\ninstall a package\n\n\
+          \n"
         description: '<h2>Quick reference for shell commands in the Cloud Basics articles</h2>
 
           <p>Although you can set up your VM with a remote desktop (see the NeCTAR
@@ -12254,7 +12255,7 @@
 
           <tr>
 
-          <td><code>sudo chown ubuntu /mnt</code></td>
+          <td><code>sudo chown ubuntu /volume_name</code></td>
 
           <td>make the mounted volume writable</td>
 
@@ -12365,13 +12366,13 @@
           updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 0
+        hits: 1
         id: 6000084190
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-03T22:17:26-05:00'
+        modified_at: '2015-11-04T20:40:10-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000084190
@@ -12384,7 +12385,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Quick Reference for Commands
-        updated_at: '2015-11-03T22:17:26-05:00'
+        updated_at: '2015-11-04T20:40:10-05:00'
         user_id: 6002464727
   html: '<h2>Quick reference for shell commands in the Cloud Basics articles</h2>
 
@@ -12515,7 +12516,7 @@
 
     <tr>
 
-    <td><code>sudo chown ubuntu /mnt</code></td>
+    <td><code>sudo chown ubuntu /volume_name</code></td>
 
     <td>make the mounted volume writable</td>
 
@@ -12613,5 +12614,5 @@
 
     </table>'
   parent: 21
-  sha1: cb72b645cb1d4dac0240f8d3f78442cabf5a0cd8
+  sha1: aa306a05caf3e2d5ada2795a481d52d832a9413c
   title: Quick Reference for Commands
