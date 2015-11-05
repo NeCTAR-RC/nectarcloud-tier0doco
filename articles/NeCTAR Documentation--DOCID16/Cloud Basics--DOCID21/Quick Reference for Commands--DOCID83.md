@@ -30,7 +30,7 @@ Here are some particular commands used in the Cloud Basics articles, for quick r
 | `sudo mkfs.ext4 /dev/vdc` | format a new, empty volume |
 | `sudo mkdir /volume_name` | create an empty directory for the volume |
 | `sudo mount /dev/vdc /volume_name -t auto` | mount the volume |
-| `sudo chown ubuntu /mnt` | make the mounted volume writable |
+| `sudo chown ubuntu /volume_name` | make the mounted volume writable |
 | `lsblk -l` | list the block storage |
 | `df -hT` | display the disk usage |
 | `du -h <path/to/directory>` | display directory and file sizes |
@@ -42,6 +42,7 @@ Here are some particular commands used in the Cloud Basics articles, for quick r
 | `sudo apt-get upgrade` | upgrades the installed packages |
 | `sudo apt-cache search <name> | less` | search for a package to install |
 | `sudo apt-get install <name>` | install a package |
+
 
 [codecademy]: https://www.codecademy.com/learn/learn-the-command-line
 [long]: http://cli.learncodethehardway.org/bash_cheat_sheet.pdf
