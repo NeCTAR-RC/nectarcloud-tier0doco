@@ -12956,3 +12956,291 @@
   parent: 21
   sha1: 98e154acbd192e0584c626c338ececf914d3a427
   title: Back-up and Restore
+85:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-11-05T20:35:27-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " FileZilla \n FileZilla is one of many programs that provides\
+          \ easy, point-and-click SFTP (secure file transfer protocol).\nNot only\
+          \ can you easily transfer files between your local computer and your virtual\
+          \ machine (VM),\nbut you can also open and edit documents that are on your\
+          \ VM, using programs on your local computer. \n Download and Install FileZilla\
+          \ \n \n For Ubuntu - Install from the Ubuntu Software Centre app \n Mac\
+          \ and Windows - Download the program file FileZilla\n \n Double click file\
+          \ - follow installation instructions for Windows \n For Mac - drag the filezilla.app\
+          \ file to your Applications folder. \n Open FileZilla \n \n SFTP connection\
+          \ to the VM \n \n \n Click the menu options \nFileZilla OR Edit -> Settings\
+          \ OR Preferences -> Connection -> SFTP \n \n \n Click Add key file and navigate\
+          \ to the folder storing your SSH keys.  \n \n \n \n \n For Mac and Ubuntu:\
+          \ \n The keys are in '.ssh/' which will be hidden from view. There is a\
+          \ button in\n  the window to allow you to type the address; enter '.ssh'\
+          \ in the input bar). \n \n OR, open your terminal and enter the command\
+          \ ln -s ~/.ssh ~/ssh to create a symbolic \n  link called 'ssh' which will\
+          \ appear in file lists.* \n \n \n Choose your private key (choose the version\
+          \ with '.ppk' extension if available).\n FileZilla might ask to convert\
+          \ the fileformat. Click OK. \n \n \n \n \n \n Open  File -> Site Manager\
+          \ .  \n Click New Site and give it a name.  \n Insert the IP address of\
+          \ the instance as Host\n \n \nLogon Type is interactive \n The user is 'ubuntu'\
+          \ (or 'host' if your VM has a different operating system) \n Click Connect\n\
+          \ \n \n \n FileZilla connection \n The Left side of the FileZilla window\
+          \ will list the files of your computer. \n The right side will contain the\
+          \ folders and files on the VM. \n \n Remember your primary disk (where your\
+          \ home directory is located) usually has very little storage space.\nIn\
+          \ the VM file list, navigate to the secondary disk '/mnt' or an attached\
+          \ volume if available (e.g. '/MyVolume'). \n Make sure you have made these\
+          \ disks writable, or you will not be able to transfer \ndata onto them.\
+          \  If you have not already done so, enter the following command/s in the\
+          \ console of your VM. \n sudo chown ubuntu /mnt  and/or \n sudo chown ubuntu\
+          \ /MyVolume  (If you have attached a volume to your instanced, replace '/MyVolume'\
+          \ with the directory in which it is mounted. Check the mount-point by entering\
+          \ lsblk -l or df -hT) \n \n \n Navigate to your data storage directory in\
+          \ the right side of the FileZilla screen. \n \n \n Drag and drop files and\
+          \ directories between your local computer and the VM. \n \n \n Right click\
+          \ in the file list area to: \n \n Create a directory or text file \n Edit\
+          \ a text document (you may need to adjust \n  FileZilla/Edit -> Settings/Preferences\
+          \ ->  File Editing to ensure documents open in your local computer's default\
+          \ text editor. \n Delete, download or rename files or directories, etc.\
+          \ \n \n \n \n \n SCP: secure copy \n SCP is a simple method for transferring\
+          \ files between computers.  \n The basic command for Secure Copy is like\
+          \ a UNIX cp, but adding a connection to a different computer in the file\
+          \ path \n scp <Path_To_Source_File> <Path_to_Destination> \n Between a local\
+          \ Mac/Linux and the VM \n Enter the command from your local computer's Terminal\
+          \ app.  \n To upload a file to the VM: \n scp -i ~/.ssh/Nectar_Key <local-file-path>\
+          \ ubuntu@NNN.NNN.NNN.NNN:<instance-file-path> \n To download a file from\
+          \ your VM: \n scp -i ~/.ssh/Nectar_Key ubuntu@NNN.NNN.NNN.NNN:<instance-file-path>\
+          \ <local-file-path> \n Between your VM and a data storage server \n If you\
+          \ have data stored on a remote server, you can transfer files between it\
+          \ and the VM through the command-line on the VM. \n You will need a host\
+          \ address for the data storage server, and your username, plus usually a\
+          \ password. \n scp username@host.address.edu.au:/data/myDirectory/file.txt\
+          \ /mnt/data/\nscp /mnt/data/results.zip username@host.address.edu.au:/data/myDirectory/\
+          \ \n You will usually then be prompted to enter the password for your data\
+          \ storage. \n n.b. use scp -i path/to/key ... if your remote server has\
+          \ ssh keys rather than password access. \n \n SFTP via the Command Line\
+          \ \n Secure file transfer is also available between the VM and remote data\
+          \ storage. \n Enter the 'sftp' command on your VM, and you will have access\
+          \ to the remote host. \n sftp username@host.address.edu.au   - you will\
+          \ usually be prompted for a password. \n or \n sftp -i path/to/key username@host.address.edu.au\
+          \  - if the remote server has ssh key authentication \n You are now accessing\
+          \ the remote data storage server, and you can navigate the files on the\
+          \ server\nas per usual with commands like cd and ls. \n The commands get\
+          \ and put will transfer data between the machines: \n get <remote_server_file.txt>\
+          \ </mnt/localVM_destination/> \n put </mnt/localVM_destination/file.txt>\
+          \ <remote_directory/> \n to close the sftp connection, type exit. "
+        description: "<h2>FileZilla</h2>\n<p>FileZilla is one of many programs that\
+          \ provides easy, point-and-click SFTP (secure file transfer protocol).\n\
+          Not only can you easily transfer files between your local computer and your\
+          \ virtual machine (VM),\nbut you can also open and edit documents that are\
+          \ on your VM, using programs on your local computer.</p>\n<h3>Download and\
+          \ Install FileZilla</h3>\n<ol>\n<li>For Ubuntu - Install from the Ubuntu\
+          \ Software Centre app</li>\n<li>Mac and Windows - Download the program file\
+          \ <a href=\"http://sourceforge.net/projects/filezilla/\">FileZilla</a>\n\
+          </li>\n<li>Double click file - follow installation instructions for Windows</li>\n\
+          <li>For Mac - drag the filezilla.app file to your Applications folder.</li>\n\
+          <li>Open FileZilla</li>\n</ol>\n<h3>SFTP connection to the VM</h3>\n<ul>\n\
+          <li>\n<p>Click the menu options<br>\n<strong><em>FileZilla OR Edit -&gt;\
+          \ Settings OR Preferences -&gt; Connection -&gt; SFTP</em></strong></p>\n\
+          </li>\n<li>\n<p>Click <strong><em>Add key file</em></strong> and navigate\
+          \ to the folder storing your SSH keys. </p>\n</li>\n</ul>\n<p><img alt=\"\
+          \" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/FZ_add_keyfile.png?raw=true\"\
+          ></p>\n<ul>\n<li><em>For Mac and Ubuntu:</em></li>\n<li><em>The keys are\
+          \ in '.ssh/' which will be hidden from view. There is a button in\n  the\
+          \ window to allow you to type the address; enter '.ssh' in the input bar).</em></li>\n\
+          <li>\n<p>OR, <em>open your terminal and </em>enter the command <code>ln\
+          \ -s ~/.ssh ~/ssh</code> to create a symbolic \n  link called 'ssh' which\
+          \ will appear in file lists.*</p>\n</li>\n<li>\n<p>Choose your private key\
+          \ (choose the version with '.ppk' extension if available).\n FileZilla might\
+          \ ask to convert the fileformat. Click OK.</p>\n</li>\n</ul>\n<p><img alt=\"\
+          \" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/FZ_select_keyfile.png?raw=true\"\
+          ></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/FZ_ppk_keyfile.png?raw=true\"\
+          ></p>\n<ul>\n<li>Open  <strong><em>File -&gt; Site Manager</em></strong>\
+          \ . </li>\n<li>Click <strong><em>New Site</em></strong> and give it a name.\
+          \ </li>\n<li>Insert the <em>IP address</em> of the instance as <strong><em>Host</em></strong>\n\
+          </li>\n<li>\n<strong><em>Logon Type</em></strong> is interactive</li>\n\
+          <li>The user is <strong>'ubuntu'</strong> (or 'host' if your VM has a different\
+          \ operating system)</li>\n<li>Click <strong><em>Connect</em></strong>\n\
+          </li>\n</ul>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/FZ_site_manager.png?raw=true\"\
+          ></p>\n<h3>FileZilla connection</h3>\n<p>The Left side of the FileZilla\
+          \ window will list the files of your computer.</p>\n<p>The right side will\
+          \ contain the folders and files on the VM.</p>\n<p><img alt=\"\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/FZ_transfer_files.png?raw=true\"\
+          ></p>\n<p>Remember your primary disk (where your home directory is located)\
+          \ usually has very little storage space.\nIn the VM file list, navigate\
+          \ to the secondary disk '<strong>/mnt</strong>' or an attached volume if\
+          \ available (e.g. '<strong>/MyVolume</strong>').</p>\n<p><strong>Make sure\
+          \ you have made these disks writable, or you will not be able to transfer\
+          \ \ndata onto them.</strong>  If you have not already done so, enter the\
+          \ following command/s in the console of your VM.</p>\n<p><code>sudo chown\
+          \ ubuntu /mnt</code>  and/or</p>\n<p><code>sudo chown ubuntu /MyVolume</code>\
+          \  (If you have attached a volume to your instanced, replace '/MyVolume'\
+          \ with the directory in which it is mounted. Check the mount-point by entering\
+          \ <code>lsblk -l</code> or <code>df -hT</code>)</p>\n<ul>\n<li>\n<p>Navigate\
+          \ to your data storage directory in the right side of the FileZilla screen.</p>\n\
+          </li>\n<li>\n<p>Drag and drop files and directories between your local computer\
+          \ and the VM.</p>\n</li>\n<li>\n<p>Right click in the file list area to:</p>\n\
+          </li>\n<li>Create a directory or text file</li>\n<li>Edit a text document\
+          \ (you may need to adjust \n  <strong><em>FileZilla/Edit -&gt; Settings/Preferences\
+          \ -&gt;  File Editing</em></strong> to ensure documents open in your local\
+          \ computer's default text editor.</li>\n<li>Delete, download or rename files\
+          \ or directories, etc.</li>\n</ul>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/FZ_edit_files.png?raw=true\"\
+          ></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/FZ_save_files.png?raw=true\"\
+          ></p>\n<hr>\n<h2>SCP: secure copy</h2>\n<p>SCP is a simple method for transferring\
+          \ files between computers. </p>\n<p>The basic command for Secure Copy is\
+          \ like a UNIX <code>cp</code>, but adding a connection to a different computer\
+          \ in the file path</p>\n<p><code>scp &lt;Path_To_Source_File&gt; &lt;Path_to_Destination&gt;</code></p>\n\
+          <h3>Between a local Mac/Linux and the VM</h3>\n<p>Enter the command from\
+          \ your local computer's Terminal app. </p>\n<p>To upload a file to the VM:</p>\n\
+          <p><code>scp -i ~/.ssh/Nectar_Key &lt;local-file-path&gt; ubuntu@NNN.NNN.NNN.NNN:&lt;instance-file-path&gt;</code></p>\n\
+          <p>To download a file from your VM:</p>\n<p><code>scp -i ~/.ssh/Nectar_Key\
+          \ ubuntu@NNN.NNN.NNN.NNN:&lt;instance-file-path&gt; &lt;local-file-path&gt;</code></p>\n\
+          <h3>Between your VM and a data storage server</h3>\n<p>If you have data\
+          \ stored on a remote server, you can transfer files between it and the VM\
+          \ through the command-line on the VM.</p>\n<p>You will need a host address\
+          \ for the data storage server, and your username, plus usually a password.</p>\n\
+          <p><code>scp username@host.address.edu.au:/data/myDirectory/file.txt /mnt/data/</code>\n\
+          <code>scp /mnt/data/results.zip username@host.address.edu.au:/data/myDirectory/</code></p>\n\
+          <p>You will usually then be prompted to enter the password for your data\
+          \ storage.</p>\n<p>n.b. use <code>scp -i path/to/key ...</code> if your\
+          \ remote server has ssh keys rather than password access.</p>\n<hr>\n<h2>SFTP\
+          \ via the Command Line</h2>\n<p>Secure file transfer is also available between\
+          \ the VM and remote data storage.</p>\n<p>Enter the 'sftp' command on your\
+          \ VM, and you will have access to the remote host.</p>\n<p><code>sftp username@host.address.edu.au</code>\
+          \   - you will usually be prompted for a password.</p>\n<p>or</p>\n<p><code>sftp\
+          \ -i path/to/key username@host.address.edu.au</code>  - if the remote server\
+          \ has ssh key authentication</p>\n<p>You are now accessing the remote data\
+          \ storage server, and you can navigate the files on the server\nas per usual\
+          \ with commands like <code>cd</code> and <code>ls</code>.</p>\n<p>The commands\
+          \ <code>get</code> and <code>put</code> will transfer data between the machines:</p>\n\
+          <p><code>get &lt;remote_server_file.txt&gt; &lt;/mnt/localVM_destination/&gt;</code></p>\n\
+          <p><code>put &lt;/mnt/localVM_destination/file.txt&gt; &lt;remote_directory/&gt;</code></p>\n\
+          <p>to close the sftp connection, type <code>exit</code>.</p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:04-04:00'
+          customer_folders: []
+          description: Cloud Basics
+          id: 6000190150
+          is_default: false
+          language_id: 6
+          name: Cloud Basics
+          parent_id: 6000190150
+          position: 1
+          updated_at: '2015-10-08T21:02:17-04:00'
+          visibility: 1
+        folder_id: 6000190150
+        hits: 0
+        id: 6000085114
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-11-05T20:35:27-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000085114
+        position: 12
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Transferring Data to your VM
+        updated_at: '2015-11-05T20:35:27-05:00'
+        user_id: 6002464727
+  html: "<h2>FileZilla</h2>\n<p>FileZilla is one of many programs that provides easy,\
+    \ point-and-click SFTP (secure file transfer protocol).\nNot only can you easily\
+    \ transfer files between your local computer and your virtual machine (VM),\n\
+    but you can also open and edit documents that are on your VM, using programs on\
+    \ your local computer.</p>\n<h3>Download and Install FileZilla</h3>\n<ol>\n<li>For\
+    \ Ubuntu - Install from the Ubuntu Software Centre app</li>\n<li>Mac and Windows\
+    \ - Download the program file <a href=\"http://sourceforge.net/projects/filezilla/\"\
+    >FileZilla</a></li>\n<li>Double click file - follow installation instructions\
+    \ for Windows</li>\n<li>For Mac - drag the filezilla.app file to your Applications\
+    \ folder.</li>\n<li>Open FileZilla</li>\n</ol>\n<h3>SFTP connection to the VM</h3>\n\
+    <ul>\n<li>\n<p>Click the menu options<br>\n<strong><em>FileZilla OR Edit -&gt;\
+    \ Settings OR Preferences -&gt; Connection -&gt; SFTP</em></strong></p>\n</li>\n\
+    <li>\n<p>Click <strong><em>Add key file</em></strong> and navigate to the folder\
+    \ storing your SSH keys. </p>\n</li>\n</ul>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/FZ_add_keyfile.png?raw=true\"\
+    ></p>\n<ul>\n<li><em>For Mac and Ubuntu:</em></li>\n<li><em>The keys are in '.ssh/'\
+    \ which will be hidden from view. There is a button in\n  the window to allow\
+    \ you to type the address; enter '.ssh' in the input bar).</em></li>\n<li>\n<p>OR,\
+    \ <em>open your terminal and </em>enter the command <code>ln -s ~/.ssh ~/ssh</code>\
+    \ to create a symbolic \n  link called 'ssh' which will appear in file lists.*</p>\n\
+    </li>\n<li>\n<p>Choose your private key (choose the version with '.ppk' extension\
+    \ if available).\n FileZilla might ask to convert the fileformat. Click OK.</p>\n\
+    </li>\n</ul>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/FZ_select_keyfile.png?raw=true\"\
+    ></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/FZ_ppk_keyfile.png?raw=true\"\
+    ></p>\n<ul>\n<li>Open  <strong><em>File -&gt; Site Manager</em></strong> . </li>\n\
+    <li>Click <strong><em>New Site</em></strong> and give it a name. </li>\n<li>Insert\
+    \ the <em>IP address</em> of the instance as <strong><em>Host</em></strong></li>\n\
+    <li><strong><em>Logon Type</em></strong> is interactive</li>\n<li>The user is\
+    \ <strong>'ubuntu'</strong> (or 'host' if your VM has a different operating system)</li>\n\
+    <li>Click <strong><em>Connect</em></strong></li>\n</ul>\n<p><img alt=\"\" src=\"\
+    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/FZ_site_manager.png?raw=true\"\
+    ></p>\n<h3>FileZilla connection</h3>\n<p>The Left side of the FileZilla window\
+    \ will list the files of your computer.</p>\n<p>The right side will contain the\
+    \ folders and files on the VM.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/FZ_transfer_files.png?raw=true\"\
+    ></p>\n<p>Remember your primary disk (where your home directory is located) usually\
+    \ has very little storage space.\nIn the VM file list, navigate to the secondary\
+    \ disk '<strong>/mnt</strong>' or an attached volume if available (e.g. '<strong>/MyVolume</strong>').</p>\n\
+    <p><strong>Make sure you have made these disks writable, or you will not be able\
+    \ to transfer \ndata onto them.</strong>  If you have not already done so, enter\
+    \ the following command/s in the console of your VM.</p>\n<p><code>sudo chown\
+    \ ubuntu /mnt</code>  and/or</p>\n<p><code>sudo chown ubuntu /MyVolume</code>\
+    \  (If you have attached a volume to your instanced, replace '/MyVolume' with\
+    \ the directory in which it is mounted. Check the mount-point by entering <code>lsblk\
+    \ -l</code> or <code>df -hT</code>)</p>\n<ul>\n<li>\n<p>Navigate to your data\
+    \ storage directory in the right side of the FileZilla screen.</p>\n</li>\n<li>\n\
+    <p>Drag and drop files and directories between your local computer and the VM.</p>\n\
+    </li>\n<li>\n<p>Right click in the file list area to:</p>\n</li>\n<li>Create a\
+    \ directory or text file</li>\n<li>Edit a text document (you may need to adjust\
+    \ \n  <strong><em>FileZilla/Edit -&gt; Settings/Preferences -&gt;  File Editing</em></strong>\
+    \ to ensure documents open in your local computer's default text editor.</li>\n\
+    <li>Delete, download or rename files or directories, etc.</li>\n</ul>\n<p><img\
+    \ alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/FZ_edit_files.png?raw=true\"\
+    ></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/FZ_save_files.png?raw=true\"\
+    ></p>\n<hr>\n<h2>SCP: secure copy</h2>\n<p>SCP is a simple method for transferring\
+    \ files between computers. </p>\n<p>The basic command for Secure Copy is like\
+    \ a UNIX <code>cp</code>, but adding a connection to a different computer in the\
+    \ file path</p>\n<p><code>scp &lt;Path_To_Source_File&gt; &lt;Path_to_Destination&gt;</code></p>\n\
+    <h3>Between a local Mac/Linux and the VM</h3>\n<p>Enter the command from your\
+    \ local computer's Terminal app. </p>\n<p>To upload a file to the VM:</p>\n<p><code>scp\
+    \ -i ~/.ssh/Nectar_Key &lt;local-file-path&gt; ubuntu@NNN.NNN.NNN.NNN:&lt;instance-file-path&gt;</code></p>\n\
+    <p>To download a file from your VM:</p>\n<p><code>scp -i ~/.ssh/Nectar_Key ubuntu@NNN.NNN.NNN.NNN:&lt;instance-file-path&gt;\
+    \ &lt;local-file-path&gt;</code></p>\n<h3>Between your VM and a data storage server</h3>\n\
+    <p>If you have data stored on a remote server, you can transfer files between\
+    \ it and the VM through the command-line on the VM.</p>\n<p>You will need a host\
+    \ address for the data storage server, and your username, plus usually a password.</p>\n\
+    <p><code>scp username@host.address.edu.au:/data/myDirectory/file.txt /mnt/data/</code>\n\
+    <code>scp /mnt/data/results.zip username@host.address.edu.au:/data/myDirectory/</code></p>\n\
+    <p>You will usually then be prompted to enter the password for your data storage.</p>\n\
+    <p>n.b. use <code>scp -i path/to/key ...</code> if your remote server has ssh\
+    \ keys rather than password access.</p>\n<hr>\n<h2>SFTP via the Command Line</h2>\n\
+    <p>Secure file transfer is also available between the VM and remote data storage.</p>\n\
+    <p>Enter the 'sftp' command on your VM, and you will have access to the remote\
+    \ host.</p>\n<p><code>sftp username@host.address.edu.au</code>   - you will usually\
+    \ be prompted for a password.</p>\n<p>or</p>\n<p><code>sftp -i path/to/key username@host.address.edu.au</code>\
+    \  - if the remote server has ssh key authentication</p>\n<p>You are now accessing\
+    \ the remote data storage server, and you can navigate the files on the server\n\
+    as per usual with commands like <code>cd</code> and <code>ls</code>.</p>\n<p>The\
+    \ commands <code>get</code> and <code>put</code> will transfer data between the\
+    \ machines:</p>\n<p><code>get &lt;remote_server_file.txt&gt; &lt;/mnt/localVM_destination/&gt;</code></p>\n\
+    <p><code>put &lt;/mnt/localVM_destination/file.txt&gt; &lt;remote_directory/&gt;</code></p>\n\
+    <p>to close the sftp connection, type <code>exit</code>.</p>"
+  parent: 21
+  sha1: 4ea5c9a9298bfdc6ece2ccdb7fd97f0e274c6563
+  title: Transferring Data to your VM
