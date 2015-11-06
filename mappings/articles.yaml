@@ -12616,3 +12616,343 @@
   parent: 21
   sha1: aa306a05caf3e2d5ada2795a481d52d832a9413c
   title: Quick Reference for Commands
+84:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-11-05T20:19:42-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Contents \n \n Snapshot of an Instance \n Snapshot of Volume\
+          \ Storage \n Backing Up Data \n \n See Training Module 9 for more detail\
+          \ on snapshots and backups. \n About Snapshots \n A snapshot is a way to\
+          \ create a copy of the disk state of your virtual machine (VM). \nThere\
+          \ are two main reasons you would take a snapshot of your VM: \n \n To back-up\
+          \ the VM set-up - you can relaunch an instance from the snapshot \n To create\
+          \ a template image which can be used to launch instances which are already\
+          \ set-up. \n \n NOTE: The snapshot only creates an image of the primary\
+          \ 'root' disk, not the secondary 'ephemeral' storage or mounted volumes.\
+          \ \n The primary 'root' disk is small (5-30GB) and is not suitable for storing\
+          \ significant data. \nCreating an image of your VM is preserving the computer\
+          \ set-up such as software installation,\nconfigurations and profiles. Backing\
+          \ up data will be covered later in this article. \n \n Creating a Snapshot\
+          \ of an Instance (an Image) \n \n Log on to the NeCTAR Dashboard and click\
+          \ on the 'Instances' tab \n It is not necessary, but good practice, to 'pause\
+          \ instance' from the 'Actions' drop down list. \n Click 'Create Snapshot'\
+          \ from the 'Actions' drop down list. \n Enter a descriptive name for the\
+          \ Snapshot \n It will now take some time to create the Snapshot.  \n The\
+          \ snapshotted image will be saved in the 'Project' tab of the 'Images' section.\
+          \ \n \n Launching an Instance from a saved Image \n \n On the NeCTAR Dashboard,\
+          \ navigate to 'Images'\n \n Choose the 'Project' tab \n Click 'Launch' in\
+          \ the 'Actions' list for the image you wish to restore. \n You can choose\
+          \ a different 'Flavour' (i.e. size) of instance, but it must be large \n\
+          \ enough to fit the image on the primary 'root' disk. \n Name the instance,\
+          \ set the keypair and security groups in the 'Access and Security' tab,\n\
+          \ and set the 'Availability Zone' if necessary (e.g. to ensure the same\
+          \ zone as your volume storage). \n This is just like launching a new instance,\
+          \ except that the new VM will already have the settings,\n configurations\
+          \ and installations of the original VM. \n Access as per usual, with SSH\
+          \ keys and the IP address of the new instance. \n \n NOTE: The new VM will\
+          \ have a new, empty secondary 'ephemeral' storage disk. This will\nneed\
+          \ to be made writable with the command: \nsudo chown ubuntu /mnt \n If required,\
+          \ existing volume storage will need to be attached, mounted and made writable\
+          \ also.  \nAttach on the NeCTAR Dashboard -> Volumes -> Edit Attachments\
+          \ \nThen access the VM command line and enter: \nsudo mkdir /volume_name\
+          \ \nsudo mount /dev/vdc /volume_name -t auto \nsudo chown ubuntu /volume_name\
+          \ \n \n \n Snapshots of Volume Storage \n Snapshots can also be made to\
+          \ copy the disk state of your Volume block storage.\nIt is useful for preserving\
+          \ the state of your Volume in an image, in order to \ncreate a new Volume\
+          \ from it at a later time. The volume snapshots use up your volume\ndata\
+          \ allocation, for the full size of the volume. It is not a very efficient\
+          \ method of\nbacking up data - see data backup suggestions later in this\
+          \ article. \n \n On the NeCTAR Dashboard, navigate to 'Volumes'\n \n The\
+          \ volume should be unnattached from an instance: Click 'Edit Attachments'\n\
+          \ in the 'Actions' list, then 'Detach Volume'. \n Click 'Create Snapshot'\
+          \ in the 'Actions' list. \n \n The snapshot is found in the 'Volume Snapshots'\
+          \ tab. \n \n \n In the 'Actions' drop down list, you can create a new volume\
+          \ from the snapshot,\n edit the name, or delete the snapshot when it is\
+          \ no longer needed (to recover the volume storage space it uses). \n \n\
+          \ \n \n Backing Up your Data \n \n As discussed earlier in this article,\
+          \ Instance snapshots don't copy the larger disks\nthat are used for data\
+          \ storage, and Volume snapshots are inefficient as a data back-up strategy.\
+          \ \n The source for the back-up will be the secondary 'ephemeral' storage\
+          \ disk, or\nfrom volume block storage. \n The destination for the back-up\
+          \ may be your local computer, or a data storage \nserver at your research\
+          \ organisation. \n Compressed File Transfers \n The simplest back-up is\
+          \ to compress a directory and transfer it from your VM to your back-up destination.\
+          \ \n The general comand structure to compress files: \ntar -cvpzf <NameOfArchive>.tar.gz\
+          \ <list of your files or folders> \n To copy a directory ( /mnt/data ) into\
+          \ a single, compressed file ( data.tar.gz ):  \n tar -cvpzf data.tar.gz\
+          \ /mnt/data \n The compressed file can be transferred to another computer\
+          \ using FileZilla (for a local\ncomputer back-up), or SCP to back-up on\
+          \ a remote server (see the Cloud Basics article: Transferring Data) \n scp\
+          \ <Path_To_Source_File> <Path_to_Destination>   \n e.g. scp ~/data.tar.gz\
+          \ username@remote.host.edu.au:data/directory \nor, scp -i path/to/key ~/data.tar.gz\
+          \ username@remote.host.edu.au:data/directory  \n Backing up with RSYNC \n\
+          \ This is a software that creates incremental backups, such that the most\
+          \ recent synced state \nof a source directory is 'mirrored' in a directory\
+          \ on the destination storage device. \n Syncing is a more efficient way\
+          \ of backing up data, as after the first sync, only modifications to the\
+          \ files will be transferred. \n \n RSYNC must be installed on the source\
+          \ computer (the VM) and the destination computer. \n RSYNC is pre-installed\
+          \ on MacOSX \n On Ubuntu, enter sudo apt-get install rsync\n \n On Windows,\
+          \ installation is through the Cygwin package and usage is more complicated.\
+          \ \n \n The general command for creating or syncing the back-up:   \n rsync\
+          \ -av <source directory> <destination directory> \nor, \nrsync -av -e -i\
+          \ <path-to-private-key> <source directory> <destination directory> \n To\
+          \ sync from the Terminal app. on your local computer, from the directory\
+          \ you are syncing into: \n rsync -av ubuntu@NNN.NNN.NNN.NNN:/mnt/data/ dataCopy/\
+          \  (this syncs data from the VM) \nrsync -av dataCopy/ ubuntu@NNN.NNN.NNN.NNN:/mnt/data/\
+          \ (this will restore data to the VM) \n To sync from the VM command line\
+          \ to a remote server: \nrsync -av /mnt/data/ username@remote.host.edu.au:data/directory/\
+          \   \n and to restore:  \nrsync -av username@remote.host.edu.au:data/directory/\
+          \ /mnt/data/   \n Backing up Volumes to the Object Storage \n This can be\
+          \ done with OpenStack commands. See Training Module 10 for instructions\n\
+          on using OpenStack commands to manage your cloud computing. "
+        description: "<h2>Contents</h2>\n<ul>\n<li><a href=\"#Instance\">Snapshot\
+          \ of an Instance</a></li>\n<li><a href=\"#Volume\">Snapshot of Volume Storage</a></li>\n\
+          <li><a href=\"#Backup\">Backing Up Data</a></li>\n</ul>\n<p>See <a href=\"\
+          http://training.nectar.org.au/package09/sections/index.html\">Training Module\
+          \ 9</a> for more detail on snapshots and backups.</p>\n<h2>About Snapshots</h2>\n\
+          <p>A snapshot is a way to create a copy of the disk state of your virtual\
+          \ machine (VM).<br>\nThere are two main reasons you would take a snapshot\
+          \ of your VM:</p>\n<ol>\n<li>To <strong>back-up the VM set-up</strong> -\
+          \ you can relaunch an instance from the snapshot</li>\n<li>To create a <strong>template\
+          \ image</strong> which can be used to launch instances which are already\
+          \ set-up.</li>\n</ol>\n<p>NOTE: The snapshot only creates an image of the\
+          \ primary 'root' disk, not the secondary 'ephemeral' storage or mounted\
+          \ volumes.</p>\n<p>The primary 'root' disk is small (5-30GB) and is not\
+          \ suitable for storing significant data. \nCreating an image of your VM\
+          \ is preserving the computer set-up such as software installation,\nconfigurations\
+          \ and profiles. <a href=\"#Backup\">Backing up data will be covered later\
+          \ in this article</a>.</p>\n<p><a name=\"Instance\"></a></p>\n<h2>Creating\
+          \ a Snapshot of an Instance (an Image)</h2>\n<ul>\n<li>Log on to the <a\
+          \ href=\"https://dashboard.rc.nectar.org.au\">NeCTAR Dashboard</a> and click\
+          \ on the <strong>'Instances'</strong> tab</li>\n<li>It is not necessary,\
+          \ but good practice, to <strong>'pause instance'</strong> from the '<strong>Actions</strong>'\
+          \ drop down list.</li>\n<li>Click '<strong>Create Snapshot</strong>' from\
+          \ the 'Actions' drop down list.</li>\n<li>Enter a descriptive name for the\
+          \ Snapshot</li>\n<li>It will now take some time to create the Snapshot.\
+          \ </li>\n<li>The snapshotted image will be saved in the '<strong>Project</strong>'\
+          \ tab of the '<strong>Images</strong>' section.</li>\n</ul>\n<h2>Launching\
+          \ an Instance from a saved Image</h2>\n<ul>\n<li>On the <a href=\"https://dashboard.rc.nectar.org.au\"\
+          >NeCTAR Dashboard</a>, navigate to <strong>'Images'</strong>\n</li>\n<li>Choose\
+          \ the <strong>'Project'</strong> tab</li>\n<li>Click <strong>'Launch'</strong>\
+          \ in the <strong>'Actions'</strong> list for the image you wish to restore.</li>\n\
+          <li>You can choose a different <strong>'Flavour'</strong> (i.e. size) of\
+          \ instance, but it must be large \n enough to fit the image on the primary\
+          \ 'root' disk.</li>\n<li>Name the instance, set the keypair and security\
+          \ groups in the <strong>'Access and Security'</strong> tab,\n and set the\
+          \ <strong>'Availability Zone'</strong> if necessary (e.g. to ensure the\
+          \ same zone as your volume storage).</li>\n<li>This is just like launching\
+          \ a new instance, except that the new VM will already have the settings,\n\
+          \ configurations and installations of the original VM.</li>\n<li>Access\
+          \ as per usual, with SSH keys and the IP address of the new instance.</li>\n\
+          </ul>\n<p>NOTE: The new VM will have a new, empty <strong>secondary 'ephemeral'\
+          \ storage</strong> disk. This will\nneed to be made writable with the command:<br>\n\
+          <code>sudo chown ubuntu /mnt</code></p>\n<p>If required, existing <strong>volume\
+          \ storage</strong> will need to be attached, mounted and made writable also.\
+          \ <br>\nAttach on the <a href=\"https://dashboard.rc.nectar.org.au\">NeCTAR\
+          \ Dashboard</a> -&gt; <strong>Volumes</strong> -&gt; <strong>Edit Attachments</strong><br>\n\
+          Then access the VM command line and enter:<br>\n<code>sudo mkdir /volume_name</code><br>\n\
+          <code>sudo mount /dev/vdc /volume_name -t auto</code><br>\n<code>sudo chown\
+          \ ubuntu /volume_name</code></p>\n<hr>\n<p><a name=\"Volume\"></a></p>\n\
+          <h2>Snapshots of Volume Storage</h2>\n<p>Snapshots can also be made to copy\
+          \ the disk state of your Volume block storage.\nIt is useful for preserving\
+          \ the state of your Volume in an image, in order to \ncreate a new Volume\
+          \ from it at a later time. The volume snapshots use up your volume\ndata\
+          \ allocation, for the full size of the volume. It is not a very efficient\
+          \ method of\nbacking up data - <a href=\"#Backup\">see data backup suggestions\
+          \ later in this article</a>.</p>\n<ul>\n<li>On the <a href=\"https://dashboard.rc.nectar.org.au\"\
+          >NeCTAR Dashboard</a>, navigate to <strong>'Volumes'</strong>\n</li>\n<li>The\
+          \ volume should be unnattached from an instance: Click '<strong>Edit Attachments</strong>'\n\
+          \ in the <strong>'Actions'</strong> list, then '<strong>Detach Volume</strong>'.</li>\n\
+          <li>Click '<strong>Create Snapshot</strong>' in the <strong>'Actions'</strong>\
+          \ list.</li>\n<li>\n<p>The snapshot is found in the '<strong>Volume Snapshots</strong>'\
+          \ tab.</p>\n</li>\n<li>\n<p>In the '<strong>Actions</strong>' drop down\
+          \ list, you can <strong>create a new volume</strong> from the snapshot,\n\
+          \ edit the name, or delete the snapshot when it is no longer needed (to\
+          \ recover the volume storage space it uses).</p>\n</li>\n</ul>\n<hr>\n<h2>Backing\
+          \ Up your Data <a name=\"Backup\"></a>\n</h2>\n<p>As discussed earlier in\
+          \ this article, Instance snapshots don't copy the larger disks\nthat are\
+          \ used for data storage, and Volume snapshots are inefficient as a data\
+          \ back-up strategy.</p>\n<p>The <strong>source</strong> for the back-up\
+          \ will be the secondary 'ephemeral' storage disk, or\nfrom volume block\
+          \ storage.</p>\n<p>The <strong>destination</strong> for the back-up may\
+          \ be your local computer, or a data storage \nserver at your research organisation.</p>\n\
+          <h3>Compressed File Transfers</h3>\n<p>The simplest back-up is to compress\
+          \ a directory and transfer it from your VM to your back-up destination.</p>\n\
+          <p>The general comand structure to compress files:<br>\n<code>tar -cvpzf\
+          \ &lt;NameOfArchive&gt;.tar.gz &lt;list of your files or folders&gt;</code></p>\n\
+          <p>To copy a directory ( /mnt/data ) into a single, compressed file ( data.tar.gz\
+          \ ): </p>\n<p><code>tar -cvpzf data.tar.gz /mnt/data</code></p>\n<p>The\
+          \ compressed file can be transferred to another computer using FileZilla\
+          \ (for a local\ncomputer back-up), or SCP to back-up on a remote server\
+          \ (see the Cloud Basics article: Transferring Data)</p>\n<p><code>scp &lt;Path_To_Source_File&gt;\
+          \ &lt;Path_to_Destination&gt;</code>  </p>\n<p>e.g. <code>scp ~/data.tar.gz\
+          \ username@remote.host.edu.au:data/directory</code><br>\nor, <code>scp -i\
+          \ path/to/key ~/data.tar.gz username@remote.host.edu.au:data/directory</code>\
+          \ </p>\n<h3>Backing up with RSYNC</h3>\n<p>This is a software that creates\
+          \ incremental backups, such that the most recent synced state \nof a source\
+          \ directory is 'mirrored' in a directory on the destination storage device.</p>\n\
+          <p>Syncing is a more efficient way of backing up data, as after the first\
+          \ sync, only modifications to the files will be transferred.</p>\n<ul>\n\
+          <li>RSYNC must be installed on the source computer (the VM) and the destination\
+          \ computer.</li>\n<li>RSYNC is pre-installed on MacOSX</li>\n<li>On Ubuntu,\
+          \ enter <code>sudo apt-get install rsync</code>\n</li>\n<li>On Windows,\
+          \ installation is through the <a href=\"https://www.cygwin.com/\">Cygwin\
+          \ package</a> and usage is more complicated.</li>\n</ul>\n<p>The general\
+          \ command for creating or syncing the back-up:  </p>\n<p><code>rsync -av\
+          \ &lt;source directory&gt; &lt;destination directory&gt;</code><br>\nor,<br>\n\
+          <code>rsync -av -e -i &lt;path-to-private-key&gt; &lt;source directory&gt;\
+          \ &lt;destination directory&gt;</code></p>\n<p>To sync from the Terminal\
+          \ app. on your local computer, from the directory you are syncing into:</p>\n\
+          <p><code>rsync -av ubuntu@NNN.NNN.NNN.NNN:/mnt/data/ dataCopy/</code>  (this\
+          \ syncs data from the VM)<br>\n<code>rsync -av dataCopy/ ubuntu@NNN.NNN.NNN.NNN:/mnt/data/</code>\
+          \ (this will restore data to the VM)</p>\n<p>To sync from the VM command\
+          \ line to a remote server:<br>\n<code>rsync -av /mnt/data/ username@remote.host.edu.au:data/directory/</code>\
+          \  </p>\n<p>and to restore: <br>\n<code>rsync -av username@remote.host.edu.au:data/directory/\
+          \ /mnt/data/</code>  </p>\n<h3>Backing up Volumes to the Object Storage</h3>\n\
+          <p>This can be done with OpenStack commands. See <a href=\"http://training.nectar.org.au/package10/sections/managingVolumes.html\"\
+          >Training Module 10</a> for instructions\non using OpenStack commands to\
+          \ manage your cloud computing.</p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:04-04:00'
+          customer_folders: []
+          description: Cloud Basics
+          id: 6000190150
+          is_default: false
+          language_id: 6
+          name: Cloud Basics
+          parent_id: 6000190150
+          position: 1
+          updated_at: '2015-10-08T21:02:17-04:00'
+          visibility: 1
+        folder_id: 6000190150
+        hits: 0
+        id: 6000085112
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-11-05T20:19:42-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000085112
+        position: 11
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Back-up and Restore
+        updated_at: '2015-11-05T20:19:42-05:00'
+        user_id: 6002464727
+  html: "<h2>Contents</h2>\n<ul>\n<li><a href=\"#Instance\">Snapshot of an Instance</a></li>\n\
+    <li><a href=\"#Volume\">Snapshot of Volume Storage</a></li>\n<li><a href=\"#Backup\"\
+    >Backing Up Data</a></li>\n</ul>\n<p>See <a href=\"http://training.nectar.org.au/package09/sections/index.html\"\
+    >Training Module 9</a> for more detail on snapshots and backups.</p>\n<h2>About\
+    \ Snapshots</h2>\n<p>A snapshot is a way to create a copy of the disk state of\
+    \ your virtual machine (VM).<br>\nThere are two main reasons you would take a\
+    \ snapshot of your VM:</p>\n<ol>\n<li>To <strong>back-up the VM set-up</strong>\
+    \ - you can relaunch an instance from the snapshot</li>\n<li>To create a <strong>template\
+    \ image</strong> which can be used to launch instances which are already set-up.</li>\n\
+    </ol>\n<p>NOTE: The snapshot only creates an image of the primary 'root' disk,\
+    \ not the secondary 'ephemeral' storage or mounted volumes.</p>\n<p>The primary\
+    \ 'root' disk is small (5-30GB) and is not suitable for storing significant data.\
+    \ \nCreating an image of your VM is preserving the computer set-up such as software\
+    \ installation,\nconfigurations and profiles. <a href=\"#Backup\">Backing up data\
+    \ will be covered later in this article</a>.</p>\n<p><a name='Instance'></a></p>\n\
+    <h2>Creating a Snapshot of an Instance (an Image)</h2>\n<ul>\n<li>Log on to the\
+    \ <a href=\"https://dashboard.rc.nectar.org.au\">NeCTAR Dashboard</a> and click\
+    \ on the <strong>'Instances'</strong> tab</li>\n<li>It is not necessary, but good\
+    \ practice, to <strong>'pause instance'</strong> from the '<strong>Actions</strong>'\
+    \ drop down list.</li>\n<li>Click '<strong>Create Snapshot</strong>' from the\
+    \ 'Actions' drop down list.</li>\n<li>Enter a descriptive name for the Snapshot</li>\n\
+    <li>It will now take some time to create the Snapshot. </li>\n<li>The snapshotted\
+    \ image will be saved in the '<strong>Project</strong>' tab of the '<strong>Images</strong>'\
+    \ section.</li>\n</ul>\n<h2>Launching an Instance from a saved Image</h2>\n<ul>\n\
+    <li>On the <a href=\"https://dashboard.rc.nectar.org.au\">NeCTAR Dashboard</a>,\
+    \ navigate to <strong>'Images'</strong></li>\n<li>Choose the <strong>'Project'</strong>\
+    \ tab</li>\n<li>Click <strong>'Launch'</strong> in the <strong>'Actions'</strong>\
+    \ list for the image you wish to restore.</li>\n<li>You can choose a different\
+    \ <strong>'Flavour'</strong> (i.e. size) of instance, but it must be large \n\
+    \ enough to fit the image on the primary 'root' disk.</li>\n<li>Name the instance,\
+    \ set the keypair and security groups in the <strong>'Access and Security'</strong>\
+    \ tab,\n and set the <strong>'Availability Zone'</strong> if necessary (e.g. to\
+    \ ensure the same zone as your volume storage).</li>\n<li>This is just like launching\
+    \ a new instance, except that the new VM will already have the settings,\n configurations\
+    \ and installations of the original VM.</li>\n<li>Access as per usual, with SSH\
+    \ keys and the IP address of the new instance.</li>\n</ul>\n<p>NOTE: The new VM\
+    \ will have a new, empty <strong>secondary 'ephemeral' storage</strong> disk.\
+    \ This will\nneed to be made writable with the command:<br>\n<code>sudo chown\
+    \ ubuntu /mnt</code></p>\n<p>If required, existing <strong>volume storage</strong>\
+    \ will need to be attached, mounted and made writable also. <br>\nAttach on the\
+    \ <a href=\"https://dashboard.rc.nectar.org.au\">NeCTAR Dashboard</a> -&gt; <strong>Volumes</strong>\
+    \ -&gt; <strong>Edit Attachments</strong><br>\nThen access the VM command line\
+    \ and enter:<br>\n<code>sudo mkdir /volume_name</code><br>\n<code>sudo mount /dev/vdc\
+    \ /volume_name -t auto</code><br>\n<code>sudo chown ubuntu /volume_name</code></p>\n\
+    <hr>\n<p><a name='Volume'></a></p>\n<h2>Snapshots of Volume Storage</h2>\n<p>Snapshots\
+    \ can also be made to copy the disk state of your Volume block storage.\nIt is\
+    \ useful for preserving the state of your Volume in an image, in order to \ncreate\
+    \ a new Volume from it at a later time. The volume snapshots use up your volume\n\
+    data allocation, for the full size of the volume. It is not a very efficient method\
+    \ of\nbacking up data - <a href=\"#Backup\">see data backup suggestions later\
+    \ in this article</a>.</p>\n<ul>\n<li>On the <a href=\"https://dashboard.rc.nectar.org.au\"\
+    >NeCTAR Dashboard</a>, navigate to <strong>'Volumes'</strong></li>\n<li>The volume\
+    \ should be unnattached from an instance: Click '<strong>Edit Attachments</strong>'\n\
+    \ in the <strong>'Actions'</strong> list, then '<strong>Detach Volume</strong>'.</li>\n\
+    <li>Click '<strong>Create Snapshot</strong>' in the <strong>'Actions'</strong>\
+    \ list.</li>\n<li>\n<p>The snapshot is found in the '<strong>Volume Snapshots</strong>'\
+    \ tab.</p>\n</li>\n<li>\n<p>In the '<strong>Actions</strong>' drop down list,\
+    \ you can <strong>create a new volume</strong> from the snapshot,\n edit the name,\
+    \ or delete the snapshot when it is no longer needed (to recover the volume storage\
+    \ space it uses).</p>\n</li>\n</ul>\n<hr>\n<h2>Backing Up your Data <a name='Backup'></a></h2>\n\
+    <p>As discussed earlier in this article, Instance snapshots don't copy the larger\
+    \ disks\nthat are used for data storage, and Volume snapshots are inefficient\
+    \ as a data back-up strategy.</p>\n<p>The <strong>source</strong> for the back-up\
+    \ will be the secondary 'ephemeral' storage disk, or\nfrom volume block storage.</p>\n\
+    <p>The <strong>destination</strong> for the back-up may be your local computer,\
+    \ or a data storage \nserver at your research organisation.</p>\n<h3>Compressed\
+    \ File Transfers</h3>\n<p>The simplest back-up is to compress a directory and\
+    \ transfer it from your VM to your back-up destination.</p>\n<p>The general comand\
+    \ structure to compress files:<br>\n<code>tar -cvpzf &lt;NameOfArchive&gt;.tar.gz\
+    \ &lt;list of your files or folders&gt;</code></p>\n<p>To copy a directory ( /mnt/data\
+    \ ) into a single, compressed file ( data.tar.gz ): </p>\n<p><code>tar -cvpzf\
+    \ data.tar.gz /mnt/data</code></p>\n<p>The compressed file can be transferred\
+    \ to another computer using FileZilla (for a local\ncomputer back-up), or SCP\
+    \ to back-up on a remote server (see the Cloud Basics article: Transferring Data)</p>\n\
+    <p><code>scp &lt;Path_To_Source_File&gt; &lt;Path_to_Destination&gt;</code>  </p>\n\
+    <p>e.g. <code>scp ~/data.tar.gz username@remote.host.edu.au:data/directory</code><br>\n\
+    or, <code>scp -i path/to/key ~/data.tar.gz username@remote.host.edu.au:data/directory</code>\
+    \ </p>\n<h3>Backing up with RSYNC</h3>\n<p>This is a software that creates incremental\
+    \ backups, such that the most recent synced state \nof a source directory is 'mirrored'\
+    \ in a directory on the destination storage device.</p>\n<p>Syncing is a more\
+    \ efficient way of backing up data, as after the first sync, only modifications\
+    \ to the files will be transferred.</p>\n<ul>\n<li>RSYNC must be installed on\
+    \ the source computer (the VM) and the destination computer.</li>\n<li>RSYNC is\
+    \ pre-installed on MacOSX</li>\n<li>On Ubuntu, enter <code>sudo apt-get install\
+    \ rsync</code></li>\n<li>On Windows, installation is through the <a href=\"https://www.cygwin.com/\"\
+    >Cygwin package</a> and usage is more complicated.</li>\n</ul>\n<p>The general\
+    \ command for creating or syncing the back-up:  </p>\n<p><code>rsync -av &lt;source\
+    \ directory&gt; &lt;destination directory&gt;</code><br>\nor,<br>\n<code>rsync\
+    \ -av -e -i &lt;path-to-private-key&gt; &lt;source directory&gt; &lt;destination\
+    \ directory&gt;</code></p>\n<p>To sync from the Terminal app. on your local computer,\
+    \ from the directory you are syncing into:</p>\n<p><code>rsync -av ubuntu@NNN.NNN.NNN.NNN:/mnt/data/\
+    \ dataCopy/</code>  (this syncs data from the VM)<br>\n<code>rsync -av dataCopy/\
+    \ ubuntu@NNN.NNN.NNN.NNN:/mnt/data/</code> (this will restore data to the VM)</p>\n\
+    <p>To sync from the VM command line to a remote server:<br>\n<code>rsync -av /mnt/data/\
+    \ username@remote.host.edu.au:data/directory/</code>  </p>\n<p>and to restore:\
+    \ <br>\n<code>rsync -av username@remote.host.edu.au:data/directory/ /mnt/data/</code>\
+    \  </p>\n<h3>Backing up Volumes to the Object Storage</h3>\n<p>This can be done\
+    \ with OpenStack commands. See <a href=\"http://training.nectar.org.au/package10/sections/managingVolumes.html\"\
+    >Training Module 10</a> for instructions\non using OpenStack commands to manage\
+    \ your cloud computing.</p>"
+  parent: 21
+  sha1: 98e154acbd192e0584c626c338ececf914d3a427
+  title: Back-up and Restore
