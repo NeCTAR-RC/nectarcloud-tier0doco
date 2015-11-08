@@ -1,4 +1,11 @@
-## FileZilla 
+## Contents
+
+1. [FileZilla: GUI sftp client](#filezilla)
+1. [SCP: secure copy](#scp)
+1. [SFTP via the command line](#sftp)
+
+
+## FileZilla <a name="filezilla"></a> 
 
 FileZilla is one of many programs that provides easy, point-and-click SFTP (secure file transfer protocol).
 Not only can you easily transfer files between your local computer and your virtual machine (VM),
@@ -21,7 +28,9 @@ but you can also open and edit documents that are on your VM, using programs on 
 
 ![](images/FZ_add_keyfile.png)
 
+
 - *For Mac and Ubuntu:*
+
   1. *The keys are in '.ssh/' which will be hidden from view. There is a button in
   the window to allow you to type the address; enter '.ssh' in the input bar).*
   1. OR, *open your terminal and *enter the command `ln -s ~/.ssh ~/ssh` to create a symbolic 
@@ -34,19 +43,18 @@ but you can also open and edit documents that are on your VM, using programs on 
 
 ![](images/FZ_ppk_keyfile.png)
  
-- Open  ***File -> Site Manager*** . 
-  1. Click ***New Site*** and give it a name. 
-  1. Insert the *IP address* of the instance as ***Host***
-  1. ***Logon Type*** is interactive
-  1. The user is **'ubuntu'** (or 'host' if your VM has a different operating system)
-  1. Click ***Connect***
+1. Open  ***File -> Site Manager*** . 
+1. Click ***New Site*** and give it a name. 
+1. Insert the *IP address* of the instance as ***Host***
+1. ***Logon Type*** is interactive
+1. The user is **'ubuntu'** (or 'host' if your VM has a different operating system)
+1. Click ***Connect***
 
 ![](images/FZ_site_manager.png)
 
 ### FileZilla connection
 
-The Left side of the FileZilla window will list the files of your computer.
-
+The left side of the FileZilla window will list the files of your computer.  
 The right side will contain the folders and files on the VM.
 
 
@@ -55,18 +63,20 @@ The right side will contain the folders and files on the VM.
 Remember your primary disk (where your home directory is located) usually has very little storage space.
 In the VM file list, navigate to the secondary disk '**/mnt**' or an attached volume if available (e.g. '**/MyVolume**').
 
-**Make sure you have made these disks writable, or you will not be able to transfer 
-data onto them.**  If you have not already done so, enter the following command/s in the console of your VM.
+  **Make sure you have made these disks writable, or you will not be able to transfer 
+  data onto them.**  If you have not already done so, enter the following command/s in the console of your VM.
 
-`sudo chown ubuntu /mnt  `  and/or
+  `sudo chown ubuntu /mnt  `  and/or
 
-`sudo chown ubuntu /MyVolume  `  (If you have attached a volume to your instanced, replace '/MyVolume' with the directory in which it is mounted. Check the mount-point by entering `lsblk -l` or `df -hT`)
+  `sudo chown ubuntu /MyVolume  `  (If you have attached a volume to your instanced, replace '/MyVolume' with the directory in which it is mounted.   
+  Check the mount-point by entering `lsblk -l` or `df -hT`)
 
 - Navigate to your data storage directory in the right side of the FileZilla screen.
 
 - Drag and drop files and directories between your local computer and the VM.
 
 - Right click in the file list area to:
+
   1. Create a directory or text file
   1. Edit a text document (you may need to adjust 
   ***FileZilla/Edit -> Settings/Preferences ->  File Editing*** to ensure documents open in your local computer's default text editor.
@@ -80,7 +90,7 @@ data onto them.**  If you have not already done so, enter the following command/
 ----
 
 
-## SCP: secure copy
+## SCP: secure copy <a name="scp"></a> 
 
 SCP is a simple method for transferring files between computers. 
 
@@ -109,7 +119,7 @@ If you have data stored on a remote server, you can transfer files between it an
 
 You will need a host address for the data storage server, and your username, plus usually a password.
 
-`scp username@host.address.edu.au:/data/myDirectory/file.txt /mnt/data/`
+`scp username@host.address.edu.au:/data/myDirectory/file.txt /mnt/data/`  
 `scp /mnt/data/results.zip username@host.address.edu.au:/data/myDirectory/`
 
 You will usually then be prompted to enter the password for your data storage.
@@ -118,7 +128,7 @@ n.b. use `scp -i path/to/key ...` if your remote server has ssh keys rather than
 
 ----
 
-## SFTP via the Command Line
+## SFTP via the Command Line <a name="sftp"></a> 
 
 Secure file transfer is also available between the VM and remote data storage.
 
