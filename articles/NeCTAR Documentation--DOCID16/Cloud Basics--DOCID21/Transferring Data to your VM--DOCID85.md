@@ -68,15 +68,15 @@ In the VM file list, navigate to the secondary disk '**/mnt**' or an attached vo
 
   `sudo chown ubuntu /mnt  `  and/or
 
-  `sudo chown ubuntu /MyVolume  `  (If you have attached a volume to your instanced, replace '/MyVolume' with the directory in which it is mounted.   
-  Check the mount-point by entering `lsblk -l` or `df -hT`)
+  `sudo chown ubuntu /MyVolume  `  (If you have attached a volume to your instanced.  
+  Replace '/MyVolume' with the directory in which it is mounted (mount point).   
+  To check the mount point, enter `lsblk -l` or `df -hT`)
 
 - Navigate to your data storage directory in the right side of the FileZilla screen.
 
 - Drag and drop files and directories between your local computer and the VM.
 
 - Right click in the file list area to:
-
   1. Create a directory or text file
   1. Edit a text document (you may need to adjust 
   ***FileZilla/Edit -> Settings/Preferences ->  File Editing*** to ensure documents open in your local computer's default text editor.
