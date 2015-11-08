@@ -12630,7 +12630,7 @@
           \ on snapshots and backups. \n About Snapshots \n A snapshot is a way to\
           \ create a copy of the disk state of your virtual machine (VM). \nThere\
           \ are two main reasons you would take a snapshot of your VM: \n \n To back-up\
-          \ the VM set-up - you can relaunch an instance from the snapshot \n To create\
+          \ the VM set-up - you can restore an instance from the snapshot \n To create\
           \ a template image which can be used to launch instances which are already\
           \ set-up. \n \n NOTE: The snapshot only creates an image of the primary\
           \ 'root' disk, not the secondary 'ephemeral' storage or mounted volumes.\
@@ -12662,13 +12662,13 @@
           \ \nThen access the VM command line and enter: \nsudo mkdir /volume_name\
           \ \nsudo mount /dev/vdc /volume_name -t auto \nsudo chown ubuntu /volume_name\
           \ \n \n \n Snapshots of Volume Storage \n Snapshots can also be made to\
-          \ copy the disk state of your Volume block storage.\nIt is useful for preserving\
-          \ the state of your Volume in an image, in order to \ncreate a new Volume\
-          \ from it at a later time. The volume snapshots use up your volume\ndata\
-          \ allocation, for the full size of the volume. It is not a very efficient\
-          \ method of\nbacking up data - see data backup suggestions later in this\
-          \ article. \n \n On the NeCTAR Dashboard, navigate to 'Volumes'\n \n The\
-          \ volume should be unnattached from an instance: Click 'Edit Attachments'\n\
+          \ copy the disk state of your Volume block storage.\nThis is useful for\
+          \ preserving the state of your Volume in an image, in order to \ncreate\
+          \ a new Volume from it at a later time. The volume snapshots use up your\
+          \ volume\ndata allocation, for the full size of the volume. Volume snapshots\
+          \ are not designed as a method of\nbacking up data - see data backup suggestions\
+          \ later in this article. \n \n On the NeCTAR Dashboard, navigate to 'Volumes'\n\
+          \ \n The volume should be unnattached from an instance: Click 'Edit Attachments'\n\
           \ in the 'Actions' list, then 'Detach Volume'. \n Click 'Create Snapshot'\
           \ in the 'Actions' list. \n \n The snapshot is found in the 'Volume Snapshots'\
           \ tab. \n \n \n In the 'Actions' drop down list, you can create a new volume\
@@ -12691,7 +12691,7 @@
           \ <Path_To_Source_File> <Path_to_Destination>   \n e.g. scp ~/data.tar.gz\
           \ username@remote.host.edu.au:data/directory \nor, scp -i path/to/key ~/data.tar.gz\
           \ username@remote.host.edu.au:data/directory  \n Backing up with RSYNC \n\
-          \ This is a software that creates incremental backups, such that the most\
+          \ This is a utility that creates incremental backups, such that the most\
           \ recent synced state \nof a source directory is 'mirrored' in a directory\
           \ on the destination storage device. \n Syncing is a more efficient way\
           \ of backing up data, as after the first sync, only modifications to the\
@@ -12719,7 +12719,7 @@
           <p>A snapshot is a way to create a copy of the disk state of your virtual\
           \ machine (VM).<br>\nThere are two main reasons you would take a snapshot\
           \ of your VM:</p>\n<ol>\n<li>To <strong>back-up the VM set-up</strong> -\
-          \ you can relaunch an instance from the snapshot</li>\n<li>To create a <strong>template\
+          \ you can restore an instance from the snapshot</li>\n<li>To create a <strong>template\
           \ image</strong> which can be used to launch instances which are already\
           \ set-up.</li>\n</ol>\n<p>NOTE: The snapshot only creates an image of the\
           \ primary 'root' disk, not the secondary 'ephemeral' storage or mounted\
@@ -12760,41 +12760,41 @@
           <code>sudo mount /dev/vdc /volume_name -t auto</code><br>\n<code>sudo chown\
           \ ubuntu /volume_name</code></p>\n<hr>\n<p><a name=\"Volume\"></a></p>\n\
           <h2>Snapshots of Volume Storage</h2>\n<p>Snapshots can also be made to copy\
-          \ the disk state of your Volume block storage.\nIt is useful for preserving\
+          \ the disk state of your Volume block storage.\nThis is useful for preserving\
           \ the state of your Volume in an image, in order to \ncreate a new Volume\
           \ from it at a later time. The volume snapshots use up your volume\ndata\
-          \ allocation, for the full size of the volume. It is not a very efficient\
-          \ method of\nbacking up data - <a href=\"#Backup\">see data backup suggestions\
-          \ later in this article</a>.</p>\n<ul>\n<li>On the <a href=\"https://dashboard.rc.nectar.org.au\"\
-          >NeCTAR Dashboard</a>, navigate to <strong>'Volumes'</strong>\n</li>\n<li>The\
-          \ volume should be unnattached from an instance: Click '<strong>Edit Attachments</strong>'\n\
-          \ in the <strong>'Actions'</strong> list, then '<strong>Detach Volume</strong>'.</li>\n\
-          <li>Click '<strong>Create Snapshot</strong>' in the <strong>'Actions'</strong>\
-          \ list.</li>\n<li>\n<p>The snapshot is found in the '<strong>Volume Snapshots</strong>'\
-          \ tab.</p>\n</li>\n<li>\n<p>In the '<strong>Actions</strong>' drop down\
-          \ list, you can <strong>create a new volume</strong> from the snapshot,\n\
-          \ edit the name, or delete the snapshot when it is no longer needed (to\
-          \ recover the volume storage space it uses).</p>\n</li>\n</ul>\n<hr>\n<h2>Backing\
-          \ Up your Data <a name=\"Backup\"></a>\n</h2>\n<p>As discussed earlier in\
-          \ this article, Instance snapshots don't copy the larger disks\nthat are\
-          \ used for data storage, and Volume snapshots are inefficient as a data\
-          \ back-up strategy.</p>\n<p>The <strong>source</strong> for the back-up\
-          \ will be the secondary 'ephemeral' storage disk, or\nfrom volume block\
-          \ storage.</p>\n<p>The <strong>destination</strong> for the back-up may\
-          \ be your local computer, or a data storage \nserver at your research organisation.</p>\n\
-          <h3>Compressed File Transfers</h3>\n<p>The simplest back-up is to compress\
-          \ a directory and transfer it from your VM to your back-up destination.</p>\n\
-          <p>The general comand structure to compress files:<br>\n<code>tar -cvpzf\
-          \ &lt;NameOfArchive&gt;.tar.gz &lt;list of your files or folders&gt;</code></p>\n\
-          <p>To copy a directory ( /mnt/data ) into a single, compressed file ( data.tar.gz\
-          \ ): </p>\n<p><code>tar -cvpzf data.tar.gz /mnt/data</code></p>\n<p>The\
-          \ compressed file can be transferred to another computer using FileZilla\
-          \ (for a local\ncomputer back-up), or SCP to back-up on a remote server\
-          \ (see the Cloud Basics article: Transferring Data)</p>\n<p><code>scp &lt;Path_To_Source_File&gt;\
-          \ &lt;Path_to_Destination&gt;</code>  </p>\n<p>e.g. <code>scp ~/data.tar.gz\
-          \ username@remote.host.edu.au:data/directory</code><br>\nor, <code>scp -i\
-          \ path/to/key ~/data.tar.gz username@remote.host.edu.au:data/directory</code>\
-          \ </p>\n<h3>Backing up with RSYNC</h3>\n<p>This is a software that creates\
+          \ allocation, for the full size of the volume. Volume snapshots are not\
+          \ designed as a method of\nbacking up data - <a href=\"#Backup\">see data\
+          \ backup suggestions later in this article</a>.</p>\n<ul>\n<li>On the <a\
+          \ href=\"https://dashboard.rc.nectar.org.au\">NeCTAR Dashboard</a>, navigate\
+          \ to <strong>'Volumes'</strong>\n</li>\n<li>The volume should be unnattached\
+          \ from an instance: Click '<strong>Edit Attachments</strong>'\n in the <strong>'Actions'</strong>\
+          \ list, then '<strong>Detach Volume</strong>'.</li>\n<li>Click '<strong>Create\
+          \ Snapshot</strong>' in the <strong>'Actions'</strong> list.</li>\n<li>\n\
+          <p>The snapshot is found in the '<strong>Volume Snapshots</strong>' tab.</p>\n\
+          </li>\n<li>\n<p>In the '<strong>Actions</strong>' drop down list, you can\
+          \ <strong>create a new volume</strong> from the snapshot,\n edit the name,\
+          \ or delete the snapshot when it is no longer needed (to recover the volume\
+          \ storage space it uses).</p>\n</li>\n</ul>\n<hr>\n<h2>Backing Up your Data\
+          \ <a name=\"Backup\"></a>\n</h2>\n<p>As discussed earlier in this article,\
+          \ Instance snapshots don't copy the larger disks\nthat are used for data\
+          \ storage, and Volume snapshots are inefficient as a data back-up strategy.</p>\n\
+          <p>The <strong>source</strong> for the back-up will be the secondary 'ephemeral'\
+          \ storage disk, or\nfrom volume block storage.</p>\n<p>The <strong>destination</strong>\
+          \ for the back-up may be your local computer, or a data storage \nserver\
+          \ at your research organisation.</p>\n<h3>Compressed File Transfers</h3>\n\
+          <p>The simplest back-up is to compress a directory and transfer it from\
+          \ your VM to your back-up destination.</p>\n<p>The general comand structure\
+          \ to compress files:<br>\n<code>tar -cvpzf &lt;NameOfArchive&gt;.tar.gz\
+          \ &lt;list of your files or folders&gt;</code></p>\n<p>To copy a directory\
+          \ ( /mnt/data ) into a single, compressed file ( data.tar.gz ): </p>\n<p><code>tar\
+          \ -cvpzf data.tar.gz /mnt/data</code></p>\n<p>The compressed file can be\
+          \ transferred to another computer using FileZilla (for a local\ncomputer\
+          \ back-up), or SCP to back-up on a remote server (see the Cloud Basics article:\
+          \ Transferring Data)</p>\n<p><code>scp &lt;Path_To_Source_File&gt; &lt;Path_to_Destination&gt;</code>\
+          \  </p>\n<p>e.g. <code>scp ~/data.tar.gz username@remote.host.edu.au:data/directory</code><br>\n\
+          or, <code>scp -i path/to/key ~/data.tar.gz username@remote.host.edu.au:data/directory</code>\
+          \ </p>\n<h3>Backing up with RSYNC</h3>\n<p>This is a utility that creates\
           \ incremental backups, such that the most recent synced state \nof a source\
           \ directory is 'mirrored' in a directory on the destination storage device.</p>\n\
           <p>Syncing is a more efficient way of backing up data, as after the first\
@@ -12832,13 +12832,13 @@
           updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 0
+        hits: 5
         id: 6000085112
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-05T20:19:42-05:00'
+        modified_at: '2015-11-08T17:48:24-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000085112
@@ -12851,7 +12851,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Back-up and Restore
-        updated_at: '2015-11-05T20:19:42-05:00'
+        updated_at: '2015-11-08T17:48:24-05:00'
         user_id: 6002464727
   html: "<h2>Contents</h2>\n<ul>\n<li><a href=\"#Instance\">Snapshot of an Instance</a></li>\n\
     <li><a href=\"#Volume\">Snapshot of Volume Storage</a></li>\n<li><a href=\"#Backup\"\
@@ -12860,7 +12860,7 @@
     \ Snapshots</h2>\n<p>A snapshot is a way to create a copy of the disk state of\
     \ your virtual machine (VM).<br>\nThere are two main reasons you would take a\
     \ snapshot of your VM:</p>\n<ol>\n<li>To <strong>back-up the VM set-up</strong>\
-    \ - you can relaunch an instance from the snapshot</li>\n<li>To create a <strong>template\
+    \ - you can restore an instance from the snapshot</li>\n<li>To create a <strong>template\
     \ image</strong> which can be used to launch instances which are already set-up.</li>\n\
     </ol>\n<p>NOTE: The snapshot only creates an image of the primary 'root' disk,\
     \ not the secondary 'ephemeral' storage or mounted volumes.</p>\n<p>The primary\
@@ -12898,14 +12898,14 @@
     \ and enter:<br>\n<code>sudo mkdir /volume_name</code><br>\n<code>sudo mount /dev/vdc\
     \ /volume_name -t auto</code><br>\n<code>sudo chown ubuntu /volume_name</code></p>\n\
     <hr>\n<p><a name='Volume'></a></p>\n<h2>Snapshots of Volume Storage</h2>\n<p>Snapshots\
-    \ can also be made to copy the disk state of your Volume block storage.\nIt is\
-    \ useful for preserving the state of your Volume in an image, in order to \ncreate\
-    \ a new Volume from it at a later time. The volume snapshots use up your volume\n\
-    data allocation, for the full size of the volume. It is not a very efficient method\
-    \ of\nbacking up data - <a href=\"#Backup\">see data backup suggestions later\
-    \ in this article</a>.</p>\n<ul>\n<li>On the <a href=\"https://dashboard.rc.nectar.org.au\"\
-    >NeCTAR Dashboard</a>, navigate to <strong>'Volumes'</strong></li>\n<li>The volume\
-    \ should be unnattached from an instance: Click '<strong>Edit Attachments</strong>'\n\
+    \ can also be made to copy the disk state of your Volume block storage.\nThis\
+    \ is useful for preserving the state of your Volume in an image, in order to \n\
+    create a new Volume from it at a later time. The volume snapshots use up your\
+    \ volume\ndata allocation, for the full size of the volume. Volume snapshots are\
+    \ not designed as a method of\nbacking up data - <a href=\"#Backup\">see data\
+    \ backup suggestions later in this article</a>.</p>\n<ul>\n<li>On the <a href=\"\
+    https://dashboard.rc.nectar.org.au\">NeCTAR Dashboard</a>, navigate to <strong>'Volumes'</strong></li>\n\
+    <li>The volume should be unnattached from an instance: Click '<strong>Edit Attachments</strong>'\n\
     \ in the <strong>'Actions'</strong> list, then '<strong>Detach Volume</strong>'.</li>\n\
     <li>Click '<strong>Create Snapshot</strong>' in the <strong>'Actions'</strong>\
     \ list.</li>\n<li>\n<p>The snapshot is found in the '<strong>Volume Snapshots</strong>'\
@@ -12930,7 +12930,7 @@
     <p><code>scp &lt;Path_To_Source_File&gt; &lt;Path_to_Destination&gt;</code>  </p>\n\
     <p>e.g. <code>scp ~/data.tar.gz username@remote.host.edu.au:data/directory</code><br>\n\
     or, <code>scp -i path/to/key ~/data.tar.gz username@remote.host.edu.au:data/directory</code>\
-    \ </p>\n<h3>Backing up with RSYNC</h3>\n<p>This is a software that creates incremental\
+    \ </p>\n<h3>Backing up with RSYNC</h3>\n<p>This is a utility that creates incremental\
     \ backups, such that the most recent synced state \nof a source directory is 'mirrored'\
     \ in a directory on the destination storage device.</p>\n<p>Syncing is a more\
     \ efficient way of backing up data, as after the first sync, only modifications\
@@ -12954,7 +12954,7 @@
     >Training Module 10</a> for instructions\non using OpenStack commands to manage\
     \ your cloud computing.</p>"
   parent: 21
-  sha1: 98e154acbd192e0584c626c338ececf914d3a427
+  sha1: 9331d018fb124e3564a5fe829f1f94f5334ebe3b
   title: Back-up and Restore
 85:
   freshdesk:
