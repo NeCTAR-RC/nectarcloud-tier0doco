@@ -12998,13 +12998,13 @@
           \ writable, or you will not be able to transfer \n  data onto them.  If\
           \ you have not already done so, enter the following command/s in the console\
           \ of your VM. \n sudo chown ubuntu /mnt  and/or \n sudo chown ubuntu /MyVolume\
-          \  (If you have attached a volume to your instanced, replace '/MyVolume'\
-          \ with the directory in which it is mounted.  \n  Check the mount-point\
-          \ by entering lsblk -l or df -hT) \n \n \n Navigate to your data storage\
-          \ directory in the right side of the FileZilla screen. \n \n \n Drag and\
-          \ drop files and directories between your local computer and the VM. \n\
-          \ \n \n Right click in the file list area to: \n \n \n Create a directory\
-          \ or text file \n \n Edit a text document (you may need to adjust \n  FileZilla/Edit\
+          \  (If you have attached a volume to your instanced. \n  Replace '/MyVolume'\
+          \ with the directory in which it is mounted (mount point).  \n  To check\
+          \ the mount point, enter lsblk -l or df -hT) \n \n \n Navigate to your data\
+          \ storage directory in the right side of the FileZilla screen. \n \n \n\
+          \ Drag and drop files and directories between your local computer and the\
+          \ VM. \n \n \n Right click in the file list area to: \n \n Create a directory\
+          \ or text file \n Edit a text document (you may need to adjust \n  FileZilla/Edit\
           \ -> Settings/Preferences ->  File Editing to ensure documents open in your\
           \ local computer's default text editor. \n Delete, download or rename files\
           \ or directories, etc. \n \n \n \n \n SCP: secure copy \n \n SCP is a simple\
@@ -13082,15 +13082,15 @@
           \ \n  data onto them.</strong>  If you have not already done so, enter the\
           \ following command/s in the console of your VM.</p>\n<p><code>sudo chown\
           \ ubuntu /mnt</code>  and/or</p>\n<p><code>sudo chown ubuntu /MyVolume</code>\
-          \  (If you have attached a volume to your instanced, replace '/MyVolume'\
-          \ with the directory in which it is mounted. <br>\n  Check the mount-point\
-          \ by entering <code>lsblk -l</code> or <code>df -hT</code>)</p>\n<ul>\n\
-          <li>\n<p>Navigate to your data storage directory in the right side of the\
-          \ FileZilla screen.</p>\n</li>\n<li>\n<p>Drag and drop files and directories\
-          \ between your local computer and the VM.</p>\n</li>\n<li>\n<p>Right click\
-          \ in the file list area to:</p>\n</li>\n<li>\n<p>Create a directory or text\
-          \ file</p>\n</li>\n<li>Edit a text document (you may need to adjust \n \
-          \ <strong><em>FileZilla/Edit -&gt; Settings/Preferences -&gt;  File Editing</em></strong>\
+          \  (If you have attached a volume to your instanced.<br>\n  Replace '/MyVolume'\
+          \ with the directory in which it is mounted (mount point). <br>\n  To check\
+          \ the mount point, enter <code>lsblk -l</code> or <code>df -hT</code>)</p>\n\
+          <ul>\n<li>\n<p>Navigate to your data storage directory in the right side\
+          \ of the FileZilla screen.</p>\n</li>\n<li>\n<p>Drag and drop files and\
+          \ directories between your local computer and the VM.</p>\n</li>\n<li>\n\
+          <p>Right click in the file list area to:</p>\n</li>\n<li>Create a directory\
+          \ or text file</li>\n<li>Edit a text document (you may need to adjust \n\
+          \  <strong><em>FileZilla/Edit -&gt; Settings/Preferences -&gt;  File Editing</em></strong>\
           \ to ensure documents open in your local computer's default text editor.</li>\n\
           <li>Delete, download or rename files or directories, etc.</li>\n</ul>\n\
           <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/FZ_edit_files.png?raw=true\"\
@@ -13141,13 +13141,13 @@
           updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 5
+        hits: 7
         id: 6000085114
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-08T17:37:39-05:00'
+        modified_at: '2015-11-08T17:57:12-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000085114
@@ -13160,7 +13160,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Transferring Data to your VM
-        updated_at: '2015-11-08T17:37:39-05:00'
+        updated_at: '2015-11-08T17:57:12-05:00'
         user_id: 6002464727
   html: "<h2>Contents</h2>\n<ol>\n<li><a href=\"#filezilla\">FileZilla: GUI sftp client</a></li>\n\
     <li><a href=\"#scp\">SCP: secure copy</a></li>\n<li><a href=\"#sftp\">SFTP via\
@@ -13210,14 +13210,14 @@
     \ to transfer \n  data onto them.</strong>  If you have not already done so, enter\
     \ the following command/s in the console of your VM.</p>\n<p><code>sudo chown\
     \ ubuntu /mnt</code>  and/or</p>\n<p><code>sudo chown ubuntu /MyVolume</code>\
-    \  (If you have attached a volume to your instanced, replace '/MyVolume' with\
-    \ the directory in which it is mounted. <br>\n  Check the mount-point by entering\
-    \ <code>lsblk -l</code> or <code>df -hT</code>)</p>\n<ul>\n<li>\n<p>Navigate to\
-    \ your data storage directory in the right side of the FileZilla screen.</p>\n\
-    </li>\n<li>\n<p>Drag and drop files and directories between your local computer\
-    \ and the VM.</p>\n</li>\n<li>\n<p>Right click in the file list area to:</p>\n\
-    </li>\n<li>\n<p>Create a directory or text file</p>\n</li>\n<li>Edit a text document\
-    \ (you may need to adjust \n  <strong><em>FileZilla/Edit -&gt; Settings/Preferences\
+    \  (If you have attached a volume to your instanced.<br>\n  Replace '/MyVolume'\
+    \ with the directory in which it is mounted (mount point). <br>\n  To check the\
+    \ mount point, enter <code>lsblk -l</code> or <code>df -hT</code>)</p>\n<ul>\n\
+    <li>\n<p>Navigate to your data storage directory in the right side of the FileZilla\
+    \ screen.</p>\n</li>\n<li>\n<p>Drag and drop files and directories between your\
+    \ local computer and the VM.</p>\n</li>\n<li>\n<p>Right click in the file list\
+    \ area to:</p>\n</li>\n<li>Create a directory or text file</li>\n<li>Edit a text\
+    \ document (you may need to adjust \n  <strong><em>FileZilla/Edit -&gt; Settings/Preferences\
     \ -&gt;  File Editing</em></strong> to ensure documents open in your local computer's\
     \ default text editor.</li>\n<li>Delete, download or rename files or directories,\
     \ etc.</li>\n</ul>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
@@ -13255,5 +13255,5 @@
     <p><code>put &lt;/mnt/localVM_destination/file.txt&gt; &lt;remote_directory/&gt;</code></p>\n\
     <p>to close the sftp connection, type <code>exit</code>.</p>"
   parent: 21
-  sha1: db8daab29bb428bf13d1c4f3051bf35277320d7c
+  sha1: 9e05cea693cc98342af866991372889982f39f2a
   title: Transferring Data to your VM
