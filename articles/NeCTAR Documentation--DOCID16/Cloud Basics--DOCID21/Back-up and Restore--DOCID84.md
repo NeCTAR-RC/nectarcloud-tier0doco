@@ -11,7 +11,7 @@ See [Training Module 9][9] for more detail on snapshots and backups.
 A snapshot is a way to create a copy of the disk state of your virtual machine (VM).  
 There are two main reasons you would take a snapshot of your VM:
 
-1. To **back-up the VM set-up** - you can relaunch an instance from the snapshot
+1. To **back-up the VM set-up** - you can restore an instance from the snapshot
 1. To create a **template image** which can be used to launch instances which are already set-up.
 
 NOTE: The snapshot only creates an image of the primary 'root' disk, not the secondary 'ephemeral' storage or mounted volumes.
@@ -62,9 +62,9 @@ Then access the VM command line and enter:
 ## Snapshots of Volume Storage
 
 Snapshots can also be made to copy the disk state of your Volume block storage.
-It is useful for preserving the state of your Volume in an image, in order to 
+This is useful for preserving the state of your Volume in an image, in order to 
 create a new Volume from it at a later time. The volume snapshots use up your volume
-data allocation, for the full size of the volume. It is not a very efficient method of
+data allocation, for the full size of the volume. Volume snapshots are not designed as a method of
 backing up data - [see data backup suggestions later in this article](#Backup).
 
 - On the [NeCTAR Dashboard][dashboard], navigate to **'Volumes'**
@@ -111,7 +111,7 @@ or, `scp -i path/to/key ~/data.tar.gz username@remote.host.edu.au:data/directory
 
 ### Backing up with RSYNC
 
-This is a software that creates incremental backups, such that the most recent synced state 
+This is a utility that creates incremental backups, such that the most recent synced state 
 of a source directory is 'mirrored' in a directory on the destination storage device.
 
 Syncing is a more efficient way of backing up data, as after the first sync, only modifications to the files will be transferred.
