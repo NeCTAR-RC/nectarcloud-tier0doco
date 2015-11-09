@@ -35,13 +35,18 @@ Here are some particular commands used in the Cloud Basics articles, for quick r
 | `df -hT` | display the disk usage |
 | `du -h <path/to/directory>` | display directory and file sizes |
 | `top` | activity monitor for your VM |
-| `ps` | list the running processes on your VM |
+| `ps` | list the running processes on your VM (with PID#) |
 | `kill <PID#>` | terminate the process by PID number  |
 | control + 'c' | stops a process running in your terminal |
 | `sudo apt-get update` | updates the list of packages available to install |
 | `sudo apt-get upgrade` | upgrades the installed packages |
-| `sudo apt-cache search <name> | less` | search for a package to install |
+| `apt-cache search <name> | less` | search for a package to install |
 | `sudo apt-get install <name>` | install a package |
+| `nohup <normal commands go here> 2>&1 &` | keep a job running in the background |
+| `jobs` | list the active jobs (with job numbers) |
+| control + 'z' | pause a job running in the foreground |
+| `disown %n` | detach a (paused) job from the terminal session (n=job number) |
+| `bg %n ` | move a (paused) job to the background |
 
 
 [codecademy]: https://www.codecademy.com/learn/learn-the-command-line
