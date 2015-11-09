@@ -40,13 +40,13 @@ Here are some particular commands used in the Cloud Basics articles, for quick r
 | control + 'c' | stops a process running in your terminal |
 | `sudo apt-get update` | updates the list of packages available to install |
 | `sudo apt-get upgrade` | upgrades the installed packages |
-| `apt-cache search <name> | less` | search for a package to install |
+| ```apt-cache search <name> | less``` | search for a package to install |
 | `sudo apt-get install <name>` | install a package |
 | `nohup <normal commands go here> 2>&1 &` | keep a job running in the background |
 | `jobs` | list the active jobs (with job numbers) |
 | control + 'z' | pause a job running in the foreground |
 | `disown %n` | detach a (paused) job from the terminal session (n=job number) |
-| `bg %n ` | move a (paused) job to the background |
+| `bg %n ` | move a (paused) job to the background (n=job number) |
 
 
 [codecademy]: https://www.codecademy.com/learn/learn-the-command-line
