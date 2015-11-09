@@ -12119,12 +12119,16 @@
           \ mounted volume writable\n\n\nlsblk -l\nlist the block storage\n\n\ndf\
           \ -hT\ndisplay the disk usage\n\n\ndu -h <path/to/directory>\ndisplay directory\
           \ and file sizes\n\n\ntop\nactivity monitor for your VM\n\n\nps\nlist the\
-          \ running processes on your VM\n\n\nkill <PID#>\nterminate the process by\
-          \ PID number\n\n\ncontrol + 'c'\nstops a process running in your terminal\n\
-          \n\nsudo apt-get update\nupdates the list of packages available to install\n\
-          \n\nsudo apt-get upgrade\nupgrades the installed packages\n\n\n`sudo apt-cache\
-          \ search \nless`\n\n\nsudo apt-get install <name>\ninstall a package\n\n\
-          \n"
+          \ running processes on your VM (with PID#)\n\n\nkill <PID#>\nterminate the\
+          \ process by PID number\n\n\ncontrol + 'c'\nstops a process running in your\
+          \ terminal\n\n\nsudo apt-get update\nupdates the list of packages available\
+          \ to install\n\n\nsudo apt-get upgrade\nupgrades the installed packages\n\
+          \n\n`apt-cache search \nless`\n\n\nsudo apt-get install <name>\ninstall\
+          \ a package\n\n\nnohup <normal commands go here> 2>&1 &\nkeep a job running\
+          \ in the background\n\n\njobs\nlist the active jobs (with job numbers)\n\
+          \n\ncontrol + 'z'\npause a job running in the foreground\n\n\ndisown %n\n\
+          detach a (paused) job from the terminal session (n=job number)\n\n\nbg %n\n\
+          move a (paused) job to the background\n\n\n"
         description: '<h2>Quick reference for shell commands in the Cloud Basics articles</h2>
 
           <p>Although you can set up your VM with a remote desktop (see the NeCTAR
@@ -12297,7 +12301,7 @@
 
           <td><code>ps</code></td>
 
-          <td>list the running processes on your VM</td>
+          <td>list the running processes on your VM (with PID#)</td>
 
           </tr>
 
@@ -12335,7 +12339,7 @@
 
           <tr>
 
-          <td>`sudo apt-cache search </td>
+          <td>`apt-cache search </td>
 
           <td>less`</td>
 
@@ -12346,6 +12350,46 @@
           <td><code>sudo apt-get install &lt;name&gt;</code></td>
 
           <td>install a package</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>nohup &lt;normal commands go here&gt; 2&gt;&amp;1 &amp;</code></td>
+
+          <td>keep a job running in the background</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>jobs</code></td>
+
+          <td>list the active jobs (with job numbers)</td>
+
+          </tr>
+
+          <tr>
+
+          <td>control + ''z''</td>
+
+          <td>pause a job running in the foreground</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>disown %n</code></td>
+
+          <td>detach a (paused) job from the terminal session (n=job number)</td>
+
+          </tr>
+
+          <tr>
+
+          <td><code>bg %n</code></td>
+
+          <td>move a (paused) job to the background</td>
 
           </tr>
 
@@ -12366,13 +12410,13 @@
           updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 1
+        hits: 8
         id: 6000084190
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-04T20:40:10-05:00'
+        modified_at: '2015-11-08T22:03:59-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000084190
@@ -12385,7 +12429,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Quick Reference for Commands
-        updated_at: '2015-11-04T20:40:10-05:00'
+        updated_at: '2015-11-08T22:03:59-05:00'
         user_id: 6002464727
   html: '<h2>Quick reference for shell commands in the Cloud Basics articles</h2>
 
@@ -12558,7 +12602,7 @@
 
     <td><code>ps</code></td>
 
-    <td>list the running processes on your VM</td>
+    <td>list the running processes on your VM (with PID#)</td>
 
     </tr>
 
@@ -12596,7 +12640,7 @@
 
     <tr>
 
-    <td>`sudo apt-cache search <name></td>
+    <td>`apt-cache search <name></td>
 
     <td>less`</td>
 
@@ -12610,11 +12654,51 @@
 
     </tr>
 
+    <tr>
+
+    <td><code>nohup &lt;normal commands go here&gt; 2&gt;&amp;1 &amp;</code></td>
+
+    <td>keep a job running in the background</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>jobs</code></td>
+
+    <td>list the active jobs (with job numbers)</td>
+
+    </tr>
+
+    <tr>
+
+    <td>control + ''z''</td>
+
+    <td>pause a job running in the foreground</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>disown %n</code></td>
+
+    <td>detach a (paused) job from the terminal session (n=job number)</td>
+
+    </tr>
+
+    <tr>
+
+    <td><code>bg %n</code></td>
+
+    <td>move a (paused) job to the background</td>
+
+    </tr>
+
     </tbody>
 
     </table>'
   parent: 21
-  sha1: aa306a05caf3e2d5ada2795a481d52d832a9413c
+  sha1: a19c5aeddbef64090689688c19aa9fbb8559fbcb
   title: Quick Reference for Commands
 84:
   freshdesk:
