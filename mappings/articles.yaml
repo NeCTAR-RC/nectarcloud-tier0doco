@@ -12123,7 +12123,7 @@
           \ process by PID number\n\n\ncontrol + 'c'\nstops a process running in your\
           \ terminal\n\n\nsudo apt-get update\nupdates the list of packages available\
           \ to install\n\n\nsudo apt-get upgrade\nupgrades the installed packages\n\
-          \n\n` apt-cache search \nless`\n\n\nsudo apt-get install <name>\ninstall\
+          \n\n`sudo apt-cache search \nless`\n\n\nsudo apt-get install <name>\ninstall\
           \ a package\n\n\nnohup <normal commands go here> 2>&1 &\nkeep a job running\
           \ in the background\n\n\njobs\nlist the active jobs (with job numbers)\n\
           \n\ncontrol + 'z'\npause a job running in the foreground\n\n\ndisown %n\n\
@@ -12339,7 +12339,7 @@
 
           <tr>
 
-          <td>` apt-cache search </td>
+          <td>`sudo apt-cache search </td>
 
           <td>less`</td>
 
@@ -12410,13 +12410,13 @@
           updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 18
+        hits: 20
         id: 6000084190
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-08T22:14:13-05:00'
+        modified_at: '2015-11-08T22:16:32-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000084190
@@ -12429,7 +12429,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Quick Reference for Commands
-        updated_at: '2015-11-08T22:14:13-05:00'
+        updated_at: '2015-11-08T22:16:32-05:00'
         user_id: 6002464727
   html: '<h2>Quick reference for shell commands in the Cloud Basics articles</h2>
 
@@ -12640,7 +12640,7 @@
 
     <tr>
 
-    <td>` apt-cache search <name></td>
+    <td>`sudo apt-cache search <name></td>
 
     <td>less`</td>
 
@@ -12698,7 +12698,7 @@
 
     </table>'
   parent: 21
-  sha1: 6ab07afaa65f98e90df81eb9d23a29190afe39bf
+  sha1: 1a6380c6269b9d387b7641c6c278a09c55d41e98
   title: Quick Reference for Commands
 84:
   freshdesk:
