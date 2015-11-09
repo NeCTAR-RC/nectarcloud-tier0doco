@@ -12123,12 +12123,12 @@
           \ process by PID number\n\n\ncontrol + 'c'\nstops a process running in your\
           \ terminal\n\n\nsudo apt-get update\nupdates the list of packages available\
           \ to install\n\n\nsudo apt-get upgrade\nupgrades the installed packages\n\
-          \n\n`apt-cache search \nless`\n\n\nsudo apt-get install <name>\ninstall\
+          \n\n```apt-cache search \nless```\n\n\nsudo apt-get install <name>\ninstall\
           \ a package\n\n\nnohup <normal commands go here> 2>&1 &\nkeep a job running\
           \ in the background\n\n\njobs\nlist the active jobs (with job numbers)\n\
           \n\ncontrol + 'z'\npause a job running in the foreground\n\n\ndisown %n\n\
           detach a (paused) job from the terminal session (n=job number)\n\n\nbg %n\n\
-          move a (paused) job to the background\n\n\n"
+          move a (paused) job to the background (n=job number)\n\n\n"
         description: '<h2>Quick reference for shell commands in the Cloud Basics articles</h2>
 
           <p>Although you can set up your VM with a remote desktop (see the NeCTAR
@@ -12339,9 +12339,9 @@
 
           <tr>
 
-          <td>`apt-cache search </td>
+          <td>```apt-cache search </td>
 
-          <td>less`</td>
+          <td>less```</td>
 
           </tr>
 
@@ -12389,7 +12389,7 @@
 
           <td><code>bg %n</code></td>
 
-          <td>move a (paused) job to the background</td>
+          <td>move a (paused) job to the background (n=job number)</td>
 
           </tr>
 
@@ -12410,13 +12410,13 @@
           updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 8
+        hits: 14
         id: 6000084190
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-08T22:03:59-05:00'
+        modified_at: '2015-11-08T22:07:40-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000084190
@@ -12429,7 +12429,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Quick Reference for Commands
-        updated_at: '2015-11-08T22:03:59-05:00'
+        updated_at: '2015-11-08T22:07:40-05:00'
         user_id: 6002464727
   html: '<h2>Quick reference for shell commands in the Cloud Basics articles</h2>
 
@@ -12640,9 +12640,9 @@
 
     <tr>
 
-    <td>`apt-cache search <name></td>
+    <td>```apt-cache search <name></td>
 
-    <td>less`</td>
+    <td>less```</td>
 
     </tr>
 
@@ -12690,7 +12690,7 @@
 
     <td><code>bg %n</code></td>
 
-    <td>move a (paused) job to the background</td>
+    <td>move a (paused) job to the background (n=job number)</td>
 
     </tr>
 
@@ -12698,7 +12698,7 @@
 
     </table>'
   parent: 21
-  sha1: a19c5aeddbef64090689688c19aa9fbb8559fbcb
+  sha1: 59a9862238d273320b911cc84a8983a0536d12ab
   title: Quick Reference for Commands
 84:
   freshdesk:
