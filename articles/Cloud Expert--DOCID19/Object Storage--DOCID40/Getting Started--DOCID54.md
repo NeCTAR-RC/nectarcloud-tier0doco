@@ -33,17 +33,14 @@ sudo pip install python-swiftclient
 RHEL, CentOS, or Fedora
 
 
-```
 
-sudo yum install python-setuptools
+`sudo yum install python-setuptools`
 
-sudo easy_install pip
+`sudo easy_install pip`
 
-sudo pip install --upgrade setuptools
+`sudo pip install --upgrade setuptools`
 
-sudo pip install python-swiftclient
-
-```
+`sudo pip install python-swiftclient`
 
 
 Windows
