@@ -1,12 +1,11 @@
 ## Quick guide to document submission
 
-After: (following instructions in the README.md)
+After setting up the following: (instructions in the README.md)
 
 1. Installing 'git' and cloning the documentation repository with  
   `git clone https://github.com/NeCTAR-RC/nectarcloud-tier0doco.git`
 1. Creating a launchpad account and getting access to 'Gerrit'
-1. Installing [git-review](https://www.mediawiki.org/wiki/Gerrit/git-review)  
-  plus recommended install of [grip](#grip) and [mdl](mdl)
+1. Installing [git-review](https://www.mediawiki.org/wiki/Gerrit/git-review) plus recommended install of [grip](#grip) and [mdl](#mdl)
 
 Instructions to create a git branch (called 'doc_review' here), edit and submit changes.  
 Replace as appropriate any names within `<arrowheads>`
@@ -27,7 +26,7 @@ git checkout <doc_review>
   `grip --gfm --context=NeCTAR-RC/nectarcloud-tier0doco <Path/to/File.md>`
 
   - *optional step - check if the markdown formatting would pass Jenkins*   
-  This step is a real timesaver! [see mdl info](#mdl)
+  This step is a real timesaver! [see mdl info](#mdl)   
   `mdl -s ~/<path_to>/nectarcloud-tier0doco/md_style.rb <Path/to/File.md>`
 
 - After correcting any formatting errors exposed by these steps, you are ready to submit:
