@@ -40,7 +40,7 @@ Here are some particular commands used in the Cloud Basics articles, for quick r
 | control + 'c' | stops a process running in your terminal |
 | `sudo apt-get update` | updates the list of packages available to install |
 | `sudo apt-get upgrade` | upgrades the installed packages |  
-| `sudo apt-cache search <name> | less` | search for a package to install |
+| `apt-cache search <name>` | search for a package to install |
 | `sudo apt-get install <name>` | install a package |
 | `nohup <normal commands go here> 2>&1 &` | keep a job running in the background |
 | `jobs` | list the active jobs (with job numbers) |
