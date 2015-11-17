@@ -7,9 +7,6 @@ local organization or institution. You can log a ticket in the NeCTAR
 [helpdesk][aafhelp] for help.
 
 
-[aaf]: http://aaf.edu.au/
-[helpdesk]: https://support.nectar.org.au/support/home
-[aafhelp]: http://support.aaf.edu.au/home
 
 ## Debugging API Authentication
 
@@ -242,6 +239,9 @@ following output:
 ```
 
 
+[aaf]: http://aaf.edu.au/
+[helpdesk]: https://support.nectar.org.au/support/home
+[aafhelp]: http://support.aaf.edu.au/home
 [curl]: http://curl.haxx.se/
 [api]: http://developer.openstack.org/api-ref.html
 [dashboard]: https://dashboard.rc.nectar.org.au
