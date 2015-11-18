@@ -229,11 +229,11 @@ Symptom|Possible Problem|Solution
 Launchpod failed to deply|Some availability zones may experience problems launching machines|Try again using another availability zone
 
 
-[screenshot_consumerKey]: twitterscraper_images/consumerKey.png "Consumer Key"
-[screenshot_accessToken]: twitterscraper_images/accessToken.png "Access Token"
-[screenshot_include_1]: twitterscraper_images/include_1.png "Included phrases"
-[screenshot_include_2]: twitterscraper_images/include_2.png "Included phrases"
-[screenshot_output]: twitterscraper_images/output.png "Sample output"
+[screenshot_consumerKey]: images/twitterDOCID88_consumerKey.png "Consumer Key"
+[screenshot_accessToken]: images/twitterDOCID88_accessToken.png "Access Token"
+[screenshot_include_1]: images/twitterDOCID88_include_1.png "Included phrases"
+[screenshot_include_2]: images/twitterDOCID88_include_2.png "Included phrases"
+[screenshot_output]: images/twitterDOCID88_output.png "Sample output"
 [aaf]: http://aaf.edu.au
 [subscribers]: http://aaf.edu.au/subscribe/subscribers/
 [nectarRC]: http://cloud.nectar.org.au/
