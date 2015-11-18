@@ -10,7 +10,7 @@ are sent to standard output, which is the monitor.
 If you get an error, you can always read the error message and generally it will
 give you very good hints about what might be wrong.
 
-For example, if you execute ```swift list``` on the command line without
+For example, if you execute `swift list` on the command line without
 authentication, the error message might look like this:
 
 
