@@ -51,39 +51,49 @@ In other words, each search term is separated by an implicit OR operation, and e
 ![screenshot_include_2][screenshot_include_2]
 
 ##### Exclude Phrases
+
 This field is used to block the persistence of tweets that match the pattern. Exclusion overrules inclusion, meaning that even if a tweet matches every inclusion parameter, if it matches a single exclusion parameter, it will not be included in the output. The excluded phrases field works exactly like the phrases field in the interpretation of terms.
 
 ##### Users
+
 You may also specify particular users you want to include in your search using the users field. If you leave this blank, the effect will be that all users are included in the harvest. If you have just one username entered, only tweets from that user will be included in the output. If you need to include a large list of usernames, you can paste a list of usernames separated by commas.
 
 If you specify both a set of users and a set of phrases for your harvest parameters, both criteria must be satisfied for a tweet to be harvested. In otherwords, only tweets by users specified in your Users *and* which satisfy your phrase search will be harvested. You may specify a set of users, or just a single user, without specifying search phrases, in which case all tweets by those users will be harvested.
 
 ##### Location
+
 Checking the ‘Set Location Bounds’ will open a map window in which you can define a bounding box. Only tweets that are geocoded as originating from inside that box will be included in the output. Tweets that originated from outside the bounding box will not be harvested, nor will tweets that are not geocoded. Remember that users can switch off geocoding, and many do for privacy reasons.
 
 ##### Languages
+
 You can use the Languages field to restrict your search to tweets in that language. You can also select multiple languages. The effect of selecting no language here is analogous to selecting no users; any tweet will match irrespective of its language value. Tweets are identified as being in a particular language automatically by machine detection, and this may not work perfectly.
 
 #### Output Options
 
 ##### Output Fields
+
 The output fields allows you to customise the spreadsheet output containing the tweets. By default, all elements are included, but you can uncheck any of the checkboxes if you do not want to include a particular tweet attribute in your output.
 
 ##### Treat Hashtags Independently
+
 This setting modified the behaviour of Twitter Scraper when tweets contain multiple hashtags. Hashtags are parsed out of the content of the tweet body and sent to a separate column of the spreadsheet output. If this box is left unchecked, a tweet containing more than one tweet will occur once in the spreadsheet, and both hashtags will be written to the hashtag column. If this box is checked, then the tweet will be repeated in the output spreadsheet, once for each hashtag, and the hashtag column will contain only one hashtag. This may be useful if you intend to process the output of the scraper using hashtags. If you only intend to analyse the tweet body, you may want to leave this box unchecked so as not to have repeats of the tweet.
 
 ##### De-Identify
+
 This checkbox allows you to de-identify the tweets captured by the scraper, which can be useful for research ethics and privacy concerns. When this box is checked, the username column of the output will be replaced by a string so that you cannot identify the user. However, since the same username will be replaced by the same string each time, meaning you are still able to track particular users’ tweets. Note that selecting the de-identify checkbox does not obscure usernames within the body text of tweets.
 
 ##### Period
+
 The period refers to the time interval between each time Twitter Scraper writes the data out to a spreadsheet. The output works by filling a cached buffer of tweets as they emerge in the Twitter stream and are captured by the scraper. The buffer can fit a few dozen tweets. When the buffer fills, the content is appended to a spreadsheet. When the period ends and the next period begins (that is, the next hour if you select ‘hourly’), then a new spreadsheet will be commenced. If you select ‘none’ as the period, then every matching tweet will be written to the same spreadsheet. If your scrape settings are broad and capture a lot of tweets, the spreadsheet can blow out in size very quickly. Depending on how many tweets you expect to match your search settings, you may want to set the period to daily, or even hourly, to manage the size of the output spreadsheet.
 
 After you have configured Twitter Scraper, you can now deploy it by clicking ‘Deploy’. The process should only take around three minutes, after which you will be sent an email letting you know that your Twitter Scraper instance has been deployed. This email will also let you know how you can access the data.
 
 ## Accessing Data
+
 Twitter Scraper allows for two methods of accessing the data that it generates: over http using a browser, or by logging in to the VM using SSH. Access the machine via SSH also enables you to undertake further configuration and advanced usage, such as modifying the harvest settings, restarting the harvester or configuring additional harvests.
 
 ### How to Access Data via Web
+
 While Twitter Scraper is operational, it will continue to extract tweets from the Twitter Stream and, every time its buffer fills, write those tweets to the csv file. A link to the location of the spreadsheet, consisting of the IP address of the machine and a directory, such as `{IP address}/1`, will be included in the email that Launchpod sends you. Clicking this link will take you to a web view of a directory on the VM containing a spreadsheet (or more) of Twitter Scraper's output data. If you selected a time period, then you will see one spreadsheet corresponding to each of that period that has begun since the VM was deployed. 
 
 ![screenshot_output][screenshot_output]
@@ -98,6 +108,7 @@ If the log file shows an error or java exception instead, then you may have conf
 Launchpod enables you to access the VM directly via SSH in order to modify the [configuration](#configuration-guide) file 
 
 ## Configuration Guide
+
 The options selected within Launchpod are used to populate Twitter Scraper's configuration file. Advanced users may log into the VM using their ssh key and modify the configuration file after deploying via Launchpod. The config file is located at `/home/devel/twitterScraper-{version}/config.ini`. 
 
 If the config file is modified, the harvester must be restarted before any changes take effect. Restart the harvester using the command `sudo supervisorctl restart twitter_scraper`. It is a good idea to change the ouput path if you change the harvester settings, since Twitter Scraper will overwrite an existing output spreadsheet if its output will have the same name.
@@ -195,11 +206,13 @@ outDir = /home/devel/twitterScraper-1.0.39/output/1
 ```
 
 ## Contact
+
 If you are having trouble launching Twitter Scraper, please [contact Intersect](mailto:help@intersect.org.au?subject=Assistance with Twitter Scraper), or your university’s [eResearch Analyst][eras].
 
 ## Support
 
 ## Code Repository
+
 The code repository is not currently publicly released. Twitter Scraper is currently only available through [Launchpod].
 
 ## Known Issues
@@ -209,6 +222,7 @@ The code repository is not currently publicly released. Twitter Scraper is curre
 - If a tweet is deleted by a user from their timeline, an instruction to disregard the status is sent via the Stream API. Due to the way Twitter Scraper outputs tweets, by appending them to a csv text file, the instruction to disregard a tweet cannot be honoured. This means that tweets that have harvested and then deleted by the originating user will still appear in the output.
 
 ## Troubleshooting
+
 Symptom|Possible Problem|Solution
 :---|:---|:---
 Launchpod failed to deply|Some availability zones may experience problems launching machines|Try again using another availability zone
