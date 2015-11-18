@@ -13343,3 +13343,662 @@
   parent: 21
   sha1: 9e05cea693cc98342af866991372889982f39f2a
   title: Transferring Data to your VM
+86:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-11-17T22:46:21-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Running Jobs on your VM \n Contents \n \n Keeping jobs running\
+          \ when your SSH connection is lost \n 1) Nohup - detaching a job from the\
+          \ terminal\n \n 2) GNU Screen - keeping the terminal session running\n \n\
+          \ GNU Parallel - putting multiple processors to work \n Appendix - examples\
+          \ of using the commands \n \n Two major features of Cloud Computing are:\
+          \  \n \n Keeping long-running memory/CPU intensive processes running on\
+          \ a dedicated server; and   \n The flexibility to launch a VM with a large\
+          \ number of CPU (processors) to run \n  some processes more efficiently.\
+          \ \n \n There are a few UNIX tricks that can help you use these features\
+          \ effectively. \n Keeping jobs running  \n \n How to close your terminal/SSH\
+          \ session, while keeping your processes running on the VM \n Generally,\
+          \ your instance is kept running for long periods. Unlike your local computer,\
+          \ \nthe VM's do not automatically go to sleep when there hasn't been input.\
+          \  They are ideal for running \nlarge jobs that may take a long time to\
+          \ complete. \n When running a process from the command-line in Terminal,\
+          \ the default action is\nfor the job to be attached to the terminal session,\
+          \ and to terminate if the terminal session ends.\nThis means that the jobs\
+          \ will be terminated if your local computer goes to sleep, or drops the\
+          \ SSH connection to the VM. \n There are two main methods to keep jobs processing\
+          \ on the VM without the need to keep the \nSSH terminal session running\
+          \ on your local computer. \n \n Detaching a job from the terminal session\
+          \ ( nohup and disown ) \n Keeping a virtual terminal session running ( GNU\
+          \ Screen ) \n \n 1. Detaching a job from the terminal  \n \n Background\
+          \ and foreground jobs \n Usually we run processes in the foreground:  \n\
+          \ \n Our terminal window is busy until the process is finished,  \n Standard\
+          \ output and error messages are printed to the terminal window  \n If we\
+          \ close the terminal window, the process will terminate. \n \n We can instruct\
+          \ terminal to run processes in the background ( & ): \n \n The terminal\
+          \ window is not involved in the process, it is available for other commands\
+          \ \n The standard output and standard error are still printed to the window\
+          \ \n If we close the window, the process will still terminate  \n just put\
+          \ a space and \"&\" at the end of your usual command \n  e.g. sleep 20 -\
+          \ the terminal window will be unresponsive for 20 seconds \nsleep 20 & -\
+          \ sleep command executes in the background, and the window remains responsive\
+          \ \n \n Nohup with background \n The command nohup ensures the command does\
+          \ not receive a 'hang-up' signal \nwhen the terminal session ends. \n Using\
+          \ nohup combined with background: \n \n The terminal window is available\
+          \ for other commands \n Standard output is printed to file ('nohup.out')\
+          \  \n Closing the terminal session will not terminate the process (nohup\
+          \ = no hang-up) \n Modify commands as follows:   \n \n nohup <normal commands\
+          \ go here> 2>&1 & \n nohup detaches the command from the terminal session\
+          \ \n2>&1 sends the standard error and the standard output to the log file\
+          \ 'nohup.out'. \n  You can enter 2> /dev/null < /dev/null instead to discard\
+          \ standard error messages.\n& at the end send the process to the background.\
+          \ \n Nohup in foreground \n The 'nohup' command can be used without running\
+          \ the job in the background by omitting the '&' at the end.\nThis is useful\
+          \ when you need to provide input after entering a command (such as a password).\
+          \ \n To move any process to the background, pause the job with 'control'\
+          \ + 'Z', then enter bg \n \n \nnohup <commands that start a job> 2>&1  \
+          \ \n Enter any input at prompts (e.g. password, input parameters for a program)\
+          \   \n 'control' + 'Z'  -  to pause the job   \n \nbg   \n check the job\
+          \ is running with jobs or ps or top\n \n \n There is a detailed example\
+          \ of this process at the end of this article  \n Disown: detaching a job\
+          \ after it has started \n If you didn't  enter nohup at the beginning of\
+          \ a command, but you want to ensure it keeps running when your SSH \nsession\
+          \ ends, there is a command to detach an active job called disown. The job\
+          \ needs to be paused with\n'control' + 'Z' before entering the command disown.\
+          \ \n \n \n<command that starts a job>   \n 'control' + 'Z'  -  to pause\
+          \ the job   \n \nbg   \n \ndisown   \n Check that the process is running\
+          \ with ps or top\n \n \n There is a detailed example at the end of this\
+          \ article \n \n 2. Keeping the terminal session running with Byobu / GNU\
+          \ Screen \n \n There are a couple of utilties that provide a 'virtual terminal'\
+          \ that will keep running \non the server without the user having the terminal\
+          \ application open and actively\nengaged in SSH connection with the VM.\
+          \ These utilities are GNU Screen and TMUX, and this article \nwill cover\
+          \ using Screen with the front-end package Byobu. \n \n It keeps your terminal\
+          \ session running perpetually, you can reconnect at any time  \n This includes\
+          \ keeping active any running processes attached to the terminal session\
+          \ \n It will preserve processes in the foreground, or in the background\
+          \ \n The next time you log in, the terminal session will be preserved as\
+          \ you left it \n It is a good idea to use it with nohup commands for extra\
+          \ insurance \n \n Some VM users prefer not to use a virtual terminal utility\
+          \ beacause: \n \n Learning curve : Byobu/Screen has its own set of commands\
+          \ to familiarise yourself with. \n Running a virtual terminal is more memory\
+          \ intensive than simply using nohup or disown\n \n \n To install and set-up:\
+          \ \n \n \nsudo apt-get install screen byobu   \n byobu-select-backend screen\
+          \ \n \n To start a session (and name it):  \nbyobu -S JoeyStructure  \n\
+          \ (The first time you use it, enter 'control' + 'a' and select 'Screen commands')\
+          \ \n When you've finished your terminal session, close the window or 'ctrl'\
+          \ + 'a' then 'd'.\nTo log back into the session, just type byobu and select\
+          \ your session from the list. \n 'control' + 'a' (^a) is used to access\
+          \ the Screens commands during a Byobu session \n\n\n\nCommand\nAction\n\n\
+          \n\n\n^a then 'd'\ndetach from the byobu session, you can resume it later\n\
+          \n\n^a then '?'\nhelp (menu of commands)\n\n\n^a then 'c'\nopen a new tab\n\
+          \n\n^a then 'n' or 'p'\nswitch to next/previous tab\n\n\n^a then 'k'\nkill\
+          \ the current tab\n\n\n^a then 'A'\ngive the tab a title\n\n\n^a then '\\\
+          '\nterminates the byobu session, permanently\n\n\nexit\nterminates the byobu\
+          \ session, permanently\n\n\n\n Some other features in Byobu/Screen: \n \n\
+          \ Easily swap between tabs of terminal windows in your session \n Save a\
+          \ log file of activity from a terminal window (^a then H) \n Split screen\
+          \ - multiple terminal shells in one window (^a then S) \n [and many more][https://help.ubuntu.com/community/Byobu]\
+          \  \n \n \n Spreading jobs over multiple CPUs  \n \n A major advantage of\
+          \ NeCTAR cloud computing, is the power to launch VM's with multiple \nprocessors\
+          \ (CPUs), depending upon your allocation.\nMultiple CPUs can efficiently\
+          \ process more jobs simultaneously. GNU parallel is a \ncommand-line utility\
+          \ to manage the distribution of a list of jobs to the available \nCPU cores.\
+          \ \n GNU Parallel \n The GNU parallel utility will allow the user to simultaneously\
+          \ run as many processes as there are CPUs.    \n If there are 32 jobs to\
+          \ do and 4 CPUs, parallel will send the first 4 to be done, \nand as each\
+          \ job finishes a new one will commence. \n \n To install : sudo apt-get\
+          \ install parallel \n Usage: enter 'parallel' with either a list of commands,\
+          \ or a list of items to be\nused as input for a given command. \n Example\
+          \ Commands with Parallel \n \n Using parallel to decompress all files ending\
+          \ in .gz (these two commands are identical):   \n \nparallel gunzip :::\
+          \ *.gz   \n \n ls -1 *.gz | parallel gunzip \n \n \n The input data can\
+          \ be saved in a text file e.g. to download files from a list of URLs (these\
+          \ two commands are identical):   \n \n parallel wget < list_of_URLs.txt\
+          \ \n \n parallel -a list_of_URLs.txt wget \n \n \n The text file can contain\
+          \ a list of commands, each line as it would be entered in the terminal:\
+          \   \n \n \n parallel < list_of_commands.txt \n \n \n By default, parallel\
+          \ uses all cores in the machine.   \n \n You can dictate how many cores\
+          \ to use with parallel -j # (# is the required number of cores)       \n\
+          \ \n parallel -j -1 uses all CPUs except one, which leaves a CPU available\
+          \ for other tasks/users. \n \n \n NOTE: Don't run parallel programs in the\
+          \ background, or they will all run at once.    \n \n The nohup command works\
+          \ with parallel. e.g.:   \n \n nohup parallel < list_of_commands.txt 2>&1\
+          \ \n \n \n If you want to see all the processes running in parallel, htop\
+          \ is an excellent system monitor.   \n \n \nsudo apt-get install htop  \
+          \ \n htop \n \n \n Appendix - more details and examples from this article\
+          \ \n \n \n Appendix \n example of moving a nohup command to the background\
+          \ \n example of using 'disown' \n the main Byobu / Screen commands \n summary\
+          \ table \n \n example of moving a nohup command to the background  \n \n\
+          \ An example would be downloading a large file from a password-protected\
+          \ remote data storage server using scp. \n \n e.g. nohup scp username@host.address.edu.au:/data/files.tar.gz\
+          \ /mnt/data/ 2>&1  \n Password is entered at the prompt \n Now the download\
+          \ begins. There will be no prompt in the terminal, as it is busy\n  with\
+          \ the foreground process. \n Press 'control' and 'Z' to pause the download.\
+          \   \n There will be output like [1]+  Stopped    nohup scp ...\n \n Enter\
+          \ bg to move the process to the background  \n You will see output like\
+          \ [1]+ nohup scp ...... &\n \n The download will now resume in the background.\
+          \ \n Use the command jobs to see that the download job is still active.\
+          \ \n \n The terminal session can be terminated, and the download job will\
+          \ continue on the VM. \n \n If the job is not active (this may show as [1]-\
+          \ ....): \n  check for an error message in the output file :  less nohup.out\
+          \  \n \n \n example of using 'disown' \n \n If you started a large download,\
+          \ and wanted it to continue without keeping the SSH\nconnection with the\
+          \ VM: \n \n e.g. scp username@host.address.edu.au:/data/files.tar.gz /mnt/data/\
+          \ \n Password is entered at the prompt \n Now the download begins. The standard\
+          \ output will appear in the terminal. \n Press 'control' and 'Z' to pause\
+          \ the download.   \n There will be output like [1]+  Stopped    scp ...\n\
+          \ \n Enter bg to move the process to the background  \n There will be output\
+          \ like [1]+ nohup scp ..... &\n \n The download will resume in the background.\
+          \ \n The command jobs will show that the download job is still active. \n\
+          \ Enter disown\n \n Entering jobs will show that the download job is no\
+          \ longer listed \n Entering ps shows that the processes involved in the\
+          \ download (e.g. ssh and scp) are active \n \n The terminal session can\
+          \ be terminated, and the download job will continue on the VM. \n \n The\
+          \ Main Byobu / Screen Commands  \n \n 'control' + 'a' (^a) is used to access\
+          \ the Screens commands during a Byobu session \n\n\n\nCommand\nAction\n\n\
+          \n\n\nbyobu -S <name>\nstart a new virtual terminal session\n\n\nbyobu\n\
+          select an existing session to resume\n\n\n^a then 'd'\ndetach from the byobu\
+          \ session, you can resume it later\n\n\n^a then '?'\nhelp (menu of commands)\n\
+          \n\n^a then 'c'\nopen a new tab\n\n\n^a then 'n' or 'p'\nswitch to next/previous\
+          \ tab\n\n\n^a then 'k'\nkill the current tab\n\n\n^a then 'A'\ngive the\
+          \ tab a title\n\n\n^a then '\\'\nterminates the byobu session, permanently\n\
+          \n\nexit\nterminates the byobu session, permanently\n\n\n\n Table Summarising\
+          \ Options for keeping Processes Running \n \n\n\n\nCommand type\nCommand\n\
+          1.Use terminal\n2.Output\n3.Close window\n4.To terminate\n\n\n\n\n\nforeground\n\
+          (default)\nno\nprinted\ntermination\nctrl c\n\n\n\nbackground\n.... &\n\
+          yes\nprinted\ntermination\nkill[PID#]\n\n\n\nnohup\nnohup ...\nno\nsaved\n\
+          no termination\nctrl c\n\n\n\nnohup + bg\nnohup .... &\nyes\nsaved\nno termination\n\
+          kill [PID#]\n\n\n\nbyobu\nbyobu\nno (tabs)\nprinted\nno termination\nctrl\
+          \ a then k\n\n\n\nbyobu + nohup\n(combine commands)\nyes\nsaved\nno termination\n\
+          kill [PID#]\n\n\n\n\n \n Is the terminal window available while the process\
+          \ is running;   \n Where is the standard output sent;    \n What happens\
+          \ to the process when you close the screen;    \n How to terminate the process.\
+          \  \n "
+        description: "<p>Running Jobs on your VM</p>\n<h2>Contents</h2>\n<ul>\n<li><a\
+          \ href=\"#running\">Keeping jobs running when your SSH connection is lost</a></li>\n\
+          <li>1) <a href=\"#nohup\">Nohup - detaching a job from the terminal</a>\n\
+          </li>\n<li>2) <a href=\"#screen\">GNU Screen - keeping the terminal session\
+          \ running</a>\n</li>\n<li><a href=\"#parallel\">GNU Parallel - putting multiple\
+          \ processors to work</a></li>\n<li><a href=\"#appendix\">Appendix - examples\
+          \ of using the commands</a></li>\n</ul>\n<p>Two major features of Cloud\
+          \ Computing are: </p>\n<ol>\n<li>Keeping long-running memory/CPU intensive\
+          \ processes running on a dedicated server; and  </li>\n<li>The flexibility\
+          \ to launch a VM with a large number of CPU (processors) to run \n  some\
+          \ processes more efficiently.</li>\n</ol>\n<p>There are a few UNIX tricks\
+          \ that can help you use these features effectively.</p>\n<h2>Keeping jobs\
+          \ running  <a name=\"running\"></a>\n</h2>\n<h3>How to close your terminal/SSH\
+          \ session, while keeping your processes running on the VM</h3>\n<p>Generally,\
+          \ your instance is kept running for long periods. Unlike your local computer,\
+          \ \nthe VM's do not automatically go to sleep when there hasn't been input.\
+          \  They are ideal for running \nlarge jobs that may take a long time to\
+          \ complete.</p>\n<p>When running a process from the command-line in Terminal,\
+          \ the default action is\nfor the job to be attached to the terminal session,\
+          \ and to terminate if the terminal session ends.\nThis means that the jobs\
+          \ will be terminated if your local computer goes to sleep, or drops the\
+          \ SSH connection to the VM.</p>\n<p>There are two main methods to keep jobs\
+          \ processing on the VM without the need to keep the \nSSH terminal session\
+          \ running on your local computer.</p>\n<ol>\n<li>Detaching a job from the\
+          \ terminal session ( <code>nohup</code> and <code>disown</code> )</li>\n\
+          <li>Keeping a virtual terminal session running ( GNU Screen )</li>\n</ol>\n\
+          <h2>1. Detaching a job from the terminal  <a name=\"nohup\"></a>\n</h2>\n\
+          <h3>Background and foreground jobs</h3>\n<p>Usually we run processes in\
+          \ the <strong><em>foreground</em></strong>: </p>\n<ul>\n<li>Our terminal\
+          \ window is busy until the process is finished, </li>\n<li>Standard output\
+          \ and error messages are printed to the terminal window </li>\n<li>If we\
+          \ close the terminal window, the process will terminate.</li>\n</ul>\n<p>We\
+          \ can instruct terminal to run processes in the <strong><em>background</em></strong>\
+          \ <strong>( <code>&amp;</code> )</strong>:</p>\n<ul>\n<li>The terminal window\
+          \ is not involved in the process, it is available for other commands</li>\n\
+          <li>The standard output and standard error are still printed to the window</li>\n\
+          <li>If we close the window, the process will still terminate </li>\n<li>just\
+          \ put a space and \"&amp;\" at the end of your usual command<br>\n  e.g.\
+          \ <code>sleep 20</code> - the terminal window will be unresponsive for 20\
+          \ seconds<br>\n<code>sleep 20 &amp;</code> - sleep command executes in the\
+          \ background, and the window remains responsive</li>\n</ul>\n<h3>Nohup with\
+          \ background</h3>\n<p>The command <strong><code>nohup</code></strong> ensures\
+          \ the command does not receive a 'hang-up' signal \nwhen the terminal session\
+          \ ends.</p>\n<p>Using <strong><em>nohup</em></strong> combined with background:</p>\n\
+          <ul>\n<li>The terminal window is available for other commands</li>\n<li>Standard\
+          \ output is printed to file ('nohup.out') </li>\n<li>Closing the terminal\
+          \ session will not terminate the process (nohup = no hang-up)</li>\n<li>Modify\
+          \ commands as follows:  </li>\n</ul>\n<p><code>nohup &lt;normal commands\
+          \ go here&gt; 2&gt;&amp;1 &amp;</code></p>\n<p><strong><code>nohup</code></strong>\
+          \ detaches the command from the terminal session \n<strong><code>2&gt;&amp;1</code></strong>\
+          \ sends the standard error and the standard output to the log file 'nohup.out'.<br>\n\
+          \  You can enter <code>2&gt; /dev/null &lt; /dev/null</code> instead to\
+          \ discard standard error messages.\n<strong><code>&amp;</code></strong>\
+          \ at the end send the process to the background.</p>\n<h3>Nohup in foreground</h3>\n\
+          <p>The 'nohup' command can be used without running the job in the background\
+          \ by omitting the '<code>&amp;</code>' at the end.\nThis is useful when\
+          \ you need to provide input after entering a command (such as a password).</p>\n\
+          <p>To move any process to the background, pause the job with <strong>'control'\
+          \ + 'Z'</strong>, then enter <strong><code>bg</code></strong></p>\n<ul>\n\
+          <li>\n<code>nohup &lt;commands that start a job&gt; 2&gt;&amp;1</code> \
+          \ </li>\n<li>Enter any input at prompts (e.g. password, input parameters\
+          \ for a program)  </li>\n<li>'control' + 'Z'  -  to pause the job  </li>\n\
+          <li>\n<code>bg</code>  </li>\n<li>check the job is running with <code>jobs</code>\
+          \ or <code>ps</code> or <code>top</code>\n</li>\n</ul>\n<p>There is a detailed\
+          \ example of this process <a href=\"#egnohup\">at the end of this article</a>\
+          \ </p>\n<h3>Disown: detaching a job after it has started</h3>\n<p>If you\
+          \ didn't  enter <code>nohup</code> at the beginning of a command, but you\
+          \ want to ensure it keeps running when your SSH \nsession ends, there is\
+          \ a command to detach an active job called <strong><code>disown</code></strong>.\
+          \ The job needs to be paused with\n'control' + 'Z' before entering the command\
+          \ <code>disown</code>.</p>\n<ul>\n<li>\n<code>&lt;command that starts a\
+          \ job&gt;</code>  </li>\n<li>'control' + 'Z'  -  to pause the job  </li>\n\
+          <li>\n<code>bg</code>  </li>\n<li>\n<code>disown</code>  </li>\n<li>Check\
+          \ that the process is running with <code>ps</code> or <code>top</code>\n\
+          </li>\n</ul>\n<p>There is a detailed example at the <a href=\"#disown\"\
+          >end of this article</a></p>\n<hr>\n<h2>2. Keeping the terminal session\
+          \ running with Byobu / GNU Screen <a name=\"screen\"></a>\n</h2>\n<p>There\
+          \ are a couple of utilties that provide a 'virtual terminal' that will keep\
+          \ running \non the server without the user having the terminal application\
+          \ open and actively\nengaged in SSH connection with the VM. These utilities\
+          \ are GNU Screen and TMUX, and this article \nwill cover using Screen with\
+          \ the front-end package Byobu.</p>\n<ul>\n<li>It keeps your terminal session\
+          \ running perpetually, you can reconnect at any time </li>\n<li>This includes\
+          \ keeping active any running processes attached to the terminal session</li>\n\
+          <li>It will preserve processes in the foreground, or in the background</li>\n\
+          <li>The next time you log in, the terminal session will be preserved as\
+          \ you left it</li>\n<li>It is a good idea to use it with <code>nohup</code>\
+          \ commands for extra insurance</li>\n</ul>\n<p>Some VM users prefer not\
+          \ to use a virtual terminal utility beacause:</p>\n<ul>\n<li>Learning curve\
+          \ : Byobu/Screen has its own set of <a href=\"#byobu\">commands</a> to familiarise\
+          \ yourself with.</li>\n<li>Running a virtual terminal is more memory intensive\
+          \ than simply using <code>nohup</code> or <code>disown</code>\n</li>\n</ul>\n\
+          <p>To install and set-up:</p>\n<ul>\n<li>\n<code>sudo apt-get install screen\
+          \ byobu</code>  </li>\n<li><code>byobu-select-backend screen</code></li>\n\
+          </ul>\n<p>To start a session (and name it): <br>\n<code>byobu -S JoeyStructure</code>\
+          \ </p>\n<p>(The first time you use it, enter 'control' + 'a' and select\
+          \ 'Screen commands')</p>\n<p>When you've finished your terminal session,\
+          \ close the window or 'ctrl' + 'a' then 'd'.\nTo log back into the session,\
+          \ just type <code>byobu</code> and select your session from the list.</p>\n\
+          <p>'control' + 'a' (<strong>^a</strong>) is used to access the Screens commands\
+          \ during a Byobu session</p>\n<table>\n<thead>\n<tr>\n<th align=\"left\"\
+          >Command</th>\n<th align=\"left\">Action</th>\n</tr>\n</thead>\n<tbody>\n\
+          <tr>\n<td align=\"left\">^a then 'd'</td>\n<td align=\"left\">detach from\
+          \ the byobu session, you can resume it later</td>\n</tr>\n<tr>\n<td align=\"\
+          left\">^a then '?'</td>\n<td align=\"left\"><strong>help (menu of commands)</strong></td>\n\
+          </tr>\n<tr>\n<td align=\"left\">^a then 'c'</td>\n<td align=\"left\">open\
+          \ a new tab</td>\n</tr>\n<tr>\n<td align=\"left\">^a then 'n' or 'p'</td>\n\
+          <td align=\"left\">switch to next/previous tab</td>\n</tr>\n<tr>\n<td align=\"\
+          left\">^a then 'k'</td>\n<td align=\"left\">kill the current tab</td>\n\
+          </tr>\n<tr>\n<td align=\"left\">^a then 'A'</td>\n<td align=\"left\">give\
+          \ the tab a title</td>\n</tr>\n<tr>\n<td align=\"left\">^a then '\\'</td>\n\
+          <td align=\"left\">terminates the byobu session, permanently</td>\n</tr>\n\
+          <tr>\n<td align=\"left\"><code>exit</code></td>\n<td align=\"left\">terminates\
+          \ the byobu session, permanently</td>\n</tr>\n</tbody>\n</table>\n<p>Some\
+          \ other features in Byobu/Screen:</p>\n<ul>\n<li>Easily swap between tabs\
+          \ of terminal windows in your session</li>\n<li>Save a log file of activity\
+          \ from a terminal window (^a then H)</li>\n<li>Split screen - multiple terminal\
+          \ shells in one window (^a then S)</li>\n<li>[and many more][https://help.ubuntu.com/community/Byobu]\
+          \ </li>\n</ul>\n<hr>\n<h2>Spreading jobs over multiple CPUs  <a name=\"\
+          parallel\"></a>\n</h2>\n<p>A major advantage of NeCTAR cloud computing,\
+          \ is the power to launch VM's with multiple \nprocessors (CPUs), depending\
+          \ upon your allocation.\nMultiple CPUs can efficiently process more jobs\
+          \ simultaneously. GNU parallel is a \ncommand-line utility to manage the\
+          \ distribution of a list of jobs to the available \nCPU cores.</p>\n<h3>GNU\
+          \ Parallel</h3>\n<p>The GNU parallel utility will allow the user to simultaneously\
+          \ run as many processes as there are CPUs.   </p>\n<p>If there are 32 jobs\
+          \ to do and 4 CPUs, parallel will send the first 4 to be done, \nand as\
+          \ each job finishes a new one will commence.</p>\n<p><img alt=\"\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/parallel.png?raw=true\"\
+          ></p>\n<p>To install : <code>sudo apt-get install parallel</code></p>\n\
+          <p>Usage: enter 'parallel' with either a list of commands, or a list of\
+          \ items to be\nused as input for a given command.</p>\n<h4>Example Commands\
+          \ with Parallel</h4>\n<ul>\n<li>Using parallel to decompress all files ending\
+          \ in .gz (these two commands are identical):  </li>\n<li>\n<code>parallel\
+          \ gunzip ::: *.gz</code>  </li>\n<li>\n<p><code>ls -1 *.gz | parallel gunzip</code></p>\n\
+          </li>\n<li>\n<p>The input data can be saved in a text file e.g. to download\
+          \ files from a list of URLs (these two commands are identical):  </p>\n\
+          </li>\n<li><code>parallel wget &lt; list_of_URLs.txt</code></li>\n<li>\n\
+          <p><code>parallel -a list_of_URLs.txt wget</code></p>\n</li>\n<li>\n<p>The\
+          \ text file can contain a list of commands, each line as it would be entered\
+          \ in the terminal:  </p>\n</li>\n<li>\n<p><code>parallel &lt; list_of_commands.txt</code></p>\n\
+          </li>\n<li>\n<p>By default, parallel uses all cores in the machine.  </p>\n\
+          </li>\n<li>You can dictate how many cores to use with <code>parallel -j\
+          \ #</code> (# is the required number of cores)      </li>\n<li>\n<p><code>parallel\
+          \ -j -1</code> uses all CPUs except one, which leaves a CPU available for\
+          \ other tasks/users.</p>\n</li>\n<li>\n<p><strong>NOTE:</strong> Don't run\
+          \ parallel programs in the background, or they will all run at once.   </p>\n\
+          </li>\n<li>The <strong>nohup</strong> command works with parallel. e.g.:\
+          \  </li>\n<li>\n<p><code>nohup parallel &lt; list_of_commands.txt 2&gt;&amp;1</code></p>\n\
+          </li>\n<li>\n<p>If you want to see all the processes running in parallel,\
+          \ htop is an excellent system monitor.  </p>\n</li>\n<li>\n<code>sudo apt-get\
+          \ install htop</code>  </li>\n<li><code>htop</code></li>\n</ul>\n<hr>\n\
+          <h2>Appendix - more details and examples from this article <a name=\"appendix\"\
+          ></a>\n</h2>\n<ul>\n<li>Appendix</li>\n<li><a href=\"#egnohup\">example\
+          \ of moving a nohup command to the background</a></li>\n<li><a href=\"#disown\"\
+          >example of using 'disown'</a></li>\n<li><a href=\"#byobu\">the main Byobu\
+          \ / Screen commands</a></li>\n<li><a href=\"#table\">summary table</a></li>\n\
+          </ul>\n<h3>example of moving a nohup command to the background  <a name=\"\
+          egnohup\"></a>\n</h3>\n<p>An example would be downloading a large file from\
+          \ a password-protected remote data storage server using <code>scp</code>.</p>\n\
+          <ul>\n<li>e.g. <code>nohup scp username@host.address.edu.au:/data/files.tar.gz\
+          \ /mnt/data/ 2&gt;&amp;1</code> </li>\n<li>Password is entered at the prompt</li>\n\
+          <li>Now the download begins. There will be no prompt in the terminal, as\
+          \ it is busy\n  with the foreground process.</li>\n<li>Press 'control' and\
+          \ 'Z' to pause the download.  </li>\n<li>There will be output like <code>[1]+\
+          \  Stopped    nohup scp ...</code>\n</li>\n<li>Enter <code>bg</code> to\
+          \ move the process to the background </li>\n<li>You will see output like\
+          \ <code>[1]+ nohup scp ...... &amp;</code>\n</li>\n<li>The download will\
+          \ now resume in the background.</li>\n<li>Use the command <code>jobs</code>\
+          \ to see that the download job is still active.</li>\n</ul>\n<p>The terminal\
+          \ session can be terminated, and the download job will continue on the VM.</p>\n\
+          <ul>\n<li>If the job is not active (this may show as <code>[1]- ....</code>):<br>\n\
+          \  check for an error message in the output file :  <code>less nohup.out</code>\
+          \ </li>\n</ul>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/nohup_bg.png?raw=true\"\
+          ></p>\n<h3>example of using 'disown' <a name=\"disown\"></a>\n</h3>\n<p>If\
+          \ you started a large download, and wanted it to continue without keeping\
+          \ the SSH\nconnection with the VM:</p>\n<ul>\n<li>e.g. scp username@host.address.edu.au:/data/files.tar.gz\
+          \ /mnt/data/</li>\n<li>Password is entered at the prompt</li>\n<li>Now the\
+          \ download begins. The standard output will appear in the terminal.</li>\n\
+          <li>Press 'control' and 'Z' to pause the download.  </li>\n<li>There will\
+          \ be output like <code>[1]+  Stopped    scp ...</code>\n</li>\n<li>Enter\
+          \ <code>bg</code> to move the process to the background </li>\n<li>There\
+          \ will be output like <code>[1]+ nohup scp ..... &amp;</code>\n</li>\n<li>The\
+          \ download will resume in the background.</li>\n<li>The command <code>jobs</code>\
+          \ will show that the download job is still active.</li>\n<li>Enter <code>disown</code>\n\
+          </li>\n<li>Entering <code>jobs</code> will show that the download job is\
+          \ no longer listed</li>\n<li>Entering <code>ps</code> shows that the processes\
+          \ involved in the download (e.g. ssh and scp) are active</li>\n</ul>\n<p>The\
+          \ terminal session can be terminated, and the download job will continue\
+          \ on the VM.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/disown.png?raw=true\"\
+          ></p>\n<h3>The Main Byobu / Screen Commands  <a name=\"byobu\"></a>\n</h3>\n\
+          <p>'control' + 'a' (<strong>^a</strong>) is used to access the Screens commands\
+          \ during a Byobu session</p>\n<table>\n<thead>\n<tr>\n<th align=\"left\"\
+          >Command</th>\n<th align=\"left\">Action</th>\n</tr>\n</thead>\n<tbody>\n\
+          <tr>\n<td align=\"left\"><code>byobu -S &lt;name&gt;</code></td>\n<td align=\"\
+          left\">start a new virtual terminal session</td>\n</tr>\n<tr>\n<td align=\"\
+          left\"><code>byobu</code></td>\n<td align=\"left\">select an existing session\
+          \ to resume</td>\n</tr>\n<tr>\n<td align=\"left\">^a then 'd'</td>\n<td\
+          \ align=\"left\">detach from the byobu session, you can resume it later</td>\n\
+          </tr>\n<tr>\n<td align=\"left\">^a then '?'</td>\n<td align=\"left\"><strong>help\
+          \ (menu of commands)</strong></td>\n</tr>\n<tr>\n<td align=\"left\">^a then\
+          \ 'c'</td>\n<td align=\"left\">open a new tab</td>\n</tr>\n<tr>\n<td align=\"\
+          left\">^a then 'n' or 'p'</td>\n<td align=\"left\">switch to next/previous\
+          \ tab</td>\n</tr>\n<tr>\n<td align=\"left\">^a then 'k'</td>\n<td align=\"\
+          left\">kill the current tab</td>\n</tr>\n<tr>\n<td align=\"left\">^a then\
+          \ 'A'</td>\n<td align=\"left\">give the tab a title</td>\n</tr>\n<tr>\n\
+          <td align=\"left\">^a then '\\'</td>\n<td align=\"left\">terminates the\
+          \ byobu session, permanently</td>\n</tr>\n<tr>\n<td align=\"left\"><code>exit</code></td>\n\
+          <td align=\"left\">terminates the byobu session, permanently</td>\n</tr>\n\
+          </tbody>\n</table>\n<h3>Table Summarising Options for keeping Processes\
+          \ Running <a name=\"table\"></a>\n</h3>\n<table>\n<thead>\n<tr>\n<th>Command\
+          \ type</th>\n<th>Command</th>\n<th>1.Use terminal</th>\n<th>2.Output</th>\n\
+          <th>3.Close window</th>\n<th>4.To terminate</th>\n<th></th>\n</tr>\n</thead>\n\
+          <tbody>\n<tr>\n<td>foreground</td>\n<td>(default)</td>\n<td>no</td>\n<td>printed</td>\n\
+          <td>termination</td>\n<td>ctrl c</td>\n<td></td>\n</tr>\n<tr>\n<td>background</td>\n\
+          <td><code>.... &amp;</code></td>\n<td>yes</td>\n<td>printed</td>\n<td>termination</td>\n\
+          <td>kill[PID#]</td>\n<td></td>\n</tr>\n<tr>\n<td>nohup</td>\n<td><code>nohup\
+          \ ...</code></td>\n<td>no</td>\n<td>saved</td>\n<td>no termination</td>\n\
+          <td>ctrl c</td>\n<td></td>\n</tr>\n<tr>\n<td>nohup + bg</td>\n<td><code>nohup\
+          \ .... &amp;</code></td>\n<td>yes</td>\n<td>saved</td>\n<td>no termination</td>\n\
+          <td>kill [PID#]</td>\n<td></td>\n</tr>\n<tr>\n<td>byobu</td>\n<td><code>byobu</code></td>\n\
+          <td>no (tabs)</td>\n<td>printed</td>\n<td>no termination</td>\n<td>ctrl\
+          \ a then k</td>\n<td></td>\n</tr>\n<tr>\n<td>byobu + nohup</td>\n<td>(combine\
+          \ commands)</td>\n<td>yes</td>\n<td>saved</td>\n<td>no termination</td>\n\
+          <td>kill [PID#]</td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<ol>\n<li>Is\
+          \ the terminal window available while the process is running;  </li>\n<li>Where\
+          \ is the standard output sent;   </li>\n<li>What happens to the process\
+          \ when you close the screen;   </li>\n<li>How to terminate the process.\
+          \ </li>\n</ol>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:04-04:00'
+          customer_folders: []
+          description: Cloud Basics
+          id: 6000190150
+          is_default: false
+          language_id: 6
+          name: Cloud Basics
+          parent_id: 6000190150
+          position: 1
+          updated_at: '2015-10-08T21:02:17-04:00'
+          visibility: 1
+        folder_id: 6000190150
+        hits: 0
+        id: 6000089713
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-11-17T22:46:21-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000089713
+        position: 13
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Tips for Running Jobs on your VM
+        updated_at: '2015-11-17T22:46:21-05:00'
+        user_id: 6002464727
+  html: "<p>Running Jobs on your VM</p>\n<h2>Contents</h2>\n<ul>\n<li><a href=\"#running\"\
+    >Keeping jobs running when your SSH connection is lost</a></li>\n<li>1) <a href=\"\
+    #nohup\">Nohup - detaching a job from the terminal</a></li>\n<li>2) <a href=\"\
+    #screen\">GNU Screen - keeping the terminal session running</a></li>\n<li><a href=\"\
+    #parallel\">GNU Parallel - putting multiple processors to work</a></li>\n<li><a\
+    \ href=\"#appendix\">Appendix - examples of using the commands</a></li>\n</ul>\n\
+    <p>Two major features of Cloud Computing are: </p>\n<ol>\n<li>Keeping long-running\
+    \ memory/CPU intensive processes running on a dedicated server; and  </li>\n<li>The\
+    \ flexibility to launch a VM with a large number of CPU (processors) to run \n\
+    \  some processes more efficiently.</li>\n</ol>\n<p>There are a few UNIX tricks\
+    \ that can help you use these features effectively.</p>\n<h2>Keeping jobs running\
+    \  <a name=\"running\"></a></h2>\n<h3>How to close your terminal/SSH session,\
+    \ while keeping your processes running on the VM</h3>\n<p>Generally, your instance\
+    \ is kept running for long periods. Unlike your local computer, \nthe VM's do\
+    \ not automatically go to sleep when there hasn't been input.  They are ideal\
+    \ for running \nlarge jobs that may take a long time to complete.</p>\n<p>When\
+    \ running a process from the command-line in Terminal, the default action is\n\
+    for the job to be attached to the terminal session, and to terminate if the terminal\
+    \ session ends.\nThis means that the jobs will be terminated if your local computer\
+    \ goes to sleep, or drops the SSH connection to the VM.</p>\n<p>There are two\
+    \ main methods to keep jobs processing on the VM without the need to keep the\
+    \ \nSSH terminal session running on your local computer.</p>\n<ol>\n<li>Detaching\
+    \ a job from the terminal session ( <code>nohup</code> and <code>disown</code>\
+    \ )</li>\n<li>Keeping a virtual terminal session running ( GNU Screen )</li>\n\
+    </ol>\n<h2>1. Detaching a job from the terminal  <a name=\"nohup\"></a></h2>\n\
+    <h3>Background and foreground jobs</h3>\n<p>Usually we run processes in the <strong><em>foreground</em></strong>:\
+    \ </p>\n<ul>\n<li>Our terminal window is busy until the process is finished, </li>\n\
+    <li>Standard output and error messages are printed to the terminal window </li>\n\
+    <li>If we close the terminal window, the process will terminate.</li>\n</ul>\n\
+    <p>We can instruct terminal to run processes in the <strong><em>background</em></strong>\
+    \ <strong>( <code>&amp;</code> )</strong>:</p>\n<ul>\n<li>The terminal window\
+    \ is not involved in the process, it is available for other commands</li>\n<li>The\
+    \ standard output and standard error are still printed to the window</li>\n<li>If\
+    \ we close the window, the process will still terminate </li>\n<li>just put a\
+    \ space and \"&amp;\" at the end of your usual command<br>\n  e.g. <code>sleep\
+    \ 20</code> - the terminal window will be unresponsive for 20 seconds<br>\n<code>sleep\
+    \ 20 &amp;</code> - sleep command executes in the background, and the window remains\
+    \ responsive</li>\n</ul>\n<h3>Nohup with background</h3>\n<p>The command <strong><code>nohup</code></strong>\
+    \ ensures the command does not receive a 'hang-up' signal \nwhen the terminal\
+    \ session ends.</p>\n<p>Using <strong><em>nohup</em></strong> combined with background:</p>\n\
+    <ul>\n<li>The terminal window is available for other commands</li>\n<li>Standard\
+    \ output is printed to file ('nohup.out') </li>\n<li>Closing the terminal session\
+    \ will not terminate the process (nohup = no hang-up)</li>\n<li>Modify commands\
+    \ as follows:  </li>\n</ul>\n<p><code>nohup &lt;normal commands go here&gt; 2&gt;&amp;1\
+    \ &amp;</code></p>\n<p><strong><code>nohup</code></strong> detaches the command\
+    \ from the terminal session \n<strong><code>2&gt;&amp;1</code></strong> sends\
+    \ the standard error and the standard output to the log file 'nohup.out'.<br>\n\
+    \  You can enter <code>2&gt; /dev/null &lt; /dev/null</code> instead to discard\
+    \ standard error messages.\n<strong><code>&amp;</code></strong> at the end send\
+    \ the process to the background.</p>\n<h3>Nohup in foreground</h3>\n<p>The 'nohup'\
+    \ command can be used without running the job in the background by omitting the\
+    \ '<code>&amp;</code>' at the end.\nThis is useful when you need to provide input\
+    \ after entering a command (such as a password).</p>\n<p>To move any process to\
+    \ the background, pause the job with <strong>'control' + 'Z'</strong>, then enter\
+    \ <strong><code>bg</code></strong></p>\n<ul>\n<li><code>nohup &lt;commands that\
+    \ start a job&gt; 2&gt;&amp;1</code>  </li>\n<li>Enter any input at prompts (e.g.\
+    \ password, input parameters for a program)  </li>\n<li>'control' + 'Z'  -  to\
+    \ pause the job  </li>\n<li><code>bg</code>  </li>\n<li>check the job is running\
+    \ with <code>jobs</code> or <code>ps</code> or <code>top</code></li>\n</ul>\n\
+    <p>There is a detailed example of this process <a href=\"#egnohup\">at the end\
+    \ of this article</a> </p>\n<h3>Disown: detaching a job after it has started</h3>\n\
+    <p>If you didn't  enter <code>nohup</code> at the beginning of a command, but\
+    \ you want to ensure it keeps running when your SSH \nsession ends, there is a\
+    \ command to detach an active job called <strong><code>disown</code></strong>.\
+    \ The job needs to be paused with\n'control' + 'Z' before entering the command\
+    \ <code>disown</code>.</p>\n<ul>\n<li><code>&lt;command that starts a job&gt;</code>\
+    \  </li>\n<li>'control' + 'Z'  -  to pause the job  </li>\n<li><code>bg</code>\
+    \  </li>\n<li><code>disown</code>  </li>\n<li>Check that the process is running\
+    \ with <code>ps</code> or <code>top</code></li>\n</ul>\n<p>There is a detailed\
+    \ example at the <a href=\"#disown\">end of this article</a></p>\n<hr>\n<h2>2.\
+    \ Keeping the terminal session running with Byobu / GNU Screen <a name=\"screen\"\
+    ></a></h2>\n<p>There are a couple of utilties that provide a 'virtual terminal'\
+    \ that will keep running \non the server without the user having the terminal\
+    \ application open and actively\nengaged in SSH connection with the VM. These\
+    \ utilities are GNU Screen and TMUX, and this article \nwill cover using Screen\
+    \ with the front-end package Byobu.</p>\n<ul>\n<li>It keeps your terminal session\
+    \ running perpetually, you can reconnect at any time </li>\n<li>This includes\
+    \ keeping active any running processes attached to the terminal session</li>\n\
+    <li>It will preserve processes in the foreground, or in the background</li>\n\
+    <li>The next time you log in, the terminal session will be preserved as you left\
+    \ it</li>\n<li>It is a good idea to use it with <code>nohup</code> commands for\
+    \ extra insurance</li>\n</ul>\n<p>Some VM users prefer not to use a virtual terminal\
+    \ utility beacause:</p>\n<ul>\n<li>Learning curve : Byobu/Screen has its own set\
+    \ of <a href=\"#byobu\">commands</a> to familiarise yourself with.</li>\n<li>Running\
+    \ a virtual terminal is more memory intensive than simply using <code>nohup</code>\
+    \ or <code>disown</code></li>\n</ul>\n<p>To install and set-up:</p>\n<ul>\n<li><code>sudo\
+    \ apt-get install screen byobu</code>  </li>\n<li><code>byobu-select-backend screen</code></li>\n\
+    </ul>\n<p>To start a session (and name it): <br>\n<code>byobu -S JoeyStructure</code>\
+    \ </p>\n<p>(The first time you use it, enter 'control' + 'a' and select 'Screen\
+    \ commands')</p>\n<p>When you've finished your terminal session, close the window\
+    \ or 'ctrl' + 'a' then 'd'.\nTo log back into the session, just type <code>byobu</code>\
+    \ and select your session from the list.</p>\n<p>'control' + 'a' (<strong>^a</strong>)\
+    \ is used to access the Screens commands during a Byobu session</p>\n<table>\n\
+    <thead>\n<tr>\n<th align=\"left\">Command</th>\n<th align=\"left\">Action</th>\n\
+    </tr>\n</thead>\n<tbody>\n<tr>\n<td align=\"left\">^a then 'd'</td>\n<td align=\"\
+    left\">detach from the byobu session, you can resume it later</td>\n</tr>\n<tr>\n\
+    <td align=\"left\">^a then '?'</td>\n<td align=\"left\"><strong>help (menu of\
+    \ commands)</strong></td>\n</tr>\n<tr>\n<td align=\"left\">^a then 'c'</td>\n\
+    <td align=\"left\">open a new tab</td>\n</tr>\n<tr>\n<td align=\"left\">^a then\
+    \ 'n' or 'p'</td>\n<td align=\"left\">switch to next/previous tab</td>\n</tr>\n\
+    <tr>\n<td align=\"left\">^a then 'k'</td>\n<td align=\"left\">kill the current\
+    \ tab</td>\n</tr>\n<tr>\n<td align=\"left\">^a then 'A'</td>\n<td align=\"left\"\
+    >give the tab a title</td>\n</tr>\n<tr>\n<td align=\"left\">^a then '\\'</td>\n\
+    <td align=\"left\">terminates the byobu session, permanently</td>\n</tr>\n<tr>\n\
+    <td align=\"left\"><code>exit</code></td>\n<td align=\"left\">terminates the byobu\
+    \ session, permanently</td>\n</tr>\n</tbody>\n</table>\n<p>Some other features\
+    \ in Byobu/Screen:</p>\n<ul>\n<li>Easily swap between tabs of terminal windows\
+    \ in your session</li>\n<li>Save a log file of activity from a terminal window\
+    \ (^a then H)</li>\n<li>Split screen - multiple terminal shells in one window\
+    \ (^a then S)</li>\n<li>[and many more][https://help.ubuntu.com/community/Byobu]\
+    \ </li>\n</ul>\n<hr>\n<h2>Spreading jobs over multiple CPUs  <a name=\"parallel\"\
+    ></a></h2>\n<p>A major advantage of NeCTAR cloud computing, is the power to launch\
+    \ VM's with multiple \nprocessors (CPUs), depending upon your allocation.\nMultiple\
+    \ CPUs can efficiently process more jobs simultaneously. GNU parallel is a \n\
+    command-line utility to manage the distribution of a list of jobs to the available\
+    \ \nCPU cores.</p>\n<h3>GNU Parallel</h3>\n<p>The GNU parallel utility will allow\
+    \ the user to simultaneously run as many processes as there are CPUs.   </p>\n\
+    <p>If there are 32 jobs to do and 4 CPUs, parallel will send the first 4 to be\
+    \ done, \nand as each job finishes a new one will commence.</p>\n<p><img alt=\"\
+    \" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/parallel.png?raw=true\"\
+    ></p>\n<p>To install : <code>sudo apt-get install parallel</code></p>\n<p>Usage:\
+    \ enter 'parallel' with either a list of commands, or a list of items to be\n\
+    used as input for a given command.</p>\n<h4>Example Commands with Parallel</h4>\n\
+    <ul>\n<li>Using parallel to decompress all files ending in .gz (these two commands\
+    \ are identical):  </li>\n<li><code>parallel gunzip ::: *.gz</code>  </li>\n<li>\n\
+    <p><code>ls -1 *.gz | parallel gunzip</code></p>\n</li>\n<li>\n<p>The input data\
+    \ can be saved in a text file e.g. to download files from a list of URLs (these\
+    \ two commands are identical):  </p>\n</li>\n<li><code>parallel wget &lt; list_of_URLs.txt</code></li>\n\
+    <li>\n<p><code>parallel -a list_of_URLs.txt wget</code></p>\n</li>\n<li>\n<p>The\
+    \ text file can contain a list of commands, each line as it would be entered in\
+    \ the terminal:  </p>\n</li>\n<li>\n<p><code>parallel &lt; list_of_commands.txt</code></p>\n\
+    </li>\n<li>\n<p>By default, parallel uses all cores in the machine.  </p>\n</li>\n\
+    <li>You can dictate how many cores to use with <code>parallel -j #</code> (# is\
+    \ the required number of cores)      </li>\n<li>\n<p><code>parallel -j -1</code>\
+    \ uses all CPUs except one, which leaves a CPU available for other tasks/users.</p>\n\
+    </li>\n<li>\n<p><strong>NOTE:</strong> Don't run parallel programs in the background,\
+    \ or they will all run at once.   </p>\n</li>\n<li>The <strong>nohup</strong>\
+    \ command works with parallel. e.g.:  </li>\n<li>\n<p><code>nohup parallel &lt;\
+    \ list_of_commands.txt 2&gt;&amp;1</code></p>\n</li>\n<li>\n<p>If you want to\
+    \ see all the processes running in parallel, htop is an excellent system monitor.\
+    \  </p>\n</li>\n<li><code>sudo apt-get install htop</code>  </li>\n<li><code>htop</code></li>\n\
+    </ul>\n<hr>\n<h2>Appendix - more details and examples from this article <a name=\"\
+    appendix\"></a></h2>\n<ul>\n<li>Appendix</li>\n<li><a href=\"#egnohup\">example\
+    \ of moving a nohup command to the background</a></li>\n<li><a href=\"#disown\"\
+    >example of using 'disown'</a></li>\n<li><a href=\"#byobu\">the main Byobu / Screen\
+    \ commands</a></li>\n<li><a href=\"#table\">summary table</a></li>\n</ul>\n<h3>example\
+    \ of moving a nohup command to the background  <a name=\"egnohup\"></a></h3>\n\
+    <p>An example would be downloading a large file from a password-protected remote\
+    \ data storage server using <code>scp</code>.</p>\n<ul>\n<li>e.g. <code>nohup\
+    \ scp username@host.address.edu.au:/data/files.tar.gz /mnt/data/ 2&gt;&amp;1</code>\
+    \ </li>\n<li>Password is entered at the prompt</li>\n<li>Now the download begins.\
+    \ There will be no prompt in the terminal, as it is busy\n  with the foreground\
+    \ process.</li>\n<li>Press 'control' and 'Z' to pause the download.  </li>\n<li>There\
+    \ will be output like <code>[1]+  Stopped    nohup scp ...</code></li>\n<li>Enter\
+    \ <code>bg</code> to move the process to the background </li>\n<li>You will see\
+    \ output like <code>[1]+ nohup scp ...... &amp;</code></li>\n<li>The download\
+    \ will now resume in the background.</li>\n<li>Use the command <code>jobs</code>\
+    \ to see that the download job is still active.</li>\n</ul>\n<p>The terminal session\
+    \ can be terminated, and the download job will continue on the VM.</p>\n<ul>\n\
+    <li>If the job is not active (this may show as <code>[1]- ....</code>):<br>\n\
+    \  check for an error message in the output file :  <code>less nohup.out</code>\
+    \ </li>\n</ul>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/nohup_bg.png?raw=true\"\
+    ></p>\n<h3>example of using 'disown' <a name=\"disown\"></a></h3>\n<p>If you started\
+    \ a large download, and wanted it to continue without keeping the SSH\nconnection\
+    \ with the VM:</p>\n<ul>\n<li>e.g. scp username@host.address.edu.au:/data/files.tar.gz\
+    \ /mnt/data/</li>\n<li>Password is entered at the prompt</li>\n<li>Now the download\
+    \ begins. The standard output will appear in the terminal.</li>\n<li>Press 'control'\
+    \ and 'Z' to pause the download.  </li>\n<li>There will be output like <code>[1]+\
+    \  Stopped    scp ...</code></li>\n<li>Enter <code>bg</code> to move the process\
+    \ to the background </li>\n<li>There will be output like <code>[1]+ nohup scp\
+    \ ..... &amp;</code></li>\n<li>The download will resume in the background.</li>\n\
+    <li>The command <code>jobs</code> will show that the download job is still active.</li>\n\
+    <li>Enter <code>disown</code></li>\n<li>Entering <code>jobs</code> will show that\
+    \ the download job is no longer listed</li>\n<li>Entering <code>ps</code> shows\
+    \ that the processes involved in the download (e.g. ssh and scp) are active</li>\n\
+    </ul>\n<p>The terminal session can be terminated, and the download job will continue\
+    \ on the VM.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Cloud Basics--DOCID21/images/disown.png?raw=true\"></p>\n\
+    <h3>The Main Byobu / Screen Commands  <a name=\"byobu\"></a></h3>\n<p>'control'\
+    \ + 'a' (<strong>^a</strong>) is used to access the Screens commands during a\
+    \ Byobu session</p>\n<table>\n<thead>\n<tr>\n<th align=\"left\">Command</th>\n\
+    <th align=\"left\">Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td align=\"left\"\
+    ><code>byobu -S &lt;name&gt;</code></td>\n<td align=\"left\">start a new virtual\
+    \ terminal session</td>\n</tr>\n<tr>\n<td align=\"left\"><code>byobu</code></td>\n\
+    <td align=\"left\">select an existing session to resume</td>\n</tr>\n<tr>\n<td\
+    \ align=\"left\">^a then 'd'</td>\n<td align=\"left\">detach from the byobu session,\
+    \ you can resume it later</td>\n</tr>\n<tr>\n<td align=\"left\">^a then '?'</td>\n\
+    <td align=\"left\"><strong>help (menu of commands)</strong></td>\n</tr>\n<tr>\n\
+    <td align=\"left\">^a then 'c'</td>\n<td align=\"left\">open a new tab</td>\n\
+    </tr>\n<tr>\n<td align=\"left\">^a then 'n' or 'p'</td>\n<td align=\"left\">switch\
+    \ to next/previous tab</td>\n</tr>\n<tr>\n<td align=\"left\">^a then 'k'</td>\n\
+    <td align=\"left\">kill the current tab</td>\n</tr>\n<tr>\n<td align=\"left\"\
+    >^a then 'A'</td>\n<td align=\"left\">give the tab a title</td>\n</tr>\n<tr>\n\
+    <td align=\"left\">^a then '\\'</td>\n<td align=\"left\">terminates the byobu\
+    \ session, permanently</td>\n</tr>\n<tr>\n<td align=\"left\"><code>exit</code></td>\n\
+    <td align=\"left\">terminates the byobu session, permanently</td>\n</tr>\n</tbody>\n\
+    </table>\n<h3>Table Summarising Options for keeping Processes Running <a name=\"\
+    table\"></a></h3>\n<table>\n<thead>\n<tr>\n<th>Command type</th>\n<th>Command</th>\n\
+    <th>1.Use terminal</th>\n<th>2.Output</th>\n<th>3.Close window</th>\n<th>4.To\
+    \ terminate</th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>foreground</td>\n\
+    <td>(default)</td>\n<td>no</td>\n<td>printed</td>\n<td>termination</td>\n<td>ctrl\
+    \ c</td>\n<td></td>\n</tr>\n<tr>\n<td>background</td>\n<td><code>.... &amp;</code></td>\n\
+    <td>yes</td>\n<td>printed</td>\n<td>termination</td>\n<td>kill[PID#]</td>\n<td></td>\n\
+    </tr>\n<tr>\n<td>nohup</td>\n<td><code>nohup ...</code></td>\n<td>no</td>\n<td>saved</td>\n\
+    <td>no termination</td>\n<td>ctrl c</td>\n<td></td>\n</tr>\n<tr>\n<td>nohup +\
+    \ bg</td>\n<td><code>nohup .... &amp;</code></td>\n<td>yes</td>\n<td>saved</td>\n\
+    <td>no termination</td>\n<td>kill [PID#]</td>\n<td></td>\n</tr>\n<tr>\n<td>byobu</td>\n\
+    <td><code>byobu</code></td>\n<td>no (tabs)</td>\n<td>printed</td>\n<td>no termination</td>\n\
+    <td>ctrl a then k</td>\n<td></td>\n</tr>\n<tr>\n<td>byobu + nohup</td>\n<td>(combine\
+    \ commands)</td>\n<td>yes</td>\n<td>saved</td>\n<td>no termination</td>\n<td>kill\
+    \ [PID#]</td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<ol>\n<li>Is the terminal\
+    \ window available while the process is running;  </li>\n<li>Where is the standard\
+    \ output sent;   </li>\n<li>What happens to the process when you close the screen;\
+    \   </li>\n<li>How to terminate the process. </li>\n</ol>"
+  parent: 21
+  sha1: e407d13fe0a56c232cccf2d99f1cf6b56d8c1d2b
+  title: Tips for Running Jobs on your VM
