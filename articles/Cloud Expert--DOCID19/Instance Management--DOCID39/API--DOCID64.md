@@ -18,15 +18,12 @@ See below for the instructions:
 OS X
 
 
-```
+`sudo easy_install pip`
 
-sudo easy_install pip
+`sudo pip install --upgrade setuptools`
 
-sudo pip install --upgrade setuptools
+`sudo pip install python-novaclient`
 
-sudo pip install python-novaclient
-
-```
 
 Ubuntu
 
