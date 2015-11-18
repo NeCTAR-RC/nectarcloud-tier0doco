@@ -105,6 +105,7 @@ Due to the way Twitter Scraper is deployed, there are no easy ways to see if it 
 If the log file shows an error or java exception instead, then you may have configured the machine incorrectly. You should delete the instance and try again, paying particular attention to the Twitter API Access Tokens and Consumer Keys. Alternatively, you can log into the machine using SSH and [troubleshoot](#troubleshooting) the problem.
 
 ### How to Access Data via SSH
+
 Launchpod enables you to access the VM directly via SSH in order to modify the [configuration](#configuration-guide) file 
 
 ## Configuration Guide
@@ -228,11 +229,11 @@ Symptom|Possible Problem|Solution
 Launchpod failed to deply|Some availability zones may experience problems launching machines|Try again using another availability zone
 
 
-[screenshot_consumerKey]: images/consumerKey.png "Consumer Key"
-[screenshot_accessToken]: images/accessToken.png "Access Token"
-[screenshot_include_1]: images/include_1.png "Included phrases"
-[screenshot_include_2]: images/include_2.png "Included phrases"
-[screenshot_output]: images/output.png "Sample output"
+[screenshot_consumerKey]: twitterscraper_images/consumerKey.png "Consumer Key"
+[screenshot_accessToken]: twitterscraper_images/accessToken.png "Access Token"
+[screenshot_include_1]: twitterscraper_images/include_1.png "Included phrases"
+[screenshot_include_2]: twitterscraper_images/include_2.png "Included phrases"
+[screenshot_output]: twitterscraper_images/output.png "Sample output"
 [aaf]: http://aaf.edu.au
 [subscribers]: http://aaf.edu.au/subscribe/subscribers/
 [nectarRC]: http://cloud.nectar.org.au/
