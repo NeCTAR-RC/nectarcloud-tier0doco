@@ -10,7 +10,7 @@ are sent to standard output, which is the monitor.
 If you get an error, you can always read the error message and generally it will
 give you very good hints about what might be wrong.
 
-For example, if you execute ```swift list``` on the command line without
+For example, if you execute `swift list` on the command line without
 authentication, the error message might look like this:
 
 
@@ -49,9 +49,7 @@ more information [here][pdb].
 The following code uses pdb debugger to debug a python file contains client python
 API code.
 
-```
-pdb file_name.py
-```
+`pdb file_name.py`
 
 Once you executed the above code, the command line will be stopped on the first
 line of code and you can use some commands to control the execution flow.
