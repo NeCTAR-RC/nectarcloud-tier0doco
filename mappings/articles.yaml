@@ -14002,3 +14002,518 @@
   parent: 21
   sha1: e407d13fe0a56c232cccf2d99f1cf6b56d8c1d2b
   title: Tips for Running Jobs on your VM
+87:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-11-18T00:18:08-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " User Guide for Windows In The Cloud  \n \n SA node service\
+          \ for users in South Australia \n \n Introduction \n Cloud allocation \n\
+          \ Creating a security group \n Launching an instance \n Connecting to the\
+          \ virtual machine remotely with Windows Remote Desktop client \n Sharing\
+          \ files with the virtual machine \n Connecting from the Dashboard \n \n\
+          Glossary of Terms  \n \n \n Introduction \n \n eResearchSA is aiming to\
+          \ support South Australian users running \nWindows applications in the NeCTAR\
+          \ Australian research cloud. We are currently trialling an \napproach where\
+          \ users can access Windows virtual machines (VMs) in the cloud using Remote\
+          \ Desktop. \n The service currently uses Windows trial licenses, and this\
+          \ service will be further \ndeveloped as eRSA continues to explore licensing\
+          \ options with Microsoft. \n eRSA staff will need to set up your Windows\
+          \ VM image for the cloud. Once the image \nis created, you can set up a\
+          \ Windows virtual machine in the cloud by following the \nsteps specified\
+          \ below, or eRSA staff can do it for you. Email eRSA Helpdesk \nand we will\
+          \ assist you with getting started using Windows in the cloud. \n This service\
+          \ is designed for: \n \n Researchers using software that is only available\
+          \ on Windows. \n Researchers that are more comfortable using the familiar\
+          \ environment of the windows\n  desktop for their cloud computing. \n \n\
+          \ Glossary of Terms  \nTop of page \n \n \n Cloud allocation and Windows\
+          \ image \n The Windows operating system is much larger than the standard\
+          \ Linux operating systems that are usually used on NeCTAR VMs. \nYou will\
+          \ need to run the Windows image on an 'm2' Instance type, which has a 30GB\
+          \ root\ndrive rather than 10 GB. You will need to request a NeCTAR allocation\
+          \ beyond the standard personal project\nresource.By requesting more 'cores',\
+          \ you can launch instances that have enough storage to \ncope with the Windows\
+          \ operating system as well as storing and processing data. \n Log in to\
+          \ the web dashboard for the cloud \nand click on New Request under Allocations\
+          \ in the left hand side menu. Email the \neRSA Helpdesk if you have questions\
+          \ about any of the information in the form.\nNew requests can take a couple\
+          \ of weeks to process, and allocations are merit-based. \n To access an\
+          \ image with the Windows operating system, under current licensing agreements,\
+          \ you need to be researching in South Australia\nand be registered with\
+          \ eResearchSA. Email the eRSA Helpdesk\nto request an image to access Windows\
+          \ in the Cloud, and supply your NeCTAR username (the email address you use\
+          \ to \nlog on to NeCTAR services) and the name of the project which has\
+          \ the allocations you \nhave requested.  You will be emailed a username\
+          \ and password to access the Windows VM,\nand an image with the Windows\
+          \ trial will be made available on your NeCTAR Dashboard. \n Glossary of\
+          \ Terms \nTop of page \n \n \n Creating a security group \n \n \n First\
+          \ you will need to create a security group to allow you to connect to the\
+          \ \n  virtual machine remotely with Windows remote desktop.  \n \n \n Select\
+          \ \"Access & Security\" under the left hand side pane under \"Compute\"\
+          . \n \n \n  Select the \"Create Security Group\" button near the top right\
+          \ corner \n \n \n Give your security group a name and description and click\
+          \ the \"Create Security Group\" button \n \n \n \n Click \"Manage Rules\"\
+          \ in the \"Actions\" drop-down menu \n \n \n  Click on the \"Add Rule\"\
+          \ button near the top right corner  \n \n \n A small window should pop up.\
+          \ Make sure the \"Rule\" is set to \"Custom TCP Rule\" \n  and \"Open Port\"\
+          \ is set to \"Port\". Under the Port textbox enter \"3389\". Set \"Remote\"\
+          \ \n  to \"CIDR\" and under the \"CIDR\" textbox enter one of the following\
+          \ IP ranges as appropriate. \n \n 129.127.0.0/16 - University of Adelaide\
+          \ \n 129.96.0.0/16 - Flinders \n 130.220.0.0/16 - UniSA   \n \n \n E.g.\
+          \ for a user from the University of Adelaide: \n \n \n Glossary of Terms\
+          \  \nTop of page \n \n \n Creating an instance with the Windows image \n\
+          \ \n \n Select instance under the left hand side pane \n \n \n  Select the\
+          \ \"Launch Instance\" button near the top right corner \n \n \n In the pop-up\
+          \ window, assign a name to the Instance. Select a Flavor beginning with\
+          \ 'm2',\n  and ensure it has a 'Root Disk' of 30 GB (look in Flavor Details\
+          \ in the right column\n  of the window; we suggest m2.large or m2.xlarge).\
+          \ \n  In 'Instance Boot Source', ensure 'Boot from image' is selected. \n\
+          \  Under 'Image Name', select the image that was set up for you by eRSA.\
+          \ \n \n \n \n \n Under the \"Access & Security\" tab select the security\
+          \ group you created earlier. \n  In this example it was \"my_security_group\"\
+          . \n \n \n \n Under the \"Availability Zone\" tab select 'sa'; \n  Then\
+          \ click the blue 'Launch' button. \n \n \n Glossary of Terms  \nTop of page\
+          \ \n \n \n Connecting to the virtual machine remotely with Windows Remote\
+          \ Desktop client \n \n \n Other operating systems have similar remote desktop\
+          \ clients available that can be used almost\n  identically (e.g. Microsoft\
+          \ remote desktop is available for Mac, and there is a remote\n  desktop\
+          \ client pre-installed on Ubuntu. \n \n \n Take note of the instance IP\
+          \ address under the \"Instances\" page. You will need \n  this to connect\
+          \ to the virtual machine via remote desktop \n \n \n On your local desktop,\
+          \ start the Remote Desktop client (it is preinstalled - \n  search in the\
+          \ start menu).  \n \n \n In the \"Computer\" field,enter the IP address\
+          \ of the instance from the previous step click connect. \n \n \n \n \n You\
+          \ will be prompted to enter a username and password. These were supplied\
+          \ by eRSA when you requested the image for a \n  Windows VM. \n \n \n \n\
+          \ You will likely see a warning about accessing a remote computer, so tell\
+          \ your computer that it is \n  ok to trust the VM by clicking \"yes\" \n\
+          \ \n \n \n You should have now connected to the Windows virtual machine\
+          \ \n \n \n Glossary of Terms  \nTop of page \n \n \n Sharing files with\
+          \ the virtual machine \n \n \n The remote desktop client allows you to share\
+          \ disk drives between your local computer and the VM. \n \n \n At the remote\
+          \ dektop log-in window, click Show Options, then choose the Local Resources\
+          \ tab and click More. \n \n \n    \n \n \n Choose which local disk drives\
+          \ you want to make available during your remote session and click 'OK' \n\
+          \ \n \n \n Now when you connect to the windows VM, you will see the local\
+          \ drive amongst your devices. \n \n \n Glossary of Terms  \nTop of page\
+          \ \n \n \n Allowing connections from the NeCTAR Dashboard \n \n To have\
+          \ easy access to the remote desktop through your web browser from any computer,\
+          \ \n  you can use the console option in the Instances* page of the NeCTAR\
+          \ Dasboard. \n \n \n \n Log in to the virtual machine using the username\
+          \ and password supplied by eRSA \n  when you requested a Windows VM.\n \
+          \ (Note: these are NOT the same as the username and password for your eRSA\
+          \ account) \n \n \n \n \n When you are finished, log off the virtual machine\
+          \ via Start button -> Log off \n \n   \n Top of page \n \n \n Glossary \n\
+          \ Availability Zone \n \n A logical grouping of compute nodes within a region.\
+          \ \n \n Dashboard \n \n The NeCTAR Dashboard is the main web-based interface\
+          \ for managing NeCTAR virtuals. \n \n ERSA \n \n eResearch SA runs the South\
+          \ Australian node of the NeCTAR research cloud. \n \n Flavor \n \n An OpenStack\
+          \ term for an instance sizing specification. Gives the amount \nof memory,\
+          \ number of VCPUs and ephemeral disc size. \n \n Image \n \n An image (or\
+          \ system image) is a copy of the entire state of a computer system \nsaved\
+          \ as a file. Images are used in two ways in NeCTAR. Firstly as a template\
+          \ for \nVirtual Machines (VMs). You can launch a VM based on an image. \n\
+          The second use of images is to preserve the state of a VM as configured\
+          \ by you as end user. \nThis type of image is usually referred to as a snapshot.\
+          \ \n \n Instance \n \n An instance is a VM hosted on the NeCTAR OpenStack\
+          \ infrastructure. \n \n Project \n \n The NeCTAR term for a \"resource container\"\
+          ; i.e. what you get when you \nare granted a NeCTAR allocation. A project\
+          \ \"owns\" virtual machine instances, snapshots \nand various kinds of storage,\
+          \ and may be shared by multiple users. \n \n Security Group \n \n A set\
+          \ of access rules that may be applied to one or more instances. \nAn access\
+          \ rule allows network access to an instance from other hosts with a \nspecified\
+          \ combination of protocol family (e.g. TCP, UDP, UCMP), port number and\
+          \ address range. \n \n Virtual Machine \n \n A virtual machine (VM) is an\
+          \ operating system (OS) or application environment that \nis installed on\
+          \ software which imitates dedicated hardware. The end user has the same\
+          \ \nexperience on a virtual machine as they would have on dedicated hardware.\
+          \ \n \n Volume Storage \n \n Data Storage in your Virtual Machine that works\
+          \ like a hard-drive on your PC or \nlaptop does. Volume storage is automatically\
+          \ available in your VM as the storage \nspace for you system drive. Some\
+          \ flavors of VMs include an amount of ephemeral volume \nstorage. Depending\
+          \ on your allocation you can have persistent volume storage attached to\
+          \ your VM. \n \n Full Glossary Page \nNeCTAR FAQ - general inormation \n\
+          For more help, contact the eRSA Helpdesk or NeCTAR support   \n Top of page "
+        description: "<h1>User Guide for Windows In The Cloud  <a name=\"top\"></a>\n\
+          </h1>\n<h2>SA node service for users in South Australia</h2>\n<ul>\n<li><a\
+          \ href=\"#intro\">Introduction</a></li>\n<li><a href=\"#alloc\">Cloud allocation</a></li>\n\
+          <li><a href=\"#security\">Creating a security group</a></li>\n<li><a href=\"\
+          #instance\">Launching an instance</a></li>\n<li><a href=\"#desktop\">Connecting\
+          \ to the virtual machine remotely with Windows Remote Desktop client</a></li>\n\
+          <li><a href=\"#transferfiles\">Sharing files with the virtual machine</a></li>\n\
+          <li><a href=\"#connection\">Connecting from the Dashboard</a></li>\n<li>\n\
+          <a href=\"#glossary\">Glossary of Terms</a> </li>\n</ul>\n<hr>\n<h2>Introduction\
+          \ <a name=\"intro\"></a>\n</h2>\n<p><a href=\"https://www.ersa.edu.au/\"\
+          >eResearchSA</a> is aiming to support South Australian users running \n\
+          Windows applications in the NeCTAR Australian research cloud. We are currently\
+          \ trialling an \napproach where users can access Windows virtual machines\
+          \ (VMs) in the cloud using Remote Desktop.</p>\n<p>The service currently\
+          \ uses Windows trial licenses, and this service will be further \ndeveloped\
+          \ as eRSA continues to explore licensing options with Microsoft.</p>\n<p>eRSA\
+          \ staff will need to set up your Windows VM image for the cloud. Once the\
+          \ image \nis created, you can set up a Windows virtual machine in the cloud\
+          \ by following the \nsteps specified below, or eRSA staff can do it for\
+          \ you. Email <a href=\"mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a>\
+          \ \nand we will assist you with getting started using Windows in the cloud.</p>\n\
+          <p>This service is designed for:</p>\n<ul>\n<li>Researchers using software\
+          \ that is only available on Windows.</li>\n<li>Researchers that are more\
+          \ comfortable using the familiar environment of the windows\n  desktop for\
+          \ their cloud computing.</li>\n</ul>\n<p><a href=\"#glossary\">Glossary\
+          \ of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"\
+          alloc\"></a></p>\n<h2>Cloud allocation and Windows image</h2>\n<p>The Windows\
+          \ operating system is much larger than the standard Linux operating systems\
+          \ that are usually used on NeCTAR VMs. \nYou will need to run the Windows\
+          \ image on an '<strong>m2</strong>' Instance type, which has a 30GB root\n\
+          drive rather than 10 GB. You will need to request a <a href=\"https://dashboard.rc.nectar.org.au/project/request/\"\
+          >NeCTAR allocation</a> beyond the standard personal project\nresource.By\
+          \ requesting more 'cores', you can launch instances that have enough storage\
+          \ to \ncope with the Windows operating system as well as storing and processing\
+          \ data.</p>\n<p>Log in to the <a href=\"https://dashboard.rc.nectar.org.au/\"\
+          >web dashboard</a> for the cloud \nand click on <strong>New Request</strong>\
+          \ under <strong>Allocations</strong> in the left hand side menu. Email the\
+          \ \n<a href=\"mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a> if you\
+          \ have questions about any of the information in the form.\nNew requests\
+          \ can take a couple of weeks to process, and allocations are merit-based.</p>\n\
+          <p>To access an image with the Windows operating system, under current licensing\
+          \ agreements, you need to be researching in South Australia\nand be <a href=\"\
+          https://register.ersa.edu.au/\">registered with eResearchSA</a>. Email the\
+          \ <a href=\"mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a>\nto request\
+          \ an image to access Windows in the Cloud, and supply your NeCTAR username\
+          \ (the email address you use to \nlog on to NeCTAR services) and the name\
+          \ of the project which has the allocations you \nhave requested.  You will\
+          \ be emailed a username and password to access the Windows VM,\nand an image\
+          \ with the Windows trial will be made available on your NeCTAR Dashboard.</p>\n\
+          <p><a href=\"#glossary\">Glossary of Terms</a><br>\n<a href=\"#top\">Top\
+          \ of page</a></p>\n<hr>\n<p><a name=\"security\"></a></p>\n<h2>Creating\
+          \ a security group</h2>\n<ul>\n<li>\n<p>First you will need to create a\
+          \ security group to allow you to connect to the \n  virtual machine remotely\
+          \ with Windows remote desktop. </p>\n</li>\n<li>\n<p>Select \"Access &amp;\
+          \ Security\" under the left hand side pane under \"Compute\".</p>\n</li>\n\
+          <li>\n<p><img alt=\"\" src=\"windows_images/sg_createbutton.png\"> Select\
+          \ the \"Create Security Group\" button near the top right corner</p>\n</li>\n\
+          <li>\n<p>Give your security group a name and description and click the \"\
+          Create Security Group\" button</p>\n<p><img alt=\"\" src=\"windows_images/sg_createwindow.png\"\
+          ></p>\n</li>\n<li>\n<p>Click \"Manage Rules\" in the \"Actions\" drop-down\
+          \ menu</p>\n</li>\n<li>\n<p><img alt=\"\" src=\"windows_images/sg_rulebutton.png\"\
+          > Click on the \"Add Rule\" button near the top right corner </p>\n</li>\n\
+          <li>\n<p>A small window should pop up. Make sure the \"Rule\" is set to\
+          \ \"Custom TCP Rule\" \n  and \"Open Port\" is set to \"Port\". Under the\
+          \ Port textbox enter \"<strong>3389</strong>\". Set \"Remote\" \n  to \"\
+          CIDR\" and under the \"CIDR\" textbox enter one of the following IP ranges\
+          \ as appropriate.</p>\n<ul>\n<li>129.127.0.0/16 - University of Adelaide</li>\n\
+          <li>129.96.0.0/16 - Flinders</li>\n<li>130.220.0.0/16 - UniSA  </li>\n</ul>\n\
+          </li>\n<li>E.g. for a user from the University of Adelaide:</li>\n</ul>\n\
+          <p><img alt=\"\" src=\"windows_images/sg_rulewindow.png\"></p>\n<p><a href=\"\
+          #glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n\
+          <hr>\n<p><a name=\"instance\"></a></p>\n<h2>Creating an instance with the\
+          \ Windows image</h2>\n<ul>\n<li>\n<p>Select instance under the left hand\
+          \ side pane</p>\n</li>\n<li>\n<p><img alt=\"\" src=\"windows_images/instance_launch.png\"\
+          > Select the \"Launch Instance\" button near the top right corner</p>\n\
+          </li>\n<li>\n<p>In the pop-up window, assign a name to the Instance. Select\
+          \ a <strong>Flavor</strong> beginning with '<strong>m2</strong>',\n  and\
+          \ ensure it has a 'Root Disk' of 30 GB (look in Flavor Details in the right\
+          \ column\n  of the window; we suggest m2.large or m2.xlarge). \n  In 'Instance\
+          \ Boot Source', ensure 'Boot from image' is selected. \n  Under 'Image Name',\
+          \ select the image that was set up for you by eRSA.</p>\n</li>\n</ul>\n\
+          <p><img alt=\"\" src=\"windows_images/instance_tab_details.png\"></p>\n\
+          <ul>\n<li>Under the \"<strong>Access &amp; Security</strong>\" tab select\
+          \ the security group you created earlier. \n  In this example it was \"\
+          my_security_group\".</li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/instance_tab_security.png\"\
+          ></p>\n<ul>\n<li>Under the \"Availability Zone\" tab select '<strong>sa</strong>';<br>\n\
+          \  Then click the blue 'Launch' button.</li>\n</ul>\n<p><img alt=\"\" src=\"\
+          windows_images/instance_tab_zone.png\"></p>\n<p><a href=\"#glossary\">Glossary\
+          \ of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"\
+          desktop\"></a></p>\n<h2>Connecting to the virtual machine remotely with\
+          \ Windows Remote Desktop client</h2>\n<ul>\n<li>\n<p>Other operating systems\
+          \ have similar remote desktop clients available that can be used almost\n\
+          \  identically (e.g. <a href=\"https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417\"\
+          >Microsoft remote desktop</a> is available for Mac, and there is a remote\n\
+          \  desktop client pre-installed on Ubuntu.</p>\n</li>\n<li>\n<p>Take note\
+          \ of the instance IP address under the \"Instances\" page. You will need\
+          \ \n  this to connect to the virtual machine via remote desktop</p>\n</li>\n\
+          <li>\n<p>On your local desktop, start the Remote Desktop client (it is preinstalled\
+          \ - \n  search in the start menu). </p>\n</li>\n<li>\n<p>In the \"Computer\"\
+          \ field,enter the IP address of the instance from the previous step click\
+          \ connect.</p>\n</li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/instance_rdp1.png\"\
+          ></p>\n<ul>\n<li>You will be prompted to enter a username and password.\
+          \ These were supplied by eRSA when you requested the image for a \n  Windows\
+          \ VM.</li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/instance_rdp2.png\"\
+          ></p>\n<ul>\n<li>You will likely see a warning about accessing a remote\
+          \ computer, so tell your computer that it is \n  ok to trust the VM by clicking\
+          \ \"yes\"</li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/instance_rdp3.png\"\
+          ></p>\n<ul>\n<li>You should have now connected to the Windows virtual machine</li>\n\
+          </ul>\n<p><img alt=\"\" src=\"windows_images/instance_rdp4.png\"></p>\n\
+          <p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top\
+          \ of page</a></p>\n<hr>\n<p><a name=\"transferfiles\"></a></p>\n<h2>Sharing\
+          \ files with the virtual machine</h2>\n<ul>\n<li>\n<p>The remote desktop\
+          \ client allows you to share disk drives between your local computer and\
+          \ the VM.</p>\n</li>\n<li>\n<p>At the remote dektop log-in window, click\
+          \ <strong>Show Options</strong>, then choose the <strong>Local Resources</strong>\
+          \ tab and click <strong>More</strong>.</p>\n</li>\n</ul>\n<p><img alt=\"\
+          \" src=\"windows_images/share_1.png\">  </p>\n<p><img alt=\"\" src=\"windows_images/share_2.png\"\
+          ></p>\n<ul>\n<li>Choose which local disk drives you want to make available\
+          \ during your remote session and click 'OK'</li>\n</ul>\n<p><img alt=\"\"\
+          \ src=\"windows_images/share_3.png\"></p>\n<ul>\n<li>Now when you connect\
+          \ to the windows VM, you will see the local drive amongst your devices.</li>\n\
+          </ul>\n<p><img alt=\"\" src=\"windows_images/share_4.png\"></p>\n<p><a href=\"\
+          #glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n\
+          <hr>\n<p><a name=\"connection\"></a></p>\n<h2>Allowing connections from\
+          \ the NeCTAR Dashboard</h2>\n<ul>\n<li>To have easy access to the remote\
+          \ desktop through your web browser from any computer, \n  you can use the\
+          \ <strong>console</strong> option in the <em>Instances</em>* page of the\
+          \ <a href=\"https://dashboard.rc.nectar.org.au/\">NeCTAR Dasboard</a>.</li>\n\
+          </ul>\n<p><img alt=\"\" src=\"windows_images/new_instance_coonsole.png\"\
+          ></p>\n<ul>\n<li>Log in to the virtual machine using the username and password\
+          \ supplied by eRSA \n  when you requested a Windows VM.\n  (Note: these\
+          \ are NOT the same as the username and password for your eRSA account)</li>\n\
+          </ul>\n<p><img alt=\"\" src=\"windows_images/instance_login.png\"></p>\n\
+          <p><img alt=\"\" src=\"windows_images/instance_login2.png\"></p>\n<ul>\n\
+          <li>When you are finished, log off the virtual machine via Start button\
+          \ -&gt; Log off</li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/instance_logoff.png\"\
+          > </p>\n<p><a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"glossary\"\
+          ></a></p>\n<h3>Glossary</h3>\n<p><strong>Availability Zone</strong></p>\n\
+          <blockquote>\n<p>A logical grouping of compute nodes within a region.</p>\n\
+          </blockquote>\n<p><strong>Dashboard</strong></p>\n<blockquote>\n<p>The NeCTAR\
+          \ Dashboard is the main web-based interface for managing NeCTAR virtuals.</p>\n\
+          </blockquote>\n<p><strong>ERSA</strong></p>\n<blockquote>\n<p>eResearch\
+          \ SA runs the South Australian node of the NeCTAR research cloud.</p>\n\
+          </blockquote>\n<p><strong>Flavor</strong></p>\n<blockquote>\n<p>An OpenStack\
+          \ term for an instance sizing specification. Gives the amount \nof memory,\
+          \ number of VCPUs and ephemeral disc size.</p>\n</blockquote>\n<p><strong>Image</strong></p>\n\
+          <blockquote>\n<p>An image (or system image) is a copy of the entire state\
+          \ of a computer system \nsaved as a file. Images are used in two ways in\
+          \ NeCTAR. Firstly as a template for \nVirtual Machines (VMs). You can launch\
+          \ a VM based on an image. \nThe second use of images is to preserve the\
+          \ state of a VM as configured by you as end user. \nThis type of image is\
+          \ usually referred to as a snapshot.</p>\n</blockquote>\n<p><strong>Instance</strong></p>\n\
+          <blockquote>\n<p>An instance is a VM hosted on the NeCTAR OpenStack infrastructure.</p>\n\
+          </blockquote>\n<p><strong>Project</strong></p>\n<blockquote>\n<p>The NeCTAR\
+          \ term for a \"resource container\"; i.e. what you get when you \nare granted\
+          \ a NeCTAR allocation. A project \"owns\" virtual machine instances, snapshots\
+          \ \nand various kinds of storage, and may be shared by multiple users.</p>\n\
+          </blockquote>\n<p><strong>Security Group</strong></p>\n<blockquote>\n<p>A\
+          \ set of access rules that may be applied to one or more instances. \nAn\
+          \ access rule allows network access to an instance from other hosts with\
+          \ a \nspecified combination of protocol family (e.g. TCP, UDP, UCMP), port\
+          \ number and address range.</p>\n</blockquote>\n<p><strong>Virtual Machine</strong></p>\n\
+          <blockquote>\n<p>A virtual machine (VM) is an operating system (OS) or application\
+          \ environment that \nis installed on software which imitates dedicated hardware.\
+          \ The end user has the same \nexperience on a virtual machine as they would\
+          \ have on dedicated hardware.</p>\n</blockquote>\n<p><strong>Volume Storage</strong></p>\n\
+          <blockquote>\n<p>Data Storage in your Virtual Machine that works like a\
+          \ hard-drive on your PC or \nlaptop does. Volume storage is automatically\
+          \ available in your VM as the storage \nspace for you system drive. Some\
+          \ flavors of VMs include an amount of ephemeral volume \nstorage. Depending\
+          \ on your allocation you can have persistent volume storage attached to\
+          \ your VM.</p>\n</blockquote>\n<p><a href=\"https://support.nectar.org.au/support/solutions/articles/6000055445-glossary\"\
+          >Full Glossary Page</a><br>\n<a href=\"http://cloud.nectar.org.au/faq/\"\
+          >NeCTAR FAQ - general inormation</a><br>\nFor more help, contact the <a\
+          \ href=\"mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a> or <a href=\"\
+          https://support.nectar.org.au/support/tickets/new\">NeCTAR support</a> \
+          \ </p>\n<p><a href=\"#top\">Top of page</a></p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000089734
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-11-18T00:18:08-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000089734
+        position: 1
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Windows in the Cloud - user guide
+        updated_at: '2015-11-18T00:18:08-05:00'
+        user_id: 6002464727
+  html: "<h1>User Guide for Windows In The Cloud  <a name=\"top\"></a></h1>\n<h2>SA\
+    \ node service for users in South Australia</h2>\n<ul>\n<li><a href=\"#intro\"\
+    >Introduction</a></li>\n<li><a href=\"#alloc\">Cloud allocation</a></li>\n<li><a\
+    \ href=\"#security\">Creating a security group</a></li>\n<li><a href=\"#instance\"\
+    >Launching an instance</a></li>\n<li><a href=\"#desktop\">Connecting to the virtual\
+    \ machine remotely with Windows Remote Desktop client</a></li>\n<li><a href=\"\
+    #transferfiles\">Sharing files with the virtual machine</a></li>\n<li><a href=\"\
+    #connection\">Connecting from the Dashboard</a></li>\n<li><a href=\"#glossary\"\
+    >Glossary of Terms</a> </li>\n</ul>\n<hr>\n<h2>Introduction <a name=\"intro\"\
+    ></a></h2>\n<p><a href=\"https://www.ersa.edu.au/\">eResearchSA</a> is aiming\
+    \ to support South Australian users running \nWindows applications in the NeCTAR\
+    \ Australian research cloud. We are currently trialling an \napproach where users\
+    \ can access Windows virtual machines (VMs) in the cloud using Remote Desktop.</p>\n\
+    <p>The service currently uses Windows trial licenses, and this service will be\
+    \ further \ndeveloped as eRSA continues to explore licensing options with Microsoft.</p>\n\
+    <p>eRSA staff will need to set up your Windows VM image for the cloud. Once the\
+    \ image \nis created, you can set up a Windows virtual machine in the cloud by\
+    \ following the \nsteps specified below, or eRSA staff can do it for you. Email\
+    \ <a href=\"mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a> \nand we will assist\
+    \ you with getting started using Windows in the cloud.</p>\n<p>This service is\
+    \ designed for:</p>\n<ul>\n<li>Researchers using software that is only available\
+    \ on Windows.</li>\n<li>Researchers that are more comfortable using the familiar\
+    \ environment of the windows\n  desktop for their cloud computing.</li>\n</ul>\n\
+    <p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n\
+    <hr>\n<p><a name=\"alloc\"></a></p>\n<h2>Cloud allocation and Windows image</h2>\n\
+    <p>The Windows operating system is much larger than the standard Linux operating\
+    \ systems that are usually used on NeCTAR VMs. \nYou will need to run the Windows\
+    \ image on an '<strong>m2</strong>' Instance type, which has a 30GB root\ndrive\
+    \ rather than 10 GB. You will need to request a <a href=\"https://dashboard.rc.nectar.org.au/project/request/\"\
+    >NeCTAR allocation</a> beyond the standard personal project\nresource.By requesting\
+    \ more 'cores', you can launch instances that have enough storage to \ncope with\
+    \ the Windows operating system as well as storing and processing data.</p>\n<p>Log\
+    \ in to the <a href=\"https://dashboard.rc.nectar.org.au/\">web dashboard</a>\
+    \ for the cloud \nand click on <strong>New Request</strong> under <strong>Allocations</strong>\
+    \ in the left hand side menu. Email the \n<a href=\"mailto:servicedesk@ersa.edu.au\"\
+    >eRSA Helpdesk</a> if you have questions about any of the information in the form.\n\
+    New requests can take a couple of weeks to process, and allocations are merit-based.</p>\n\
+    <p>To access an image with the Windows operating system, under current licensing\
+    \ agreements, you need to be researching in South Australia\nand be <a href=\"\
+    https://register.ersa.edu.au/\">registered with eResearchSA</a>. Email the <a\
+    \ href=\"mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a>\nto request an image\
+    \ to access Windows in the Cloud, and supply your NeCTAR username (the email address\
+    \ you use to \nlog on to NeCTAR services) and the name of the project which has\
+    \ the allocations you \nhave requested.  You will be emailed a username and password\
+    \ to access the Windows VM,\nand an image with the Windows trial will be made\
+    \ available on your NeCTAR Dashboard.</p>\n<p><a href=\"#glossary\">Glossary of\
+    \ Terms</a><br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"security\"\
+    ></a></p>\n<h2>Creating a security group</h2>\n<ul>\n<li>\n<p>First you will need\
+    \ to create a security group to allow you to connect to the \n  virtual machine\
+    \ remotely with Windows remote desktop. </p>\n</li>\n<li>\n<p>Select \"Access\
+    \ &amp; Security\" under the left hand side pane under \"Compute\".</p>\n</li>\n\
+    <li>\n<p><img alt=\"\" src=\"windows_images/sg_createbutton.png\"> Select the\
+    \ \"Create Security Group\" button near the top right corner</p>\n</li>\n<li>\n\
+    <p>Give your security group a name and description and click the \"Create Security\
+    \ Group\" button</p>\n<p><img alt=\"\" src=\"windows_images/sg_createwindow.png\"\
+    ></p>\n</li>\n<li>\n<p>Click \"Manage Rules\" in the \"Actions\" drop-down menu</p>\n\
+    </li>\n<li>\n<p><img alt=\"\" src=\"windows_images/sg_rulebutton.png\"> Click\
+    \ on the \"Add Rule\" button near the top right corner </p>\n</li>\n<li>\n<p>A\
+    \ small window should pop up. Make sure the \"Rule\" is set to \"Custom TCP Rule\"\
+    \ \n  and \"Open Port\" is set to \"Port\". Under the Port textbox enter \"<strong>3389</strong>\"\
+    . Set \"Remote\" \n  to \"CIDR\" and under the \"CIDR\" textbox enter one of the\
+    \ following IP ranges as appropriate.</p>\n<ul>\n<li>129.127.0.0/16 - University\
+    \ of Adelaide</li>\n<li>129.96.0.0/16 - Flinders</li>\n<li>130.220.0.0/16 - UniSA\
+    \  </li>\n</ul>\n</li>\n<li>E.g. for a user from the University of Adelaide:</li>\n\
+    </ul>\n<p><img alt=\"\" src=\"windows_images/sg_rulewindow.png\"></p>\n<p><a href=\"\
+    #glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n\
+    <hr>\n<p><a name=\"instance\"></a></p>\n<h2>Creating an instance with the Windows\
+    \ image</h2>\n<ul>\n<li>\n<p>Select instance under the left hand side pane</p>\n\
+    </li>\n<li>\n<p><img alt=\"\" src=\"windows_images/instance_launch.png\"> Select\
+    \ the \"Launch Instance\" button near the top right corner</p>\n</li>\n<li>\n\
+    <p>In the pop-up window, assign a name to the Instance. Select a <strong>Flavor</strong>\
+    \ beginning with '<strong>m2</strong>',\n  and ensure it has a 'Root Disk' of\
+    \ 30 GB (look in Flavor Details in the right column\n  of the window; we suggest\
+    \ m2.large or m2.xlarge). \n  In 'Instance Boot Source', ensure 'Boot from image'\
+    \ is selected. \n  Under 'Image Name', select the image that was set up for you\
+    \ by eRSA.</p>\n</li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/instance_tab_details.png\"\
+    ></p>\n<ul>\n<li>Under the \"<strong>Access &amp; Security</strong>\" tab select\
+    \ the security group you created earlier. \n  In this example it was \"my_security_group\"\
+    .</li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/instance_tab_security.png\"\
+    ></p>\n<ul>\n<li>Under the \"Availability Zone\" tab select '<strong>sa</strong>';<br>\n\
+    \  Then click the blue 'Launch' button.</li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/instance_tab_zone.png\"\
+    ></p>\n<p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top\
+    \ of page</a></p>\n<hr>\n<p><a name=\"desktop\"></a></p>\n<h2>Connecting to the\
+    \ virtual machine remotely with Windows Remote Desktop client</h2>\n<ul>\n<li>\n\
+    <p>Other operating systems have similar remote desktop clients available that\
+    \ can be used almost\n  identically (e.g. <a href=\"https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417\"\
+    >Microsoft remote desktop</a> is available for Mac, and there is a remote\n  desktop\
+    \ client pre-installed on Ubuntu.</p>\n</li>\n<li>\n<p>Take note of the instance\
+    \ IP address under the \"Instances\" page. You will need \n  this to connect to\
+    \ the virtual machine via remote desktop</p>\n</li>\n<li>\n<p>On your local desktop,\
+    \ start the Remote Desktop client (it is preinstalled - \n  search in the start\
+    \ menu). </p>\n</li>\n<li>\n<p>In the \"Computer\" field,enter the IP address\
+    \ of the instance from the previous step click connect.</p>\n</li>\n</ul>\n<p><img\
+    \ alt=\"\" src=\"windows_images/instance_rdp1.png\"></p>\n<ul>\n<li>You will be\
+    \ prompted to enter a username and password. These were supplied by eRSA when\
+    \ you requested the image for a \n  Windows VM.</li>\n</ul>\n<p><img alt=\"\"\
+    \ src=\"windows_images/instance_rdp2.png\"></p>\n<ul>\n<li>You will likely see\
+    \ a warning about accessing a remote computer, so tell your computer that it is\
+    \ \n  ok to trust the VM by clicking \"yes\"</li>\n</ul>\n<p><img alt=\"\" src=\"\
+    windows_images/instance_rdp3.png\"></p>\n<ul>\n<li>You should have now connected\
+    \ to the Windows virtual machine</li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/instance_rdp4.png\"\
+    ></p>\n<p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top\
+    \ of page</a></p>\n<hr>\n<p><a name=\"transferfiles\"></a></p>\n<h2>Sharing files\
+    \ with the virtual machine</h2>\n<ul>\n<li>\n<p>The remote desktop client allows\
+    \ you to share disk drives between your local computer and the VM.</p>\n</li>\n\
+    <li>\n<p>At the remote dektop log-in window, click <strong>Show Options</strong>,\
+    \ then choose the <strong>Local Resources</strong> tab and click <strong>More</strong>.</p>\n\
+    </li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/share_1.png\">  </p>\n<p><img\
+    \ alt=\"\" src=\"windows_images/share_2.png\"></p>\n<ul>\n<li>Choose which local\
+    \ disk drives you want to make available during your remote session and click\
+    \ 'OK'</li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/share_3.png\"></p>\n\
+    <ul>\n<li>Now when you connect to the windows VM, you will see the local drive\
+    \ amongst your devices.</li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/share_4.png\"\
+    ></p>\n<p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top\
+    \ of page</a></p>\n<hr>\n<p><a name=\"connection\"></a></p>\n<h2>Allowing connections\
+    \ from the NeCTAR Dashboard</h2>\n<ul>\n<li>To have easy access to the remote\
+    \ desktop through your web browser from any computer, \n  you can use the <strong>console</strong>\
+    \ option in the <em>Instances</em>* page of the <a href=\"https://dashboard.rc.nectar.org.au/\"\
+    >NeCTAR Dasboard</a>.</li>\n</ul>\n<p><img alt=\"\" src=\"windows_images/new_instance_coonsole.png\"\
+    ></p>\n<ul>\n<li>Log in to the virtual machine using the username and password\
+    \ supplied by eRSA \n  when you requested a Windows VM.\n  (Note: these are NOT\
+    \ the same as the username and password for your eRSA account)</li>\n</ul>\n<p><img\
+    \ alt=\"\" src=\"windows_images/instance_login.png\"></p>\n<p><img alt=\"\" src=\"\
+    windows_images/instance_login2.png\"></p>\n<ul>\n<li>When you are finished, log\
+    \ off the virtual machine via Start button -&gt; Log off</li>\n</ul>\n<p><img\
+    \ alt=\"\" src=\"windows_images/instance_logoff.png\"> </p>\n<p><a href=\"#top\"\
+    >Top of page</a></p>\n<hr>\n<p><a name=\"glossary\"></a></p>\n<h3>Glossary</h3>\n\
+    <p><strong>Availability Zone</strong></p>\n<blockquote>\n<p>A logical grouping\
+    \ of compute nodes within a region.</p>\n</blockquote>\n<p><strong>Dashboard</strong></p>\n\
+    <blockquote>\n<p>The NeCTAR Dashboard is the main web-based interface for managing\
+    \ NeCTAR virtuals.</p>\n</blockquote>\n<p><strong>ERSA</strong></p>\n<blockquote>\n\
+    <p>eResearch SA runs the South Australian node of the NeCTAR research cloud.</p>\n\
+    </blockquote>\n<p><strong>Flavor</strong></p>\n<blockquote>\n<p>An OpenStack term\
+    \ for an instance sizing specification. Gives the amount \nof memory, number of\
+    \ VCPUs and ephemeral disc size.</p>\n</blockquote>\n<p><strong>Image</strong></p>\n\
+    <blockquote>\n<p>An image (or system image) is a copy of the entire state of a\
+    \ computer system \nsaved as a file. Images are used in two ways in NeCTAR. Firstly\
+    \ as a template for \nVirtual Machines (VMs). You can launch a VM based on an\
+    \ image. \nThe second use of images is to preserve the state of a VM as configured\
+    \ by you as end user. \nThis type of image is usually referred to as a snapshot.</p>\n\
+    </blockquote>\n<p><strong>Instance</strong></p>\n<blockquote>\n<p>An instance\
+    \ is a VM hosted on the NeCTAR OpenStack infrastructure.</p>\n</blockquote>\n\
+    <p><strong>Project</strong></p>\n<blockquote>\n<p>The NeCTAR term for a \"resource\
+    \ container\"; i.e. what you get when you \nare granted a NeCTAR allocation. A\
+    \ project \"owns\" virtual machine instances, snapshots \nand various kinds of\
+    \ storage, and may be shared by multiple users.</p>\n</blockquote>\n<p><strong>Security\
+    \ Group</strong></p>\n<blockquote>\n<p>A set of access rules that may be applied\
+    \ to one or more instances. \nAn access rule allows network access to an instance\
+    \ from other hosts with a \nspecified combination of protocol family (e.g. TCP,\
+    \ UDP, UCMP), port number and address range.</p>\n</blockquote>\n<p><strong>Virtual\
+    \ Machine</strong></p>\n<blockquote>\n<p>A virtual machine (VM) is an operating\
+    \ system (OS) or application environment that \nis installed on software which\
+    \ imitates dedicated hardware. The end user has the same \nexperience on a virtual\
+    \ machine as they would have on dedicated hardware.</p>\n</blockquote>\n<p><strong>Volume\
+    \ Storage</strong></p>\n<blockquote>\n<p>Data Storage in your Virtual Machine\
+    \ that works like a hard-drive on your PC or \nlaptop does. Volume storage is\
+    \ automatically available in your VM as the storage \nspace for you system drive.\
+    \ Some flavors of VMs include an amount of ephemeral volume \nstorage. Depending\
+    \ on your allocation you can have persistent volume storage attached to your VM.</p>\n\
+    </blockquote>\n<p><a href=\"https://support.nectar.org.au/support/solutions/articles/6000055445-glossary\"\
+    >Full Glossary Page</a><br>\n<a href=\"http://cloud.nectar.org.au/faq/\">NeCTAR\
+    \ FAQ - general inormation</a><br>\nFor more help, contact the <a href=\"mailto:servicedesk@ersa.edu.au\"\
+    >eRSA Helpdesk</a> or <a href=\"https://support.nectar.org.au/support/tickets/new\"\
+    >NeCTAR support</a>  </p>\n<p><a href=\"#top\">Top of page</a></p>"
+  parent: 24
+  sha1: 15b693a64bbda134aab14893770d5fa7d94a7de5
+  title: Windows in the Cloud - user guide
