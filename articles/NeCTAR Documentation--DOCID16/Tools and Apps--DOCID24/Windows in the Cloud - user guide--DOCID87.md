@@ -80,15 +80,15 @@ and an image with the Windows trial will be made available on your NeCTAR Dashbo
 
 -  Select "Access & Security" under the left hand side pane under "Compute".
 
--  ![](windows_images/sg_createbutton.png) Select the "Create Security Group" button near the top right corner
+-  ![](images/windowsDOCID87_sg_createbutton.png) Select the "Create Security Group" button near the top right corner
 
 -  Give your security group a name and description and click the "Create Security Group" button
 
-    ![](windows_images/sg_createwindow.png)
+    ![](images/windowsDOCID87_sg_createwindow.png)
 
 -  Click "Manage Rules" in the "Actions" drop-down menu
 
--  ![](windows_images/sg_rulebutton.png) Click on the "Add Rule" button near the top right corner 
+-  ![](images/windowsDOCID87_sg_rulebutton.png) Click on the "Add Rule" button near the top right corner 
 
 -  A small window should pop up. Make sure the "Rule" is set to "Custom TCP Rule" 
   and "Open Port" is set to "Port". Under the Port textbox enter "**3389**". Set "Remote" 
@@ -98,7 +98,7 @@ and an image with the Windows trial will be made available on your NeCTAR Dashbo
     - 130.220.0.0/16 - UniSA  
 -  E.g. for a user from the University of Adelaide:
 
-  ![](windows_images/sg_rulewindow.png)
+  ![](images/windowsDOCID87_sg_rulewindow.png)
 
 [Glossary of Terms](#glossary)   
 [Top of page](#top)
@@ -112,7 +112,7 @@ and an image with the Windows trial will be made available on your NeCTAR Dashbo
 
 -  Select instance under the left hand side pane
 
--  ![](windows_images/instance_launch.png) Select the "Launch Instance" button near the top right corner
+-  ![](images/windowsDOCID87_instance_launch.png) Select the "Launch Instance" button near the top right corner
 
 -  In the pop-up window, assign a name to the Instance. Select a **Flavor** beginning with '**m2**',
   and ensure it has a 'Root Disk' of 30 GB (look in Flavor Details in the right column
@@ -120,17 +120,17 @@ and an image with the Windows trial will be made available on your NeCTAR Dashbo
   In 'Instance Boot Source', ensure 'Boot from image' is selected. 
   Under 'Image Name', select the image that was set up for you by eRSA.
 
-  ![](windows_images/instance_tab_details.png)
+  ![](images/windowsDOCID87_instance_tab_details.png)
 
 -  Under the "**Access & Security**" tab select the security group you created earlier. 
   In this example it was "my_security_group".
 
-  ![](windows_images/instance_tab_security.png)
+  ![](images/windowsDOCID87_instance_tab_security.png)
 
 -  Under the "Availability Zone" tab select '**sa**';  
   Then click the blue 'Launch' button.
 
-  ![](windows_images/instance_tab_zone.png)
+  ![](images/windowsDOCID87_instance_tab_zone.png)
 
 [Glossary of Terms](#glossary)   
 [Top of page](#top)
@@ -153,21 +153,21 @@ and an image with the Windows trial will be made available on your NeCTAR Dashbo
   
 - In the "Computer" field,enter the IP address of the instance from the previous step click connect.
 
-  ![](windows_images/instance_rdp1.png)
+  ![](images/windowsDOCID87_instance_rdp1.png)
 
 - You will be prompted to enter a username and password. These were supplied by eRSA when you requested the image for a 
   Windows VM.
 
-  ![](windows_images/instance_rdp2.png)
+  ![](images/windowsDOCID87_instance_rdp2.png)
 
 -  You will likely see a warning about accessing a remote computer, so tell your computer that it is 
   ok to trust the VM by clicking "yes"
 
-  ![](windows_images/instance_rdp3.png)
+  ![](images/windowsDOCID87_instance_rdp3.png)
 
 -  You should have now connected to the Windows virtual machine
 
-  ![](windows_images/instance_rdp4.png)
+  ![](images/windowsDOCID87_instance_rdp4.png)
 
 [Glossary of Terms](#glossary)   
 [Top of page](#top)
@@ -182,17 +182,17 @@ and an image with the Windows trial will be made available on your NeCTAR Dashbo
 
 - At the remote dektop log-in window, click **Show Options**, then choose the **Local Resources** tab and click **More**.
 
-  ![](windows_images/share_1.png)  
+  ![](images/windowsDOCID87_share_1.png)  
   
-  ![](windows_images/share_2.png)
+  ![](images/windowsDOCID87_share_2.png)
 
 -  Choose which local disk drives you want to make available during your remote session and click 'OK'
 
-  ![](windows_images/share_3.png)
+  ![](images/windowsDOCID87_share_3.png)
 
 - Now when you connect to the windows VM, you will see the local drive amongst your devices.
 
-  ![](windows_images/share_4.png)
+  ![](images/windowsDOCID87_share_4.png)
 
 [Glossary of Terms](#glossary)   
 [Top of page](#top)
@@ -206,20 +206,20 @@ and an image with the Windows trial will be made available on your NeCTAR Dashbo
 -  To have easy access to the remote desktop through your web browser from any computer, 
   you can use the **console** option in the *Instances** page of the [NeCTAR Dasboard][dashboard].
 
-  ![](windows_images/new_instance_coonsole.png)
+  ![](images/windowsDOCID87_new_instance_coonsole.png)
 
 -  Log in to the virtual machine using the username and password supplied by eRSA 
   when you requested a Windows VM.
   (Note: these are NOT the same as the username and password for your eRSA account)
 
-  ![](windows_images/instance_login.png)
+  ![](images/windowsDOCID87_instance_login.png)
   
-  ![](windows_images/instance_login2.png)
+  ![](images/windowsDOCID87_instance_login2.png)
 
 
 -  When you are finished, log off the virtual machine via Start button -> Log off
 
-  ![](windows_images/instance_logoff.png) 
+  ![](images/windowsDOCID87_instance_logoff.png) 
 
 [Top of page](#top)
 
