@@ -14874,7 +14874,7 @@
           \ four settings you need, the Consumer Key (API Key) and the Consumer Secret\
           \ (API Secret). You can copy these straight out of Twitter and into a note\
           \ or document for use later, or put them directly into the relevant fields\
-          \ in Launchpod.</p>\n<p><img alt=\"screenshot_consumerKey\" src=\"twitterscraper_images/consumerKey.png\"\
+          \ in Launchpod.</p>\n<p><img alt=\"screenshot_consumerKey\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/twitterDOCID88_consumerKey.png?raw=true\"\
           \ title=\"Consumer Key\"></p>\n<p>To generate the other two credentials,\
           \ scroll to the bottom of the same page and under 'Your Access Token' click\
           \ the button 'Create my access token'. The page will reload, and the Access\
@@ -14882,27 +14882,28 @@
           \ when copying the Access Token that you copy the whole line including the\
           \ 9-digit number at the front, which is the same as your owner ID. The Launchpod\
           \ Twitter Scraper will not function without this.</p>\n<p><img alt=\"screenshot_accessToken\"\
-          \ src=\"twitterscraper_images/accessToken.png\" title=\"Access Token\"></p>\n\
-          <p>Now that you have all of the access credentials needed to deploy Twitter\
-          \ Scraper, you can begin configuring the tweet harvesting parameters.</p>\n\
-          <h3>Specifying Harvest Parameters</h3>\n<p>Twitter Scraper search parameters\
-          \ need to be configured prior to the deployment of the server. Once it is\
-          \ deployed, you cannot change the search settings without logging in to\
-          \ the VM via SSH. Harvest parameters are split into two categories: <a href=\"\
-          #matching-options\">Matching Options</a>, what Twitter Scraper will search\
-          \ for; and <a href=\"#output-options\">Output Options</a>, how Twitter Scraper\
-          \ will format and configure the output CSV file.</p>\n<h4>Matching options</h4>\n\
-          <h5>Phrases</h5>\n<p>This is where you will enter the search terms and hashtags\
-          \ that Twitter Scraper will monitor the Twitter stream for. You can set\
-          \ search phrases in a number of ways. To search for an individual word,\
-          \ enter a single word and hit return. If you want to search for tweets that\
-          \ contain multiple words in any order, enter each word and hit return. If\
-          \ you want to search for an exact phrase, enclose the phrase in double quotes\
-          \ before hitting return. The example below will return any tweet that contains\
-          \ the word \u2018Launchpod\u2019, in addition to any tweet that contains\
-          \ both the words \u2018Intersect\u2019 and \u2018Australia\u2019, in addition\
-          \ to any tweet that contains the exact phrase \u2018Twitter Scraper\u2019\
-          .</p>\n<p><img alt=\"screenshot_include_1\" src=\"twitterscraper_images/include_1.png\"\
+          \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/twitterDOCID88_accessToken.png?raw=true\"\
+          \ title=\"Access Token\"></p>\n<p>Now that you have all of the access credentials\
+          \ needed to deploy Twitter Scraper, you can begin configuring the tweet\
+          \ harvesting parameters.</p>\n<h3>Specifying Harvest Parameters</h3>\n<p>Twitter\
+          \ Scraper search parameters need to be configured prior to the deployment\
+          \ of the server. Once it is deployed, you cannot change the search settings\
+          \ without logging in to the VM via SSH. Harvest parameters are split into\
+          \ two categories: <a href=\"#matching-options\">Matching Options</a>, what\
+          \ Twitter Scraper will search for; and <a href=\"#output-options\">Output\
+          \ Options</a>, how Twitter Scraper will format and configure the output\
+          \ CSV file.</p>\n<h4>Matching options</h4>\n<h5>Phrases</h5>\n<p>This is\
+          \ where you will enter the search terms and hashtags that Twitter Scraper\
+          \ will monitor the Twitter stream for. You can set search phrases in a number\
+          \ of ways. To search for an individual word, enter a single word and hit\
+          \ return. If you want to search for tweets that contain multiple words in\
+          \ any order, enter each word and hit return. If you want to search for an\
+          \ exact phrase, enclose the phrase in double quotes before hitting return.\
+          \ The example below will return any tweet that contains the word \u2018\
+          Launchpod\u2019, in addition to any tweet that contains both the words \u2018\
+          Intersect\u2019 and \u2018Australia\u2019, in addition to any tweet that\
+          \ contains the exact phrase \u2018Twitter Scraper\u2019.</p>\n<p><img alt=\"\
+          screenshot_include_1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/twitterDOCID88_include_1.png?raw=true\"\
           \ title=\"Included phrases\"></p>\n<p>In other words, each search term is\
           \ separated by an implicit OR operation, and every word inside a search\
           \ term (such as \u2018Intersect Australia\u2019 above) is separated by an\
@@ -14911,7 +14912,7 @@
           \ words and exact phrases in a single search term, such as the search term\
           \ below, which will return only tweets that contain the exact phrase \u2018\
           Twitter Scraper\u2019 as well as both words \u2018Intersect\u2019 and \u2018\
-          Australia\u2019.</p>\n<p><img alt=\"screenshot_include_2\" src=\"twitterscraper_images/include_2.png\"\
+          Australia\u2019.</p>\n<p><img alt=\"screenshot_include_2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/twitterDOCID88_include_2.png?raw=true\"\
           \ title=\"Included phrases\"></p>\n<h5>Exclude Phrases</h5>\n<p>This field\
           \ is used to block the persistence of tweets that match the pattern. Exclusion\
           \ overrules inclusion, meaning that even if a tweet matches every inclusion\
@@ -14995,7 +14996,7 @@
           \ the VM containing a spreadsheet (or more) of Twitter Scraper's output\
           \ data. If you selected a time period, then you will see one spreadsheet\
           \ corresponding to each of that period that has begun since the VM was deployed.\
-          \ </p>\n<p><img alt=\"screenshot_output\" src=\"twitterscraper_images/output.png\"\
+          \ </p>\n<p><img alt=\"screenshot_output\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/twitterDOCID88_output.png?raw=true\"\
           \ title=\"Sample output\"></p>\n<p>Due to the way Twitter Scraper is deployed,\
           \ there are no easy ways to see if it is working, until tweets begin to\
           \ appear in the spreadsheet, which, depending on the harvest settings, could\
@@ -15118,13 +15119,13 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 5
         id: 6000089738
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-18T01:00:13-05:00'
+        modified_at: '2015-11-18T17:31:34-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000089738
@@ -15137,7 +15138,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Intersect Twitter Scraper User Guide
-        updated_at: '2015-11-18T01:00:13-05:00'
+        updated_at: '2015-11-18T17:31:34-05:00'
         user_id: 6002464727
   html: "<h1>Twitter Scraper User Guide</h1>\n<h2>Description</h2>\n<p>Twitter Scraper\
     \ is a tool developed by Intersect for use in collecting data directly from the\
@@ -15193,14 +15194,17 @@
     \ need, the Consumer Key (API Key) and the Consumer Secret (API Secret). You can\
     \ copy these straight out of Twitter and into a note or document for use later,\
     \ or put them directly into the relevant fields in Launchpod.</p>\n<p><img alt=\"\
-    screenshot_consumerKey\" src=\"twitterscraper_images/consumerKey.png\" title=\"\
-    Consumer Key\"></p>\n<p>To generate the other two credentials, scroll to the bottom\
-    \ of the same page and under 'Your Access Token' click the button 'Create my access\
-    \ token'. The page will reload, and the Access Token and the Access Token Secret\
-    \ will be displayed at the end. Make sure when copying the Access Token that you\
-    \ copy the whole line including the 9-digit number at the front, which is the\
-    \ same as your owner ID. The Launchpod Twitter Scraper will not function without\
-    \ this.</p>\n<p><img alt=\"screenshot_accessToken\" src=\"twitterscraper_images/accessToken.png\"\
+    screenshot_consumerKey\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/twitterDOCID88_consumerKey.png?raw=true\"\
+    \ title=\"Consumer Key\"></p>\n<p>To generate the other two credentials, scroll\
+    \ to the bottom of the same page and under 'Your Access Token' click the button\
+    \ 'Create my access token'. The page will reload, and the Access Token and the\
+    \ Access Token Secret will be displayed at the end. Make sure when copying the\
+    \ Access Token that you copy the whole line including the 9-digit number at the\
+    \ front, which is the same as your owner ID. The Launchpod Twitter Scraper will\
+    \ not function without this.</p>\n<p><img alt=\"screenshot_accessToken\" src=\"\
+    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/twitterDOCID88_accessToken.png?raw=true\"\
     \ title=\"Access Token\"></p>\n<p>Now that you have all of the access credentials\
     \ needed to deploy Twitter Scraper, you can begin configuring the tweet harvesting\
     \ parameters.</p>\n<h3>Specifying Harvest Parameters</h3>\n<p>Twitter Scraper\
@@ -15219,7 +15223,8 @@
     \ any tweet that contains the word \u2018Launchpod\u2019, in addition to any tweet\
     \ that contains both the words \u2018Intersect\u2019 and \u2018Australia\u2019\
     , in addition to any tweet that contains the exact phrase \u2018Twitter Scraper\u2019\
-    .</p>\n<p><img alt=\"screenshot_include_1\" src=\"twitterscraper_images/include_1.png\"\
+    .</p>\n<p><img alt=\"screenshot_include_1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/twitterDOCID88_include_1.png?raw=true\"\
     \ title=\"Included phrases\"></p>\n<p>In other words, each search term is separated\
     \ by an implicit OR operation, and every word inside a search term (such as \u2018\
     Intersect Australia\u2019 above) is separated by an implicit AND operation. Lastly,\
@@ -15228,105 +15233,107 @@
     \ term, such as the search term below, which will return only tweets that contain\
     \ the exact phrase \u2018Twitter Scraper\u2019 as well as both words \u2018Intersect\u2019\
     \ and \u2018Australia\u2019.</p>\n<p><img alt=\"screenshot_include_2\" src=\"\
-    twitterscraper_images/include_2.png\" title=\"Included phrases\"></p>\n<h5>Exclude\
-    \ Phrases</h5>\n<p>This field is used to block the persistence of tweets that\
-    \ match the pattern. Exclusion overrules inclusion, meaning that even if a tweet\
-    \ matches every inclusion parameter, if it matches a single exclusion parameter,\
-    \ it will not be included in the output. The excluded phrases field works exactly\
-    \ like the phrases field in the interpretation of terms.</p>\n<h5>Users</h5>\n\
-    <p>You may also specify particular users you want to include in your search using\
-    \ the users field. If you leave this blank, the effect will be that all users\
-    \ are included in the harvest. If you have just one username entered, only tweets\
-    \ from that user will be included in the output. If you need to include a large\
-    \ list of usernames, you can paste a list of usernames separated by commas.</p>\n\
-    <p>If you specify both a set of users and a set of phrases for your harvest parameters,\
-    \ both criteria must be satisfied for a tweet to be harvested. In otherwords,\
-    \ only tweets by users specified in your Users <em>and</em> which satisfy your\
-    \ phrase search will be harvested. You may specify a set of users, or just a single\
-    \ user, without specifying search phrases, in which case all tweets by those users\
-    \ will be harvested.</p>\n<h5>Location</h5>\n<p>Checking the \u2018Set Location\
-    \ Bounds\u2019 will open a map window in which you can define a bounding box.\
-    \ Only tweets that are geocoded as originating from inside that box will be included\
-    \ in the output. Tweets that originated from outside the bounding box will not\
-    \ be harvested, nor will tweets that are not geocoded. Remember that users can\
-    \ switch off geocoding, and many do for privacy reasons.</p>\n<h5>Languages</h5>\n\
-    <p>You can use the Languages field to restrict your search to tweets in that language.\
-    \ You can also select multiple languages. The effect of selecting no language\
-    \ here is analogous to selecting no users; any tweet will match irrespective of\
-    \ its language value. Tweets are identified as being in a particular language\
-    \ automatically by machine detection, and this may not work perfectly.</p>\n<h4>Output\
-    \ Options</h4>\n<h5>Output Fields</h5>\n<p>The output fields allows you to customise\
-    \ the spreadsheet output containing the tweets. By default, all elements are included,\
-    \ but you can uncheck any of the checkboxes if you do not want to include a particular\
-    \ tweet attribute in your output.</p>\n<h5>Treat Hashtags Independently</h5>\n\
-    <p>This setting modified the behaviour of Twitter Scraper when tweets contain\
-    \ multiple hashtags. Hashtags are parsed out of the content of the tweet body\
-    \ and sent to a separate column of the spreadsheet output. If this box is left\
-    \ unchecked, a tweet containing more than one tweet will occur once in the spreadsheet,\
-    \ and both hashtags will be written to the hashtag column. If this box is checked,\
-    \ then the tweet will be repeated in the output spreadsheet, once for each hashtag,\
-    \ and the hashtag column will contain only one hashtag. This may be useful if\
-    \ you intend to process the output of the scraper using hashtags. If you only\
-    \ intend to analyse the tweet body, you may want to leave this box unchecked so\
-    \ as not to have repeats of the tweet.</p>\n<h5>De-Identify</h5>\n<p>This checkbox\
-    \ allows you to de-identify the tweets captured by the scraper, which can be useful\
-    \ for research ethics and privacy concerns. When this box is checked, the username\
-    \ column of the output will be replaced by a string so that you cannot identify\
-    \ the user. However, since the same username will be replaced by the same string\
-    \ each time, meaning you are still able to track particular users\u2019 tweets.\
-    \ Note that selecting the de-identify checkbox does not obscure usernames within\
-    \ the body text of tweets.</p>\n<h5>Period</h5>\n<p>The period refers to the time\
-    \ interval between each time Twitter Scraper writes the data out to a spreadsheet.\
-    \ The output works by filling a cached buffer of tweets as they emerge in the\
-    \ Twitter stream and are captured by the scraper. The buffer can fit a few dozen\
-    \ tweets. When the buffer fills, the content is appended to a spreadsheet. When\
-    \ the period ends and the next period begins (that is, the next hour if you select\
-    \ \u2018hourly\u2019), then a new spreadsheet will be commenced. If you select\
-    \ \u2018none\u2019 as the period, then every matching tweet will be written to\
-    \ the same spreadsheet. If your scrape settings are broad and capture a lot of\
-    \ tweets, the spreadsheet can blow out in size very quickly. Depending on how\
-    \ many tweets you expect to match your search settings, you may want to set the\
-    \ period to daily, or even hourly, to manage the size of the output spreadsheet.</p>\n\
-    <p>After you have configured Twitter Scraper, you can now deploy it by clicking\
-    \ \u2018Deploy\u2019. The process should only take around three minutes, after\
-    \ which you will be sent an email letting you know that your Twitter Scraper instance\
-    \ has been deployed. This email will also let you know how you can access the\
-    \ data.</p>\n<h2>Accessing Data</h2>\n<p>Twitter Scraper allows for two methods\
-    \ of accessing the data that it generates: over http using a browser, or by logging\
-    \ in to the VM using SSH. Access the machine via SSH also enables you to undertake\
-    \ further configuration and advanced usage, such as modifying the harvest settings,\
-    \ restarting the harvester or configuring additional harvests.</p>\n<h3>How to\
-    \ Access Data via Web</h3>\n<p>While Twitter Scraper is operational, it will continue\
-    \ to extract tweets from the Twitter Stream and, every time its buffer fills,\
-    \ write those tweets to the csv file. A link to the location of the spreadsheet,\
-    \ consisting of the IP address of the machine and a directory, such as <code>{IP\
-    \ address}/1</code>, will be included in the email that Launchpod sends you. Clicking\
-    \ this link will take you to a web view of a directory on the VM containing a\
-    \ spreadsheet (or more) of Twitter Scraper's output data. If you selected a time\
-    \ period, then you will see one spreadsheet corresponding to each of that period\
-    \ that has begun since the VM was deployed. </p>\n<p><img alt=\"screenshot_output\"\
-    \ src=\"twitterscraper_images/output.png\" title=\"Sample output\"></p>\n<p>Due\
-    \ to the way Twitter Scraper is deployed, there are no easy ways to see if it\
-    \ is working, until tweets begin to appear in the spreadsheet, which, depending\
-    \ on the harvest settings, could be a long time. That is, if you specific very\
-    \ specific search terms, you might be waiting a long time for the buffer to fill\
-    \ and for the tweets to be written to the spreadsheet, and in the meantime, you\
-    \ have no way of knowing whether the lack of output is due to an error or a lack\
-    \ of matching tweets. There is a log file which can be accessed by navigating\
-    \ to the IP of the machine (sent to your email) followed by <code>/logs</code>.\
-    \ If the scraper is working, this log file will display lines like:</p>\n<p><code>2015-04-15\
-    \ 00:05:41,925 INFO  (LoggerTweetProcessor.java:42) - [1] Processed 10 tweets</code></p>\n\
-    <p>If the log file shows an error or java exception instead, then you may have\
-    \ configured the machine incorrectly. You should delete the instance and try again,\
-    \ paying particular attention to the Twitter API Access Tokens and Consumer Keys.\
-    \ Alternatively, you can log into the machine using SSH and <a href=\"#troubleshooting\"\
-    >troubleshoot</a> the problem.</p>\n<h3>How to Access Data via SSH</h3>\n<p>Launchpod\
-    \ enables you to access the VM directly via SSH in order to modify the <a href=\"\
-    #configuration-guide\">configuration</a> file </p>\n<h2>Configuration Guide</h2>\n\
-    <p>The options selected within Launchpod are used to populate Twitter Scraper's\
-    \ configuration file. Advanced users may log into the VM using their ssh key and\
-    \ modify the configuration file after deploying via Launchpod. The config file\
-    \ is located at <code>/home/devel/twitterScraper-{version}/config.ini</code>.\
+    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/twitterDOCID88_include_2.png?raw=true\"\
+    \ title=\"Included phrases\"></p>\n<h5>Exclude Phrases</h5>\n<p>This field is\
+    \ used to block the persistence of tweets that match the pattern. Exclusion overrules\
+    \ inclusion, meaning that even if a tweet matches every inclusion parameter, if\
+    \ it matches a single exclusion parameter, it will not be included in the output.\
+    \ The excluded phrases field works exactly like the phrases field in the interpretation\
+    \ of terms.</p>\n<h5>Users</h5>\n<p>You may also specify particular users you\
+    \ want to include in your search using the users field. If you leave this blank,\
+    \ the effect will be that all users are included in the harvest. If you have just\
+    \ one username entered, only tweets from that user will be included in the output.\
+    \ If you need to include a large list of usernames, you can paste a list of usernames\
+    \ separated by commas.</p>\n<p>If you specify both a set of users and a set of\
+    \ phrases for your harvest parameters, both criteria must be satisfied for a tweet\
+    \ to be harvested. In otherwords, only tweets by users specified in your Users\
+    \ <em>and</em> which satisfy your phrase search will be harvested. You may specify\
+    \ a set of users, or just a single user, without specifying search phrases, in\
+    \ which case all tweets by those users will be harvested.</p>\n<h5>Location</h5>\n\
+    <p>Checking the \u2018Set Location Bounds\u2019 will open a map window in which\
+    \ you can define a bounding box. Only tweets that are geocoded as originating\
+    \ from inside that box will be included in the output. Tweets that originated\
+    \ from outside the bounding box will not be harvested, nor will tweets that are\
+    \ not geocoded. Remember that users can switch off geocoding, and many do for\
+    \ privacy reasons.</p>\n<h5>Languages</h5>\n<p>You can use the Languages field\
+    \ to restrict your search to tweets in that language. You can also select multiple\
+    \ languages. The effect of selecting no language here is analogous to selecting\
+    \ no users; any tweet will match irrespective of its language value. Tweets are\
+    \ identified as being in a particular language automatically by machine detection,\
+    \ and this may not work perfectly.</p>\n<h4>Output Options</h4>\n<h5>Output Fields</h5>\n\
+    <p>The output fields allows you to customise the spreadsheet output containing\
+    \ the tweets. By default, all elements are included, but you can uncheck any of\
+    \ the checkboxes if you do not want to include a particular tweet attribute in\
+    \ your output.</p>\n<h5>Treat Hashtags Independently</h5>\n<p>This setting modified\
+    \ the behaviour of Twitter Scraper when tweets contain multiple hashtags. Hashtags\
+    \ are parsed out of the content of the tweet body and sent to a separate column\
+    \ of the spreadsheet output. If this box is left unchecked, a tweet containing\
+    \ more than one tweet will occur once in the spreadsheet, and both hashtags will\
+    \ be written to the hashtag column. If this box is checked, then the tweet will\
+    \ be repeated in the output spreadsheet, once for each hashtag, and the hashtag\
+    \ column will contain only one hashtag. This may be useful if you intend to process\
+    \ the output of the scraper using hashtags. If you only intend to analyse the\
+    \ tweet body, you may want to leave this box unchecked so as not to have repeats\
+    \ of the tweet.</p>\n<h5>De-Identify</h5>\n<p>This checkbox allows you to de-identify\
+    \ the tweets captured by the scraper, which can be useful for research ethics\
+    \ and privacy concerns. When this box is checked, the username column of the output\
+    \ will be replaced by a string so that you cannot identify the user. However,\
+    \ since the same username will be replaced by the same string each time, meaning\
+    \ you are still able to track particular users\u2019 tweets. Note that selecting\
+    \ the de-identify checkbox does not obscure usernames within the body text of\
+    \ tweets.</p>\n<h5>Period</h5>\n<p>The period refers to the time interval between\
+    \ each time Twitter Scraper writes the data out to a spreadsheet. The output works\
+    \ by filling a cached buffer of tweets as they emerge in the Twitter stream and\
+    \ are captured by the scraper. The buffer can fit a few dozen tweets. When the\
+    \ buffer fills, the content is appended to a spreadsheet. When the period ends\
+    \ and the next period begins (that is, the next hour if you select \u2018hourly\u2019\
+    ), then a new spreadsheet will be commenced. If you select \u2018none\u2019 as\
+    \ the period, then every matching tweet will be written to the same spreadsheet.\
+    \ If your scrape settings are broad and capture a lot of tweets, the spreadsheet\
+    \ can blow out in size very quickly. Depending on how many tweets you expect to\
+    \ match your search settings, you may want to set the period to daily, or even\
+    \ hourly, to manage the size of the output spreadsheet.</p>\n<p>After you have\
+    \ configured Twitter Scraper, you can now deploy it by clicking \u2018Deploy\u2019\
+    . The process should only take around three minutes, after which you will be sent\
+    \ an email letting you know that your Twitter Scraper instance has been deployed.\
+    \ This email will also let you know how you can access the data.</p>\n<h2>Accessing\
+    \ Data</h2>\n<p>Twitter Scraper allows for two methods of accessing the data that\
+    \ it generates: over http using a browser, or by logging in to the VM using SSH.\
+    \ Access the machine via SSH also enables you to undertake further configuration\
+    \ and advanced usage, such as modifying the harvest settings, restarting the harvester\
+    \ or configuring additional harvests.</p>\n<h3>How to Access Data via Web</h3>\n\
+    <p>While Twitter Scraper is operational, it will continue to extract tweets from\
+    \ the Twitter Stream and, every time its buffer fills, write those tweets to the\
+    \ csv file. A link to the location of the spreadsheet, consisting of the IP address\
+    \ of the machine and a directory, such as <code>{IP address}/1</code>, will be\
+    \ included in the email that Launchpod sends you. Clicking this link will take\
+    \ you to a web view of a directory on the VM containing a spreadsheet (or more)\
+    \ of Twitter Scraper's output data. If you selected a time period, then you will\
+    \ see one spreadsheet corresponding to each of that period that has begun since\
+    \ the VM was deployed. </p>\n<p><img alt=\"screenshot_output\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/twitterDOCID88_output.png?raw=true\"\
+    \ title=\"Sample output\"></p>\n<p>Due to the way Twitter Scraper is deployed,\
+    \ there are no easy ways to see if it is working, until tweets begin to appear\
+    \ in the spreadsheet, which, depending on the harvest settings, could be a long\
+    \ time. That is, if you specific very specific search terms, you might be waiting\
+    \ a long time for the buffer to fill and for the tweets to be written to the spreadsheet,\
+    \ and in the meantime, you have no way of knowing whether the lack of output is\
+    \ due to an error or a lack of matching tweets. There is a log file which can\
+    \ be accessed by navigating to the IP of the machine (sent to your email) followed\
+    \ by <code>/logs</code>. If the scraper is working, this log file will display\
+    \ lines like:</p>\n<p><code>2015-04-15 00:05:41,925 INFO  (LoggerTweetProcessor.java:42)\
+    \ - [1] Processed 10 tweets</code></p>\n<p>If the log file shows an error or java\
+    \ exception instead, then you may have configured the machine incorrectly. You\
+    \ should delete the instance and try again, paying particular attention to the\
+    \ Twitter API Access Tokens and Consumer Keys. Alternatively, you can log into\
+    \ the machine using SSH and <a href=\"#troubleshooting\">troubleshoot</a> the\
+    \ problem.</p>\n<h3>How to Access Data via SSH</h3>\n<p>Launchpod enables you\
+    \ to access the VM directly via SSH in order to modify the <a href=\"#configuration-guide\"\
+    >configuration</a> file </p>\n<h2>Configuration Guide</h2>\n<p>The options selected\
+    \ within Launchpod are used to populate Twitter Scraper's configuration file.\
+    \ Advanced users may log into the VM using their ssh key and modify the configuration\
+    \ file after deploying via Launchpod. The config file is located at <code>/home/devel/twitterScraper-{version}/config.ini</code>.\
     \ </p>\n<p>If the config file is modified, the harvester must be restarted before\
     \ any changes take effect. Restart the harvester using the command <code>sudo\
     \ supervisorctl restart twitter_scraper</code>. It is a good idea to change the\
@@ -15408,5 +15415,5 @@
     <td align=\"left\">Try again using another availability zone</td>\n</tr>\n</tbody>\n\
     </table>"
   parent: 24
-  sha1: 4395ecb7c572c5419d188ab7f3f8092b2ec70747
+  sha1: e4cb7e4fc3faf091a40f153c83c9e0228d1485f7
   title: Intersect Twitter Scraper User Guide
