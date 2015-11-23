@@ -1,0 +1,29 @@
+# User Guide for the Cloud Software Repository  
+
+## SA node service for users in South Australia
+
+
+## Introduction
+
+### Description 
+
+Since cloud Virtual Machine (VM) images are restricted in size, it is not 
+possible to have a generic image containing all the different application 
+software that is available on high-performance computing (HPC) systems, such 
+as eResearchSA's [Tizard supercomputer][tizard]. Users have therefore needed 
+to find VM images that contain the software they need, or install it themselves. 
+
+[eResearchSA][ersa] has deployed a distributed software repository that enables 
+cloud virtual machines to easily access all the software applications that are 
+available on the Tizard supercomputer. Users can run any of this software on the 
+cloud virtual machine, just as they can on Tizard.
+
+This service is designed for:
+
+- Researchers who want to use cloud virtual machines to run compute-intensive 
+  software applications
+- Situations where a single virtual machine image containing all the required 
+  software is not available, and the researcher does not want to install the software themselves.
+- This service is currently only available for South Australian users as it 
+  uses the SA software repository.
+
