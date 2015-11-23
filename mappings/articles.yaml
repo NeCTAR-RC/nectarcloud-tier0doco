@@ -15417,3 +15417,692 @@
   parent: 24
   sha1: e4cb7e4fc3faf091a40f153c83c9e0228d1485f7
   title: Intersect Twitter Scraper User Guide
+89:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-11-22T23:57:07-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " User Guide for the Cloud Software Repository  \n \n SA node\
+          \ service for users in South Australia \n \n Introduction \n Cloud allocation\
+          \ \n Contact eRSA to obtain the image ID \n Creating a security group \n\
+          \ Launching an instance \n Loading the pre-installed software packages \n\
+          \ Sharing files with the virtual machine \n The CentOS operating system\
+          \ \n \nGlossary of Terms  \n \n \n Introduction \n \n Description  \n Since\
+          \ cloud Virtual Machine (VM) images are restricted in size, it is not possible\
+          \ to have a generic image containing all the different application software\
+          \ that is available on high-performance computing (HPC) systems, such as\
+          \ eResearchSA's Tizard supercomputer. Users have therefore needed to find\
+          \ VM images that contain the software they need, or install it themselves.\
+          \  \n eResearchSA has deployed a distributed software repository that enables\
+          \ cloud virtual machines to easily access all the software applications\
+          \ that are available on the Tizard supercomputer. Users can run any of this\
+          \ software on the cloud virtual machine, just as they can on Tizard. \n\
+          \ This service is designed for: \n \n Researchers who want to use cloud\
+          \ virtual machines to run compute-intensive software applications \n Situations\
+          \ where a single virtual machine image containing all the required software\
+          \ is not available, and the researcher does not want to install the software\
+          \ themselves. \n This service is currently only available for South Australian\
+          \ users as it uses the SA software repository. \n \n CVMFS \n The system\
+          \ makes use of a read-only, http-based distributed virtual file system called\
+          \ the CERN VM File System (CVMFS), which CERN developed to enable researchers\
+          \ to access their standard software packages at many sites around the world.\
+          \ eRSA has set up a CVMFS server that provides access to a repository of\
+          \ all the open-source software that is installed on eRSA's HPC systems,\
+          \ and a NeCTAR cloud virtual machine image that contains a CVMFS client\
+          \ that can access the software in the repository.  \n When a user runs a\
+          \ software application on the cloud virtual machine, the software is automatically\
+          \ downloaded from the CVMFS repository and stored locally on the VM. The\
+          \ next time the same software is used, CVMFS uses the local copy of the\
+          \ software so it will start up faster, without having to wait for the download.\
+          \ \n For the user, this all happens transparently, it appears as though\
+          \ all the application software is installed on the cloud virtual machine.\
+          \ \n Glossary of Terms  \nTop of page \n \n \n Getting a Project Allocation\
+          \ \n Researchers will by default have a trial allocation on NeCTAR (project\
+          \ name pt-XXXXX; 2 cores for 3 months). \n You will need to request a project\
+          \ allocation for further resources if: \n \n you require more computing\
+          \ power or longer term usage \n you wish to share cloud computing resources\
+          \ with your research group \n \n Log in to the NeCTAR dashboard and click\
+          \ on New Request under Allocations in the left hand side menu. Email the\
+          \ eRSA Helpdesk if you have questions about any of the information in the\
+          \ form. New requests can take a couple of weeks to process, and allocations\
+          \ are merit-based. \n Managing an Allocation page \nGlossary of Terms \n\
+          Top of page \n \n \n Contact eRSA to help set-up your instance \n Accessing\
+          \ the Cloud software repository is as simple as launching an instance using\
+          \ a specific image designed by eRSA staff, and knowing a few basic commands.\
+          \   \n Email the eRSA Helpdesk to inform them you want to set up a VM with\
+          \ access to the software repository, and a support member will give you\
+          \ the name of the current image that you will use.  You can use this information\
+          \ to launch an instance, following the instructions below, or you can request\
+          \ that eRSA set up the VM for you. \n Add your eRSA support contact to your\
+          \ project users group \n After you have received a project allocation, you\
+          \ can add collaborators as users to the project by selecting the Users tab\
+          \ in the project menu on the dashboard and entering the institutional (AAF)\
+          \ email address of your co-workers. \n It is recommended that you add the\
+          \ eRSA email address of your eRSA support contact to the users of your project.\
+          \ If you need any assistance in setting up or managing your VM, eRSA staff\
+          \ will need to be a user on the project in order to provide some types of\
+          \ assistance. \n Glossary of Terms \nTop of page \n \n \n Creating a security\
+          \ group \n \n \n If you have not already done so, you will need to create\
+          \ a security group with port 22 open for SSH access.  \n \n \n On the NeCTAR\
+          \ dashboard, ensure you are in the correct project. \n \n \n \n \n Select\
+          \ \"Access & Security\" under the left hand side pane under \"Compute\"\
+          . \n \n Select the \"Create Security Group\" button near the top right corner\
+          \ \n Give your security group a name and description and click the \"Create\
+          \ Security Group\" button \n Click \"Manage Rules\" in the \"Actions\" drop-down\
+          \ menu \n \n  Click on the \"Add Rule\" button near the top right corner\
+          \  \n \n \n A small window should pop up. Make sure the \"Rule\" is set\
+          \ to \"Custom TCP Rule\" \n  and \"Open Port\" is set to \"Port\". Under\
+          \ the Port textbox enter \"22\". Set \"Remote\" \n  to \"CIDR\" and under\
+          \ the \"CIDR\" textbox enter one of the following IP ranges as appropriate.\
+          \ \n \n 129.127.0.0/16 - University of Adelaide \n 129.96.0.0/16 - Flinders\
+          \ \n 130.220.0.0/16 - UniSA   \n \n \n E.g. for a user from the University\
+          \ of Adelaide: \n \n \n Security Groups page \nGlossary of Terms  \nTop\
+          \ of page \n \n \n Creating an instance with access to the software repository\
+          \ \n See this training module or this guide for detailed instructions on\
+          \ launching an instance if it is your first time and/or you haven't yet\
+          \ set up SSH keypairs. \n \n \n In your project allocation on the NeCTAR\
+          \ dashboard, navigate to the 'Instances' tab in the 'Compute' menu. \n \n\
+          \ \n  Select the \"Launch Instance\" button near the top right corner \n\
+          \ \n \n Fill in a name for the VM, choose an appropriate size (Flavor),\
+          \ then select the image name provided by eRSA (the screenshot shows the\
+          \ image used for CVMFS access at the time of writing this document). \n\
+          \ \n \n \n \n Click the 'Access and Security' tab. Select your SSH keypair\
+          \ and select the security group which allows access through port 22 for\
+          \ SSH (set up in the previous step). \n \n \n \n Click the 'Availability\
+          \ Zone' tab and select 'sa', Then click 'Launch' \n \n \n \n Once the Instance\
+          \ is running, use the IP Address to connect to the VM via SSH in the usual\
+          \ way, as outlined in the Accessing Instances support page and the training\
+          \ module Launching and Connecting. \n \n Launching an Instance \nGlossary\
+          \ of Terms  \nTop of page \n \n \n Loading the pre-installed software packages\
+          \ \n There are a few simple commands to find software packages in the repository\
+          \ and load them on your VM. \n\n\n\nCommand\nAction\n\n\n\n\nmodule --help\n\
+          help page for the 'module' commands\n\n\nmodule avail\nlist all available\
+          \ packages in the repository\n\n\nmodule avail <search term>\nlist package\
+          \ names containing the search term\n\n\nmodule list\nlist the packages that\
+          \ are already loaded on the VM\n\n\nmodule show <name>\nshow info on the\
+          \ package, and lists the dependencies - required modules that need to be\
+          \ loaded before you can load the package of interest\n\n\nmodule load <name>\n\
+          load the package onto the VM\n\n\nmodule unload <name>\nremove the package\
+          \ 'cache' from the VM\n\n\n\n An example of loading the package 'Stacks'.\
+          \  \n \n NOTE: If there is software that you would like to access that is\
+          \ not already in the CVMFS software repository, email the eRSA Helpdesk\
+          \ and request that it be added. Ensure you mention that you would like to\
+          \ access it through cloud computing on your VM. \n Glossary of Terms  \n\
+          Top of page \n \n \n Sharing files with the virtual machine \n There is\
+          \ a training module and a support guide with comprehensive details on transferring\
+          \ data between your VM and your local computer or remote storage servers.\
+          \ Using programs like FileZilla or WinSCP is an easy method of transferring\
+          \ data from your local computer.  \n The following information outlines\
+          \ commands that can be entered on your VM in order to transfer data to and\
+          \ from remote data storage, such as the storage offered by eRSA.  \n Secure\
+          \ Copy (SCP) between the VM and a data storage server \n If you have data\
+          \ stored on a remote server, you can transfer files between it and the VM\
+          \ through the command-line on the VM. \n You will need a host address for\
+          \ the data storage server, your username, and your password. \n scp <source>\
+          \ <destination> \n \n To download to the VM : scp <remote computer>:<path\
+          \ to file> <local VM path>   \n To upload to data storage : scp <local VM\
+          \ path> <remote computer>:<path to file>\n \n \n scp username@sftp.ersa.edu.au:/data/myDirectory/file.txt\
+          \ /mnt/data/ \nscp /mnt/data/results.zip username@sftp.ersa.edu.au:/data/myDirectory/\
+          \ \n You will usually then be prompted to enter the password for your data\
+          \ storage. \n \n SFTP via the Command Line \n Secure file transfer is also\
+          \ available between the VM and remote data storage. \n Enter the 'sftp'\
+          \ command on your VM, and you will have access to the remote host. \n sftp\
+          \ username@host.address.edu.au   - you will be prompted for a password.\
+          \ \n You are now accessing the remote data storage server, and you can navigate\
+          \ the files on the server as per usual with commands like cd and ls. \n\
+          \ The commands get and put will transfer data between the machines: \n get\
+          \ <remote_server_file.txt> </mnt/localVM_destination/> \n put </mnt/localVM_destination/file.txt>\
+          \ <remote_directory/> \n to close the sftp connection, type exit. \n \n\
+          \   \n Glossary of Terms  \nTop of page \n \n \n The CentOS operating system\
+          \ \n The VM image that allows access to the CVMFS software repository is\
+          \ a Linux distribution called CentOS. Most of the documentation available\
+          \ about using your Linux VM assumes that you have an Ubuntu operating system.\
+          \  There is very little difference for the user between these Linux operating\
+          \ systems, but there is one main difference to be aware of. \n CentOS uses\
+          \ the package manager 'yum' instead of 'apt-get'. If you need to install\
+          \ packages on your VM that aren't in the CVMFS software repository, you\
+          \ need to use the 'yum' command wherever there would be an 'apt-get' command\
+          \ in Ubuntu. e.g. \n \n yum search <package name> \n sudo yum install <package\
+          \ name> \n sudo yum update \n \n Top of page \n \n \n Glossary \n Availability\
+          \ Zone \n \n A logical grouping of compute nodes within a region. \n \n\
+          \ Dashboard \n \n The NeCTAR Dashboard is the main web-based interface for\
+          \ managing NeCTAR virtuals. \n \n ERSA \n \n eResearch SA runs the South\
+          \ Australian node of the NeCTAR research cloud. \n \n Flavor \n \n An OpenStack\
+          \ term for an instance sizing specification. Gives the amount \nof memory,\
+          \ number of VCPUs and ephemeral disc size. \n \n Image \n \n An image (or\
+          \ system image) is a copy of the entire state of a computer system \nsaved\
+          \ as a file. Images are used in two ways in NeCTAR. Firstly as a template\
+          \ for \nVirtual Machines (VMs). You can launch a VM based on an image. \n\
+          The second use of images is to preserve the state of a VM as configured\
+          \ by you as end user. \nThis type of image is usually referred to as a snapshot.\
+          \ \n \n Instance \n \n An instance is a VM hosted on the NeCTAR OpenStack\
+          \ infrastructure. \n \n Project \n \n The NeCTAR term for a \"resource container\"\
+          ; i.e. what you get when you \nare granted a NeCTAR allocation. A project\
+          \ \"owns\" virtual machine instances, snapshots \nand various kinds of storage,\
+          \ and may be shared by multiple users. \n \n Security Group \n \n A set\
+          \ of access rules that may be applied to one or more instances. \nAn access\
+          \ rule allows network access to an instance from other hosts with a \nspecified\
+          \ combination of protocol family (e.g. TCP, UDP, UCMP), port number and\
+          \ address range. Security Groups page \n \n Virtual Machine \n \n A virtual\
+          \ machine (VM) is an operating system (OS) or application environment that\
+          \ \nis installed on software which imitates dedicated hardware. The end\
+          \ user has the same \nexperience on a virtual machine as they would have\
+          \ on dedicated hardware. \n \n Volume Storage \n \n Data Storage in your\
+          \ Virtual Machine that works like a hard-drive on your PC or \nlaptop does.\
+          \ Volume storage is automatically available in your VM as the storage \n\
+          space for you system drive. Some flavors of VMs include an amount of ephemeral\
+          \ volume \nstorage. Depending on your allocation you can have persistent\
+          \ volume storage attached to your VM. \n \n Full Glossary Page \nNeCTAR\
+          \ FAQ - general inormation \nFor more help, contact the eRSA Helpdesk \n\
+          \ Top of page "
+        description: "<h1>User Guide for the Cloud Software Repository  <a name=\"\
+          top\"></a>\n</h1>\n<h2>SA node service for users in South Australia</h2>\n\
+          <ul>\n<li><a href=\"#intro\">Introduction</a></li>\n<li><a href=\"#alloc\"\
+          >Cloud allocation</a></li>\n<li><a href=\"#setup\">Contact eRSA to obtain\
+          \ the image ID</a></li>\n<li><a href=\"#security\">Creating a security group</a></li>\n\
+          <li><a href=\"#instance\">Launching an instance</a></li>\n<li><a href=\"\
+          #modules\">Loading the pre-installed software packages</a></li>\n<li><a\
+          \ href=\"#transferfiles\">Sharing files with the virtual machine</a></li>\n\
+          <li><a href=\"#os\">The CentOS operating system</a></li>\n<li>\n<a href=\"\
+          #glossary\">Glossary of Terms</a> </li>\n</ul>\n<hr>\n<h2>Introduction <a\
+          \ name=\"intro\"></a>\n</h2>\n<p>Description </p>\n<p>Since cloud Virtual\
+          \ Machine (VM) images are restricted in size, it is not possible to have\
+          \ a generic image containing all the different application software that\
+          \ is available on high-performance computing (HPC) systems, such as eResearchSA's\
+          \ <a href=\"https://www.ersa.edu.au/tizard/\">Tizard supercomputer</a>.\
+          \ Users have therefore needed to find VM images that contain the software\
+          \ they need, or install it themselves. </p>\n<p><a href=\"https://www.ersa.edu.au/\"\
+          >eResearchSA</a> has deployed a distributed software repository that enables\
+          \ cloud virtual machines to easily access all the software applications\
+          \ that are available on the Tizard supercomputer. Users can run any of this\
+          \ software on the cloud virtual machine, just as they can on Tizard.</p>\n\
+          <p>This service is designed for:</p>\n<ul>\n<li>Researchers who want to\
+          \ use cloud virtual machines to run compute-intensive software applications</li>\n\
+          <li>Situations where a single virtual machine image containing all the required\
+          \ software is not available, and the researcher does not want to install\
+          \ the software themselves.</li>\n<li>This service is currently only available\
+          \ for South Australian users as it uses the SA software repository.</li>\n\
+          </ul>\n<h3>CVMFS</h3>\n<p>The system makes use of a read-only, http-based\
+          \ distributed virtual file system called the <a href=\"http://cernvm.cern.ch/portal/startcvmfs\"\
+          >CERN VM File System</a> (CVMFS), which CERN developed to enable researchers\
+          \ to access their standard software packages at many sites around the world.\
+          \ eRSA has set up a CVMFS server that provides access to a repository of\
+          \ all the open-source software that is installed on eRSA's HPC systems,\
+          \ and a NeCTAR cloud virtual machine image that contains a CVMFS client\
+          \ that can access the software in the repository. </p>\n<p>When a user runs\
+          \ a software application on the cloud virtual machine, the software is automatically\
+          \ downloaded from the CVMFS repository and stored locally on the VM. The\
+          \ next time the same software is used, CVMFS uses the local copy of the\
+          \ software so it will start up faster, without having to wait for the download.</p>\n\
+          <p>For the user, this all happens transparently, it appears as though all\
+          \ the application software is installed on the cloud virtual machine.</p>\n\
+          <p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top\
+          \ of page</a></p>\n<hr>\n<p><a name=\"alloc\"></a></p>\n<h2>Getting a Project\
+          \ Allocation</h2>\n<p>Researchers will by default have a trial allocation\
+          \ on NeCTAR (project name pt-XXXXX; 2 cores for 3 months).</p>\n<p>You will\
+          \ need to request a project allocation for further resources if:</p>\n<ul>\n\
+          <li>you require more computing power or longer term usage</li>\n<li>you\
+          \ wish to share cloud computing resources with your research group</li>\n\
+          </ul>\n<p>Log in to the <a href=\"https://dashboard.rc.nectar.org.au/project/request/\"\
+          >NeCTAR dashboard</a> and click on <strong>New Request</strong> under <strong>Allocations</strong>\
+          \ in the left hand side menu. Email the <a href=\"mailto:servicedesk@ersa.edu.au\"\
+          >eRSA Helpdesk</a> if you have questions about any of the information in\
+          \ the form. New requests can take a couple of weeks to process, and allocations\
+          \ are merit-based.</p>\n<p><a href=\"https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation\"\
+          >Managing an Allocation page</a><br>\n<a href=\"#glossary\">Glossary of\
+          \ Terms</a><br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"\
+          setup\"></a></p>\n<h2>Contact eRSA to help set-up your instance</h2>\n<p>Accessing\
+          \ the Cloud software repository is as simple as launching an instance using\
+          \ a specific image designed by eRSA staff, and knowing a few <a href=\"\
+          #modules\">basic commands</a>.  </p>\n<p>Email the <a href=\"mailto:servicedesk@ersa.edu.au\"\
+          >eRSA Helpdesk</a> to inform them you want to set up a VM with access to\
+          \ the software repository, and a support member will give you the name of\
+          \ the current image that you will use.  You can use this information to\
+          \ launch an instance, following the instructions below, or you can request\
+          \ that eRSA set up the VM for you.</p>\n<p>Add your eRSA support contact\
+          \ to your project users group</p>\n<p>After you have received a project\
+          \ allocation, you can add collaborators as users to the project by selecting\
+          \ the <a href=\"https://dashboard.rc.nectar.org.au/project/members/\">Users</a>\
+          \ tab in the project menu on the dashboard and entering the institutional\
+          \ (<a href=\"https://support.nectar.org.au/support/solutions/articles/6000055377-getting-an-account\"\
+          >AAF</a>) email address of your co-workers.</p>\n<p>It is recommended that\
+          \ you add the eRSA email address of your eRSA support contact to the users\
+          \ of your project. If you need any assistance in setting up or managing\
+          \ your VM, eRSA staff will need to be a user on the project in order to\
+          \ provide some types of assistance.</p>\n<p><a href=\"#glossary\">Glossary\
+          \ of Terms</a><br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"\
+          security\"></a></p>\n<h2>Creating a security group</h2>\n<ul>\n<li>\n<p>If\
+          \ you have not already done so, you will need to create a security group\
+          \ with port 22 open for SSH access. </p>\n</li>\n<li>\n<p>On the NeCTAR\
+          \ <a href=\"https://dashboard.rc.nectar.org.au/project/access_and_security/\"\
+          >dashboard</a>, ensure you are in the correct project.</p>\n</li>\n</ul>\n\
+          <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/software_choose_project.png?raw=true\"\
+          ></p>\n<ul>\n<li>Select \"Access &amp; Security\" under the left hand side\
+          \ pane under \"Compute\".</li>\n<li>\n<img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/software_createsecuritybutton.png?raw=true\"\
+          > Select the \"Create Security Group\" button near the top right corner</li>\n\
+          <li>Give your security group a name and description and click the \"Create\
+          \ Security Group\" button</li>\n<li>Click \"Manage Rules\" in the \"Actions\"\
+          \ drop-down menu</li>\n<li>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/software_addrulebutton.png?raw=true\"\
+          > Click on the \"Add Rule\" button near the top right corner </p>\n</li>\n\
+          <li>\n<p>A small window should pop up. Make sure the \"Rule\" is set to\
+          \ \"Custom TCP Rule\" \n  and \"Open Port\" is set to \"Port\". Under the\
+          \ Port textbox enter \"<strong>22</strong>\". Set \"Remote\" \n  to \"CIDR\"\
+          \ and under the \"CIDR\" textbox enter one of the following IP ranges as\
+          \ appropriate.</p>\n<ul>\n<li>129.127.0.0/16 - University of Adelaide</li>\n\
+          <li>129.96.0.0/16 - Flinders</li>\n<li>130.220.0.0/16 - UniSA  </li>\n</ul>\n\
+          </li>\n<li>E.g. for a user from the University of Adelaide:</li>\n</ul>\n\
+          <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/software_security_rule.png?raw=true\"\
+          ></p>\n<p><a href=\"https://support.nectar.org.au/support/solutions/articles/6000055387-security-groups\"\
+          >Security Groups page</a><br>\n<a href=\"#glossary\">Glossary of Terms</a>\
+          \ <br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"instance\"\
+          ></a></p>\n<h2>Creating an instance with access to the software repository</h2>\n\
+          <p>See this <a href=\"http://training.nectar.org.au/package07/sections/index.html\"\
+          >training module</a> or this <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055376-launching-virtual-machines\"\
+          >guide</a> for detailed instructions on launching an instance if it is your\
+          \ first time and/or you haven't yet set up SSH keypairs.</p>\n<ul>\n<li>\n\
+          <p>In your project allocation on the NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/project/instances/\"\
+          >dashboard</a>, navigate to the 'Instances' tab in the 'Compute' menu.</p>\n\
+          </li>\n<li>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/software_launchInstance_button.png?raw=true\"\
+          > Select the \"Launch Instance\" button near the top right corner</p>\n\
+          </li>\n<li>\n<p>Fill in a name for the VM, choose an appropriate size (Flavor),\
+          \ then select the image name provided by eRSA (the screenshot shows the\
+          \ image used for CVMFS access at the time of writing this document).</p>\n\
+          </li>\n</ul>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/software_launchInstance.png?raw=true\"\
+          ></p>\n<ul>\n<li>Click the 'Access and Security' tab. Select your SSH keypair\
+          \ and select the security group which allows access through port 22 for\
+          \ SSH (set up in the previous step).</li>\n</ul>\n<p><img alt=\"\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/software_access_security.png?raw=true\"\
+          ></p>\n<ul>\n<li>Click the 'Availability Zone' tab and select '<strong>sa</strong>',\
+          \ Then click '<strong>Launch</strong>'</li>\n</ul>\n<p><img alt=\"\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/software_avail_zone.png?raw=true\"\
+          ></p>\n<ul>\n<li>Once the Instance is running, use the IP Address to connect\
+          \ to the VM via SSH in the usual way, as outlined in the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055446-accessing-instances\"\
+          >Accessing Instances</a> support page and the training module <a href=\"\
+          http://training.nectar.org.au/package07/sections/connectViaSSH.html\">Launching\
+          \ and Connecting</a>.</li>\n</ul>\n<p><a href=\"https://support.nectar.org.au/support/solutions/articles/6000055376-launching-virtual-machines\"\
+          >Launching an Instance</a><br>\n<a href=\"#glossary\">Glossary of Terms</a>\
+          \ <br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"modules\"\
+          ></a></p>\n<h2>Loading the pre-installed software packages</h2>\n<p>There\
+          \ are a few simple commands to find software packages in the repository\
+          \ and load them on your VM.</p>\n<table>\n<thead>\n<tr>\n<th>Command</th>\n\
+          <th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>module --help</code></td>\n\
+          <td>help page for the 'module' commands</td>\n</tr>\n<tr>\n<td><code>module\
+          \ avail</code></td>\n<td>list all available packages in the repository</td>\n\
+          </tr>\n<tr>\n<td><code>module avail &lt;search term&gt;</code></td>\n<td>list\
+          \ package names containing the search term</td>\n</tr>\n<tr>\n<td><code>module\
+          \ list</code></td>\n<td>list the packages that are already loaded on the\
+          \ VM</td>\n</tr>\n<tr>\n<td><code>module show &lt;name&gt;</code></td>\n\
+          <td>show info on the package, and lists the dependencies - required modules\
+          \ that need to be loaded before you can load the package of interest</td>\n\
+          </tr>\n<tr>\n<td><code>module load &lt;name&gt;</code></td>\n<td>load the\
+          \ package onto the VM</td>\n</tr>\n<tr>\n<td><code>module unload &lt;name&gt;</code></td>\n\
+          <td>remove the package 'cache' from the VM</td>\n</tr>\n</tbody>\n</table>\n\
+          <p>An example of loading the package 'Stacks'. </p>\n<p><img alt=\"\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/software_module_load_stacks_full.png?raw=true\"\
+          ></p>\n<p>NOTE: If there is software that you would like to access that\
+          \ is not already in the CVMFS software repository, email the <a href=\"\
+          mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a> and request that it be\
+          \ added. Ensure you mention that you would like to access it through cloud\
+          \ computing on your VM.</p>\n<p><a href=\"#glossary\">Glossary of Terms</a>\
+          \ <br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"transferfiles\"\
+          ></a></p>\n<h2>Sharing files with the virtual machine</h2>\n<p>There is\
+          \ a <a href=\"http://training.nectar.org.au/package07/sections/copyFiles.html\"\
+          >training module</a> and a <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
+          >support guide</a> with comprehensive details on transferring data between\
+          \ your VM and your local computer or remote storage servers. Using programs\
+          \ like FileZilla or WinSCP is an easy method of transferring data from your\
+          \ local computer. </p>\n<p>The following information outlines commands that\
+          \ can be entered on your VM in order to transfer data to and from remote\
+          \ data storage, such as the <a href=\"https://www.ersa.edu.au/service/data-storage/\"\
+          >storage</a> offered by eRSA. </p>\n<h3>Secure Copy (SCP) between the VM\
+          \ and a data storage server</h3>\n<p>If you have data stored on a remote\
+          \ server, you can transfer files between it and the VM through the command-line\
+          \ on the VM.</p>\n<p>You will need a host address for the data storage server,\
+          \ your username, and your password.</p>\n<p><code>scp &lt;source&gt; &lt;destination&gt;</code></p>\n\
+          <ul>\n<li>To download to the VM : <code>scp &lt;remote computer&gt;:&lt;path\
+          \ to file&gt; &lt;local VM path&gt;</code>  </li>\n<li>To upload to data\
+          \ storage : <code>scp &lt;local VM path&gt; &lt;remote computer&gt;:&lt;path\
+          \ to file&gt;</code>\n</li>\n</ul>\n<p><code>scp username@sftp.ersa.edu.au:/data/myDirectory/file.txt\
+          \ /mnt/data/</code><br>\n<code>scp /mnt/data/results.zip username@sftp.ersa.edu.au:/data/myDirectory/</code></p>\n\
+          <p>You will usually then be prompted to enter the password for your data\
+          \ storage.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/software_scp_demo.png?raw=true\"\
+          ></p>\n<h3>SFTP via the Command Line</h3>\n<p>Secure file transfer is also\
+          \ available between the VM and remote data storage.</p>\n<p>Enter the 'sftp'\
+          \ command on your VM, and you will have access to the remote host.</p>\n\
+          <p><code>sftp username@host.address.edu.au</code>   - you will be prompted\
+          \ for a password.</p>\n<p>You are now accessing the remote data storage\
+          \ server, and you can navigate the files on the server as per usual with\
+          \ commands like <code>cd</code> and <code>ls</code>.</p>\n<p>The commands\
+          \ <code>get</code> and <code>put</code> will transfer data between the machines:</p>\n\
+          <p><code>get &lt;remote_server_file.txt&gt; &lt;/mnt/localVM_destination/&gt;</code></p>\n\
+          <p><code>put &lt;/mnt/localVM_destination/file.txt&gt; &lt;remote_directory/&gt;</code></p>\n\
+          <p>to close the sftp connection, type <code>exit</code>.</p>\n<p><img alt=\"\
+          \" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/software_sftp_get.png?raw=true\"\
+          >\n  <img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/software_sftp_put.png?raw=true\"\
+          ></p>\n<p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\"\
+          >Top of page</a></p>\n<hr>\n<p><a name=\"os\"></a></p>\n<h2>The CentOS operating\
+          \ system</h2>\n<p>The VM image that allows access to the CVMFS software\
+          \ repository is a Linux distribution called CentOS. Most of the documentation\
+          \ available about using your Linux VM assumes that you have an Ubuntu operating\
+          \ system.  There is very little difference for the user between these Linux\
+          \ operating systems, but there is one main difference to be aware of.</p>\n\
+          <p>CentOS uses the package manager '<strong>yum</strong>' instead of '<strong>apt-get</strong>'.\
+          \ If you need to install packages on your VM that aren't in the CVMFS software\
+          \ repository, you need to use the 'yum' command wherever there would be\
+          \ an 'apt-get' command in Ubuntu. e.g.</p>\n<ul>\n<li><code>yum search &lt;package\
+          \ name&gt;</code></li>\n<li><code>sudo yum install &lt;package name&gt;</code></li>\n\
+          <li><code>sudo yum update</code></li>\n</ul>\n<p><a href=\"#top\">Top of\
+          \ page</a></p>\n<hr>\n<p><a name=\"glossary\"></a></p>\n<h2>Glossary</h2>\n\
+          <p><strong>Availability Zone</strong></p>\n<blockquote>\n<p>A logical grouping\
+          \ of compute nodes within a region.</p>\n</blockquote>\n<p><strong>Dashboard</strong></p>\n\
+          <blockquote>\n<p>The NeCTAR Dashboard is the main web-based interface for\
+          \ managing NeCTAR virtuals.</p>\n</blockquote>\n<p><strong>ERSA</strong></p>\n\
+          <blockquote>\n<p>eResearch SA runs the South Australian node of the NeCTAR\
+          \ research cloud.</p>\n</blockquote>\n<p><strong>Flavor</strong></p>\n<blockquote>\n\
+          <p>An OpenStack term for an instance sizing specification. Gives the amount\
+          \ \nof memory, number of VCPUs and ephemeral disc size.</p>\n</blockquote>\n\
+          <p><strong>Image</strong></p>\n<blockquote>\n<p>An image (or system image)\
+          \ is a copy of the entire state of a computer system \nsaved as a file.\
+          \ Images are used in two ways in NeCTAR. Firstly as a template for \nVirtual\
+          \ Machines (VMs). You can launch a VM based on an image. \nThe second use\
+          \ of images is to preserve the state of a VM as configured by you as end\
+          \ user. \nThis type of image is usually referred to as a snapshot.</p>\n\
+          </blockquote>\n<p><strong>Instance</strong></p>\n<blockquote>\n<p>An instance\
+          \ is a VM hosted on the NeCTAR OpenStack infrastructure.</p>\n</blockquote>\n\
+          <p><strong>Project</strong></p>\n<blockquote>\n<p>The NeCTAR term for a\
+          \ \"resource container\"; i.e. what you get when you \nare granted a NeCTAR\
+          \ allocation. A project \"owns\" virtual machine instances, snapshots \n\
+          and various kinds of storage, and may be shared by multiple users.</p>\n\
+          </blockquote>\n<p><strong>Security Group</strong></p>\n<blockquote>\n<p>A\
+          \ set of access rules that may be applied to one or more instances. \nAn\
+          \ access rule allows network access to an instance from other hosts with\
+          \ a \nspecified combination of protocol family (e.g. TCP, UDP, UCMP), port\
+          \ number and address range. <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055387-security-groups\"\
+          >Security Groups page</a></p>\n</blockquote>\n<p><strong>Virtual Machine</strong></p>\n\
+          <blockquote>\n<p>A virtual machine (VM) is an operating system (OS) or application\
+          \ environment that \nis installed on software which imitates dedicated hardware.\
+          \ The end user has the same \nexperience on a virtual machine as they would\
+          \ have on dedicated hardware.</p>\n</blockquote>\n<p><strong>Volume Storage</strong></p>\n\
+          <blockquote>\n<p>Data Storage in your Virtual Machine that works like a\
+          \ hard-drive on your PC or \nlaptop does. Volume storage is automatically\
+          \ available in your VM as the storage \nspace for you system drive. Some\
+          \ flavors of VMs include an amount of ephemeral volume \nstorage. Depending\
+          \ on your allocation you can have persistent volume storage attached to\
+          \ your VM.</p>\n</blockquote>\n<p><a href=\"https://support.nectar.org.au/support/solutions/articles/6000055445-glossary\"\
+          >Full Glossary Page</a><br>\n<a href=\"http://cloud.nectar.org.au/faq/\"\
+          >NeCTAR FAQ - general inormation</a><br>\nFor more help, contact the <a\
+          \ href=\"mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a></p>\n<p><a href=\"\
+          #top\">Top of page</a></p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000090905
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-11-22T23:57:07-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000090905
+        position: 3
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Cloud Software Repository - user guide
+        updated_at: '2015-11-22T23:57:07-05:00'
+        user_id: 6002464727
+  html: "<h1>User Guide for the Cloud Software Repository  <a name=\"top\"></a></h1>\n\
+    <h2>SA node service for users in South Australia</h2>\n<ul>\n<li><a href=\"#intro\"\
+    >Introduction</a></li>\n<li><a href=\"#alloc\">Cloud allocation</a></li>\n<li><a\
+    \ href=\"#setup\">Contact eRSA to obtain the image ID</a></li>\n<li><a href=\"\
+    #security\">Creating a security group</a></li>\n<li><a href=\"#instance\">Launching\
+    \ an instance</a></li>\n<li><a href=\"#modules\">Loading the pre-installed software\
+    \ packages</a></li>\n<li><a href=\"#transferfiles\">Sharing files with the virtual\
+    \ machine</a></li>\n<li><a href=\"#os\">The CentOS operating system</a></li>\n\
+    <li><a href=\"#glossary\">Glossary of Terms</a> </li>\n</ul>\n<hr>\n<h2>Introduction\
+    \ <a name=\"intro\"></a></h2>\n<p>Description </p>\n<p>Since cloud Virtual Machine\
+    \ (VM) images are restricted in size, it is not possible to have a generic image\
+    \ containing all the different application software that is available on high-performance\
+    \ computing (HPC) systems, such as eResearchSA's <a href=\"https://www.ersa.edu.au/tizard/\"\
+    >Tizard supercomputer</a>. Users have therefore needed to find VM images that\
+    \ contain the software they need, or install it themselves. </p>\n<p><a href=\"\
+    https://www.ersa.edu.au/\">eResearchSA</a> has deployed a distributed software\
+    \ repository that enables cloud virtual machines to easily access all the software\
+    \ applications that are available on the Tizard supercomputer. Users can run any\
+    \ of this software on the cloud virtual machine, just as they can on Tizard.</p>\n\
+    <p>This service is designed for:</p>\n<ul>\n<li>Researchers who want to use cloud\
+    \ virtual machines to run compute-intensive software applications</li>\n<li>Situations\
+    \ where a single virtual machine image containing all the required software is\
+    \ not available, and the researcher does not want to install the software themselves.</li>\n\
+    <li>This service is currently only available for South Australian users as it\
+    \ uses the SA software repository.</li>\n</ul>\n<h3>CVMFS</h3>\n<p>The system\
+    \ makes use of a read-only, http-based distributed virtual file system called\
+    \ the <a href=\"http://cernvm.cern.ch/portal/startcvmfs\">CERN VM File System</a>\
+    \ (CVMFS), which CERN developed to enable researchers to access their standard\
+    \ software packages at many sites around the world. eRSA has set up a CVMFS server\
+    \ that provides access to a repository of all the open-source software that is\
+    \ installed on eRSA's HPC systems, and a NeCTAR cloud virtual machine image that\
+    \ contains a CVMFS client that can access the software in the repository. </p>\n\
+    <p>When a user runs a software application on the cloud virtual machine, the software\
+    \ is automatically downloaded from the CVMFS repository and stored locally on\
+    \ the VM. The next time the same software is used, CVMFS uses the local copy of\
+    \ the software so it will start up faster, without having to wait for the download.</p>\n\
+    <p>For the user, this all happens transparently, it appears as though all the\
+    \ application software is installed on the cloud virtual machine.</p>\n<p><a href=\"\
+    #glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n\
+    <hr>\n<p><a name=\"alloc\"></a></p>\n<h2>Getting a Project Allocation</h2>\n<p>Researchers\
+    \ will by default have a trial allocation on NeCTAR (project name pt-XXXXX; 2\
+    \ cores for 3 months).</p>\n<p>You will need to request a project allocation for\
+    \ further resources if:</p>\n<ul>\n<li>you require more computing power or longer\
+    \ term usage</li>\n<li>you wish to share cloud computing resources with your research\
+    \ group</li>\n</ul>\n<p>Log in to the <a href=\"https://dashboard.rc.nectar.org.au/project/request/\"\
+    >NeCTAR dashboard</a> and click on <strong>New Request</strong> under <strong>Allocations</strong>\
+    \ in the left hand side menu. Email the <a href=\"mailto:servicedesk@ersa.edu.au\"\
+    >eRSA Helpdesk</a> if you have questions about any of the information in the form.\
+    \ New requests can take a couple of weeks to process, and allocations are merit-based.</p>\n\
+    <p><a href=\"https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation\"\
+    >Managing an Allocation page</a><br>\n<a href=\"#glossary\">Glossary of Terms</a><br>\n\
+    <a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"setup\"></a></p>\n<h2>Contact\
+    \ eRSA to help set-up your instance</h2>\n<p>Accessing the Cloud software repository\
+    \ is as simple as launching an instance using a specific image designed by eRSA\
+    \ staff, and knowing a few <a href=\"#modules\">basic commands</a>.  </p>\n<p>Email\
+    \ the <a href=\"mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a> to inform them\
+    \ you want to set up a VM with access to the software repository, and a support\
+    \ member will give you the name of the current image that you will use.  You can\
+    \ use this information to launch an instance, following the instructions below,\
+    \ or you can request that eRSA set up the VM for you.</p>\n<p>Add your eRSA support\
+    \ contact to your project users group</p>\n<p>After you have received a project\
+    \ allocation, you can add collaborators as users to the project by selecting the\
+    \ <a href=\"https://dashboard.rc.nectar.org.au/project/members/\">Users</a> tab\
+    \ in the project menu on the dashboard and entering the institutional (<a href=\"\
+    https://support.nectar.org.au/support/solutions/articles/6000055377-getting-an-account\"\
+    >AAF</a>) email address of your co-workers.</p>\n<p>It is recommended that you\
+    \ add the eRSA email address of your eRSA support contact to the users of your\
+    \ project. If you need any assistance in setting up or managing your VM, eRSA\
+    \ staff will need to be a user on the project in order to provide some types of\
+    \ assistance.</p>\n<p><a href=\"#glossary\">Glossary of Terms</a><br>\n<a href=\"\
+    #top\">Top of page</a></p>\n<hr>\n<p><a name=\"security\"></a></p>\n<h2>Creating\
+    \ a security group</h2>\n<ul>\n<li>\n<p>If you have not already done so, you will\
+    \ need to create a security group with port 22 open for SSH access. </p>\n</li>\n\
+    <li>\n<p>On the NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/project/access_and_security/\"\
+    >dashboard</a>, ensure you are in the correct project.</p>\n</li>\n</ul>\n<p><img\
+    \ alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/software_choose_project.png?raw=true\"\
+    ></p>\n<ul>\n<li>Select \"Access &amp; Security\" under the left hand side pane\
+    \ under \"Compute\".</li>\n<li><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/software_createsecuritybutton.png?raw=true\"\
+    > Select the \"Create Security Group\" button near the top right corner</li>\n\
+    <li>Give your security group a name and description and click the \"Create Security\
+    \ Group\" button</li>\n<li>Click \"Manage Rules\" in the \"Actions\" drop-down\
+    \ menu</li>\n<li>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/software_addrulebutton.png?raw=true\"\
+    > Click on the \"Add Rule\" button near the top right corner </p>\n</li>\n<li>\n\
+    <p>A small window should pop up. Make sure the \"Rule\" is set to \"Custom TCP\
+    \ Rule\" \n  and \"Open Port\" is set to \"Port\". Under the Port textbox enter\
+    \ \"<strong>22</strong>\". Set \"Remote\" \n  to \"CIDR\" and under the \"CIDR\"\
+    \ textbox enter one of the following IP ranges as appropriate.</p>\n<ul>\n<li>129.127.0.0/16\
+    \ - University of Adelaide</li>\n<li>129.96.0.0/16 - Flinders</li>\n<li>130.220.0.0/16\
+    \ - UniSA  </li>\n</ul>\n</li>\n<li>E.g. for a user from the University of Adelaide:</li>\n\
+    </ul>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/software_security_rule.png?raw=true\"\
+    ></p>\n<p><a href=\"https://support.nectar.org.au/support/solutions/articles/6000055387-security-groups\"\
+    >Security Groups page</a><br>\n<a href=\"#glossary\">Glossary of Terms</a> <br>\n\
+    <a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"instance\"></a></p>\n\
+    <h2>Creating an instance with access to the software repository</h2>\n<p>See this\
+    \ <a href=\"http://training.nectar.org.au/package07/sections/index.html\">training\
+    \ module</a> or this <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055376-launching-virtual-machines\"\
+    >guide</a> for detailed instructions on launching an instance if it is your first\
+    \ time and/or you haven't yet set up SSH keypairs.</p>\n<ul>\n<li>\n<p>In your\
+    \ project allocation on the NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/project/instances/\"\
+    >dashboard</a>, navigate to the 'Instances' tab in the 'Compute' menu.</p>\n</li>\n\
+    <li>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/software_launchInstance_button.png?raw=true\"\
+    > Select the \"Launch Instance\" button near the top right corner</p>\n</li>\n\
+    <li>\n<p>Fill in a name for the VM, choose an appropriate size (Flavor), then\
+    \ select the image name provided by eRSA (the screenshot shows the image used\
+    \ for CVMFS access at the time of writing this document).</p>\n</li>\n</ul>\n\
+    <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/software_launchInstance.png?raw=true\"\
+    ></p>\n<ul>\n<li>Click the 'Access and Security' tab. Select your SSH keypair\
+    \ and select the security group which allows access through port 22 for SSH (set\
+    \ up in the previous step).</li>\n</ul>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/software_access_security.png?raw=true\"\
+    ></p>\n<ul>\n<li>Click the 'Availability Zone' tab and select '<strong>sa</strong>',\
+    \ Then click '<strong>Launch</strong>'</li>\n</ul>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/software_avail_zone.png?raw=true\"\
+    ></p>\n<ul>\n<li>Once the Instance is running, use the IP Address to connect to\
+    \ the VM via SSH in the usual way, as outlined in the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055446-accessing-instances\"\
+    >Accessing Instances</a> support page and the training module <a href=\"http://training.nectar.org.au/package07/sections/connectViaSSH.html\"\
+    >Launching and Connecting</a>.</li>\n</ul>\n<p><a href=\"https://support.nectar.org.au/support/solutions/articles/6000055376-launching-virtual-machines\"\
+    >Launching an Instance</a><br>\n<a href=\"#glossary\">Glossary of Terms</a> <br>\n\
+    <a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"modules\"></a></p>\n\
+    <h2>Loading the pre-installed software packages</h2>\n<p>There are a few simple\
+    \ commands to find software packages in the repository and load them on your VM.</p>\n\
+    <table>\n<thead>\n<tr>\n<th>Command</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n\
+    <tr>\n<td><code>module --help</code></td>\n<td>help page for the 'module' commands</td>\n\
+    </tr>\n<tr>\n<td><code>module avail</code></td>\n<td>list all available packages\
+    \ in the repository</td>\n</tr>\n<tr>\n<td><code>module avail &lt;search term&gt;</code></td>\n\
+    <td>list package names containing the search term</td>\n</tr>\n<tr>\n<td><code>module\
+    \ list</code></td>\n<td>list the packages that are already loaded on the VM</td>\n\
+    </tr>\n<tr>\n<td><code>module show &lt;name&gt;</code></td>\n<td>show info on\
+    \ the package, and lists the dependencies - required modules that need to be loaded\
+    \ before you can load the package of interest</td>\n</tr>\n<tr>\n<td><code>module\
+    \ load &lt;name&gt;</code></td>\n<td>load the package onto the VM</td>\n</tr>\n\
+    <tr>\n<td><code>module unload &lt;name&gt;</code></td>\n<td>remove the package\
+    \ 'cache' from the VM</td>\n</tr>\n</tbody>\n</table>\n<p>An example of loading\
+    \ the package 'Stacks'. </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/software_module_load_stacks_full.png?raw=true\"\
+    ></p>\n<p>NOTE: If there is software that you would like to access that is not\
+    \ already in the CVMFS software repository, email the <a href=\"mailto:servicedesk@ersa.edu.au\"\
+    >eRSA Helpdesk</a> and request that it be added. Ensure you mention that you would\
+    \ like to access it through cloud computing on your VM.</p>\n<p><a href=\"#glossary\"\
+    >Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a\
+    \ name=\"transferfiles\"></a></p>\n<h2>Sharing files with the virtual machine</h2>\n\
+    <p>There is a <a href=\"http://training.nectar.org.au/package07/sections/copyFiles.html\"\
+    >training module</a> and a <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
+    >support guide</a> with comprehensive details on transferring data between your\
+    \ VM and your local computer or remote storage servers. Using programs like FileZilla\
+    \ or WinSCP is an easy method of transferring data from your local computer. </p>\n\
+    <p>The following information outlines commands that can be entered on your VM\
+    \ in order to transfer data to and from remote data storage, such as the <a href=\"\
+    https://www.ersa.edu.au/service/data-storage/\">storage</a> offered by eRSA. </p>\n\
+    <h3>Secure Copy (SCP) between the VM and a data storage server</h3>\n<p>If you\
+    \ have data stored on a remote server, you can transfer files between it and the\
+    \ VM through the command-line on the VM.</p>\n<p>You will need a host address\
+    \ for the data storage server, your username, and your password.</p>\n<p><code>scp\
+    \ &lt;source&gt; &lt;destination&gt;</code></p>\n<ul>\n<li>To download to the\
+    \ VM : <code>scp &lt;remote computer&gt;:&lt;path to file&gt; &lt;local VM path&gt;</code>\
+    \  </li>\n<li>To upload to data storage : <code>scp &lt;local VM path&gt; &lt;remote\
+    \ computer&gt;:&lt;path to file&gt;</code></li>\n</ul>\n<p><code>scp username@sftp.ersa.edu.au:/data/myDirectory/file.txt\
+    \ /mnt/data/</code><br>\n<code>scp /mnt/data/results.zip username@sftp.ersa.edu.au:/data/myDirectory/</code></p>\n\
+    <p>You will usually then be prompted to enter the password for your data storage.</p>\n\
+    <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/software_scp_demo.png?raw=true\"\
+    ></p>\n<h3>SFTP via the Command Line</h3>\n<p>Secure file transfer is also available\
+    \ between the VM and remote data storage.</p>\n<p>Enter the 'sftp' command on\
+    \ your VM, and you will have access to the remote host.</p>\n<p><code>sftp username@host.address.edu.au</code>\
+    \   - you will be prompted for a password.</p>\n<p>You are now accessing the remote\
+    \ data storage server, and you can navigate the files on the server as per usual\
+    \ with commands like <code>cd</code> and <code>ls</code>.</p>\n<p>The commands\
+    \ <code>get</code> and <code>put</code> will transfer data between the machines:</p>\n\
+    <p><code>get &lt;remote_server_file.txt&gt; &lt;/mnt/localVM_destination/&gt;</code></p>\n\
+    <p><code>put &lt;/mnt/localVM_destination/file.txt&gt; &lt;remote_directory/&gt;</code></p>\n\
+    <p>to close the sftp connection, type <code>exit</code>.</p>\n<p><img alt=\"\"\
+    \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/software_sftp_get.png?raw=true\"\
+    >\n  <img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/software_sftp_put.png?raw=true\"\
+    ></p>\n<p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top\
+    \ of page</a></p>\n<hr>\n<p><a name=\"os\"></a></p>\n<h2>The CentOS operating\
+    \ system</h2>\n<p>The VM image that allows access to the CVMFS software repository\
+    \ is a Linux distribution called CentOS. Most of the documentation available about\
+    \ using your Linux VM assumes that you have an Ubuntu operating system.  There\
+    \ is very little difference for the user between these Linux operating systems,\
+    \ but there is one main difference to be aware of.</p>\n<p>CentOS uses the package\
+    \ manager '<strong>yum</strong>' instead of '<strong>apt-get</strong>'. If you\
+    \ need to install packages on your VM that aren't in the CVMFS software repository,\
+    \ you need to use the 'yum' command wherever there would be an 'apt-get' command\
+    \ in Ubuntu. e.g.</p>\n<ul>\n<li><code>yum search &lt;package name&gt;</code></li>\n\
+    <li><code>sudo yum install &lt;package name&gt;</code></li>\n<li><code>sudo yum\
+    \ update</code></li>\n</ul>\n<p><a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a\
+    \ name=\"glossary\"></a></p>\n<h2>Glossary</h2>\n<p><strong>Availability Zone</strong></p>\n\
+    <blockquote>\n<p>A logical grouping of compute nodes within a region.</p>\n</blockquote>\n\
+    <p><strong>Dashboard</strong></p>\n<blockquote>\n<p>The NeCTAR Dashboard is the\
+    \ main web-based interface for managing NeCTAR virtuals.</p>\n</blockquote>\n\
+    <p><strong>ERSA</strong></p>\n<blockquote>\n<p>eResearch SA runs the South Australian\
+    \ node of the NeCTAR research cloud.</p>\n</blockquote>\n<p><strong>Flavor</strong></p>\n\
+    <blockquote>\n<p>An OpenStack term for an instance sizing specification. Gives\
+    \ the amount \nof memory, number of VCPUs and ephemeral disc size.</p>\n</blockquote>\n\
+    <p><strong>Image</strong></p>\n<blockquote>\n<p>An image (or system image) is\
+    \ a copy of the entire state of a computer system \nsaved as a file. Images are\
+    \ used in two ways in NeCTAR. Firstly as a template for \nVirtual Machines (VMs).\
+    \ You can launch a VM based on an image. \nThe second use of images is to preserve\
+    \ the state of a VM as configured by you as end user. \nThis type of image is\
+    \ usually referred to as a snapshot.</p>\n</blockquote>\n<p><strong>Instance</strong></p>\n\
+    <blockquote>\n<p>An instance is a VM hosted on the NeCTAR OpenStack infrastructure.</p>\n\
+    </blockquote>\n<p><strong>Project</strong></p>\n<blockquote>\n<p>The NeCTAR term\
+    \ for a \"resource container\"; i.e. what you get when you \nare granted a NeCTAR\
+    \ allocation. A project \"owns\" virtual machine instances, snapshots \nand various\
+    \ kinds of storage, and may be shared by multiple users.</p>\n</blockquote>\n\
+    <p><strong>Security Group</strong></p>\n<blockquote>\n<p>A set of access rules\
+    \ that may be applied to one or more instances. \nAn access rule allows network\
+    \ access to an instance from other hosts with a \nspecified combination of protocol\
+    \ family (e.g. TCP, UDP, UCMP), port number and address range. <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055387-security-groups\"\
+    >Security Groups page</a></p>\n</blockquote>\n<p><strong>Virtual Machine</strong></p>\n\
+    <blockquote>\n<p>A virtual machine (VM) is an operating system (OS) or application\
+    \ environment that \nis installed on software which imitates dedicated hardware.\
+    \ The end user has the same \nexperience on a virtual machine as they would have\
+    \ on dedicated hardware.</p>\n</blockquote>\n<p><strong>Volume Storage</strong></p>\n\
+    <blockquote>\n<p>Data Storage in your Virtual Machine that works like a hard-drive\
+    \ on your PC or \nlaptop does. Volume storage is automatically available in your\
+    \ VM as the storage \nspace for you system drive. Some flavors of VMs include\
+    \ an amount of ephemeral volume \nstorage. Depending on your allocation you can\
+    \ have persistent volume storage attached to your VM.</p>\n</blockquote>\n<p><a\
+    \ href=\"https://support.nectar.org.au/support/solutions/articles/6000055445-glossary\"\
+    >Full Glossary Page</a><br>\n<a href=\"http://cloud.nectar.org.au/faq/\">NeCTAR\
+    \ FAQ - general inormation</a><br>\nFor more help, contact the <a href=\"mailto:servicedesk@ersa.edu.au\"\
+    >eRSA Helpdesk</a></p>\n<p><a href=\"#top\">Top of page</a></p>"
+  parent: 24
+  sha1: 387b2a893b604f2444b0cce88bcc227f0f48bdaa
+  title: Cloud Software Repository - user guide
