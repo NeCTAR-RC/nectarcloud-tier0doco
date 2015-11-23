@@ -16437,3 +16437,274 @@
   parent: 24
   sha1: 2046451b0669cf00d8b8e004b9db03579307f6bc
   title: TPAC R-Studio with X2go
+91:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-11-22T23:59:45-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " TPAC provides an image in NeCTAR Cloud with Matlab 2013 installed.\
+          \ The image\nalso includes X2Go server that allow users to run MATLAB in\
+          \ the remote desktop\nenvironment and access the Matlab from anywhere through\
+          \ the Internet. MATE desktop\nis installed and it provides GUI support for\
+          \ the Matlab and facilities better user\nexperience that console access.\
+          \ The below lists what software packages have been\npre-installed on the\
+          \ TPAC Matlab with X2Go image: \n \n \n Ubuntu 14.04 (operating system)\
+          \ \n \n \n X2Go Server (remote desktop server) \n \n \n Mate 1.8.1 (GUI\
+          \ desktop) \n \n \n Matlab 2013 \n \n \n For more information about how\
+          \ to use X2Go and MATE desktop, please refer to the\narticle \u2018TPAC\
+          \ Remote Desktop X2Go\u2019. \n What you need \n Aside from computer and\
+          \ network access, you will need to be an Australian Access Federation\n\
+          eligible researcher to access the NeCTAR cloud. You will also have to use\
+          \ key-pair\nsecurity for your virtual machine authentication.\nUpon first\
+          \ NeCTAR cloud use, AAF eligible researchers are issued with a limited\n\
+          trial allocation that will do just fine for trialling the\nTPAC RStudio\
+          \ in the research cloud. If you need more resources, such as CPU, data\n\
+          storage space, or you need it for longer than your trial allocation, then\
+          \ you can\nrequest a NeCTAR allocation. \n Launch a Virtual Machine With\
+          \ TPAC Matlab image \n The below provides instruction about how to launch\
+          \ a virtual machine in NecTAR\nusing TPAC pre-build image with Matlab, X2Go\
+          \ and MATE. \n \n Login to NeCTAR Dashboard with your AAF credentials. After\
+          \ login,\n you should see the below screenshot: \n \n \n \n Select your\
+          \ project name, click the \u2018Images\u2019 and then click tab \u2018Public\u2019\
+          . It will\n show all available public images. Scroll down the list and find\
+          \ the image with name\n 'TPAC matlab.001 1447740833' and click the \u2018\
+          Launch\u2019 button. You should see a pop\n up window like below: \n \n\
+          \ \n \n \n In this pop up window, provide some information for the virtual\
+          \ machine,\n such as name, key pair, security groups, flavour and availability\
+          \ zone. Please\n note, the desktop application such as MATE requires larger\
+          \ root disk size, so it\n is prefered to use flavour m2.small, m2.medium,\
+          \ m2.large and m2.xlarge as these\n flavours have 30G root disk. You also\
+          \ need to open port 22, as X2Go uses it for\n communication between X2Go\
+          \ Server and Client. Besides, as the license requirement,\n the availability\
+          \ zone is restricted to Tasmania Zone. So please make sure you launch\n\
+          \ a virtual machine in the Tasmania Zone otherwise the Matlab won\u2019\
+          t work properly.\n For details of how to launch a virtual machine in NeCTAR\
+          \ Cloud, please refer to this link \n \n \n After clicking the \u2018Launch\u2019\
+          \ button, the virtual machine will be ready in a few\n minutes. Please write\
+          \ down the IP address of the newly created virtual machine as\n it will\
+          \ be used later in the X2Go Client to connect to the virtual machine. \n\
+          \ \n \n Note, TPAC Matlab image only works if the availability zone of the\
+          \ virtual machine\nis Tasmania Zone as the Matlab uses UTAS Site License.\
+          \ The Matlab will not run if\nthe availability zone is not in Tasmania.\
+          \ \n Use Matlab in MATE Desktop \n To use the Matlab in the launched virtual\
+          \ machine, you need to use the X20Go Client\nto connect to it.  \n Configure\
+          \ the X20Go client with the information you obtained from the launched\n\
+          virtual machine, such as IP address, the default user account, in this case\
+          \ it\nshould be Ubuntu and the private key used  for authentication. \n\
+          \ So the simple steps are: \n \n \n Configure the X20Go client to create\
+          \ a session for the virtual machine \n \n \n Double Click the session and\
+          \ get connection to the virtual machine \n \n \n If everything goes well,\
+          \ you should see the MATE desktop \n \n \n Once you are in the MATE desktop,\
+          \ click \u2018Application\u2019 menu on the top left corner\n and move mouse\
+          \ cursor over the \u2018System Tools\u2019 \n \n \n A submenu will come\
+          \ out and move mouse over \u2018Mate Terminal\u2019 and click \n \n \n A\
+          \ terminal window will appear and type \u2018matlab\u2019 in the terminal\
+          \ window \n \n \n The Matlab main window should appear \n \n \n For details\
+          \ about how to connect to X2Go Server using X2Go client, please refer\n\
+          to the 'TPAC Remote Desktop X2Go'.  \n What Next \n If you want to use your\
+          \ Matlab virtual machine as a collaboration space, you will\nneed to do\
+          \ some user management. For this you can refer to \u201CAdd Accounts on\
+          \ The\nX2Go Server\u201D in 'TPAC Remote Desktop X2Go' documentation. On\
+          \ top of that, your\ncollaborators will need to install their own X2Go client,\
+          \ refer to the same document. \n You can also share data between your local\
+          \ machine with X2Go Client installed and\nMatlab virtual machine with X2Go\
+          \ Server installed. You can find how from this document. \n Contact \n If\
+          \ you have problems with TPAC Matlab image and using it, please contact\
+          \ TPAC help\ndesk via helpdesk@tpac.org.au, or any help desks from your\
+          \ local Eresearch service\nproviders. "
+        description: "<p>TPAC provides an image in NeCTAR Cloud with Matlab 2013 installed.\
+          \ The image\nalso includes X2Go server that allow users to run MATLAB in\
+          \ the remote desktop\nenvironment and access the Matlab from anywhere through\
+          \ the Internet. MATE desktop\nis installed and it provides GUI support for\
+          \ the Matlab and facilities better user\nexperience that console access.\
+          \ The below lists what software packages have been\npre-installed on the\
+          \ TPAC Matlab with X2Go image:</p>\n<ul>\n<li>\n<p>Ubuntu 14.04 (operating\
+          \ system)</p>\n</li>\n<li>\n<p>X2Go Server (remote desktop server)</p>\n\
+          </li>\n<li>\n<p>Mate 1.8.1 (GUI desktop)</p>\n</li>\n<li>\n<p>Matlab 2013</p>\n\
+          </li>\n</ul>\n<p>For more information about how to use X2Go and MATE desktop,\
+          \ please refer to the\narticle \u2018TPAC Remote Desktop X2Go\u2019.</p>\n\
+          <h2>What you need</h2>\n<p>Aside from computer and network access, you will\
+          \ need to be an <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055377-getting-an-account\"\
+          >Australian Access Federation</a>\neligible researcher to access the NeCTAR\
+          \ cloud. You will also have to use key-pair\nsecurity for your <a href=\"\
+          https://support.nectar.org.au/support/solutions/articles/6000077794-getting-started\"\
+          >virtual machine authentication</a>.\nUpon first NeCTAR cloud use, AAF eligible\
+          \ researchers are issued with a limited\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you\"\
+          >trial allocation</a> that will do just fine for trialling the\nTPAC RStudio\
+          \ in the research cloud. If you need more resources, such as CPU, data\n\
+          storage space, or you need it for longer than your trial allocation, then\
+          \ you can\nrequest a <a href=\"https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation\"\
+          >NeCTAR allocation</a>.</p>\n<h2>Launch a Virtual Machine With TPAC Matlab\
+          \ image</h2>\n<p>The below provides instruction about how to launch a virtual\
+          \ machine in NecTAR\nusing TPAC pre-build image with Matlab, X2Go and MATE.</p>\n\
+          <ul>\n<li>Login to NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\"\
+          >Dashboard</a> with your AAF credentials. After login,\n you should see\
+          \ the below screenshot:</li>\n</ul>\n<p><img alt=\"snapshot1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/tpac-matlab-1.png?raw=true\"\
+          ></p>\n<ul>\n<li>Select your project name, click the \u2018Images\u2019\
+          \ and then click tab \u2018Public\u2019. It will\n show all available public\
+          \ images. Scroll down the list and find the image with name\n 'TPAC matlab.001\
+          \ 1447740833' and click the \u2018Launch\u2019 button. You should see a\
+          \ pop\n up window like below:</li>\n</ul>\n<p><img alt=\"snapshot2\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/tpac-matlab-2.png?raw=true\"\
+          ></p>\n<ul>\n<li>\n<p>In this pop up window, provide some information for\
+          \ the virtual machine,\n such as name, key pair, security groups, flavour\
+          \ and availability zone. Please\n note, the desktop application such as\
+          \ MATE requires larger root disk size, so it\n is prefered to use flavour\
+          \ m2.small, m2.medium, m2.large and m2.xlarge as these\n flavours have 30G\
+          \ root disk. You also need to open port 22, as X2Go uses it for\n communication\
+          \ between X2Go Server and Client. Besides, as the license requirement,\n\
+          \ the availability zone is restricted to Tasmania Zone. So please make sure\
+          \ you launch\n a virtual machine in the Tasmania Zone otherwise the Matlab\
+          \ won\u2019t work properly.\n For details of how to launch a virtual machine\
+          \ in NeCTAR Cloud, please refer to this <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055376-launching-virtual-machines\"\
+          >link</a></p>\n</li>\n<li>\n<p>After clicking the \u2018Launch\u2019 button,\
+          \ the virtual machine will be ready in a few\n minutes. Please write down\
+          \ the IP address of the newly created virtual machine as\n it will be used\
+          \ later in the X2Go Client to connect to the virtual machine.</p>\n</li>\n\
+          </ul>\n<p>Note, TPAC Matlab image only works if the availability zone of\
+          \ the virtual machine\nis Tasmania Zone as the Matlab uses UTAS Site License.\
+          \ The Matlab will not run if\nthe availability zone is not in Tasmania.</p>\n\
+          <h2>Use Matlab in MATE Desktop</h2>\n<p>To use the Matlab in the launched\
+          \ virtual machine, you need to use the X20Go Client\nto connect to it. </p>\n\
+          <p>Configure the X20Go client with the information you obtained from the\
+          \ launched\nvirtual machine, such as IP address, the default user account,\
+          \ in this case it\nshould be Ubuntu and the private key used  for authentication.</p>\n\
+          <p>So the simple steps are:</p>\n<ul>\n<li>\n<p>Configure the X20Go client\
+          \ to create a session for the virtual machine</p>\n</li>\n<li>\n<p>Double\
+          \ Click the session and get connection to the virtual machine</p>\n</li>\n\
+          <li>\n<p>If everything goes well, you should see the MATE desktop</p>\n\
+          </li>\n<li>\n<p>Once you are in the MATE desktop, click \u2018Application\u2019\
+          \ menu on the top left corner\n and move mouse cursor over the \u2018System\
+          \ Tools\u2019</p>\n</li>\n<li>\n<p>A submenu will come out and move mouse\
+          \ over \u2018Mate Terminal\u2019 and click</p>\n</li>\n<li>\n<p>A terminal\
+          \ window will appear and type \u2018matlab\u2019 in the terminal window</p>\n\
+          </li>\n<li>\n<p>The Matlab main window should appear</p>\n</li>\n</ul>\n\
+          <p>For details about how to connect to X2Go Server using X2Go client, please\
+          \ refer\nto the 'TPAC Remote Desktop X2Go'. </p>\n<h2>What Next</h2>\n<p>If\
+          \ you want to use your Matlab virtual machine as a collaboration space,\
+          \ you will\nneed to do some user management. For this you can refer to \u201C\
+          Add Accounts on The\nX2Go Server\u201D in 'TPAC Remote Desktop X2Go' documentation.\
+          \ On top of that, your\ncollaborators will need to install their own X2Go\
+          \ client, refer to the same document.</p>\n<p>You can also share data between\
+          \ your local machine with X2Go Client installed and\nMatlab virtual machine\
+          \ with X2Go Server installed. You can find how from this document.</p>\n\
+          <h2>Contact</h2>\n<p>If you have problems with TPAC Matlab image and using\
+          \ it, please contact TPAC help\ndesk via helpdesk@tpac.org.au, or any help\
+          \ desks from your local Eresearch service\nproviders.</p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000090908
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-11-22T23:59:45-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000090908
+        position: 5
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: TPAC Matlab with X2Go
+        updated_at: '2015-11-22T23:59:45-05:00'
+        user_id: 6002464727
+  html: "<p>TPAC provides an image in NeCTAR Cloud with Matlab 2013 installed. The\
+    \ image\nalso includes X2Go server that allow users to run MATLAB in the remote\
+    \ desktop\nenvironment and access the Matlab from anywhere through the Internet.\
+    \ MATE desktop\nis installed and it provides GUI support for the Matlab and facilities\
+    \ better user\nexperience that console access. The below lists what software packages\
+    \ have been\npre-installed on the TPAC Matlab with X2Go image:</p>\n<ul>\n<li>\n\
+    <p>Ubuntu 14.04 (operating system)</p>\n</li>\n<li>\n<p>X2Go Server (remote desktop\
+    \ server)</p>\n</li>\n<li>\n<p>Mate 1.8.1 (GUI desktop)</p>\n</li>\n<li>\n<p>Matlab\
+    \ 2013</p>\n</li>\n</ul>\n<p>For more information about how to use X2Go and MATE\
+    \ desktop, please refer to the\narticle \u2018TPAC Remote Desktop X2Go\u2019.</p>\n\
+    <h2>What you need</h2>\n<p>Aside from computer and network access, you will need\
+    \ to be an <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055377-getting-an-account\"\
+    >Australian Access Federation</a>\neligible researcher to access the NeCTAR cloud.\
+    \ You will also have to use key-pair\nsecurity for your <a href=\"https://support.nectar.org.au/support/solutions/articles/6000077794-getting-started\"\
+    >virtual machine authentication</a>.\nUpon first NeCTAR cloud use, AAF eligible\
+    \ researchers are issued with a limited\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you\"\
+    >trial allocation</a> that will do just fine for trialling the\nTPAC RStudio in\
+    \ the research cloud. If you need more resources, such as CPU, data\nstorage space,\
+    \ or you need it for longer than your trial allocation, then you can\nrequest\
+    \ a <a href=\"https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation\"\
+    >NeCTAR allocation</a>.</p>\n<h2>Launch a Virtual Machine With TPAC Matlab image</h2>\n\
+    <p>The below provides instruction about how to launch a virtual machine in NecTAR\n\
+    using TPAC pre-build image with Matlab, X2Go and MATE.</p>\n<ul>\n<li>Login to\
+    \ NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\">Dashboard</a> with your\
+    \ AAF credentials. After login,\n you should see the below screenshot:</li>\n\
+    </ul>\n<p><img alt=\"snapshot1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/tpac-matlab-1.png?raw=true\"\
+    ></p>\n<ul>\n<li>Select your project name, click the \u2018Images\u2019 and then\
+    \ click tab \u2018Public\u2019. It will\n show all available public images. Scroll\
+    \ down the list and find the image with name\n 'TPAC matlab.001 1447740833' and\
+    \ click the \u2018Launch\u2019 button. You should see a pop\n up window like below:</li>\n\
+    </ul>\n<p><img alt=\"snapshot2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/tpac-matlab-2.png?raw=true\"\
+    ></p>\n<ul>\n<li>\n<p>In this pop up window, provide some information for the\
+    \ virtual machine,\n such as name, key pair, security groups, flavour and availability\
+    \ zone. Please\n note, the desktop application such as MATE requires larger root\
+    \ disk size, so it\n is prefered to use flavour m2.small, m2.medium, m2.large\
+    \ and m2.xlarge as these\n flavours have 30G root disk. You also need to open\
+    \ port 22, as X2Go uses it for\n communication between X2Go Server and Client.\
+    \ Besides, as the license requirement,\n the availability zone is restricted to\
+    \ Tasmania Zone. So please make sure you launch\n a virtual machine in the Tasmania\
+    \ Zone otherwise the Matlab won\u2019t work properly.\n For details of how to\
+    \ launch a virtual machine in NeCTAR Cloud, please refer to this <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055376-launching-virtual-machines\"\
+    >link</a></p>\n</li>\n<li>\n<p>After clicking the \u2018Launch\u2019 button, the\
+    \ virtual machine will be ready in a few\n minutes. Please write down the IP address\
+    \ of the newly created virtual machine as\n it will be used later in the X2Go\
+    \ Client to connect to the virtual machine.</p>\n</li>\n</ul>\n<p>Note, TPAC Matlab\
+    \ image only works if the availability zone of the virtual machine\nis Tasmania\
+    \ Zone as the Matlab uses UTAS Site License. The Matlab will not run if\nthe availability\
+    \ zone is not in Tasmania.</p>\n<h2>Use Matlab in MATE Desktop</h2>\n<p>To use\
+    \ the Matlab in the launched virtual machine, you need to use the X20Go Client\n\
+    to connect to it. </p>\n<p>Configure the X20Go client with the information you\
+    \ obtained from the launched\nvirtual machine, such as IP address, the default\
+    \ user account, in this case it\nshould be Ubuntu and the private key used  for\
+    \ authentication.</p>\n<p>So the simple steps are:</p>\n<ul>\n<li>\n<p>Configure\
+    \ the X20Go client to create a session for the virtual machine</p>\n</li>\n<li>\n\
+    <p>Double Click the session and get connection to the virtual machine</p>\n</li>\n\
+    <li>\n<p>If everything goes well, you should see the MATE desktop</p>\n</li>\n\
+    <li>\n<p>Once you are in the MATE desktop, click \u2018Application\u2019 menu\
+    \ on the top left corner\n and move mouse cursor over the \u2018System Tools\u2019\
+    </p>\n</li>\n<li>\n<p>A submenu will come out and move mouse over \u2018Mate Terminal\u2019\
+    \ and click</p>\n</li>\n<li>\n<p>A terminal window will appear and type \u2018\
+    matlab\u2019 in the terminal window</p>\n</li>\n<li>\n<p>The Matlab main window\
+    \ should appear</p>\n</li>\n</ul>\n<p>For details about how to connect to X2Go\
+    \ Server using X2Go client, please refer\nto the 'TPAC Remote Desktop X2Go'. </p>\n\
+    <h2>What Next</h2>\n<p>If you want to use your Matlab virtual machine as a collaboration\
+    \ space, you will\nneed to do some user management. For this you can refer to\
+    \ \u201CAdd Accounts on The\nX2Go Server\u201D in 'TPAC Remote Desktop X2Go' documentation.\
+    \ On top of that, your\ncollaborators will need to install their own X2Go client,\
+    \ refer to the same document.</p>\n<p>You can also share data between your local\
+    \ machine with X2Go Client installed and\nMatlab virtual machine with X2Go Server\
+    \ installed. You can find how from this document.</p>\n<h2>Contact</h2>\n<p>If\
+    \ you have problems with TPAC Matlab image and using it, please contact TPAC help\n\
+    desk via helpdesk@tpac.org.au, or any help desks from your local Eresearch service\n\
+    providers.</p>"
+  parent: 24
+  sha1: faab9821442f157abe6ee301e7c0941e226729af
+  title: TPAC Matlab with X2Go
