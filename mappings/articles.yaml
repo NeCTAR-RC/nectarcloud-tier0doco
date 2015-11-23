@@ -16106,3 +16106,334 @@
   parent: 24
   sha1: 387b2a893b604f2444b0cce88bcc227f0f48bdaa
   title: Cloud Software Repository - user guide
+90:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-11-22T23:58:49-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Using remote desktop in the NeCTAR cloud is the easiest way\
+          \ to start\nincorporating cloud computing into you research practice. The\
+          \ cloud can enable\nyou to access your computing from anywhere, have it\
+          \ running 24/7, and provide a\nbasic space to collaborate, whether your\
+          \ collaborators are down the hall, or many\ntime zones away.  \n TPAC provides\
+          \ and maintains a number of server images that make \u2018owning\u2019 a\
+          \ remote\ndesktop very easy. This document is about the TPAC RStudio image.\
+          \ By following the\ninstructions below you can quickly have an RStudio remote\
+          \ desktop running in the\nNeCTAR cloud. \n What you need \n Aside from computer\
+          \ and network access, you will need to be an Australian Access Federation\n\
+          eligible researcher to access the NeCTAR cloud. You will also have to use\
+          \ key-pair\nsecurity for your virtual machine authentication.\nUpon first\
+          \ NeCTAR cloud use, AAF eligible researchers are issued with a limited\n\
+          trial allocation that will do just fine for trialling the\nTPAC RStudio\
+          \ in the research cloud. If you need more resources, such as CPU, data\n\
+          storage space, or you need it for longer than your trial allocation, then\
+          \ you can\nrequest a NeCTAR allocation. \n Launch an RStudio remote desktop\
+          \ \n To launch an RStudio remote desktop follow these steps: \n Log in to\
+          \ your NeCTAR Dashboard, and if you have access to more than\none allocation,\
+          \ ensure that your project selector (top left on the Dashboard, is\nset\
+          \ to the project of your choice). \n There are a few variations of launching\
+          \ a VM instance from an image, here we will\nnavigate to images under Compute\
+          \ on the left hand side of the Dashboard. The Images\nlist displays, you\
+          \ will need to the Public images filter button on the top right\nof the\
+          \ list. In the list of Public images, find the image named \u201CTPAC rstudio.xxx\
+          \ yyyyy\u201D\nwhere xxx and yyyyy are mere version numbers. On the right\
+          \ in this image table,\nclick the image\u2019s Launch action button.  \n\
+          \ \n The Launch Instance dialog displays.  \n On the Details tab of the\
+          \ dialog, enter the instance Name, and select a Flavor\nwith a minimum of\
+          \ 10GB root disk (Flavor is Nectar for size of your VM). The Image\nname\
+          \ \"TPAC rstudio.xxx ...\" is already selected. \n On the Access & Security\
+          \ tab, select your key pair, and select one or more security\ngroups to\
+          \ apply to your VM. To complete the instructions in this document, you will\n\
+          need a security group that allows SSH \n If you have any specific reason\
+          \ to run your VM in a specific availability zone, \nyou can select it on\
+          \ the Availability Zone tab. Alternatively you can let NeCTAR\ndecide where\
+          \ best to host your VM by leaving the selector on \u201CAny availability\
+          \ zone\u201D. \n You don\u2019t have to change anything on the \u201Cpost-Creation\
+          \ and Advanced Options tabs. \n Click Launch. Launching should complete\
+          \ in minutes. When your instance has\nsuccessfully launched, the Dashboard\
+          \ will show your the IP Address of your VM.  \n \n Connecting to your RStudio\
+          \ remote desktop using X2Go \n The RStudio you launched using the TPAC Rstudio\
+          \ image has the X2Go remote desktop\nservice and the MATE GUI provider preinstalled.\
+          \ So your VM is ready for for it. \n Your local computer will need the X2Go\
+          \ client software installed. If you don\u2019t\nalready have the X2Go Client\
+          \ on your machine, you can find the instructions for\nyou Operating System\
+          \ under X2Go Client Installation in Getting Started with TPAC\nremote desktop.\
+          \ \n When you have the X2Go client installed you will need to create a \u201C\
+          Session\u201D. At\nits most basic you will need the IP Address of the remote\
+          \ desktop RStudio VM\nyou\u2019ve launched, the user name for your VM (TPAC\
+          \ RStudio image provides you with\nthe ubuntu username by default) and your\
+          \ private key. Detailed instructions can be\nfound under Use X2Go Client\
+          \ in document TPAC Remote Desktop X2Go, but the\nscreenshot below should\
+          \ give you the basic idea. \n \n When you're successfully connected, you\
+          \ can find the RStudio in the menu (top left)\nunder Applications | Programming\
+          \ \n \n What\u2019s on my RStudio remote desktop instance \n In the building\
+          \ process for the TPAC RStudio image, the software that will be\ninstalled\
+          \ will be the latest as provided by NeCTAR, Linux package managers or\n\
+          software providers.  \n \n \n NeCTAR Ubuntu LTS release \n \n \n Mate desktop\
+          \ \n \n \n X2Go server \n \n \n RStudio  \n \n \n Additional R packages\n\
+          rgdal, rgeos, ncdf4, raster, abind, ade4, adehabitatHR, adehabitatLT, adehabitatMA,\n\
+          akima, animation, bit, bitops, brew, caTools, changepoint, CircStats, coda,\
+          \ colorspace,\ncrawl, deldir, devtools, dichromat, digest, dismo, diveMove,\
+          \ evaluate, ff, FNN, foreach,\nformatR, gdalUtils, GeoLight, geometry, geosphere,\
+          \ ggplot2, gstat, gtable, highr,\nhtmltools, httpuv, httr, intervals, iterators,\
+          \ jsonlite, knitr, labeling, magic,\nmapdata, maps, maptools, markdown,\
+          \ memoise, mime, misc3d, munsell, mvtnorm, ncdf,\nncdf4, plyr, polyclip,\
+          \ proto, quantreg, R6, raster, RColorBrewer, Rcpp, RCurl,\nreshape2, rgdal,\
+          \ rgeos, RJSONIO, R.methodsS3, RNetCDF, R.oo, roxygen2, rstudioapi,\nR.utils,\
+          \ scales, shiny, sp, spacetime, SparseM, stringr, tensor, testthat, trip,\n\
+          whisker, XML, xtable, xts, yaml, zoo, rgl \n What next \n If you want to\
+          \ use your VM as collaboration space, you will need to do some user\nmanagement.\
+          \ For this you can refer to \u201CAdd Accounts on The X2Go Server\u201D\
+          \ in TPAC\nRemote Desktop X2go documentation. On top of that, your collaborators\
+          \ will need\nto install their own X2Go client, refer above. \n Your TPAC\
+          \ image based RStudio remote desktop instance is also an RStudio Server.\n\
+          With some user management, and some NeCTAR security settings, you can get\
+          \ or\ngive access to your RStudio VM using a web-browser. For more info\
+          \ on this you can\nview skip to the bottom of Step 2 of the instructions\
+          \ at TPAC RStudio Server \n Additionally your VM is also a Shiny Server\
+          \ for interactive R-backed web applications. \nLearn more at the Shiny Server\
+          \ websiteshiny. You will need to some allow connections to\ntcp port 3838\
+          \ in the Nectar security settings to allow access to your Shiny Server\n\
+          on your VM. \n You can create a Shared Data Folder on the Remote Server.\
+          \ Head over to here to\nfind out how. \n Contact \n If you have trouble\
+          \ with TPAC R-Studio image, please contact TPAC help desk via\nhelpdesk@tpac.org.au,\
+          \ or any help desks from your local Eresearch service providers. "
+        description: "<p>Using remote desktop in the NeCTAR cloud is the easiest way\
+          \ to start\nincorporating cloud computing into you research practice. The\
+          \ cloud can enable\nyou to access your computing from anywhere, have it\
+          \ running 24/7, and provide a\nbasic space to collaborate, whether your\
+          \ collaborators are down the hall, or many\ntime zones away. </p>\n<p>TPAC\
+          \ provides and maintains a number of server images that make \u2018owning\u2019\
+          \ a remote\ndesktop very easy. This document is about the TPAC RStudio image.\
+          \ By following the\ninstructions below you can quickly have an RStudio remote\
+          \ desktop running in the\nNeCTAR cloud.</p>\n<h2>What you need</h2>\n<p>Aside\
+          \ from computer and network access, you will need to be an <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055377-getting-an-account\"\
+          >Australian Access Federation</a>\neligible researcher to access the NeCTAR\
+          \ cloud. You will also have to use key-pair\nsecurity for your <a href=\"\
+          https://support.nectar.org.au/support/solutions/articles/6000077794-getting-started\"\
+          >virtual machine authentication</a>.\nUpon first NeCTAR cloud use, AAF eligible\
+          \ researchers are issued with a limited\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you\"\
+          >trial allocation</a> that will do just fine for trialling the\nTPAC RStudio\
+          \ in the research cloud. If you need more resources, such as CPU, data\n\
+          storage space, or you need it for longer than your trial allocation, then\
+          \ you can\nrequest a <a href=\"https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation\"\
+          >NeCTAR allocation</a>.</p>\n<h2>Launch an RStudio remote desktop</h2>\n\
+          <p>To launch an RStudio remote desktop follow these steps:</p>\n<p>Log in\
+          \ to your NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\">Dashboard</a>,\
+          \ and if you have access to more than\none allocation, ensure that your\
+          \ project selector (top left on the Dashboard, is\nset to the project of\
+          \ your choice).</p>\n<p>There are a few variations of launching a VM instance\
+          \ from an image, here we will\nnavigate to images under Compute on the left\
+          \ hand side of the Dashboard. The Images\nlist displays, you will need to\
+          \ the Public images filter button on the top right\nof the list. In the\
+          \ list of Public images, find the image named \u201CTPAC rstudio.xxx yyyyy\u201D\
+          \nwhere xxx and yyyyy are mere version numbers. On the right in this image\
+          \ table,\nclick the image\u2019s Launch action button. </p>\n<p><img alt=\"\
+          snapshot1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/tpac-rstudio-1.png?raw=true\"\
+          ></p>\n<p>The Launch Instance dialog displays. </p>\n<p>On the Details tab\
+          \ of the dialog, enter the instance Name, and select a Flavor\nwith a minimum\
+          \ of 10GB root disk (Flavor is Nectar for size of your VM). The Image\n\
+          name \"TPAC rstudio.xxx ...\" is already selected.</p>\n<p>On the Access\
+          \ &amp; Security tab, select your key pair, and select one or more security\n\
+          groups to apply to your VM. To complete the instructions in this document,\
+          \ you will\nneed a security group that allows SSH</p>\n<p>If you have any\
+          \ specific reason to run your VM in a specific availability zone, \nyou\
+          \ can select it on the Availability Zone tab. Alternatively you can let\
+          \ NeCTAR\ndecide where best to host your VM by leaving the selector on \u201C\
+          Any availability zone\u201D.</p>\n<p>You don\u2019t have to change anything\
+          \ on the \u201Cpost-Creation and Advanced Options tabs.</p>\n<p>Click Launch.\
+          \ Launching should complete in minutes. When your instance has\nsuccessfully\
+          \ launched, the Dashboard will show your the IP Address of your VM. </p>\n\
+          <p><img alt=\"snapshot2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/tpac-rstudio-2.png?raw=true\"\
+          ></p>\n<h2>Connecting to your RStudio remote desktop using X2Go</h2>\n<p>The\
+          \ RStudio you launched using the TPAC Rstudio image has the X2Go remote\
+          \ desktop\nservice and the MATE GUI provider preinstalled. So your VM is\
+          \ ready for for it.</p>\n<p>Your local computer will need the X2Go client\
+          \ software installed. If you don\u2019t\nalready have the X2Go Client on\
+          \ your machine, you can find the instructions for\nyou Operating System\
+          \ under X2Go Client Installation in Getting Started with TPAC\nremote desktop.</p>\n\
+          <p>When you have the X2Go client installed you will need to create a \u201C\
+          Session\u201D. At\nits most basic you will need the IP Address of the remote\
+          \ desktop RStudio VM\nyou\u2019ve launched, the user name for your VM (TPAC\
+          \ RStudio image provides you with\nthe ubuntu username by default) and your\
+          \ private key. Detailed instructions can be\nfound under Use X2Go Client\
+          \ in document TPAC Remote Desktop X2Go, but the\nscreenshot below should\
+          \ give you the basic idea.</p>\n<p><img alt=\"snapshot3\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/tpac-rstudio-3.png?raw=true\"\
+          ></p>\n<p>When you're successfully connected, you can find the RStudio in\
+          \ the menu (top left)\nunder Applications | Programming</p>\n<p><img alt=\"\
+          snapshot4\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/tpac-rstudio-4.png?raw=true\"\
+          ></p>\n<h2>What\u2019s on my RStudio remote desktop instance</h2>\n<p>In\
+          \ the building process for the TPAC RStudio image, the software that will\
+          \ be\ninstalled will be the latest as provided by NeCTAR, Linux package\
+          \ managers or\nsoftware providers. </p>\n<ul>\n<li>\n<p>NeCTAR Ubuntu LTS\
+          \ release</p>\n</li>\n<li>\n<p>Mate desktop</p>\n</li>\n<li>\n<p>X2Go server</p>\n\
+          </li>\n<li>\n<p>RStudio </p>\n</li>\n</ul>\n<p>Additional R packages\nrgdal,\
+          \ rgeos, ncdf4, raster, abind, ade4, adehabitatHR, adehabitatLT, adehabitatMA,\n\
+          akima, animation, bit, bitops, brew, caTools, changepoint, CircStats, coda,\
+          \ colorspace,\ncrawl, deldir, devtools, dichromat, digest, dismo, diveMove,\
+          \ evaluate, ff, FNN, foreach,\nformatR, gdalUtils, GeoLight, geometry, geosphere,\
+          \ ggplot2, gstat, gtable, highr,\nhtmltools, httpuv, httr, intervals, iterators,\
+          \ jsonlite, knitr, labeling, magic,\nmapdata, maps, maptools, markdown,\
+          \ memoise, mime, misc3d, munsell, mvtnorm, ncdf,\nncdf4, plyr, polyclip,\
+          \ proto, quantreg, R6, raster, RColorBrewer, Rcpp, RCurl,\nreshape2, rgdal,\
+          \ rgeos, RJSONIO, R.methodsS3, RNetCDF, R.oo, roxygen2, rstudioapi,\nR.utils,\
+          \ scales, shiny, sp, spacetime, SparseM, stringr, tensor, testthat, trip,\n\
+          whisker, XML, xtable, xts, yaml, zoo, rgl</p>\n<h2>What next</h2>\n<p>If\
+          \ you want to use your VM as collaboration space, you will need to do some\
+          \ user\nmanagement. For this you can refer to \u201CAdd Accounts on The\
+          \ X2Go Server\u201D in TPAC\nRemote Desktop X2go documentation. On top of\
+          \ that, your collaborators will need\nto install their own X2Go client,\
+          \ refer above.</p>\n<p>Your TPAC image based RStudio remote desktop instance\
+          \ is also an RStudio Server.\nWith some user management, and some NeCTAR\
+          \ security settings, you can get or\ngive access to your RStudio VM using\
+          \ a web-browser. For more info on this you can\nview skip to the bottom\
+          \ of Step 2 of the instructions at <a href=\"http://www.tpac.org.au/resources/nectar-compute-cloud/r-studio-server-in-the-cloud/\"\
+          >TPAC RStudio Server</a></p>\n<p>Additionally your VM is also a Shiny Server\
+          \ for interactive R-backed web applications. \nLearn more at the Shiny Server\
+          \ website<a href=\"https://www.rstudio.com/products/shiny/shiny-server/\"\
+          >shiny</a>. You will need to some allow connections to\ntcp port 3838 in\
+          \ the Nectar security settings to allow access to your Shiny Server\non\
+          \ your VM.</p>\n<p>You can create a Shared Data Folder on the Remote Server.\
+          \ Head over to here to\nfind out how.</p>\n<h2>Contact</h2>\n<p>If you have\
+          \ trouble with TPAC R-Studio image, please contact TPAC help desk via\n\
+          helpdesk@tpac.org.au, or any help desks from your local Eresearch service\
+          \ providers.</p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000090906
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-11-22T23:58:49-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000090906
+        position: 4
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: TPAC R-Studio with X2go
+        updated_at: '2015-11-22T23:58:49-05:00'
+        user_id: 6002464727
+  html: "<p>Using remote desktop in the NeCTAR cloud is the easiest way to start\n\
+    incorporating cloud computing into you research practice. The cloud can enable\n\
+    you to access your computing from anywhere, have it running 24/7, and provide\
+    \ a\nbasic space to collaborate, whether your collaborators are down the hall,\
+    \ or many\ntime zones away. </p>\n<p>TPAC provides and maintains a number of server\
+    \ images that make \u2018owning\u2019 a remote\ndesktop very easy. This document\
+    \ is about the TPAC RStudio image. By following the\ninstructions below you can\
+    \ quickly have an RStudio remote desktop running in the\nNeCTAR cloud.</p>\n<h2>What\
+    \ you need</h2>\n<p>Aside from computer and network access, you will need to be\
+    \ an <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055377-getting-an-account\"\
+    >Australian Access Federation</a>\neligible researcher to access the NeCTAR cloud.\
+    \ You will also have to use key-pair\nsecurity for your <a href=\"https://support.nectar.org.au/support/solutions/articles/6000077794-getting-started\"\
+    >virtual machine authentication</a>.\nUpon first NeCTAR cloud use, AAF eligible\
+    \ researchers are issued with a limited\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you\"\
+    >trial allocation</a> that will do just fine for trialling the\nTPAC RStudio in\
+    \ the research cloud. If you need more resources, such as CPU, data\nstorage space,\
+    \ or you need it for longer than your trial allocation, then you can\nrequest\
+    \ a <a href=\"https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation\"\
+    >NeCTAR allocation</a>.</p>\n<h2>Launch an RStudio remote desktop</h2>\n<p>To\
+    \ launch an RStudio remote desktop follow these steps:</p>\n<p>Log in to your\
+    \ NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/\">Dashboard</a>, and if\
+    \ you have access to more than\none allocation, ensure that your project selector\
+    \ (top left on the Dashboard, is\nset to the project of your choice).</p>\n<p>There\
+    \ are a few variations of launching a VM instance from an image, here we will\n\
+    navigate to images under Compute on the left hand side of the Dashboard. The Images\n\
+    list displays, you will need to the Public images filter button on the top right\n\
+    of the list. In the list of Public images, find the image named \u201CTPAC rstudio.xxx\
+    \ yyyyy\u201D\nwhere xxx and yyyyy are mere version numbers. On the right in this\
+    \ image table,\nclick the image\u2019s Launch action button. </p>\n<p><img alt=\"\
+    snapshot1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/tpac-rstudio-1.png?raw=true\"\
+    ></p>\n<p>The Launch Instance dialog displays. </p>\n<p>On the Details tab of\
+    \ the dialog, enter the instance Name, and select a Flavor\nwith a minimum of\
+    \ 10GB root disk (Flavor is Nectar for size of your VM). The Image\nname \"TPAC\
+    \ rstudio.xxx ...\" is already selected.</p>\n<p>On the Access &amp; Security\
+    \ tab, select your key pair, and select one or more security\ngroups to apply\
+    \ to your VM. To complete the instructions in this document, you will\nneed a\
+    \ security group that allows SSH</p>\n<p>If you have any specific reason to run\
+    \ your VM in a specific availability zone, \nyou can select it on the Availability\
+    \ Zone tab. Alternatively you can let NeCTAR\ndecide where best to host your VM\
+    \ by leaving the selector on \u201CAny availability zone\u201D.</p>\n<p>You don\u2019\
+    t have to change anything on the \u201Cpost-Creation and Advanced Options tabs.</p>\n\
+    <p>Click Launch. Launching should complete in minutes. When your instance has\n\
+    successfully launched, the Dashboard will show your the IP Address of your VM.\
+    \ </p>\n<p><img alt=\"snapshot2\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/tpac-rstudio-2.png?raw=true\"\
+    ></p>\n<h2>Connecting to your RStudio remote desktop using X2Go</h2>\n<p>The RStudio\
+    \ you launched using the TPAC Rstudio image has the X2Go remote desktop\nservice\
+    \ and the MATE GUI provider preinstalled. So your VM is ready for for it.</p>\n\
+    <p>Your local computer will need the X2Go client software installed. If you don\u2019\
+    t\nalready have the X2Go Client on your machine, you can find the instructions\
+    \ for\nyou Operating System under X2Go Client Installation in Getting Started\
+    \ with TPAC\nremote desktop.</p>\n<p>When you have the X2Go client installed you\
+    \ will need to create a \u201CSession\u201D. At\nits most basic you will need\
+    \ the IP Address of the remote desktop RStudio VM\nyou\u2019ve launched, the user\
+    \ name for your VM (TPAC RStudio image provides you with\nthe ubuntu username\
+    \ by default) and your private key. Detailed instructions can be\nfound under\
+    \ Use X2Go Client in document TPAC Remote Desktop X2Go, but the\nscreenshot below\
+    \ should give you the basic idea.</p>\n<p><img alt=\"snapshot3\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/tpac-rstudio-3.png?raw=true\"\
+    ></p>\n<p>When you're successfully connected, you can find the RStudio in the\
+    \ menu (top left)\nunder Applications | Programming</p>\n<p><img alt=\"snapshot4\"\
+    \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/tpac-rstudio-4.png?raw=true\"\
+    ></p>\n<h2>What\u2019s on my RStudio remote desktop instance</h2>\n<p>In the building\
+    \ process for the TPAC RStudio image, the software that will be\ninstalled will\
+    \ be the latest as provided by NeCTAR, Linux package managers or\nsoftware providers.\
+    \ </p>\n<ul>\n<li>\n<p>NeCTAR Ubuntu LTS release</p>\n</li>\n<li>\n<p>Mate desktop</p>\n\
+    </li>\n<li>\n<p>X2Go server</p>\n</li>\n<li>\n<p>RStudio </p>\n</li>\n</ul>\n\
+    <p>Additional R packages\nrgdal, rgeos, ncdf4, raster, abind, ade4, adehabitatHR,\
+    \ adehabitatLT, adehabitatMA,\nakima, animation, bit, bitops, brew, caTools, changepoint,\
+    \ CircStats, coda, colorspace,\ncrawl, deldir, devtools, dichromat, digest, dismo,\
+    \ diveMove, evaluate, ff, FNN, foreach,\nformatR, gdalUtils, GeoLight, geometry,\
+    \ geosphere, ggplot2, gstat, gtable, highr,\nhtmltools, httpuv, httr, intervals,\
+    \ iterators, jsonlite, knitr, labeling, magic,\nmapdata, maps, maptools, markdown,\
+    \ memoise, mime, misc3d, munsell, mvtnorm, ncdf,\nncdf4, plyr, polyclip, proto,\
+    \ quantreg, R6, raster, RColorBrewer, Rcpp, RCurl,\nreshape2, rgdal, rgeos, RJSONIO,\
+    \ R.methodsS3, RNetCDF, R.oo, roxygen2, rstudioapi,\nR.utils, scales, shiny, sp,\
+    \ spacetime, SparseM, stringr, tensor, testthat, trip,\nwhisker, XML, xtable,\
+    \ xts, yaml, zoo, rgl</p>\n<h2>What next</h2>\n<p>If you want to use your VM as\
+    \ collaboration space, you will need to do some user\nmanagement. For this you\
+    \ can refer to \u201CAdd Accounts on The X2Go Server\u201D in TPAC\nRemote Desktop\
+    \ X2go documentation. On top of that, your collaborators will need\nto install\
+    \ their own X2Go client, refer above.</p>\n<p>Your TPAC image based RStudio remote\
+    \ desktop instance is also an RStudio Server.\nWith some user management, and\
+    \ some NeCTAR security settings, you can get or\ngive access to your RStudio VM\
+    \ using a web-browser. For more info on this you can\nview skip to the bottom\
+    \ of Step 2 of the instructions at <a href=\"http://www.tpac.org.au/resources/nectar-compute-cloud/r-studio-server-in-the-cloud/\"\
+    >TPAC RStudio Server</a></p>\n<p>Additionally your VM is also a Shiny Server for\
+    \ interactive R-backed web applications. \nLearn more at the Shiny Server website<a\
+    \ href=\"https://www.rstudio.com/products/shiny/shiny-server/\">shiny</a>. You\
+    \ will need to some allow connections to\ntcp port 3838 in the Nectar security\
+    \ settings to allow access to your Shiny Server\non your VM.</p>\n<p>You can create\
+    \ a Shared Data Folder on the Remote Server. Head over to here to\nfind out how.</p>\n\
+    <h2>Contact</h2>\n<p>If you have trouble with TPAC R-Studio image, please contact\
+    \ TPAC help desk via\nhelpdesk@tpac.org.au, or any help desks from your local\
+    \ Eresearch service providers.</p>"
+  parent: 24
+  sha1: 2046451b0669cf00d8b8e004b9db03579307f6bc
+  title: TPAC R-Studio with X2go
