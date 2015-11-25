@@ -14332,13 +14332,13 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 4
+        hits: 21
         id: 6000089734
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-18T01:15:41-05:00'
+        modified_at: '2015-11-24T19:02:13-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000089734
@@ -14350,8 +14350,8 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: Windows in the Cloud - user guide
-        updated_at: '2015-11-18T01:15:41-05:00'
+        title: eRSA Windows in the Cloud - user guide
+        updated_at: '2015-11-24T19:02:13-05:00'
         user_id: 6002464727
   html: "<h1>User Guide for Windows In The Cloud  <a name=\"top\"></a></h1>\n<h2>SA\
     \ node service for users in South Australia</h2>\n<ul>\n<li><a href=\"#intro\"\
@@ -14540,7 +14540,7 @@
     >NeCTAR support</a>  </p>\n<p><a href=\"#top\">Top of page</a></p>"
   parent: 24
   sha1: a106e60dac5836dc72746be8d9267f31ec638cb8
-  title: Windows in the Cloud - user guide
+  title: eRSA Windows in the Cloud - user guide
 88:
   freshdesk:
     fd_attributes:
@@ -15851,13 +15851,13 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 2
         id: 6000090905
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-22T23:57:07-05:00'
+        modified_at: '2015-11-24T19:02:11-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000090905
@@ -15869,8 +15869,8 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: Cloud Software Repository - user guide
-        updated_at: '2015-11-22T23:57:07-05:00'
+        title: eRSA Cloud Software Repository - user guide
+        updated_at: '2015-11-24T19:02:11-05:00'
         user_id: 6002464727
   html: "<h1>User Guide for the Cloud Software Repository  <a name=\"top\"></a></h1>\n\
     <h2>SA node service for users in South Australia</h2>\n<ul>\n<li><a href=\"#intro\"\
@@ -16105,7 +16105,7 @@
     >eRSA Helpdesk</a></p>\n<p><a href=\"#top\">Top of page</a></p>"
   parent: 24
   sha1: 387b2a893b604f2444b0cce88bcc227f0f48bdaa
-  title: Cloud Software Repository - user guide
+  title: eRSA Cloud Software Repository - user guide
 90:
   freshdesk:
     fd_attributes:
