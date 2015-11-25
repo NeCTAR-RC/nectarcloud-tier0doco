@@ -18348,3 +18348,212 @@
   parent: 24
   sha1: 59474bdce392a8260dfba83a519239a93d27c3b5
   title: Intersect Launchpod User Guide
+94:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-11-24T22:39:12-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Intersect DIVER User Guide \n Description \n DIVER (Data Is\
+          \ Vital for Empirical Research) is a general purpose, user-friendly research\
+          \ data capture and sharing application. \n DIVER is a full lifecycle research\
+          \ data management solution, developed by Intersect for the University of\
+          \ Western Sydney Hawkesbury Institute for the Environment (HIE).  \n DIVER\
+          \ is particularly beneficial where the researcher needs to quickly organize\
+          \ and share their file-based data locally or with an international community.\
+          \ DIVER provides functionality beyond traditional organisational file shares\
+          \ addressing contemporary research needs such as data provenance and lifecycle\
+          \ management, data access management, management of metadata, data citation\
+          \ and reproducibility of research. \n Audience \n DIVER is Open Source software\
+          \ and as such is available to all researchers at no cost. \n Intersect Australia\
+          \ has experience in assisting researchers/research groups to establish a\
+          \ DIVER instance through its Software Engineering capability. Hosted solutions\
+          \ may also be managed by Intersect where required.  \n How to deploy DIVER\
+          \ \n The latest version of DIVER is available through Launchpod, a tool\
+          \ to deploy preconfigured virtual machines (VMs) on the NeCTAR Research\
+          \ Cloud. Please read the Launchpod user guide for more information about\
+          \ how to use it to deploy an instance of DIVER. \n For more detailed discussion\
+          \ on the potential to deploy DIVER within an Intersect member institution,\
+          \ contact your university's eResearch Analyst. \n Alternatively, you can\
+          \ contact Intersect to enquire about a managed DIVER instance for your university\
+          \ or project.  \n How to use DIVER \n Intersect maintains a comprehensive\
+          \ User Manual for DIVER, which covers everything you need to know about\
+          \ installing, managing and using this tool. \n For queries in using DIVER\
+          \ in an institutional environment, please contact Intersect. \n What else\
+          \ do I need to know about DIVER \n DIVER is Australian Access Federation\
+          \ (AAF) enabled, meaning that users can connect to the system using their\
+          \ institutional username and password.  \n DIVER has been under continuous\
+          \ development by Intersect for a variety of different research disciplines.\
+          \ \n There is a community of DIVER users that communicates via Google Groups\
+          \ to discuss suggestions for new features as well as ways in which DIVER\
+          \ is being used. "
+        description: '<h1>Intersect DIVER User Guide</h1>
+
+          <h2>Description</h2>
+
+          <p>DIVER (Data Is Vital for Empirical Research) is a general purpose, user-friendly
+          research data capture and sharing application.</p>
+
+          <p>DIVER is a full lifecycle research data management solution, developed
+          by Intersect for the University of Western Sydney Hawkesbury Institute for
+          the Environment (HIE). </p>
+
+          <p>DIVER is particularly beneficial where the researcher needs to quickly
+          organize and share their file-based data locally or with an international
+          community. DIVER provides functionality beyond traditional organisational
+          file shares addressing contemporary research needs such as data provenance
+          and lifecycle management, data access management, management of metadata,
+          data citation and reproducibility of research.</p>
+
+          <h2>Audience</h2>
+
+          <p>DIVER is Open Source software and as such is available to all researchers
+          at no cost.</p>
+
+          <p>Intersect Australia has experience in assisting researchers/research
+          groups to establish a DIVER instance through its Software Engineering capability.
+          Hosted solutions may also be managed by Intersect where required. </p>
+
+          <h2>How to deploy DIVER</h2>
+
+          <p>The latest version of DIVER is available through <a href="http://launchpod.intersect.org.au"
+          title="Launchpod">Launchpod</a>, a tool to deploy preconfigured virtual
+          machines (VMs) on the <a href="http://cloud.nectar.org.au/" title="NeCTAR
+          Research Cloud">NeCTAR Research Cloud</a>. Please read the <a href="http://intersect.org.au/content/launchpod"
+          title="Launchpod user guide">Launchpod user guide</a> for more information
+          about how to use it to deploy an instance of DIVER.</p>
+
+          <p>For more detailed discussion on the potential to deploy DIVER within
+          an Intersect member institution, contact your university''s <a href="http://intersect.org.au/content/eresearch-analysts"
+          title="eResearch Analysts">eResearch Analyst</a>.</p>
+
+          <p>Alternatively, you can <a href="mailto:enquiries@intersect.org.au">contact
+          Intersect</a> to enquire about a managed DIVER instance for your university
+          or project. </p>
+
+          <h2>How to use DIVER</h2>
+
+          <p>Intersect maintains a comprehensive <a href="https://github.com/IntersectAustralia/dc21-doc/blob/master/files/DIVER%20UserManual.pdf"
+          title="Diver User Manual">User Manual</a> for DIVER, which covers everything
+          you need to know about installing, managing and using this tool.</p>
+
+          <p>For queries in using DIVER in an institutional environment, please <a
+          href="mailto:enquiries@intersect.org.au">contact Intersect</a>.</p>
+
+          <h2>What else do I need to know about DIVER</h2>
+
+          <p>DIVER is Australian Access Federation (AAF) enabled, meaning that users
+          can connect to the system using their institutional username and password.
+          </p>
+
+          <p>DIVER has been under continuous development by Intersect for a variety
+          of different research disciplines.</p>
+
+          <p>There is a <a href="https://groups.google.com/forum/#!forum/diver-community">community</a>
+          of DIVER users that communicates via Google Groups to discuss suggestions
+          for new features as well as ways in which DIVER is being used.</p>'
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000091615
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-11-24T22:39:12-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000091615
+        position: 8
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Intersect DIVER User Guide
+        updated_at: '2015-11-24T22:39:12-05:00'
+        user_id: 6002464727
+  html: '<h1>Intersect DIVER User Guide</h1>
+
+    <h2>Description</h2>
+
+    <p>DIVER (Data Is Vital for Empirical Research) is a general purpose, user-friendly
+    research data capture and sharing application.</p>
+
+    <p>DIVER is a full lifecycle research data management solution, developed by Intersect
+    for the University of Western Sydney Hawkesbury Institute for the Environment
+    (HIE). </p>
+
+    <p>DIVER is particularly beneficial where the researcher needs to quickly organize
+    and share their file-based data locally or with an international community. DIVER
+    provides functionality beyond traditional organisational file shares addressing
+    contemporary research needs such as data provenance and lifecycle management,
+    data access management, management of metadata, data citation and reproducibility
+    of research.</p>
+
+    <h2>Audience</h2>
+
+    <p>DIVER is Open Source software and as such is available to all researchers at
+    no cost.</p>
+
+    <p>Intersect Australia has experience in assisting researchers/research groups
+    to establish a DIVER instance through its Software Engineering capability. Hosted
+    solutions may also be managed by Intersect where required. </p>
+
+    <h2>How to deploy DIVER</h2>
+
+    <p>The latest version of DIVER is available through <a href="http://launchpod.intersect.org.au"
+    title="Launchpod">Launchpod</a>, a tool to deploy preconfigured virtual machines
+    (VMs) on the <a href="http://cloud.nectar.org.au/" title="NeCTAR Research Cloud">NeCTAR
+    Research Cloud</a>. Please read the <a href="http://intersect.org.au/content/launchpod"
+    title="Launchpod user guide">Launchpod user guide</a> for more information about
+    how to use it to deploy an instance of DIVER.</p>
+
+    <p>For more detailed discussion on the potential to deploy DIVER within an Intersect
+    member institution, contact your university''s <a href="http://intersect.org.au/content/eresearch-analysts"
+    title="eResearch Analysts">eResearch Analyst</a>.</p>
+
+    <p>Alternatively, you can <a href="mailto:enquiries@intersect.org.au">contact
+    Intersect</a> to enquire about a managed DIVER instance for your university or
+    project. </p>
+
+    <h2>How to use DIVER</h2>
+
+    <p>Intersect maintains a comprehensive <a href="https://github.com/IntersectAustralia/dc21-doc/blob/master/files/DIVER%20UserManual.pdf"
+    title="Diver User Manual">User Manual</a> for DIVER, which covers everything you
+    need to know about installing, managing and using this tool.</p>
+
+    <p>For queries in using DIVER in an institutional environment, please <a href="mailto:enquiries@intersect.org.au">contact
+    Intersect</a>.</p>
+
+    <h2>What else do I need to know about DIVER</h2>
+
+    <p>DIVER is Australian Access Federation (AAF) enabled, meaning that users can
+    connect to the system using their institutional username and password. </p>
+
+    <p>DIVER has been under continuous development by Intersect for a variety of different
+    research disciplines.</p>
+
+    <p>There is a <a href="https://groups.google.com/forum/#!forum/diver-community">community</a>
+    of DIVER users that communicates via Google Groups to discuss suggestions for
+    new features as well as ways in which DIVER is being used.</p>'
+  parent: 24
+  sha1: ec2713fd8a6436c2d4f4dacb21e5724ed84995cf
+  title: Intersect DIVER User Guide
