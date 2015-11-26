@@ -18557,3 +18557,224 @@
   parent: 24
   sha1: ec2713fd8a6436c2d4f4dacb21e5724ed84995cf
   title: Intersect DIVER User Guide
+95:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-11-25T23:16:29-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Check-Security-01: Are you running a mail server \n If you\
+          \ want to run a mail server in NecTAR Virtual Machine, make sure it only\n\
+          listens on Localhost (127.0.0.1). \n Check-Security-02: Is automatic updates\
+          \ enabled \n Check whether automatic updates is enabled in operating system.\
+          \ \n Check-Security-03: Have you Upgrade operating system kernel \n Check\
+          \ whether your operating system kernel is the latest. Kernel upgrade requires\n\
+          reboot and you need to schedule this into regular maintenance. \n Check-Security-04:\
+          \ Are you running DNS service \n If you are running a DNS server, ensure\
+          \ you only allow recursion from trusted\nhosts. \n Check-Security-05: Are\
+          \ you running NTP service \n If you run a NTP server, limit which systems\
+          \ can access it. Disable the 'monlist'\ncommand as this can be used as a\
+          \ denial of service vector on your system. \n Check-Security-06: Have you\
+          \ subscribed to security announcements \n If there is a security problem\
+          \ with your operating system, you need to find out\nas soon as possible.\
+          \ Find the appropriate mailing list and keep an eye\nout for anything that\
+          \ requires urgent action. As soon as new security bugs are\ndetected, you\
+          \ need to execute security upgrade immediately. \n Check-Security-07: Is\
+          \ FireWall running \n Virtual machine should be configured so they allow\
+          \ the minimum access required\nto run their service. Please use a host-based\
+          \ firewall, in conjunction with\nthe cloud-provided firewall to manage access.\
+          \ \n Check-Security-08: Are unneeded accounts in the system \n Keep an eye\
+          \ on the user accounts enabled on your system. Some applications\ncreate\
+          \ default accounts which are insecure. You may also open a temporary user\n\
+          account to allow quick login for a task and leave it forever. This may lead\
+          \ to\nsecurity issue later, and you need to regular check and delete these\
+          \ user\naccounts. \n Check-Security-09: Is SSH password login disabled \n\
+          \ With enough time and compute power it is possible for passwords to be\
+          \ brute\nforce attacked. The average SSH server deals with thousands of\
+          \ such attacks\nevery week, so use ssh keys. \n Check-Security-10: Are keys\
+          \ stored in image \n The cloud provides a metadata service so you can download\
+          \ keys on boot, so\nyou don't need to copy keys manually. This ensures that\
+          \ if your key is\ncompromised, not all running instances of that image are\
+          \ compromised. \n Check-Security-11: Is SSH attack banning tools installed\
+          \ \n Install a tools like fail2ban or denyhosts, which checks log files\
+          \ for\nattempted breaches and then blocks malicious IP addresses. \n Check-Security-12:\
+          \ Are unneeded services disable \n Know what services run on your virtual\
+          \ machine, and disable the unneeded ones. \n Check-Security-13: Are Encrypted\
+          \ Communications Used \n Wherever possible, use encrypted communications\
+          \ to avoid attacks which\nintercept data. \n Check-Security-14: Are logging\
+          \ stored in a secure place \n Make sure that services are logging to a secure\
+          \ location, that is as\ntamperproof as possible. If logging remotely, ensure\
+          \ that it is done over\na secure channel so that eavesdroppers cannot monitor\
+          \ what is happening on\nyour instance. \n Check-Security-15: Are ports opened\
+          \ for not required services \n By default, virtual machines in NeCTAR has\
+          \ closed all ports, so in order to make\nservices available to public, you\
+          \ need to open certain ports for it. Before you\nopen a open, you need to\
+          \ think carefully about what service associated with it\nand what is the\
+          \ intention. Never open ports for non-service binded to it. \n Check-Security-16:\
+          \ What permission granted to user account \n When creating user account,\
+          \ make sure only permission sufficient for its use \nis granted. Never grant\
+          \ extra permission if it is not needed. \n Check-Security-17: Is root access\
+          \ disabled from SSH \n Disable root user SSH login and setup user account\
+          \ with sudo permission to\nperform administrator tasks. \n Check-Security-18:\
+          \ Is other ports used for SSH \n The SSH service on the virtual machine\
+          \ uses port 22 by default. This port is \nwell-known and can attract many\
+          \ attackers. Use a custom ssh port other than 22\nwill improve security.\
+          \ Be noted, the port number below 1024 is well reserved and\nshouldn't be\
+          \ used for SSH. "
+        description: "<h2>Check-Security-01: Are you running a mail server</h2>\n\
+          <p>If you want to run a mail server in NecTAR Virtual Machine, make sure\
+          \ it only\nlistens on Localhost (127.0.0.1).</p>\n<h2>Check-Security-02:\
+          \ Is automatic updates enabled</h2>\n<p>Check whether automatic updates\
+          \ is enabled in operating system.</p>\n<h2>Check-Security-03: Have you Upgrade\
+          \ operating system kernel</h2>\n<p>Check whether your operating system kernel\
+          \ is the latest. Kernel upgrade requires\nreboot and you need to schedule\
+          \ this into regular maintenance.</p>\n<h2>Check-Security-04: Are you running\
+          \ DNS service</h2>\n<p>If you are running a DNS server, ensure you only\
+          \ allow recursion from trusted\nhosts.</p>\n<h2>Check-Security-05: Are you\
+          \ running NTP service</h2>\n<p>If you run a NTP server, limit which systems\
+          \ can access it. Disable the 'monlist'\ncommand as this can be used as a\
+          \ denial of service vector on your system.</p>\n<h2>Check-Security-06: Have\
+          \ you subscribed to security announcements</h2>\n<p>If there is a security\
+          \ problem with your operating system, you need to find out\nas soon as possible.\
+          \ Find the appropriate mailing list and keep an eye\nout for anything that\
+          \ requires urgent action. As soon as new security bugs are\ndetected, you\
+          \ need to execute security upgrade immediately.</p>\n<h2>Check-Security-07:\
+          \ Is FireWall running</h2>\n<p>Virtual machine should be configured so they\
+          \ allow the minimum access required\nto run their service. Please use a\
+          \ host-based firewall, in conjunction with\nthe cloud-provided firewall\
+          \ to manage access.</p>\n<h2>Check-Security-08: Are unneeded accounts in\
+          \ the system</h2>\n<p>Keep an eye on the user accounts enabled on your system.\
+          \ Some applications\ncreate default accounts which are insecure. You may\
+          \ also open a temporary user\naccount to allow quick login for a task and\
+          \ leave it forever. This may lead to\nsecurity issue later, and you need\
+          \ to regular check and delete these user\naccounts.</p>\n<h2>Check-Security-09:\
+          \ Is SSH password login disabled</h2>\n<p>With enough time and compute power\
+          \ it is possible for passwords to be brute\nforce attacked. The average\
+          \ SSH server deals with thousands of such attacks\nevery week, so use ssh\
+          \ keys.</p>\n<h2>Check-Security-10: Are keys stored in image</h2>\n<p>The\
+          \ cloud provides a metadata service so you can download keys on boot, so\n\
+          you don't need to copy keys manually. This ensures that if your key is\n\
+          compromised, not all running instances of that image are compromised.</p>\n\
+          <h2>Check-Security-11: Is SSH attack banning tools installed</h2>\n<p>Install\
+          \ a tools like fail2ban or denyhosts, which checks log files for\nattempted\
+          \ breaches and then blocks malicious IP addresses.</p>\n<h2>Check-Security-12:\
+          \ Are unneeded services disable</h2>\n<p>Know what services run on your\
+          \ virtual machine, and disable the unneeded ones.</p>\n<h2>Check-Security-13:\
+          \ Are Encrypted Communications Used</h2>\n<p>Wherever possible, use encrypted\
+          \ communications to avoid attacks which\nintercept data.</p>\n<h2>Check-Security-14:\
+          \ Are logging stored in a secure place</h2>\n<p>Make sure that services\
+          \ are logging to a secure location, that is as\ntamperproof as possible.\
+          \ If logging remotely, ensure that it is done over\na secure channel so\
+          \ that eavesdroppers cannot monitor what is happening on\nyour instance.</p>\n\
+          <h2>Check-Security-15: Are ports opened for not required services</h2>\n\
+          <p>By default, virtual machines in NeCTAR has closed all ports, so in order\
+          \ to make\nservices available to public, you need to open certain ports\
+          \ for it. Before you\nopen a open, you need to think carefully about what\
+          \ service associated with it\nand what is the intention. Never open ports\
+          \ for non-service binded to it.</p>\n<h2>Check-Security-16: What permission\
+          \ granted to user account</h2>\n<p>When creating user account, make sure\
+          \ only permission sufficient for its use \nis granted. Never grant extra\
+          \ permission if it is not needed.</p>\n<h2>Check-Security-17: Is root access\
+          \ disabled from SSH</h2>\n<p>Disable root user SSH login and setup user\
+          \ account with sudo permission to\nperform administrator tasks.</p>\n<h2>Check-Security-18:\
+          \ Is other ports used for SSH</h2>\n<p>The SSH service on the virtual machine\
+          \ uses port 22 by default. This port is \nwell-known and can attract many\
+          \ attackers. Use a custom ssh port other than 22\nwill improve security.\
+          \ Be noted, the port number below 1024 is well reserved and\nshouldn't be\
+          \ used for SSH.</p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:04-04:00'
+          customer_folders: []
+          description: Cloud Basics
+          id: 6000190150
+          is_default: false
+          language_id: 6
+          name: Cloud Basics
+          parent_id: 6000190150
+          position: 1
+          updated_at: '2015-10-08T21:02:17-04:00'
+          visibility: 1
+        folder_id: 6000190150
+        hits: 0
+        id: 6000091906
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-11-25T23:16:29-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000091906
+        position: 14
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Security Compromise Checklist
+        updated_at: '2015-11-25T23:16:29-05:00'
+        user_id: 6002464727
+  html: "<h2>Check-Security-01: Are you running a mail server</h2>\n<p>If you want\
+    \ to run a mail server in NecTAR Virtual Machine, make sure it only\nlistens on\
+    \ Localhost (127.0.0.1).</p>\n<h2>Check-Security-02: Is automatic updates enabled</h2>\n\
+    <p>Check whether automatic updates is enabled in operating system.</p>\n<h2>Check-Security-03:\
+    \ Have you Upgrade operating system kernel</h2>\n<p>Check whether your operating\
+    \ system kernel is the latest. Kernel upgrade requires\nreboot and you need to\
+    \ schedule this into regular maintenance.</p>\n<h2>Check-Security-04: Are you\
+    \ running DNS service</h2>\n<p>If you are running a DNS server, ensure you only\
+    \ allow recursion from trusted\nhosts.</p>\n<h2>Check-Security-05: Are you running\
+    \ NTP service</h2>\n<p>If you run a NTP server, limit which systems can access\
+    \ it. Disable the 'monlist'\ncommand as this can be used as a denial of service\
+    \ vector on your system.</p>\n<h2>Check-Security-06: Have you subscribed to security\
+    \ announcements</h2>\n<p>If there is a security problem with your operating system,\
+    \ you need to find out\nas soon as possible. Find the appropriate mailing list\
+    \ and keep an eye\nout for anything that requires urgent action. As soon as new\
+    \ security bugs are\ndetected, you need to execute security upgrade immediately.</p>\n\
+    <h2>Check-Security-07: Is FireWall running</h2>\n<p>Virtual machine should be\
+    \ configured so they allow the minimum access required\nto run their service.\
+    \ Please use a host-based firewall, in conjunction with\nthe cloud-provided firewall\
+    \ to manage access.</p>\n<h2>Check-Security-08: Are unneeded accounts in the system</h2>\n\
+    <p>Keep an eye on the user accounts enabled on your system. Some applications\n\
+    create default accounts which are insecure. You may also open a temporary user\n\
+    account to allow quick login for a task and leave it forever. This may lead to\n\
+    security issue later, and you need to regular check and delete these user\naccounts.</p>\n\
+    <h2>Check-Security-09: Is SSH password login disabled</h2>\n<p>With enough time\
+    \ and compute power it is possible for passwords to be brute\nforce attacked.\
+    \ The average SSH server deals with thousands of such attacks\nevery week, so\
+    \ use ssh keys.</p>\n<h2>Check-Security-10: Are keys stored in image</h2>\n<p>The\
+    \ cloud provides a metadata service so you can download keys on boot, so\nyou\
+    \ don't need to copy keys manually. This ensures that if your key is\ncompromised,\
+    \ not all running instances of that image are compromised.</p>\n<h2>Check-Security-11:\
+    \ Is SSH attack banning tools installed</h2>\n<p>Install a tools like fail2ban\
+    \ or denyhosts, which checks log files for\nattempted breaches and then blocks\
+    \ malicious IP addresses.</p>\n<h2>Check-Security-12: Are unneeded services disable</h2>\n\
+    <p>Know what services run on your virtual machine, and disable the unneeded ones.</p>\n\
+    <h2>Check-Security-13: Are Encrypted Communications Used</h2>\n<p>Wherever possible,\
+    \ use encrypted communications to avoid attacks which\nintercept data.</p>\n<h2>Check-Security-14:\
+    \ Are logging stored in a secure place</h2>\n<p>Make sure that services are logging\
+    \ to a secure location, that is as\ntamperproof as possible. If logging remotely,\
+    \ ensure that it is done over\na secure channel so that eavesdroppers cannot monitor\
+    \ what is happening on\nyour instance.</p>\n<h2>Check-Security-15: Are ports opened\
+    \ for not required services</h2>\n<p>By default, virtual machines in NeCTAR has\
+    \ closed all ports, so in order to make\nservices available to public, you need\
+    \ to open certain ports for it. Before you\nopen a open, you need to think carefully\
+    \ about what service associated with it\nand what is the intention. Never open\
+    \ ports for non-service binded to it.</p>\n<h2>Check-Security-16: What permission\
+    \ granted to user account</h2>\n<p>When creating user account, make sure only\
+    \ permission sufficient for its use \nis granted. Never grant extra permission\
+    \ if it is not needed.</p>\n<h2>Check-Security-17: Is root access disabled from\
+    \ SSH</h2>\n<p>Disable root user SSH login and setup user account with sudo permission\
+    \ to\nperform administrator tasks.</p>\n<h2>Check-Security-18: Is other ports\
+    \ used for SSH</h2>\n<p>The SSH service on the virtual machine uses port 22 by\
+    \ default. This port is \nwell-known and can attract many attackers. Use a custom\
+    \ ssh port other than 22\nwill improve security. Be noted, the port number below\
+    \ 1024 is well reserved and\nshouldn't be used for SSH.</p>"
+  parent: 21
+  sha1: 1f41c7ec9ff193240456cfe0886ee4667d8b2667
+  title: Security Compromise Checklist
