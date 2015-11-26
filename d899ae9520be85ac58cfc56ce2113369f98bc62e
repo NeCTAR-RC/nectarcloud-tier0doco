@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_b5d1becf",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cluster Computing Services/Monash/MonARCH User Documentation/Introduction.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2015-11-26T03:37:12Z",
+      "side": 1,
+      "message": "should define this as Monash researchers (research students, postdocs, researchers, etc) and their affiliates (e.g., collaborators from outside Monash) - important to stress this resource is *accessible* to non-Monash folks.",
+      "range": {
+        "startLine": 7,
+        "startChar": 54,
+        "endLine": 7,
+        "endChar": 78
+      },
+      "revId": "d899ae9520be85ac58cfc56ce2113369f98bc62e",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
