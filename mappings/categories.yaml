@@ -22,3 +22,8 @@
           Services, id: 6000131086, is_default: false, language_id: 6, name: Cluster
           Computing Services, parent_id: 6000131086, position: 11, updated_at: '2015-11-26T23:16:46-05:00'}
   title: Cluster Computing Services
+21:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services--DOCID21}
+  title: Cluster Computing Services
