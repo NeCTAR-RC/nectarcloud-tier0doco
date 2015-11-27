@@ -237,7 +237,7 @@ Launchpod failed to deply|Some availability zones may experience problems launch
 [aaf]: http://aaf.edu.au
 [subscribers]: http://aaf.edu.au/subscribe/subscribers/
 [nectarRC]: http://cloud.nectar.org.au/
-[launchpod-doc]: ../Launchpod-doc
+[launchpod-doc]: https://support.nectar.org.au/support/solutions/articles/6000091614-intersect-launchpod-user-guide "Launchpod user guide"
 [launchpod]: http://launchpod.intersect.org.au
 [apps.twitter]: https://apps.twitter.com
 [eras]: http://intersect.org.au/content/eresearch-analysts
