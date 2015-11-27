@@ -5,7 +5,9 @@
 1. [SFTP via the command line](#sftp)
 
 
-## FileZilla <a name="filezilla"></a> 
+<a name="filezilla"></a> 
+
+## FileZilla 
 
 FileZilla is one of many programs that provides easy, point-and-click SFTP (secure file transfer protocol).
 Not only can you easily transfer files between your local computer and your virtual machine (VM),
@@ -76,6 +78,8 @@ In the VM file list, navigate to the secondary disk '**/mnt**' or an attached vo
 
 - Drag and drop files and directories between your local computer and the VM.
 
+<a name="edit"></a> 
+
 - Right click in the file list area to:
   1. Create a directory or text file
   1. Edit a text document (you may need to adjust 
@@ -89,8 +93,9 @@ In the VM file list, navigate to the secondary disk '**/mnt**' or an attached vo
 
 ----
 
+<a name="scp"></a> 
 
-## SCP: secure copy <a name="scp"></a> 
+## SCP: secure copy 
 
 SCP is a simple method for transferring files between computers. 
 
@@ -128,7 +133,9 @@ n.b. use `scp -i path/to/key ...` if your remote server has ssh keys rather than
 
 ----
 
-## SFTP via the Command Line <a name="sftp"></a> 
+<a name="sftp"></a> 
+
+## SFTP via the Command Line 
 
 Secure file transfer is also available between the VM and remote data storage.
 
