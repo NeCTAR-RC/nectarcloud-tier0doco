@@ -19601,3 +19601,28 @@
       Computing Services/Monash/Hardware.md, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
       Computing Services/Monash/Hardware--DOCID255.md}
   title: Hardware
+256:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash/Introduction.md, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash/Introduction--DOCID256.md}
+  title: Introduction
+257:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash/Howto Access MonARCH.md, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash/Howto Access MonARCH--DOCID257.md}
+  title: Howto Access MonARCH
+258:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash/Software on MonARCH.md, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash/Software on MonARCH--DOCID258.md}
+  title: Software on MonARCH
+259:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash/Slurm.md, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash/Slurm--DOCID259.md}
+  title: Slurm
+260:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash/Hardware.md, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash/Hardware--DOCID260.md}
+  title: Hardware
