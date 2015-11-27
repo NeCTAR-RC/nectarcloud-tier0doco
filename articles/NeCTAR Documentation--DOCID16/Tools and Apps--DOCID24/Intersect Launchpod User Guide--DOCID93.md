@@ -181,4 +181,4 @@ Both Launchpod and the NeCTAR Research Cloud are free to use for all Australian 
 [eras]: http://intersect.org.au/content/eresearch-analysts
 [twitterscraper-doc]: https://support.nectar.org.au/support/solutions/articles/6000089738-intersect-twitter-scraper-user-guide
 [ansible]: http://www.ansible.com/
-[diver-doc]: http://www.intersect.org.au/content/diver-0
+[diver-doc]: https://support.nectar.org.au/support/solutions/articles/6000091615-intersect-diver-user-guide

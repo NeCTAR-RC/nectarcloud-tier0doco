@@ -39,7 +39,7 @@ There is a [community][diver-group] of DIVER users that communicates via Google 
 [eras]: http://intersect.org.au/content/eresearch-analysts "eResearch Analysts"
 [nectarRC]: http://cloud.nectar.org.au/ "NeCTAR Research Cloud"
 [launchpod]: http://launchpod.intersect.org.au "Launchpod"
-[launchpod-doc]: http://intersect.org.au/content/launchpod "Launchpod user guide"
+[launchpod-doc]: https://support.nectar.org.au/support/solutions/articles/6000091614-intersect-launchpod-user-guide "Launchpod user guide"
 [diver-user-manual]: https://github.com/IntersectAustralia/dc21-doc/blob/master/files/DIVER%20UserManual.pdf "Diver User Manual"
 [enquiries]: mailto:enquiries@intersect.org.au
 [diver-group]: https://groups.google.com/forum/#!forum/diver-community
