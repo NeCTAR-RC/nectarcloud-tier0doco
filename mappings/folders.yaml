@@ -68,3 +68,8 @@
         visibility: 1}
   parent: 19
   title: Security Guidelines
+44:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash--DOCID44}
+  title: Monash
