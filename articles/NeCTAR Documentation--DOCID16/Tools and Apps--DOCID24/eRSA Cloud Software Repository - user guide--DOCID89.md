@@ -29,9 +29,9 @@ This service is designed for:
 
 - Researchers who want to use cloud virtual machines to run compute-intensive software applications
 - Situations where a single virtual machine image containing all the required software is not available, and the researcher does not want to install the software themselves.
-- This service is currently only available for South Australian users as it uses the SA software repository.
+- This service is currently only available for South Australian users as it uses the eResearch SA software repository.
 
-### CVMFS 
+## CVMFS 
 
 The system makes use of a read-only, http-based distributed virtual file system called the [CERN VM File System][cern] (CVMFS), which CERN developed to enable researchers to access their standard software packages at many sites around the world. eRSA has set up a CVMFS server that provides access to a repository of all the open-source software that is installed on eRSA's HPC systems, and a NeCTAR cloud virtual machine image that contains a CVMFS client that can access the software in the repository. 
 
@@ -71,7 +71,7 @@ Accessing the Cloud software repository is as simple as launching an instance us
 
 Email the [eRSA Helpdesk](mailto:servicedesk@ersa.edu.au) to inform them you want to set up a VM with access to the software repository, and a support member will give you the name of the current image that you will use.  You can use this information to launch an instance, following the instructions below, or you can request that eRSA set up the VM for you.
 
-Add your eRSA support contact to your project users group
+## Add your eRSA support contact to your project users group
 
 After you have received a project allocation, you can add collaborators as users to the project by selecting the [Users][users] tab in the project menu on the dashboard and entering the institutional ([AAF][aaf]) email address of your co-workers.
 
@@ -109,6 +109,8 @@ It is recommended that you add the eRSA email address of your eRSA support conta
 -  E.g. for a user from the University of Adelaide:
 
   ![](images/software_security_rule.png)
+
+**Security and Access Tip:** Using the IP ranges above will limit VM access to computers connected to your university network. If you would like to access the computers from home or elsewhere, you will have to do this through a VPN connection with your university computer. Alternatively, you can set the CIDR to '0.0.0.0/0' which will allow any IP address to connect to the VM. This will reduce the security of your VM, but you will be able to get SSH access with any computer at any location.
 
 [Security Groups page][security]  
 [Glossary of Terms](#glossary)   
@@ -151,7 +153,7 @@ See this [training module][train] or this [guide][launch] for detailed instructi
 
 ## Loading the pre-installed software packages  
 
-There are a few simple commands to find software packages in the repository and load them on your VM.
+There are a few simple commands to find software packages in the repository and load the environment for the version of the software that you want. This is done using the [Environment Modules package](http://modules.sourceforge.net/). You must first load the module (using the module load command) for the software you want before you run the software.
 
 | Command  | Action |
 | ------------- | ------------- |
@@ -159,7 +161,7 @@ There are a few simple commands to find software packages in the repository and 
 | `module avail` | list all available packages in the repository |
 | `module avail <search term>` | list package names containing the search term |
 | `module list` | list the packages that are already loaded on the VM |
-| `module show <name>` | show info on the package, and lists the dependencies - required modules that need to be loaded before you can load the package of interest |
+| `module show <name>` | show info on the package, and lists the required modules to pre-load |
 | `module load <name>` | load the package onto the VM |
 | `module unload <name>` | remove the package 'cache' from the VM |
 
@@ -167,7 +169,7 @@ An example of loading the package 'Stacks'.
 
 ![](images/software_module_load_stacks_full.png)
 
-NOTE: If there is software that you would like to access that is not already in the CVMFS software repository, email the [eRSA Helpdesk](mailto:servicedesk@ersa.edu.au) and request that it be added. Ensure you mention that you would like to access it through cloud computing on your VM.
+**NOTE:** If there is software that you would like to access that is not already in the CVMFS software repository, email the [eRSA Helpdesk](mailto:servicedesk@ersa.edu.au) and request that it be added. Ensure you mention that you would like to access it through cloud computing on your VM.
 
 [Glossary of Terms](#glossary)   
 [Top of page](#top)
@@ -191,9 +193,6 @@ You will need a host address for the data storage server, your username, and you
 
 `scp <source> <destination>`
 
--  To download to the VM : `scp <remote computer>:<path to file> <local VM path>`  
--  To upload to data storage : `scp <local VM path> <remote computer>:<path to file>`
-
 `scp username@sftp.ersa.edu.au:/data/myDirectory/file.txt /mnt/data/`  
 `scp /mnt/data/results.zip username@sftp.ersa.edu.au:/data/myDirectory/`
 
@@ -204,25 +203,19 @@ You will usually then be prompted to enter the password for your data storage.
 
 ### SFTP via the Command Line 
 
-Secure file transfer is also available between the VM and remote data storage.
+Secure file transfer is also available between the VM and remote data storage. This is useful when you aren't sure of the file structure on the remote server, because it allows you to navigate to a file before you download it.
 
-Enter the 'sftp' command on your VM, and you will have access to the remote host.
+Enter the 'sftp' command while logged on to your VM, and you will have access to the remote storage server.
 
-`sftp username@host.address.edu.au   `   - you will be prompted for a password.
+`sftp username@sftp.ersa.edu.au   `   - you will be prompted for a password.
 
-
-You are now accessing the remote data storage server, and you can navigate the files on the server as per usual with commands like `cd` and `ls`.
-
+You are now accessing the remote data storage server, and you can navigate the files on the server as per usual with commands like `cd` and `ls`.  
 The commands `get` and `put` will transfer data between the machines:
-
-`get <remote_server_file.txt> </mnt/localVM_destination/>`
-
-`put </mnt/localVM_destination/file.txt> <remote_directory/>`
+  ![](images/software_sftp_get.png)
+  ![](images/software_sftp_put.png)
 
 to close the sftp connection, type `exit`.
 
-  ![](images/software_sftp_get.png)
-  ![](images/software_sftp_put.png)
 
 [Glossary of Terms](#glossary)   
 [Top of page](#top)
@@ -233,7 +226,7 @@ to close the sftp connection, type `exit`.
 
 ## The CentOS operating system
 
-The VM image that allows access to the CVMFS software repository is a Linux distribution called CentOS. Most of the documentation available about using your Linux VM assumes that you have an Ubuntu operating system.  There is very little difference for the user between these Linux operating systems, but there is one main difference to be aware of.
+The VM image that allows access to the CVMFS software repository is a Linux distribution called CentOS. Most of the documentation available about using your Linux VM in the NeCTAR cloud assumes that you have an Ubuntu operating system.  There is very little difference for the user between these Linux operating systems, but there is one main difference to be aware of.
 
 CentOS uses the package manager '**yum**' instead of '**apt-get**'. If you need to install packages on your VM that aren't in the CVMFS software repository, you need to use the 'yum' command wherever there would be an 'apt-get' command in Ubuntu. e.g.
 
@@ -262,7 +255,7 @@ CentOS uses the package manager '**yum**' instead of '**apt-get**'. If you need 
 
 **Flavor**
 > An OpenStack term for an instance sizing specification. Gives the amount 
-> of memory, number of VCPUs and ephemeral disc size.
+> of memory, number of VCPUs and ephemeral disk size.
 
 **Image**
 > An image (or system image) is a copy of the entire state of a computer system 
