@@ -14836,13 +14836,15 @@
           \ the NeCTAR Research Cloud. Launchpod allows for users with little or no\
           \ experience with cloud computing to configure and deploy Twitter Scraper\
           \ easily and quickly. Before deploying Twitter Scraper, please refer to\
-          \ the <a href=\"../Launchpod-doc\">documentation</a> for deploying VMs using\
+          \ the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000091614-intersect-launchpod-user-guide\"\
+          \ title=\"Launchpod user guide\">documentation</a> for deploying VMs using\
           \ Launchpod.</p>\n<p>If you intend to log into Twitter Scraper via SSH,\
           \ for example to modify the harvester settings after it has been deployed,\
           \ you must specify an SSH keypair in Launchpod. Please follow the instructions\
-          \ in the <a href=\"../Launchpod-doc\">Launchpod user guide</a> or at <a\
-          \ href=\"http://cloud.nectar.org.au/\">NeCTAR Research Cloud</a> on how\
-          \ to do so.</p>\n<h3>Obtaining Twitter access credentials</h3>\n<p><strong>Important:</strong>\
+          \ in the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000091614-intersect-launchpod-user-guide\"\
+          \ title=\"Launchpod user guide\">Launchpod user guide</a> or at <a href=\"\
+          http://cloud.nectar.org.au/\">NeCTAR Research Cloud</a> on how to do so.</p>\n\
+          <h3>Obtaining Twitter access credentials</h3>\n<p><strong>Important:</strong>\
           \ <em>The steps to obtain your Twitter access tokens and consumer API keys\
           \ only need to be done once. If you intend to deploy more Twitter Scrapers,\
           \ you should use the same access tokens and credentials. You can always\
@@ -15119,17 +15121,17 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 5
+        hits: 25
         id: 6000089738
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-18T17:31:34-05:00'
+        modified_at: '2015-11-26T23:15:11-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000089738
-        position: 2
+        position: 5
         seo_data: {}
         status: 2
         string_01: null
@@ -15138,7 +15140,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Intersect Twitter Scraper User Guide
-        updated_at: '2015-11-18T17:31:34-05:00'
+        updated_at: '2015-11-26T23:15:11-05:00'
         user_id: 6002464727
   html: "<h1>Twitter Scraper User Guide</h1>\n<h2>Description</h2>\n<p>Twitter Scraper\
     \ is a tool developed by Intersect for use in collecting data directly from the\
@@ -15158,42 +15160,43 @@
     \ a web utility for configuring and deploying virtual machines (VMs) onto the\
     \ NeCTAR Research Cloud. Launchpod allows for users with little or no experience\
     \ with cloud computing to configure and deploy Twitter Scraper easily and quickly.\
-    \ Before deploying Twitter Scraper, please refer to the <a href=\"../Launchpod-doc\"\
-    >documentation</a> for deploying VMs using Launchpod.</p>\n<p>If you intend to\
-    \ log into Twitter Scraper via SSH, for example to modify the harvester settings\
-    \ after it has been deployed, you must specify an SSH keypair in Launchpod. Please\
-    \ follow the instructions in the <a href=\"../Launchpod-doc\">Launchpod user guide</a>\
-    \ or at <a href=\"http://cloud.nectar.org.au/\">NeCTAR Research Cloud</a> on how\
-    \ to do so.</p>\n<h3>Obtaining Twitter access credentials</h3>\n<p><strong>Important:</strong>\
-    \ <em>The steps to obtain your Twitter access tokens and consumer API keys only\
-    \ need to be done once. If you intend to deploy more Twitter Scrapers, you should\
-    \ use the same access tokens and credentials. You can always log into the Twitter\
-    \ Applications Development site to get access tokens you've already generated,\
-    \ or you can keep them in a safe place for later use.</em></p>\n<p>Twitter Scraper\
-    \ uses your Twitter account to monitor the constant stream of tweets and find\
-    \ those matching your specified search terms. Before you can use Twitter Scraper,\
-    \ you need to create an \u2018application\u2019 within Twitter, and then obtain\
-    \ the Consumer Key and the Consumer Secret from this application, as well as your\
-    \ Access Token and Access Token Secret.</p>\n<p>First, navigate to the <a href=\"\
-    https://apps.twitter.com\">Twitter Applications Development</a> site and log in\
-    \ with your Twitter credentials. From here you will create the \u2018application\u2019\
-    . This page is typically used by developers to register apps that they have created\
-    \ and which people can download. Most of the information is actually irrelevant\
-    \ for Twitter Scraper, but it needs to be entered in order to create the access\
-    \ credentials that Twitter Scraper needs. As of mid-2015, you need to have a mobile\
-    \ phone number associated with your Twitter account to register an application.\
-    \ If you don't have a mobile number, go to your Twitter profile and enter one.</p>\n\
-    <p>Click Create New App and provide a name (such as \u2018Twitter Scraper\u2019\
-    ) and a brief description (such as \u2018this is an app to harvest tweets\u2019\
-    ). You also need to provide a URL. It does not have to be a real website, but\
-    \ it does have to begin with <code>http://</code>. A dummy URL like <code>http://www.example.com</code>\
-    \ is sufficient. Scroll to the end of the page and select 'Yes, I agree to the\
-    \ Developer Agreement'. Finally, click 'Create your Twitter Application'.</p>\n\
-    <p>Once your app has been created, navigate to the \u2018Keys and Access Tokens\u2019\
-    \ tab of the app settings. This page will display two of the four settings you\
-    \ need, the Consumer Key (API Key) and the Consumer Secret (API Secret). You can\
-    \ copy these straight out of Twitter and into a note or document for use later,\
-    \ or put them directly into the relevant fields in Launchpod.</p>\n<p><img alt=\"\
+    \ Before deploying Twitter Scraper, please refer to the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000091614-intersect-launchpod-user-guide\"\
+    \ title=\"Launchpod user guide\">documentation</a> for deploying VMs using Launchpod.</p>\n\
+    <p>If you intend to log into Twitter Scraper via SSH, for example to modify the\
+    \ harvester settings after it has been deployed, you must specify an SSH keypair\
+    \ in Launchpod. Please follow the instructions in the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000091614-intersect-launchpod-user-guide\"\
+    \ title=\"Launchpod user guide\">Launchpod user guide</a> or at <a href=\"http://cloud.nectar.org.au/\"\
+    >NeCTAR Research Cloud</a> on how to do so.</p>\n<h3>Obtaining Twitter access\
+    \ credentials</h3>\n<p><strong>Important:</strong> <em>The steps to obtain your\
+    \ Twitter access tokens and consumer API keys only need to be done once. If you\
+    \ intend to deploy more Twitter Scrapers, you should use the same access tokens\
+    \ and credentials. You can always log into the Twitter Applications Development\
+    \ site to get access tokens you've already generated, or you can keep them in\
+    \ a safe place for later use.</em></p>\n<p>Twitter Scraper uses your Twitter account\
+    \ to monitor the constant stream of tweets and find those matching your specified\
+    \ search terms. Before you can use Twitter Scraper, you need to create an \u2018\
+    application\u2019 within Twitter, and then obtain the Consumer Key and the Consumer\
+    \ Secret from this application, as well as your Access Token and Access Token\
+    \ Secret.</p>\n<p>First, navigate to the <a href=\"https://apps.twitter.com\"\
+    >Twitter Applications Development</a> site and log in with your Twitter credentials.\
+    \ From here you will create the \u2018application\u2019. This page is typically\
+    \ used by developers to register apps that they have created and which people\
+    \ can download. Most of the information is actually irrelevant for Twitter Scraper,\
+    \ but it needs to be entered in order to create the access credentials that Twitter\
+    \ Scraper needs. As of mid-2015, you need to have a mobile phone number associated\
+    \ with your Twitter account to register an application. If you don't have a mobile\
+    \ number, go to your Twitter profile and enter one.</p>\n<p>Click Create New App\
+    \ and provide a name (such as \u2018Twitter Scraper\u2019) and a brief description\
+    \ (such as \u2018this is an app to harvest tweets\u2019). You also need to provide\
+    \ a URL. It does not have to be a real website, but it does have to begin with\
+    \ <code>http://</code>. A dummy URL like <code>http://www.example.com</code> is\
+    \ sufficient. Scroll to the end of the page and select 'Yes, I agree to the Developer\
+    \ Agreement'. Finally, click 'Create your Twitter Application'.</p>\n<p>Once your\
+    \ app has been created, navigate to the \u2018Keys and Access Tokens\u2019 tab\
+    \ of the app settings. This page will display two of the four settings you need,\
+    \ the Consumer Key (API Key) and the Consumer Secret (API Secret). You can copy\
+    \ these straight out of Twitter and into a note or document for use later, or\
+    \ put them directly into the relevant fields in Launchpod.</p>\n<p><img alt=\"\
     screenshot_consumerKey\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/twitterDOCID88_consumerKey.png?raw=true\"\
     \ title=\"Consumer Key\"></p>\n<p>To generate the other two credentials, scroll\
@@ -15415,7 +15418,7 @@
     <td align=\"left\">Try again using another availability zone</td>\n</tr>\n</tbody>\n\
     </table>"
   parent: 24
-  sha1: e4cb7e4fc3faf091a40f153c83c9e0228d1485f7
+  sha1: d4d6ace0248d00bbd86acb16bd6ace7239f94ac3
   title: Intersect Twitter Scraper User Guide
 89:
   freshdesk:
@@ -17847,7 +17850,7 @@
           \ a VM by asking the user for the relevnt details. The software applications\
           \ that can be built using Launchpod are:</p>\n<ul>\n<li>\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000089738-intersect-twitter-scraper-user-guide\"\
           >Twitter Scraper</a> \u2013 a tool to harvest Twitter for hashtags, phrases,\
-          \ exact tweets and specific users</li>\n<li>\n<a href=\"http://www.intersect.org.au/content/diver-0\"\
+          \ exact tweets and specific users</li>\n<li>\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000091615-intersect-diver-user-guide\"\
           >DIVER</a> \u2013 a general purpose open source research data capture and\
           \ sharing application</li>\n<li>\n<a href=\"https://omeka.org/\">Omeka</a>\
           \ \u2013 an open source Content Management System suitable for rich collections\
@@ -18103,17 +18106,17 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 6
         id: 6000091614
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-24T22:38:14-05:00'
+        modified_at: '2015-11-26T23:15:13-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000091614
-        position: 7
+        position: 4
         seo_data: {}
         status: 2
         string_01: null
@@ -18122,7 +18125,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Intersect Launchpod User Guide
-        updated_at: '2015-11-24T22:38:14-05:00'
+        updated_at: '2015-11-26T23:15:13-05:00'
         user_id: 6002464727
   html: "<h1>Intersect Launchpod User Guide</h1>\n<h2>Description</h2>\n<p>Launchpod\
     \ is a tool to deploy virtual machines (VMs) on the <a href=\"http://cloud.nectar.org.au/\"\
@@ -18132,7 +18135,7 @@
     \ relevnt details. The software applications that can be built using Launchpod\
     \ are:</p>\n<ul>\n<li><a href=\"https://support.nectar.org.au/support/solutions/articles/6000089738-intersect-twitter-scraper-user-guide\"\
     >Twitter Scraper</a> \u2013 a tool to harvest Twitter for hashtags, phrases, exact\
-    \ tweets and specific users</li>\n<li><a href=\"http://www.intersect.org.au/content/diver-0\"\
+    \ tweets and specific users</li>\n<li><a href=\"https://support.nectar.org.au/support/solutions/articles/6000091615-intersect-diver-user-guide\"\
     >DIVER</a> \u2013 a general purpose open source research data capture and sharing\
     \ application</li>\n<li><a href=\"https://omeka.org/\">Omeka</a> \u2013 an open\
     \ source Content Management System suitable for rich collections of data and images</li>\n\
@@ -18366,7 +18369,7 @@
     \  Note that this does not include application licensing costs where applicable\
     \ (e.g. MATLAB\xAE).  </p>"
   parent: 24
-  sha1: 59474bdce392a8260dfba83a519239a93d27c3b5
+  sha1: 825833c977855750245489677c31be377a488377
   title: Intersect Launchpod User Guide
 94:
   freshdesk:
@@ -18442,7 +18445,7 @@
           <p>The latest version of DIVER is available through <a href="http://launchpod.intersect.org.au"
           title="Launchpod">Launchpod</a>, a tool to deploy preconfigured virtual
           machines (VMs) on the <a href="http://cloud.nectar.org.au/" title="NeCTAR
-          Research Cloud">NeCTAR Research Cloud</a>. Please read the <a href="http://intersect.org.au/content/launchpod"
+          Research Cloud">NeCTAR Research Cloud</a>. Please read the <a href="https://support.nectar.org.au/support/solutions/articles/6000091614-intersect-launchpod-user-guide"
           title="Launchpod user guide">Launchpod user guide</a> for more information
           about how to use it to deploy an instance of DIVER.</p>
 
@@ -18489,17 +18492,17 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 6
         id: 6000091615
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-24T22:39:12-05:00'
+        modified_at: '2015-11-26T23:15:14-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000091615
-        position: 8
+        position: 3
         seo_data: {}
         status: 2
         string_01: null
@@ -18508,7 +18511,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Intersect DIVER User Guide
-        updated_at: '2015-11-24T22:39:12-05:00'
+        updated_at: '2015-11-26T23:15:14-05:00'
         user_id: 6002464727
   html: '<h1>Intersect DIVER User Guide</h1>
 
@@ -18542,7 +18545,7 @@
     <p>The latest version of DIVER is available through <a href="http://launchpod.intersect.org.au"
     title="Launchpod">Launchpod</a>, a tool to deploy preconfigured virtual machines
     (VMs) on the <a href="http://cloud.nectar.org.au/" title="NeCTAR Research Cloud">NeCTAR
-    Research Cloud</a>. Please read the <a href="http://intersect.org.au/content/launchpod"
+    Research Cloud</a>. Please read the <a href="https://support.nectar.org.au/support/solutions/articles/6000091614-intersect-launchpod-user-guide"
     title="Launchpod user guide">Launchpod user guide</a> for more information about
     how to use it to deploy an instance of DIVER.</p>
 
@@ -18575,7 +18578,7 @@
     of DIVER users that communicates via Google Groups to discuss suggestions for
     new features as well as ways in which DIVER is being used.</p>'
   parent: 24
-  sha1: ec2713fd8a6436c2d4f4dacb21e5724ed84995cf
+  sha1: f168812db736131d1b1fc86b2a84f5b427e99c7d
   title: Intersect DIVER User Guide
 95:
   freshdesk:
