@@ -363,3 +363,13 @@
       Computing Services/MonARCH User Documentation, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
       Computing Services/MonARCH User Documentation--DOCID102}
   title: MonARCH User Documentation
+103:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/Monash--DOCID103}
+  title: Monash
+104:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/MonARCH User Documentation, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services/MonARCH User Documentation--DOCID104}
+  title: MonARCH User Documentation
