@@ -4,22 +4,23 @@
 389: {title: Slurm}
 390: {title: Hardware}
 391: {title: TPAC Aurora User Guide}
-'98': {title: Software on MonARCH}
+392: {title: How to Access MonARCH}
 393: {title: Introduction}
 394: {title: Software on MonARCH}
 395: {title: Slurm}
 396: {title: Hardware}
-'100': {title: Hardware}
+397: {title: eRSA Emu Cluster in the Cloud - user guide}
+'98': {title: Software on MonARCH}
 21: {title: Resources available to you}
 24: {title: Intersect Twitter Scraper User Guide}
 26: {title: Availability Zones}
-'99': {title: Slurm}
-'97': {title: Howto Access MonARCH}
 39: {title: More Info}
 40: {title: API}
 41: {title: API}
 42: {title: Trouble Shooting}
 43: {title: Security Assessment}
 44: {title: Hardware}
+'99': {title: Slurm}
+'97': {title: Howto Access MonARCH}
 '96': {title: Introduction}
-392: {title: How to Access MonARCH}
+'100': {title: Hardware}
