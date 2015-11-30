@@ -1431,3 +1431,7 @@
   action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/cat-example/folder1,
     to: /home/ubuntu/nectarcloud-tier0doco/articles/cat-example/folder1--DOCID316}
   title: folder1
+317:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/cat-example/folder1,
+    to: /home/ubuntu/nectarcloud-tier0doco/articles/cat-example/folder1--DOCID317}
+  title: folder1
