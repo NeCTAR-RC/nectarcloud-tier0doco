@@ -501,11 +501,6 @@
   action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
       Computing Services, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
       Computing Services--DOCID116}
-  freshdesk:
-    fd_attributes:
-      category: {created_at: '2015-11-29T19:56:37-05:00', description: Cluster Computing
-          Services, id: 6000131129, is_default: false, language_id: 6, name: Cluster
-          Computing Services, parent_id: 6000131129, position: 11, updated_at: '2015-11-29T19:56:37-05:00'}
   title: Cluster Computing Services
 117:
   action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
@@ -1589,21 +1584,21 @@
   title: Cluster Computing Services
 333:
   action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
-      Computing Cloud Services, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
-      Computing Cloud Services--DOCID333}
-  freshdesk:
-    fd_attributes:
-      category: {created_at: '2015-11-29T22:59:24-05:00', description: Cluster Computing
-          Cloud Services, id: 6000131132, is_default: false, language_id: 6, name: Cluster
-          Computing Cloud Services, parent_id: 6000131132, position: 12, updated_at: '2015-11-29T22:59:24-05:00'}
-  title: Cluster Computing Cloud Services
+      Computing Services, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services--DOCID333}
+  title: Cluster Computing Services
 334:
   action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
-      Computing Services, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
-      Computing Services--DOCID334}
-  title: Cluster Computing Services
+      Computing Cloud Services, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Cloud Services--DOCID334}
+  title: Cluster Computing Cloud Services
 335:
   action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
+      Computing Services--DOCID335}
+  title: Cluster Computing Services
+336:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
       Computing Cloud Services, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
-      Computing Cloud Services--DOCID335}
+      Computing Cloud Services--DOCID336}
   title: Cluster Computing Cloud Services
