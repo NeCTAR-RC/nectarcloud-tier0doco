@@ -1621,3 +1621,7 @@
   action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/cat-example,
     to: /home/ubuntu/nectarcloud-tier0doco/articles/cat-example--DOCID338}
   title: cat-example
+339:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/cat-example,
+    to: /home/ubuntu/nectarcloud-tier0doco/articles/cat-example--DOCID339}
+  title: cat-example
