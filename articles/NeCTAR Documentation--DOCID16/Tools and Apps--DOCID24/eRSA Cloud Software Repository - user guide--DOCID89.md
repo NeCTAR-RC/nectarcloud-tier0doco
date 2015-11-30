@@ -44,6 +44,15 @@ For the user, this all happens transparently, it appears as though all the appli
 
 ----
 
+
+<a name="register"></a>
+
+## Register for an eRSA account
+
+To access the eRSA cloud software repository, you will need to be [registered with eResearchSA].  Email the [eRSA Helpdesk][ServiceDesk] with any queries.
+
+---
+
 <a name="alloc"></a>
 
 ## Getting a Project Allocation
