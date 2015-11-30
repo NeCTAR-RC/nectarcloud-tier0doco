@@ -23,8 +23,7 @@
 Windows applications in the NeCTAR Australian research cloud. We are currently trialling an 
 approach where users can access Windows virtual machines (VMs) in the cloud using Remote Desktop.
 
-The service currently uses Windows trial licenses, and this service will be further 
-developed as eRSA continues to explore licensing options with Microsoft.
+This is currently a pilot service which uses short-term Windows trial licenses, but eRSA will be providing a production service through a Microsoft Service Provider License Agreement (SPLA) in early 2016.
 
 
 eRSA staff will need to set up your Windows VM image for the cloud. Once the image 
@@ -51,7 +50,7 @@ This service is designed for:
 The Windows operating system is much larger than the standard Linux operating systems that are usually used on NeCTAR VMs. 
 You will need to run the Windows image on an '**m2**' Instance type, which has a 30GB root
 drive rather than 10 GB. You will need to request a [NeCTAR allocation][allocation] beyond the standard personal project
-resource.By requesting more 'cores', you can launch instances that have enough storage to 
+resource. By requesting more 'cores', you can launch instances that have enough storage to 
 cope with the Windows operating system as well as storing and processing data.
 
 Log in to the [web dashboard][dashboard] for the cloud 
@@ -100,6 +99,8 @@ and an image with the Windows trial will be made available on your NeCTAR Dashbo
 
   ![](images/windowsDOCID87_sg_rulewindow.png)
 
+-  By specifying these IP ranges, your Windows VM will be more secure as it can only be accessed by computers in the University network, or using your university VPN. To access the Windows virtual desktop from elsewhere, you can log in via the [console on the NeCTAR dashboard](#connection).
+
 [Glossary of Terms](#glossary)   
 [Top of page](#top)
 
@@ -116,7 +117,7 @@ and an image with the Windows trial will be made available on your NeCTAR Dashbo
 
 -  In the pop-up window, assign a name to the Instance. Select a **Flavor** beginning with '**m2**',
   and ensure it has a 'Root Disk' of 30 GB (look in Flavor Details in the right column
-  of the window; we suggest m2.large or m2.xlarge). 
+  of the window; we suggest m2.large or m2.xlarge depending on how many processing cores and how much memory you need for your work). 
   In 'Instance Boot Source', ensure 'Boot from image' is selected. 
   Under 'Image Name', select the image that was set up for you by eRSA.
 
@@ -151,17 +152,15 @@ and an image with the Windows trial will be made available on your NeCTAR Dashbo
 -  On your local desktop, start the Remote Desktop client (it is preinstalled - 
   search in the start menu). 
   
-- In the "Computer" field,enter the IP address of the instance from the previous step click connect.
+- In the "Computer" field, enter the IP address of the instance from the previous step, then click connect.
 
   ![](images/windowsDOCID87_instance_rdp1.png)
 
-- You will be prompted to enter a username and password. These were supplied by eRSA when you requested the image for a 
-  Windows VM.
+- You will be prompted to enter a username and password. These were supplied by eRSA when you requested the image for a Windows VM (this is not the same as your eRSA username and password).
 
   ![](images/windowsDOCID87_instance_rdp2.png)
 
--  You will likely see a warning about accessing a remote computer, so tell your computer that it is 
-  ok to trust the VM by clicking "yes"
+-  You will likely see a warning about accessing a remote computer, so tell your computer that it is ok to trust the VM by clicking "yes"
 
   ![](images/windowsDOCID87_instance_rdp3.png)
 
