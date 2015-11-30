@@ -1617,3 +1617,7 @@
       Computing Cloud Services, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
       Computing Cloud Services--DOCID337}
   title: Cluster Computing Cloud Services
+338:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/cat-example,
+    to: /home/ubuntu/nectarcloud-tier0doco/articles/cat-example--DOCID338}
+  title: cat-example

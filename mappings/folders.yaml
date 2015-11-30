@@ -1423,3 +1423,7 @@
       Computing Cloud Services/Monash, to: /home/ubuntu/nectarcloud-tier0doco/articles/Cluster
       Computing Cloud Services/Monash--DOCID314}
   title: Monash
+315:
+  action: {action: CREATE, from: /home/ubuntu/nectarcloud-tier0doco/articles/cat-example/folder1,
+    to: /home/ubuntu/nectarcloud-tier0doco/articles/cat-example/folder1--DOCID315}
+  title: folder1
