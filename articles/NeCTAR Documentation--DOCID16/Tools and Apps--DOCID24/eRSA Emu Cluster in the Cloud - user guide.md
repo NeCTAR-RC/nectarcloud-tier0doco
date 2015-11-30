@@ -1,6 +1,8 @@
 
 # Emu Cluster in the Cloud - User Guide
 
+## SA node service for users in South Australia
+
 * [About](#about)
 * [Differences in the cloud](#differences-in-the-cloud)
 * [Cloud vs HPC - which is better for my job?](#cloud-vs-hpc---which-is-better-for-my-job)
