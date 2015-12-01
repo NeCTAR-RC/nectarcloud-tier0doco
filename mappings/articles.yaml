@@ -20727,3 +20727,225 @@
   parent: 24
   sha1: 2b5c837fa42df26065cf1edd042d7af4b46e6808
   title: QCIF NFS Mounting
+98:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-12-01T18:14:28-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Introduction \n The TPAC Aurora cluster is an implementation\
+          \ of a CaaS service (Cluster-as-a-Service)\nthat provides a dynamic processing\
+          \ environment similar to HPC environments. Unlike\ntraditional HPC systems,\
+          \ the cloud implementation focuses on on-demand resource\nprovisioning and\
+          \ is best suited for smaller scale computational tasks that can be\neasily\
+          \ managed by a batch job scheduler. The cluster provides a static baseline\n\
+          of nodes on standby and is able to scale up to hundreds of computational\
+          \ nodes\non demand. \n Technical overview \n The cluster consists of two\
+          \ special nodes, a service node and a submit node, as\nwell as of a number\
+          \ of worker nodes that are provisioned, and terminated, as\nrequired. Each\
+          \ worker node has 8 vCPUs and 16GB of RAM, shared storage provided\nby the\
+          \ service node and MPI capabilities for inter-node communication. All nodes\n\
+          run Scientific Linux, which is a derivate of RHEL. \n The submit node is\
+          \ used for logins and job submission to the job scheduler,\nTorque/Maui,\
+          \ while the service node handles centralised configuration management,\n\
+          storage and worker provisioning. \n \n Who can use the TPAC Aurora cluster\
+          \ \n The University of Tasmania researchers and collaborators may use the\
+          \ cluster,\nafter requesting a HPC account. In the case of a non-UTas employee\
+          \ requesting an\naccount, the individual will need to be sponsored by a\
+          \ UTas section/school to\nfirst obtain a Non-University Member Account (NUMA)\
+          \ before requesting a HPC\naccount. Details are included in the request\
+          \ form. \n Getting an Account \n Accounts for HPC can be requested via the\
+          \ form; based on stated resources\nrequirements the Aurora or an alternative\
+          \ cluster may be suggested. Existing HPC\naccount holders can request access\
+          \ to Aurora by contacting TPAC. \n Accessing Aurora \n Aurora can be accessed\
+          \ using the SSH protocol connecting to the host\naurora.tpac.org.au with\
+          \ the user\u2019s HPC account details (See \u2018Getting an Account\u2019\
+          ).\nThe SSH tool is available from the terminal in most operating systems;\
+          \ Windows\nusers will need a client installed, for example Putty.For graphical\n\
+          applications, the submit node runs X2Go Server; the X2Go client is available\
+          \ on\nLinux/OSX/Windows can be used for persistent GUI sessions. You can\
+          \ download X2Go\nfrom this link. \n Major file systems \n There are two\
+          \ filesystems worthy of mentioning that are shared throughout the\ncluster,\
+          \ /home and /apps. \n /home/username \n This is your home directory and\
+          \ the place to store and run your workloads from.\nThere are currently no\
+          \ individual quotas, but total capacity is limited to 10TB\nand fair usage\
+          \ patterns are expected. \n /apps \n This is a read-only application share\
+          \ that is accessible from all nodes. \n The batch system \n The Aurora Cluster\
+          \ uses the open-source TORQUE (version 4.2.10) as it's queue\nmanager and\
+          \ Maui (version 3.3) as the scheduler. User guides and more information\n\
+          can be found at adaptive computing website. \n Usage accounting \n For the\
+          \ initial rollout period the usage policy is \u201Cfree for all\u201D, however\n\
+          reasonable workloads and fair use is expected as the environment is a shared\
+          \ facility. \n Modules, applications, compilers, debuggers \n The cluster\
+          \ offers a standard set of utilities, compilers and libraries, as well\n\
+          as commercial software packages such as STAR-CCM+ and Matlab. Most software\
+          \ is\nusable by default, but some need to be enabled via environment modules.\
+          \ You can \net a list of currently available modules with module available\
+          \ and enable a\ndesired module with module load modulename. \n The below\
+          \ provides TPAC Aurora software list: \n Java OpenJDK (1.6, 1.7)\nPython\
+          \ (2.6, 2.7)\nPerl (5.10.1)\nGCC toolchain (4.4.7) and GCC devtoolset (4.9.2)\n\
+          Tcl and Tk (8.5.7) \n Libraries: mpich, openmpi, boost, hdf5, lapack, atlas,\
+          \ blas \n STAR-CCM+\nMatlab \n Getting help \n If you have problems with\
+          \ TPAC Aurora Cluster as a service, please contact TPAC\nhelp desk via helpdesk@tpac.org.au,\
+          \ or any help desks from your local E-research\nservice providers. "
+        description: "<h2>Introduction</h2>\n<p>The TPAC Aurora cluster is an implementation\
+          \ of a CaaS service (Cluster-as-a-Service)\nthat provides a dynamic processing\
+          \ environment similar to HPC environments. Unlike\ntraditional HPC systems,\
+          \ the cloud implementation focuses on on-demand resource\nprovisioning and\
+          \ is best suited for smaller scale computational tasks that can be\neasily\
+          \ managed by a batch job scheduler. The cluster provides a static baseline\n\
+          of nodes on standby and is able to scale up to hundreds of computational\
+          \ nodes\non demand.</p>\n<h2>Technical overview</h2>\n<p>The cluster consists\
+          \ of two special nodes, a service node and a submit node, as\nwell as of\
+          \ a number of worker nodes that are provisioned, and terminated, as\nrequired.\
+          \ Each worker node has 8 vCPUs and 16GB of RAM, shared storage provided\n\
+          by the service node and MPI capabilities for inter-node communication. All\
+          \ nodes\nrun Scientific Linux, which is a derivate of RHEL.</p>\n<p>The\
+          \ submit node is used for logins and job submission to the job scheduler,\n\
+          Torque/Maui, while the service node handles centralised configuration management,\n\
+          storage and worker provisioning.</p>\n<p><img alt=\"snapshot1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/aurora1.png?raw=true\"\
+          ></p>\n<h2>Who can use the TPAC Aurora cluster</h2>\n<p>The University of\
+          \ Tasmania researchers and collaborators may use the cluster,\nafter requesting\
+          \ a HPC account. In the case of a non-UTas employee requesting an\naccount,\
+          \ the individual will need to be sponsored by a UTas section/school to\n\
+          first obtain a Non-University Member Account (NUMA) before requesting a\
+          \ HPC\naccount. Details are included in the request <a href=\"http://www.tpac.org.au/resources/accounts/hpc-new-account-form/\"\
+          >form</a>.</p>\n<h2>Getting an Account</h2>\n<p>Accounts for HPC can be\
+          \ requested via the <a href=\"http://www.tpac.org.au/resources/accounts/hpc-new-account-form/\"\
+          >form</a>; based on stated resources\nrequirements the Aurora or an alternative\
+          \ cluster may be suggested. Existing HPC\naccount holders can request access\
+          \ to Aurora by contacting <a href=\"http://www.tpac.org.au/contact/\">TPAC</a>.</p>\n\
+          <h2>Accessing Aurora</h2>\n<p>Aurora can be accessed using the SSH protocol\
+          \ connecting to the host\naurora.tpac.org.au with the user\u2019s HPC account\
+          \ details (See \u2018Getting an Account\u2019).\nThe SSH tool is available\
+          \ from the terminal in most operating systems; Windows\nusers will need\
+          \ a client installed, for example <a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/\"\
+          >Putty</a>.For graphical\napplications, the submit node runs X2Go Server;\
+          \ the X2Go client is available on\nLinux/OSX/Windows can be used for persistent\
+          \ GUI sessions. You can download X2Go\nfrom this <a href=\"http://wiki.x2go.org/doku.php\"\
+          >link</a>.</p>\n<h2>Major file systems</h2>\n<p>There are two filesystems\
+          \ worthy of mentioning that are shared throughout the\ncluster, /home and\
+          \ /apps.</p>\n<p>/home/username</p>\n<p>This is your home directory and\
+          \ the place to store and run your workloads from.\nThere are currently no\
+          \ individual quotas, but total capacity is limited to 10TB\nand fair usage\
+          \ patterns are expected.</p>\n<p>/apps</p>\n<p>This is a read-only application\
+          \ share that is accessible from all nodes.</p>\n<h2>The batch system</h2>\n\
+          <p>The Aurora Cluster uses the open-source TORQUE (version 4.2.10) as it's\
+          \ queue\nmanager and Maui (version 3.3) as the scheduler. User guides and\
+          \ more information\ncan be found at <a href=\"http://docs.adaptivecomputing.com\"\
+          >adaptive computing website</a>.</p>\n<h2>Usage accounting</h2>\n<p>For\
+          \ the initial rollout period the usage policy is \u201Cfree for all\u201D\
+          , however\nreasonable workloads and fair use is expected as the environment\
+          \ is a shared facility.</p>\n<h2>Modules, applications, compilers, debuggers</h2>\n\
+          <p>The cluster offers a standard set of utilities, compilers and libraries,\
+          \ as well\nas commercial software packages such as STAR-CCM+ and Matlab.\
+          \ Most software is\nusable by default, but some need to be enabled via environment\
+          \ modules. You can \net a list of currently available modules with module\
+          \ available and enable a\ndesired module with module load modulename.</p>\n\
+          <p>The below provides TPAC Aurora software list:</p>\n<p>Java OpenJDK (1.6,\
+          \ 1.7)\nPython (2.6, 2.7)\nPerl (5.10.1)\nGCC toolchain (4.4.7) and GCC\
+          \ devtoolset (4.9.2)\nTcl and Tk (8.5.7)</p>\n<p>Libraries: mpich, openmpi,\
+          \ boost, hdf5, lapack, atlas, blas</p>\n<p>STAR-CCM+\nMatlab</p>\n<h2>Getting\
+          \ help</h2>\n<p>If you have problems with TPAC Aurora Cluster as a service,\
+          \ please contact TPAC\nhelp desk via helpdesk@tpac.org.au, or any help desks\
+          \ from your local E-research\nservice providers.</p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000093164
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-12-01T18:14:28-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000093164
+        position: 11
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: TPAC Aurora User Guide
+        updated_at: '2015-12-01T18:14:28-05:00'
+        user_id: 6002464727
+  html: "<h2>Introduction</h2>\n<p>The TPAC Aurora cluster is an implementation of\
+    \ a CaaS service (Cluster-as-a-Service)\nthat provides a dynamic processing environment\
+    \ similar to HPC environments. Unlike\ntraditional HPC systems, the cloud implementation\
+    \ focuses on on-demand resource\nprovisioning and is best suited for smaller scale\
+    \ computational tasks that can be\neasily managed by a batch job scheduler. The\
+    \ cluster provides a static baseline\nof nodes on standby and is able to scale\
+    \ up to hundreds of computational nodes\non demand.</p>\n<h2>Technical overview</h2>\n\
+    <p>The cluster consists of two special nodes, a service node and a submit node,\
+    \ as\nwell as of a number of worker nodes that are provisioned, and terminated,\
+    \ as\nrequired. Each worker node has 8 vCPUs and 16GB of RAM, shared storage provided\n\
+    by the service node and MPI capabilities for inter-node communication. All nodes\n\
+    run Scientific Linux, which is a derivate of RHEL.</p>\n<p>The submit node is\
+    \ used for logins and job submission to the job scheduler,\nTorque/Maui, while\
+    \ the service node handles centralised configuration management,\nstorage and\
+    \ worker provisioning.</p>\n<p><img alt=\"snapshot1\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/aurora1.png?raw=true\"\
+    ></p>\n<h2>Who can use the TPAC Aurora cluster</h2>\n<p>The University of Tasmania\
+    \ researchers and collaborators may use the cluster,\nafter requesting a HPC account.\
+    \ In the case of a non-UTas employee requesting an\naccount, the individual will\
+    \ need to be sponsored by a UTas section/school to\nfirst obtain a Non-University\
+    \ Member Account (NUMA) before requesting a HPC\naccount. Details are included\
+    \ in the request <a href=\"http://www.tpac.org.au/resources/accounts/hpc-new-account-form/\"\
+    >form</a>.</p>\n<h2>Getting an Account</h2>\n<p>Accounts for HPC can be requested\
+    \ via the <a href=\"http://www.tpac.org.au/resources/accounts/hpc-new-account-form/\"\
+    >form</a>; based on stated resources\nrequirements the Aurora or an alternative\
+    \ cluster may be suggested. Existing HPC\naccount holders can request access to\
+    \ Aurora by contacting <a href=\"http://www.tpac.org.au/contact/\">TPAC</a>.</p>\n\
+    <h2>Accessing Aurora</h2>\n<p>Aurora can be accessed using the SSH protocol connecting\
+    \ to the host\naurora.tpac.org.au with the user\u2019s HPC account details (See\
+    \ \u2018Getting an Account\u2019).\nThe SSH tool is available from the terminal\
+    \ in most operating systems; Windows\nusers will need a client installed, for\
+    \ example <a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/\">Putty</a>.For\
+    \ graphical\napplications, the submit node runs X2Go Server; the X2Go client is\
+    \ available on\nLinux/OSX/Windows can be used for persistent GUI sessions. You\
+    \ can download X2Go\nfrom this <a href=\"http://wiki.x2go.org/doku.php\">link</a>.</p>\n\
+    <h2>Major file systems</h2>\n<p>There are two filesystems worthy of mentioning\
+    \ that are shared throughout the\ncluster, /home and /apps.</p>\n<p>/home/username</p>\n\
+    <p>This is your home directory and the place to store and run your workloads from.\n\
+    There are currently no individual quotas, but total capacity is limited to 10TB\n\
+    and fair usage patterns are expected.</p>\n<p>/apps</p>\n<p>This is a read-only\
+    \ application share that is accessible from all nodes.</p>\n<h2>The batch system</h2>\n\
+    <p>The Aurora Cluster uses the open-source TORQUE (version 4.2.10) as it's queue\n\
+    manager and Maui (version 3.3) as the scheduler. User guides and more information\n\
+    can be found at <a href=\"http://docs.adaptivecomputing.com\">adaptive computing\
+    \ website</a>.</p>\n<h2>Usage accounting</h2>\n<p>For the initial rollout period\
+    \ the usage policy is \u201Cfree for all\u201D, however\nreasonable workloads\
+    \ and fair use is expected as the environment is a shared facility.</p>\n<h2>Modules,\
+    \ applications, compilers, debuggers</h2>\n<p>The cluster offers a standard set\
+    \ of utilities, compilers and libraries, as well\nas commercial software packages\
+    \ such as STAR-CCM+ and Matlab. Most software is\nusable by default, but some\
+    \ need to be enabled via environment modules. You can \net a list of currently\
+    \ available modules with module available and enable a\ndesired module with module\
+    \ load modulename.</p>\n<p>The below provides TPAC Aurora software list:</p>\n\
+    <p>Java OpenJDK (1.6, 1.7)\nPython (2.6, 2.7)\nPerl (5.10.1)\nGCC toolchain (4.4.7)\
+    \ and GCC devtoolset (4.9.2)\nTcl and Tk (8.5.7)</p>\n<p>Libraries: mpich, openmpi,\
+    \ boost, hdf5, lapack, atlas, blas</p>\n<p>STAR-CCM+\nMatlab</p>\n<h2>Getting\
+    \ help</h2>\n<p>If you have problems with TPAC Aurora Cluster as a service, please\
+    \ contact TPAC\nhelp desk via helpdesk@tpac.org.au, or any help desks from your\
+    \ local E-research\nservice providers.</p>"
+  parent: 24
+  sha1: 96d9097503dfc18445585dd2f725b7bb0dc2ec34
+  title: TPAC Aurora User Guide
