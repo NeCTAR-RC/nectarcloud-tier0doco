@@ -1,4 +1,4 @@
-# User Guide for Windows In The Cloud  <a name="top"></a>
+  <a name="top"></a>
 
 ## SA node service for users in South Australia
 

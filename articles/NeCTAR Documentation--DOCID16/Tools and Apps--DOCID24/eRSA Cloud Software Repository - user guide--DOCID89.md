@@ -1,5 +1,5 @@
 
-# User Guide for the Cloud Software Repository  <a name="top"></a>
+ <a name="top"></a>
 
 
 ## SA node service for users in South Australia
