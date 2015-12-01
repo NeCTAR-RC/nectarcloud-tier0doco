@@ -18882,3 +18882,997 @@
   parent: 21
   sha1: 1f41c7ec9ff193240456cfe0886ee4667d8b2667
   title: Security Compromise Checklist
+96:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-11-30T19:44:05-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Emu Cluster in the Cloud - User Guide \n SA node service for\
+          \ users in South Australia \n \n About \n Differences in the cloud \n Cloud\
+          \ vs HPC - which is better for my job? \n Register for an eRSA account \n\
+          \ Emu submit node \n Connecting to Emu \n Windows Users \n Mac and Linux\
+          \ Users \n Storage \n General information on using eRSA Supercomputers \n\
+          \ Exploring the available software \n Submitting your job \n Transfer files\
+          \ with SCP and SFTP \n Using your own cloud allocation \n The Name \n Appendices\
+          \ \n An example Torque submission script \n Converting a tizard submission\
+          \ script for Emu \n A quick guide to copying files from eRSA '/data' storage\
+          \ \n Glossary \n \n \n About \n Emu is a cluster that is designed to be\
+          \ similar to eRSA's Tizard supercomputer, but makes use of the Australian\
+          \ Research Cloud. \nThe Emu cluster-in-the-cloud is managed by eRSA and\
+          \ provides a shared service for eRSA users who don't have a resource allocation\
+          \ on the national cloud or don't have the expertise to set up and manage\
+          \ a private cluster-in-the-cloud using StarCluster. \n Emu currently consists\
+          \ of 136 processing cores, with an eight-core machine for the head node\
+          \ and 16 worker nodes to run jobs. Each node has eight cores, 32GB RAM and\
+          \ 240GB of local disk. The cluster uses the same job management system (Torque)\
+          \ and eRSA user accounts that are used on Tizard (and previously on Corvus).\
+          \ The cluster has access to the same repository of software packages as\
+          \ \n This service is designed for: \n \n South Australian researchers who\
+          \ want to run compute-intensive software applications in the cloud without\
+          \ the set-up involved in managing a virtual machine. \n Registered eRSA\
+          \ users familiar with Tizard HPC services, who would like to use their NeCTAR\
+          \ allocation to have their own node rather than share nodes with other users.\
+          \ \n \n \n Differences in the cloud \n Due to technical constraints and\
+          \ security policies, we are unable to replicate everything in a traditional\
+          \ HPC cluster (such as Tizard) on the cloud. However, we aim to provide,\
+          \ as much as possible, a seamless experience for users in switching from\
+          \ a traditional HPC cluster to the cluster-in-the-cloud approach. \n \n\
+          \ Users employ the same eRSA account to log into Emu and the home directory\
+          \ on Emu will be the same as on Tizard. However, the '/data' storage is\
+          \ not automatically available. Email the eRSA service desk and it may be\
+          \ arranged for the '/data' disk to be made available through Emu. Otherwise,\
+          \ data can be transferred using scp or sftp between '/data' and the cloud.\
+          \ \n The worker nodes in Emu are dynamic, which means they will be launched\
+          \ when there are pending jobs, and shut down when nodes are idle. Users\
+          \ may see a different number of worker nodes at different times when they\
+          \ check the status of the cluster. \n Currently there is no wall-time restriction\
+          \ in Emu. \n In the cloud, there is 4G memory allocated per core. So, if\
+          \ someone requests one core and 8GB memory for a job, it will be a waste.\
+          \ For such jobs it is recommended to run on the Tizard CPU cluster or big\
+          \ memory nodes. On Emu, users don't need to put the memory requirement in\
+          \ the job description file as the core/memory ratio is set by default. \n\
+          \ The same set of applications are available as for Tizard, however licensed\
+          \ software may not be functional in the cloud. Please contact our Service\
+          \ Desk if you need to run licensed software. \n \n Glossary of Terms  \n\
+          Top of page \n \n \n Cloud vs HPC \n There are some differences between\
+          \ a cluster in the cloud and an HPC cluster, such as Tizard, which has more\
+          \ processors and memory on each node, and a faster communication network\
+          \ between the nodes. Some types of computation that run on HPC clusters\
+          \ are suitable for running in the cloud, and the cluster-in-the-cloud approach\
+          \ should work well for those. \n \n Any eRSA user can use Emu, you don't\
+          \ need to have a cloud resource allocation  \n If your research group has\
+          \ a cloud allocation, you can use it on Emu, so it's like having a private\
+          \ sub-cluster \n Run compute jobs in the same way as for eRSA HPC clusters\
+          \ (e.g Tizard) \n There is no wall-time restriction on Emu (usually limited\
+          \ to 100 hours with Tizard) \n \n However, some types of applications are\
+          \ not well-suited to the cloud and would run better on HPC cluster. Examples\
+          \ of such applications include: \n \n Parallel programs that can run only\
+          \ on a single compute node and need more than eight processing cores or\
+          \ 32GB memory \n Parallel (multi-processor) programs that need to run on\
+          \ more than eight cores and can use multiple compute nodes (e.g. MPI programs)\
+          \ but require a lot of interprocessor communication, particularly low-latency\
+          \ communication \n Programs that need more than 4GB of memory per processing\
+          \ core \n Programs that have more than about 500GB total of input and output\
+          \ files \n Applications that run on GPUs \n \n If you are unsure of whether\
+          \ or not your application is suitable for the cloud, contact our Service\
+          \ Desk. \n \n \n Register for an eRSA account \n To access the Emu cluster\
+          \ in the cloud, you will need to be [registered with eResearchSA]. You will\
+          \ be provided with an eRSA username and password which you will use to access\
+          \ the Emu cluster. Email the eRSA Helpdesk with any queries. \n \n Emu submit\
+          \ node \n \n Emu's submit node is 'emu.ersa.edu.au' \n To run jobs in the\
+          \ Emu cluster, you must login to the Emu submit node via SSH with your eRSA\
+          \ username and password. \n You can run short (a few minutes) test jobs\
+          \ on the commandline of the submit node without using the queueing system.\
+          \ \n Longer jobs are submitted to the Torque queueing system with a submission\
+          \ script. \n \n Glossary of Terms  \nTop of page \n \n \n Connecting to\
+          \ Emu \n \n Emu is accessible via SSH. \n \n \n Windows users \n \n Windows\
+          \ users can make use of free ssh clients such as putty.  \n \nPutty Download\
+          \   \n \n Instructions for downloading Putty \n \n \n In the Putty configuration\
+          \ window, enter emu.ersa.edu.au as the \"Host Name (or IP Address)\", then\
+          \ click 'Open'. \n \n You will be prompted for your username and password.\
+          \ \n \n \n Mac and Linux users \n \n Open the Terminal application (for\
+          \ Mac, look under Applications -> Utilities. \n Then run: \nssh username@emu.ersa.edu.au\n\
+          \ \n You will be prompted for your password. \n \n Glossary of Terms  \n\
+          Top of page \n \n \n Storage \n \n As with other clusters managed by eRSA,\
+          \ there are three storage areas that jobs have access to: \n \n/home/users,\
+          \ which contains user home directories, and is accessible on all worker\
+          \ nodes via NFS but has limited space (50GB).  \n \n/scratch, which provides\
+          \ a larger temporary storage area, and is accessible from all nodes of the\
+          \ cluster, but uses NFS and will therefore be slower than /tmp. This is\
+          \ the disk location from which the user must run jobs. \n \n/tmp, which\
+          \ is fast, temporary storage that is local to a particular worker node in\
+          \ the cluster. It should be used only for the duration of a single job and\
+          \ cleaned up after the job has finished. On Emu it is 240GB per worker node,\
+          \ which is smaller than the local /tmp storageTizard nodes. \n \n Glossary\
+          \ of Terms  \nTop of page \n \n \n General information on using eRSA supercomputers\
+          \ \n \n Please read the general information about Using Supercomputers,\
+          \ which is relevant to all eRSA supercomputers. \n \n An overview of the\
+          \ steps for running a job on Emu (details in the following sections): \n\
+          \ \n Create a folder in the '/scratch' directory to use as a working directory\
+          \ for running jobs \n Copy the Emu submission script and your input files\
+          \ to this directory \n Check which modules you need to load to run the job\
+          \ \n Edit the emu submission script - with a comand-line editor or with\
+          \ FileZilla\n \n Submit the script, and await an email informing you the\
+          \ job is complete \n \n \n Exploring the available software packages \n\
+          \ The 'module' commands allow users to: \n \n List the available packages\
+          \ (modules) on Emu \nmodule avail \nmodule avail <search term>  - search\
+          \ for a particular package   \n Find out what dependencies are required\
+          \ to be loaded before the package of interest can be loaded \nmodule whatis\
+          \ <package name>  -  make note of any required modules\n \n Load the packages,\
+          \ by entering the module load ... command in the PBS submission script.\
+          \ \n \n NOTE: If there is software that you would like to access that is\
+          \ not already in the software repository, email the eRSA Helpdesk and request\
+          \ that it be added. Ensure you mention that you would like to access it\
+          \ through Emu cluster in the cloud. \n \n Submit your job using Torque/PBS\
+          \ queuing system \n \n As with all eRSA supercomputers, you submit jobs\
+          \ to Emu using the Torque job management (or queueing) system. \n Introduction\
+          \ and Tutorial on using the Torque/PBS Queuing System \n Running jobs with\
+          \ a Torque submission script \n \n There is a template of the Emu submission\
+          \ script in the home folder. After you have logged on to emu.ersa.edu.au,\
+          \ the script is in the '~/.templates' directory. \n \n look at the file:\
+          \ \nless ~/.templates/emu.sub\n \n create a directory to work from in '/scratch',\
+          \  \n  e.g. mkdir -p /scratch/MyDirectory/MyExperiment1\n \n copy the emu\
+          \ submission script to your directory \n  e.g. cp ~/.templates/emu.sub /scratch/MyDirectory/MyExperiment1/experiment1.sub\n\
+          \ \n Navigate to the directory  \n  e.g. cd /scratch/MyDirectory/MyExperiment1\n\
+          \ \n Edit the submission script with nano experiment1.sub (or use the file\
+          \ edit option in FileZilla)   \n \nReplace the following terms in bold in\
+          \ the submission script\n \n MyJobName  \n Your-email-Address  \n \n#PBS\
+          \ -l ncpus=X - enter the number of processors required (up to 8, unless\
+          \ you have a private allocation with 16 CPUs) \n \n#PBS -l walltime=HH:MM:SS\
+          \ - Enter the maximum time the process will take, or put \"###\" at the\
+          \ start of this line so it is ignored. \n \nmodule load application_module\
+          \ - load any required modules first (see the output from the  module whatis\
+          \ command above). Then on a new line, load the program you will use. \n\
+          \ \n MyProgram+Arguments - Enter the command to start the program, as you\
+          \ would enter it on the command line on your own computer. \n \n \n Copy\
+          \ your input files to the directory. \n \n To submit the job, enter: \n\
+          \  e.g. qsub experiment1.sub \nqstat - check that the job is running. You\
+          \ will receive an email when the job ends. \n \n Glossary of Terms  \nTop\
+          \ of page \n \n \n Sharing files with the virtual machine \n There is a\
+          \ NeCTAR training module and support guide with comprehensive details on\
+          \ transferring data between a cloud VM and your local computer or remote\
+          \ storage servers.  \n Using programs like FileZilla or WinSCP is an easy\
+          \ method of transferring data from your local computer.  \n See the Appendix\
+          \ for a quick guide to copying data between Emu and your eRSA /data storage.\
+          \ There is an eRSA support page with more detail on transferring data from\
+          \ eRSA storage. \n Glossary of Terms  \nTop of page \n \n \n Using your\
+          \ own cloud allocation \n Emu allows you the option to use your own NeCTAR\
+          \ cloud resource allocation to start-up worker nodes. These worker nodes\
+          \ will be exclusive to your group only and are not shared with other groups.\
+          \ A useful feature is that if all your worker nodes are busy, your job will\
+          \ be able to be scheduled to the shared worker nodes (contributed by eRSA)\
+          \ if any of them is free. If this is still not enough, you can request more\
+          \ cores from NeCTAR and we can bump up your own share in Emu so it can start\
+          \ up more exclusive worker nodes for you. \n To set this up, you need to\
+          \ follow these steps: \n \n Follow this guide to get a NeCTAR account\n\
+          \ \n Apply for a NeCTAR cloud resource allocation by logging in to the NeCTAR\
+          \ web dashboard and going to the New Request page under Allocations in the\
+          \ menu. Contact our Service Desk if you need help in filling in the allocation\
+          \ request. \n If you request persistent cloud storage (volume storage),\
+          \ this can be set up to be used by your worker nodes. Note that this needs\
+          \ one extra core to run a file server. For example, if you need eight cores\
+          \ for your job, and you also request some volume storage, you will need\
+          \ to request a total of nine cores. \n Send an email to our Service Desk\
+          \ with the following information: \n Your NeCTAR project name \n A short,\
+          \ one-word name to identify your project in your Torque/PBS job submission\
+          \ script \n How many worker nodes you want to be used by Emu and how many\
+          \ cores each one should have (note that the total number of cores must be\
+          \ less than or equal to your NeCTAR project allocation) \n Do you have volume\
+          \ storage to use? If so, how much do you want to be accessible from Emu?\
+          \ \n A list of users who are allowed to use these worker nodes (please provide\
+          \ their eRSA usernames). \n In order for eRSA to set up Emu in your project\
+          \ allocation, the project manager (the user who requested the allocation)\
+          \ must add the eRSA cloud support staff member as a user. This is done by\
+          \ selecting the \"Users\" option in the project menu on the NeCTAR dashboard\
+          \ and entering the email address of the eRSA team member that is assisting\
+          \ you. \n \n Once we receive your email request, we will set up Emu to use\
+          \ your allocation. On completion of setup, you can add a flag -A when running\
+          \ your job script to specify the project name in order to make use of your\
+          \ dedicated worker nodes. In your Torque/PBS job script, add the following\
+          \ line (using your actual project name rather than myprojectname): \n  \
+          \   #PBS -A myprojectname\n \n Alternatively, you can specify the project\
+          \ name as a command line option to the qsub job submission command, as follows:\
+          \ \n     $ qsub -A myprojectname myjobscript.sub\n \n If you don't know\
+          \ or can't remember the project name, you can just type anything after the\
+          \ -A flag and you will get an error message telling you what project names\
+          \ you are eligible to use. \n If you do not specify a project name, the\
+          \ job will be run on the shared worker nodes of the cluster. \n If you want\
+          \ to run jobs ONLY on your own worker nodes, add myprojectname to the nodes'\
+          \ properties. For example, in the job scripts, it can be \n     #PBS -l\
+          \ nodes=1:myprojectname\n \n Glossary of Terms  \nTop of page \n \n \n The\
+          \ name \n \n Clusters managed by eRSA have traditionally been given names\
+          \ of constellations. In this case, we also wanted to somehow incorporate\
+          \ the concept of \"cloud\". We chose the name based on a constellation from\
+          \ Aboriginal culture, the Emu in the sky, which is not based on stars, but\
+          \ rather on dust clouds in our galaxy creating dark areas in the Milky Way\
+          \ between the Southern Cross and Scorpius, which resemble the outline of\
+          \ an emu. \n \n Top of page \n \n \n Appendices \n \n An example Torque\
+          \ submission script \n This is an example of modifying a copy of the 'emu.sub'\
+          \ submission script template to run an executable 'process_radtags' from\
+          \ a package called 'Stacks'. The first step is to check the availability\
+          \ of the package, and what modules need to be loaded first as a prerequisite\
+          \ for loading Stacks. Then the script is modified as highlighted for submission\
+          \ of the job. \n \n \n Top of page \n \n \n Modify a Tizard submision script\
+          \ for Emu \n If you have an existing submission script based on the 'tizard.sub',\
+          \ you can convert it to an Emu submission script with the simple changes\
+          \ highlighted below. \n \n Top of page \n \n \n A quick guide to copying\
+          \ files from eRSA '/data' storage \n The following information outlines\
+          \ commands that can be entered on your VM in order to transfer data to and\
+          \ from remote data storage, such as the eRSA '/data' storage block. There\
+          \ is an eRSA support page with more detail on transferring data from eRSA\
+          \ storage. \n Secure Copy (SCP) between the VM and a data storage server\
+          \ \n If you have data stored on a remote server, you can transfer files\
+          \ by using the 'scp' command while logged on to 'emu.ersa.edu.au'. \n scp\
+          \ <source> <destination> \n \n To download to the VM : scp <remote computer>:<path\
+          \ to file> <Emu directory>   \n e.g. to get files from '/data' and copy\
+          \ to the working directory: \n \n scp username@sftp.ersa.edu.au:/data/<path\
+          \ to file> ./  \n \n \n To upload to data storage : scp <Emu file> <remote\
+          \ computer>:<path to directory> \n \n e.g. to save results to '/data' \n\
+          \ \n scp results.zip username@sftp.ersa.edu.au:/data/myDirectory/ \n \n\
+          \ \n You will be prompted to enter the password for your data storage. \n\
+          \ \n \n SFTP via the Command Line \n Secure file transfer is also available\
+          \ between the VM and remote data storage. This is useful when you aren't\
+          \ sure of the file structure on the remote server, because it allows you\
+          \ to navigate to a file before you download it. \n Enter the 'sftp' command\
+          \ while logged on to 'emu.ersa.edu.au', and you will have access to the\
+          \ remote storage server. \n sftp username@sftp.ersa.edu.au   - you will\
+          \ be prompted for a password. \n You are now accessing the remote data storage\
+          \ server, and you can navigate the files on the server as per usual with\
+          \ commands like cd and ls. \nThe commands get and put will transfer data\
+          \ between the machines: \n \n get <remote_server_file.txt> <localEMU_destination/>\
+          \ \n \ncd /data/<My directory> , ls - navigate to your files on the remote\
+          \ server \n \n get file.data ./ - fetch the file from the server to the\
+          \ Emu working directory \n \n \n put <localEMU_destination/file.txt> <remote_directory/>\
+          \ \n \n put results.zip /data/<My directory> \n \n to close the sftp connection,\
+          \ type exit. \n \n \n Glossary \n Dashboard \n \n The NeCTAR Dashboard is\
+          \ the main web-based interface for managing NeCTAR virtuals. \n \n ERSA\
+          \ \n \n eResearch SA runs the South Australian node of the NeCTAR research\
+          \ cloud. \n \n HPC \n \n High Performance Computing systems - typically\
+          \ refers to \"high end\" computing hardware designed for doing \"large\"\
+          \ computational tasks. \n \n Modules \n \n Environment modules are used\
+          \ to configure a users environment to allow use of the software packages\
+          \ available on the server. The module commands are used to find information\
+          \ on the available packages, and to load the packages for use.  \n \n Node\
+          \ (compute node)  \n \n OpenStack terminology for a physical computer used\
+          \ to run virtual machines. It will typically have multiple CPUs and shared\
+          \ memory, and one or more network interfaces. It may also have on-node disk\
+          \ storage. \n \n Project \n \n The NeCTAR term for a \"resource container\"\
+          ; i.e. what you get when you are granted a NeCTAR allocation. A project\
+          \ \"owns\" virtual machine instances, snapshots and various kinds of storage,\
+          \ and may be shared by multiple users. \n \n SSH \n \n A protocol and tools\
+          \ for establishing secure \"shell\" sessions over the network. SSH encrypts\
+          \ the data transferred, and supports user authentication using public/private\
+          \ keys. \n \n Submission script \n \n A text file that is submitted to the\
+          \ Torque queueing system to run a job. It consists of lines that are not\
+          \ read by torque (beginning with ###), lines with Torque commands (beginning\
+          \ with #), and lines with shell script commands. \n \n Tizard \n \n Tizard\
+          \ is eRSA's high performance computing server that can be used for complex\
+          \ data processing and analysis jobs that standard desktop computers would\
+          \ find it difficult or impossible to perform. It enables users to run many\
+          \ processing jobs with different parameters or input files more quickly.\
+          \ \n \n Volume Storage \n \n Data Storage in your Virtual Machine that works\
+          \ like a hard-drive on your PC or laptop does. Volume storage is automatically\
+          \ available in your VM as the storage space for you system drive. Some flavors\
+          \ of VMs include an amount of ephemeral volume storage. Depending on your\
+          \ allocation you can have persistent volume storage attached to your VM.\
+          \ \n \n Full NeCTAR Glossary Page \nNeCTAR FAQ - general inormation \nFor\
+          \ more help, contact the eRSA Helpdesk \n Top of page "
+        description: "<h1>Emu Cluster in the Cloud - User Guide</h1>\n<h2>SA node\
+          \ service for users in South Australia</h2>\n<ul>\n<li><a href=\"#about\"\
+          >About</a></li>\n<li><a href=\"#differences-in-the-cloud\">Differences in\
+          \ the cloud</a></li>\n<li><a href=\"#cloud-vs-hpc---which-is-better-for-my-job\"\
+          >Cloud vs HPC - which is better for my job?</a></li>\n<li><a href=\"#register\"\
+          >Register for an eRSA account</a></li>\n<li><a href=\"#emu-head-node\">Emu\
+          \ submit node</a></li>\n<li><a href=\"#connecting-to-emu\">Connecting to\
+          \ Emu</a></li>\n<li><a href=\"#windows-users\">Windows Users</a></li>\n\
+          <li><a href=\"#mac-users\">Mac and Linux Users</a></li>\n<li><a href=\"\
+          #storage\">Storage</a></li>\n<li><a href=\"#general-information-on-using-ersa-supercomputers\"\
+          >General information on using eRSA Supercomputers</a></li>\n<li><a href=\"\
+          #modules\">Exploring the available software</a></li>\n<li><a href=\"#torquepbs\"\
+          >Submitting your job</a></li>\n<li><a href=\"#transfer\">Transfer files\
+          \ with SCP and SFTP</a></li>\n<li><a href=\"#cloud-allocation\">Using your\
+          \ own cloud allocation</a></li>\n<li><a href=\"#the-name\">The Name</a></li>\n\
+          <li><a href=\"#appendix\">Appendices</a></li>\n<li><a href=\"#example\"\
+          >An example Torque submission script</a></li>\n<li><a href=\"#convert\"\
+          >Converting a tizard submission script for Emu</a></li>\n<li><a href=\"\
+          #app1\">A quick guide to copying files from eRSA '/data' storage</a></li>\n\
+          <li><a href=\"#glossary\">Glossary</a></li>\n</ul>\n<p><a name=\"about\"\
+          ></a></p>\n<h2>About</h2>\n<p>Emu is a cluster that is designed to be similar\
+          \ to eRSA's Tizard supercomputer, but makes use of the <a href=\"http://www.nectar.org.au/research-cloud/\"\
+          >Australian Research Cloud</a>. \nThe Emu cluster-in-the-cloud is managed\
+          \ by eRSA and provides a shared service for eRSA users who don't have a\
+          \ resource allocation on the national cloud or don't have the expertise\
+          \ to set up and manage a private cluster-in-the-cloud using <a href=\"star-cluster.html\"\
+          >StarCluster</a>.</p>\n<p>Emu currently consists of 136 processing cores,\
+          \ with an eight-core machine for the head node and 16 worker nodes to run\
+          \ jobs. Each node has eight cores, 32GB RAM and 240GB of local disk. The\
+          \ cluster uses the same job management system (Torque) and eRSA user accounts\
+          \ that are used on Tizard (and previously on Corvus). The cluster has access\
+          \ to the same repository of software packages as</p>\n<p>This service is\
+          \ designed for:</p>\n<ul>\n<li>South Australian researchers who want to\
+          \ run compute-intensive software applications in the cloud without the set-up\
+          \ involved in managing a virtual machine.</li>\n<li>Registered eRSA users\
+          \ familiar with Tizard HPC services, who would like to use their NeCTAR\
+          \ allocation to have their own node rather than share nodes with other users.</li>\n\
+          </ul>\n<p><a name=\"differences-in-the-cloud\"></a></p>\n<h2>Differences\
+          \ in the cloud</h2>\n<p>Due to technical constraints and security policies,\
+          \ we are unable to replicate everything in a traditional HPC cluster (such\
+          \ as Tizard) on the cloud. However, we aim to provide, as much as possible,\
+          \ a seamless experience for users in switching from a traditional HPC cluster\
+          \ to the cluster-in-the-cloud approach.</p>\n<ul>\n<li>Users employ the\
+          \ same eRSA account to log into Emu and the home directory on Emu will be\
+          \ the same as on Tizard. However, the '/data' storage is not automatically\
+          \ available. Email the <a href=\"mailto:servicedesk@ersa.edu.au\">eRSA service\
+          \ desk</a> and it may be arranged for the '/data' disk to be made available\
+          \ through Emu. Otherwise, data can be <a href=\"#app1\">transferred using\
+          \ <strong>scp</strong> or <strong>sftp</strong></a> between '/data' and\
+          \ the cloud.</li>\n<li>The worker nodes in Emu are dynamic, which means\
+          \ they will be launched when there are pending jobs, and shut down when\
+          \ nodes are idle. Users may see a different number of worker nodes at different\
+          \ times when they check the status of the cluster.</li>\n<li>Currently there\
+          \ is no wall-time restriction in Emu.</li>\n<li>In the cloud, there is 4G\
+          \ memory allocated per core. So, if someone requests one core and 8GB memory\
+          \ for a job, it will be a waste. For such jobs it is recommended to run\
+          \ on the Tizard CPU cluster or big memory nodes. On Emu, users don't need\
+          \ to put the memory requirement in the job description file as the core/memory\
+          \ ratio is set by default.</li>\n<li>The same set of applications are available\
+          \ as for Tizard, however licensed software may not be functional in the\
+          \ cloud. Please contact our <a href=\"mailto:servicedesk@ersa.edu.au\">Service\
+          \ Desk</a> if you need to run licensed software.</li>\n</ul>\n<p><a href=\"\
+          #glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n\
+          <hr>\n<p><a name=\"cloud-vs-hpc---which-is-better-for-my-job\"></a></p>\n\
+          <h2>Cloud vs HPC</h2>\n<p>There are some differences between a cluster in\
+          \ the cloud and an HPC cluster, such as Tizard, which has more processors\
+          \ and memory on each node, and a faster communication network between the\
+          \ nodes. Some types of computation that run on HPC clusters are suitable\
+          \ for running in the cloud, and the cluster-in-the-cloud approach should\
+          \ work well for those.</p>\n<ul>\n<li>Any eRSA user can use Emu, you don't\
+          \ need to have a cloud resource allocation </li>\n<li>If your research group\
+          \ has a cloud allocation, you can use it on Emu, so it's like having a private\
+          \ sub-cluster</li>\n<li>Run compute jobs in the same way as for eRSA HPC\
+          \ clusters (e.g Tizard)</li>\n<li>There is no wall-time restriction on Emu\
+          \ (usually limited to 100 hours with Tizard)</li>\n</ul>\n<p>However, some\
+          \ types of applications are not well-suited to the cloud and would run better\
+          \ on HPC cluster. Examples of such applications include:</p>\n<ul>\n<li>Parallel\
+          \ programs that can run only on a single compute node and need more than\
+          \ eight processing cores or 32GB memory</li>\n<li>Parallel (multi-processor)\
+          \ programs that need to run on more than eight cores and can use multiple\
+          \ compute nodes (e.g. MPI programs) but require a lot of interprocessor\
+          \ communication, particularly low-latency communication</li>\n<li>Programs\
+          \ that need more than 4GB of memory per processing core</li>\n<li>Programs\
+          \ that have more than about 500GB total of input and output files</li>\n\
+          <li>Applications that run on GPUs</li>\n</ul>\n<p>If you are unsure of whether\
+          \ or not your application is suitable for the cloud, contact our <a href=\"\
+          mailto:servicedesk@ersa.edu.au\">Service Desk</a>.</p>\n<hr>\n<p><a name=\"\
+          register\"></a></p>\n<h2>Register for an eRSA account</h2>\n<p>To access\
+          \ the Emu cluster in the cloud, you will need to be [registered with eResearchSA].\
+          \ You will be provided with an eRSA username and password which you will\
+          \ use to access the Emu cluster. Email the <a href=\"mailto:servicedesk@ersa.edu.au\"\
+          >eRSA Helpdesk</a> with any queries.</p>\n<p><a name=\"emu-head-node\"></a></p>\n\
+          <h2>Emu submit node</h2>\n<ul>\n<li>Emu's submit node is '<strong>emu.ersa.edu.au</strong>'</li>\n\
+          <li>To run jobs in the Emu cluster, you must login to the Emu submit node\
+          \ via SSH with your eRSA username and password.</li>\n<li>You can run short\
+          \ (a few minutes) test jobs on the commandline of the submit node without\
+          \ using the queueing system.</li>\n<li>Longer jobs are submitted to the\
+          \ Torque queueing system with a submission script.</li>\n</ul>\n<p><a href=\"\
+          #glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n\
+          <hr>\n<p><a name=\"connecting-to-emu\"></a></p>\n<h2>Connecting to Emu</h2>\n\
+          <ul>\n<li>Emu is accessible via SSH.</li>\n</ul>\n<p><a name=\"windows-users\"\
+          ></a></p>\n<h3>Windows users</h3>\n<ul>\n<li>Windows users can make use\
+          \ of free ssh clients such as putty. </li>\n<li>\n<a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\"\
+          >Putty Download</a>  </li>\n<li>\n<p><a href=\"http://support.ersa.edu.au/hpc/putty-download.html\"\
+          >Instructions for downloading Putty</a></p>\n</li>\n<li>\n<p>In the Putty\
+          \ configuration window, enter <strong>emu.ersa.edu.au</strong> as the \"\
+          Host Name (or IP Address)\", then click 'Open'.</p>\n</li>\n<li>You will\
+          \ be prompted for your username and password.</li>\n</ul>\n<p><a name=\"\
+          mac-users\"></a></p>\n<h3>Mac and Linux users</h3>\n<ul>\n<li>Open the Terminal\
+          \ application (for Mac, look under Applications -&gt; Utilities.</li>\n\
+          <li>Then run:<br>\n<code>ssh username@emu.ersa.edu.au</code>\n</li>\n<li>You\
+          \ will be prompted for your password.</li>\n</ul>\n<p><a href=\"#glossary\"\
+          >Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n\
+          <p><a name=\"storage\"></a></p>\n<h2>Storage</h2>\n<ul>\n<li>As with other\
+          \ clusters managed by eRSA, there are three storage areas that jobs have\
+          \ access to:</li>\n<li>\n<strong>/home/users</strong>, which contains user\
+          \ home directories, and is accessible on all worker nodes via NFS but has\
+          \ limited space (50GB). </li>\n<li>\n<strong>/scratch</strong>, which provides\
+          \ a larger temporary storage area, and is accessible from all nodes of the\
+          \ cluster, but uses NFS and will therefore be slower than /tmp. This is\
+          \ the disk location from which the user must run jobs.</li>\n<li>\n<strong>/tmp</strong>,\
+          \ which is fast, temporary storage that is local to a particular worker\
+          \ node in the cluster. It should be used only for the duration of a single\
+          \ job and cleaned up after the job has finished. On Emu it is 240GB per\
+          \ worker node, which is smaller than the local /tmp storageTizard nodes.</li>\n\
+          </ul>\n<p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\"\
+          >Top of page</a></p>\n<hr>\n<p><a name=\"general-information-on-using-ersa-supercomputers\"\
+          ></a></p>\n<h2>General information on using eRSA supercomputers</h2>\n<ul>\n\
+          <li>Please read the general information about <a href=\"http://support.ersa.edu.au/hpc/using-supercomputers.html\"\
+          >Using Supercomputers</a>, which is relevant to all eRSA supercomputers.</li>\n\
+          </ul>\n<p>An overview of the steps for running a job on Emu (details in\
+          \ the following sections):</p>\n<ol>\n<li>Create a folder in the '<strong>/scratch</strong>'\
+          \ directory to use as a working directory for running jobs</li>\n<li>Copy\
+          \ the Emu submission script and your input files to this directory</li>\n\
+          <li>Check which modules you need to load to run the job</li>\n<li>Edit the\
+          \ emu submission script - with a comand-line editor or with <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm#edit\"\
+          >FileZilla</a>\n</li>\n<li>Submit the script, and await an email informing\
+          \ you the job is complete</li>\n</ol>\n<p><a name=\"modules\"></a></p>\n\
+          <h2>Exploring the available software packages</h2>\n<p>The <a href=\"http://support.ersa.edu.au/hpc/module-commands.html\"\
+          >'module' commands</a> allow users to:</p>\n<ul>\n<li>List the available\
+          \ packages (modules) on Emu<br>\n<code>module avail</code><br>\n<code>module\
+          \ avail &lt;search term&gt;</code>  - search for a particular package  </li>\n\
+          <li>Find out what dependencies are required to be loaded before the package\
+          \ of interest can be loaded<br>\n<code>module whatis &lt;package name&gt;</code>\
+          \  -  <em>make note of any required modules</em>\n</li>\n<li>Load the packages,\
+          \ by entering the <code>module load ...</code> command in the PBS submission\
+          \ script.</li>\n</ul>\n<p>NOTE: If there is software that you would like\
+          \ to access that is not already in the software repository, email the <a\
+          \ href=\"mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a> and request\
+          \ that it be added. Ensure you mention that you would like to access it\
+          \ through Emu cluster in the cloud.</p>\n<p><a name=\"torquepbs\"></a></p>\n\
+          <h2>Submit your job using Torque/PBS queuing system</h2>\n<ul>\n<li>As with\
+          \ all eRSA supercomputers, you submit jobs to Emu using the Torque job management\
+          \ (or queueing) system.</li>\n<li><a href=\"http://support.ersa.edu.au/hpc/torque-pbs-queuing-system-commands.html\"\
+          >Introduction and Tutorial on using the Torque/PBS Queuing System</a></li>\n\
+          <li><a href=\"http://support.ersa.edu.au/hpc/user-guide.html#running-jobs\"\
+          >Running jobs with a Torque submission script</a></li>\n</ul>\n<p>There\
+          \ is a template of the Emu submission script in the home folder. After you\
+          \ have logged on to emu.ersa.edu.au, the script is in the '~/.templates'\
+          \ directory.</p>\n<ul>\n<li>look at the file:<br>\n<code>less ~/.templates/emu.sub</code>\n\
+          </li>\n<li>create a directory to work from in '/scratch', <br>\n  e.g. <code>mkdir\
+          \ -p /scratch/MyDirectory/MyExperiment1</code>\n</li>\n<li>copy the emu\
+          \ submission script to your directory<br>\n  e.g. <code>cp ~/.templates/emu.sub\
+          \ /scratch/MyDirectory/MyExperiment1/experiment1.sub</code>\n</li>\n<li>Navigate\
+          \ to the directory <br>\n  e.g. <code>cd /scratch/MyDirectory/MyExperiment1</code>\n\
+          </li>\n<li>Edit the submission script with <code>nano experiment1.sub</code>\
+          \ (or use the file edit option in <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm#edit\"\
+          >FileZilla</a>)  </li>\n<li>\n<em>Replace the following terms in</em> <strong>bold</strong>\
+          \ <em>in the submission script</em>\n</li>\n<li><tt><strong>MyJobName</strong>\
+          \ </tt></li>\n<li><tt><strong>Your-email-Address</strong> </tt></li>\n<li>\n\
+          <tt>#PBS -l ncpus=<strong>X</strong></tt> - enter the number of processors\
+          \ required (up to 8, unless you have a private allocation with 16 CPUs)</li>\n\
+          <li>\n<tt>#PBS -l walltime=<strong>HH:MM:SS</strong></tt> - Enter the maximum\
+          \ time the process will take, or put \"<tt><strong>###</strong></tt>\" at\
+          \ the start of this line so it is ignored.</li>\n<li>\n<tt>module load <strong>application_module</strong></tt>\
+          \ - load any required modules first (see the output from the  <code>module\
+          \ whatis</code> command above). Then on a new line, load the program you\
+          \ will use.</li>\n<li>\n<p><tt><strong>MyProgram+Arguments</strong></tt>\
+          \ - Enter the command to start the program, as you would enter it on the\
+          \ command line on your own computer.</p>\n</li>\n<li>\n<p><a href=\"#transfer\"\
+          >Copy your input files</a> to the directory.</p>\n</li>\n<li>To submit the\
+          \ job, enter:<br>\n  e.g. <code>qsub experiment1.sub</code><br>\n<code>qstat</code>\
+          \ - check that the job is running. You will receive an email when the job\
+          \ ends.</li>\n</ul>\n<p><a href=\"#glossary\">Glossary of Terms</a> <br>\n\
+          <a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"transfer\"></a></p>\n\
+          <h2>Sharing files with the virtual machine</h2>\n<p>There is a <a href=\"\
+          http://training.nectar.org.au/package07/sections/copyFiles.html\">NeCTAR\
+          \ training module</a> and <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
+          >support guide</a> with comprehensive details on transferring data between\
+          \ a cloud VM and your local computer or remote storage servers. </p>\n<p>Using\
+          \ programs like FileZilla or WinSCP is an easy method of transferring data\
+          \ from your local computer. </p>\n<p>See the <a href=\"#app1\">Appendix</a>\
+          \ for a quick guide to copying data between Emu and your eRSA /data storage.\
+          \ There is an <a href=\"http://support.ersa.edu.au/storage/quick-start.html\"\
+          >eRSA support page</a> with more detail on transferring data from eRSA storage.</p>\n\
+          <p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top\
+          \ of page</a></p>\n<hr>\n<p><a name=\"cloud-allocation\"></a></p>\n<h2>Using\
+          \ your own cloud allocation</h2>\n<p>Emu allows you the option to use your\
+          \ own NeCTAR cloud resource allocation to start-up worker nodes. These worker\
+          \ nodes will be exclusive to your group only and are not shared with other\
+          \ groups. A useful feature is that if all your worker nodes are busy, your\
+          \ job will be able to be scheduled to the shared worker nodes (contributed\
+          \ by eRSA) if any of them is free. If this is still not enough, you can\
+          \ request more cores from NeCTAR and we can bump up your own share in Emu\
+          \ so it can start up more exclusive worker nodes for you.</p>\n<p>To set\
+          \ this up, you need to follow these steps:</p>\n<ul>\n<li>Follow this <a\
+          \ href=\"https://support.nectar.org.au/support/solutions/articles/6000055377-getting-an-account\"\
+          >guide to get a NeCTAR account</a>\n</li>\n<li>Apply for a <a href=\"https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation\"\
+          >NeCTAR cloud resource allocation</a> by logging in to the <a href=\"https://dashboard.rc.nectar.org.au/\"\
+          >NeCTAR web dashboard</a> and going to the New Request page under Allocations\
+          \ in the menu. Contact our <a href=\"mailto:servicedesk@ersa.edu.au\">Service\
+          \ Desk</a> if you need help in filling in the allocation request.</li>\n\
+          <li>If you request persistent cloud storage (<a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
+          >volume storage</a>), this can be set up to be used by your worker nodes.\
+          \ Note that this needs one extra core to run a file server. For example,\
+          \ if you need eight cores for your job, and you also request some volume\
+          \ storage, you will need to request a total of nine cores.</li>\n<li>Send\
+          \ an email to our <a href=\"mailto:servicedesk@ersa.edu.au\">Service Desk</a>\
+          \ with the following information:</li>\n<li>Your NeCTAR project name</li>\n\
+          <li>A short, one-word name to identify your project in your Torque/PBS job\
+          \ submission script</li>\n<li>How many worker nodes you want to be used\
+          \ by Emu and how many cores each one should have (note that the total number\
+          \ of cores must be less than or equal to your NeCTAR project allocation)</li>\n\
+          <li>Do you have volume storage to use? If so, how much do you want to be\
+          \ accessible from Emu?</li>\n<li>A list of users who are allowed to use\
+          \ these worker nodes (please provide their eRSA usernames).</li>\n<li>In\
+          \ order for eRSA to set up Emu in your project allocation, the project manager\
+          \ (the user who requested the allocation) must add the eRSA cloud support\
+          \ staff member as a user. This is done by selecting the \"Users\" option\
+          \ in the project menu on the NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/project/members/\"\
+          >dashboard</a> and entering the email address of the eRSA team member that\
+          \ is assisting you.</li>\n</ul>\n<p>Once we receive your email request,\
+          \ we will set up Emu to use your allocation. On completion of setup, you\
+          \ can add a flag <code>-A</code> when running your job script to specify\
+          \ the project name in order to make use of your dedicated worker nodes.\
+          \ In your Torque/PBS job script, add the following line (using your actual\
+          \ project name rather than <code>myprojectname</code>):</p>\n<pre><code>\
+          \    #PBS -A myprojectname\n</code></pre>\n<p>Alternatively, you can specify\
+          \ the project name as a command line option to the qsub job submission command,\
+          \ as follows:</p>\n<pre><code>    $ qsub -A myprojectname myjobscript.sub\n\
+          </code></pre>\n<p>If you don't know or can't remember the project name,\
+          \ you can just type anything after the <code>-A</code> flag and you will\
+          \ get an error message telling you what project names you are eligible to\
+          \ use.</p>\n<p>If you do not specify a project name, the job will be run\
+          \ on the shared worker nodes of the cluster.</p>\n<p>If you want to run\
+          \ jobs ONLY on your own worker nodes, add <code>myprojectname</code> to\
+          \ the nodes' properties. For example, in the job scripts, it can be</p>\n\
+          <pre><code>    #PBS -l nodes=1:myprojectname\n</code></pre>\n<p><a href=\"\
+          #glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n\
+          <hr>\n<p><a name=\"the-name\"></a></p>\n<h2>The name</h2>\n<ul>\n<li>Clusters\
+          \ managed by eRSA have traditionally been given names of constellations.\
+          \ In this case, we also wanted to somehow incorporate the concept of \"\
+          cloud\". We chose the name based on a constellation from Aboriginal culture,\
+          \ the <a href=\"http://en.wikipedia.org/wiki/Australian_Aboriginal_astronomy#Emu_in_the_sky\"\
+          >Emu in the sky</a>, which is not based on stars, but rather on dust clouds\
+          \ in our galaxy creating dark areas in the Milky Way between the Southern\
+          \ Cross and Scorpius, which resemble the outline of an emu.</li>\n</ul>\n\
+          <p><a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"appendix\"></a></p>\n\
+          <h2>Appendices</h2>\n<p><a name=\"example\"></a></p>\n<h3>An example Torque\
+          \ submission script</h3>\n<p>This is an example of modifying a copy of the\
+          \ 'emu.sub' submission script template to run an executable 'process_radtags'\
+          \ from a package called 'Stacks'. The first step is to check the availability\
+          \ of the package, and what modules need to be loaded first as a prerequisite\
+          \ for loading Stacks. Then the script is modified as highlighted for submission\
+          \ of the job.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/emu_module_availwhatis.png?raw=true\"\
+          ></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/emu_modify_emu_sub.png?raw=true\"\
+          ></p>\n<p><a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"convert\"\
+          ></a></p>\n<h3>Modify a Tizard submision script for Emu</h3>\n<p>If you\
+          \ have an existing submission script based on the 'tizard.sub', you can\
+          \ convert it to an Emu submission script with the simple changes highlighted\
+          \ below.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/emu_tizard_emu_sub.png?raw=true\"\
+          ></p>\n<p><a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"app1\"\
+          ></a></p>\n<h3>A quick guide to copying files from eRSA '/data' storage</h3>\n\
+          <p>The following information outlines commands that can be entered on your\
+          \ VM in order to transfer data to and from remote data storage, such as\
+          \ the eRSA '/data' storage block. There is an <a href=\"http://support.ersa.edu.au/storage/quick-start.html\"\
+          >eRSA support page</a> with more detail on transferring data from eRSA storage.</p>\n\
+          <h4>Secure Copy (SCP) between the VM and a data storage server</h4>\n<p>If\
+          \ you have data stored on a remote server, you can transfer files by using\
+          \ the 'scp' command while logged on to 'emu.ersa.edu.au'.</p>\n<p><code>scp\
+          \ &lt;source&gt; &lt;destination&gt;</code></p>\n<ul>\n<li>To download to\
+          \ the VM : <code>scp &lt;remote computer&gt;:&lt;path to file&gt; &lt;Emu\
+          \ directory&gt;</code>  </li>\n<li>e.g. to get files from '/data' and copy\
+          \ to the working directory:</li>\n<li>\n<p><code>scp username@sftp.ersa.edu.au:/data/&lt;path\
+          \ to file&gt; ./</code> </p>\n</li>\n<li>\n<p>To upload to data storage\
+          \ : <code>scp &lt;Emu file&gt; &lt;remote computer&gt;:&lt;path to directory&gt;</code></p>\n\
+          </li>\n<li>e.g. to save results to '/data'</li>\n<li>\n<p><code>scp results.zip\
+          \ username@sftp.ersa.edu.au:/data/myDirectory/</code></p>\n</li>\n<li>\n\
+          <p>You will be prompted to enter the password for your data storage.</p>\n\
+          </li>\n</ul>\n<h4>SFTP via the Command Line</h4>\n<p>Secure file transfer\
+          \ is also available between the VM and remote data storage. This is useful\
+          \ when you aren't sure of the file structure on the remote server, because\
+          \ it allows you to navigate to a file before you download it.</p>\n<p>Enter\
+          \ the 'sftp' command while logged on to 'emu.ersa.edu.au', and you will\
+          \ have access to the remote storage server.</p>\n<p><code>sftp username@sftp.ersa.edu.au</code>\
+          \   - you will be prompted for a password.</p>\n<p>You are now accessing\
+          \ the remote data storage server, and you can navigate the files on the\
+          \ server as per usual with commands like <code>cd</code> and <code>ls</code>.<br>\n\
+          The commands <code>get</code> and <code>put</code> will transfer data between\
+          \ the machines:</p>\n<ul>\n<li><code>get &lt;remote_server_file.txt&gt;\
+          \ &lt;localEMU_destination/&gt;</code></li>\n<li>\n<code>cd /data/&lt;My\
+          \ directory&gt;</code> , <code>ls</code> - navigate to your files on the\
+          \ remote server</li>\n<li>\n<p><code>get file.data ./</code> - fetch the\
+          \ file from the server to the Emu working directory</p>\n</li>\n<li>\n<p><code>put\
+          \ &lt;localEMU_destination/file.txt&gt; &lt;remote_directory/&gt;</code></p>\n\
+          </li>\n<li><code>put results.zip /data/&lt;My directory&gt;</code></li>\n\
+          </ul>\n<p>to close the sftp connection, type <code>exit</code>.</p>\n<hr>\n\
+          <p><a name=\"glossary\"></a></p>\n<h2>Glossary</h2>\n<p><strong>Dashboard</strong></p>\n\
+          <blockquote>\n<p>The NeCTAR Dashboard is the main web-based interface for\
+          \ managing NeCTAR virtuals.</p>\n</blockquote>\n<p><strong>ERSA</strong></p>\n\
+          <blockquote>\n<p>eResearch SA runs the South Australian node of the NeCTAR\
+          \ research cloud.</p>\n</blockquote>\n<p><strong>HPC</strong></p>\n<blockquote>\n\
+          <p>High Performance Computing systems - typically refers to \"high end\"\
+          \ computing hardware designed for doing \"large\" computational tasks.</p>\n\
+          </blockquote>\n<p><strong>Modules</strong></p>\n<blockquote>\n<p><a href=\"\
+          http://modules.sourceforge.net/\">Environment modules</a> are used to configure\
+          \ a users environment to allow use of the software packages available on\
+          \ the server. The module commands are used to find information on the available\
+          \ packages, and to load the packages for use. </p>\n</blockquote>\n<p><strong>Node</strong>\
+          \ (compute node) </p>\n<blockquote>\n<p>OpenStack terminology for a physical\
+          \ computer used to run virtual machines. It will typically have multiple\
+          \ CPUs and shared memory, and one or more network interfaces. It may also\
+          \ have on-node disk storage.</p>\n</blockquote>\n<p><strong>Project</strong></p>\n\
+          <blockquote>\n<p>The NeCTAR term for a \"resource container\"; i.e. what\
+          \ you get when you are granted a NeCTAR allocation. A project \"owns\" virtual\
+          \ machine instances, snapshots and various kinds of storage, and may be\
+          \ shared by multiple users.</p>\n</blockquote>\n<p><strong>SSH</strong></p>\n\
+          <blockquote>\n<p>A protocol and tools for establishing secure \"shell\"\
+          \ sessions over the network. SSH encrypts the data transferred, and supports\
+          \ user authentication using public/private keys.</p>\n</blockquote>\n<p><strong>Submission\
+          \ script</strong></p>\n<blockquote>\n<p>A text file that is submitted to\
+          \ the <a href=\"http://support.ersa.edu.au/hpc/user-guide.html#running-jobs\"\
+          >Torque queueing system</a> to run a job. It consists of lines that are\
+          \ not read by torque (beginning with ###), lines with Torque commands (beginning\
+          \ with #), and lines with shell script commands.</p>\n</blockquote>\n<p><strong>Tizard</strong></p>\n\
+          <blockquote>\n<p><a href=\"http://www.ersa.edu.au/service/hpc/tizard/\"\
+          >Tizard</a> is eRSA's high performance computing server that can be used\
+          \ for complex data processing and analysis jobs that standard desktop computers\
+          \ would find it difficult or impossible to perform. It enables users to\
+          \ run many processing jobs with different parameters or input files more\
+          \ quickly.</p>\n</blockquote>\n<p><strong>Volume Storage</strong></p>\n\
+          <blockquote>\n<p>Data Storage in your Virtual Machine that works like a\
+          \ hard-drive on your PC or laptop does. Volume storage is automatically\
+          \ available in your VM as the storage space for you system drive. Some flavors\
+          \ of VMs include an amount of ephemeral volume storage. Depending on your\
+          \ allocation you can have persistent volume storage attached to your VM.</p>\n\
+          </blockquote>\n<p><a href=\"https://support.nectar.org.au/support/solutions/articles/6000055445-glossary\"\
+          >Full NeCTAR Glossary Page</a><br>\n<a href=\"http://cloud.nectar.org.au/faq/\"\
+          >NeCTAR FAQ - general inormation</a><br>\nFor more help, contact the <a\
+          \ href=\"mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a></p>\n<p><a href=\"\
+          #top\">Top of page</a></p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000092805
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-11-30T19:44:05-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000092805
+        position: 9
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: eRSA Emu Cluster in the Cloud - user guide
+        updated_at: '2015-11-30T19:44:05-05:00'
+        user_id: 6002464727
+  html: "<h1>Emu Cluster in the Cloud - User Guide</h1>\n<h2>SA node service for users\
+    \ in South Australia</h2>\n<ul>\n<li><a href=\"#about\">About</a></li>\n<li><a\
+    \ href=\"#differences-in-the-cloud\">Differences in the cloud</a></li>\n<li><a\
+    \ href=\"#cloud-vs-hpc---which-is-better-for-my-job\">Cloud vs HPC - which is\
+    \ better for my job?</a></li>\n<li><a href=\"#register\">Register for an eRSA\
+    \ account</a></li>\n<li><a href=\"#emu-head-node\">Emu submit node</a></li>\n\
+    <li><a href=\"#connecting-to-emu\">Connecting to Emu</a></li>\n<li><a href=\"\
+    #windows-users\">Windows Users</a></li>\n<li><a href=\"#mac-users\">Mac and Linux\
+    \ Users</a></li>\n<li><a href=\"#storage\">Storage</a></li>\n<li><a href=\"#general-information-on-using-ersa-supercomputers\"\
+    >General information on using eRSA Supercomputers</a></li>\n<li><a href=\"#modules\"\
+    >Exploring the available software</a></li>\n<li><a href=\"#torquepbs\">Submitting\
+    \ your job</a></li>\n<li><a href=\"#transfer\">Transfer files with SCP and SFTP</a></li>\n\
+    <li><a href=\"#cloud-allocation\">Using your own cloud allocation</a></li>\n<li><a\
+    \ href=\"#the-name\">The Name</a></li>\n<li><a href=\"#appendix\">Appendices</a></li>\n\
+    <li><a href=\"#example\">An example Torque submission script</a></li>\n<li><a\
+    \ href=\"#convert\">Converting a tizard submission script for Emu</a></li>\n<li><a\
+    \ href=\"#app1\">A quick guide to copying files from eRSA '/data' storage</a></li>\n\
+    <li><a href=\"#glossary\">Glossary</a></li>\n</ul>\n<p><a name=\"about\"></a></p>\n\
+    <h2>About</h2>\n<p>Emu is a cluster that is designed to be similar to eRSA's Tizard\
+    \ supercomputer, but makes use of the <a href=\"http://www.nectar.org.au/research-cloud/\"\
+    >Australian Research Cloud</a>. \nThe Emu cluster-in-the-cloud is managed by eRSA\
+    \ and provides a shared service for eRSA users who don't have a resource allocation\
+    \ on the national cloud or don't have the expertise to set up and manage a private\
+    \ cluster-in-the-cloud using <a href=\"star-cluster.html\">StarCluster</a>.</p>\n\
+    <p>Emu currently consists of 136 processing cores, with an eight-core machine\
+    \ for the head node and 16 worker nodes to run jobs. Each node has eight cores,\
+    \ 32GB RAM and 240GB of local disk. The cluster uses the same job management system\
+    \ (Torque) and eRSA user accounts that are used on Tizard (and previously on Corvus).\
+    \ The cluster has access to the same repository of software packages as</p>\n\
+    <p>This service is designed for:</p>\n<ul>\n<li>South Australian researchers who\
+    \ want to run compute-intensive software applications in the cloud without the\
+    \ set-up involved in managing a virtual machine.</li>\n<li>Registered eRSA users\
+    \ familiar with Tizard HPC services, who would like to use their NeCTAR allocation\
+    \ to have their own node rather than share nodes with other users.</li>\n</ul>\n\
+    <p><a name=\"differences-in-the-cloud\"></a></p>\n<h2>Differences in the cloud</h2>\n\
+    <p>Due to technical constraints and security policies, we are unable to replicate\
+    \ everything in a traditional HPC cluster (such as Tizard) on the cloud. However,\
+    \ we aim to provide, as much as possible, a seamless experience for users in switching\
+    \ from a traditional HPC cluster to the cluster-in-the-cloud approach.</p>\n<ul>\n\
+    <li>Users employ the same eRSA account to log into Emu and the home directory\
+    \ on Emu will be the same as on Tizard. However, the '/data' storage is not automatically\
+    \ available. Email the <a href=\"mailto:servicedesk@ersa.edu.au\">eRSA service\
+    \ desk</a> and it may be arranged for the '/data' disk to be made available through\
+    \ Emu. Otherwise, data can be <a href=\"#app1\">transferred using <strong>scp</strong>\
+    \ or <strong>sftp</strong></a> between '/data' and the cloud.</li>\n<li>The worker\
+    \ nodes in Emu are dynamic, which means they will be launched when there are pending\
+    \ jobs, and shut down when nodes are idle. Users may see a different number of\
+    \ worker nodes at different times when they check the status of the cluster.</li>\n\
+    <li>Currently there is no wall-time restriction in Emu.</li>\n<li>In the cloud,\
+    \ there is 4G memory allocated per core. So, if someone requests one core and\
+    \ 8GB memory for a job, it will be a waste. For such jobs it is recommended to\
+    \ run on the Tizard CPU cluster or big memory nodes. On Emu, users don't need\
+    \ to put the memory requirement in the job description file as the core/memory\
+    \ ratio is set by default.</li>\n<li>The same set of applications are available\
+    \ as for Tizard, however licensed software may not be functional in the cloud.\
+    \ Please contact our <a href=\"mailto:servicedesk@ersa.edu.au\">Service Desk</a>\
+    \ if you need to run licensed software.</li>\n</ul>\n<p><a href=\"#glossary\"\
+    >Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a\
+    \ name=\"cloud-vs-hpc---which-is-better-for-my-job\"></a></p>\n<h2>Cloud vs HPC</h2>\n\
+    <p>There are some differences between a cluster in the cloud and an HPC cluster,\
+    \ such as Tizard, which has more processors and memory on each node, and a faster\
+    \ communication network between the nodes. Some types of computation that run\
+    \ on HPC clusters are suitable for running in the cloud, and the cluster-in-the-cloud\
+    \ approach should work well for those.</p>\n<ul>\n<li>Any eRSA user can use Emu,\
+    \ you don't need to have a cloud resource allocation </li>\n<li>If your research\
+    \ group has a cloud allocation, you can use it on Emu, so it's like having a private\
+    \ sub-cluster</li>\n<li>Run compute jobs in the same way as for eRSA HPC clusters\
+    \ (e.g Tizard)</li>\n<li>There is no wall-time restriction on Emu (usually limited\
+    \ to 100 hours with Tizard)</li>\n</ul>\n<p>However, some types of applications\
+    \ are not well-suited to the cloud and would run better on HPC cluster. Examples\
+    \ of such applications include:</p>\n<ul>\n<li>Parallel programs that can run\
+    \ only on a single compute node and need more than eight processing cores or 32GB\
+    \ memory</li>\n<li>Parallel (multi-processor) programs that need to run on more\
+    \ than eight cores and can use multiple compute nodes (e.g. MPI programs) but\
+    \ require a lot of interprocessor communication, particularly low-latency communication</li>\n\
+    <li>Programs that need more than 4GB of memory per processing core</li>\n<li>Programs\
+    \ that have more than about 500GB total of input and output files</li>\n<li>Applications\
+    \ that run on GPUs</li>\n</ul>\n<p>If you are unsure of whether or not your application\
+    \ is suitable for the cloud, contact our <a href=\"mailto:servicedesk@ersa.edu.au\"\
+    >Service Desk</a>.</p>\n<hr>\n<p><a name=\"register\"></a></p>\n<h2>Register for\
+    \ an eRSA account</h2>\n<p>To access the Emu cluster in the cloud, you will need\
+    \ to be [registered with eResearchSA]. You will be provided with an eRSA username\
+    \ and password which you will use to access the Emu cluster. Email the <a href=\"\
+    mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a> with any queries.</p>\n<p><a\
+    \ name=\"emu-head-node\"></a></p>\n<h2>Emu submit node</h2>\n<ul>\n<li>Emu's submit\
+    \ node is '<strong>emu.ersa.edu.au</strong>'</li>\n<li>To run jobs in the Emu\
+    \ cluster, you must login to the Emu submit node via SSH with your eRSA username\
+    \ and password.</li>\n<li>You can run short (a few minutes) test jobs on the commandline\
+    \ of the submit node without using the queueing system.</li>\n<li>Longer jobs\
+    \ are submitted to the Torque queueing system with a submission script.</li>\n\
+    </ul>\n<p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top\
+    \ of page</a></p>\n<hr>\n<p><a name=\"connecting-to-emu\"></a></p>\n<h2>Connecting\
+    \ to Emu</h2>\n<ul>\n<li>Emu is accessible via SSH.</li>\n</ul>\n<p><a name=\"\
+    windows-users\"></a></p>\n<h3>Windows users</h3>\n<ul>\n<li>Windows users can\
+    \ make use of free ssh clients such as putty. </li>\n<li><a href=\"http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html\"\
+    >Putty Download</a>  </li>\n<li>\n<p><a href=\"http://support.ersa.edu.au/hpc/putty-download.html\"\
+    >Instructions for downloading Putty</a></p>\n</li>\n<li>\n<p>In the Putty configuration\
+    \ window, enter <strong>emu.ersa.edu.au</strong> as the \"Host Name (or IP Address)\"\
+    , then click 'Open'.</p>\n</li>\n<li>You will be prompted for your username and\
+    \ password.</li>\n</ul>\n<p><a name=\"mac-users\"></a></p>\n<h3>Mac and Linux\
+    \ users</h3>\n<ul>\n<li>Open the Terminal application (for Mac, look under Applications\
+    \ -&gt; Utilities.</li>\n<li>Then run:<br>\n<code>ssh username@emu.ersa.edu.au</code></li>\n\
+    <li>You will be prompted for your password.</li>\n</ul>\n<p><a href=\"#glossary\"\
+    >Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a\
+    \ name=\"storage\"></a></p>\n<h2>Storage</h2>\n<ul>\n<li>As with other clusters\
+    \ managed by eRSA, there are three storage areas that jobs have access to:</li>\n\
+    <li><strong>/home/users</strong>, which contains user home directories, and is\
+    \ accessible on all worker nodes via NFS but has limited space (50GB). </li>\n\
+    <li><strong>/scratch</strong>, which provides a larger temporary storage area,\
+    \ and is accessible from all nodes of the cluster, but uses NFS and will therefore\
+    \ be slower than /tmp. This is the disk location from which the user must run\
+    \ jobs.</li>\n<li><strong>/tmp</strong>, which is fast, temporary storage that\
+    \ is local to a particular worker node in the cluster. It should be used only\
+    \ for the duration of a single job and cleaned up after the job has finished.\
+    \ On Emu it is 240GB per worker node, which is smaller than the local /tmp storageTizard\
+    \ nodes.</li>\n</ul>\n<p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a\
+    \ href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"general-information-on-using-ersa-supercomputers\"\
+    ></a></p>\n<h2>General information on using eRSA supercomputers</h2>\n<ul>\n<li>Please\
+    \ read the general information about <a href=\"http://support.ersa.edu.au/hpc/using-supercomputers.html\"\
+    >Using Supercomputers</a>, which is relevant to all eRSA supercomputers.</li>\n\
+    </ul>\n<p>An overview of the steps for running a job on Emu (details in the following\
+    \ sections):</p>\n<ol>\n<li>Create a folder in the '<strong>/scratch</strong>'\
+    \ directory to use as a working directory for running jobs</li>\n<li>Copy the\
+    \ Emu submission script and your input files to this directory</li>\n<li>Check\
+    \ which modules you need to load to run the job</li>\n<li>Edit the emu submission\
+    \ script - with a comand-line editor or with <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm#edit\"\
+    >FileZilla</a></li>\n<li>Submit the script, and await an email informing you the\
+    \ job is complete</li>\n</ol>\n<p><a name=\"modules\"></a></p>\n<h2>Exploring\
+    \ the available software packages</h2>\n<p>The <a href=\"http://support.ersa.edu.au/hpc/module-commands.html\"\
+    >'module' commands</a> allow users to:</p>\n<ul>\n<li>List the available packages\
+    \ (modules) on Emu<br>\n<code>module avail</code><br>\n<code>module avail &lt;search\
+    \ term&gt;</code>  - search for a particular package  </li>\n<li>Find out what\
+    \ dependencies are required to be loaded before the package of interest can be\
+    \ loaded<br>\n<code>module whatis &lt;package name&gt;</code>  -  <em>make note\
+    \ of any required modules</em></li>\n<li>Load the packages, by entering the <code>module\
+    \ load ...</code> command in the PBS submission script.</li>\n</ul>\n<p>NOTE:\
+    \ If there is software that you would like to access that is not already in the\
+    \ software repository, email the <a href=\"mailto:servicedesk@ersa.edu.au\">eRSA\
+    \ Helpdesk</a> and request that it be added. Ensure you mention that you would\
+    \ like to access it through Emu cluster in the cloud.</p>\n<p><a name=\"torquepbs\"\
+    ></a></p>\n<h2>Submit your job using Torque/PBS queuing system</h2>\n<ul>\n<li>As\
+    \ with all eRSA supercomputers, you submit jobs to Emu using the Torque job management\
+    \ (or queueing) system.</li>\n<li><a href=\"http://support.ersa.edu.au/hpc/torque-pbs-queuing-system-commands.html\"\
+    >Introduction and Tutorial on using the Torque/PBS Queuing System</a></li>\n<li><a\
+    \ href=\"http://support.ersa.edu.au/hpc/user-guide.html#running-jobs\">Running\
+    \ jobs with a Torque submission script</a></li>\n</ul>\n<p>There is a template\
+    \ of the Emu submission script in the home folder. After you have logged on to\
+    \ emu.ersa.edu.au, the script is in the '~/.templates' directory.</p>\n<ul>\n\
+    <li>look at the file:<br>\n<code>less ~/.templates/emu.sub</code></li>\n<li>create\
+    \ a directory to work from in '/scratch', <br>\n  e.g. <code>mkdir -p /scratch/MyDirectory/MyExperiment1</code></li>\n\
+    <li>copy the emu submission script to your directory<br>\n  e.g. <code>cp ~/.templates/emu.sub\
+    \ /scratch/MyDirectory/MyExperiment1/experiment1.sub</code></li>\n<li>Navigate\
+    \ to the directory <br>\n  e.g. <code>cd /scratch/MyDirectory/MyExperiment1</code></li>\n\
+    <li>Edit the submission script with <code>nano experiment1.sub</code> (or use\
+    \ the file edit option in <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm#edit\"\
+    >FileZilla</a>)  </li>\n<li><em>Replace the following terms in</em> <strong>bold</strong>\
+    \ <em>in the submission script</em></li>\n<li><tt><strong>MyJobName</strong> </tt></li>\n\
+    <li><tt><strong>Your-email-Address</strong> </tt></li>\n<li><tt>&#35;PBS -l ncpus=<strong>X</strong></tt>\
+    \ - enter the number of processors required (up to 8, unless you have a private\
+    \ allocation with 16 CPUs)</li>\n<li><tt>&#35;PBS -l walltime=<strong>HH:MM:SS</strong></tt>\
+    \ - Enter the maximum time the process will take, or put \"<tt><strong>###</strong></tt>\"\
+    \ at the start of this line so it is ignored.</li>\n<li><tt>module load <strong>application_module</strong></tt>\
+    \ - load any required modules first (see the output from the  <code>module whatis</code>\
+    \ command above). Then on a new line, load the program you will use.</li>\n<li>\n\
+    <p><tt><strong>MyProgram+Arguments</strong></tt> - Enter the command to start\
+    \ the program, as you would enter it on the command line on your own computer.</p>\n\
+    </li>\n<li>\n<p><a href=\"#transfer\">Copy your input files</a> to the directory.</p>\n\
+    </li>\n<li>To submit the job, enter:<br>\n  e.g. <code>qsub experiment1.sub</code><br>\n\
+    <code>qstat</code> - check that the job is running. You will receive an email\
+    \ when the job ends.</li>\n</ul>\n<p><a href=\"#glossary\">Glossary of Terms</a>\
+    \ <br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"transfer\"></a></p>\n\
+    <h2>Sharing files with the virtual machine</h2>\n<p>There is a <a href=\"http://training.nectar.org.au/package07/sections/copyFiles.html\"\
+    >NeCTAR training module</a> and <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
+    >support guide</a> with comprehensive details on transferring data between a cloud\
+    \ VM and your local computer or remote storage servers. </p>\n<p>Using programs\
+    \ like FileZilla or WinSCP is an easy method of transferring data from your local\
+    \ computer. </p>\n<p>See the <a href=\"#app1\">Appendix</a> for a quick guide\
+    \ to copying data between Emu and your eRSA /data storage. There is an <a href=\"\
+    http://support.ersa.edu.au/storage/quick-start.html\">eRSA support page</a> with\
+    \ more detail on transferring data from eRSA storage.</p>\n<p><a href=\"#glossary\"\
+    >Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a\
+    \ name=\"cloud-allocation\"></a></p>\n<h2>Using your own cloud allocation</h2>\n\
+    <p>Emu allows you the option to use your own NeCTAR cloud resource allocation\
+    \ to start-up worker nodes. These worker nodes will be exclusive to your group\
+    \ only and are not shared with other groups. A useful feature is that if all your\
+    \ worker nodes are busy, your job will be able to be scheduled to the shared worker\
+    \ nodes (contributed by eRSA) if any of them is free. If this is still not enough,\
+    \ you can request more cores from NeCTAR and we can bump up your own share in\
+    \ Emu so it can start up more exclusive worker nodes for you.</p>\n<p>To set this\
+    \ up, you need to follow these steps:</p>\n<ul>\n<li>Follow this <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055377-getting-an-account\"\
+    >guide to get a NeCTAR account</a></li>\n<li>Apply for a <a href=\"https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation\"\
+    >NeCTAR cloud resource allocation</a> by logging in to the <a href=\"https://dashboard.rc.nectar.org.au/\"\
+    >NeCTAR web dashboard</a> and going to the New Request page under Allocations\
+    \ in the menu. Contact our <a href=\"mailto:servicedesk@ersa.edu.au\">Service\
+    \ Desk</a> if you need help in filling in the allocation request.</li>\n<li>If\
+    \ you request persistent cloud storage (<a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
+    >volume storage</a>), this can be set up to be used by your worker nodes. Note\
+    \ that this needs one extra core to run a file server. For example, if you need\
+    \ eight cores for your job, and you also request some volume storage, you will\
+    \ need to request a total of nine cores.</li>\n<li>Send an email to our <a href=\"\
+    mailto:servicedesk@ersa.edu.au\">Service Desk</a> with the following information:</li>\n\
+    <li>Your NeCTAR project name</li>\n<li>A short, one-word name to identify your\
+    \ project in your Torque/PBS job submission script</li>\n<li>How many worker nodes\
+    \ you want to be used by Emu and how many cores each one should have (note that\
+    \ the total number of cores must be less than or equal to your NeCTAR project\
+    \ allocation)</li>\n<li>Do you have volume storage to use? If so, how much do\
+    \ you want to be accessible from Emu?</li>\n<li>A list of users who are allowed\
+    \ to use these worker nodes (please provide their eRSA usernames).</li>\n<li>In\
+    \ order for eRSA to set up Emu in your project allocation, the project manager\
+    \ (the user who requested the allocation) must add the eRSA cloud support staff\
+    \ member as a user. This is done by selecting the \"Users\" option in the project\
+    \ menu on the NeCTAR <a href=\"https://dashboard.rc.nectar.org.au/project/members/\"\
+    >dashboard</a> and entering the email address of the eRSA team member that is\
+    \ assisting you.</li>\n</ul>\n<p>Once we receive your email request, we will set\
+    \ up Emu to use your allocation. On completion of setup, you can add a flag <code>-A</code>\
+    \ when running your job script to specify the project name in order to make use\
+    \ of your dedicated worker nodes. In your Torque/PBS job script, add the following\
+    \ line (using your actual project name rather than <code>myprojectname</code>):</p>\n\
+    <pre><code>    #PBS -A myprojectname\n</code></pre>\n<p>Alternatively, you can\
+    \ specify the project name as a command line option to the qsub job submission\
+    \ command, as follows:</p>\n<pre><code>    $ qsub -A myprojectname myjobscript.sub\n\
+    </code></pre>\n<p>If you don't know or can't remember the project name, you can\
+    \ just type anything after the <code>-A</code> flag and you will get an error\
+    \ message telling you what project names you are eligible to use.</p>\n<p>If you\
+    \ do not specify a project name, the job will be run on the shared worker nodes\
+    \ of the cluster.</p>\n<p>If you want to run jobs ONLY on your own worker nodes,\
+    \ add <code>myprojectname</code> to the nodes' properties. For example, in the\
+    \ job scripts, it can be</p>\n<pre><code>    #PBS -l nodes=1:myprojectname\n</code></pre>\n\
+    <p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n\
+    <hr>\n<p><a name=\"the-name\"></a></p>\n<h2>The name</h2>\n<ul>\n<li>Clusters\
+    \ managed by eRSA have traditionally been given names of constellations. In this\
+    \ case, we also wanted to somehow incorporate the concept of \"cloud\". We chose\
+    \ the name based on a constellation from Aboriginal culture, the <a href=\"http://en.wikipedia.org/wiki/Australian_Aboriginal_astronomy#Emu_in_the_sky\"\
+    >Emu in the sky</a>, which is not based on stars, but rather on dust clouds in\
+    \ our galaxy creating dark areas in the Milky Way between the Southern Cross and\
+    \ Scorpius, which resemble the outline of an emu.</li>\n</ul>\n<p><a href=\"#top\"\
+    >Top of page</a></p>\n<hr>\n<p><a name=\"appendix\"></a></p>\n<h2>Appendices</h2>\n\
+    <p><a name=\"example\"></a></p>\n<h3>An example Torque submission script</h3>\n\
+    <p>This is an example of modifying a copy of the 'emu.sub' submission script template\
+    \ to run an executable 'process_radtags' from a package called 'Stacks'. The first\
+    \ step is to check the availability of the package, and what modules need to be\
+    \ loaded first as a prerequisite for loading Stacks. Then the script is modified\
+    \ as highlighted for submission of the job.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/emu_module_availwhatis.png?raw=true\"\
+    ></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/emu_modify_emu_sub.png?raw=true\"\
+    ></p>\n<p><a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"convert\"></a></p>\n\
+    <h3>Modify a Tizard submision script for Emu</h3>\n<p>If you have an existing\
+    \ submission script based on the 'tizard.sub', you can convert it to an Emu submission\
+    \ script with the simple changes highlighted below.</p>\n<p><img alt=\"\" src=\"\
+    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/emu_tizard_emu_sub.png?raw=true\"\
+    ></p>\n<p><a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"app1\"></a></p>\n\
+    <h3>A quick guide to copying files from eRSA '/data' storage</h3>\n<p>The following\
+    \ information outlines commands that can be entered on your VM in order to transfer\
+    \ data to and from remote data storage, such as the eRSA '/data' storage block.\
+    \ There is an <a href=\"http://support.ersa.edu.au/storage/quick-start.html\"\
+    >eRSA support page</a> with more detail on transferring data from eRSA storage.</p>\n\
+    <h4>Secure Copy (SCP) between the VM and a data storage server</h4>\n<p>If you\
+    \ have data stored on a remote server, you can transfer files by using the 'scp'\
+    \ command while logged on to 'emu.ersa.edu.au'.</p>\n<p><code>scp &lt;source&gt;\
+    \ &lt;destination&gt;</code></p>\n<ul>\n<li>To download to the VM : <code>scp\
+    \ &lt;remote computer&gt;:&lt;path to file&gt; &lt;Emu directory&gt;</code>  </li>\n\
+    <li>e.g. to get files from '/data' and copy to the working directory:</li>\n<li>\n\
+    <p><code>scp username@sftp.ersa.edu.au:/data/&lt;path to file&gt; ./</code> </p>\n\
+    </li>\n<li>\n<p>To upload to data storage : <code>scp &lt;Emu file&gt; &lt;remote\
+    \ computer&gt;:&lt;path to directory&gt;</code></p>\n</li>\n<li>e.g. to save results\
+    \ to '/data'</li>\n<li>\n<p><code>scp results.zip username@sftp.ersa.edu.au:/data/myDirectory/</code></p>\n\
+    </li>\n<li>\n<p>You will be prompted to enter the password for your data storage.</p>\n\
+    </li>\n</ul>\n<h4>SFTP via the Command Line</h4>\n<p>Secure file transfer is also\
+    \ available between the VM and remote data storage. This is useful when you aren't\
+    \ sure of the file structure on the remote server, because it allows you to navigate\
+    \ to a file before you download it.</p>\n<p>Enter the 'sftp' command while logged\
+    \ on to 'emu.ersa.edu.au', and you will have access to the remote storage server.</p>\n\
+    <p><code>sftp username@sftp.ersa.edu.au</code>   - you will be prompted for a\
+    \ password.</p>\n<p>You are now accessing the remote data storage server, and\
+    \ you can navigate the files on the server as per usual with commands like <code>cd</code>\
+    \ and <code>ls</code>.<br>\nThe commands <code>get</code> and <code>put</code>\
+    \ will transfer data between the machines:</p>\n<ul>\n<li><code>get &lt;remote_server_file.txt&gt;\
+    \ &lt;localEMU_destination/&gt;</code></li>\n<li><code>cd /data/&lt;My directory&gt;</code>\
+    \ , <code>ls</code> - navigate to your files on the remote server</li>\n<li>\n\
+    <p><code>get file.data ./</code> - fetch the file from the server to the Emu working\
+    \ directory</p>\n</li>\n<li>\n<p><code>put &lt;localEMU_destination/file.txt&gt;\
+    \ &lt;remote_directory/&gt;</code></p>\n</li>\n<li><code>put results.zip /data/&lt;My\
+    \ directory&gt;</code></li>\n</ul>\n<p>to close the sftp connection, type <code>exit</code>.</p>\n\
+    <hr>\n<p><a name=\"glossary\"></a></p>\n<h2>Glossary</h2>\n<p><strong>Dashboard</strong></p>\n\
+    <blockquote>\n<p>The NeCTAR Dashboard is the main web-based interface for managing\
+    \ NeCTAR virtuals.</p>\n</blockquote>\n<p><strong>ERSA</strong></p>\n<blockquote>\n\
+    <p>eResearch SA runs the South Australian node of the NeCTAR research cloud.</p>\n\
+    </blockquote>\n<p><strong>HPC</strong></p>\n<blockquote>\n<p>High Performance\
+    \ Computing systems - typically refers to \"high end\" computing hardware designed\
+    \ for doing \"large\" computational tasks.</p>\n</blockquote>\n<p><strong>Modules</strong></p>\n\
+    <blockquote>\n<p><a href=\"http://modules.sourceforge.net/\">Environment modules</a>\
+    \ are used to configure a users environment to allow use of the software packages\
+    \ available on the server. The module commands are used to find information on\
+    \ the available packages, and to load the packages for use. </p>\n</blockquote>\n\
+    <p><strong>Node</strong> (compute node) </p>\n<blockquote>\n<p>OpenStack terminology\
+    \ for a physical computer used to run virtual machines. It will typically have\
+    \ multiple CPUs and shared memory, and one or more network interfaces. It may\
+    \ also have on-node disk storage.</p>\n</blockquote>\n<p><strong>Project</strong></p>\n\
+    <blockquote>\n<p>The NeCTAR term for a \"resource container\"; i.e. what you get\
+    \ when you are granted a NeCTAR allocation. A project \"owns\" virtual machine\
+    \ instances, snapshots and various kinds of storage, and may be shared by multiple\
+    \ users.</p>\n</blockquote>\n<p><strong>SSH</strong></p>\n<blockquote>\n<p>A protocol\
+    \ and tools for establishing secure \"shell\" sessions over the network. SSH encrypts\
+    \ the data transferred, and supports user authentication using public/private\
+    \ keys.</p>\n</blockquote>\n<p><strong>Submission script</strong></p>\n<blockquote>\n\
+    <p>A text file that is submitted to the <a href=\"http://support.ersa.edu.au/hpc/user-guide.html#running-jobs\"\
+    >Torque queueing system</a> to run a job. It consists of lines that are not read\
+    \ by torque (beginning with ###), lines with Torque commands (beginning with #),\
+    \ and lines with shell script commands.</p>\n</blockquote>\n<p><strong>Tizard</strong></p>\n\
+    <blockquote>\n<p><a href=\"http://www.ersa.edu.au/service/hpc/tizard/\">Tizard</a>\
+    \ is eRSA's high performance computing server that can be used for complex data\
+    \ processing and analysis jobs that standard desktop computers would find it difficult\
+    \ or impossible to perform. It enables users to run many processing jobs with\
+    \ different parameters or input files more quickly.</p>\n</blockquote>\n<p><strong>Volume\
+    \ Storage</strong></p>\n<blockquote>\n<p>Data Storage in your Virtual Machine\
+    \ that works like a hard-drive on your PC or laptop does. Volume storage is automatically\
+    \ available in your VM as the storage space for you system drive. Some flavors\
+    \ of VMs include an amount of ephemeral volume storage. Depending on your allocation\
+    \ you can have persistent volume storage attached to your VM.</p>\n</blockquote>\n\
+    <p><a href=\"https://support.nectar.org.au/support/solutions/articles/6000055445-glossary\"\
+    >Full NeCTAR Glossary Page</a><br>\n<a href=\"http://cloud.nectar.org.au/faq/\"\
+    >NeCTAR FAQ - general inormation</a><br>\nFor more help, contact the <a href=\"\
+    mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a></p>\n<p><a href=\"#top\">Top\
+    \ of page</a></p>"
+  parent: 24
+  sha1: 4ccc83bd380659c631163cdc6dd58ce12c53cbcc
+  title: eRSA Emu Cluster in the Cloud - user guide
