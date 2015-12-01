@@ -8,6 +8,7 @@
   parent: 16
   title: Cloud Basics
 24:
+  found: true
   freshdesk:
     fd_attributes:
       folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:07-04:00', description: Tools
@@ -17,6 +18,7 @@
   parent: 16
   title: Tools and Apps
 26:
+  found: true
   freshdesk:
     fd_attributes:
       folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:09-04:00', description: NeCTAR

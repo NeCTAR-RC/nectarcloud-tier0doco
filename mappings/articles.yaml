@@ -1,3 +1,4 @@
+24: {title: TPAC Aurora User Guide}
 33:
   freshdesk:
     fd_attributes:
@@ -1391,6 +1392,7 @@
   sha1: 61c1492a41b681772259eb522df85061c526b6d9
   title: Resources available to you
 38:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -2636,6 +2638,7 @@
   sha1: ecd3e2fb4506878099b3828936b5fd6455e1cdd9
   title: Introduction to YAML
 50:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -5977,6 +5980,7 @@
   sha1: 49018f63c2365519bbb102f7706503b28c97870e
   title: Trouble Shooting
 58:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -18880,6 +18884,7 @@
   sha1: 1f41c7ec9ff193240456cfe0886ee4667d8b2667
   title: Security Compromise Checklist
 96:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -19872,6 +19877,7 @@
   sha1: 2517bac240c7b107be86f42b63dab67526177c4c
   title: eRSA Emu Cluster in the Cloud - user guide
 97:
+  found: true
   freshdesk:
     fd_attributes:
       article:
