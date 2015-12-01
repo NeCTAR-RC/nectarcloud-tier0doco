@@ -20949,3 +20949,842 @@
   parent: 24
   sha1: 96d9097503dfc18445585dd2f725b7bb0dc2ec34
   title: TPAC Aurora User Guide
+99:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-12-01T18:22:35-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Introduction to Networking \n Ethernet \n Ethernet is the\
+          \ most common network protocol used in the local area network (LAN) and\n\
+          it is specified by the IEEE 802.3 standard. Ethernet operates in the second\
+          \ layer\nin the OSI model of networking protocols. \n Hosts communicate\
+          \ by exchanging frames in a Ethernet network and each host is uniquely\n\
+          identified by an media access control(MAC) address. In NecTAR Cloud, every\
+          \ virtual\nmachine has a unique MAC address and it is different from the\
+          \ MAC address of the\nhost machine. The MAC address contains 48 bits and\
+          \ looks like 02:03:22:a2:c2:33.\nA host in a Ethernet network can communicate\
+          \ with each other by using the MAC address.\nA host can also sent a frame\
+          \ to all hosts (broadcast) in the same Ethernet network\nby using MAC address\
+          \ ff:ff:ff:ff:ff:ff.  \n When a host receives a Ethernet frame, it checks\
+          \ its destination MAC address and\nsee whether it matches its own MAC address.\
+          \ If it matches, the host receives the\nframe and if it doesn't, the host\
+          \ just simply drop the frame. \n VLAN \n In Ethernet network, every hosts\
+          \ share the same network segment and therefore share\nthe same network traffic.\
+          \ However, it is useful to divide hosts into different groups\nin order\
+          \ to isolate the network traffic and also for better management. \n VLAN\
+          \ is the technology to enable grouping of hosts in a Ethernet network and\
+          \ each\nhost can only see traffic within the group. Specifically, hosts\
+          \ can be grouped by\nVLANs and they cannot see traffic on different VLANs.In\
+          \ NecTAR Cloud, virtual\nmachines can also take advantages to isolate the\
+          \ traffic among them. Even the virtual\nmachines are on the same hosts.\
+          \ By creating a VLAN, each VLAN is identified by an\nunique ID, between\
+          \ 1 and 4095. \n VLAN can be implemented by assign a switch port to a VLAN\
+          \ Id to only allow traffic\nfrom that VLAN to pass through that port or\
+          \ by assigning a tag to Ethernet Frame\nto allow frames are only pass through\
+          \ based on the same tag. \n IP \n Ethernet specifies how hosts can communicate\
+          \ in local area networks and there are\nneeds to interconnect multiple Ethernet\
+          \ networks. The Internet Protocol (IP)\ndefines how packets (encapsulated\
+          \ frames) can travel between hosts that are connected\nto different local\
+          \ networks. The IP protocol defines IP addresses to uniquely identify\n\
+          a host and IP address is 32 bits (IP version 4) and looks like 10.10.12.123.\
+          \ To\nmake this work, IP replies on routers or gateways. A router is a device\
+          \ that connects\ntwo or more local networks and can forward packets from\
+          \ one network to another.\nRouter operates in layer 3 in the OSI model of\
+          \ networking protocols. \n Before sending a packet, a host checks its routing\
+          \ table to find out any hosts\nin the local network matches the IP address.\
+          \ The routing table maintains a list of\nsubnets as well as a list of routers\
+          \ in the local network. \n If no IP matches in the local network, packets\
+          \ are forwarded to the default router\n(default gateway). \n Subnets \n\
+          \ IP addresses (IP version 4) are 32 bits and contains 2 parts: a network\
+          \ number\nand a host identifier. If two hosts have the same network number,\
+          \ then they are\non the same network and can communicate with each other\
+          \ directly without routers\n(same as they are on the Ethernet network).\
+          \ \n To get the network part of a IP address, netmask is used. A netmask\
+          \ indicates\nhow many bits in the IP address make up the network part. The\
+          \ network part of\na IP address can be 8, 16, 24 bits. For example, consider\
+          \ an IP address of\n192.168.1.1, where the first 24 bits of the address\
+          \ are the network number. In\ndotted quad notation, the netmask would be\
+          \ written as 255.255.255.0 and the network\nnumber is 192.168.1.0. \n DHCP\
+          \ \n DHCP defines how hosts can dynamically obtain IP addresses. A DHCP\
+          \ server assign\nIP addresses to hosts, which are the DHCP clients. \n Ports\
+          \ \n As there are many applications can be run on a host, ports are used\
+          \ to identify\nwhich application should receive packages when packet have\
+          \ been received on\nthe host. When a host sending a packet to a remote host,\
+          \ it needs to specify the\nport number for the destination host to use.\
+          \ Port numbers range from 0 to 65525.\nPort numbers from 0 to 1-24 are reserved\
+          \ for well-known services such as port 22\nfor SSH service. \n Network Components\
+          \ \n NICs and VNICs \n Network Interface Card (NIC) is a physical card that\
+          \ enables computers to connect\nto network. It has a unique MAC address\
+          \ associated with it and a port allows\na physical capable to connect to\
+          \ it. A VNIC is a virtualized network interface card,\nused by a virtual\
+          \ machine as its network interface. A VNIC also has a MAC address\nassociated\
+          \ with it. However, this MAC address not same as the MAC address binded\n\
+          with NIC and it depends on the Hypervisor or a virtual machine service provider.\n\
+          A VNIC is created when a virtual machine is created. \n Switches \n A switch\
+          \ is a network device that connects other network devices such as NICs or\n\
+          another switch. It contains multiple ports and forward data frame among\
+          \ devices\nconnected via the ports. Switches operate at layer 2 in a OSI\
+          \ model. \n Routers \n A router is a network device that connects multiple\
+          \ local networks together. When\nit receives a data packet, it uses a routing\
+          \ table to determine which networks\nto pass the data packet to. \n Network\
+          \ address translation (NAT) \n NAT is a process of changing the source or\
+          \ destination IP address of a IP packet when\nthe packet is in transit.\
+          \ NAT is commonly used to enables hosts with private addresses\nto communicate\
+          \ with servers on the public Internet. OpenStack uses NAT to enable\napplications\
+          \ running inside of virtual machines to connect out to the public Internet.\
+          \ \n Introduction to OpenStack Networking (Neutron) \n The OpenStack Network\
+          \ service (Neutron) provides network connectivity and addressing\nin the\
+          \ NeCTAR Cloud. It handles the creation and management of a virtual network\n\
+          infrastructure, including networks, switches, subnets and routers for virtual\
+          \ machines. \n OpenStack Compute(nova) uses Neutron to plug each virtual\
+          \ NIC on the virtual machine\ninto a network. Users can also OpenStack dashboard(horizon)\
+          \ to create and manage\nnetwork services through a web-based graphical interface.\
+          \ \n Network Types \n There are three supported networks in Neutron. External\
+          \ network, provider network\nand tenant network. \n External Network \n\
+          \ External network is a Internet routable network, which is the physical\
+          \ network that\nconnects the network node to Internet via a router or firewall.\
+          \ \n Provider Network \n Provider network is created by cloud administrator\
+          \ and it is mapped to the external\nnetwork and run top of the external\
+          \ network. The physical NICs on compute nodes\nare connected to physical\
+          \ switch ports, which are configured as a trunk containing\nall of the VLANs\
+          \ in the environment.Provder networks are created mapping to the\ndifferent\
+          \ VLANs in the trunk. After virtual machine is created, the provider network\n\
+          can be attached to the virtual machine and a IP address associated with\
+          \ the VLAN\nwill be assigned to VNIC on the virtual machine. Therefore,\
+          \ the instances can\nbegin to communicate. \n Tenant Network \n Tenant network\
+          \ is provisioned by users and isolated from other tenants(projects) and\n\
+          it functions as a user created VLAN and can be utilized based on users'\
+          \ requirements.\nIt can be configured to connect to virtual machines in\
+          \ other tenants and\nprovider networks (Internet access) via a Neutron L3\
+          \ router. Virtual machines can\nbe attached to provider network directly\
+          \ without the need of tenant network. \n Components \n The Network service\
+          \ consists of a server, a database, and a number of plug-in agents,\nwhich\
+          \ provide various networking functions such as layer 2 (Ethernet and Switching)\n\
+          and layer 3 (IP and Routing) connectivity. It also provides some high level\
+          \ network\nservices such as firewall and virtual private networks. \n Server\
+          \ \n Neutron server provides a web server that supports the Neutroin API\
+          \ and it also\npass the API calls to the Neutron plugins for processing.\
+          \ Plugins to communicate\nwith the agents for processing the It also manages\
+          \ the database to persist metadata.  \n Plugins \n Plugins allow function\
+          \ extension or customization of existing functions in Neutron.\nPeople can\
+          \ develop plugins for providing customized networking functions and resources\n\
+          to virtual machines. \n Agents \n The agents implement specific networking\
+          \ functions and communicate with the Neutron\nserver and the plugins on\
+          \ the server. The example agent is Layer 2 agent that runs\non the compute\
+          \ node (nova). The agent handles all layer 2 networking functions in\nthe\
+          \ OSI model and provide network connectivity to virtual machines.   \n Services\
+          \ \n Neutron provides some pre-existing high level network services such\
+          \ as VPN, firewall\nand load balancer. \n Network node \n It is the host\
+          \ where L3 agent and DHCP agent running. It manages layer 3 networking\n\
+          functions such as router between different VLANS. \n The below shows a Neutron\
+          \ Component Diagram: \n "
+        description: '<h2>Introduction to Networking</h2>
+
+          <h3>Ethernet</h3>
+
+          <p>Ethernet is the most common network protocol used in the local area network
+          (LAN) and
+
+          it is specified by the IEEE 802.3 standard. Ethernet operates in the second
+          layer
+
+          in the OSI model of networking protocols.</p>
+
+          <p>Hosts communicate by exchanging frames in a Ethernet network and each
+          host is uniquely
+
+          identified by an media access control(MAC) address. In NecTAR Cloud, every
+          virtual
+
+          machine has a unique MAC address and it is different from the MAC address
+          of the
+
+          host machine. The MAC address contains 48 bits and looks like 02:03:22:a2:c2:33.
+
+          A host in a Ethernet network can communicate with each other by using the
+          MAC address.
+
+          A host can also sent a frame to all hosts (broadcast) in the same Ethernet
+          network
+
+          by using MAC address ff:ff:ff:ff:ff:ff. </p>
+
+          <p>When a host receives a Ethernet frame, it checks its destination MAC
+          address and
+
+          see whether it matches its own MAC address. If it matches, the host receives
+          the
+
+          frame and if it doesn''t, the host just simply drop the frame.</p>
+
+          <h3>VLAN</h3>
+
+          <p>In Ethernet network, every hosts share the same network segment and therefore
+          share
+
+          the same network traffic. However, it is useful to divide hosts into different
+          groups
+
+          in order to isolate the network traffic and also for better management.</p>
+
+          <p>VLAN is the technology to enable grouping of hosts in a Ethernet network
+          and each
+
+          host can only see traffic within the group. Specifically, hosts can be grouped
+          by
+
+          VLANs and they cannot see traffic on different VLANs.In NecTAR Cloud, virtual
+
+          machines can also take advantages to isolate the traffic among them. Even
+          the virtual
+
+          machines are on the same hosts. By creating a VLAN, each VLAN is identified
+          by an
+
+          unique ID, between 1 and 4095.</p>
+
+          <p>VLAN can be implemented by assign a switch port to a VLAN Id to only
+          allow traffic
+
+          from that VLAN to pass through that port or by assigning a tag to Ethernet
+          Frame
+
+          to allow frames are only pass through based on the same tag.</p>
+
+          <h3>IP</h3>
+
+          <p>Ethernet specifies how hosts can communicate in local area networks and
+          there are
+
+          needs to interconnect multiple Ethernet networks. The Internet Protocol
+          (IP)
+
+          defines how packets (encapsulated frames) can travel between hosts that
+          are connected
+
+          to different local networks. The IP protocol defines IP addresses to uniquely
+          identify
+
+          a host and IP address is 32 bits (IP version 4) and looks like 10.10.12.123.
+          To
+
+          make this work, IP replies on routers or gateways. A router is a device
+          that connects
+
+          two or more local networks and can forward packets from one network to another.
+
+          Router operates in layer 3 in the OSI model of networking protocols.</p>
+
+          <p>Before sending a packet, a host checks its routing table to find out
+          any hosts
+
+          in the local network matches the IP address. The routing table maintains
+          a list of
+
+          subnets as well as a list of routers in the local network.</p>
+
+          <p>If no IP matches in the local network, packets are forwarded to the default
+          router
+
+          (default gateway).</p>
+
+          <h3>Subnets</h3>
+
+          <p>IP addresses (IP version 4) are 32 bits and contains 2 parts: a network
+          number
+
+          and a host identifier. If two hosts have the same network number, then they
+          are
+
+          on the same network and can communicate with each other directly without
+          routers
+
+          (same as they are on the Ethernet network).</p>
+
+          <p>To get the network part of a IP address, netmask is used. A netmask indicates
+
+          how many bits in the IP address make up the network part. The network part
+          of
+
+          a IP address can be 8, 16, 24 bits. For example, consider an IP address
+          of
+
+          192.168.1.1, where the first 24 bits of the address are the network number.
+          In
+
+          dotted quad notation, the netmask would be written as 255.255.255.0 and
+          the network
+
+          number is 192.168.1.0.</p>
+
+          <h3>DHCP</h3>
+
+          <p>DHCP defines how hosts can dynamically obtain IP addresses. A DHCP server
+          assign
+
+          IP addresses to hosts, which are the DHCP clients.</p>
+
+          <h3>Ports</h3>
+
+          <p>As there are many applications can be run on a host, ports are used to
+          identify
+
+          which application should receive packages when packet have been received
+          on
+
+          the host. When a host sending a packet to a remote host, it needs to specify
+          the
+
+          port number for the destination host to use. Port numbers range from 0 to
+          65525.
+
+          Port numbers from 0 to 1-24 are reserved for well-known services such as
+          port 22
+
+          for SSH service.</p>
+
+          <h3>Network Components</h3>
+
+          <h3>NICs and VNICs</h3>
+
+          <p>Network Interface Card (NIC) is a physical card that enables computers
+          to connect
+
+          to network. It has a unique MAC address associated with it and a port allows
+
+          a physical capable to connect to it. A VNIC is a virtualized network interface
+          card,
+
+          used by a virtual machine as its network interface. A VNIC also has a MAC
+          address
+
+          associated with it. However, this MAC address not same as the MAC address
+          binded
+
+          with NIC and it depends on the Hypervisor or a virtual machine service provider.
+
+          A VNIC is created when a virtual machine is created.</p>
+
+          <h4>Switches</h4>
+
+          <p>A switch is a network device that connects other network devices such
+          as NICs or
+
+          another switch. It contains multiple ports and forward data frame among
+          devices
+
+          connected via the ports. Switches operate at layer 2 in a OSI model.</p>
+
+          <h4>Routers</h4>
+
+          <p>A router is a network device that connects multiple local networks together.
+          When
+
+          it receives a data packet, it uses a routing table to determine which networks
+
+          to pass the data packet to.</p>
+
+          <h3>Network address translation (NAT)</h3>
+
+          <p>NAT is a process of changing the source or destination IP address of
+          a IP packet when
+
+          the packet is in transit. NAT is commonly used to enables hosts with private
+          addresses
+
+          to communicate with servers on the public Internet. OpenStack uses NAT to
+          enable
+
+          applications running inside of virtual machines to connect out to the public
+          Internet.</p>
+
+          <h2>Introduction to OpenStack Networking (Neutron)</h2>
+
+          <p>The OpenStack Network service (Neutron) provides network connectivity
+          and addressing
+
+          in the NeCTAR Cloud. It handles the creation and management of a virtual
+          network
+
+          infrastructure, including networks, switches, subnets and routers for virtual
+          machines.</p>
+
+          <p>OpenStack Compute(nova) uses Neutron to plug each virtual NIC on the
+          virtual machine
+
+          into a network. Users can also OpenStack dashboard(horizon) to create and
+          manage
+
+          network services through a web-based graphical interface.</p>
+
+          <h3>Network Types</h3>
+
+          <p>There are three supported networks in Neutron. External network, provider
+          network
+
+          and tenant network.</p>
+
+          <h4>External Network</h4>
+
+          <p>External network is a Internet routable network, which is the physical
+          network that
+
+          connects the network node to Internet via a router or firewall.</p>
+
+          <h4>Provider Network</h4>
+
+          <p>Provider network is created by cloud administrator and it is mapped to
+          the external
+
+          network and run top of the external network. The physical NICs on compute
+          nodes
+
+          are connected to physical switch ports, which are configured as a trunk
+          containing
+
+          all of the VLANs in the environment.Provder networks are created mapping
+          to the
+
+          different VLANs in the trunk. After virtual machine is created, the provider
+          network
+
+          can be attached to the virtual machine and a IP address associated with
+          the VLAN
+
+          will be assigned to VNIC on the virtual machine. Therefore, the instances
+          can
+
+          begin to communicate.</p>
+
+          <h4>Tenant Network</h4>
+
+          <p>Tenant network is provisioned by users and isolated from other tenants(projects)
+          and
+
+          it functions as a user created VLAN and can be utilized based on users''
+          requirements.
+
+          It can be configured to connect to virtual machines in other tenants and
+
+          provider networks (Internet access) via a Neutron L3 router. Virtual machines
+          can
+
+          be attached to provider network directly without the need of tenant network.</p>
+
+          <h3>Components</h3>
+
+          <p>The Network service consists of a server, a database, and a number of
+          plug-in agents,
+
+          which provide various networking functions such as layer 2 (Ethernet and
+          Switching)
+
+          and layer 3 (IP and Routing) connectivity. It also provides some high level
+          network
+
+          services such as firewall and virtual private networks.</p>
+
+          <h3>Server</h3>
+
+          <p>Neutron server provides a web server that supports the Neutroin API and
+          it also
+
+          pass the API calls to the Neutron plugins for processing. Plugins to communicate
+
+          with the agents for processing the It also manages the database to persist
+          metadata. </p>
+
+          <h3>Plugins</h3>
+
+          <p>Plugins allow function extension or customization of existing functions
+          in Neutron.
+
+          People can develop plugins for providing customized networking functions
+          and resources
+
+          to virtual machines.</p>
+
+          <h3>Agents</h3>
+
+          <p>The agents implement specific networking functions and communicate with
+          the Neutron
+
+          server and the plugins on the server. The example agent is Layer 2 agent
+          that runs
+
+          on the compute node (nova). The agent handles all layer 2 networking functions
+          in
+
+          the OSI model and provide network connectivity to virtual machines.  </p>
+
+          <h3>Services</h3>
+
+          <p>Neutron provides some pre-existing high level network services such as
+          VPN, firewall
+
+          and load balancer.</p>
+
+          <h2>Network node</h2>
+
+          <p>It is the host where L3 agent and DHCP agent running. It manages layer
+          3 networking
+
+          functions such as router between different VLANS.</p>
+
+          <p>The below shows a Neutron Component Diagram:</p>
+
+          <p><img alt="network1" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Networking--DOCID44/images/network1.png?raw=true"></p>'
+        folder:
+          category_id: 6000122279
+          created_at: '2015-12-01T18:22:33-05:00'
+          customer_folders: []
+          description: Networking
+          id: 6000210730
+          is_default: false
+          language_id: 6
+          name: Networking
+          parent_id: 6000210730
+          position: 8
+          updated_at: '2015-12-01T18:22:33-05:00'
+          visibility: 1
+        folder_id: 6000210730
+        hits: 0
+        id: 6000093166
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-12-01T18:22:35-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000093166
+        position: 1
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Introduction
+        updated_at: '2015-12-01T18:22:35-05:00'
+        user_id: 6002464727
+  html: '<h2>Introduction to Networking</h2>
+
+    <h3>Ethernet</h3>
+
+    <p>Ethernet is the most common network protocol used in the local area network
+    (LAN) and
+
+    it is specified by the IEEE 802.3 standard. Ethernet operates in the second layer
+
+    in the OSI model of networking protocols.</p>
+
+    <p>Hosts communicate by exchanging frames in a Ethernet network and each host
+    is uniquely
+
+    identified by an media access control(MAC) address. In NecTAR Cloud, every virtual
+
+    machine has a unique MAC address and it is different from the MAC address of the
+
+    host machine. The MAC address contains 48 bits and looks like 02:03:22:a2:c2:33.
+
+    A host in a Ethernet network can communicate with each other by using the MAC
+    address.
+
+    A host can also sent a frame to all hosts (broadcast) in the same Ethernet network
+
+    by using MAC address ff:ff:ff:ff:ff:ff. </p>
+
+    <p>When a host receives a Ethernet frame, it checks its destination MAC address
+    and
+
+    see whether it matches its own MAC address. If it matches, the host receives the
+
+    frame and if it doesn''t, the host just simply drop the frame.</p>
+
+    <h3>VLAN</h3>
+
+    <p>In Ethernet network, every hosts share the same network segment and therefore
+    share
+
+    the same network traffic. However, it is useful to divide hosts into different
+    groups
+
+    in order to isolate the network traffic and also for better management.</p>
+
+    <p>VLAN is the technology to enable grouping of hosts in a Ethernet network and
+    each
+
+    host can only see traffic within the group. Specifically, hosts can be grouped
+    by
+
+    VLANs and they cannot see traffic on different VLANs.In NecTAR Cloud, virtual
+
+    machines can also take advantages to isolate the traffic among them. Even the
+    virtual
+
+    machines are on the same hosts. By creating a VLAN, each VLAN is identified by
+    an
+
+    unique ID, between 1 and 4095.</p>
+
+    <p>VLAN can be implemented by assign a switch port to a VLAN Id to only allow
+    traffic
+
+    from that VLAN to pass through that port or by assigning a tag to Ethernet Frame
+
+    to allow frames are only pass through based on the same tag.</p>
+
+    <h3>IP</h3>
+
+    <p>Ethernet specifies how hosts can communicate in local area networks and there
+    are
+
+    needs to interconnect multiple Ethernet networks. The Internet Protocol (IP)
+
+    defines how packets (encapsulated frames) can travel between hosts that are connected
+
+    to different local networks. The IP protocol defines IP addresses to uniquely
+    identify
+
+    a host and IP address is 32 bits (IP version 4) and looks like 10.10.12.123. To
+
+    make this work, IP replies on routers or gateways. A router is a device that connects
+
+    two or more local networks and can forward packets from one network to another.
+
+    Router operates in layer 3 in the OSI model of networking protocols.</p>
+
+    <p>Before sending a packet, a host checks its routing table to find out any hosts
+
+    in the local network matches the IP address. The routing table maintains a list
+    of
+
+    subnets as well as a list of routers in the local network.</p>
+
+    <p>If no IP matches in the local network, packets are forwarded to the default
+    router
+
+    (default gateway).</p>
+
+    <h3>Subnets</h3>
+
+    <p>IP addresses (IP version 4) are 32 bits and contains 2 parts: a network number
+
+    and a host identifier. If two hosts have the same network number, then they are
+
+    on the same network and can communicate with each other directly without routers
+
+    (same as they are on the Ethernet network).</p>
+
+    <p>To get the network part of a IP address, netmask is used. A netmask indicates
+
+    how many bits in the IP address make up the network part. The network part of
+
+    a IP address can be 8, 16, 24 bits. For example, consider an IP address of
+
+    192.168.1.1, where the first 24 bits of the address are the network number. In
+
+    dotted quad notation, the netmask would be written as 255.255.255.0 and the network
+
+    number is 192.168.1.0.</p>
+
+    <h3>DHCP</h3>
+
+    <p>DHCP defines how hosts can dynamically obtain IP addresses. A DHCP server assign
+
+    IP addresses to hosts, which are the DHCP clients.</p>
+
+    <h3>Ports</h3>
+
+    <p>As there are many applications can be run on a host, ports are used to identify
+
+    which application should receive packages when packet have been received on
+
+    the host. When a host sending a packet to a remote host, it needs to specify the
+
+    port number for the destination host to use. Port numbers range from 0 to 65525.
+
+    Port numbers from 0 to 1-24 are reserved for well-known services such as port
+    22
+
+    for SSH service.</p>
+
+    <h3>Network Components</h3>
+
+    <h3>NICs and VNICs</h3>
+
+    <p>Network Interface Card (NIC) is a physical card that enables computers to connect
+
+    to network. It has a unique MAC address associated with it and a port allows
+
+    a physical capable to connect to it. A VNIC is a virtualized network interface
+    card,
+
+    used by a virtual machine as its network interface. A VNIC also has a MAC address
+
+    associated with it. However, this MAC address not same as the MAC address binded
+
+    with NIC and it depends on the Hypervisor or a virtual machine service provider.
+
+    A VNIC is created when a virtual machine is created.</p>
+
+    <h4>Switches</h4>
+
+    <p>A switch is a network device that connects other network devices such as NICs
+    or
+
+    another switch. It contains multiple ports and forward data frame among devices
+
+    connected via the ports. Switches operate at layer 2 in a OSI model.</p>
+
+    <h4>Routers</h4>
+
+    <p>A router is a network device that connects multiple local networks together.
+    When
+
+    it receives a data packet, it uses a routing table to determine which networks
+
+    to pass the data packet to.</p>
+
+    <h3>Network address translation (NAT)</h3>
+
+    <p>NAT is a process of changing the source or destination IP address of a IP packet
+    when
+
+    the packet is in transit. NAT is commonly used to enables hosts with private addresses
+
+    to communicate with servers on the public Internet. OpenStack uses NAT to enable
+
+    applications running inside of virtual machines to connect out to the public Internet.</p>
+
+    <h2>Introduction to OpenStack Networking (Neutron)</h2>
+
+    <p>The OpenStack Network service (Neutron) provides network connectivity and addressing
+
+    in the NeCTAR Cloud. It handles the creation and management of a virtual network
+
+    infrastructure, including networks, switches, subnets and routers for virtual
+    machines.</p>
+
+    <p>OpenStack Compute(nova) uses Neutron to plug each virtual NIC on the virtual
+    machine
+
+    into a network. Users can also OpenStack dashboard(horizon) to create and manage
+
+    network services through a web-based graphical interface.</p>
+
+    <h3>Network Types</h3>
+
+    <p>There are three supported networks in Neutron. External network, provider network
+
+    and tenant network.</p>
+
+    <h4>External Network</h4>
+
+    <p>External network is a Internet routable network, which is the physical network
+    that
+
+    connects the network node to Internet via a router or firewall.</p>
+
+    <h4>Provider Network</h4>
+
+    <p>Provider network is created by cloud administrator and it is mapped to the
+    external
+
+    network and run top of the external network. The physical NICs on compute nodes
+
+    are connected to physical switch ports, which are configured as a trunk containing
+
+    all of the VLANs in the environment.Provder networks are created mapping to the
+
+    different VLANs in the trunk. After virtual machine is created, the provider network
+
+    can be attached to the virtual machine and a IP address associated with the VLAN
+
+    will be assigned to VNIC on the virtual machine. Therefore, the instances can
+
+    begin to communicate.</p>
+
+    <h4>Tenant Network</h4>
+
+    <p>Tenant network is provisioned by users and isolated from other tenants(projects)
+    and
+
+    it functions as a user created VLAN and can be utilized based on users'' requirements.
+
+    It can be configured to connect to virtual machines in other tenants and
+
+    provider networks (Internet access) via a Neutron L3 router. Virtual machines
+    can
+
+    be attached to provider network directly without the need of tenant network.</p>
+
+    <h3>Components</h3>
+
+    <p>The Network service consists of a server, a database, and a number of plug-in
+    agents,
+
+    which provide various networking functions such as layer 2 (Ethernet and Switching)
+
+    and layer 3 (IP and Routing) connectivity. It also provides some high level network
+
+    services such as firewall and virtual private networks.</p>
+
+    <h3>Server</h3>
+
+    <p>Neutron server provides a web server that supports the Neutroin API and it
+    also
+
+    pass the API calls to the Neutron plugins for processing. Plugins to communicate
+
+    with the agents for processing the It also manages the database to persist metadata.
+    </p>
+
+    <h3>Plugins</h3>
+
+    <p>Plugins allow function extension or customization of existing functions in
+    Neutron.
+
+    People can develop plugins for providing customized networking functions and resources
+
+    to virtual machines.</p>
+
+    <h3>Agents</h3>
+
+    <p>The agents implement specific networking functions and communicate with the
+    Neutron
+
+    server and the plugins on the server. The example agent is Layer 2 agent that
+    runs
+
+    on the compute node (nova). The agent handles all layer 2 networking functions
+    in
+
+    the OSI model and provide network connectivity to virtual machines.  </p>
+
+    <h3>Services</h3>
+
+    <p>Neutron provides some pre-existing high level network services such as VPN,
+    firewall
+
+    and load balancer.</p>
+
+    <h2>Network node</h2>
+
+    <p>It is the host where L3 agent and DHCP agent running. It manages layer 3 networking
+
+    functions such as router between different VLANS.</p>
+
+    <p>The below shows a Neutron Component Diagram:</p>
+
+    <p><img alt="network1" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud
+    Expert--DOCID19/Networking--DOCID44/images/network1.png?raw=true"></p>'
+  parent: 44
+  sha1: cdc5cd37a3ca0b9c9d285716b7d55320585e86ce
+  title: Introduction
