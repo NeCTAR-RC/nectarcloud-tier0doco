@@ -14011,80 +14011,80 @@
         created_at: '2015-11-18T00:18:08-05:00'
         datetime_01: null
         delta: true
-        desc_un_html: " User Guide for Windows In The Cloud  \n \n SA node service\
-          \ for users in South Australia \n \n Introduction \n Cloud allocation \n\
-          \ Creating a security group \n Launching an instance \n Connecting to the\
-          \ virtual machine remotely with Windows Remote Desktop client \n Sharing\
-          \ files with the virtual machine \n Connecting from the Dashboard \n \n\
-          Glossary of Terms  \n \n \n Introduction \n \n eResearchSA is aiming to\
-          \ support South Australian users running \nWindows applications in the NeCTAR\
-          \ Australian research cloud. We are currently trialling an \napproach where\
-          \ users can access Windows virtual machines (VMs) in the cloud using Remote\
-          \ Desktop. \n This is currently a pilot service which uses short-term Windows\
-          \ trial licenses, but eRSA will be providing a production service through\
-          \ a Microsoft Service Provider License Agreement (SPLA) in early 2016. \n\
-          \ eRSA staff will need to set up your Windows VM image for the cloud. Once\
-          \ the image \nis created, you can set up a Windows virtual machine in the\
-          \ cloud by following the \nsteps specified below, or eRSA staff can do it\
-          \ for you. Email eRSA Helpdesk \nand we will assist you with getting started\
-          \ using Windows in the cloud. \n This service is designed for: \n \n Researchers\
-          \ using software that is only available on Windows. \n Researchers that\
-          \ are more comfortable using the familiar environment of the windows\n \
-          \ desktop for their cloud computing. \n \n Glossary of Terms  \nTop of page\
-          \ \n \n \n Cloud allocation and Windows image \n The Windows operating system\
-          \ is much larger than the standard Linux operating systems that are usually\
-          \ used on NeCTAR VMs. \nYou will need to run the Windows image on an 'm2'\
-          \ Instance type, which has a 30GB root\ndrive rather than 10 GB. You will\
-          \ need to request a NeCTAR allocation beyond the standard personal project\n\
-          resource. By requesting more 'cores', you can launch instances that have\
-          \ enough storage to \ncope with the Windows operating system as well as\
-          \ storing and processing data. \n Log in to the web dashboard for the cloud\
-          \ \nand click on New Request under Allocations in the left hand side menu.\
-          \ Email the \neRSA Helpdesk if you have questions about any of the information\
-          \ in the form.\nNew requests can take a couple of weeks to process, and\
-          \ allocations are merit-based. \n To access an image with the Windows operating\
-          \ system, under current licensing agreements, you need to be researching\
-          \ in South Australia\nand be registered with eResearchSA. Email the eRSA\
-          \ Helpdesk\nto request an image to access Windows in the Cloud, and supply\
-          \ your NeCTAR username (the email address you use to \nlog on to NeCTAR\
-          \ services) and the name of the project which has the allocations you \n\
-          have requested.  You will be emailed a username and password to access the\
-          \ Windows VM,\nand an image with the Windows trial will be made available\
-          \ on your NeCTAR Dashboard. \n Glossary of Terms \nTop of page \n \n \n\
-          \ Creating a security group \n \n \n First you will need to create a security\
-          \ group to allow you to connect to the \n  virtual machine remotely with\
-          \ Windows remote desktop.  \n \n \n Select \"Access & Security\" under the\
-          \ left hand side pane under \"Compute\". \n \n \n  Select the \"Create Security\
-          \ Group\" button near the top right corner \n \n \n Give your security group\
-          \ a name and description and click the \"Create Security Group\" button\
-          \ \n \n \n \n Click \"Manage Rules\" in the \"Actions\" drop-down menu \n\
-          \ \n \n  Click on the \"Add Rule\" button near the top right corner  \n\
-          \ \n \n A small window should pop up. Make sure the \"Rule\" is set to \"\
-          Custom TCP Rule\" \n  and \"Open Port\" is set to \"Port\". Under the Port\
-          \ textbox enter \"3389\". Set \"Remote\" \n  to \"CIDR\" and under the \"\
-          CIDR\" textbox enter one of the following IP ranges as appropriate. \n \n\
-          \ 129.127.0.0/16 - University of Adelaide \n 129.96.0.0/16 - Flinders \n\
-          \ 130.220.0.0/16 - UniSA   \n \n \n E.g. for a user from the University\
-          \ of Adelaide: \n \n \n \n By specifying these IP ranges, your Windows VM\
-          \ will be more secure as it can only be accessed by computers in the University\
-          \ network, or using your university VPN. To access the Windows virtual desktop\
-          \ from elsewhere, you can log in via the console on the NeCTAR dashboard.\
-          \ \n \n Glossary of Terms  \nTop of page \n \n \n Creating an instance with\
-          \ the Windows image \n \n \n Select instance under the left hand side pane\
-          \ \n \n \n  Select the \"Launch Instance\" button near the top right corner\
-          \ \n \n \n In the pop-up window, assign a name to the Instance. Select a\
-          \ Flavor beginning with 'm2',\n  and ensure it has a 'Root Disk' of 30 GB\
-          \ (look in Flavor Details in the right column\n  of the window; we suggest\
-          \ m2.large or m2.xlarge depending on how many processing cores and how much\
-          \ memory you need for your work). \n  In 'Instance Boot Source', ensure\
-          \ 'Boot from image' is selected. \n  Under 'Image Name', select the image\
-          \ that was set up for you by eRSA. \n \n \n \n \n Under the \"Access & Security\"\
-          \ tab select the security group you created earlier. \n  In this example\
-          \ it was \"my_security_group\". \n \n \n \n Under the \"Availability Zone\"\
-          \ tab select 'sa'; \n  Then click the blue 'Launch' button. \n \n \n Glossary\
-          \ of Terms  \nTop of page \n \n \n Connecting to the virtual machine remotely\
-          \ with Windows Remote Desktop client \n \n \n Other operating systems have\
-          \ similar remote desktop clients available that can be used almost\n  identically\
+        desc_un_html: " \n SA node service for users in South Australia \n \n Introduction\
+          \ \n Cloud allocation \n Creating a security group \n Launching an instance\
+          \ \n Connecting to the virtual machine remotely with Windows Remote Desktop\
+          \ client \n Sharing files with the virtual machine \n Connecting from the\
+          \ Dashboard \n \nGlossary of Terms  \n \n \n Introduction \n \n eResearchSA\
+          \ is aiming to support South Australian users running \nWindows applications\
+          \ in the NeCTAR Australian research cloud. We are currently trialling an\
+          \ \napproach where users can access Windows virtual machines (VMs) in the\
+          \ cloud using Remote Desktop. \n This is currently a pilot service which\
+          \ uses short-term Windows trial licenses, but eRSA will be providing a production\
+          \ service through a Microsoft Service Provider License Agreement (SPLA)\
+          \ in early 2016. \n eRSA staff will need to set up your Windows VM image\
+          \ for the cloud. Once the image \nis created, you can set up a Windows virtual\
+          \ machine in the cloud by following the \nsteps specified below, or eRSA\
+          \ staff can do it for you. Email eRSA Helpdesk \nand we will assist you\
+          \ with getting started using Windows in the cloud. \n This service is designed\
+          \ for: \n \n Researchers using software that is only available on Windows.\
+          \ \n Researchers that are more comfortable using the familiar environment\
+          \ of the windows\n  desktop for their cloud computing. \n \n Glossary of\
+          \ Terms  \nTop of page \n \n \n Cloud allocation and Windows image \n The\
+          \ Windows operating system is much larger than the standard Linux operating\
+          \ systems that are usually used on NeCTAR VMs. \nYou will need to run the\
+          \ Windows image on an 'm2' Instance type, which has a 30GB root\ndrive rather\
+          \ than 10 GB. You will need to request a NeCTAR allocation beyond the standard\
+          \ personal project\nresource. By requesting more 'cores', you can launch\
+          \ instances that have enough storage to \ncope with the Windows operating\
+          \ system as well as storing and processing data. \n Log in to the web dashboard\
+          \ for the cloud \nand click on New Request under Allocations in the left\
+          \ hand side menu. Email the \neRSA Helpdesk if you have questions about\
+          \ any of the information in the form.\nNew requests can take a couple of\
+          \ weeks to process, and allocations are merit-based. \n To access an image\
+          \ with the Windows operating system, under current licensing agreements,\
+          \ you need to be researching in South Australia\nand be registered with\
+          \ eResearchSA. Email the eRSA Helpdesk\nto request an image to access Windows\
+          \ in the Cloud, and supply your NeCTAR username (the email address you use\
+          \ to \nlog on to NeCTAR services) and the name of the project which has\
+          \ the allocations you \nhave requested.  You will be emailed a username\
+          \ and password to access the Windows VM,\nand an image with the Windows\
+          \ trial will be made available on your NeCTAR Dashboard. \n Glossary of\
+          \ Terms \nTop of page \n \n \n Creating a security group \n \n \n First\
+          \ you will need to create a security group to allow you to connect to the\
+          \ \n  virtual machine remotely with Windows remote desktop.  \n \n \n Select\
+          \ \"Access & Security\" under the left hand side pane under \"Compute\"\
+          . \n \n \n  Select the \"Create Security Group\" button near the top right\
+          \ corner \n \n \n Give your security group a name and description and click\
+          \ the \"Create Security Group\" button \n \n \n \n Click \"Manage Rules\"\
+          \ in the \"Actions\" drop-down menu \n \n \n  Click on the \"Add Rule\"\
+          \ button near the top right corner  \n \n \n A small window should pop up.\
+          \ Make sure the \"Rule\" is set to \"Custom TCP Rule\" \n  and \"Open Port\"\
+          \ is set to \"Port\". Under the Port textbox enter \"3389\". Set \"Remote\"\
+          \ \n  to \"CIDR\" and under the \"CIDR\" textbox enter one of the following\
+          \ IP ranges as appropriate. \n \n 129.127.0.0/16 - University of Adelaide\
+          \ \n 129.96.0.0/16 - Flinders \n 130.220.0.0/16 - UniSA   \n \n \n E.g.\
+          \ for a user from the University of Adelaide: \n \n \n \n By specifying\
+          \ these IP ranges, your Windows VM will be more secure as it can only be\
+          \ accessed by computers in the University network, or using your university\
+          \ VPN. To access the Windows virtual desktop from elsewhere, you can log\
+          \ in via the console on the NeCTAR dashboard. \n \n Glossary of Terms  \n\
+          Top of page \n \n \n Creating an instance with the Windows image \n \n \n\
+          \ Select instance under the left hand side pane \n \n \n  Select the \"\
+          Launch Instance\" button near the top right corner \n \n \n In the pop-up\
+          \ window, assign a name to the Instance. Select a Flavor beginning with\
+          \ 'm2',\n  and ensure it has a 'Root Disk' of 30 GB (look in Flavor Details\
+          \ in the right column\n  of the window; we suggest m2.large or m2.xlarge\
+          \ depending on how many processing cores and how much memory you need for\
+          \ your work). \n  In 'Instance Boot Source', ensure 'Boot from image' is\
+          \ selected. \n  Under 'Image Name', select the image that was set up for\
+          \ you by eRSA. \n \n \n \n \n Under the \"Access & Security\" tab select\
+          \ the security group you created earlier. \n  In this example it was \"\
+          my_security_group\". \n \n \n \n Under the \"Availability Zone\" tab select\
+          \ 'sa'; \n  Then click the blue 'Launch' button. \n \n \n Glossary of Terms\
+          \  \nTop of page \n \n \n Connecting to the virtual machine remotely with\
+          \ Windows Remote Desktop client \n \n \n Other operating systems have similar\
+          \ remote desktop clients available that can be used almost\n  identically\
           \ (e.g. Microsoft remote desktop is available for Mac, and there is a remote\n\
           \  desktop client pre-installed on Ubuntu. \n \n \n Take note of the instance\
           \ IP address under the \"Instances\" page. You will need \n  this to connect\
@@ -14144,15 +14144,15 @@
           \ on your allocation you can have persistent volume storage attached to\
           \ your VM. \n \n Full Glossary Page \nNeCTAR FAQ - general inormation \n\
           For more help, contact the eRSA Helpdesk or NeCTAR support   \n Top of page "
-        description: "<h1>User Guide for Windows In The Cloud  <a name=\"top\"></a>\n\
-          </h1>\n<h2>SA node service for users in South Australia</h2>\n<ul>\n<li><a\
-          \ href=\"#intro\">Introduction</a></li>\n<li><a href=\"#alloc\">Cloud allocation</a></li>\n\
-          <li><a href=\"#security\">Creating a security group</a></li>\n<li><a href=\"\
-          #instance\">Launching an instance</a></li>\n<li><a href=\"#desktop\">Connecting\
-          \ to the virtual machine remotely with Windows Remote Desktop client</a></li>\n\
-          <li><a href=\"#transferfiles\">Sharing files with the virtual machine</a></li>\n\
-          <li><a href=\"#connection\">Connecting from the Dashboard</a></li>\n<li>\n\
-          <a href=\"#glossary\">Glossary of Terms</a> </li>\n</ul>\n<hr>\n<h2>Introduction\
+        description: "<p><a name=\"top\"></a></p>\n<h2>SA node service for users in\
+          \ South Australia</h2>\n<ul>\n<li><a href=\"#intro\">Introduction</a></li>\n\
+          <li><a href=\"#alloc\">Cloud allocation</a></li>\n<li><a href=\"#security\"\
+          >Creating a security group</a></li>\n<li><a href=\"#instance\">Launching\
+          \ an instance</a></li>\n<li><a href=\"#desktop\">Connecting to the virtual\
+          \ machine remotely with Windows Remote Desktop client</a></li>\n<li><a href=\"\
+          #transferfiles\">Sharing files with the virtual machine</a></li>\n<li><a\
+          \ href=\"#connection\">Connecting from the Dashboard</a></li>\n<li>\n<a\
+          \ href=\"#glossary\">Glossary of Terms</a> </li>\n</ul>\n<hr>\n<h2>Introduction\
           \ <a name=\"intro\"></a>\n</h2>\n<p><a href=\"https://www.ersa.edu.au/\"\
           >eResearchSA</a> is aiming to support South Australian users running \n\
           Windows applications in the NeCTAR Australian research cloud. We are currently\
@@ -14345,17 +14345,17 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 37
+        hits: 42
         id: 6000089734
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-30T19:37:19-05:00'
+        modified_at: '2015-11-30T20:00:06-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000089734
-        position: 2
+        position: 3
         seo_data: {}
         status: 2
         string_01: null
@@ -14364,21 +14364,20 @@
         thumbs_down: 0
         thumbs_up: 0
         title: eRSA Windows in the Cloud - user guide
-        updated_at: '2015-11-30T19:37:19-05:00'
+        updated_at: '2015-11-30T20:00:06-05:00'
         user_id: 6002464727
-  html: "<h1>User Guide for Windows In The Cloud  <a name=\"top\"></a></h1>\n<h2>SA\
-    \ node service for users in South Australia</h2>\n<ul>\n<li><a href=\"#intro\"\
-    >Introduction</a></li>\n<li><a href=\"#alloc\">Cloud allocation</a></li>\n<li><a\
-    \ href=\"#security\">Creating a security group</a></li>\n<li><a href=\"#instance\"\
-    >Launching an instance</a></li>\n<li><a href=\"#desktop\">Connecting to the virtual\
-    \ machine remotely with Windows Remote Desktop client</a></li>\n<li><a href=\"\
-    #transferfiles\">Sharing files with the virtual machine</a></li>\n<li><a href=\"\
-    #connection\">Connecting from the Dashboard</a></li>\n<li><a href=\"#glossary\"\
-    >Glossary of Terms</a> </li>\n</ul>\n<hr>\n<h2>Introduction <a name=\"intro\"\
-    ></a></h2>\n<p><a href=\"https://www.ersa.edu.au/\">eResearchSA</a> is aiming\
-    \ to support South Australian users running \nWindows applications in the NeCTAR\
-    \ Australian research cloud. We are currently trialling an \napproach where users\
-    \ can access Windows virtual machines (VMs) in the cloud using Remote Desktop.</p>\n\
+  html: "<p><a name=\"top\"></a></p>\n<h2>SA node service for users in South Australia</h2>\n\
+    <ul>\n<li><a href=\"#intro\">Introduction</a></li>\n<li><a href=\"#alloc\">Cloud\
+    \ allocation</a></li>\n<li><a href=\"#security\">Creating a security group</a></li>\n\
+    <li><a href=\"#instance\">Launching an instance</a></li>\n<li><a href=\"#desktop\"\
+    >Connecting to the virtual machine remotely with Windows Remote Desktop client</a></li>\n\
+    <li><a href=\"#transferfiles\">Sharing files with the virtual machine</a></li>\n\
+    <li><a href=\"#connection\">Connecting from the Dashboard</a></li>\n<li><a href=\"\
+    #glossary\">Glossary of Terms</a> </li>\n</ul>\n<hr>\n<h2>Introduction <a name=\"\
+    intro\"></a></h2>\n<p><a href=\"https://www.ersa.edu.au/\">eResearchSA</a> is\
+    \ aiming to support South Australian users running \nWindows applications in the\
+    \ NeCTAR Australian research cloud. We are currently trialling an \napproach where\
+    \ users can access Windows virtual machines (VMs) in the cloud using Remote Desktop.</p>\n\
     <p>This is currently a pilot service which uses short-term Windows trial licenses,\
     \ but eRSA will be providing a production service through a Microsoft Service\
     \ Provider License Agreement (SPLA) in early 2016.</p>\n<p>eRSA staff will need\
@@ -14559,7 +14558,7 @@
     >eRSA Helpdesk</a> or <a href=\"https://support.nectar.org.au/support/tickets/new\"\
     >NeCTAR support</a>  </p>\n<p><a href=\"#top\">Top of page</a></p>"
   parent: 24
-  sha1: 78abf97ecc434efdb587a059116c88ab3d964b9f
+  sha1: c44ddaf6c9149cba165937d9c41e0bac293c9d92
   title: eRSA Windows in the Cloud - user guide
 88:
   freshdesk:
@@ -15446,17 +15445,16 @@
         created_at: '2015-11-22T23:57:07-05:00'
         datetime_01: null
         delta: true
-        desc_un_html: " User Guide for the Cloud Software Repository  \n \n SA node\
-          \ service for users in South Australia \n \n Introduction \n Cloud allocation\
-          \ \n Contact eRSA to obtain the image ID \n Creating a security group \n\
-          \ Launching an instance \n Loading the pre-installed software packages \n\
-          \ Sharing files with the virtual machine \n The CentOS operating system\
-          \ \n \nGlossary of Terms  \n \n \n Introduction \n \n Description  \n Since\
-          \ cloud Virtual Machine (VM) images are restricted in size, it is not possible\
-          \ to have a generic image containing all the different application software\
-          \ that is available on high-performance computing (HPC) systems, such as\
-          \ eResearchSA's Tizard supercomputer. Users have therefore needed to find\
-          \ VM images that contain the software they need, or install it themselves.\
+        desc_un_html: " \n SA node service for users in South Australia \n \n Introduction\
+          \ \n Cloud allocation \n Contact eRSA to obtain the image ID \n Creating\
+          \ a security group \n Launching an instance \n Loading the pre-installed\
+          \ software packages \n Sharing files with the virtual machine \n The CentOS\
+          \ operating system \n \nGlossary of Terms  \n \n \n Introduction \n \n Description\
+          \  \n Since cloud Virtual Machine (VM) images are restricted in size, it\
+          \ is not possible to have a generic image containing all the different application\
+          \ software that is available on high-performance computing (HPC) systems,\
+          \ such as eResearchSA's Tizard supercomputer. Users have therefore needed\
+          \ to find VM images that contain the software they need, or install it themselves.\
           \  \n eResearchSA has deployed a distributed software repository that enables\
           \ cloud virtual machines to easily access all the software applications\
           \ that are available on the Tizard supercomputer. Users can run any of this\
@@ -15645,37 +15643,37 @@
           \ allocation you can have persistent volume storage attached to your VM.\
           \ \n \n Full Glossary Page \nNeCTAR FAQ - general inormation \nFor more\
           \ help, contact the eRSA Helpdesk \n Top of page "
-        description: "<h1>User Guide for the Cloud Software Repository  <a name=\"\
-          top\"></a>\n</h1>\n<h2>SA node service for users in South Australia</h2>\n\
-          <ul>\n<li><a href=\"#intro\">Introduction</a></li>\n<li><a href=\"#alloc\"\
-          >Cloud allocation</a></li>\n<li><a href=\"#setup\">Contact eRSA to obtain\
-          \ the image ID</a></li>\n<li><a href=\"#security\">Creating a security group</a></li>\n\
-          <li><a href=\"#instance\">Launching an instance</a></li>\n<li><a href=\"\
-          #modules\">Loading the pre-installed software packages</a></li>\n<li><a\
-          \ href=\"#transferfiles\">Sharing files with the virtual machine</a></li>\n\
-          <li><a href=\"#os\">The CentOS operating system</a></li>\n<li>\n<a href=\"\
-          #glossary\">Glossary of Terms</a> </li>\n</ul>\n<hr>\n<h2>Introduction <a\
-          \ name=\"intro\"></a>\n</h2>\n<p>Description </p>\n<p>Since cloud Virtual\
-          \ Machine (VM) images are restricted in size, it is not possible to have\
-          \ a generic image containing all the different application software that\
-          \ is available on high-performance computing (HPC) systems, such as eResearchSA's\
-          \ <a href=\"https://www.ersa.edu.au/tizard/\">Tizard supercomputer</a>.\
-          \ Users have therefore needed to find VM images that contain the software\
-          \ they need, or install it themselves. </p>\n<p><a href=\"https://www.ersa.edu.au/\"\
-          >eResearchSA</a> has deployed a distributed software repository that enables\
-          \ cloud virtual machines to easily access all the software applications\
-          \ that are available on the Tizard supercomputer. Users can run any of this\
-          \ software on the cloud virtual machine, just as they can on Tizard.</p>\n\
-          <p>This service is designed for:</p>\n<ul>\n<li>Researchers who want to\
-          \ use cloud virtual machines to run compute-intensive software applications</li>\n\
-          <li>Situations where a single virtual machine image containing all the required\
-          \ software is not available, and the researcher does not want to install\
-          \ the software themselves.</li>\n<li>This service is currently only available\
-          \ for South Australian users as it uses the eResearch SA software repository.</li>\n\
-          </ul>\n<h2>CVMFS</h2>\n<p>The system makes use of a read-only, http-based\
-          \ distributed virtual file system called the <a href=\"http://cernvm.cern.ch/portal/startcvmfs\"\
-          >CERN VM File System</a> (CVMFS), which CERN developed to enable researchers\
-          \ to access their standard software packages at many sites around the world.\
+        description: "<p><a name=\"top\"></a></p>\n<h2>SA node service for users in\
+          \ South Australia</h2>\n<ul>\n<li><a href=\"#intro\">Introduction</a></li>\n\
+          <li><a href=\"#alloc\">Cloud allocation</a></li>\n<li><a href=\"#setup\"\
+          >Contact eRSA to obtain the image ID</a></li>\n<li><a href=\"#security\"\
+          >Creating a security group</a></li>\n<li><a href=\"#instance\">Launching\
+          \ an instance</a></li>\n<li><a href=\"#modules\">Loading the pre-installed\
+          \ software packages</a></li>\n<li><a href=\"#transferfiles\">Sharing files\
+          \ with the virtual machine</a></li>\n<li><a href=\"#os\">The CentOS operating\
+          \ system</a></li>\n<li>\n<a href=\"#glossary\">Glossary of Terms</a> </li>\n\
+          </ul>\n<hr>\n<h2>Introduction <a name=\"intro\"></a>\n</h2>\n<p>Description\
+          \ </p>\n<p>Since cloud Virtual Machine (VM) images are restricted in size,\
+          \ it is not possible to have a generic image containing all the different\
+          \ application software that is available on high-performance computing (HPC)\
+          \ systems, such as eResearchSA's <a href=\"https://www.ersa.edu.au/tizard/\"\
+          >Tizard supercomputer</a>. Users have therefore needed to find VM images\
+          \ that contain the software they need, or install it themselves. </p>\n\
+          <p><a href=\"https://www.ersa.edu.au/\">eResearchSA</a> has deployed a distributed\
+          \ software repository that enables cloud virtual machines to easily access\
+          \ all the software applications that are available on the Tizard supercomputer.\
+          \ Users can run any of this software on the cloud virtual machine, just\
+          \ as they can on Tizard.</p>\n<p>This service is designed for:</p>\n<ul>\n\
+          <li>Researchers who want to use cloud virtual machines to run compute-intensive\
+          \ software applications</li>\n<li>Situations where a single virtual machine\
+          \ image containing all the required software is not available, and the researcher\
+          \ does not want to install the software themselves.</li>\n<li>This service\
+          \ is currently only available for South Australian users as it uses the\
+          \ eResearch SA software repository.</li>\n</ul>\n<h2>CVMFS</h2>\n<p>The\
+          \ system makes use of a read-only, http-based distributed virtual file system\
+          \ called the <a href=\"http://cernvm.cern.ch/portal/startcvmfs\">CERN VM\
+          \ File System</a> (CVMFS), which CERN developed to enable researchers to\
+          \ access their standard software packages at many sites around the world.\
           \ eRSA has set up a CVMFS server that provides access to a repository of\
           \ all the open-source software that is installed on eRSA's HPC systems,\
           \ and a NeCTAR cloud virtual machine image that contains a CVMFS client\
@@ -15928,17 +15926,17 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 19
+        hits: 20
         id: 6000090905
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-30T19:42:05-05:00'
+        modified_at: '2015-11-30T20:00:04-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000090905
-        position: 1
+        position: 2
         seo_data: {}
         status: 2
         string_01: null
@@ -15947,57 +15945,56 @@
         thumbs_down: 0
         thumbs_up: 0
         title: eRSA Cloud Software Repository - user guide
-        updated_at: '2015-11-30T19:42:05-05:00'
+        updated_at: '2015-11-30T20:00:04-05:00'
         user_id: 6002464727
-  html: "<h1>User Guide for the Cloud Software Repository  <a name=\"top\"></a></h1>\n\
-    <h2>SA node service for users in South Australia</h2>\n<ul>\n<li><a href=\"#intro\"\
-    >Introduction</a></li>\n<li><a href=\"#alloc\">Cloud allocation</a></li>\n<li><a\
-    \ href=\"#setup\">Contact eRSA to obtain the image ID</a></li>\n<li><a href=\"\
-    #security\">Creating a security group</a></li>\n<li><a href=\"#instance\">Launching\
-    \ an instance</a></li>\n<li><a href=\"#modules\">Loading the pre-installed software\
-    \ packages</a></li>\n<li><a href=\"#transferfiles\">Sharing files with the virtual\
-    \ machine</a></li>\n<li><a href=\"#os\">The CentOS operating system</a></li>\n\
-    <li><a href=\"#glossary\">Glossary of Terms</a> </li>\n</ul>\n<hr>\n<h2>Introduction\
-    \ <a name=\"intro\"></a></h2>\n<p>Description </p>\n<p>Since cloud Virtual Machine\
-    \ (VM) images are restricted in size, it is not possible to have a generic image\
-    \ containing all the different application software that is available on high-performance\
-    \ computing (HPC) systems, such as eResearchSA's <a href=\"https://www.ersa.edu.au/tizard/\"\
-    >Tizard supercomputer</a>. Users have therefore needed to find VM images that\
-    \ contain the software they need, or install it themselves. </p>\n<p><a href=\"\
-    https://www.ersa.edu.au/\">eResearchSA</a> has deployed a distributed software\
-    \ repository that enables cloud virtual machines to easily access all the software\
-    \ applications that are available on the Tizard supercomputer. Users can run any\
-    \ of this software on the cloud virtual machine, just as they can on Tizard.</p>\n\
-    <p>This service is designed for:</p>\n<ul>\n<li>Researchers who want to use cloud\
-    \ virtual machines to run compute-intensive software applications</li>\n<li>Situations\
-    \ where a single virtual machine image containing all the required software is\
-    \ not available, and the researcher does not want to install the software themselves.</li>\n\
-    <li>This service is currently only available for South Australian users as it\
-    \ uses the eResearch SA software repository.</li>\n</ul>\n<h2>CVMFS</h2>\n<p>The\
-    \ system makes use of a read-only, http-based distributed virtual file system\
-    \ called the <a href=\"http://cernvm.cern.ch/portal/startcvmfs\">CERN VM File\
-    \ System</a> (CVMFS), which CERN developed to enable researchers to access their\
-    \ standard software packages at many sites around the world. eRSA has set up a\
-    \ CVMFS server that provides access to a repository of all the open-source software\
-    \ that is installed on eRSA's HPC systems, and a NeCTAR cloud virtual machine\
-    \ image that contains a CVMFS client that can access the software in the repository.\
-    \ </p>\n<p>When a user runs a software application on the cloud virtual machine,\
-    \ the software is automatically downloaded from the CVMFS repository and stored\
-    \ locally on the VM. The next time the same software is used, CVMFS uses the local\
-    \ copy of the software so it will start up faster, without having to wait for\
-    \ the download.</p>\n<p>For the user, this all happens transparently, it appears\
-    \ as though all the application software is installed on the cloud virtual machine.</p>\n\
-    <p><a href=\"#glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n\
-    <hr>\n<h2>Register for an eRSA account</h2>\n<p>To access the eRSA cloud software\
-    \ repository, you will need to be [registered with eResearchSA].  Email the [eRSA\
-    \ Helpdesk][ServiceDesk] with any queries.</p>\n<hr>\n<p><a name=\"alloc\"></a></p>\n\
-    <h2>Getting a Project Allocation</h2>\n<p>Researchers will by default have a trial\
-    \ allocation on NeCTAR (project name pt-XXXXX; 2 cores for 3 months).</p>\n<p>You\
-    \ will need to request a project allocation for further resources if:</p>\n<ul>\n\
-    <li>you require more computing power or longer term usage</li>\n<li>you wish to\
-    \ share cloud computing resources with your research group</li>\n</ul>\n<p>Log\
-    \ in to the <a href=\"https://dashboard.rc.nectar.org.au/project/request/\">NeCTAR\
-    \ dashboard</a> and click on <strong>New Request</strong> under <strong>Allocations</strong>\
+  html: "<p><a name=\"top\"></a></p>\n<h2>SA node service for users in South Australia</h2>\n\
+    <ul>\n<li><a href=\"#intro\">Introduction</a></li>\n<li><a href=\"#alloc\">Cloud\
+    \ allocation</a></li>\n<li><a href=\"#setup\">Contact eRSA to obtain the image\
+    \ ID</a></li>\n<li><a href=\"#security\">Creating a security group</a></li>\n\
+    <li><a href=\"#instance\">Launching an instance</a></li>\n<li><a href=\"#modules\"\
+    >Loading the pre-installed software packages</a></li>\n<li><a href=\"#transferfiles\"\
+    >Sharing files with the virtual machine</a></li>\n<li><a href=\"#os\">The CentOS\
+    \ operating system</a></li>\n<li><a href=\"#glossary\">Glossary of Terms</a> </li>\n\
+    </ul>\n<hr>\n<h2>Introduction <a name=\"intro\"></a></h2>\n<p>Description </p>\n\
+    <p>Since cloud Virtual Machine (VM) images are restricted in size, it is not possible\
+    \ to have a generic image containing all the different application software that\
+    \ is available on high-performance computing (HPC) systems, such as eResearchSA's\
+    \ <a href=\"https://www.ersa.edu.au/tizard/\">Tizard supercomputer</a>. Users\
+    \ have therefore needed to find VM images that contain the software they need,\
+    \ or install it themselves. </p>\n<p><a href=\"https://www.ersa.edu.au/\">eResearchSA</a>\
+    \ has deployed a distributed software repository that enables cloud virtual machines\
+    \ to easily access all the software applications that are available on the Tizard\
+    \ supercomputer. Users can run any of this software on the cloud virtual machine,\
+    \ just as they can on Tizard.</p>\n<p>This service is designed for:</p>\n<ul>\n\
+    <li>Researchers who want to use cloud virtual machines to run compute-intensive\
+    \ software applications</li>\n<li>Situations where a single virtual machine image\
+    \ containing all the required software is not available, and the researcher does\
+    \ not want to install the software themselves.</li>\n<li>This service is currently\
+    \ only available for South Australian users as it uses the eResearch SA software\
+    \ repository.</li>\n</ul>\n<h2>CVMFS</h2>\n<p>The system makes use of a read-only,\
+    \ http-based distributed virtual file system called the <a href=\"http://cernvm.cern.ch/portal/startcvmfs\"\
+    >CERN VM File System</a> (CVMFS), which CERN developed to enable researchers to\
+    \ access their standard software packages at many sites around the world. eRSA\
+    \ has set up a CVMFS server that provides access to a repository of all the open-source\
+    \ software that is installed on eRSA's HPC systems, and a NeCTAR cloud virtual\
+    \ machine image that contains a CVMFS client that can access the software in the\
+    \ repository. </p>\n<p>When a user runs a software application on the cloud virtual\
+    \ machine, the software is automatically downloaded from the CVMFS repository\
+    \ and stored locally on the VM. The next time the same software is used, CVMFS\
+    \ uses the local copy of the software so it will start up faster, without having\
+    \ to wait for the download.</p>\n<p>For the user, this all happens transparently,\
+    \ it appears as though all the application software is installed on the cloud\
+    \ virtual machine.</p>\n<p><a href=\"#glossary\">Glossary of Terms</a> <br>\n\
+    <a href=\"#top\">Top of page</a></p>\n<hr>\n<h2>Register for an eRSA account</h2>\n\
+    <p>To access the eRSA cloud software repository, you will need to be [registered\
+    \ with eResearchSA].  Email the [eRSA Helpdesk][ServiceDesk] with any queries.</p>\n\
+    <hr>\n<p><a name=\"alloc\"></a></p>\n<h2>Getting a Project Allocation</h2>\n<p>Researchers\
+    \ will by default have a trial allocation on NeCTAR (project name pt-XXXXX; 2\
+    \ cores for 3 months).</p>\n<p>You will need to request a project allocation for\
+    \ further resources if:</p>\n<ul>\n<li>you require more computing power or longer\
+    \ term usage</li>\n<li>you wish to share cloud computing resources with your research\
+    \ group</li>\n</ul>\n<p>Log in to the <a href=\"https://dashboard.rc.nectar.org.au/project/request/\"\
+    >NeCTAR dashboard</a> and click on <strong>New Request</strong> under <strong>Allocations</strong>\
     \ in the left hand side menu. Email the <a href=\"mailto:servicedesk@ersa.edu.au\"\
     >eRSA Helpdesk</a> if you have questions about any of the information in the form.\
     \ New requests can take a couple of weeks to process, and allocations are merit-based.</p>\n\
@@ -16208,7 +16205,7 @@
     \ FAQ - general inormation</a><br>\nFor more help, contact the <a href=\"mailto:servicedesk@ersa.edu.au\"\
     >eRSA Helpdesk</a></p>\n<p><a href=\"#top\">Top of page</a></p>"
   parent: 24
-  sha1: 312382a624a5f64351ebebf0ac81c9fc5ee7af9a
+  sha1: 8cd94a617ddb1393c793efdab7bec35a8464d4f7
   title: eRSA Cloud Software Repository - user guide
 90:
   freshdesk:
@@ -18891,57 +18888,56 @@
         created_at: '2015-11-30T19:44:05-05:00'
         datetime_01: null
         delta: true
-        desc_un_html: " Emu Cluster in the Cloud - User Guide \n SA node service for\
-          \ users in South Australia \n \n About \n Differences in the cloud \n Cloud\
-          \ vs HPC - which is better for my job? \n Register for an eRSA account \n\
-          \ Emu submit node \n Connecting to Emu \n Windows Users \n Mac and Linux\
-          \ Users \n Storage \n General information on using eRSA Supercomputers \n\
-          \ Exploring the available software \n Submitting your job \n Transfer files\
-          \ with SCP and SFTP \n Using your own cloud allocation \n The Name \n Appendices\
-          \ \n An example Torque submission script \n Converting a tizard submission\
-          \ script for Emu \n A quick guide to copying files from eRSA '/data' storage\
-          \ \n Glossary \n \n \n About \n Emu is a cluster that is designed to be\
-          \ similar to eRSA's Tizard supercomputer, but makes use of the Australian\
-          \ Research Cloud. \nThe Emu cluster-in-the-cloud is managed by eRSA and\
-          \ provides a shared service for eRSA users who don't have a resource allocation\
-          \ on the national cloud or don't have the expertise to set up and manage\
-          \ a private cluster-in-the-cloud using StarCluster. \n Emu currently consists\
-          \ of 136 processing cores, with an eight-core machine for the head node\
-          \ and 16 worker nodes to run jobs. Each node has eight cores, 32GB RAM and\
-          \ 240GB of local disk. The cluster uses the same job management system (Torque)\
-          \ and eRSA user accounts that are used on Tizard (and previously on Corvus).\
-          \ The cluster has access to the same repository of software packages as\
-          \ \n This service is designed for: \n \n South Australian researchers who\
-          \ want to run compute-intensive software applications in the cloud without\
-          \ the set-up involved in managing a virtual machine. \n Registered eRSA\
-          \ users familiar with Tizard HPC services, who would like to use their NeCTAR\
-          \ allocation to have their own node rather than share nodes with other users.\
-          \ \n \n \n Differences in the cloud \n Due to technical constraints and\
-          \ security policies, we are unable to replicate everything in a traditional\
-          \ HPC cluster (such as Tizard) on the cloud. However, we aim to provide,\
-          \ as much as possible, a seamless experience for users in switching from\
-          \ a traditional HPC cluster to the cluster-in-the-cloud approach. \n \n\
-          \ Users employ the same eRSA account to log into Emu and the home directory\
-          \ on Emu will be the same as on Tizard. However, the '/data' storage is\
-          \ not automatically available. Email the eRSA service desk and it may be\
-          \ arranged for the '/data' disk to be made available through Emu. Otherwise,\
-          \ data can be transferred using scp or sftp between '/data' and the cloud.\
-          \ \n The worker nodes in Emu are dynamic, which means they will be launched\
-          \ when there are pending jobs, and shut down when nodes are idle. Users\
-          \ may see a different number of worker nodes at different times when they\
-          \ check the status of the cluster. \n Currently there is no wall-time restriction\
-          \ in Emu. \n In the cloud, there is 4G memory allocated per core. So, if\
-          \ someone requests one core and 8GB memory for a job, it will be a waste.\
-          \ For such jobs it is recommended to run on the Tizard CPU cluster or big\
-          \ memory nodes. On Emu, users don't need to put the memory requirement in\
-          \ the job description file as the core/memory ratio is set by default. \n\
-          \ The same set of applications are available as for Tizard, however licensed\
-          \ software may not be functional in the cloud. Please contact our Service\
-          \ Desk if you need to run licensed software. \n \n Glossary of Terms  \n\
-          Top of page \n \n \n Cloud vs HPC \n There are some differences between\
-          \ a cluster in the cloud and an HPC cluster, such as Tizard, which has more\
-          \ processors and memory on each node, and a faster communication network\
-          \ between the nodes. Some types of computation that run on HPC clusters\
+        desc_un_html: " \n SA node service for users in South Australia \n \n About\
+          \ \n Differences in the cloud \n Cloud vs HPC - which is better for my job?\
+          \ \n Register for an eRSA account \n Emu submit node \n Connecting to Emu\
+          \ \n Windows Users \n Mac and Linux Users \n Storage \n General information\
+          \ on using eRSA Supercomputers \n Exploring the available software \n Submitting\
+          \ your job \n Transfer files with SCP and SFTP \n Using your own cloud allocation\
+          \ \n The Name \n Appendices \n An example Torque submission script \n Converting\
+          \ a tizard submission script for Emu \n A quick guide to copying files from\
+          \ eRSA '/data' storage \n Glossary \n \n \n About \n Emu is a cluster that\
+          \ is designed to be similar to eRSA's Tizard supercomputer, but makes use\
+          \ of the Australian Research Cloud. \nThe Emu cluster-in-the-cloud is managed\
+          \ by eRSA and provides a shared service for eRSA users who don't have a\
+          \ resource allocation on the national cloud or don't have the expertise\
+          \ to set up and manage a private cluster-in-the-cloud using StarCluster.\
+          \ \n Emu currently consists of 136 processing cores, with an eight-core\
+          \ machine for the head node and 16 worker nodes to run jobs. Each node has\
+          \ eight cores, 32GB RAM and 240GB of local disk. The cluster uses the same\
+          \ job management system (Torque) and eRSA user accounts that are used on\
+          \ Tizard (and previously on Corvus). The cluster has access to the same\
+          \ repository of software packages as \n This service is designed for: \n\
+          \ \n South Australian researchers who want to run compute-intensive software\
+          \ applications in the cloud without the set-up involved in managing a virtual\
+          \ machine. \n Registered eRSA users familiar with Tizard HPC services, who\
+          \ would like to use their NeCTAR allocation to have their own node rather\
+          \ than share nodes with other users. \n \n \n Differences in the cloud \n\
+          \ Due to technical constraints and security policies, we are unable to replicate\
+          \ everything in a traditional HPC cluster (such as Tizard) on the cloud.\
+          \ However, we aim to provide, as much as possible, a seamless experience\
+          \ for users in switching from a traditional HPC cluster to the cluster-in-the-cloud\
+          \ approach. \n \n Users employ the same eRSA account to log into Emu and\
+          \ the home directory on Emu will be the same as on Tizard. However, the\
+          \ '/data' storage is not automatically available. Email the eRSA service\
+          \ desk and it may be arranged for the '/data' disk to be made available\
+          \ through Emu. Otherwise, data can be transferred using scp or sftp between\
+          \ '/data' and the cloud. \n The worker nodes in Emu are dynamic, which means\
+          \ they will be launched when there are pending jobs, and shut down when\
+          \ nodes are idle. Users may see a different number of worker nodes at different\
+          \ times when they check the status of the cluster. \n Currently there is\
+          \ no wall-time restriction in Emu. \n In the cloud, there is 4G memory allocated\
+          \ per core. So, if someone requests one core and 8GB memory for a job, it\
+          \ will be a waste. For such jobs it is recommended to run on the Tizard\
+          \ CPU cluster or big memory nodes. On Emu, users don't need to put the memory\
+          \ requirement in the job description file as the core/memory ratio is set\
+          \ by default. \n The same set of applications are available as for Tizard,\
+          \ however licensed software may not be functional in the cloud. Please contact\
+          \ our Service Desk if you need to run licensed software. \n \n Glossary\
+          \ of Terms  \nTop of page \n \n \n Cloud vs HPC \n There are some differences\
+          \ between a cluster in the cloud and an HPC cluster, such as Tizard, which\
+          \ has more processors and memory on each node, and a faster communication\
+          \ network between the nodes. Some types of computation that run on HPC clusters\
           \ are suitable for running in the cloud, and the cluster-in-the-cloud approach\
           \ should work well for those. \n \n Any eRSA user can use Emu, you don't\
           \ need to have a cloud resource allocation  \n If your research group has\
@@ -19161,28 +19157,28 @@
           \ allocation you can have persistent volume storage attached to your VM.\
           \ \n \n Full NeCTAR Glossary Page \nNeCTAR FAQ - general inormation \nFor\
           \ more help, contact the eRSA Helpdesk \n Top of page "
-        description: "<h1>Emu Cluster in the Cloud - User Guide</h1>\n<h2>SA node\
-          \ service for users in South Australia</h2>\n<ul>\n<li><a href=\"#about\"\
-          >About</a></li>\n<li><a href=\"#differences-in-the-cloud\">Differences in\
-          \ the cloud</a></li>\n<li><a href=\"#cloud-vs-hpc---which-is-better-for-my-job\"\
-          >Cloud vs HPC - which is better for my job?</a></li>\n<li><a href=\"#register\"\
-          >Register for an eRSA account</a></li>\n<li><a href=\"#emu-head-node\">Emu\
-          \ submit node</a></li>\n<li><a href=\"#connecting-to-emu\">Connecting to\
-          \ Emu</a></li>\n<li><a href=\"#windows-users\">Windows Users</a></li>\n\
-          <li><a href=\"#mac-users\">Mac and Linux Users</a></li>\n<li><a href=\"\
-          #storage\">Storage</a></li>\n<li><a href=\"#general-information-on-using-ersa-supercomputers\"\
-          >General information on using eRSA Supercomputers</a></li>\n<li><a href=\"\
-          #modules\">Exploring the available software</a></li>\n<li><a href=\"#torquepbs\"\
-          >Submitting your job</a></li>\n<li><a href=\"#transfer\">Transfer files\
-          \ with SCP and SFTP</a></li>\n<li><a href=\"#cloud-allocation\">Using your\
-          \ own cloud allocation</a></li>\n<li><a href=\"#the-name\">The Name</a></li>\n\
-          <li><a href=\"#appendix\">Appendices</a></li>\n<li><a href=\"#example\"\
-          >An example Torque submission script</a></li>\n<li><a href=\"#convert\"\
-          >Converting a tizard submission script for Emu</a></li>\n<li><a href=\"\
-          #app1\">A quick guide to copying files from eRSA '/data' storage</a></li>\n\
-          <li><a href=\"#glossary\">Glossary</a></li>\n</ul>\n<p><a name=\"about\"\
-          ></a></p>\n<h2>About</h2>\n<p>Emu is a cluster that is designed to be similar\
-          \ to eRSA's Tizard supercomputer, but makes use of the <a href=\"http://www.nectar.org.au/research-cloud/\"\
+        description: "<p><a name=\"top\"></a></p>\n<h2>SA node service for users in\
+          \ South Australia</h2>\n<ul>\n<li><a href=\"#about\">About</a></li>\n<li><a\
+          \ href=\"#differences-in-the-cloud\">Differences in the cloud</a></li>\n\
+          <li><a href=\"#cloud-vs-hpc---which-is-better-for-my-job\">Cloud vs HPC\
+          \ - which is better for my job?</a></li>\n<li><a href=\"#register\">Register\
+          \ for an eRSA account</a></li>\n<li><a href=\"#emu-head-node\">Emu submit\
+          \ node</a></li>\n<li><a href=\"#connecting-to-emu\">Connecting to Emu</a></li>\n\
+          <li><a href=\"#windows-users\">Windows Users</a></li>\n<li><a href=\"#mac-users\"\
+          >Mac and Linux Users</a></li>\n<li><a href=\"#storage\">Storage</a></li>\n\
+          <li><a href=\"#general-information-on-using-ersa-supercomputers\">General\
+          \ information on using eRSA Supercomputers</a></li>\n<li><a href=\"#modules\"\
+          >Exploring the available software</a></li>\n<li><a href=\"#torquepbs\">Submitting\
+          \ your job</a></li>\n<li><a href=\"#transfer\">Transfer files with SCP and\
+          \ SFTP</a></li>\n<li><a href=\"#cloud-allocation\">Using your own cloud\
+          \ allocation</a></li>\n<li><a href=\"#the-name\">The Name</a></li>\n<li><a\
+          \ href=\"#appendix\">Appendices</a></li>\n<li><a href=\"#example\">An example\
+          \ Torque submission script</a></li>\n<li><a href=\"#convert\">Converting\
+          \ a tizard submission script for Emu</a></li>\n<li><a href=\"#app1\">A quick\
+          \ guide to copying files from eRSA '/data' storage</a></li>\n<li><a href=\"\
+          #glossary\">Glossary</a></li>\n</ul>\n<p><a name=\"about\"></a></p>\n<h2>About</h2>\n\
+          <p>Emu is a cluster that is designed to be similar to eRSA's Tizard supercomputer,\
+          \ but makes use of the <a href=\"http://www.nectar.org.au/research-cloud/\"\
           >Australian Research Cloud</a>. \nThe Emu cluster-in-the-cloud is managed\
           \ by eRSA and provides a shared service for eRSA users who don't have a\
           \ resource allocation on the national cloud or don't have the expertise\
@@ -19526,17 +19522,17 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 1
         id: 6000092805
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-30T19:44:05-05:00'
+        modified_at: '2015-11-30T20:00:02-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000092805
-        position: 9
+        position: 1
         seo_data: {}
         status: 2
         string_01: null
@@ -19545,71 +19541,70 @@
         thumbs_down: 0
         thumbs_up: 0
         title: eRSA Emu Cluster in the Cloud - user guide
-        updated_at: '2015-11-30T19:44:05-05:00'
+        updated_at: '2015-11-30T20:00:02-05:00'
         user_id: 6002464727
-  html: "<h1>Emu Cluster in the Cloud - User Guide</h1>\n<h2>SA node service for users\
-    \ in South Australia</h2>\n<ul>\n<li><a href=\"#about\">About</a></li>\n<li><a\
-    \ href=\"#differences-in-the-cloud\">Differences in the cloud</a></li>\n<li><a\
-    \ href=\"#cloud-vs-hpc---which-is-better-for-my-job\">Cloud vs HPC - which is\
-    \ better for my job?</a></li>\n<li><a href=\"#register\">Register for an eRSA\
-    \ account</a></li>\n<li><a href=\"#emu-head-node\">Emu submit node</a></li>\n\
-    <li><a href=\"#connecting-to-emu\">Connecting to Emu</a></li>\n<li><a href=\"\
-    #windows-users\">Windows Users</a></li>\n<li><a href=\"#mac-users\">Mac and Linux\
-    \ Users</a></li>\n<li><a href=\"#storage\">Storage</a></li>\n<li><a href=\"#general-information-on-using-ersa-supercomputers\"\
-    >General information on using eRSA Supercomputers</a></li>\n<li><a href=\"#modules\"\
-    >Exploring the available software</a></li>\n<li><a href=\"#torquepbs\">Submitting\
-    \ your job</a></li>\n<li><a href=\"#transfer\">Transfer files with SCP and SFTP</a></li>\n\
-    <li><a href=\"#cloud-allocation\">Using your own cloud allocation</a></li>\n<li><a\
-    \ href=\"#the-name\">The Name</a></li>\n<li><a href=\"#appendix\">Appendices</a></li>\n\
-    <li><a href=\"#example\">An example Torque submission script</a></li>\n<li><a\
-    \ href=\"#convert\">Converting a tizard submission script for Emu</a></li>\n<li><a\
-    \ href=\"#app1\">A quick guide to copying files from eRSA '/data' storage</a></li>\n\
-    <li><a href=\"#glossary\">Glossary</a></li>\n</ul>\n<p><a name=\"about\"></a></p>\n\
-    <h2>About</h2>\n<p>Emu is a cluster that is designed to be similar to eRSA's Tizard\
-    \ supercomputer, but makes use of the <a href=\"http://www.nectar.org.au/research-cloud/\"\
-    >Australian Research Cloud</a>. \nThe Emu cluster-in-the-cloud is managed by eRSA\
-    \ and provides a shared service for eRSA users who don't have a resource allocation\
-    \ on the national cloud or don't have the expertise to set up and manage a private\
-    \ cluster-in-the-cloud using <a href=\"star-cluster.html\">StarCluster</a>.</p>\n\
-    <p>Emu currently consists of 136 processing cores, with an eight-core machine\
-    \ for the head node and 16 worker nodes to run jobs. Each node has eight cores,\
-    \ 32GB RAM and 240GB of local disk. The cluster uses the same job management system\
-    \ (Torque) and eRSA user accounts that are used on Tizard (and previously on Corvus).\
-    \ The cluster has access to the same repository of software packages as</p>\n\
-    <p>This service is designed for:</p>\n<ul>\n<li>South Australian researchers who\
-    \ want to run compute-intensive software applications in the cloud without the\
-    \ set-up involved in managing a virtual machine.</li>\n<li>Registered eRSA users\
-    \ familiar with Tizard HPC services, who would like to use their NeCTAR allocation\
-    \ to have their own node rather than share nodes with other users.</li>\n</ul>\n\
-    <p><a name=\"differences-in-the-cloud\"></a></p>\n<h2>Differences in the cloud</h2>\n\
-    <p>Due to technical constraints and security policies, we are unable to replicate\
-    \ everything in a traditional HPC cluster (such as Tizard) on the cloud. However,\
-    \ we aim to provide, as much as possible, a seamless experience for users in switching\
-    \ from a traditional HPC cluster to the cluster-in-the-cloud approach.</p>\n<ul>\n\
-    <li>Users employ the same eRSA account to log into Emu and the home directory\
-    \ on Emu will be the same as on Tizard. However, the '/data' storage is not automatically\
-    \ available. Email the <a href=\"mailto:servicedesk@ersa.edu.au\">eRSA service\
-    \ desk</a> and it may be arranged for the '/data' disk to be made available through\
-    \ Emu. Otherwise, data can be <a href=\"#app1\">transferred using <strong>scp</strong>\
-    \ or <strong>sftp</strong></a> between '/data' and the cloud.</li>\n<li>The worker\
-    \ nodes in Emu are dynamic, which means they will be launched when there are pending\
-    \ jobs, and shut down when nodes are idle. Users may see a different number of\
-    \ worker nodes at different times when they check the status of the cluster.</li>\n\
-    <li>Currently there is no wall-time restriction in Emu.</li>\n<li>In the cloud,\
-    \ there is 4G memory allocated per core. So, if someone requests one core and\
-    \ 8GB memory for a job, it will be a waste. For such jobs it is recommended to\
-    \ run on the Tizard CPU cluster or big memory nodes. On Emu, users don't need\
-    \ to put the memory requirement in the job description file as the core/memory\
-    \ ratio is set by default.</li>\n<li>The same set of applications are available\
-    \ as for Tizard, however licensed software may not be functional in the cloud.\
-    \ Please contact our <a href=\"mailto:servicedesk@ersa.edu.au\">Service Desk</a>\
-    \ if you need to run licensed software.</li>\n</ul>\n<p><a href=\"#glossary\"\
-    >Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a\
-    \ name=\"cloud-vs-hpc---which-is-better-for-my-job\"></a></p>\n<h2>Cloud vs HPC</h2>\n\
-    <p>There are some differences between a cluster in the cloud and an HPC cluster,\
-    \ such as Tizard, which has more processors and memory on each node, and a faster\
-    \ communication network between the nodes. Some types of computation that run\
-    \ on HPC clusters are suitable for running in the cloud, and the cluster-in-the-cloud\
+  html: "<p><a name=\"top\"></a></p>\n<h2>SA node service for users in South Australia</h2>\n\
+    <ul>\n<li><a href=\"#about\">About</a></li>\n<li><a href=\"#differences-in-the-cloud\"\
+    >Differences in the cloud</a></li>\n<li><a href=\"#cloud-vs-hpc---which-is-better-for-my-job\"\
+    >Cloud vs HPC - which is better for my job?</a></li>\n<li><a href=\"#register\"\
+    >Register for an eRSA account</a></li>\n<li><a href=\"#emu-head-node\">Emu submit\
+    \ node</a></li>\n<li><a href=\"#connecting-to-emu\">Connecting to Emu</a></li>\n\
+    <li><a href=\"#windows-users\">Windows Users</a></li>\n<li><a href=\"#mac-users\"\
+    >Mac and Linux Users</a></li>\n<li><a href=\"#storage\">Storage</a></li>\n<li><a\
+    \ href=\"#general-information-on-using-ersa-supercomputers\">General information\
+    \ on using eRSA Supercomputers</a></li>\n<li><a href=\"#modules\">Exploring the\
+    \ available software</a></li>\n<li><a href=\"#torquepbs\">Submitting your job</a></li>\n\
+    <li><a href=\"#transfer\">Transfer files with SCP and SFTP</a></li>\n<li><a href=\"\
+    #cloud-allocation\">Using your own cloud allocation</a></li>\n<li><a href=\"#the-name\"\
+    >The Name</a></li>\n<li><a href=\"#appendix\">Appendices</a></li>\n<li><a href=\"\
+    #example\">An example Torque submission script</a></li>\n<li><a href=\"#convert\"\
+    >Converting a tizard submission script for Emu</a></li>\n<li><a href=\"#app1\"\
+    >A quick guide to copying files from eRSA '/data' storage</a></li>\n<li><a href=\"\
+    #glossary\">Glossary</a></li>\n</ul>\n<p><a name=\"about\"></a></p>\n<h2>About</h2>\n\
+    <p>Emu is a cluster that is designed to be similar to eRSA's Tizard supercomputer,\
+    \ but makes use of the <a href=\"http://www.nectar.org.au/research-cloud/\">Australian\
+    \ Research Cloud</a>. \nThe Emu cluster-in-the-cloud is managed by eRSA and provides\
+    \ a shared service for eRSA users who don't have a resource allocation on the\
+    \ national cloud or don't have the expertise to set up and manage a private cluster-in-the-cloud\
+    \ using <a href=\"star-cluster.html\">StarCluster</a>.</p>\n<p>Emu currently consists\
+    \ of 136 processing cores, with an eight-core machine for the head node and 16\
+    \ worker nodes to run jobs. Each node has eight cores, 32GB RAM and 240GB of local\
+    \ disk. The cluster uses the same job management system (Torque) and eRSA user\
+    \ accounts that are used on Tizard (and previously on Corvus). The cluster has\
+    \ access to the same repository of software packages as</p>\n<p>This service is\
+    \ designed for:</p>\n<ul>\n<li>South Australian researchers who want to run compute-intensive\
+    \ software applications in the cloud without the set-up involved in managing a\
+    \ virtual machine.</li>\n<li>Registered eRSA users familiar with Tizard HPC services,\
+    \ who would like to use their NeCTAR allocation to have their own node rather\
+    \ than share nodes with other users.</li>\n</ul>\n<p><a name=\"differences-in-the-cloud\"\
+    ></a></p>\n<h2>Differences in the cloud</h2>\n<p>Due to technical constraints\
+    \ and security policies, we are unable to replicate everything in a traditional\
+    \ HPC cluster (such as Tizard) on the cloud. However, we aim to provide, as much\
+    \ as possible, a seamless experience for users in switching from a traditional\
+    \ HPC cluster to the cluster-in-the-cloud approach.</p>\n<ul>\n<li>Users employ\
+    \ the same eRSA account to log into Emu and the home directory on Emu will be\
+    \ the same as on Tizard. However, the '/data' storage is not automatically available.\
+    \ Email the <a href=\"mailto:servicedesk@ersa.edu.au\">eRSA service desk</a> and\
+    \ it may be arranged for the '/data' disk to be made available through Emu. Otherwise,\
+    \ data can be <a href=\"#app1\">transferred using <strong>scp</strong> or <strong>sftp</strong></a>\
+    \ between '/data' and the cloud.</li>\n<li>The worker nodes in Emu are dynamic,\
+    \ which means they will be launched when there are pending jobs, and shut down\
+    \ when nodes are idle. Users may see a different number of worker nodes at different\
+    \ times when they check the status of the cluster.</li>\n<li>Currently there is\
+    \ no wall-time restriction in Emu.</li>\n<li>In the cloud, there is 4G memory\
+    \ allocated per core. So, if someone requests one core and 8GB memory for a job,\
+    \ it will be a waste. For such jobs it is recommended to run on the Tizard CPU\
+    \ cluster or big memory nodes. On Emu, users don't need to put the memory requirement\
+    \ in the job description file as the core/memory ratio is set by default.</li>\n\
+    <li>The same set of applications are available as for Tizard, however licensed\
+    \ software may not be functional in the cloud. Please contact our <a href=\"mailto:servicedesk@ersa.edu.au\"\
+    >Service Desk</a> if you need to run licensed software.</li>\n</ul>\n<p><a href=\"\
+    #glossary\">Glossary of Terms</a> <br>\n<a href=\"#top\">Top of page</a></p>\n\
+    <hr>\n<p><a name=\"cloud-vs-hpc---which-is-better-for-my-job\"></a></p>\n<h2>Cloud\
+    \ vs HPC</h2>\n<p>There are some differences between a cluster in the cloud and\
+    \ an HPC cluster, such as Tizard, which has more processors and memory on each\
+    \ node, and a faster communication network between the nodes. Some types of computation\
+    \ that run on HPC clusters are suitable for running in the cloud, and the cluster-in-the-cloud\
     \ approach should work well for those.</p>\n<ul>\n<li>Any eRSA user can use Emu,\
     \ you don't need to have a cloud resource allocation </li>\n<li>If your research\
     \ group has a cloud allocation, you can use it on Emu, so it's like having a private\
@@ -19874,5 +19869,5 @@
     mailto:servicedesk@ersa.edu.au\">eRSA Helpdesk</a></p>\n<p><a href=\"#top\">Top\
     \ of page</a></p>"
   parent: 24
-  sha1: 4ccc83bd380659c631163cdc6dd58ce12c53cbcc
+  sha1: 2517bac240c7b107be86f42b63dab67526177c4c
   title: eRSA Emu Cluster in the Cloud - user guide
