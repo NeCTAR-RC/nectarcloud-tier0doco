@@ -1,5 +1,6 @@
 
 - [Introduction](#intro)
+- [Software and packages in the image](#image)
 - [What you need](#need)
 - [Launch a Virtual Machine With TPAC Matlab image](#launch)
 - [Use Matlab in MATE Desktop](#desktop)
