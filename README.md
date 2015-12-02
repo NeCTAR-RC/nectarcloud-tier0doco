@@ -212,6 +212,10 @@ happen.
 You can rename an article by changing the filename, but do still leave the
 --DOCID alone.
 
+If you need to resubmit an article after a gerritt reset, remove the DOCID from the article title, the article will need to be submitted as a new article after a reset.
+
+Approvers: Never merge a new article that has a DOCID already in the title (it makes docobot have a tantrum).
+
 ##### Making some changes <a name='Making'></a>
 
 We use the branching feature of git to keep your changes separate from
