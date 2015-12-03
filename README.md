@@ -86,6 +86,9 @@ Initially you will need to install (or have access to) the following tools;
 - The git plugin for Gerrit [git-review](https://www.mediawiki.org/wiki/Gerrit/git-review)
 
 - a launchpad id to authenticate yourself to Gerrit
+  - [launchpad login](https://login.launchpad.net/)
+  - [Gerrit login](https://review.rc.nectar.org.au/login)
+  - Email [Sam Morrison](mailto:sam.morrison@unimelb.edu.au) or [Sarah Nisbet](mailto:sarah.nisbet@ersa.edu.au) with your git username to be added to the teir0 doco project. 
 
 - email, text editors and other such things.
 
@@ -212,7 +215,7 @@ happen.
 You can rename an article by changing the filename, but do still leave the
 --DOCID alone.
 
-If you need to resubmit an article after a gerritt reset, remove the DOCID from the article title, the article will need to be submitted as a new article after a reset.
+If you need to resubmit an article after a gerrit reset, remove the DOCID from the article title, the article will need to be submitted as a new article after a reset.
 
 Approvers: Never merge a new article that has a DOCID already in the title (it makes docobot have a tantrum).
 
@@ -250,7 +253,7 @@ a # to the start of a line in markdown makes that line appear as a heading;
 
 There are heaps and heaps of ways of controlling the look and feel of your
 content via markdown.  But Jenkins (we'll talk about him later) will be quite
-fussy about how your format your markdown.  So wile the best bet is to review
+fussy about how your format your markdown.  So while the best bet is to review
 the official documentation on [github flavoured markdown](https://help.github.com/articles/github-flavored-markdown/).
 just be aware, that what you produce will be tightly controlled by Jenkins.
 
@@ -279,6 +282,8 @@ simple as
 
 And then I simply point my web browser at [http://localhost:6419/](http://localhost:6419/)
 and voila, there's my markdown rendered into html.
+
+You can also find tools such as web browser plugins that will render markdown documents (e.g. [Chrome extension "Markdown Preview](https://chrome.google.com/webstore/detail/markdown-preview/jmchmkecamhbiokiopfpnfgbidieafmd?utm_source=chrome-app-launcher-info-dialog)
 
 ##### The NeCTAR style guide <a name='style'></a>
 
@@ -395,6 +400,8 @@ You'll need to fix each of those and when Jenkins finally accepts your change
 (see amending changes below), Jenkins will automatically vote (or +1) your
 commit.
 
+  Jenkins will often fail a document without giving any reasons. Using the following ruby-gem markdown lint style checker (mdl) will give you the reasons when Jenkins won't. It is a real timesaving tool!
+
 Note; if you want to get really clever, you can install mdl - the same markdown
 parsing tool that Jenkins uses - that way you don't need to bother Jenkins for
 markdown related issues.  You'll probably need ubuntu for this;
@@ -414,6 +421,9 @@ Once your markdown is clean, then do your `git commit --amend`
 
 If you do decide to use mdl locally, there is a file in the root directory of the project named `md_style.rb`
 with rules that match those applied by Jenkins. There are further instructions in the file on how to use it.
+
+This works for me (JoeyGerlach):
+`mdl -s ~/nectarcloud-tier0doco/md_style.rb <filename>`
 
 #### Getting Changes accepted <a name='Getting'></a>
 
