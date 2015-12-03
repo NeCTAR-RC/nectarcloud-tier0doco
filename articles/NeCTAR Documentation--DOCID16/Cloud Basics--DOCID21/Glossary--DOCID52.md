@@ -269,6 +269,9 @@ memory, number of VCPUs and ephemeral disc size.
 
 **Globus GridFTP** - A data transfer protocol for high bandwidth wide area networks.
 
+**Gnocchi** - Gnocchi is an OpenStack project that provides a TDBaaS 
+(Time Series Database as a Service).
+
 **GNU** - Stands for "GNU is Not Unix".  Originally a project that aimed to provide a
 complete open-source replacement for the (proprietary) AT&T Unix operating
 system.  GNU now focus mostly on things "above the kernel".
