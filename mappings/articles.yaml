@@ -21877,3 +21877,379 @@
   parent: 44
   sha1: cdc5cd37a3ca0b9c9d285716b7d55320585e86ce
   title: Introduction
+100:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-12-02T19:33:41-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Bioinformatics Training Platform (BTP) User Guide \n Introduction\
+          \ \n Monash eResearch Centre have been partnering with Bioplatforms\nAustralia\
+          \ (BPA) and CSIRO for delivering hands-on bioinformatics workshops to Australian\
+          \ researchers. This partnership started back in 2012 when the first next-generation\
+          \ sequencing workshop was delivered at Monash University. The Bioinformatics\
+          \ Training Platform (BTP) has been developed as a broadly accessible solution\
+          \ for delivering these workshops using cloud computing infrastructures and\
+          \ addressing the increasing demand for training workshops in Australia.\
+          \ \n The standard NGS workshop delivered by BPA and CSIRO is composed of\
+          \ a number of training modules. Each training module is composed of the\
+          \ following components: analysis tools, datasets and training materials.\
+          \ The analysis tools are essential to a hands-on bioinformatics workshop\
+          \ as it teaches scientists how such tools are used to interrogate and interpret\
+          \ results. Most of the analysis tools used by the BTP are open source and\
+          \ easily accessible on various platforms. The BTP maintains these analysis\
+          \ tools on BPA-CSIRO GitHub Project. To support the hands-on bioinformatics\
+          \ workshop, analysis and reference datasets are used together for analysis.\
+          \ Datasets are stored and managed on the NeCTAR object storage service.\
+          \ The training materials (presentations and handouts) are also developed\
+          \ and maintained as part of the BTP. A high level overview of the BTP architecture\
+          \ is show below: \n \n A workshop is composed of a number of training modules.\
+          \ Each training module has an associated tools and datasets metadata. These\
+          \ metadata are used by the orchestration system for automation of tools\
+          \ installation during BTP image creation and datasets syncing during BTP\
+          \ instance deployments. \n \n Components \n The BTP as a solution is composed\
+          \ of a number of components: Analysis Tools, Datasets and Training Materials.\
+          \ A brief summary of each one are included below. \n Analysis Tools \n Analysis\
+          \ tools are essential for delivering hands-on training workshops.\nThe BTP\
+          \ teaches trainees how these tools can be used to help interrogate and interpret\
+          \ their analysis results. Most of these analysis tools are available as\
+          \ stand alone executables while others have to be built from source. The\
+          \ most common analysis tools used and packaged in the BTP are listed in\
+          \ the table below: \n\n\n\nTools\nFunction\n\n\n\n\nAMOS Hawkeye\nGenome\
+          \ data visualization\n\n\nBEDTools\nGenome data manipulation\n\n\nBLAT\n\
+          Sequence location lookup in the genome\n\n\nBowtie\nRead Alignment\n\n\n\
+          CummeRbund\nRNA-Seq analysis using R\n\n\nCufflinks\nRNA-Seq analysis\n\n\
+          \nDESeq2\nDifferential gene expression analysis using R\n\n\nedgeR\nEmpirical\
+          \ gene expression analysis using R\n\n\nFastQC\nFastQC\n\n\nFASTX\nToolkit\
+          \ for short reads preprocessing\n\n\nIGV\nInteractive exploration of genomic\
+          \ data\n\n\nigvtools\nPreprocessing of data before loading to IGV\n\n\n\
+          MACS\nChIP-Seq analysis\n\n\nMUMmer\nRapid genome alignment, a dependency\
+          \ for AMOS\n\n\nPeakAnalyzer\nMulti-peak data analysis\n\n\nPicard\nSequence\
+          \ data analysis\n\n\nSAMtools\nFor manipulating alignments in the SAM format\n\
+          \n\nSkewer\nAdapter trimmer for paired-end reads\n\n\n\n These analysis\
+          \ tools are packaged and installed into the BTP Image upon creation using\
+          \ the automated workflows described below. \n Packaging of Analysis Tools\
+          \ \n Datasets \n Datasets used by the BTP are stored on NeCTAR Object Storage\
+          \ (Swift). Each training modules has a corresponding publicly readable container\
+          \ where its datasets are accessible. The containers for the NGS training\
+          \ modules are listed in the table below: \n\n\n\nModule\nContainer\n\n\n\
+          \n\nIntroduction to CLI\nNGSDataCommandLine\n\n\nQuality Control\nNGSDataQC\n\
+          \n\nAlignment\nNGSDataChIPSeq\n\n\nChIP-Seq\nNGSDataChIPSeq\n\n\nRNA-Seq\n\
+          NGSDataRNASeq\n\n\nDe novo Assembly\nNGSDataDeNovo\n\n\n\n The complete\
+          \ container URL are used to pull down the datasets into the BTP instances.\
+          \ The URLs are defined on the datasets metadata. \n Training Materials \n\
+          \ \n BTP Workflows \n Creating the BTP Image \n Prerequisites for Creating\
+          \ BTP Images \n \n git \n Packer \n OpenStack Glance Command Line Client\
+          \ \n NeCTAR OpenStack Credentials \n internet access \n \n The BTP uses\
+          \ the Packer tool for creating new virtual machine images compatible with\
+          \ NeCTAR Research Cloud. \n Get Workshop Repository \n A collection of Packer\
+          \ recipes are included as part of the orchestration module inside the BPA-CSIRO\
+          \ Workshop NGS Repository. This repository must be cloned together with\
+          \ the training submodules on the client machine where the BTP image will\
+          \ be created: \n git clone --recurse-submodules https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs.git\
+          \ \n Orchestration \n Once the workshop repository and the training submodules\
+          \ have been cloned, the local copy will have the following contents structure:\
+          \ \n \u251C\u2500\u2500 010_trainers\n\u251C\u2500\u2500 015_preamble\n\u251C\
+          \u2500\u2500 050_ngs-qc\n\u251C\u2500\u2500 060_alignment\n\u251C\u2500\u2500\
+          \ 070_chip-seq\n\u251C\u2500\u2500 080_rna-seq\n\u251C\u2500\u2500 090_velvet\n\
+          \u251C\u2500\u2500 905_post-workshop\n\u251C\u2500\u2500 Makefile\n\u251C\
+          \u2500\u2500 README.md\n\u251C\u2500\u2500 developers\n\u251C\u2500\u2500\
+          \ licences\n\u251C\u2500\u2500 orchestration\n\u251C\u2500\u2500 style\n\
+          \u2514\u2500\u2500 template.tex \n Going inside the orchestration/packer\
+          \ subdirectory will show the available Packer recipes including the one\
+          \ compatible with the NeCTAR Research Cloud, btp-qemu.json. The available\
+          \ Packer recipes for the BTP are: \n \u251C\u2500\u2500 btp-aws.json\n\u251C\
+          \u2500\u2500 btp-qemu.json\n\u251C\u2500\u2500 btp-virtualbox.json\n\u251C\
+          \u2500\u2500 btp-vmware.json \n Launch Packer \n Before launching Packer,\
+          \ the content of the recipe file btp-qemu.json can be viewed. Descriptions\
+          \ for each recipe section are highlighted below. \n The image creation process\
+          \ can then be started by feeding the recipe into Packer. This assumes that\
+          \ the Packer is already installed on the client (build) machine. Packer\
+          \ can then be launched, with the recipe filename passed as a command line\
+          \ argument: \n packer build btp-qemu.json \n Packer will start the image\
+          \ creation process and the first thing this will do is to download the latest\
+          \ available alternate Ubuntu ISO from the internet. So the client machine\
+          \ must have access to the internet to download the ISO file. \n Upload Image\
+          \ \n Deploying BTP Instances \n Prerequisites for Deploying BTP Instances\
+          \ \n \n NeCTAR OpenStack Credentials \n OpenStack Nova Command Line Client\
+          \ \n NoMachine (NX) Client \n \n Using the BTP Instances for Training \n\
+          \n\n"
+        description: "<h1>Bioinformatics Training Platform (BTP) User Guide</h1>\n\
+          <h2>Introduction</h2>\n<p><a href=\"https://platforms.monash.edu/eresearch/\"\
+          >Monash eResearch Centre</a> have been <a href=\"https://rcblog.erc.monash.edu.au/blog/2013/12/bioinformatics-training-on-rcmon/\"\
+          >partnering</a> with <a href=\"http://www.bioplatforms.com/\">Bioplatforms\n\
+          Australia (BPA)</a> and <a href=\"http://www.csiro.au/\">CSIRO</a> for delivering\
+          \ hands-on bioinformatics workshops to Australian researchers. This partnership\
+          \ started back in 2012 when the first next-generation sequencing workshop\
+          \ was delivered at Monash University. The <strong>Bioinformatics Training\
+          \ Platform (BTP)</strong> has been developed as a broadly accessible solution\
+          \ for delivering these workshops using cloud computing infrastructures and\
+          \ <a href=\"http://bib.oxfordjournals.org/content/early/2013/03/29/bib.bbt022.full.pdf+html\"\
+          >addressing the increasing demand</a> for training workshops in Australia.</p>\n\
+          <p>The standard NGS workshop delivered by BPA and CSIRO is composed of a\
+          \ number of training modules. Each training module is composed of the following\
+          \ components: analysis tools, datasets and training materials. The analysis\
+          \ tools are essential to a hands-on bioinformatics workshop as it teaches\
+          \ scientists how such tools are used to interrogate and interpret results.\
+          \ Most of the analysis tools used by the BTP are open source and easily\
+          \ accessible on various platforms. The BTP maintains these analysis tools\
+          \ on <a href=\"https://github.com/BPA-CSIRO-Workshops\">BPA-CSIRO GitHub\
+          \ Project</a>. To support the hands-on bioinformatics workshop, analysis\
+          \ and reference datasets are used together for analysis. Datasets are stored\
+          \ and managed on the NeCTAR object storage service. The training materials\
+          \ (presentations and handouts) are also developed and maintained as part\
+          \ of the BTP. A high level overview of the BTP architecture is show below:</p>\n\
+          <p><img alt=\"Bioinformatics Training Platform Architecture\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/btp-architecture.png?raw=true\"\
+          ></p>\n<p>A workshop is composed of a number of training modules. Each training\
+          \ module has an associated tools and datasets metadata. These metadata are\
+          \ used by the orchestration system for automation of tools installation\
+          \ during BTP image creation and datasets syncing during BTP instance deployments.</p>\n\
+          <hr>\n<h2>Components</h2>\n<p>The BTP as a solution is composed of a number\
+          \ of components: <strong>Analysis Tools</strong>, <strong>Datasets</strong>\
+          \ and <strong>Training Materials</strong>. A brief summary of each one are\
+          \ included below.</p>\n<h3>Analysis Tools</h3>\n<p>Analysis tools are essential\
+          \ for delivering hands-on training workshops.\nThe BTP teaches trainees\
+          \ how these tools can be used to help interrogate and interpret their analysis\
+          \ results. Most of these analysis tools are available as stand alone executables\
+          \ while others have to be built from source. The most common analysis tools\
+          \ used and packaged in the BTP are listed in the table below:</p>\n<table>\n\
+          <thead>\n<tr>\n<th align=\"left\">Tools</th>\n<th align=\"left\">Function</th>\n\
+          </tr>\n</thead>\n<tbody>\n<tr>\n<td align=\"left\">AMOS Hawkeye</td>\n<td\
+          \ align=\"left\">Genome data visualization</td>\n</tr>\n<tr>\n<td align=\"\
+          left\">BEDTools</td>\n<td align=\"left\">Genome data manipulation</td>\n\
+          </tr>\n<tr>\n<td align=\"left\">BLAT</td>\n<td align=\"left\">Sequence location\
+          \ lookup in the genome</td>\n</tr>\n<tr>\n<td align=\"left\">Bowtie</td>\n\
+          <td align=\"left\">Read Alignment</td>\n</tr>\n<tr>\n<td align=\"left\"\
+          >CummeRbund</td>\n<td align=\"left\">RNA-Seq analysis using R</td>\n</tr>\n\
+          <tr>\n<td align=\"left\">Cufflinks</td>\n<td align=\"left\">RNA-Seq analysis</td>\n\
+          </tr>\n<tr>\n<td align=\"left\">DESeq2</td>\n<td align=\"left\">Differential\
+          \ gene expression analysis using R</td>\n</tr>\n<tr>\n<td align=\"left\"\
+          >edgeR</td>\n<td align=\"left\">Empirical gene expression analysis using\
+          \ R</td>\n</tr>\n<tr>\n<td align=\"left\">FastQC</td>\n<td align=\"left\"\
+          >FastQC</td>\n</tr>\n<tr>\n<td align=\"left\">FASTX</td>\n<td align=\"left\"\
+          >Toolkit for short reads preprocessing</td>\n</tr>\n<tr>\n<td align=\"left\"\
+          >IGV</td>\n<td align=\"left\">Interactive exploration of genomic data</td>\n\
+          </tr>\n<tr>\n<td align=\"left\">igvtools</td>\n<td align=\"left\">Preprocessing\
+          \ of data before loading to IGV</td>\n</tr>\n<tr>\n<td align=\"left\">MACS</td>\n\
+          <td align=\"left\">ChIP-Seq analysis</td>\n</tr>\n<tr>\n<td align=\"left\"\
+          >MUMmer</td>\n<td align=\"left\">Rapid genome alignment, a dependency for\
+          \ AMOS</td>\n</tr>\n<tr>\n<td align=\"left\">PeakAnalyzer</td>\n<td align=\"\
+          left\">Multi-peak data analysis</td>\n</tr>\n<tr>\n<td align=\"left\">Picard</td>\n\
+          <td align=\"left\">Sequence data analysis</td>\n</tr>\n<tr>\n<td align=\"\
+          left\">SAMtools</td>\n<td align=\"left\">For manipulating alignments in\
+          \ the SAM format</td>\n</tr>\n<tr>\n<td align=\"left\">Skewer</td>\n<td\
+          \ align=\"left\">Adapter trimmer for paired-end reads</td>\n</tr>\n</tbody>\n\
+          </table>\n<p>These analysis tools are packaged and installed into the <strong>BTP\
+          \ Image</strong> upon creation using the automated workflows described below.</p>\n\
+          <h4>Packaging of Analysis Tools</h4>\n<h3>Datasets</h3>\n<p>Datasets used\
+          \ by the BTP are stored on <a href=\"http://support.rc.nectar.org.au/docs/object-storage\"\
+          >NeCTAR Object Storage (Swift)</a>. Each training modules has a corresponding\
+          \ publicly readable container where its datasets are accessible. The containers\
+          \ for the NGS training modules are listed in the table below:</p>\n<table>\n\
+          <thead>\n<tr>\n<th align=\"left\">Module</th>\n<th align=\"left\">Container</th>\n\
+          </tr>\n</thead>\n<tbody>\n<tr>\n<td align=\"left\">Introduction to CLI</td>\n\
+          <td align=\"left\">NGSDataCommandLine</td>\n</tr>\n<tr>\n<td align=\"left\"\
+          >Quality Control</td>\n<td align=\"left\">NGSDataQC</td>\n</tr>\n<tr>\n\
+          <td align=\"left\">Alignment</td>\n<td align=\"left\">NGSDataChIPSeq</td>\n\
+          </tr>\n<tr>\n<td align=\"left\">ChIP-Seq</td>\n<td align=\"left\">NGSDataChIPSeq</td>\n\
+          </tr>\n<tr>\n<td align=\"left\">RNA-Seq</td>\n<td align=\"left\">NGSDataRNASeq</td>\n\
+          </tr>\n<tr>\n<td align=\"left\">De novo Assembly</td>\n<td align=\"left\"\
+          >NGSDataDeNovo</td>\n</tr>\n</tbody>\n</table>\n<p>The complete container\
+          \ URL are used to pull down the datasets into the BTP instances. The URLs\
+          \ are defined on the datasets metadata.</p>\n<h3>Training Materials</h3>\n\
+          <hr>\n<h2>BTP Workflows</h2>\n<h3>Creating the BTP Image</h3>\n<h4>Prerequisites\
+          \ for Creating BTP Images</h4>\n<ul>\n<li>git</li>\n<li>Packer</li>\n<li>OpenStack\
+          \ Glance Command Line Client</li>\n<li>NeCTAR OpenStack Credentials</li>\n\
+          <li>internet access</li>\n</ul>\n<p>The BTP uses the <a href=\"https://www.packer.io\"\
+          >Packer</a> tool for creating new virtual machine images compatible with\
+          \ NeCTAR Research Cloud.</p>\n<h4>Get Workshop Repository</h4>\n<p>A collection\
+          \ of Packer recipes are included as part of the orchestration module inside\
+          \ the <a href=\"https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs\"\
+          >BPA-CSIRO Workshop NGS Repository</a>. This repository must be cloned together\
+          \ with the training submodules on the client machine where the BTP image\
+          \ will be created:</p>\n<p><code>git clone --recurse-submodules https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs.git</code></p>\n\
+          <h4>Orchestration</h4>\n<p>Once the workshop repository and the training\
+          \ submodules have been cloned, the local copy will have the following contents\
+          \ structure:</p>\n<p><code>\u251C\u2500\u2500 010_trainers\n\u251C\u2500\
+          \u2500 015_preamble\n\u251C\u2500\u2500 050_ngs-qc\n\u251C\u2500\u2500 060_alignment\n\
+          \u251C\u2500\u2500 070_chip-seq\n\u251C\u2500\u2500 080_rna-seq\n\u251C\u2500\
+          \u2500 090_velvet\n\u251C\u2500\u2500 905_post-workshop\n\u251C\u2500\u2500\
+          \ Makefile\n\u251C\u2500\u2500 README.md\n\u251C\u2500\u2500 developers\n\
+          \u251C\u2500\u2500 licences\n\u251C\u2500\u2500 orchestration\n\u251C\u2500\
+          \u2500 style\n\u2514\u2500\u2500 template.tex</code></p>\n<p>Going inside\
+          \ the <code>orchestration/packer</code> subdirectory will show the available\
+          \ Packer recipes including the one compatible with the NeCTAR Research Cloud,\
+          \ <code>btp-qemu.json</code>. The available Packer recipes for the BTP are:</p>\n\
+          <p><code>\u251C\u2500\u2500 btp-aws.json\n\u251C\u2500\u2500 btp-qemu.json\n\
+          \u251C\u2500\u2500 btp-virtualbox.json\n\u251C\u2500\u2500 btp-vmware.json</code></p>\n\
+          <h4>Launch Packer</h4>\n<p>Before launching Packer, the content of the recipe\
+          \ file <code>btp-qemu.json</code> can be viewed. Descriptions for each recipe\
+          \ section are highlighted below.</p>\n<p>The image creation process can\
+          \ then be started by feeding the recipe into Packer. This assumes that the\
+          \ Packer is already installed on the client (build) machine. Packer can\
+          \ then be launched, with the recipe filename passed as a command line argument:</p>\n\
+          <p><code>packer build btp-qemu.json</code></p>\n<p>Packer will start the\
+          \ image creation process and the first thing this will do is to download\
+          \ the latest available alternate Ubuntu ISO from the internet. So the client\
+          \ machine must have access to the internet to download the ISO file.</p>\n\
+          <h4>Upload Image</h4>\n<h3>Deploying BTP Instances</h3>\n<h4>Prerequisites\
+          \ for Deploying BTP Instances</h4>\n<ul>\n<li>NeCTAR OpenStack Credentials</li>\n\
+          <li>OpenStack Nova Command Line Client</li>\n<li>NoMachine (NX) Client</li>\n\
+          </ul>\n<h4>Using the BTP Instances for Training</h4>\n\n\n"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000093606
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-12-02T19:33:41-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000093606
+        position: 12
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Monash Bioinformatics Training Platform User Guide
+        updated_at: '2015-12-02T19:33:41-05:00'
+        user_id: 6002464727
+  html: "<h1>Bioinformatics Training Platform (BTP) User Guide</h1>\n<h2>Introduction</h2>\n\
+    <p><a href=\"https://platforms.monash.edu/eresearch/\">Monash eResearch Centre</a>\
+    \ have been <a href=\"https://rcblog.erc.monash.edu.au/blog/2013/12/bioinformatics-training-on-rcmon/\"\
+    >partnering</a> with <a href=\"http://www.bioplatforms.com/\">Bioplatforms\nAustralia\
+    \ (BPA)</a> and <a href=\"http://www.csiro.au/\">CSIRO</a> for delivering hands-on\
+    \ bioinformatics workshops to Australian researchers. This partnership started\
+    \ back in 2012 when the first next-generation sequencing workshop was delivered\
+    \ at Monash University. The <strong>Bioinformatics Training Platform (BTP)</strong>\
+    \ has been developed as a broadly accessible solution for delivering these workshops\
+    \ using cloud computing infrastructures and <a href=\"http://bib.oxfordjournals.org/content/early/2013/03/29/bib.bbt022.full.pdf+html\"\
+    >addressing the increasing demand</a> for training workshops in Australia.</p>\n\
+    <p>The standard NGS workshop delivered by BPA and CSIRO is composed of a number\
+    \ of training modules. Each training module is composed of the following components:\
+    \ analysis tools, datasets and training materials. The analysis tools are essential\
+    \ to a hands-on bioinformatics workshop as it teaches scientists how such tools\
+    \ are used to interrogate and interpret results. Most of the analysis tools used\
+    \ by the BTP are open source and easily accessible on various platforms. The BTP\
+    \ maintains these analysis tools on <a href=\"https://github.com/BPA-CSIRO-Workshops\"\
+    >BPA-CSIRO GitHub Project</a>. To support the hands-on bioinformatics workshop,\
+    \ analysis and reference datasets are used together for analysis. Datasets are\
+    \ stored and managed on the NeCTAR object storage service. The training materials\
+    \ (presentations and handouts) are also developed and maintained as part of the\
+    \ BTP. A high level overview of the BTP architecture is show below:</p>\n<p><img\
+    \ alt=\"Bioinformatics Training Platform Architecture\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/btp-architecture.png?raw=true\"\
+    ></p>\n<p>A workshop is composed of a number of training modules. Each training\
+    \ module has an associated tools and datasets metadata. These metadata are used\
+    \ by the orchestration system for automation of tools installation during BTP\
+    \ image creation and datasets syncing during BTP instance deployments.</p>\n<hr>\n\
+    <h2>Components</h2>\n<p>The BTP as a solution is composed of a number of components:\
+    \ <strong>Analysis Tools</strong>, <strong>Datasets</strong> and <strong>Training\
+    \ Materials</strong>. A brief summary of each one are included below.</p>\n<h3>Analysis\
+    \ Tools</h3>\n<p>Analysis tools are essential for delivering hands-on training\
+    \ workshops.\nThe BTP teaches trainees how these tools can be used to help interrogate\
+    \ and interpret their analysis results. Most of these analysis tools are available\
+    \ as stand alone executables while others have to be built from source. The most\
+    \ common analysis tools used and packaged in the BTP are listed in the table below:</p>\n\
+    <table>\n<thead>\n<tr>\n<th align=\"left\">Tools</th>\n<th align=\"left\">Function</th>\n\
+    </tr>\n</thead>\n<tbody>\n<tr>\n<td align=\"left\">AMOS Hawkeye</td>\n<td align=\"\
+    left\">Genome data visualization</td>\n</tr>\n<tr>\n<td align=\"left\">BEDTools</td>\n\
+    <td align=\"left\">Genome data manipulation</td>\n</tr>\n<tr>\n<td align=\"left\"\
+    >BLAT</td>\n<td align=\"left\">Sequence location lookup in the genome</td>\n</tr>\n\
+    <tr>\n<td align=\"left\">Bowtie</td>\n<td align=\"left\">Read Alignment</td>\n\
+    </tr>\n<tr>\n<td align=\"left\">CummeRbund</td>\n<td align=\"left\">RNA-Seq analysis\
+    \ using R</td>\n</tr>\n<tr>\n<td align=\"left\">Cufflinks</td>\n<td align=\"left\"\
+    >RNA-Seq analysis</td>\n</tr>\n<tr>\n<td align=\"left\">DESeq2</td>\n<td align=\"\
+    left\">Differential gene expression analysis using R</td>\n</tr>\n<tr>\n<td align=\"\
+    left\">edgeR</td>\n<td align=\"left\">Empirical gene expression analysis using\
+    \ R</td>\n</tr>\n<tr>\n<td align=\"left\">FastQC</td>\n<td align=\"left\">FastQC</td>\n\
+    </tr>\n<tr>\n<td align=\"left\">FASTX</td>\n<td align=\"left\">Toolkit for short\
+    \ reads preprocessing</td>\n</tr>\n<tr>\n<td align=\"left\">IGV</td>\n<td align=\"\
+    left\">Interactive exploration of genomic data</td>\n</tr>\n<tr>\n<td align=\"\
+    left\">igvtools</td>\n<td align=\"left\">Preprocessing of data before loading\
+    \ to IGV</td>\n</tr>\n<tr>\n<td align=\"left\">MACS</td>\n<td align=\"left\">ChIP-Seq\
+    \ analysis</td>\n</tr>\n<tr>\n<td align=\"left\">MUMmer</td>\n<td align=\"left\"\
+    >Rapid genome alignment, a dependency for AMOS</td>\n</tr>\n<tr>\n<td align=\"\
+    left\">PeakAnalyzer</td>\n<td align=\"left\">Multi-peak data analysis</td>\n</tr>\n\
+    <tr>\n<td align=\"left\">Picard</td>\n<td align=\"left\">Sequence data analysis</td>\n\
+    </tr>\n<tr>\n<td align=\"left\">SAMtools</td>\n<td align=\"left\">For manipulating\
+    \ alignments in the SAM format</td>\n</tr>\n<tr>\n<td align=\"left\">Skewer</td>\n\
+    <td align=\"left\">Adapter trimmer for paired-end reads</td>\n</tr>\n</tbody>\n\
+    </table>\n<p>These analysis tools are packaged and installed into the <strong>BTP\
+    \ Image</strong> upon creation using the automated workflows described below.</p>\n\
+    <h4>Packaging of Analysis Tools</h4>\n<h3>Datasets</h3>\n<p>Datasets used by the\
+    \ BTP are stored on <a href=\"http://support.rc.nectar.org.au/docs/object-storage\"\
+    >NeCTAR Object Storage (Swift)</a>. Each training modules has a corresponding\
+    \ publicly readable container where its datasets are accessible. The containers\
+    \ for the NGS training modules are listed in the table below:</p>\n<table>\n<thead>\n\
+    <tr>\n<th align=\"left\">Module</th>\n<th align=\"left\">Container</th>\n</tr>\n\
+    </thead>\n<tbody>\n<tr>\n<td align=\"left\">Introduction to CLI</td>\n<td align=\"\
+    left\">NGSDataCommandLine</td>\n</tr>\n<tr>\n<td align=\"left\">Quality Control</td>\n\
+    <td align=\"left\">NGSDataQC</td>\n</tr>\n<tr>\n<td align=\"left\">Alignment</td>\n\
+    <td align=\"left\">NGSDataChIPSeq</td>\n</tr>\n<tr>\n<td align=\"left\">ChIP-Seq</td>\n\
+    <td align=\"left\">NGSDataChIPSeq</td>\n</tr>\n<tr>\n<td align=\"left\">RNA-Seq</td>\n\
+    <td align=\"left\">NGSDataRNASeq</td>\n</tr>\n<tr>\n<td align=\"left\">De novo\
+    \ Assembly</td>\n<td align=\"left\">NGSDataDeNovo</td>\n</tr>\n</tbody>\n</table>\n\
+    <p>The complete container URL are used to pull down the datasets into the BTP\
+    \ instances. The URLs are defined on the datasets metadata.</p>\n<h3>Training\
+    \ Materials</h3>\n<hr>\n<h2>BTP Workflows</h2>\n<h3>Creating the BTP Image</h3>\n\
+    <h4>Prerequisites for Creating BTP Images</h4>\n<ul>\n<li>git</li>\n<li>Packer</li>\n\
+    <li>OpenStack Glance Command Line Client</li>\n<li>NeCTAR OpenStack Credentials</li>\n\
+    <li>internet access</li>\n</ul>\n<p>The BTP uses the <a href=\"https://www.packer.io\"\
+    >Packer</a> tool for creating new virtual machine images compatible with NeCTAR\
+    \ Research Cloud.</p>\n<h4>Get Workshop Repository</h4>\n<p>A collection of Packer\
+    \ recipes are included as part of the orchestration module inside the <a href=\"\
+    https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs\">BPA-CSIRO Workshop NGS\
+    \ Repository</a>. This repository must be cloned together with the training submodules\
+    \ on the client machine where the BTP image will be created:</p>\n<p><code>git\
+    \ clone --recurse-submodules https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs.git</code></p>\n\
+    <h4>Orchestration</h4>\n<p>Once the workshop repository and the training submodules\
+    \ have been cloned, the local copy will have the following contents structure:</p>\n\
+    <p><code>\u251C\u2500\u2500 010_trainers\n\u251C\u2500\u2500 015_preamble\n\u251C\
+    \u2500\u2500 050_ngs-qc\n\u251C\u2500\u2500 060_alignment\n\u251C\u2500\u2500\
+    \ 070_chip-seq\n\u251C\u2500\u2500 080_rna-seq\n\u251C\u2500\u2500 090_velvet\n\
+    \u251C\u2500\u2500 905_post-workshop\n\u251C\u2500\u2500 Makefile\n\u251C\u2500\
+    \u2500 README.md\n\u251C\u2500\u2500 developers\n\u251C\u2500\u2500 licences\n\
+    \u251C\u2500\u2500 orchestration\n\u251C\u2500\u2500 style\n\u2514\u2500\u2500\
+    \ template.tex</code></p>\n<p>Going inside the <code>orchestration/packer</code>\
+    \ subdirectory will show the available Packer recipes including the one compatible\
+    \ with the NeCTAR Research Cloud, <code>btp-qemu.json</code>. The available Packer\
+    \ recipes for the BTP are:</p>\n<p><code>\u251C\u2500\u2500 btp-aws.json\n\u251C\
+    \u2500\u2500 btp-qemu.json\n\u251C\u2500\u2500 btp-virtualbox.json\n\u251C\u2500\
+    \u2500 btp-vmware.json</code></p>\n<h4>Launch Packer</h4>\n<p>Before launching\
+    \ Packer, the content of the recipe file <code>btp-qemu.json</code> can be viewed.\
+    \ Descriptions for each recipe section are highlighted below.</p>\n<p>The image\
+    \ creation process can then be started by feeding the recipe into Packer. This\
+    \ assumes that the Packer is already installed on the client (build) machine.\
+    \ Packer can then be launched, with the recipe filename passed as a command line\
+    \ argument:</p>\n<p><code>packer build btp-qemu.json</code></p>\n<p>Packer will\
+    \ start the image creation process and the first thing this will do is to download\
+    \ the latest available alternate Ubuntu ISO from the internet. So the client machine\
+    \ must have access to the internet to download the ISO file.</p>\n<h4>Upload Image</h4>\n\
+    <h3>Deploying BTP Instances</h3>\n<h4>Prerequisites for Deploying BTP Instances</h4>\n\
+    <ul>\n<li>NeCTAR OpenStack Credentials</li>\n<li>OpenStack Nova Command Line Client</li>\n\
+    <li>NoMachine (NX) Client</li>\n</ul>\n<h4>Using the BTP Instances for Training</h4>\n\
+    <!-- Links -->\n\n<!-- Figures -->"
+  parent: 24
+  sha1: e3bb0bbc886d17e7563c52a31bbaefe7bf24be38
+  title: Monash Bioinformatics Training Platform User Guide
