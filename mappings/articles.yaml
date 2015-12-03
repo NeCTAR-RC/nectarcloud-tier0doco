@@ -2987,70 +2987,72 @@
           \ \n Git - A popular distributed version control system. \n Github - A popular\
           \ free open-source project hosting site. \n Glance - OpenStack's Image store\
           \ service. \n Globus GridFTP - A data transfer protocol for high bandwidth\
-          \ wide area networks. \n GNU - Stands for \"GNU is Not Unix\".  Originally\
-          \ a project that aimed to provide a\ncomplete open-source replacement for\
-          \ the (proprietary) AT&T Unix operating\nsystem.  GNU now focus mostly on\
-          \ things \"above the kernel\". \n Google Drive - A cloud storage service\
-          \ by Google that is easily used for file\nsharing and collaboration. \n\
-          \ GPGPU - General Purpose computing using GPUs. \n GPL - The GNU Public\
-          \ License. One of the most important open source software\nlicenses. In\
-          \ fact there are a number of variants of GPL currently in use:\nGPL2, GPL3,\
-          \ LGPL, Affero. \n GPU - Graphics Processing Unit - primarily designed for\
-          \ high-speed graphics process\n(e.g. on a video card), GPUs can also be\
-          \ exploited for certain kinds of\nparallel computation. \n Grizzly - The\
-          \ name of an OpenStack release. \n Grizzly - A scalable web server framework\
-          \ implemented in Java (not servlet based). \n GVL - The Genomics Virtual\
-          \ Laboratory - A NeCTAR virtual laboratory project. \n H \n Hard Reboot\
-          \ - A reboot in which no attempt is made to shut down cleanly prior\nto\
-          \ booting. This has an increased risk of damage to file systems or application\n\
-          data on the instance. \n Havana - The name of an OpenStack release. \n Heat\
-          \ - The orchestration service for OpenStack. It is designed to launch multiple\n\
-          composite cloud applications based on templates in the form of text files\
-          \ that\ncan be treated like code. \n HFS - Hierarchical File Storage (usually)\
-          \ or Hierarchical File System. \n HPC - High Performance Computing systems\
-          \ - typically refers to \"high end\" computing\nhardware designed for doing\
-          \ \"large\" computational tasks. \n HOW-TO - A document written for users\
-          \ that tries to explain \"how to\" do a specific task. \n Hyper-V - Microsoft's\
-          \ main virtualization technology offering. \n Hypervisor - The software\
-          \ that performs the core management of virtual machines in a\nvirtualized\
-          \ computing system. \n I \n IaaS - Infrastructure as a service (IaaS) is\
-          \ a type of cloud computing in which a\nthird-party provider hosts virtualized\
-          \ computing resources over the Internet. \n Icehouse - The name of an OpenStack\
-          \ release. \n Image - A starting state for a new \"clean\" virtual machine.\
-          \  Typical consists of an\nimage of a file system with freshly installed\
-          \ operating system and applications. \n Image Store - The place where OpenStack\
-          \ images are held. \n Instance - OpenStack terminology for a virtual machine.\
-          \ \n Intel - An American multinational that is one of the world's largest\
-          \ semiconductor chip manufacturers. \n Intersect - An eResearch support\
-          \ agency based in New South Wales. \n Internet - The Internet is a global\
-          \ system of interconnected computer networks that use the Internet protocol\n\
-          suite (TCP/IP) to link to each other. \n IP - The Internet Protocol (IP)\
-          \ is the principal communications protocol in the\nInternet protocol suite\
-          \ for relaying datagrams (also knows as messages or\npackets) across network\
-          \ boundaries. Transmission and the routing of IP packets\nare what makes\
-          \ the Internet work. \n IPv4 - The (currently) dominant version of IP in\
-          \ use at the moment.  IPv4 is limited\nby its design to 232 distinct addresses.\
-          \ The IPv4 address space is \"full\" in\nmost regions, and networking providers\
-          \ are rolling out support of the next\ngeneration (IPv6). \n IPv6 - The\
-          \ successor version of IP, which supports 264 addresses. \n iSCSI - Internet\
-          \ Small Computer System Interface, an IP-based storage networking\nstandard\
-          \ for linking data storage facilities. \n Issue Tracking System - An issue\
-          \ tracker is a system that is used to record \"issues\" in a software\n\
-          product, and track their resolution. Issues can include bugs, requested\n\
-          enhancements or planned features. \n iVEC - iVEC used to be a high performance\
-          \ computing facility located in Perth, but it was rebranded to the\nPawsey\
-          \ Supercomputing Centre. \n J \n JSON - A light weight data-interchange\
-          \ format based on a subset of the JavaScript programming language. \n Juju\
-          \ - An orchestration framework from Ubuntu. \n Juno - The name of an OpenStack\
-          \ release. \n K \n Kerberos - An authentication protocol used over networks.\
-          \ \n Kepler - A computational workflow engine. \n Key Pair - A matching\
-          \ pair of public and private keys; see public key encryption. \n Keystone\
-          \ - Keystone is an OpenStack service that provides Identity, Token, Catalog\
-          \ and\nPolicy services for use specifically by projects in the OpenStack\
-          \ family. \n Kilo - The name of an OpenStack release. \n KVM - Kernel-based\
-          \ Virtual Machine - a virtualization framework supported by\nmodern Linux\
-          \ kernels. \n L \n Launch - OpenStack terminology for creating a new virtual\
-          \ machine.  There are\nmultiple steps in the launch process; e.g. \"scheduling\"\
+          \ wide area networks. \n Gnocchi - Gnocchi is an OpenStack project that\
+          \ provides a TDBaaS \n(Time Series Database as a Service). \n GNU - Stands\
+          \ for \"GNU is Not Unix\".  Originally a project that aimed to provide a\n\
+          complete open-source replacement for the (proprietary) AT&T Unix operating\n\
+          system.  GNU now focus mostly on things \"above the kernel\". \n Google\
+          \ Drive - A cloud storage service by Google that is easily used for file\n\
+          sharing and collaboration. \n GPGPU - General Purpose computing using GPUs.\
+          \ \n GPL - The GNU Public License. One of the most important open source\
+          \ software\nlicenses. In fact there are a number of variants of GPL currently\
+          \ in use:\nGPL2, GPL3, LGPL, Affero. \n GPU - Graphics Processing Unit -\
+          \ primarily designed for high-speed graphics process\n(e.g. on a video card),\
+          \ GPUs can also be exploited for certain kinds of\nparallel computation.\
+          \ \n Grizzly - The name of an OpenStack release. \n Grizzly - A scalable\
+          \ web server framework implemented in Java (not servlet based). \n GVL -\
+          \ The Genomics Virtual Laboratory - A NeCTAR virtual laboratory project.\
+          \ \n H \n Hard Reboot - A reboot in which no attempt is made to shut down\
+          \ cleanly prior\nto booting. This has an increased risk of damage to file\
+          \ systems or application\ndata on the instance. \n Havana - The name of\
+          \ an OpenStack release. \n Heat - The orchestration service for OpenStack.\
+          \ It is designed to launch multiple\ncomposite cloud applications based\
+          \ on templates in the form of text files that\ncan be treated like code.\
+          \ \n HFS - Hierarchical File Storage (usually) or Hierarchical File System.\
+          \ \n HPC - High Performance Computing systems - typically refers to \"high\
+          \ end\" computing\nhardware designed for doing \"large\" computational tasks.\
+          \ \n HOW-TO - A document written for users that tries to explain \"how to\"\
+          \ do a specific task. \n Hyper-V - Microsoft's main virtualization technology\
+          \ offering. \n Hypervisor - The software that performs the core management\
+          \ of virtual machines in a\nvirtualized computing system. \n I \n IaaS -\
+          \ Infrastructure as a service (IaaS) is a type of cloud computing in which\
+          \ a\nthird-party provider hosts virtualized computing resources over the\
+          \ Internet. \n Icehouse - The name of an OpenStack release. \n Image - A\
+          \ starting state for a new \"clean\" virtual machine.  Typical consists\
+          \ of an\nimage of a file system with freshly installed operating system\
+          \ and applications. \n Image Store - The place where OpenStack images are\
+          \ held. \n Instance - OpenStack terminology for a virtual machine. \n Intel\
+          \ - An American multinational that is one of the world's largest semiconductor\
+          \ chip manufacturers. \n Intersect - An eResearch support agency based in\
+          \ New South Wales. \n Internet - The Internet is a global system of interconnected\
+          \ computer networks that use the Internet protocol\nsuite (TCP/IP) to link\
+          \ to each other. \n IP - The Internet Protocol (IP) is the principal communications\
+          \ protocol in the\nInternet protocol suite for relaying datagrams (also\
+          \ knows as messages or\npackets) across network boundaries. Transmission\
+          \ and the routing of IP packets\nare what makes the Internet work. \n IPv4\
+          \ - The (currently) dominant version of IP in use at the moment.  IPv4 is\
+          \ limited\nby its design to 232 distinct addresses. The IPv4 address space\
+          \ is \"full\" in\nmost regions, and networking providers are rolling out\
+          \ support of the next\ngeneration (IPv6). \n IPv6 - The successor version\
+          \ of IP, which supports 264 addresses. \n iSCSI - Internet Small Computer\
+          \ System Interface, an IP-based storage networking\nstandard for linking\
+          \ data storage facilities. \n Issue Tracking System - An issue tracker is\
+          \ a system that is used to record \"issues\" in a software\nproduct, and\
+          \ track their resolution. Issues can include bugs, requested\nenhancements\
+          \ or planned features. \n iVEC - iVEC used to be a high performance computing\
+          \ facility located in Perth, but it was rebranded to the\nPawsey Supercomputing\
+          \ Centre. \n J \n JSON - A light weight data-interchange format based on\
+          \ a subset of the JavaScript programming language. \n Juju - An orchestration\
+          \ framework from Ubuntu. \n Juno - The name of an OpenStack release. \n\
+          \ K \n Kerberos - An authentication protocol used over networks. \n Kepler\
+          \ - A computational workflow engine. \n Key Pair - A matching pair of public\
+          \ and private keys; see public key encryption. \n Keystone - Keystone is\
+          \ an OpenStack service that provides Identity, Token, Catalog and\nPolicy\
+          \ services for use specifically by projects in the OpenStack family. \n\
+          \ Kilo - The name of an OpenStack release. \n KVM - Kernel-based Virtual\
+          \ Machine - a virtualization framework supported by\nmodern Linux kernels.\
+          \ \n L \n Launch - OpenStack terminology for creating a new virtual machine.\
+          \  There are\nmultiple steps in the launch process; e.g. \"scheduling\"\
           \ where the system\ndecides which cell, aggregate & compute node to put\
           \ the instance on, \"building\"\nwhich creates the virtual machines, allocates\
           \ network addresses, etcetera, and\n\"booting\" where the virtual machine\
@@ -3475,16 +3477,18 @@
           \ system.</p>\n<p><strong>Github</strong> - A popular free open-source project\
           \ hosting site.</p>\n<p><strong>Glance</strong> - OpenStack's Image store\
           \ service.</p>\n<p><strong>Globus GridFTP</strong> - A data transfer protocol\
-          \ for high bandwidth wide area networks.</p>\n<p><strong>GNU</strong> -\
-          \ Stands for \"GNU is Not Unix\".  Originally a project that aimed to provide\
-          \ a\ncomplete open-source replacement for the (proprietary) AT&amp;T Unix\
-          \ operating\nsystem.  GNU now focus mostly on things \"above the kernel\"\
-          .</p>\n<p><strong>Google Drive</strong> - A cloud storage service by Google\
-          \ that is easily used for file\nsharing and collaboration.</p>\n<p><strong>GPGPU</strong>\
-          \ - General Purpose computing using GPUs.</p>\n<p><strong>GPL</strong> -\
-          \ The GNU Public License. One of the most important open source software\n\
-          licenses. In fact there are a number of variants of GPL currently in use:\n\
-          GPL2, GPL3, LGPL, Affero.</p>\n<p><strong>GPU</strong> - Graphics Processing\
+          \ for high bandwidth wide area networks.</p>\n<p><strong>Gnocchi</strong>\
+          \ - Gnocchi is an OpenStack project that provides a TDBaaS \n(Time Series\
+          \ Database as a Service).</p>\n<p><strong>GNU</strong> - Stands for \"GNU\
+          \ is Not Unix\".  Originally a project that aimed to provide a\ncomplete\
+          \ open-source replacement for the (proprietary) AT&amp;T Unix operating\n\
+          system.  GNU now focus mostly on things \"above the kernel\".</p>\n<p><strong>Google\
+          \ Drive</strong> - A cloud storage service by Google that is easily used\
+          \ for file\nsharing and collaboration.</p>\n<p><strong>GPGPU</strong> -\
+          \ General Purpose computing using GPUs.</p>\n<p><strong>GPL</strong> - The\
+          \ GNU Public License. One of the most important open source software\nlicenses.\
+          \ In fact there are a number of variants of GPL currently in use:\nGPL2,\
+          \ GPL3, LGPL, Affero.</p>\n<p><strong>GPU</strong> - Graphics Processing\
           \ Unit - primarily designed for high-speed graphics process\n(e.g. on a\
           \ video card), GPUs can also be exploited for certain kinds of\nparallel\
           \ computation.</p>\n<p><strong>Grizzly</strong> - The name of an OpenStack\
@@ -3841,13 +3845,13 @@
           updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 14
+        hits: 51
         id: 6000055445
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-10-14T01:11:13-04:00'
+        modified_at: '2015-12-02T21:09:43-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000055445
@@ -3860,7 +3864,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Glossary
-        updated_at: '2015-10-14T01:11:13-04:00'
+        updated_at: '2015-12-02T21:09:43-05:00'
         user_id: 6002464727
   html: "<p>This content is heavily sourced from the excellent <a href=\"https://espaces.edu.au/vwrangler/nectar-openstack-glossary\"\
     >eSpaces glossary</a>\nproduced by Steve Crawley at QCIF.</p>\n<p>The full glossary\
@@ -4039,47 +4043,48 @@
     \ distributed version control system.</p>\n<p><strong>Github</strong> - A popular\
     \ free open-source project hosting site.</p>\n<p><strong>Glance</strong> - OpenStack's\
     \ Image store service.</p>\n<p><strong>Globus GridFTP</strong> - A data transfer\
-    \ protocol for high bandwidth wide area networks.</p>\n<p><strong>GNU</strong>\
-    \ - Stands for \"GNU is Not Unix\".  Originally a project that aimed to provide\
-    \ a\ncomplete open-source replacement for the (proprietary) AT&amp;T Unix operating\n\
-    system.  GNU now focus mostly on things \"above the kernel\".</p>\n<p><strong>Google\
-    \ Drive</strong> - A cloud storage service by Google that is easily used for file\n\
-    sharing and collaboration.</p>\n<p><strong>GPGPU</strong> - General Purpose computing\
-    \ using GPUs.</p>\n<p><strong>GPL</strong> - The GNU Public License. One of the\
-    \ most important open source software\nlicenses. In fact there are a number of\
-    \ variants of GPL currently in use:\nGPL2, GPL3, LGPL, Affero.</p>\n<p><strong>GPU</strong>\
-    \ - Graphics Processing Unit - primarily designed for high-speed graphics process\n\
-    (e.g. on a video card), GPUs can also be exploited for certain kinds of\nparallel\
-    \ computation.</p>\n<p><strong>Grizzly</strong> - The name of an OpenStack release.</p>\n\
-    <p><strong>Grizzly</strong> - A scalable web server framework implemented in Java\
-    \ (not servlet based).</p>\n<p><strong>GVL</strong> - The Genomics Virtual Laboratory\
-    \ - A NeCTAR virtual laboratory project.</p>\n<h3>H</h3>\n<p><strong>Hard Reboot</strong>\
-    \ - A reboot in which no attempt is made to shut down cleanly prior\nto booting.\
-    \ This has an increased risk of damage to file systems or application\ndata on\
-    \ the instance.</p>\n<p><strong>Havana</strong> - The name of an OpenStack release.</p>\n\
-    <p><strong>Heat</strong> - The orchestration service for OpenStack. It is designed\
-    \ to launch multiple\ncomposite cloud applications based on templates in the form\
-    \ of text files that\ncan be treated like code.</p>\n<p><strong>HFS</strong> -\
-    \ Hierarchical File Storage (usually) or Hierarchical File System.</p>\n<p><strong>HPC</strong>\
-    \ - High Performance Computing systems - typically refers to \"high end\" computing\n\
-    hardware designed for doing \"large\" computational tasks.</p>\n<p><strong>HOW-TO</strong>\
-    \ - A document written for users that tries to explain \"how to\" do a specific\
-    \ task.</p>\n<p><strong>Hyper-V</strong> - Microsoft's main virtualization technology\
-    \ offering.</p>\n<p><strong>Hypervisor</strong> - The software that performs the\
-    \ core management of virtual machines in a\nvirtualized computing system.</p>\n\
-    <h3>I</h3>\n<p><strong>IaaS</strong> - Infrastructure as a service (IaaS) is a\
-    \ type of cloud computing in which a\nthird-party provider hosts virtualized computing\
-    \ resources over the Internet.</p>\n<p><strong>Icehouse</strong> - The name of\
-    \ an OpenStack release.</p>\n<p><strong>Image</strong> - A starting state for\
-    \ a new \"clean\" virtual machine.  Typical consists of an\nimage of a file system\
-    \ with freshly installed operating system and applications.</p>\n<p><strong>Image\
-    \ Store</strong> - The place where OpenStack images are held.</p>\n<p><strong>Instance</strong>\
-    \ - OpenStack terminology for a virtual machine.</p>\n<p><strong>Intel</strong>\
-    \ - An American multinational that is one of the world's largest semiconductor\
-    \ chip manufacturers.</p>\n<p><strong>Intersect</strong> - An eResearch support\
-    \ agency based in New South Wales.</p>\n<p><strong>Internet</strong> - The Internet\
-    \ is a global system of interconnected computer networks that use the Internet\
-    \ protocol\nsuite (TCP/IP) to link to each other.</p>\n<p><strong>IP</strong>\
+    \ protocol for high bandwidth wide area networks.</p>\n<p><strong>Gnocchi</strong>\
+    \ - Gnocchi is an OpenStack project that provides a TDBaaS \n(Time Series Database\
+    \ as a Service).</p>\n<p><strong>GNU</strong> - Stands for \"GNU is Not Unix\"\
+    .  Originally a project that aimed to provide a\ncomplete open-source replacement\
+    \ for the (proprietary) AT&amp;T Unix operating\nsystem.  GNU now focus mostly\
+    \ on things \"above the kernel\".</p>\n<p><strong>Google Drive</strong> - A cloud\
+    \ storage service by Google that is easily used for file\nsharing and collaboration.</p>\n\
+    <p><strong>GPGPU</strong> - General Purpose computing using GPUs.</p>\n<p><strong>GPL</strong>\
+    \ - The GNU Public License. One of the most important open source software\nlicenses.\
+    \ In fact there are a number of variants of GPL currently in use:\nGPL2, GPL3,\
+    \ LGPL, Affero.</p>\n<p><strong>GPU</strong> - Graphics Processing Unit - primarily\
+    \ designed for high-speed graphics process\n(e.g. on a video card), GPUs can also\
+    \ be exploited for certain kinds of\nparallel computation.</p>\n<p><strong>Grizzly</strong>\
+    \ - The name of an OpenStack release.</p>\n<p><strong>Grizzly</strong> - A scalable\
+    \ web server framework implemented in Java (not servlet based).</p>\n<p><strong>GVL</strong>\
+    \ - The Genomics Virtual Laboratory - A NeCTAR virtual laboratory project.</p>\n\
+    <h3>H</h3>\n<p><strong>Hard Reboot</strong> - A reboot in which no attempt is\
+    \ made to shut down cleanly prior\nto booting. This has an increased risk of damage\
+    \ to file systems or application\ndata on the instance.</p>\n<p><strong>Havana</strong>\
+    \ - The name of an OpenStack release.</p>\n<p><strong>Heat</strong> - The orchestration\
+    \ service for OpenStack. It is designed to launch multiple\ncomposite cloud applications\
+    \ based on templates in the form of text files that\ncan be treated like code.</p>\n\
+    <p><strong>HFS</strong> - Hierarchical File Storage (usually) or Hierarchical\
+    \ File System.</p>\n<p><strong>HPC</strong> - High Performance Computing systems\
+    \ - typically refers to \"high end\" computing\nhardware designed for doing \"\
+    large\" computational tasks.</p>\n<p><strong>HOW-TO</strong> - A document written\
+    \ for users that tries to explain \"how to\" do a specific task.</p>\n<p><strong>Hyper-V</strong>\
+    \ - Microsoft's main virtualization technology offering.</p>\n<p><strong>Hypervisor</strong>\
+    \ - The software that performs the core management of virtual machines in a\n\
+    virtualized computing system.</p>\n<h3>I</h3>\n<p><strong>IaaS</strong> - Infrastructure\
+    \ as a service (IaaS) is a type of cloud computing in which a\nthird-party provider\
+    \ hosts virtualized computing resources over the Internet.</p>\n<p><strong>Icehouse</strong>\
+    \ - The name of an OpenStack release.</p>\n<p><strong>Image</strong> - A starting\
+    \ state for a new \"clean\" virtual machine.  Typical consists of an\nimage of\
+    \ a file system with freshly installed operating system and applications.</p>\n\
+    <p><strong>Image Store</strong> - The place where OpenStack images are held.</p>\n\
+    <p><strong>Instance</strong> - OpenStack terminology for a virtual machine.</p>\n\
+    <p><strong>Intel</strong> - An American multinational that is one of the world's\
+    \ largest semiconductor chip manufacturers.</p>\n<p><strong>Intersect</strong>\
+    \ - An eResearch support agency based in New South Wales.</p>\n<p><strong>Internet</strong>\
+    \ - The Internet is a global system of interconnected computer networks that use\
+    \ the Internet protocol\nsuite (TCP/IP) to link to each other.</p>\n<p><strong>IP</strong>\
     \ - The Internet Protocol (IP) is the principal communications protocol in the\n\
     Internet protocol suite for relaying datagrams (also knows as messages or\npackets)\
     \ across network boundaries. Transmission and the routing of IP packets\nare what\
@@ -4366,7 +4371,7 @@
     <h3>Z</h3>\n<p><strong>Zope</strong> A framework for building web applications\
     \ based on Python.</p>"
   parent: 21
-  sha1: cc89887f862b0f1c166a0a0b989a0e87a92f10d3
+  sha1: 0f591f65022c173e6093adfaa33c475b68c3b62c
   title: Glossary
 53:
   freshdesk:
