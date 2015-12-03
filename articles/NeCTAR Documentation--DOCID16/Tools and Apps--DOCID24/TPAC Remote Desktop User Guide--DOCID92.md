@@ -1,4 +1,13 @@
-## Introduction
+- [Introduction](#intro)
+- [X2Go Remote Desktop](#desktop)
+- [TPAC Remote Desktop Image](#image)
+- [TPAC Remote Desktop (X2Go) User Guide](#guide)
+- [Security](#security)
+- [Remote Desktop Server Installation](#installation)
+- [Contact](#contact)
+
+
+## Introduction <a name="intro"></a>
 
 A remote desktop is a service that allows a user to access and view an operating
 system’s desktop session that is running on another computer in another
@@ -40,7 +49,7 @@ traditional local computer access:
 
 - Multiple users can access the remote computer at the same time
 
-## X2Go Remote Desktop
+## X2Go Remote Desktop <a name="desktop"></a>
 
 x2go is a free remote desktop tool using NX technology for low latency access to
 graphical applications running on remote computers (such as NeCTAR virtual
@@ -64,6 +73,8 @@ freeNX or the like.  Features include:
 
 - Sound, printing and remote file sharing (all untested at this stage)
 
+For more information about X2Go, please refer to its offical website[x2go]
+
 ### X20Go Client
 
 The X2Go Client is the client application that connects to a remote server and a
@@ -80,7 +91,7 @@ which is the X20Go client.
 
 For more information about X2G0, please visit X2Go official [website][x2go]
 
-## TPAC Remote Desktop Image
+## TPAC Remote Desktop Image <a name="image"></a>
 
 You can install X2Go server on any supported Linux distributions on the virtual
 machines in NecTAR Cloud and access that machines from anywhere over a network.
@@ -96,11 +107,18 @@ The below lists what software packages have been pre-installed:
 
 - Mate 1.8.1 (GUI desktop)
 
-For information about how to use the X2go Client/Server and the image, please
-refer to the below sections.
+- Python 2.7.6 and Python 3.4
+
+- openjdk-7
+
+- nano
+
+- gcc 4.8, g++ 4.8
+
+- gimp
 
 
-## TPAC Remote Desktop (X2Go) User Guide
+## TPAC Remote Desktop (X2Go) User Guide <a name="guide"></a>
 
 TPAC recommends X2Go and MATE desktop environment for providing remote desktop
 capability to NeCTAR virtual machines. This guide is about how to install and
@@ -119,24 +137,22 @@ General requirements:
 
 - X2Go server installed on the remote host, no further configuration is required.
  You can use TPAC rebuild image to launch a virtual machine as it has pre-installed
- the X2Go Server and MATE Desktop GUI Provider.
+ the X2Go Server and MATE Desktop.
 
 - An account with ssh access on the remote host (either via certificates or password)
 
-- X2Go client installed on the remote host and configured to talk to the remote host
+- X2Go client installed and configured to talk to the remote host
 
 ### What you need
 
-Aside from computer and network access, you will need to be an Australian Access
-Federation(AAF) eligible researcher to access the NeCTAR Cloud. The login
-credentials are same as your institutional credentials and if you have any
-problems with the AAF login, you can contact your institution help desk. You will
-also have to use key-pair security for your virtual machine authentication virtual
-machine authentication. Upon first NeCTAR Cloud use, AAF eligible researchers are
-issued with a limited trial allocation that will do just fine for trialling the
-TPAC Matlab in the research cloud. If you need more resources, such as CPU, data
+Aside from computer and network access, you will need to be an [Australian Access Federation][AAF]
+eligible researcher to access the NeCTAR cloud. You will also have to use key-pair
+security for your [virtual machine authentication][nectar-authentication].
+Upon first NeCTAR cloud use, AAF eligible researchers are issued with a limited
+[trial allocation][nectar-allocation] that will do just fine for trying the
+TPAC RStudio in the research cloud. If you need more resources, such as CPU, data
 storage space, or you need it for longer than your trial allocation, then you can
-request a NeCTAR allocation.
+request a [NeCTAR allocation][nectar-request].
 
 ### X2Go Client Installation
 
@@ -182,8 +198,8 @@ Please go to this [link][x2go-redhat] for detailed instruction.
 ### Use X2Go Client
 
 The below instruction shows how to set up X2Go Client to connect to a remote
-virtual machine with X2Go preinstalled in windows environment. For instructions
-in Linux and OS X, please refer to X2Go official [website][x2go].
+virtual machine with X2Go client preinstalled in windows environment. For
+instructions in Linux and OS X, please refer to X2Go official [website][x2go].
 
 - Double click X2Go Client icon on the desktop, or you can search it through windows search function.
  You should see the below screenshot:
@@ -223,18 +239,31 @@ in NeCTAR cloud, you can refer to this [link][nectar-launch-instance].
 
 - Select a project
 
-- Click ‘Images’ and in the image list find image ‘TPAC core.001 1447714698’
+- Click ‘Images’ and in the image list find image ‘TPAC core.003 1448253981’
+
+![`snapshot15`](images/tpac-remote-desktop-15.png)
 
 - Click associated ‘Launch’ button and follow the instructions on the pop up
- window. Provide some information for the virtual machine, such as name, key pair,
- security groups, flavour and availability zone. Please note, the desktop
- application such as Mate requires larger root disk size, so it is preferred to
- use flavour m2.small, m2.medium, m2.large and m2.xlarge as these flavours have
- 30G root disk. You also need to open port 22, as X2Go uses it for communication
- between X2Go Server and Client
+ window. Provide some information for the virtual machine, such as name and flavour.
+ The desktop application such as Mate requires larger root disk size, so it is
+ preferred to use flavour m2.small, m2.medium, m2.large and m2.xlarge as these
+ flavours have 30G root disk. 
  
-- Click ‘Launch’ button. It might take various minutes to launch a virtual
+ ![`snapshot16`](images/tpac-remote-desktop-16.png)
+
+- Click 'Access & Security' tab, select the key pair for authentication and the
+ security group. For how to generate a key pair in NecTAR Dashboard, please refer to
+ this [link][keypair]. You also need to open port 22, as X2Go uses it for communication
+ between X2Go Server and Client. So please ensure ticking the security group with ssh
+ 22 open.
+ 
+ ![`snapshot17`](images/tpac-remote-desktop-17.png)
+ 
+- Click 'Availability Zone 'tab. Select the required location of virtualm achine.
+ Click ‘Launch’ button. It might take various minutes to launch a virtual
  machine up to the chosen availability zone.
+
+ ![`snapshot18`](images/tpac-remote-desktop-18.png)
 
 Now, you should have a working X2Go server and you can use X2Go client (refer
 to above document) to connect to it. The X2Go has a default user account
@@ -289,7 +318,7 @@ context menu, see above screenshot. You can click the ‘Empty File’ menu item
 under the ‘Create Document’ to create a new empty file or click ‘Create Folder’
 to create a new folder. On the left hand side has a list of folders under your
 home folder for your convenience. You can also click the left arrow button on the
-toolbar to navigate to parent folder. 
+toolbar to navigate to parent folder.
 
 #### Change System settings
 
@@ -412,7 +441,15 @@ SFTP client in Windows environment.
 
 ![`snapshot14`](images/tpac-remote-desktop-14.png)
 
-## More Info
+## Security <a name="security"></a>
+
+By default, there is only one default user 'ubuntu' and it uses key based
+authentication. If you want to create more users to use the virtual machine, please
+use key based authentication rather than password based authentication. For a quick
+security check list, please refer to [here][check].
+
+
+## Remote Desktop Server Installation  <a name="installation"></a>
 
 If you would like to install an X2Go/MATE remote desktop on your existing instance,
 then you can find some instructions below. It assumes that you uses Ubuntu as the
@@ -456,11 +493,15 @@ sudo apt-get install x2goserver x2goserver-xsession
 
 For more information, please visit X2Go official [website][x2go]
 
-## Contact
+## Contact <a name="contact"></a>
 
 If you have problems with TPAC X2Go image, please contact TPAC help desk via
 helpdesk@tpac.org.au, or any help desks from your local Eresearch service providers.
 
+[AAF]: https://support.nectar.org.au/support/solutions/articles/6000055377-getting-an-account
+[nectar-authentication]: https://support.nectar.org.au/support/solutions/articles/6000077794-getting-started
+[nectar-allocation]: https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you
+[nectar-request]: https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation
 [winscp]: https://winscp.net/eng/download.php
 [mate]: http://mate-desktop.org/
 [nectar-image]: https://wiki.rc.nectar.org.au/wiki/Image_Catalog
@@ -472,3 +513,5 @@ helpdesk@tpac.org.au, or any help desks from your local Eresearch service provid
 [xquartz]: http://www.xquartz.org/
 [x2go]: http://wiki.x2go.org/doku.php/doc:newtox2go
 [x2go-windows]: http://code.x2go.org/releases/binary-win32/x2goclient/releases/4.0.5.0-2015.07.31/
+[check]: https://support.nectar.org.au/support/solutions/articles/6000091906-security-compromise-checklist
+[keypair]: https://support.nectar.org.au/support/solutions/articles/6000055376-launching-virtual-machines
