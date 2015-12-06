@@ -24,6 +24,7 @@
            - [What went wrong](#wrong)  
         - [Amending your changes for review](#Amending)  
         - [Cleaning up your local branches](#Cleaning)  
+  - [A word of Caution](#caution)
 
 # NeCTAR Cloud Tier 0 Documentation
 
@@ -316,6 +317,26 @@ Link text should be meaningful - don't use phrases like 'click here' - and
 should be embedded behind text where possible; try not to paste full URLs onto
 the page.
 
+The syntax is
+- in text link: [hypertext][link identifier]
+- at the bottom of the page: [link identifier]: http://url
+
+###### Images
+
+Images should be stored in the "images" directory, which is in the same directory that the article is saved. You can then link to the images with e.g.:  
+`![](images/articleIdentifier_imageName.png`
+
+We have not always used the article identifier as a prefix for the image name, so you won't see it used in all the submitted images. However, experience has taught us that it is invaluable to be able to identify which images belong with which article. Then if an article needs to be moved to a new directory, or be deleted, we can easily identify the associated images from the large combined "images" directory.
+
+###### Hypertext table of contents for easy navigation
+
+Hypertext links within the article are useful for creating an interactive table of contents with links to subheadings.
+
+anchor syntax - place a couple of lines above the sub-heading:
+    <a name='nameOfLink'></a>
+link syntax - 
+    [hypertext](#nameOfLink)
+
 #### Submitting your changes for review <a name='Submitting'></a>
 
 A host of people will be very excited to see your new changes and will help you
@@ -490,3 +511,19 @@ To use it, make sure you are in the root directory of the project, then type:
 ```bash
 ./cleanup_branches.sh 
 ```
+
+## A word of Caution <a name='caution'></a>
+
+We've learned a few cautionary tales by trial and error. Please add to this list if 
+you dicover any new ways of making the system have a tantrum.
+
+- After your changes are merged, there is a script called "Docobot" that pushes the changes to freshdesk, which updates the website (usually within a minute of the change being merged). Sometimes changes are accepted and merged, but cause docobot to stop working as the changes are not compatible with the freshdesk settings.
+  - Don't make any new folders in the top category, or increase the number of sub folders allowed (i.e. no subfolders in Level 3, see below). 
+    - Level 1 - "Cloud expert" and "NeCTAR documentation" ONLY
+    - Level 2 - Sub folders ONLY, e.g. "Cloud Basics", "Security guidelines"
+    - Level 3 - .md articles, and a folder called "images" for the image files ONLY
+  - Adding sub-folders at level 2 has been successful (remember to add it without any DOCID, this will be assigned automatically). Add the folder at the same time as you add contents to the folder as docobot ignores empty folders.
+  
+  - Never submit a new article or directory with a DOCID. Docobot will automatically add a DOCID after the merge. If Gerrit is reset for some reason (as a troubleshooting measure), you may need to re-commit a new article that was merged in the period that has been rewound. In this case, the article was given a DOCID already, but because of the reset, the DOCID needs to be deleted from the filename before it can be resubmitted.
+
+
