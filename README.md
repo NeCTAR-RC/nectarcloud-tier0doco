@@ -89,7 +89,7 @@ Initially you will need to install (or have access to) the following tools;
 - a launchpad id to authenticate yourself to Gerrit
   - [launchpad login](https://login.launchpad.net/)
   - [Gerrit login](https://review.rc.nectar.org.au/login)
-  - Email [Sam Morrison](mailto:sam.morrison@unimelb.edu.au) or [Sarah Nisbet](mailto:sarah.nisbet@ersa.edu.au) with your git username to be added to the teir0 doco project. 
+  - Email [Sarah Nisbet](mailto:sarah.nisbet@ersa.edu.au) with your git username to be added to the teir0 doco project.
 
 - email, text editors and other such things.
 
