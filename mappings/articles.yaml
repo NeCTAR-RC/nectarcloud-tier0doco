@@ -22320,3 +22320,745 @@
   parent: 24
   sha1: e3bb0bbc886d17e7563c52a31bbaefe7bf24be38
   title: Monash Bioinformatics Training Platform User Guide
+101:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-12-06T22:48:08-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " CoESRA Remote Desktop - User Guide \n Type \n The Collaborative\
+          \ Environment for Ecosystem Science Research and Analysis\n(CoESRA) is a\
+          \ Platform-as-a-Service (PaaS) service developed by the TERN\nnetwork to\
+          \ serve the ecosystem science community. \n Description \n The CoESRA is\
+          \ a workflow-based web platform that allows researchers\n(primarily ecosystem\
+          \ scientists) to perform complex analyses without\nhaving to set up experiments\
+          \ from scratch and worry about having enough\nresources to run the analyses.\
+          \ CoESRA provides users with a cloud-based,\n'remote desktop' platform with\
+          \ pre-loaded analytical and synthesis tools.\nIt was built to enable ecosystem\
+          \ scientists to orchestrate, compose and\nexecute experiments as repeatable\
+          \ workflows. Kepler is used within the\ndesktop as a composition, orchestration\
+          \ and execution engine. Kepler is\nan open source workflow management tool\
+          \ for the design and execution of\nscientific workflows. \n The CoESRA service\
+          \ provides an opportunity not only to re-use data but\nalso to reuse tools\
+          \ for data manipulation, scripts for data visualisation,\nand algorithms\
+          \ for analysis processes. Once a specific analysis has been\nconducted,\
+          \ the entire workflow can be stored and shared with other scientists.\n\
+          Finally, the workflow can published to\nResearch Data Australia(RDA). \n\
+          \ The community will gain access to data streams, tools and often hidden\n\
+          'pipeline' processes to leverage further knowledge about ecosystem\nscience\
+          \ experiments. \n The Linux-based virtual desktop platform is best accessed\
+          \ via the Chrome\nWeb browser. It enables users to access Web-based data\
+          \ sources, e.g. data\nstored on DropBox, CloudStor or Google Drive, or other\
+          \ data sources related\nto ecosystem science. The provenance information\
+          \ for this data can be stored.\nAll registered users get a public and private\
+          \ home folder which can be used\nto store data and workflows. \n Workflows\
+          \ can be shared in a common public folder \"public_share_workflow\",\nwhich\
+          \ is accessible by all registered users. Workflows can also be stored\n\
+          on MyExperiment and the\nAustralian National Data Service's\nResearch Data\
+          \ Australia by creating\na service record from the Kepler menu. \n To have\
+          \ a workflow integrated into the CoESRA platform, please email\ntern.coesra@gmail.com.\
+          \ \n On launch, the platform includes the following applications: R, RStudio,\n\
+          Python and Kepler. It also includes Nimrod software, which is explained\n\
+          in detail elsewhere. Other software can be added to the live desktop by\
+          \ users. \n CoESRA was initiated by the Terrestrial Ecosystem Research Network\
+          \ (TERN). \n The CoESRA desktop is a time-limited service. It is provisioned\
+          \ initially\nfor two days. A user will get an email notification six hours\
+          \ before the\nvirtual desktop is remotely terminated. If users want to extend\
+          \ their access,\nthey can request an extension from the system administrator.\
+          \ \n Target audience \n The service has been developed to meet the needs\
+          \ of the ecosystem science\ncommunity, including researchers in the TERN\
+          \ network. \n Resource requirements \n Currently, CoESRA is accessible using\
+          \ the Google Chrome browser only. Other\nbrowsers will eventually be supported.\
+          \ \n Firefox is the only browser available as part of the virtual desktop\
+          \ platform\nonce the platform has launched. \n No installation is required\
+          \ as the desktop is virtually hosted. \n How to access \n Users can access\
+          \ CoESRA via their\nAustralian Access Federation (AAF) credentials. \n Steps:\
+          \ \n 1) Go to CoESRA. \n 2) Click on Register. \n If this is a user's first\
+          \ visit, s/he will be taken to the\nAAF's Log in through your organisation\
+          \ service. \n \n The user should select the institution name from the drop-down\
+          \ list and\nthen check one of two options for subsequent log ins: \n \n\
+          \ \n Remember my organisation for this web browser session only \n \n \n\
+          \ Remember my organisation permanently and skip this selection from now\
+          \ on \n \n \n To simplify future access, users should select the 'Remember\
+          \ my organisation\npermanently' option. \n The user should then follow the\
+          \ steps to log in via their own institution.\nOnce the organisation has\
+          \ been selected, the user will be taken to the log\nin site for that institution,\
+          \ e.g., a user coming in via\nThe University of Queensland will see this\
+          \ screen: \n \n 3) Once a user has successfully entered credentials, the\
+          \ screen will\nrefresh with \n \n 4) The desktop will then deploy. \n \n\
+          \ A virtual desktop will load, with the Kepler environment open by default.\
+          \ \n On the left-hand side menu in Kepler, click on \"Coesra-tern\" and\
+          \ subsequent\nfolders to see the workflow icons. \n \n Double-click on the\
+          \ workflow icon of your choice and the workflow will\nopen in a new Kepler\
+          \ window. \n \n Click on the Run button to run a workflow. Some workflows\
+          \ may require\nadditional datasets for successful execution. \n \n Non-AAF-accredited\
+          \ users \n Access is possible even if an individual does not have AAF credentials.\n\
+          Please contact tern.coesra@gmail.com for\nguest account access. \n Issues\
+          \ \n The system has the capacity to launch only a specific number of desktops\
+          \ at\nany one time. If there is no more capacity in the system, you will\
+          \ get the\nfollowing error message: \n \n The only solution here is to try\
+          \ again later. \n Configuration guide \n The desktop comes 'as is'. Researchers\
+          \ are able to customise it, but are\nstrongly discouraged from doing so.\
+          \ According to the\nFAQ on the site: \"We strongly recommend\nusers not\
+          \ to make any changes to the virtual desktop setting because it may\naffect\
+          \ the working of the desktop. Any changes made by users will not be\nsupported.\"\
+          \ \n Technical blueprint \n These are two real-life case studies: \n \n\
+          \ \n animal conservation and management plan \n \n \n ecosystem assessment\
+          \ of Mountain Ash forest. \n \n \n The first case study links conservation\
+          \ planning software\nMarxan and animal tracking information to increase\
+          \ the\nanalytical power of these ecological tools and create a repeatable\
+          \ and\nreusable workflow for subsequent studies of habitat conservation.\
+          \ \n The second case study brings together data and analysis required to\
+          \ apply\nIUCN Red List of Ecosystems\ncriteria to the Mountain Ash forest\
+          \ ecosystem and to make a repeatable\n(e.g., able to be re-run in the future\
+          \ with updated time windows and\nupdated ecological parameters) workflow\
+          \ for the ecosystem assessment\nof Mountain Ash forests in the central highlands\
+          \ of Victoria. The workflow\nwill also enable researchers to re-run the\
+          \ entire assessment with\nadditional data for certain criteria. \n For more\
+          \ information, please email\ntern.coesra@gmail.com. \n Frequently Asked\
+          \ Questions \n CoESRA FAQ \n Help \n For help and support, please email\n\
+          tern.coesra@gmail.com. \n Contact \n Please email tern.coesra@gmail.com. "
+        description: '<h1>CoESRA Remote Desktop - User Guide</h1>
+
+          <h2>Type</h2>
+
+          <p>The Collaborative Environment for Ecosystem Science Research and Analysis
+
+          (CoESRA) is a Platform-as-a-Service (PaaS) service developed by the TERN
+
+          network to serve the ecosystem science community.</p>
+
+          <h2>Description</h2>
+
+          <p>The CoESRA is a workflow-based web platform that allows researchers
+
+          (primarily ecosystem scientists) to perform complex analyses without
+
+          having to set up experiments from scratch and worry about having enough
+
+          resources to run the analyses. CoESRA provides users with a cloud-based,
+
+          ''remote desktop'' platform with pre-loaded analytical and synthesis tools.
+
+          It was built to enable ecosystem scientists to orchestrate, compose and
+
+          execute experiments as repeatable workflows. Kepler is used within the
+
+          desktop as a composition, orchestration and execution engine. Kepler is
+
+          an open source workflow management tool for the design and execution of
+
+          scientific workflows.</p>
+
+          <p>The CoESRA service provides an opportunity not only to re-use data but
+
+          also to reuse tools for data manipulation, scripts for data visualisation,
+
+          and algorithms for analysis processes. Once a specific analysis has been
+
+          conducted, the entire workflow can be stored and shared with other scientists.
+
+          Finally, the workflow can published to
+
+          <a href="https://researchdata.ands.org.au/">Research Data Australia</a>(RDA).</p>
+
+          <p>The community will gain access to data streams, tools and often hidden
+
+          ''pipeline'' processes to leverage further knowledge about ecosystem
+
+          science experiments.</p>
+
+          <p>The Linux-based virtual desktop platform is best accessed via the Chrome
+
+          Web browser. It enables users to access Web-based data sources, e.g. data
+
+          stored on DropBox, CloudStor or Google Drive, or other data sources related
+
+          to ecosystem science. The provenance information for this data can be stored.
+
+          All registered users get a public and private home folder which can be used
+
+          to store data and workflows.</p>
+
+          <p>Workflows can be shared in a common public folder "public_share_workflow",
+
+          which is accessible by all registered users. Workflows can also be stored
+
+          on <a href="http://www.myexperiment.org/home">MyExperiment</a> and the
+
+          <a href="http://ands.org.au/">Australian National Data Service</a>''s
+
+          <a href="https://researchdata.ands.org.au/">Research Data Australia</a>
+          by creating
+
+          a service record from the Kepler menu.</p>
+
+          <p>To have a workflow integrated into the CoESRA platform, please email
+
+          <a href="mailto:tern.coesra@gmail.com">tern.coesra@gmail.com</a>.</p>
+
+          <p>On launch, the platform includes the following applications: R, RStudio,
+
+          Python and Kepler. It also includes Nimrod software, which is explained
+
+          in detail elsewhere. Other software can be added to the live desktop by
+          users.</p>
+
+          <p>CoESRA was initiated by the Terrestrial Ecosystem Research Network (TERN).</p>
+
+          <p>The CoESRA desktop is a time-limited service. It is provisioned initially
+
+          for two days. A user will get an email notification six hours before the
+
+          virtual desktop is remotely terminated. If users want to extend their access,
+
+          they can request an extension from the system administrator.</p>
+
+          <h2>Target audience</h2>
+
+          <p>The service has been developed to meet the needs of the ecosystem science
+
+          community, including researchers in the TERN network.</p>
+
+          <h2>Resource requirements</h2>
+
+          <p>Currently, CoESRA is accessible using the Google Chrome browser only.
+          Other
+
+          browsers will eventually be supported.</p>
+
+          <p>Firefox is the only browser available as part of the virtual desktop
+          platform
+
+          once the platform has launched.</p>
+
+          <p>No installation is required as the desktop is virtually hosted.</p>
+
+          <h2>How to access</h2>
+
+          <p>Users can access CoESRA via their
+
+          <a href="http://aaf.edu.au/">Australian Access Federation</a> (AAF) credentials.</p>
+
+          <p>Steps:</p>
+
+          <p>1) Go to <a href="https://www.coesra.org.au/">CoESRA</a>.</p>
+
+          <p>2) Click on <strong>Register</strong>.</p>
+
+          <p>If this is a user''s first visit, s/he will be taken to the
+
+          <a href="http://aaf.edu.au/">AAF</a>''s <strong>Log in through your organisation</strong>
+          service.</p>
+
+          <p><img alt="AAF''s Log in through your organisation service" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/coesra2.png?raw=true"></p>
+
+          <p>The user should select the institution name from the drop-down list and
+
+          then check one of two options for subsequent log ins:</p>
+
+          <ul>
+
+          <li>
+
+          <p>Remember my organisation for this web browser session only</p>
+
+          </li>
+
+          <li>
+
+          <p>Remember my organisation permanently and skip this selection from now
+          on</p>
+
+          </li>
+
+          </ul>
+
+          <p>To simplify future access, users should select the ''Remember my organisation
+
+          permanently'' option.</p>
+
+          <p>The user should then follow the steps to log in via their own institution.
+
+          Once the organisation has been selected, the user will be taken to the log
+
+          in site for that institution, e.g., a user coming in via
+
+          <a href="http://www.uq.edu.au/">The University of Queensland</a> will see
+          this screen:</p>
+
+          <p><img alt="UQ log in screen" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/coesra1.png?raw=true"></p>
+
+          <p>3) Once a user has successfully entered credentials, the screen will
+
+          refresh with</p>
+
+          <p><img alt="Go to your desktop message" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/coesra3.png?raw=true"></p>
+
+          <p>4) The desktop will then deploy.</p>
+
+          <p><img alt="Opening your desktop message" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/coesra4.png?raw=true"></p>
+
+          <p>A virtual desktop will load, with the Kepler environment open by default.</p>
+
+          <p>On the left-hand side menu in Kepler, click on "Coesra-tern" and subsequent
+
+          folders to see the workflow icons.</p>
+
+          <p><img alt="CoESRA desktop" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/coesra5.png?raw=true"></p>
+
+          <p>Double-click on the workflow icon of your choice and the workflow will
+
+          open in a new Kepler window.</p>
+
+          <p><img alt="Workflows" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/coesra6.png?raw=true"></p>
+
+          <p>Click on the Run button to run a workflow. Some workflows may require
+
+          additional datasets for successful execution.</p>
+
+          <p><img alt="Run a workflow" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/coesra7.png?raw=true"></p>
+
+          <h2>Non-AAF-accredited users</h2>
+
+          <p>Access is possible even if an individual does not have AAF credentials.
+
+          Please contact <a href="mailto:tern.coesra@gmail.com">tern.coesra@gmail.com</a>
+          for
+
+          guest account access.</p>
+
+          <h2>Issues</h2>
+
+          <p>The system has the capacity to launch only a specific number of desktops
+          at
+
+          any one time. If there is no more capacity in the system, you will get the
+
+          following error message:</p>
+
+          <p><img alt="System unavailable message" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/coesra8.png?raw=true"></p>
+
+          <p>The only solution here is to try again later.</p>
+
+          <h2>Configuration guide</h2>
+
+          <p>The desktop comes ''as is''. Researchers are able to customise it, but
+          are
+
+          strongly discouraged from doing so. According to the
+
+          <a href="https://www.coesra.org.au/#/faq">FAQ</a> on the site: "We strongly
+          recommend
+
+          users not to make any changes to the virtual desktop setting because it
+          may
+
+          affect the working of the desktop. Any changes made by users will not be
+
+          supported."</p>
+
+          <h2>Technical blueprint</h2>
+
+          <p>These are two real-life case studies:</p>
+
+          <ol>
+
+          <li>
+
+          <p>animal conservation and management plan</p>
+
+          </li>
+
+          <li>
+
+          <p>ecosystem assessment of Mountain Ash forest.</p>
+
+          </li>
+
+          </ol>
+
+          <p>The first case study links conservation planning software
+
+          <a href="http://marxan.net">Marxan</a> and animal tracking information to
+          increase the
+
+          analytical power of these ecological tools and create a repeatable and
+
+          reusable workflow for subsequent studies of habitat conservation.</p>
+
+          <p>The second case study brings together data and analysis required to apply
+
+          <a href="http://www.iucnredlistofecosystems.org/">IUCN Red List of Ecosystems</a>
+
+          criteria to the Mountain Ash forest ecosystem and to make a repeatable
+
+          (e.g., able to be re-run in the future with updated time windows and
+
+          updated ecological parameters) workflow for the ecosystem assessment
+
+          of Mountain Ash forests in the central highlands of Victoria. The workflow
+
+          will also enable researchers to re-run the entire assessment with
+
+          additional data for certain criteria.</p>
+
+          <p>For more information, please email
+
+          <a href="mailto:tern.coesra@gmail.com">tern.coesra@gmail.com</a>.</p>
+
+          <h2>Frequently Asked Questions</h2>
+
+          <p><a href="https://www.coesra.org.au/#/faq">CoESRA FAQ</a></p>
+
+          <h2>Help</h2>
+
+          <p>For help and support, please email
+
+          <a href="mailto:tern.coesra@gmail.com">tern.coesra@gmail.com</a>.</p>
+
+          <h2>Contact</h2>
+
+          <p>Please email <a href="mailto:tern.coesra@gmail.com">tern.coesra@gmail.com</a>.</p>'
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000094838
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-12-06T22:48:08-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000094838
+        position: 13
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: QCIF_TERN_CoESRA
+        updated_at: '2015-12-06T22:48:08-05:00'
+        user_id: 6002464727
+  html: '<h1>CoESRA Remote Desktop - User Guide</h1>
+
+    <h2>Type</h2>
+
+    <p>The Collaborative Environment for Ecosystem Science Research and Analysis
+
+    (CoESRA) is a Platform-as-a-Service (PaaS) service developed by the TERN
+
+    network to serve the ecosystem science community.</p>
+
+    <h2>Description</h2>
+
+    <p>The CoESRA is a workflow-based web platform that allows researchers
+
+    (primarily ecosystem scientists) to perform complex analyses without
+
+    having to set up experiments from scratch and worry about having enough
+
+    resources to run the analyses. CoESRA provides users with a cloud-based,
+
+    ''remote desktop'' platform with pre-loaded analytical and synthesis tools.
+
+    It was built to enable ecosystem scientists to orchestrate, compose and
+
+    execute experiments as repeatable workflows. Kepler is used within the
+
+    desktop as a composition, orchestration and execution engine. Kepler is
+
+    an open source workflow management tool for the design and execution of
+
+    scientific workflows.</p>
+
+    <p>The CoESRA service provides an opportunity not only to re-use data but
+
+    also to reuse tools for data manipulation, scripts for data visualisation,
+
+    and algorithms for analysis processes. Once a specific analysis has been
+
+    conducted, the entire workflow can be stored and shared with other scientists.
+
+    Finally, the workflow can published to
+
+    <a href="https://researchdata.ands.org.au/">Research Data Australia</a>(RDA).</p>
+
+    <p>The community will gain access to data streams, tools and often hidden
+
+    ''pipeline'' processes to leverage further knowledge about ecosystem
+
+    science experiments.</p>
+
+    <p>The Linux-based virtual desktop platform is best accessed via the Chrome
+
+    Web browser. It enables users to access Web-based data sources, e.g. data
+
+    stored on DropBox, CloudStor or Google Drive, or other data sources related
+
+    to ecosystem science. The provenance information for this data can be stored.
+
+    All registered users get a public and private home folder which can be used
+
+    to store data and workflows.</p>
+
+    <p>Workflows can be shared in a common public folder "public_share_workflow",
+
+    which is accessible by all registered users. Workflows can also be stored
+
+    on <a href="http://www.myexperiment.org/home">MyExperiment</a> and the
+
+    <a href="http://ands.org.au/">Australian National Data Service</a>''s
+
+    <a href="https://researchdata.ands.org.au/">Research Data Australia</a> by creating
+
+    a service record from the Kepler menu.</p>
+
+    <p>To have a workflow integrated into the CoESRA platform, please email
+
+    <a href="mailto:tern.coesra@gmail.com">tern.coesra@gmail.com</a>.</p>
+
+    <p>On launch, the platform includes the following applications: R, RStudio,
+
+    Python and Kepler. It also includes Nimrod software, which is explained
+
+    in detail elsewhere. Other software can be added to the live desktop by users.</p>
+
+    <p>CoESRA was initiated by the Terrestrial Ecosystem Research Network (TERN).</p>
+
+    <p>The CoESRA desktop is a time-limited service. It is provisioned initially
+
+    for two days. A user will get an email notification six hours before the
+
+    virtual desktop is remotely terminated. If users want to extend their access,
+
+    they can request an extension from the system administrator.</p>
+
+    <h2>Target audience</h2>
+
+    <p>The service has been developed to meet the needs of the ecosystem science
+
+    community, including researchers in the TERN network.</p>
+
+    <h2>Resource requirements</h2>
+
+    <p>Currently, CoESRA is accessible using the Google Chrome browser only. Other
+
+    browsers will eventually be supported.</p>
+
+    <p>Firefox is the only browser available as part of the virtual desktop platform
+
+    once the platform has launched.</p>
+
+    <p>No installation is required as the desktop is virtually hosted.</p>
+
+    <h2>How to access</h2>
+
+    <p>Users can access CoESRA via their
+
+    <a href="http://aaf.edu.au/">Australian Access Federation</a> (AAF) credentials.</p>
+
+    <p>Steps:</p>
+
+    <p>1) Go to <a href="https://www.coesra.org.au/">CoESRA</a>.</p>
+
+    <p>2) Click on <strong>Register</strong>.</p>
+
+    <p>If this is a user''s first visit, s/he will be taken to the
+
+    <a href="http://aaf.edu.au/">AAF</a>''s <strong>Log in through your organisation</strong>
+    service.</p>
+
+    <p><img alt="AAF''s Log in through your organisation service" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR
+    Documentation--DOCID16/Tools and Apps--DOCID24/images/coesra2.png?raw=true"></p>
+
+    <p>The user should select the institution name from the drop-down list and
+
+    then check one of two options for subsequent log ins:</p>
+
+    <ul>
+
+    <li>
+
+    <p>Remember my organisation for this web browser session only</p>
+
+    </li>
+
+    <li>
+
+    <p>Remember my organisation permanently and skip this selection from now on</p>
+
+    </li>
+
+    </ul>
+
+    <p>To simplify future access, users should select the ''Remember my organisation
+
+    permanently'' option.</p>
+
+    <p>The user should then follow the steps to log in via their own institution.
+
+    Once the organisation has been selected, the user will be taken to the log
+
+    in site for that institution, e.g., a user coming in via
+
+    <a href="http://www.uq.edu.au/">The University of Queensland</a> will see this
+    screen:</p>
+
+    <p><img alt="UQ log in screen" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR
+    Documentation--DOCID16/Tools and Apps--DOCID24/images/coesra1.png?raw=true"></p>
+
+    <p>3) Once a user has successfully entered credentials, the screen will
+
+    refresh with</p>
+
+    <p><img alt="Go to your desktop message" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR
+    Documentation--DOCID16/Tools and Apps--DOCID24/images/coesra3.png?raw=true"></p>
+
+    <p>4) The desktop will then deploy.</p>
+
+    <p><img alt="Opening your desktop message" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR
+    Documentation--DOCID16/Tools and Apps--DOCID24/images/coesra4.png?raw=true"></p>
+
+    <p>A virtual desktop will load, with the Kepler environment open by default.</p>
+
+    <p>On the left-hand side menu in Kepler, click on "Coesra-tern" and subsequent
+
+    folders to see the workflow icons.</p>
+
+    <p><img alt="CoESRA desktop" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR
+    Documentation--DOCID16/Tools and Apps--DOCID24/images/coesra5.png?raw=true"></p>
+
+    <p>Double-click on the workflow icon of your choice and the workflow will
+
+    open in a new Kepler window.</p>
+
+    <p><img alt="Workflows" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR
+    Documentation--DOCID16/Tools and Apps--DOCID24/images/coesra6.png?raw=true"></p>
+
+    <p>Click on the Run button to run a workflow. Some workflows may require
+
+    additional datasets for successful execution.</p>
+
+    <p><img alt="Run a workflow" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR
+    Documentation--DOCID16/Tools and Apps--DOCID24/images/coesra7.png?raw=true"></p>
+
+    <h2>Non-AAF-accredited users</h2>
+
+    <p>Access is possible even if an individual does not have AAF credentials.
+
+    Please contact <a href="mailto:tern.coesra@gmail.com">tern.coesra@gmail.com</a>
+    for
+
+    guest account access.</p>
+
+    <h2>Issues</h2>
+
+    <p>The system has the capacity to launch only a specific number of desktops at
+
+    any one time. If there is no more capacity in the system, you will get the
+
+    following error message:</p>
+
+    <p><img alt="System unavailable message" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR
+    Documentation--DOCID16/Tools and Apps--DOCID24/images/coesra8.png?raw=true"></p>
+
+    <p>The only solution here is to try again later.</p>
+
+    <h2>Configuration guide</h2>
+
+    <p>The desktop comes ''as is''. Researchers are able to customise it, but are
+
+    strongly discouraged from doing so. According to the
+
+    <a href="https://www.coesra.org.au/#/faq">FAQ</a> on the site: "We strongly recommend
+
+    users not to make any changes to the virtual desktop setting because it may
+
+    affect the working of the desktop. Any changes made by users will not be
+
+    supported."</p>
+
+    <h2>Technical blueprint</h2>
+
+    <p>These are two real-life case studies:</p>
+
+    <ol>
+
+    <li>
+
+    <p>animal conservation and management plan</p>
+
+    </li>
+
+    <li>
+
+    <p>ecosystem assessment of Mountain Ash forest.</p>
+
+    </li>
+
+    </ol>
+
+    <p>The first case study links conservation planning software
+
+    <a href="http://marxan.net">Marxan</a> and animal tracking information to increase
+    the
+
+    analytical power of these ecological tools and create a repeatable and
+
+    reusable workflow for subsequent studies of habitat conservation.</p>
+
+    <p>The second case study brings together data and analysis required to apply
+
+    <a href="http://www.iucnredlistofecosystems.org/">IUCN Red List of Ecosystems</a>
+
+    criteria to the Mountain Ash forest ecosystem and to make a repeatable
+
+    (e.g., able to be re-run in the future with updated time windows and
+
+    updated ecological parameters) workflow for the ecosystem assessment
+
+    of Mountain Ash forests in the central highlands of Victoria. The workflow
+
+    will also enable researchers to re-run the entire assessment with
+
+    additional data for certain criteria.</p>
+
+    <p>For more information, please email
+
+    <a href="mailto:tern.coesra@gmail.com">tern.coesra@gmail.com</a>.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <p><a href="https://www.coesra.org.au/#/faq">CoESRA FAQ</a></p>
+
+    <h2>Help</h2>
+
+    <p>For help and support, please email
+
+    <a href="mailto:tern.coesra@gmail.com">tern.coesra@gmail.com</a>.</p>
+
+    <h2>Contact</h2>
+
+    <p>Please email <a href="mailto:tern.coesra@gmail.com">tern.coesra@gmail.com</a>.</p>'
+  parent: 24
+  sha1: 47191179eeb8369cfddb9b13c7bb08b9e1bb1d0f
+  title: QCIF_TERN_CoESRA
