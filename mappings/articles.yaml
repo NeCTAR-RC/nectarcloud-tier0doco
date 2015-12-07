@@ -20078,26 +20078,26 @@
           \ UDP). \n \n \n Installing NFS client software \n Before you attempt to\
           \ use client-side NFS, you need to install some packages\nusing your system's\
           \ package manager. \n On a Debian, Ubuntu or similar system by running the\
-          \ following commands: \n $ sudo apt-get update\n   $ sudo apt-get install\
-          \ nfs-common autofs \n On RedHat, CentOS or Scientific Linux, run the following:\
-          \ \n $ sudo yum install nfs-utils autofs \n On (recent) Fedora, run the\
-          \ following: \n $ sudo dnf install nfs-utils autofs \n (The \"autofs\" package\
-          \ is needed if you want to configure the NFS client\nto automount the remote\
-          \ file systems.) \n Configuring the NFS mount \n There are (at least) 3\
-          \ ways to mount a file system on a remote NFS server \n \n With a temporary\
-          \ mount, the mount does not survive an instance reboot. \n With a permanent\
-          \ mount, the file system is mounted automatically on\n    instance startup.\
-          \ \n With an automount, the file system is mounted when some program tries\n\
+          \ following commands: \n sudo apt-get update`\nsudo apt-get install nfs-common\
+          \ autofs \n On RedHat, CentOS or Scientific Linux, run the following: \n\
+          \ sudo yum install nfs-utils autofs` \n On (recent) Fedora, run the following:\
+          \ \n sudo dnf install nfs-utils autofs \n (The \"autofs\" package is needed\
+          \ if you want to configure the NFS client\nto automount the remote file\
+          \ systems.) \n Configuring the NFS mount \n There are (at least) 3 ways\
+          \ to mount a file system on a remote NFS server \n \n With a temporary mount,\
+          \ the mount does not survive an instance reboot. \n With a permanent mount,\
+          \ the file system is mounted automatically on\n    instance startup. \n\
+          \ With an automount, the file system is mounted when some program tries\n\
           \    to access files, and then unmounted after a period of inactivity. \n\
           \ \n The NFS mount string and options \n The NFS mount string and mount\
           \ options are the key pieces of information\nthat are needed when an NFS\
-          \ file system is mounted. \n The  specifies the remote NFS file system to\
-          \ be mounted\non your client VM.  It consists of the NFS server's IP address,\
-          \ and\nan exported NFS path, with a colon between them.  For example: \n\
-          \ 10.255.120.220:/users/fred\n \n The  determine how the client-side kernel\
-          \ manages\nNFS access.  We recommend the following NFS mount options as\
-          \ a\nstarting point: \n rw,hard,intr,nosuid,nodev,timeo=100,retrans=5,nolock\n\
-          \ \n or the following if you need to use NFS version 3: \n rw,nfsvers=3,hard,intr,nosuid,nodev,timeo=100,retrans=5,nolock\n\
+          \ file system is mounted. \n The <mount-string> specifies the remote NFS\
+          \ file system to be mounted\non your client VM.  It consists of the NFS\
+          \ server's IP address, and\nan exported NFS path, with a colon between them.\
+          \  For example: \n 10.255.120.220:/users/fred \n The <mount-options> determine\
+          \ how the client-side kernel manages\nNFS access.  We recommend the following\
+          \ NFS mount options as a\nstarting point: \n rw,hard,intr,nosuid,nodev,timeo=100,retrans=5,nolock\
+          \ \n or the following if you need to use NFS version 3: \n rw,nfsvers=3,hard,intr,nosuid,nodev,timeo=100,retrans=5,nolock\
           \ \n The above parameters have the following meanings: \n \n \n \"rw\" means\
           \ mount the file system with read-write access.  An alternative\n    is\
           \ \"ro\" for read-only access. \n \n \n \"hard\" instructs the system to\
@@ -20118,7 +20118,7 @@
           \ point.\nIf you are doing a temporary NFS mount, or setting up a permanent\
           \ mount,\nthe mount point directory needs to be created manually.  (If you\
           \ are\nusing the automount approach, the mount point directory can be created\n\
-          automatically.)  \n The normal Linux convention is to either use \"/mnt\"\
+          automatically.) \n The normal Linux convention is to either use \"/mnt\"\
           \ or a subdirectory\nof \"/mnt\" as the mount point.  However NeCTAR VMs\
           \ use \"/mnt\" as the mount\npoint for the (so-called) ephemeral file system.\
           \ \n You can use the \"mkdir\" command to create the mountpoint directory.\
@@ -20128,12 +20128,12 @@
           \ an automount, it is a good idea to check that you can access\nthe NFS\
           \ server by setting up a temporary mount.  You can also use this\napproach\
           \ for once-off or ad-hoc access to NFS. \n The steps are as follows: \n\
-          \ \n \n Create a temporary mount point: \n  mkdir ~/tempMount\n \n \n \n\
-          \ Run the mount command: \n  sudo mount -t nfs -o <mount-options> <mount-string>\
-          \ ~/tempMount\n \n where the  and  are as described above. \n \n \n Check\
-          \ that you can access data on the mounted file system: \n  $ ls -l ~/tempMount\n\
-          \ <directory listing>\n \n \n \n When you are done, unmount the file system\
-          \ and tidy up the mount point: \n  sudo umount ~/tempMount\n \n rmdir ~/tempMount\
+          \ \n \n Create a temporary mount point: \n mkdir ~/tempMount \n \n \n Run\
+          \ the mount command: \n sudo mount -t nfs -o <mount-options> <mount-string>\
+          \ ~/tempMount \n where the  and  are as described above. \n \n \n Check\
+          \ that you can access data on the mounted file system: \n $ ls -l ~/tempMount\n\
+          <directory listing> \n \n \n When you are done, unmount the file system\
+          \ and tidy up the mount point: \n sudo umount ~/tempMount\nrmdir ~/tempMount\
           \ \n Note that the \"umount\" will fail if any process (including as shell)\n\
           \ has files on the mounted file system open, or if it has a directory\n\
           \ in the file system as its current directory. \n \n \n Configuring a fixed\
@@ -20147,7 +20147,7 @@
           \                       0 0\nsysfs     /sys       sysfs   defaults     \
           \                        0 0\nproc      /proc      proc    defaults    \
           \                         0 0\n/dev/vdb  /mnt       auto    defaults,nofail,comment=cloudconfig\
-          \  0 2\n \n Each line describes a file system, and has 6 fields separated\
+          \  0 2 \n Each line describes a file system, and has 6 fields separated\
           \ by spaces\nand tab characters. \n \n Field 1 gives the device or other\
           \ specification for the file\n    system to be mounted. \n Field 2 gives\
           \ the mount point on which the file system should be mounted. \n Field 3\
@@ -20158,69 +20158,69 @@
           \ which (local) file systems are checked\n    by the \"fsck(8)\" program\
           \ at boot time. \n \n To configure a fixed NFS mount, you need to use a\
           \ text editor to edit the\n\"/etc/fstab\" file to add a line that looks\
-          \ like this: \n <mount-string> <mount-point> nfs <mount-options> 0 0\n \n\
-          \ where the  and  are as above, and the\n directory is a directory that\
-          \ you have created using \"mkdir\"\nas mentioned above. \n Once you have\
-          \ added the entry, you should run \"sudo mount \"\nor \"sudo mount -a\"\
-          \ to mount the NFS file system, and then check that you\ncan read files.\
-          \ \n (Note: depending on how the NFS file system was exported, you\nmay\
-          \ find that local \"root\" account does not have special privileges on\n\
-          the NFS file system; see the section below on \"root squashing\".) \n Configuring\
-          \ an NFS automount \n On a modern Linux distro, automounting is handled\
-          \ by a service called\n\"autofs\".  This service consults the \"/etc/autofs.master\"\
-          \ configuration\nfile to determine where the mount-points should be, and\
-          \ then launches\n\"automount\" daemons to control the automatic mounting\
-          \ and unmounting. \n The \"autofs\" / \"automount\" mechanisms are highly\
-          \ configurable, but we\nrecommend a simple configuration as a starting point.\
-          \  Here is a simple\nrecipe: \n \n \n Install the \"autofs\" package (as\
-          \ above). \n \n \n Edit the \"/etc/autofs.master\" file, and add the following\
-          \ line at\n    the end of the file: \n /- file:/etc/auto.mynfsmounts\n \n\
-          \ \n \n Create the \"/etc/auto.mynfsmount\" file, containing the following\n\
-          \    line: \n <mount-point> <mount-options> <mount-path>\n \n Where the\
-          \ ,  and  are as\nabove. \n \n \n Make sure that the file is only writeable\
-          \ by root. \n sudo chown root:root /etc/auto.mynfsmount\n \n sudo chmod\
-          \ 644 /etc/auto.mynfsmount \n \n \n Start the \"autofs\" service, using\
-          \ your Linux distro's idiom for\n    starting a service; e.g. \n sudo service\
-          \ autofs start\n \n or \n sudo systemctl start autofs\n \n \n \n Check that\
-          \ the collection mounts: \n $ cd <mount-point>\n \n $ ls -l\n \n \n \n Configure\
-          \ the \"autofs\" service to start automatically on system\n    reboot. \n\
-          \ sudo chkconfig --add autofs\n \n or \n sudo systemctl enable autofs\n\
-          \ \n \n \n Client-side Security and Access Control \n Possibly the most\
-          \ difficult aspect of using NFS in the NeCTAR context is\nestablishing who\
-          \ is allowed to access the files on the NFS server.  The\nfirst problem\
-          \ is ensuring that the client and server sides agree on user\nidentities.\
-          \ \n On UNIX / Linux systems, the operating system and the file systems\
-          \ use\n\"uids\" (user identifiers) to denote users.  These uids are fundamentally\n\
-          just numbers.  The problem is ensuring that the uids are used consistently;\n\
-          e.g. that 1001 means the same person, wherever it is used as a uid. \n \n\
-          \ \n This is easy to do within a NeCTAR instance. The mapping between the\n\
-          \    user accounts are created using \"adduser\", and the uid <-> account\
-          \ mapping\n    is represented by the \"/etc/passwd\" file. \n \n \n If you\
-          \ are managing a cluster of NeCTAR instances, you create accounts on\n \
-          \   one instance and push \"/etc/passwd\" (and the associated \"/etc/shadow\"\
-          \n    files) to the other instences.  Alternatively, you can set up an LDAP\n\
-          \    server (or similar) that your instances consult to get definitive\n\
-          \    information about user identities. \n \n \n Problems arise when you\
-          \ are trying to manage a group of instances, where\nthere isn't a shared\
-          \ source of user identities.  In such cases, you need\nto arrange that uids\
-          \ exposed by the NFS server are meaningful to the\nNFS client(s). \n Note:\
-          \ there is a similar mechanism for groups, with uids replaced by gids,\n\
-          and \"/etc/passwd\" replaced by \"/etc/groups\". \n Using root access to\
-          \ circumvent the problem \n If a user has root access (e.g. via the \"sudo\"\
-          \ command) they can circumvent\nnormal file access control, and read or\
-          \ write other users' files.  (This is\nnot entirely true if SELinux is used,\
-          \ but that is beyond the scope of this\ndocumentation.)  For example: \n\
-          \ \n \n Running \"sudo bash\" gives the user a root shell. \n \n \n Running\
-          \ \"sudo -u #1234 -g #2345 bash\" gives the user a shell running\n    with\
-          \ uid 1234 and gid 2345. \n \n \n This kind of thing will allow you to access\
-          \ files on an NFS mounted file\nsystem, provided that the file system has\
-          \ not been exported with\n\"root_squash\" or \"all_squash\".  (See below\
-          \ for an explanation.) \n Creating access accounts and groups \n One possible\
-          \ strategy is to figure out what uids are used on the NFS server,\nand create\
-          \ client-side accounts that match them.  This can work as a short\nterm\
-          \ solution; e.g. if users can use \"sudo\" to switch identities.  However,\n\
-          it is clunky, and if the uids conflict it can be problematic.   \n If you\
-          \ want to go down this route, then you need to identify the appropriate\n\
+          \ like this: \n <mount-string> <mount-point> nfs <mount-options> 0 0 \n\
+          \ where the <mount-string> and <mount-options> are as above, and the\n<mount-point>\
+          \ is a directory that you have created using \"mkdir\"\nas mentioned above.\
+          \ \n Once you have added the entry, you should run \"sudo mount \"\nor \"\
+          sudo mount -a\" to mount the NFS file system, and then check that you\n\
+          can read files. \n (Note: depending on how the NFS file system was exported,\
+          \ you\nmay find that local \"root\" account does not have special privileges\
+          \ on\nthe NFS file system; see the section below on \"root squashing\".)\
+          \ \n Configuring an NFS automount \n On a modern Linux distro, automounting\
+          \ is handled by a service called\n\"autofs\".  This service consults the\
+          \ \"/etc/autofs.master\" configuration\nfile to determine where the mount-points\
+          \ should be, and then launches\n\"automount\" daemons to control the automatic\
+          \ mounting and unmounting. \n The \"autofs\" / \"automount\" mechanisms\
+          \ are highly configurable, but we\nrecommend a simple configuration as a\
+          \ starting point.  Here is a simple\nrecipe: \n \n \n Install the \"autofs\"\
+          \ package (as above). \n \n \n Edit the \"/etc/autofs.master\" file, and\
+          \ add the following line at\n     the end of the file: \n /- file:/etc/auto.mynfsmounts\
+          \ \n \n \n Create the \"/etc/auto.mynfsmount\" file, containing the following\n\
+          \     line: \n <mount-point> <mount-options> <mount-path> \n where the <mount-point>,\
+          \ <mount-options> and <mount-path> are as\n described above. \n \n \n Make\
+          \ sure that the file is only writeable by root. \n sudo chown root:root\
+          \ /etc/auto.mynfsmount\nsudo chmod 644 /etc/auto.mynfsmount \n \n \n Start\
+          \ the \"autofs\" service, using your Linux distro's idiom for\n     starting\
+          \ a service; e.g. \n sudo service autofs start \n or \n sudo systemctl start\
+          \ autofs \n \n \n Check that the collection mounts: \n $ cd <mount-point>\n\
+          $ ls -l\n<directory listing> \n \n \n Configure the \"autofs\" service to\
+          \ start automatically on system\n     reboot. \n sudo chkconfig --add autofs\
+          \ \n or \n sudo systemctl enable autofs \n \n \n Client-side Security and\
+          \ Access Control \n Possibly the most difficult aspect of using NFS in the\
+          \ NeCTAR context is\nestablishing who is allowed to access the files on\
+          \ the NFS server.  The\nfirst problem is ensuring that the client and server\
+          \ sides agree on user\nidentities. \n On UNIX / Linux systems, the operating\
+          \ system and the file systems use\n\"uids\" (user identifiers) to denote\
+          \ users.  These uids are fundamentally\njust numbers.  The problem is ensuring\
+          \ that the uids are used consistently;\ne.g. that 1001 means the same person,\
+          \ wherever it is used as a uid. \n \n \n This is easy to do within a NeCTAR\
+          \ instance. The mapping between the\n    user accounts are created using\
+          \ \"adduser\", and the uid <-> account mapping\n    is represented by the\
+          \ \"/etc/passwd\" file. \n \n \n If you are managing a cluster of NeCTAR\
+          \ instances, you create accounts on\n    one instance and push \"/etc/passwd\"\
+          \ (and the associated \"/etc/shadow\"\n    files) to the other instences.\
+          \  Alternatively, you can set up an LDAP\n    server (or similar) that your\
+          \ instances consult to get definitive\n    information about user identities.\
+          \ \n \n \n Problems arise when you are trying to manage a group of instances,\
+          \ where\nthere isn't a shared source of user identities.  In such cases,\
+          \ you need\nto arrange that uids exposed by the NFS server are meaningful\
+          \ to the\nNFS client(s). \n Note: there is a similar mechanism for groups,\
+          \ with uids replaced by gids,\nand \"/etc/passwd\" replaced by \"/etc/groups\"\
+          . \n Using root access to circumvent the problem \n If a user has root access\
+          \ (e.g. via the \"sudo\" command) they can circumvent\nnormal file access\
+          \ control, and read or write other users' files.  (This is\nnot entirely\
+          \ true if SELinux is used, but that is beyond the scope of this\ndocumentation.)\
+          \  For example: \n \n \n Running \"sudo bash\" gives the user a root shell.\
+          \ \n \n \n Running \"sudo -u #1234 -g #2345 bash\" gives the user a shell\
+          \ running\n    with uid 1234 and gid 2345. \n \n \n This kind of thing will\
+          \ allow you to access files on an NFS mounted file\nsystem, provided that\
+          \ the file system has not been exported with\n\"root_squash\" or \"all_squash\"\
+          .  (See below for an explanation.) \n Creating access accounts and groups\
+          \ \n One possible strategy is to figure out what uids are used on the NFS\
+          \ server,\nand create client-side accounts that match them.  This can work\
+          \ as a short\nterm solution; e.g. if users can use \"sudo\" to switch identities.\
+          \  However,\nit is clunky, and if the uids conflict it can be problematic.\
+          \ \n If you want to go down this route, then you need to identify the appropriate\n\
           subset of the uids and gids used on the NFS server, and then create\nmirror\
           \ accounts and groups on the NFS client instance using the \"adduser\"\n\
           or \"useradd\" command and the \"groupadd\" command respectively. \n \n\
@@ -20241,51 +20241,51 @@
           \ up the NFS server need to understand.  If you are merely using the\nNFS\
           \ server implemented by someone else, then you have to rely on the server\n\
           administrator to address these issues.  However, we mention them here\n\
-          because the issues are relevant to you and the people whose data  \n NFS\
-          \ client and server host identities \n By default, an NFS server relies\
-          \ on IP addresses as the sole means of\ndetermining the identify of NFS\
-          \ clients.  This is problematic if other machines\nare able to spoof the\
-          \ IP address of a legitimate NFS client.  One way to address\nthis (and\
-          \ other security concerns) is to use NFS with Kerberos. \n There is also\
-          \ a concern that someone might spoof the IP address\nof the NFS server,\
-          \ so that your NeCTAR instance mounts a \"fake\" file\nsystem.  This might\
-          \ sound like a strange thing to do, but consider the\ncase where you have\
-          \ put user home directories on the NFS server, and\nthe user's home directory\
-          \ holds a \".ssh/authorized_keys\" file.  If a\nhacker can cause the client\
-          \ NFS to refer to a spoofed file, they can\nopen up a way to login to the\
-          \ NFS client instance. \n Aside: unless there is a misconfiguration, it\
-          \ should be impossible for\nNeCTAR OpenStack instances to spoof IP addresses\
-          \ of other instances.\nHowever, it is not clear if someone outside of your\
-          \ data centre might\nbe able to spoof the IP address of an instance, and\
-          \ you probably would\nbe vulnerable to spoofing by a non-Openstack host\
-          \ in your data centre,\nif such a host was ever compromised. \n Root squashing\
-          \ \n The default behavior of an NFS server is to \"squash\" the root account.\n\
-          What this does is to cause the NFS server to treate any NFS requests\ncoming\
-          \ from the client using the root identity (user 0) as if they\nwere coming\
-          \ from the nobody user.  This means that the root user\n(or someone sudo'd\
-          \ to root) on the client does not have privileged\naccess to files on the\
-          \ mounted file system. \n Generally speaking, root squashing is a sensible\
-          \ security measure,\nespecially if local root on the clients cannot always\
-          \ be trusted (see\nbelow!).  However, it does not prevent local root from\
-          \ assuming the\nidentity of some user, and accessing his / her files that\
-          \ way.  In\nfact, the only things that root squashing definitively stops\
-          \ are\noperations like \"chown\" that inherently require root privilege.\
-          \ \n Note that root squashing is controlled by the NFS export rules on the\n\
-          NFS server side. \n Deeper security issues \n By default, NFS protocols\
-          \ send data, metadata and requests over the\nnetwork without any encryption.\
-          \  If it is possible for a 3rd party\nto run network snooping (packet sniffing)\
-          \ software on any intervening\nnetworks, they will be able see the files\
-          \ and metadata that is read or\nwritten by your client.  This is one reason\
-          \ why it is inadvisable to\nrun NFS over connections that go outside of\
-          \ your NeCTAR node's networking\ninfrastructure. \n It is possible to address\
-          \ the problem above by using a virtual private\nnetwork (VPN).  The problem\
-          \ is that the network traffic needs to be\nencrypted, which impacts the\
-          \ performance of NFS running over the VPN. \n A second issue is that the\
-          \ NFS file access control model assumes a level\nof trust between people\
-          \ with root access to the client and server machines.  If\nthat trust does\
-          \ not exist (or is ill-founded) then the end user (the notional\nowner of\
-          \ the files) cannot rely on access controls being properly enforced. \n\
-          \ The problem is that the group of people with root access can be larger\n\
+          because the issues are relevant to you and the people whose data you may\n\
+          be looking after. \n NFS client and server host identities \n By default,\
+          \ an NFS server relies on IP addresses as the sole means of\ndetermining\
+          \ the identify of NFS clients.  This is problematic if other machines\n\
+          are able to spoof the IP address of a legitimate NFS client.  One way to\
+          \ address\nthis (and other security concerns) is to use NFS with Kerberos.\
+          \ \n There is also a concern that someone might spoof the IP address\nof\
+          \ the NFS server, so that your NeCTAR instance mounts a \"fake\" file\n\
+          system.  This might sound like a strange thing to do, but consider the\n\
+          case where you have put user home directories on the NFS server, and\nthe\
+          \ user's home directory holds a \".ssh/authorized_keys\" file.  If a\nhacker\
+          \ can cause the client NFS to refer to a spoofed file, they can\nopen up\
+          \ a way to login to the NFS client instance. \n Aside: unless there is a\
+          \ misconfiguration, it should be impossible for\nNeCTAR OpenStack instances\
+          \ to spoof IP addresses of other instances.\nHowever, it is not clear if\
+          \ someone outside of your data centre might\nbe able to spoof the IP address\
+          \ of an instance, and you probably would\nbe vulnerable to spoofing by a\
+          \ non-Openstack host in your data centre,\nif such a host was ever compromised.\
+          \ \n Root squashing \n The default behavior of an NFS server is to \"squash\"\
+          \ the root account.\nWhat this does is to cause the NFS server to treate\
+          \ any NFS requests\ncoming from the client using the root identity (user\
+          \ 0) as if they\nwere coming from the nobody user.  This means that the\
+          \ root user\n(or someone sudo'd to root) on the client does not have privileged\n\
+          access to files on the mounted file system. \n Generally speaking, root\
+          \ squashing is a sensible security measure,\nespecially if local root on\
+          \ the clients cannot always be trusted (see\nbelow!).  However, it does\
+          \ not prevent local root from assuming the\nidentity of some user, and accessing\
+          \ his / her files that way.  In\nfact, the only things that root squashing\
+          \ definitively stops are\noperations like \"chown\" that inherently require\
+          \ root privilege. \n Note that root squashing is controlled by the NFS export\
+          \ rules on the\nNFS server side. \n Deeper security issues \n By default,\
+          \ NFS protocols send data, metadata and requests over the\nnetwork without\
+          \ any encryption.  If it is possible for a 3rd party\nto run network snooping\
+          \ (packet sniffing) software on any intervening\nnetworks, they will be\
+          \ able see the files and metadata that is read or\nwritten by your client.\
+          \  This is one reason why it is inadvisable to\nrun NFS over connections\
+          \ that go outside of your NeCTAR node's networking\ninfrastructure. \n It\
+          \ is possible to address the problem above by using a virtual private\n\
+          network (VPN).  The problem is that the network traffic needs to be\nencrypted,\
+          \ which impacts the performance of NFS running over the VPN. \n A second\
+          \ issue is that the NFS file access control model assumes a level\nof trust\
+          \ between people with root access to the client and server machines.  If\n\
+          that trust does not exist (or is ill-founded) then the end user (the notional\n\
+          owner of the files) cannot rely on access controls being properly enforced.\
+          \ \n The problem is that the group of people with root access can be larger\n\
           than you might expect.  On the client side, it will include: \n \n The person\
           \ who launched the client-side instance, and who we can assume\n    has\
           \ the private key for logging in on the service account. \n Anyone who knows\
@@ -20294,19 +20294,15 @@
           \ other\n    account with sudo access. \n Anyone who has NeCTAR tenant member\
           \ access and can \"rebuild\" the instance. \n Anyone who is able to hack\
           \ into your instance and get root access, or\n    steal credentials for\
-          \ the tenant.  \n \n In short, if you are going to enable a NeCTAR instance\
+          \ the tenant. \n \n In short, if you are going to enable a NeCTAR instance\
           \ to mount an NFS\nfile system, then the security of the NeCTAR instance\
           \ (the NFS client) and\nthe trustworthiness of the administrators is paramount.\
           \ \n More information \n There is more information on NFS in general and\
           \ the topic of setting\nup NFS mounts in the following places. \n Linux\
-          \ manual entries: \n \n \"man 5 nfs\" - http://linux.die.net/man/5/nfs \n\
-          \ \"man 5 fstab\" - http://linux.die.net/man/5/nfs \n \"man 5 autofs\" -\
-          \ http://linux.die.net/man/5/autofs \n \"man 5 auto.master\" - http://linux.die.net/man/5/auto.master\
-          \ \n \"man 8 mount\" - http://linux.die.net/man/8/mount \n \"man 8 umount\"\
-          \ - http://linux.die.net/man/8/umount \n \"man 8 autofs\" - http://linux.die.net/man/8/autofs\
-          \ \n \n Ubuntu guides: \n \n https://help.ubuntu.com/community/SettingUpNFSHowTo\
-          \ \n https://help.ubuntu.com/lts/serverguide/network-file-system.html \n\
-          \ https://help.ubuntu.com/community/Autofs \n "
+          \ manual entries: \n \n man 5 nfs \n man 5 fstab \n man 5 autofs \n man\
+          \ 5 auto.master \n man 8 mount \n man 8 umount \n man 8 autofs \n \n Ubuntu\
+          \ guides: \n \n https://help.ubuntu.com/community/SettingUpNFSHowTo \n https://help.ubuntu.com/lts/serverguide/network-file-system.html\
+          \ \n https://help.ubuntu.com/community/Autofs \n "
         description: "<h1>Mounting NFS file systems on NeCTAR instances</h1>\n<h2>Introduction</h2>\n\
           <p>This document is intended to be a starting point for a NeCTAR VM user\
           \ who\nwishes to gain access to files stored in an NFS file server.  It\
@@ -20345,67 +20341,66 @@
           \ NFS client software</h2>\n<p>Before you attempt to use client-side NFS,\
           \ you need to install some packages\nusing your system's package manager.</p>\n\
           <p>On a Debian, Ubuntu or similar system by running the following commands:</p>\n\
-          <p>$ sudo apt-get update\n   $ sudo apt-get install nfs-common autofs</p>\n\
-          <p>On RedHat, CentOS or Scientific Linux, run the following:</p>\n<p>$ sudo\
-          \ yum install nfs-utils autofs</p>\n<p>On (recent) Fedora, run the following:</p>\n\
-          <p>$ sudo dnf install nfs-utils autofs</p>\n<p>(The \"autofs\" package is\
-          \ needed if you want to configure the NFS client\nto automount the remote\
-          \ file systems.)</p>\n<h2>Configuring the NFS mount</h2>\n<p>There are (at\
-          \ least) 3 ways to mount a file system on a remote NFS server</p>\n<ul>\n\
-          <li>With a temporary mount, the mount does not survive an instance reboot.</li>\n\
-          <li>With a permanent mount, the file system is mounted automatically on\n\
-          \    instance startup.</li>\n<li>With an automount, the file system is mounted\
-          \ when some program tries\n    to access files, and then unmounted after\
-          \ a period of inactivity.</li>\n</ul>\n<h3>The NFS mount string and options</h3>\n\
-          <p>The NFS mount string and mount options are the key pieces of information\n\
-          that are needed when an NFS file system is mounted.</p>\n<p>The  specifies\
-          \ the remote NFS file system to be mounted\non your client VM.  It consists\
-          \ of the NFS server's IP address, and\nan exported NFS path, with a colon\
-          \ between them.  For example:</p>\n<pre><code>10.255.120.220:/users/fred\n\
-          </code></pre>\n<p>The  determine how the client-side kernel manages\nNFS\
-          \ access.  We recommend the following NFS mount options as a\nstarting point:</p>\n\
-          <pre><code>rw,hard,intr,nosuid,nodev,timeo=100,retrans=5,nolock\n</code></pre>\n\
-          <p>or the following if you need to use NFS version 3:</p>\n<pre><code>rw,nfsvers=3,hard,intr,nosuid,nodev,timeo=100,retrans=5,nolock\n\
-          </code></pre>\n<p>The above parameters have the following meanings:</p>\n\
-          <ul>\n<li>\n<p>\"rw\" means mount the file system with read-write access.\
-          \  An alternative\n    is \"ro\" for read-only access.</p>\n</li>\n<li>\n\
-          <p>\"hard\" instructs the system to attempt to retry \"for ever\" to reconnect\n\
-          \    if the client looses its NFS connection.  This is strongly recommended.</p>\n\
-          </li>\n<li>\n<p>\"intr\" is a backwards compatibility flag.</p>\n</li>\n\
-          <li>\n<p>\"nosuid\" tells the kernel to ignore the \"set user id\" flag\
-          \ on executables.</p>\n</li>\n<li>\n<p>\"nodev\" treats \"device files\"\
-          \ as uninterpretted.</p>\n</li>\n<li>\n<p>the \"timeo\" value is the timeout\
-          \ (in 10ths of a second) for NFS\n    request retransmission if the client\
-          \ gets no response.</p>\n</li>\n<li>\n<p>the \"retrans\" value is the number\
-          \ of simple retries before the client\n    attempts further recovery actions.</p>\n\
-          </li>\n<li>\n<p>\"nolock\" disables file locking on the server.  (If a client-side\
-          \ program\n    locks a file, the lock's coverage is limited to just this\
-          \ client.)</p>\n</li>\n</ul>\n<p>For more details on these and other NFS\
-          \ mount parameters, please refer to\n\"man 5 nfs\" and other NFS documentation.</p>\n\
-          <h3>The mount point</h3>\n<p>When a Linux (or UNIX) system mounts a file\
-          \ system, it mounts it on top\nof an existing directory.  That directory\
-          \ is known as the mount point.\nIf you are doing a temporary NFS mount,\
-          \ or setting up a permanent mount,\nthe mount point directory needs to be\
-          \ created manually.  (If you are\nusing the automount approach, the mount\
-          \ point directory can be created\nautomatically.) </p>\n<p>The normal Linux\
-          \ convention is to either use \"/mnt\" or a subdirectory\nof \"/mnt\" as\
-          \ the mount point.  However NeCTAR VMs use \"/mnt\" as the mount\npoint\
-          \ for the (so-called) ephemeral file system.</p>\n<p>You can use the \"\
-          mkdir\" command to create the mountpoint directory.  It is\nprobably advisable\
-          \ to create it in direcftory that cannot be written by\nunprivileged users.</p>\n\
-          <h3>Creating a temporary NFS mount</h3>\n<p>Before you get into the (relative)\
-          \ complexity of setting up a permanent\nmount or an automount, it is a good\
-          \ idea to check that you can access\nthe NFS server by setting up a temporary\
-          \ mount.  You can also use this\napproach for once-off or ad-hoc access\
-          \ to NFS.</p>\n<p>The steps are as follows:</p>\n<ol>\n<li>\n<p>Create a\
-          \ temporary mount point:</p>\n<pre><code> mkdir ~/tempMount\n</code></pre>\n\
-          </li>\n<li>\n<p>Run the mount command:</p>\n<pre><code> sudo mount -t nfs\
-          \ -o &lt;mount-options&gt; &lt;mount-string&gt; ~/tempMount\n</code></pre>\n\
-          <p>where the  and  are as described above.</p>\n</li>\n<li>\n<p>Check that\
-          \ you can access data on the mounted file system:</p>\n<pre><code> $ ls\
-          \ -l ~/tempMount\n &lt;directory listing&gt;\n</code></pre>\n</li>\n<li>\n\
-          <p>When you are done, unmount the file system and tidy up the mount point:</p>\n\
-          <pre><code> sudo umount ~/tempMount\n</code></pre>\n<p>rmdir ~/tempMount</p>\n\
+          <p><code>sudo apt-get update`\nsudo apt-get install nfs-common autofs</code></p>\n\
+          <p>On RedHat, CentOS or Scientific Linux, run the following:</p>\n<p><code>sudo\
+          \ yum install nfs-utils autofs`</code></p>\n<p>On (recent) Fedora, run the\
+          \ following:</p>\n<p><code>sudo dnf install nfs-utils autofs</code></p>\n\
+          <p>(The \"autofs\" package is needed if you want to configure the NFS client\n\
+          to automount the remote file systems.)</p>\n<h2>Configuring the NFS mount</h2>\n\
+          <p>There are (at least) 3 ways to mount a file system on a remote NFS server</p>\n\
+          <ul>\n<li>With a temporary mount, the mount does not survive an instance\
+          \ reboot.</li>\n<li>With a permanent mount, the file system is mounted automatically\
+          \ on\n    instance startup.</li>\n<li>With an automount, the file system\
+          \ is mounted when some program tries\n    to access files, and then unmounted\
+          \ after a period of inactivity.</li>\n</ul>\n<h3>The NFS mount string and\
+          \ options</h3>\n<p>The NFS mount string and mount options are the key pieces\
+          \ of information\nthat are needed when an NFS file system is mounted.</p>\n\
+          <p>The <code>&lt;mount-string&gt;</code> specifies the remote NFS file system\
+          \ to be mounted\non your client VM.  It consists of the NFS server's IP\
+          \ address, and\nan exported NFS path, with a colon between them.  For example:</p>\n\
+          <p><code>10.255.120.220:/users/fred</code></p>\n<p>The <code>&lt;mount-options&gt;</code>\
+          \ determine how the client-side kernel manages\nNFS access.  We recommend\
+          \ the following NFS mount options as a\nstarting point:</p>\n<p><code>rw,hard,intr,nosuid,nodev,timeo=100,retrans=5,nolock</code></p>\n\
+          <p>or the following if you need to use NFS version 3:</p>\n<p><code>rw,nfsvers=3,hard,intr,nosuid,nodev,timeo=100,retrans=5,nolock</code></p>\n\
+          <p>The above parameters have the following meanings:</p>\n<ul>\n<li>\n<p>\"\
+          rw\" means mount the file system with read-write access.  An alternative\n\
+          \    is \"ro\" for read-only access.</p>\n</li>\n<li>\n<p>\"hard\" instructs\
+          \ the system to attempt to retry \"for ever\" to reconnect\n    if the client\
+          \ looses its NFS connection.  This is strongly recommended.</p>\n</li>\n\
+          <li>\n<p>\"intr\" is a backwards compatibility flag.</p>\n</li>\n<li>\n\
+          <p>\"nosuid\" tells the kernel to ignore the \"set user id\" flag on executables.</p>\n\
+          </li>\n<li>\n<p>\"nodev\" treats \"device files\" as uninterpretted.</p>\n\
+          </li>\n<li>\n<p>the \"timeo\" value is the timeout (in 10ths of a second)\
+          \ for NFS\n    request retransmission if the client gets no response.</p>\n\
+          </li>\n<li>\n<p>the \"retrans\" value is the number of simple retries before\
+          \ the client\n    attempts further recovery actions.</p>\n</li>\n<li>\n\
+          <p>\"nolock\" disables file locking on the server.  (If a client-side program\n\
+          \    locks a file, the lock's coverage is limited to just this client.)</p>\n\
+          </li>\n</ul>\n<p>For more details on these and other NFS mount parameters,\
+          \ please refer to\n\"man 5 nfs\" and other NFS documentation.</p>\n<h3>The\
+          \ mount point</h3>\n<p>When a Linux (or UNIX) system mounts a file system,\
+          \ it mounts it on top\nof an existing directory.  That directory is known\
+          \ as the mount point.\nIf you are doing a temporary NFS mount, or setting\
+          \ up a permanent mount,\nthe mount point directory needs to be created manually.\
+          \  (If you are\nusing the automount approach, the mount point directory\
+          \ can be created\nautomatically.)</p>\n<p>The normal Linux convention is\
+          \ to either use \"/mnt\" or a subdirectory\nof \"/mnt\" as the mount point.\
+          \  However NeCTAR VMs use \"/mnt\" as the mount\npoint for the (so-called)\
+          \ ephemeral file system.</p>\n<p>You can use the \"mkdir\" command to create\
+          \ the mountpoint directory.  It is\nprobably advisable to create it in direcftory\
+          \ that cannot be written by\nunprivileged users.</p>\n<h3>Creating a temporary\
+          \ NFS mount</h3>\n<p>Before you get into the (relative) complexity of setting\
+          \ up a permanent\nmount or an automount, it is a good idea to check that\
+          \ you can access\nthe NFS server by setting up a temporary mount.  You can\
+          \ also use this\napproach for once-off or ad-hoc access to NFS.</p>\n<p>The\
+          \ steps are as follows:</p>\n<ol>\n<li>\n<p>Create a temporary mount point:</p>\n\
+          <p><code>mkdir ~/tempMount</code></p>\n</li>\n<li>\n<p>Run the mount command:</p>\n\
+          <p><code>sudo mount -t nfs -o &lt;mount-options&gt; &lt;mount-string&gt;\
+          \ ~/tempMount</code></p>\n<p>where the  and  are as described above.</p>\n\
+          </li>\n<li>\n<p>Check that you can access data on the mounted file system:</p>\n\
+          <p><code>$ ls -l ~/tempMount\n&lt;directory listing&gt;</code></p>\n</li>\n\
+          <li>\n<p>When you are done, unmount the file system and tidy up the mount\
+          \ point:</p>\n<p><code>sudo umount ~/tempMount\nrmdir ~/tempMount</code></p>\n\
           <p>Note that the \"umount\" will fail if any process (including as shell)\n\
           \ has files on the mounted file system open, or if it has a directory\n\
           \ in the file system as its current directory.</p>\n</li>\n</ol>\n<h3>Configuring\
@@ -20413,13 +20408,13 @@
           \ entries to the \"/etc/fstab\"\nfile.  This file is consulted to work out\
           \ which file systems to mount on\nsystem startup.  It is also used when\
           \ you run \"mount -a\" or \"mount </p>\".\n<p>A typical \"/etc/fstab\" file\
-          \ on a NeCTAR instance looks something like this:</p>\n<pre><code>/dev/vda1\
+          \ on a NeCTAR instance looks something like this:</p>\n<p><code>/dev/vda1\
           \ /          ext4    defaults                             1 1\ntmpfs   \
           \  /dev/shm   tmpfs   defaults                             0 0\ndevpts \
           \   /dev/pts   devpts  gid=5,mode=620                       0 0\nsysfs \
           \    /sys       sysfs   defaults                             0 0\nproc \
           \     /proc      proc    defaults                             0 0\n/dev/vdb\
-          \  /mnt       auto    defaults,nofail,comment=cloudconfig  0 2\n</code></pre>\n\
+          \  /mnt       auto    defaults,nofail,comment=cloudconfig  0 2</code></p>\n\
           <p>Each line describes a file system, and has 6 fields separated by spaces\n\
           and tab characters.</p>\n<ul>\n<li>Field 1 gives the device or other specification\
           \ for the file\n    system to be mounted.</li>\n<li>Field 2 gives the mount\
@@ -20431,53 +20426,55 @@
           \ the order in which (local) file systems are checked\n    by the \"fsck(8)\"\
           \ program at boot time.</li>\n</ul>\n<p>To configure a fixed NFS mount,\
           \ you need to use a text editor to edit the\n\"/etc/fstab\" file to add\
-          \ a line that looks like this:</p>\n<pre><code>&lt;mount-string&gt; &lt;mount-point&gt;\
-          \ nfs &lt;mount-options&gt; 0 0\n</code></pre>\n<p>where the  and  are as\
-          \ above, and the\n directory is a directory that you have created using\
-          \ \"mkdir\"\nas mentioned above.</p>\n<p>Once you have added the entry,\
-          \ you should run \"sudo mount \"\nor \"sudo mount -a\" to mount the NFS\
-          \ file system, and then check that you\ncan read files.</p>\n<p>(Note: depending\
-          \ on how the NFS file system was exported, you\nmay find that local \"root\"\
-          \ account does not have special privileges on\nthe NFS file system; see\
-          \ the section below on \"root squashing\".)</p>\n<h3>Configuring an NFS\
-          \ automount</h3>\n<p>On a modern Linux distro, automounting is handled by\
-          \ a service called\n\"autofs\".  This service consults the \"/etc/autofs.master\"\
-          \ configuration\nfile to determine where the mount-points should be, and\
-          \ then launches\n\"automount\" daemons to control the automatic mounting\
-          \ and unmounting.</p>\n<p>The \"autofs\" / \"automount\" mechanisms are\
-          \ highly configurable, but we\nrecommend a simple configuration as a starting\
-          \ point.  Here is a simple\nrecipe:</p>\n<ol>\n<li>\n<p>Install the \"autofs\"\
-          \ package (as above).</p>\n</li>\n<li>\n<p>Edit the \"/etc/autofs.master\"\
-          \ file, and add the following line at\n    the end of the file:</p>\n<pre><code>/-\
-          \ file:/etc/auto.mynfsmounts\n</code></pre>\n</li>\n<li>\n<p>Create the\
-          \ \"/etc/auto.mynfsmount\" file, containing the following\n    line:</p>\n\
-          <pre><code>&lt;mount-point&gt; &lt;mount-options&gt; &lt;mount-path&gt;\n\
-          </code></pre>\n<p>Where the ,  and  are as\nabove.</p>\n</li>\n<li>\n<p>Make\
-          \ sure that the file is only writeable by root.</p>\n<pre><code>sudo chown\
-          \ root:root /etc/auto.mynfsmount\n</code></pre>\n<p>sudo chmod 644 /etc/auto.mynfsmount</p>\n\
-          </li>\n<li>\n<p>Start the \"autofs\" service, using your Linux distro's\
-          \ idiom for\n    starting a service; e.g.</p>\n<pre><code>sudo service autofs\
-          \ start\n</code></pre>\n<p>or</p>\n<pre><code>sudo systemctl start autofs\n\
-          </code></pre>\n</li>\n<li>\n<p>Check that the collection mounts:</p>\n<pre><code>$\
-          \ cd &lt;mount-point&gt;\n</code></pre>\n<p>$ ls -l\n</p>\n</li>\n<li>\n\
-          <p>Configure the \"autofs\" service to start automatically on system\n \
-          \   reboot.</p>\n<pre><code>sudo chkconfig --add autofs\n</code></pre>\n\
-          <p>or</p>\n<pre><code>sudo systemctl enable autofs\n</code></pre>\n</li>\n\
-          </ol>\n<h2>Client-side Security and Access Control</h2>\n<p>Possibly the\
-          \ most difficult aspect of using NFS in the NeCTAR context is\nestablishing\
-          \ who is allowed to access the files on the NFS server.  The\nfirst problem\
-          \ is ensuring that the client and server sides agree on user\nidentities.</p>\n\
-          <p>On UNIX / Linux systems, the operating system and the file systems use\n\
-          \"uids\" (user identifiers) to denote users.  These uids are fundamentally\n\
-          just numbers.  The problem is ensuring that the uids are used consistently;\n\
-          e.g. that <code>1001</code> means the same person, wherever it is used as\
-          \ a uid.</p>\n<ul>\n<li>\n<p>This is easy to do within a NeCTAR instance.\
-          \ The mapping between the\n    user accounts are created using \"adduser\"\
-          , and the uid &lt;-&gt; account mapping\n    is represented by the \"/etc/passwd\"\
-          \ file.</p>\n</li>\n<li>\n<p>If you are managing a cluster of NeCTAR instances,\
-          \ you create accounts on\n    one instance and push \"/etc/passwd\" (and\
-          \ the associated \"/etc/shadow\"\n    files) to the other instences.  Alternatively,\
-          \ you can set up an LDAP\n    server (or similar) that your instances consult\
+          \ a line that looks like this:</p>\n<p><code>&lt;mount-string&gt; &lt;mount-point&gt;\
+          \ nfs &lt;mount-options&gt; 0 0</code></p>\n<p>where the <code>&lt;mount-string&gt;</code>\
+          \ and <code>&lt;mount-options&gt;</code> are as above, and the\n<code>&lt;mount-point&gt;</code>\
+          \ is a directory that you have created using \"mkdir\"\nas mentioned above.</p>\n\
+          <p>Once you have added the entry, you should run \"sudo mount \"\nor \"\
+          sudo mount -a\" to mount the NFS file system, and then check that you\n\
+          can read files.</p>\n<p>(Note: depending on how the NFS file system was\
+          \ exported, you\nmay find that local \"root\" account does not have special\
+          \ privileges on\nthe NFS file system; see the section below on \"root squashing\"\
+          .)</p>\n<h3>Configuring an NFS automount</h3>\n<p>On a modern Linux distro,\
+          \ automounting is handled by a service called\n\"autofs\".  This service\
+          \ consults the \"/etc/autofs.master\" configuration\nfile to determine where\
+          \ the mount-points should be, and then launches\n\"automount\" daemons to\
+          \ control the automatic mounting and unmounting.</p>\n<p>The \"autofs\"\
+          \ / \"automount\" mechanisms are highly configurable, but we\nrecommend\
+          \ a simple configuration as a starting point.  Here is a simple\nrecipe:</p>\n\
+          <ol>\n<li>\n<p>Install the \"autofs\" package (as above).</p>\n</li>\n<li>\n\
+          <p>Edit the \"/etc/autofs.master\" file, and add the following line at\n\
+          \     the end of the file:</p>\n<p><code>/- file:/etc/auto.mynfsmounts</code></p>\n\
+          </li>\n<li>\n<p>Create the \"/etc/auto.mynfsmount\" file, containing the\
+          \ following\n     line:</p>\n<p><code>&lt;mount-point&gt; &lt;mount-options&gt;\
+          \ &lt;mount-path&gt;</code></p>\n<p>where the <code>&lt;mount-point&gt;</code>,\
+          \ <code>&lt;mount-options&gt;</code> and <code>&lt;mount-path&gt;</code>\
+          \ are as\n described above.</p>\n</li>\n<li>\n<p>Make sure that the file\
+          \ is only writeable by root.</p>\n<p><code>sudo chown root:root /etc/auto.mynfsmount\n\
+          sudo chmod 644 /etc/auto.mynfsmount</code></p>\n</li>\n<li>\n<p>Start the\
+          \ \"autofs\" service, using your Linux distro's idiom for\n     starting\
+          \ a service; e.g.</p>\n<p><code>sudo service autofs start</code></p>\n<p>or</p>\n\
+          <p><code>sudo systemctl start autofs</code></p>\n</li>\n<li>\n<p>Check that\
+          \ the collection mounts:</p>\n<p><code>$ cd &lt;mount-point&gt;\n$ ls -l\n\
+          &lt;directory listing&gt;</code></p>\n</li>\n<li>\n<p>Configure the \"autofs\"\
+          \ service to start automatically on system\n     reboot.</p>\n<p><code>sudo\
+          \ chkconfig --add autofs</code></p>\n<p>or</p>\n<p><code>sudo systemctl\
+          \ enable autofs</code></p>\n</li>\n</ol>\n<h2>Client-side Security and Access\
+          \ Control</h2>\n<p>Possibly the most difficult aspect of using NFS in the\
+          \ NeCTAR context is\nestablishing who is allowed to access the files on\
+          \ the NFS server.  The\nfirst problem is ensuring that the client and server\
+          \ sides agree on user\nidentities.</p>\n<p>On UNIX / Linux systems, the\
+          \ operating system and the file systems use\n\"uids\" (user identifiers)\
+          \ to denote users.  These uids are fundamentally\njust numbers.  The problem\
+          \ is ensuring that the uids are used consistently;\ne.g. that <code>1001</code>\
+          \ means the same person, wherever it is used as a uid.</p>\n<ul>\n<li>\n\
+          <p>This is easy to do within a NeCTAR instance. The mapping between the\n\
+          \    user accounts are created using \"adduser\", and the uid &lt;-&gt;\
+          \ account mapping\n    is represented by the \"/etc/passwd\" file.</p>\n\
+          </li>\n<li>\n<p>If you are managing a cluster of NeCTAR instances, you create\
+          \ accounts on\n    one instance and push \"/etc/passwd\" (and the associated\
+          \ \"/etc/shadow\"\n    files) to the other instences.  Alternatively, you\
+          \ can set up an LDAP\n    server (or similar) that your instances consult\
           \ to get definitive\n    information about user identities.</p>\n</li>\n\
           </ul>\n<p>Problems arise when you are trying to manage a group of instances,\
           \ where\nthere isn't a shared source of user identities.  In such cases,\
@@ -20499,7 +20496,7 @@
           \ on the NFS server,\nand create client-side accounts that match them. \
           \ This can work as a short\nterm solution; e.g. if users can use \"sudo\"\
           \ to switch identities.  However,\nit is clunky, and if the uids conflict\
-          \ it can be problematic.  </p>\n<p>If you want to go down this route, then\
+          \ it can be problematic.</p>\n<p>If you want to go down this route, then\
           \ you need to identify the appropriate\nsubset of the uids and gids used\
           \ on the NFS server, and then create\nmirror accounts and groups on the\
           \ NFS client instance using the \"adduser\"\nor \"useradd\" command and\
@@ -20522,29 +20519,30 @@
           \  If you are merely using the\nNFS server implemented by someone else,\
           \ then you have to rely on the server\nadministrator to address these issues.\
           \  However, we mention them here\nbecause the issues are relevant to you\
-          \ and the people whose data </p>\n<h3>NFS client and server host identities</h3>\n\
-          <p>By default, an NFS server relies on IP addresses as the sole means of\n\
-          determining the identify of NFS clients.  This is problematic if other machines\n\
-          are able to spoof the IP address of a legitimate NFS client.  One way to\
-          \ address\nthis (and other security concerns) is to use NFS with Kerberos.</p>\n\
-          <p>There is also a concern that someone might spoof the IP address\nof the\
-          \ NFS server, so that your NeCTAR instance mounts a \"fake\" file\nsystem.\
-          \  This might sound like a strange thing to do, but consider the\ncase where\
-          \ you have put user home directories on the NFS server, and\nthe user's\
-          \ home directory holds a \".ssh/authorized_keys\" file.  If a\nhacker can\
-          \ cause the client NFS to refer to a spoofed file, they can\nopen up a way\
-          \ to login to the NFS client instance.</p>\n<p>Aside: unless there is a\
-          \ misconfiguration, it should be impossible for\nNeCTAR OpenStack instances\
-          \ to spoof IP addresses of other instances.\nHowever, it is not clear if\
-          \ someone outside of your data centre might\nbe able to spoof the IP address\
-          \ of an instance, and you probably would\nbe vulnerable to spoofing by a\
-          \ non-Openstack host in your data centre,\nif such a host was ever compromised.</p>\n\
-          <h3>Root squashing</h3>\n<p>The default behavior of an NFS server is to\
-          \ \"squash\" the root account.\nWhat this does is to cause the NFS server\
-          \ to treate any NFS requests\ncoming from the client using the root identity\
-          \ (user 0) <em>as if</em> they\nwere coming from the <em>nobody</em> user.\
-          \  This means that the root user\n(or someone sudo'd to root) on the client\
-          \ does not have privileged\naccess to files on the mounted file system.</p>\n\
+          \ and the people whose data you may\nbe looking after.</p>\n<h3>NFS client\
+          \ and server host identities</h3>\n<p>By default, an NFS server relies on\
+          \ IP addresses as the sole means of\ndetermining the identify of NFS clients.\
+          \  This is problematic if other machines\nare able to spoof the IP address\
+          \ of a legitimate NFS client.  One way to address\nthis (and other security\
+          \ concerns) is to use NFS with Kerberos.</p>\n<p>There is also a concern\
+          \ that someone might spoof the IP address\nof the NFS server, so that your\
+          \ NeCTAR instance mounts a \"fake\" file\nsystem.  This might sound like\
+          \ a strange thing to do, but consider the\ncase where you have put user\
+          \ home directories on the NFS server, and\nthe user's home directory holds\
+          \ a \".ssh/authorized_keys\" file.  If a\nhacker can cause the client NFS\
+          \ to refer to a spoofed file, they can\nopen up a way to login to the NFS\
+          \ client instance.</p>\n<p>Aside: unless there is a misconfiguration, it\
+          \ should be impossible for\nNeCTAR OpenStack instances to spoof IP addresses\
+          \ of other instances.\nHowever, it is not clear if someone outside of your\
+          \ data centre might\nbe able to spoof the IP address of an instance, and\
+          \ you probably would\nbe vulnerable to spoofing by a non-Openstack host\
+          \ in your data centre,\nif such a host was ever compromised.</p>\n<h3>Root\
+          \ squashing</h3>\n<p>The default behavior of an NFS server is to \"squash\"\
+          \ the root account.\nWhat this does is to cause the NFS server to treate\
+          \ any NFS requests\ncoming from the client using the root identity (user\
+          \ 0) <em>as if</em> they\nwere coming from the <em>nobody</em> user.  This\
+          \ means that the root user\n(or someone sudo'd to root) on the client does\
+          \ not have privileged\naccess to files on the mounted file system.</p>\n\
           <p>Generally speaking, root squashing is a sensible security measure,\n\
           especially if local root on the clients cannot always be trusted (see\n\
           below!).  However, it does not prevent local root from assuming the\nidentity\
@@ -20575,19 +20573,21 @@
           \ account, or to any other\n    account with sudo access.</li>\n<li>Anyone\
           \ who has NeCTAR tenant member access and can \"rebuild\" the instance.</li>\n\
           <li>Anyone who is able to hack into your instance and get root access, or\n\
-          \    steal credentials for the tenant. </li>\n</ul>\n<p>In short, if you\
+          \    steal credentials for the tenant.</li>\n</ul>\n<p>In short, if you\
           \ are going to enable a NeCTAR instance to mount an NFS\nfile system, then\
           \ the security of the NeCTAR instance (the NFS client) and\nthe trustworthiness\
           \ of the administrators is paramount.</p>\n<h2>More information</h2>\n<p>There\
           \ is more information on NFS in general and the topic of setting\nup NFS\
           \ mounts in the following places.</p>\n<p>Linux manual entries:</p>\n<ul>\n\
-          <li>\"man 5 nfs\" - http://linux.die.net/man/5/nfs</li>\n<li>\"man 5 fstab\"\
-          \ - http://linux.die.net/man/5/nfs</li>\n<li>\"man 5 autofs\" - http://linux.die.net/man/5/autofs</li>\n\
-          <li>\"man 5 auto.master\" - http://linux.die.net/man/5/auto.master</li>\n\
-          <li>\"man 8 mount\" - http://linux.die.net/man/8/mount</li>\n<li>\"man 8\
-          \ umount\" - http://linux.die.net/man/8/umount</li>\n<li>\"man 8 autofs\"\
-          \ - http://linux.die.net/man/8/autofs</li>\n</ul>\n<p>Ubuntu guides:</p>\n\
-          <ul>\n<li>https://help.ubuntu.com/community/SettingUpNFSHowTo</li>\n<li>https://help.ubuntu.com/lts/serverguide/network-file-system.html</li>\n\
+          <li><a href=\"http://linux.die.net/man/5/nfs\"><code>man 5 nfs</code></a></li>\n\
+          <li><a href=\"http://linux.die.net/man/5/nfs\"><code>man 5 fstab</code></a></li>\n\
+          <li><a href=\"http://linux.die.net/man/5/autofs\"><code>man 5 autofs</code></a></li>\n\
+          <li><a href=\"http://linux.die.net/man/5/auto.master\"><code>man 5 auto.master</code></a></li>\n\
+          <li><a href=\"http://linux.die.net/man/8/mount\"><code>man 8 mount</code></a></li>\n\
+          <li><a href=\"http://linux.die.net/man/8/umount\"><code>man 8 umount</code></a></li>\n\
+          <li><a href=\"http://linux.die.net/man/8/autofs\"><code>man 8 autofs</code></a></li>\n\
+          </ul>\n<p>Ubuntu guides:</p>\n<ul>\n<li>https://help.ubuntu.com/community/SettingUpNFSHowTo</li>\n\
+          <li>https://help.ubuntu.com/lts/serverguide/network-file-system.html</li>\n\
           <li>https://help.ubuntu.com/community/Autofs</li>\n</ul>"
         folder:
           category_id: 6000122278
@@ -20603,17 +20603,17 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 9
         id: 6000092818
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-30T22:01:49-05:00'
+        modified_at: '2015-12-07T16:41:03-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000092818
-        position: 10
+        position: 8
         seo_data: {}
         status: 2
         string_01: null
@@ -20622,7 +20622,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: QCIF NFS Mounting
-        updated_at: '2015-11-30T22:01:49-05:00'
+        updated_at: '2015-12-07T16:41:03-05:00'
         user_id: 6002464727
   html: "<h1>Mounting NFS file systems on NeCTAR instances</h1>\n<h2>Introduction</h2>\n\
     <p>This document is intended to be a starting point for a NeCTAR VM user who\n\
@@ -20659,31 +20659,31 @@
     \ NFS client software</h2>\n<p>Before you attempt to use client-side NFS, you\
     \ need to install some packages\nusing your system's package manager.</p>\n<p>On\
     \ a Debian, Ubuntu or similar system by running the following commands:</p>\n\
-    <p>$ sudo apt-get update\n   $ sudo apt-get install nfs-common autofs</p>\n<p>On\
-    \ RedHat, CentOS or Scientific Linux, run the following:</p>\n<p>$ sudo yum install\
-    \ nfs-utils autofs</p>\n<p>On (recent) Fedora, run the following:</p>\n<p>$ sudo\
-    \ dnf install nfs-utils autofs</p>\n<p>(The \"autofs\" package is needed if you\
-    \ want to configure the NFS client\nto automount the remote file systems.)</p>\n\
-    <h2>Configuring the NFS mount</h2>\n<p>There are (at least) 3 ways to mount a\
-    \ file system on a remote NFS server</p>\n<ul>\n<li>With a temporary mount, the\
-    \ mount does not survive an instance reboot.</li>\n<li>With a permanent mount,\
-    \ the file system is mounted automatically on\n    instance startup.</li>\n<li>With\
-    \ an automount, the file system is mounted when some program tries\n    to access\
-    \ files, and then unmounted after a period of inactivity.</li>\n</ul>\n<h3>The\
-    \ NFS mount string and options</h3>\n<p>The NFS mount string and mount options\
+    <p><code>sudo apt-get update`\nsudo apt-get install nfs-common autofs</code></p>\n\
+    <p>On RedHat, CentOS or Scientific Linux, run the following:</p>\n<p><code>sudo\
+    \ yum install nfs-utils autofs`</code></p>\n<p>On (recent) Fedora, run the following:</p>\n\
+    <p><code>sudo dnf install nfs-utils autofs</code></p>\n<p>(The \"autofs\" package\
+    \ is needed if you want to configure the NFS client\nto automount the remote file\
+    \ systems.)</p>\n<h2>Configuring the NFS mount</h2>\n<p>There are (at least) 3\
+    \ ways to mount a file system on a remote NFS server</p>\n<ul>\n<li>With a temporary\
+    \ mount, the mount does not survive an instance reboot.</li>\n<li>With a permanent\
+    \ mount, the file system is mounted automatically on\n    instance startup.</li>\n\
+    <li>With an automount, the file system is mounted when some program tries\n  \
+    \  to access files, and then unmounted after a period of inactivity.</li>\n</ul>\n\
+    <h3>The NFS mount string and options</h3>\n<p>The NFS mount string and mount options\
     \ are the key pieces of information\nthat are needed when an NFS file system is\
-    \ mounted.</p>\n<p>The <mount-string> specifies the remote NFS file system to\
-    \ be mounted\non your client VM.  It consists of the NFS server's IP address,\
-    \ and\nan exported NFS path, with a colon between them.  For example:</p>\n<pre><code>10.255.120.220:/users/fred\n\
-    </code></pre>\n<p>The <mount-options> determine how the client-side kernel manages\n\
-    NFS access.  We recommend the following NFS mount options as a\nstarting point:</p>\n\
-    <pre><code>rw,hard,intr,nosuid,nodev,timeo=100,retrans=5,nolock\n</code></pre>\n\
-    <p>or the following if you need to use NFS version 3:</p>\n<pre><code>rw,nfsvers=3,hard,intr,nosuid,nodev,timeo=100,retrans=5,nolock\n\
-    </code></pre>\n<p>The above parameters have the following meanings:</p>\n<ul>\n\
-    <li>\n<p>\"rw\" means mount the file system with read-write access.  An alternative\n\
-    \    is \"ro\" for read-only access.</p>\n</li>\n<li>\n<p>\"hard\" instructs the\
-    \ system to attempt to retry \"for ever\" to reconnect\n    if the client looses\
-    \ its NFS connection.  This is strongly recommended.</p>\n</li>\n<li>\n<p>\"intr\"\
+    \ mounted.</p>\n<p>The <code>&lt;mount-string&gt;</code> specifies the remote\
+    \ NFS file system to be mounted\non your client VM.  It consists of the NFS server's\
+    \ IP address, and\nan exported NFS path, with a colon between them.  For example:</p>\n\
+    <p><code>10.255.120.220:/users/fred</code></p>\n<p>The <code>&lt;mount-options&gt;</code>\
+    \ determine how the client-side kernel manages\nNFS access.  We recommend the\
+    \ following NFS mount options as a\nstarting point:</p>\n<p><code>rw,hard,intr,nosuid,nodev,timeo=100,retrans=5,nolock</code></p>\n\
+    <p>or the following if you need to use NFS version 3:</p>\n<p><code>rw,nfsvers=3,hard,intr,nosuid,nodev,timeo=100,retrans=5,nolock</code></p>\n\
+    <p>The above parameters have the following meanings:</p>\n<ul>\n<li>\n<p>\"rw\"\
+    \ means mount the file system with read-write access.  An alternative\n    is\
+    \ \"ro\" for read-only access.</p>\n</li>\n<li>\n<p>\"hard\" instructs the system\
+    \ to attempt to retry \"for ever\" to reconnect\n    if the client looses its\
+    \ NFS connection.  This is strongly recommended.</p>\n</li>\n<li>\n<p>\"intr\"\
     \ is a backwards compatibility flag.</p>\n</li>\n<li>\n<p>\"nosuid\" tells the\
     \ kernel to ignore the \"set user id\" flag on executables.</p>\n</li>\n<li>\n\
     <p>\"nodev\" treats \"device files\" as uninterpretted.</p>\n</li>\n<li>\n<p>the\
@@ -20698,9 +20698,9 @@
     \ it mounts it on top\nof an existing directory.  That directory is known as the\
     \ mount point.\nIf you are doing a temporary NFS mount, or setting up a permanent\
     \ mount,\nthe mount point directory needs to be created manually.  (If you are\n\
-    using the automount approach, the mount point directory can be created\nautomatically.)\
-    \ </p>\n<p>The normal Linux convention is to either use \"/mnt\" or a subdirectory\n\
-    of \"/mnt\" as the mount point.  However NeCTAR VMs use \"/mnt\" as the mount\n\
+    using the automount approach, the mount point directory can be created\nautomatically.)</p>\n\
+    <p>The normal Linux convention is to either use \"/mnt\" or a subdirectory\nof\
+    \ \"/mnt\" as the mount point.  However NeCTAR VMs use \"/mnt\" as the mount\n\
     point for the (so-called) ephemeral file system.</p>\n<p>You can use the \"mkdir\"\
     \ command to create the mountpoint directory.  It is\nprobably advisable to create\
     \ it in direcftory that cannot be written by\nunprivileged users.</p>\n<h3>Creating\
@@ -20708,40 +20708,40 @@
     \ of setting up a permanent\nmount or an automount, it is a good idea to check\
     \ that you can access\nthe NFS server by setting up a temporary mount.  You can\
     \ also use this\napproach for once-off or ad-hoc access to NFS.</p>\n<p>The steps\
-    \ are as follows:</p>\n<ol>\n<li>\n<p>Create a temporary mount point:</p>\n<pre><code>\
-    \ mkdir ~/tempMount\n</code></pre>\n</li>\n<li>\n<p>Run the mount command:</p>\n\
-    <pre><code> sudo mount -t nfs -o &lt;mount-options&gt; &lt;mount-string&gt; ~/tempMount\n\
-    </code></pre>\n<p>where the <mount-options> and <mount-string> are as described\
-    \ above.</p>\n</li>\n<li>\n<p>Check that you can access data on the mounted file\
-    \ system:</p>\n<pre><code> $ ls -l ~/tempMount\n &lt;directory listing&gt;\n</code></pre>\n\
-    </li>\n<li>\n<p>When you are done, unmount the file system and tidy up the mount\
-    \ point:</p>\n<pre><code> sudo umount ~/tempMount\n</code></pre>\n<p>rmdir ~/tempMount</p>\n\
-    <p>Note that the \"umount\" will fail if any process (including as shell)\n has\
-    \ files on the mounted file system open, or if it has a directory\n in the file\
-    \ system as its current directory.</p>\n</li>\n</ol>\n<h3>Configuring a fixed\
-    \ NFS mount</h3>\n<p>Fixed mounts are typically configured by adding entries to\
-    \ the \"/etc/fstab\"\nfile.  This file is consulted to work out which file systems\
-    \ to mount on\nsystem startup.  It is also used when you run \"mount -a\" or \"\
-    mount <dir>\".</p>\n<p>A typical \"/etc/fstab\" file on a NeCTAR instance looks\
-    \ something like this:</p>\n<pre><code>/dev/vda1 /          ext4    defaults \
-    \                            1 1\ntmpfs     /dev/shm   tmpfs   defaults      \
-    \                       0 0\ndevpts    /dev/pts   devpts  gid=5,mode=620     \
-    \                  0 0\nsysfs     /sys       sysfs   defaults                \
-    \             0 0\nproc      /proc      proc    defaults                     \
-    \        0 0\n/dev/vdb  /mnt       auto    defaults,nofail,comment=cloudconfig\
-    \  0 2\n</code></pre>\n<p>Each line describes a file system, and has 6 fields\
-    \ separated by spaces\nand tab characters.</p>\n<ul>\n<li>Field 1 gives the device\
-    \ or other specification for the file\n    system to be mounted.</li>\n<li>Field\
-    \ 2 gives the mount point on which the file system should be mounted.</li>\n<li>Field\
-    \ 3 gives the file system type.  In the example above, \"ext4\" is\n    a regular\
-    \ file system format, and the remainder have special meanings.</li>\n<li>Field\
-    \ 4 gives any mount options relevant to the mount.</li>\n<li>Field 5 is only relevant\
-    \ to the \"dump(8)\" program.</li>\n<li>Field 6 determines the order in which\
-    \ (local) file systems are checked\n    by the \"fsck(8)\" program at boot time.</li>\n\
-    </ul>\n<p>To configure a fixed NFS mount, you need to use a text editor to edit\
-    \ the\n\"/etc/fstab\" file to add a line that looks like this:</p>\n<pre><code>&lt;mount-string&gt;\
-    \ &lt;mount-point&gt; nfs &lt;mount-options&gt; 0 0\n</code></pre>\n<p>where the\
-    \ <mount-string> and <mount-options> are as above, and the\n<mount-point> directory\
+    \ are as follows:</p>\n<ol>\n<li>\n<p>Create a temporary mount point:</p>\n<p><code>mkdir\
+    \ ~/tempMount</code></p>\n</li>\n<li>\n<p>Run the mount command:</p>\n<p><code>sudo\
+    \ mount -t nfs -o &lt;mount-options&gt; &lt;mount-string&gt; ~/tempMount</code></p>\n\
+    <p>where the <mount-options> and <mount-string> are as described above.</p>\n\
+    </li>\n<li>\n<p>Check that you can access data on the mounted file system:</p>\n\
+    <p><code>$ ls -l ~/tempMount\n&lt;directory listing&gt;</code></p>\n</li>\n<li>\n\
+    <p>When you are done, unmount the file system and tidy up the mount point:</p>\n\
+    <p><code>sudo umount ~/tempMount\nrmdir ~/tempMount</code></p>\n<p>Note that the\
+    \ \"umount\" will fail if any process (including as shell)\n has files on the\
+    \ mounted file system open, or if it has a directory\n in the file system as its\
+    \ current directory.</p>\n</li>\n</ol>\n<h3>Configuring a fixed NFS mount</h3>\n\
+    <p>Fixed mounts are typically configured by adding entries to the \"/etc/fstab\"\
+    \nfile.  This file is consulted to work out which file systems to mount on\nsystem\
+    \ startup.  It is also used when you run \"mount -a\" or \"mount <dir>\".</p>\n\
+    <p>A typical \"/etc/fstab\" file on a NeCTAR instance looks something like this:</p>\n\
+    <p><code>/dev/vda1 /          ext4    defaults                             1 1\n\
+    tmpfs     /dev/shm   tmpfs   defaults                             0 0\ndevpts\
+    \    /dev/pts   devpts  gid=5,mode=620                       0 0\nsysfs     /sys\
+    \       sysfs   defaults                             0 0\nproc      /proc    \
+    \  proc    defaults                             0 0\n/dev/vdb  /mnt       auto\
+    \    defaults,nofail,comment=cloudconfig  0 2</code></p>\n<p>Each line describes\
+    \ a file system, and has 6 fields separated by spaces\nand tab characters.</p>\n\
+    <ul>\n<li>Field 1 gives the device or other specification for the file\n    system\
+    \ to be mounted.</li>\n<li>Field 2 gives the mount point on which the file system\
+    \ should be mounted.</li>\n<li>Field 3 gives the file system type.  In the example\
+    \ above, \"ext4\" is\n    a regular file system format, and the remainder have\
+    \ special meanings.</li>\n<li>Field 4 gives any mount options relevant to the\
+    \ mount.</li>\n<li>Field 5 is only relevant to the \"dump(8)\" program.</li>\n\
+    <li>Field 6 determines the order in which (local) file systems are checked\n \
+    \   by the \"fsck(8)\" program at boot time.</li>\n</ul>\n<p>To configure a fixed\
+    \ NFS mount, you need to use a text editor to edit the\n\"/etc/fstab\" file to\
+    \ add a line that looks like this:</p>\n<p><code>&lt;mount-string&gt; &lt;mount-point&gt;\
+    \ nfs &lt;mount-options&gt; 0 0</code></p>\n<p>where the <code>&lt;mount-string&gt;</code>\
+    \ and <code>&lt;mount-options&gt;</code> are as above, and the\n<code>&lt;mount-point&gt;</code>\
     \ is a directory that you have created using \"mkdir\"\nas mentioned above.</p>\n\
     <p>Once you have added the entry, you should run \"sudo mount <mount-point>\"\n\
     or \"sudo mount -a\" to mount the NFS file system, and then check that you\ncan\
@@ -20755,21 +20755,21 @@
     <p>The \"autofs\" / \"automount\" mechanisms are highly configurable, but we\n\
     recommend a simple configuration as a starting point.  Here is a simple\nrecipe:</p>\n\
     <ol>\n<li>\n<p>Install the \"autofs\" package (as above).</p>\n</li>\n<li>\n<p>Edit\
-    \ the \"/etc/autofs.master\" file, and add the following line at\n    the end\
-    \ of the file:</p>\n<pre><code>/- file:/etc/auto.mynfsmounts\n</code></pre>\n\
-    </li>\n<li>\n<p>Create the \"/etc/auto.mynfsmount\" file, containing the following\n\
-    \    line:</p>\n<pre><code>&lt;mount-point&gt; &lt;mount-options&gt; &lt;mount-path&gt;\n\
-    </code></pre>\n<p>Where the <mount-point>, <mount-options> and <mount-path> are\
-    \ as\nabove.</p>\n</li>\n<li>\n<p>Make sure that the file is only writeable by\
-    \ root.</p>\n<pre><code>sudo chown root:root /etc/auto.mynfsmount\n</code></pre>\n\
-    <p>sudo chmod 644 /etc/auto.mynfsmount</p>\n</li>\n<li>\n<p>Start the \"autofs\"\
-    \ service, using your Linux distro's idiom for\n    starting a service; e.g.</p>\n\
-    <pre><code>sudo service autofs start\n</code></pre>\n<p>or</p>\n<pre><code>sudo\
-    \ systemctl start autofs\n</code></pre>\n</li>\n<li>\n<p>Check that the collection\
-    \ mounts:</p>\n<pre><code>$ cd &lt;mount-point&gt;\n</code></pre>\n<p>$ ls -l\n\
-    <directory listing></p>\n</li>\n<li>\n<p>Configure the \"autofs\" service to start\
-    \ automatically on system\n    reboot.</p>\n<pre><code>sudo chkconfig --add autofs\n\
-    </code></pre>\n<p>or</p>\n<pre><code>sudo systemctl enable autofs\n</code></pre>\n\
+    \ the \"/etc/autofs.master\" file, and add the following line at\n     the end\
+    \ of the file:</p>\n<p><code>/- file:/etc/auto.mynfsmounts</code></p>\n</li>\n\
+    <li>\n<p>Create the \"/etc/auto.mynfsmount\" file, containing the following\n\
+    \     line:</p>\n<p><code>&lt;mount-point&gt; &lt;mount-options&gt; &lt;mount-path&gt;</code></p>\n\
+    <p>where the <code>&lt;mount-point&gt;</code>, <code>&lt;mount-options&gt;</code>\
+    \ and <code>&lt;mount-path&gt;</code> are as\n described above.</p>\n</li>\n<li>\n\
+    <p>Make sure that the file is only writeable by root.</p>\n<p><code>sudo chown\
+    \ root:root /etc/auto.mynfsmount\nsudo chmod 644 /etc/auto.mynfsmount</code></p>\n\
+    </li>\n<li>\n<p>Start the \"autofs\" service, using your Linux distro's idiom\
+    \ for\n     starting a service; e.g.</p>\n<p><code>sudo service autofs start</code></p>\n\
+    <p>or</p>\n<p><code>sudo systemctl start autofs</code></p>\n</li>\n<li>\n<p>Check\
+    \ that the collection mounts:</p>\n<p><code>$ cd &lt;mount-point&gt;\n$ ls -l\n\
+    &lt;directory listing&gt;</code></p>\n</li>\n<li>\n<p>Configure the \"autofs\"\
+    \ service to start automatically on system\n     reboot.</p>\n<p><code>sudo chkconfig\
+    \ --add autofs</code></p>\n<p>or</p>\n<p><code>sudo systemctl enable autofs</code></p>\n\
     </li>\n</ol>\n<h2>Client-side Security and Access Control</h2>\n<p>Possibly the\
     \ most difficult aspect of using NFS in the NeCTAR context is\nestablishing who\
     \ is allowed to access the files on the NFS server.  The\nfirst problem is ensuring\
@@ -20803,15 +20803,15 @@
     \ strategy is to figure out what uids are used on the NFS server,\nand create\
     \ client-side accounts that match them.  This can work as a short\nterm solution;\
     \ e.g. if users can use \"sudo\" to switch identities.  However,\nit is clunky,\
-    \ and if the uids conflict it can be problematic.  </p>\n<p>If you want to go\
-    \ down this route, then you need to identify the appropriate\nsubset of the uids\
-    \ and gids used on the NFS server, and then create\nmirror accounts and groups\
-    \ on the NFS client instance using the \"adduser\"\nor \"useradd\" command and\
-    \ the \"groupadd\" command respectively.</p>\n<ul>\n<li>\n<p>Use the \"--uid\"\
-    \ and \"--gid\" options to set the same uid and gid values\n    that are used\
-    \ on the NFS server.</p>\n</li>\n<li>\n<p>If the uid and gid values are already\
-    \ in use on the client, you need\n    to consider whether the collision is going\
-    \ to allow one user to access\n    another user's files.</p>\n</li>\n</ul>\n<h3>Mapping\
+    \ and if the uids conflict it can be problematic.</p>\n<p>If you want to go down\
+    \ this route, then you need to identify the appropriate\nsubset of the uids and\
+    \ gids used on the NFS server, and then create\nmirror accounts and groups on\
+    \ the NFS client instance using the \"adduser\"\nor \"useradd\" command and the\
+    \ \"groupadd\" command respectively.</p>\n<ul>\n<li>\n<p>Use the \"--uid\" and\
+    \ \"--gid\" options to set the same uid and gid values\n    that are used on the\
+    \ NFS server.</p>\n</li>\n<li>\n<p>If the uid and gid values are already in use\
+    \ on the client, you need\n    to consider whether the collision is going to allow\
+    \ one user to access\n    another user's files.</p>\n</li>\n</ul>\n<h3>Mapping\
     \ identities</h3>\n<p>The NFS version 4 allows uids to \"name@domain\" strings\
     \ and back for use in\nNFS requests.  This can be used to deal with inconsistent\
     \ uid &lt;-&gt; account\nname mmapings.  If you want / need to do this, you will\
@@ -20824,70 +20824,73 @@
     \ for\nsetting up the NFS server need to understand.  If you are merely using\
     \ the\nNFS server implemented by someone else, then you have to rely on the server\n\
     administrator to address these issues.  However, we mention them here\nbecause\
-    \ the issues are relevant to you and the people whose data </p>\n<h3>NFS client\
-    \ and server host identities</h3>\n<p>By default, an NFS server relies on IP addresses\
-    \ as the sole means of\ndetermining the identify of NFS clients.  This is problematic\
-    \ if other machines\nare able to spoof the IP address of a legitimate NFS client.\
-    \  One way to address\nthis (and other security concerns) is to use NFS with Kerberos.</p>\n\
-    <p>There is also a concern that someone might spoof the IP address\nof the NFS\
-    \ server, so that your NeCTAR instance mounts a \"fake\" file\nsystem.  This might\
-    \ sound like a strange thing to do, but consider the\ncase where you have put\
-    \ user home directories on the NFS server, and\nthe user's home directory holds\
-    \ a \".ssh/authorized_keys\" file.  If a\nhacker can cause the client NFS to refer\
-    \ to a spoofed file, they can\nopen up a way to login to the NFS client instance.</p>\n\
-    <p>Aside: unless there is a misconfiguration, it should be impossible for\nNeCTAR\
-    \ OpenStack instances to spoof IP addresses of other instances.\nHowever, it is\
-    \ not clear if someone outside of your data centre might\nbe able to spoof the\
-    \ IP address of an instance, and you probably would\nbe vulnerable to spoofing\
-    \ by a non-Openstack host in your data centre,\nif such a host was ever compromised.</p>\n\
-    <h3>Root squashing</h3>\n<p>The default behavior of an NFS server is to \"squash\"\
-    \ the root account.\nWhat this does is to cause the NFS server to treate any NFS\
-    \ requests\ncoming from the client using the root identity (user 0) <em>as if</em>\
-    \ they\nwere coming from the <em>nobody</em> user.  This means that the root user\n\
-    (or someone sudo'd to root) on the client does not have privileged\naccess to\
-    \ files on the mounted file system.</p>\n<p>Generally speaking, root squashing\
-    \ is a sensible security measure,\nespecially if local root on the clients cannot\
-    \ always be trusted (see\nbelow!).  However, it does not prevent local root from\
-    \ assuming the\nidentity of some user, and accessing his / her files that way.\
-    \  In\nfact, the only things that root squashing definitively stops are\noperations\
-    \ like \"chown\" that inherently require root privilege.</p>\n<p>Note that root\
-    \ squashing is controlled by the NFS export rules on the\nNFS server side.</p>\n\
-    <h3>Deeper security issues</h3>\n<p>By default, NFS protocols send data, metadata\
-    \ and requests over the\nnetwork without any encryption.  If it is possible for\
-    \ a 3rd party\nto run network snooping (packet sniffing) software on any intervening\n\
-    networks, they will be able see the files and metadata that is read or\nwritten\
-    \ by your client.  This is one reason why it is inadvisable to\nrun NFS over connections\
-    \ that go outside of your NeCTAR node's networking\ninfrastructure.</p>\n<p>It\
-    \ is possible to address the problem above by using a virtual private\nnetwork\
-    \ (VPN).  The problem is that the network traffic needs to be\nencrypted, which\
-    \ impacts the performance of NFS running over the VPN.</p>\n<p>A second issue\
-    \ is that the NFS file access control model assumes a level\nof trust between\
-    \ people with root access to the client and server machines.  If\nthat trust does\
-    \ not exist (or is ill-founded) then the end user (the notional\nowner of the\
-    \ files) cannot rely on access controls being properly enforced.</p>\n<p>The problem\
-    \ is that the group of people with root access can be larger\nthan you might expect.\
-    \  On the client side, it will include:</p>\n<ul>\n<li>The person who launched\
-    \ the client-side instance, and who we can assume\n    has the private key for\
-    \ logging in on the service account.</li>\n<li>Anyone who knows the root password\
-    \ (if one has been set) and is a member\n    of the tenant.</li>\n<li>Anyone who\
-    \ can legitimately login to the service account, or to any other\n    account\
-    \ with sudo access.</li>\n<li>Anyone who has NeCTAR tenant member access and can\
-    \ \"rebuild\" the instance.</li>\n<li>Anyone who is able to hack into your instance\
-    \ and get root access, or\n    steal credentials for the tenant. </li>\n</ul>\n\
-    <p>In short, if you are going to enable a NeCTAR instance to mount an NFS\nfile\
-    \ system, then the security of the NeCTAR instance (the NFS client) and\nthe trustworthiness\
-    \ of the administrators is paramount.</p>\n<h2>More information</h2>\n<p>There\
-    \ is more information on NFS in general and the topic of setting\nup NFS mounts\
-    \ in the following places.</p>\n<p>Linux manual entries:</p>\n<ul>\n<li>\"man\
-    \ 5 nfs\" - http://linux.die.net/man/5/nfs</li>\n<li>\"man 5 fstab\" - http://linux.die.net/man/5/nfs</li>\n\
-    <li>\"man 5 autofs\" - http://linux.die.net/man/5/autofs</li>\n<li>\"man 5 auto.master\"\
-    \ - http://linux.die.net/man/5/auto.master</li>\n<li>\"man 8 mount\" - http://linux.die.net/man/8/mount</li>\n\
-    <li>\"man 8 umount\" - http://linux.die.net/man/8/umount</li>\n<li>\"man 8 autofs\"\
-    \ - http://linux.die.net/man/8/autofs</li>\n</ul>\n<p>Ubuntu guides:</p>\n<ul>\n\
-    <li>https://help.ubuntu.com/community/SettingUpNFSHowTo</li>\n<li>https://help.ubuntu.com/lts/serverguide/network-file-system.html</li>\n\
-    <li>https://help.ubuntu.com/community/Autofs</li>\n</ul>"
+    \ the issues are relevant to you and the people whose data you may\nbe looking\
+    \ after.</p>\n<h3>NFS client and server host identities</h3>\n<p>By default, an\
+    \ NFS server relies on IP addresses as the sole means of\ndetermining the identify\
+    \ of NFS clients.  This is problematic if other machines\nare able to spoof the\
+    \ IP address of a legitimate NFS client.  One way to address\nthis (and other\
+    \ security concerns) is to use NFS with Kerberos.</p>\n<p>There is also a concern\
+    \ that someone might spoof the IP address\nof the NFS server, so that your NeCTAR\
+    \ instance mounts a \"fake\" file\nsystem.  This might sound like a strange thing\
+    \ to do, but consider the\ncase where you have put user home directories on the\
+    \ NFS server, and\nthe user's home directory holds a \".ssh/authorized_keys\"\
+    \ file.  If a\nhacker can cause the client NFS to refer to a spoofed file, they\
+    \ can\nopen up a way to login to the NFS client instance.</p>\n<p>Aside: unless\
+    \ there is a misconfiguration, it should be impossible for\nNeCTAR OpenStack instances\
+    \ to spoof IP addresses of other instances.\nHowever, it is not clear if someone\
+    \ outside of your data centre might\nbe able to spoof the IP address of an instance,\
+    \ and you probably would\nbe vulnerable to spoofing by a non-Openstack host in\
+    \ your data centre,\nif such a host was ever compromised.</p>\n<h3>Root squashing</h3>\n\
+    <p>The default behavior of an NFS server is to \"squash\" the root account.\n\
+    What this does is to cause the NFS server to treate any NFS requests\ncoming from\
+    \ the client using the root identity (user 0) <em>as if</em> they\nwere coming\
+    \ from the <em>nobody</em> user.  This means that the root user\n(or someone sudo'd\
+    \ to root) on the client does not have privileged\naccess to files on the mounted\
+    \ file system.</p>\n<p>Generally speaking, root squashing is a sensible security\
+    \ measure,\nespecially if local root on the clients cannot always be trusted (see\n\
+    below!).  However, it does not prevent local root from assuming the\nidentity\
+    \ of some user, and accessing his / her files that way.  In\nfact, the only things\
+    \ that root squashing definitively stops are\noperations like \"chown\" that inherently\
+    \ require root privilege.</p>\n<p>Note that root squashing is controlled by the\
+    \ NFS export rules on the\nNFS server side.</p>\n<h3>Deeper security issues</h3>\n\
+    <p>By default, NFS protocols send data, metadata and requests over the\nnetwork\
+    \ without any encryption.  If it is possible for a 3rd party\nto run network snooping\
+    \ (packet sniffing) software on any intervening\nnetworks, they will be able see\
+    \ the files and metadata that is read or\nwritten by your client.  This is one\
+    \ reason why it is inadvisable to\nrun NFS over connections that go outside of\
+    \ your NeCTAR node's networking\ninfrastructure.</p>\n<p>It is possible to address\
+    \ the problem above by using a virtual private\nnetwork (VPN).  The problem is\
+    \ that the network traffic needs to be\nencrypted, which impacts the performance\
+    \ of NFS running over the VPN.</p>\n<p>A second issue is that the NFS file access\
+    \ control model assumes a level\nof trust between people with root access to the\
+    \ client and server machines.  If\nthat trust does not exist (or is ill-founded)\
+    \ then the end user (the notional\nowner of the files) cannot rely on access controls\
+    \ being properly enforced.</p>\n<p>The problem is that the group of people with\
+    \ root access can be larger\nthan you might expect.  On the client side, it will\
+    \ include:</p>\n<ul>\n<li>The person who launched the client-side instance, and\
+    \ who we can assume\n    has the private key for logging in on the service account.</li>\n\
+    <li>Anyone who knows the root password (if one has been set) and is a member\n\
+    \    of the tenant.</li>\n<li>Anyone who can legitimately login to the service\
+    \ account, or to any other\n    account with sudo access.</li>\n<li>Anyone who\
+    \ has NeCTAR tenant member access and can \"rebuild\" the instance.</li>\n<li>Anyone\
+    \ who is able to hack into your instance and get root access, or\n    steal credentials\
+    \ for the tenant.</li>\n</ul>\n<p>In short, if you are going to enable a NeCTAR\
+    \ instance to mount an NFS\nfile system, then the security of the NeCTAR instance\
+    \ (the NFS client) and\nthe trustworthiness of the administrators is paramount.</p>\n\
+    <h2>More information</h2>\n<p>There is more information on NFS in general and\
+    \ the topic of setting\nup NFS mounts in the following places.</p>\n<p>Linux manual\
+    \ entries:</p>\n<ul>\n<li><a href=\"http://linux.die.net/man/5/nfs\"><code>man\
+    \ 5 nfs</code></a></li>\n<li><a href=\"http://linux.die.net/man/5/nfs\"><code>man\
+    \ 5 fstab</code></a></li>\n<li><a href=\"http://linux.die.net/man/5/autofs\"><code>man\
+    \ 5 autofs</code></a></li>\n<li><a href=\"http://linux.die.net/man/5/auto.master\"\
+    ><code>man 5 auto.master</code></a></li>\n<li><a href=\"http://linux.die.net/man/8/mount\"\
+    ><code>man 8 mount</code></a></li>\n<li><a href=\"http://linux.die.net/man/8/umount\"\
+    ><code>man 8 umount</code></a></li>\n<li><a href=\"http://linux.die.net/man/8/autofs\"\
+    ><code>man 8 autofs</code></a></li>\n</ul>\n<p>Ubuntu guides:</p>\n<ul>\n<li>https://help.ubuntu.com/community/SettingUpNFSHowTo</li>\n\
+    <li>https://help.ubuntu.com/lts/serverguide/network-file-system.html</li>\n<li>https://help.ubuntu.com/community/Autofs</li>\n\
+    </ul>"
   parent: 24
-  sha1: 2b5c837fa42df26065cf1edd042d7af4b46e6808
+  sha1: 65f37559fc52b3c9c3cf99d07232ade055e589e0
   title: QCIF NFS Mounting
 98:
   freshdesk:
