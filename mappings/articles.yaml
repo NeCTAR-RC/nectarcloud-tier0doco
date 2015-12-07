@@ -21980,11 +21980,12 @@
           \ The training materials (presentations and handouts) are also developed\
           \ and maintained as part of the BTP. A high level overview of the BTP architecture\
           \ is show below: \n \n A workshop is composed of a number of training modules.\
-          \ Each training module has an associated tools and datasets metadata. These\
-          \ metadata are used by the orchestration system for automation of tools\
-          \ installation during BTP image creation and datasets syncing during BTP\
-          \ instance deployments. \n \n Components \n The BTP as a solution is composed\
-          \ of a number of components: Analysis Tools, Datasets and Training Materials.\
+          \ Each training module has an associated analysis tools and datasets metadata.\
+          \ These metadata are used by the orchestration system for automation of\
+          \ tools installation during BTP image creation and datasets syncing during\
+          \ BTP instance deployments. \n \n Components \n The BTP as a solution is\
+          \ composed of a number of components: Analysis Tools, Datasets and Training\
+          \ Materials. These components are encapsulated on each of the training modules.\
           \ A brief summary of each one are included below. \n Analysis Tools \n Analysis\
           \ tools are essential for delivering hands-on training workshops.\nThe BTP\
           \ teaches trainees how these tools can be used to help interrogate and interpret\
@@ -22003,26 +22004,47 @@
           \ for AMOS\n\n\nPeakAnalyzer\nMulti-peak data analysis\n\n\nPicard\nSequence\
           \ data analysis\n\n\nSAMtools\nFor manipulating alignments in the SAM format\n\
           \n\nSkewer\nAdapter trimmer for paired-end reads\n\n\n\n These analysis\
-          \ tools are packaged and installed into the BTP Image upon creation using\
-          \ the automated workflows described below. \n Packaging of Analysis Tools\
-          \ \n Datasets \n Datasets used by the BTP are stored on NeCTAR Object Storage\
-          \ (Swift). Each training modules has a corresponding publicly readable container\
+          \ tools are packaged and installed into the BTP Image upon creation. This\
+          \ process is described in detail in the [BTP Workflows][#btp-workflows]\
+          \ section below. \n Packaging of Analysis Tools \n To make maintenance and\
+          \ deployment of the BTP easier, most of the analysis tools included in the\
+          \ BTP are packaged as stand-alone *.deb installers, installable on Ubuntu-based\
+          \ operating systems. fpm-cookery is used to create the *.deb installers\
+          \ using recipes. The current BTP Images are based on Ubuntu Precise LTS\
+          \ which is supported until 2017. The BTP maintains a set of recipes on GitHub\
+          \ which is also integrated with Travis CI for continuous integration. Whenever\
+          \ a tool recipe is updated or new recipe is added into the repository, Travis\
+          \ CI ensures that the recipes builds correctly. \n The .deb installers can\
+          \ also be manually created on a client machine. This step is not mandatory\
+          \ for creating the BTP images and deployment of BTP instances. One can clone\
+          \ the BTP Tools repository, and using fpm-cookery, create the .deb installers.\
+          \ \n Clone the BTP Tools repository: \n git clone https://github.com/BPA-CSIRO-Workshops/btp-tools.git\
+          \ \n The .deb installer for a particular analysis tool can then be built\
+          \ using fpm-cookery: \n cd btp-tools/bwa\nfpm-cookery . \n fpm-cookery will\
+          \ read the instructions in the recipe and build the .deb installer. In the\
+          \ example above, fpm-cookery will get the source code for bwa from GitHub,\
+          \ then will proceed with the standard configuration, compilation and building\
+          \ of the tool. fpm-cookery will place the resulting .deb installer inside\
+          \ the pkg subdirectory: \n ls pkg/\nbwa_0.7.12-0_amd64.deb \n Datasets \n\
+          \ Datasets used by the BTP are stored on NeCTAR Object Storage (Swift).\
+          \ Each training modules has a corresponding publicly readable container\
           \ where its datasets are accessible. The containers for the NGS training\
           \ modules are listed in the table below: \n\n\n\nModule\nContainer\n\n\n\
           \n\nIntroduction to CLI\nNGSDataCommandLine\n\n\nQuality Control\nNGSDataQC\n\
           \n\nAlignment\nNGSDataChIPSeq\n\n\nChIP-Seq\nNGSDataChIPSeq\n\n\nRNA-Seq\n\
           NGSDataRNASeq\n\n\nDe novo Assembly\nNGSDataDeNovo\n\n\n\n The complete\
           \ container URL are used to pull down the datasets into the BTP instances.\
-          \ The URLs are defined on the datasets metadata. \n Training Materials \n\
-          \ \n BTP Workflows \n Creating the BTP Image \n Prerequisites for Creating\
-          \ BTP Images \n \n git \n Packer \n OpenStack Glance Command Line Client\
-          \ \n NeCTAR OpenStack Credentials \n internet access \n \n The BTP uses\
-          \ the Packer tool for creating new virtual machine images compatible with\
-          \ NeCTAR Research Cloud. \n Get Workshop Repository \n A collection of Packer\
-          \ recipes are included as part of the orchestration module inside the BPA-CSIRO\
-          \ Workshop NGS Repository. This repository must be cloned together with\
-          \ the training submodules on the client machine where the BTP image will\
-          \ be created: \n git clone --recurse-submodules https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs.git\
+          \ The URLs are defined on the datasets metadata file, which is used by Puppet\
+          \ to pull down the datasets into the BTP instances upon deployment. \n Training\
+          \ Materials \n \n BTP Workflows \n Creating the BTP Image \n Prerequisites\
+          \ for Creating BTP Images \n \n git \n Packer \n OpenStack Glance Command\
+          \ Line Client \n NeCTAR OpenStack Credentials \n internet access \n \n The\
+          \ BTP uses the Packer tool for creating new virtual machine images compatible\
+          \ with NeCTAR Research Cloud. \n Get Workshop Repository \n A collection\
+          \ of Packer recipes are included as part of the orchestration module inside\
+          \ the BPA-CSIRO Workshop NGS Repository. This repository must be cloned\
+          \ together with the training submodules on the client machine where the\
+          \ BTP image will be created: \n git clone --recurse-submodules https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs.git\
           \ \n Orchestration \n Once the workshop repository and the training submodules\
           \ have been cloned, the local copy will have the following contents structure:\
           \ \n \u251C\u2500\u2500 010_trainers\n\u251C\u2500\u2500 015_preamble\n\u251C\
@@ -22031,25 +22053,28 @@
           \u251C\u2500\u2500 905_post-workshop\n\u251C\u2500\u2500 Makefile\n\u251C\
           \u2500\u2500 README.md\n\u251C\u2500\u2500 developers\n\u251C\u2500\u2500\
           \ licences\n\u251C\u2500\u2500 orchestration\n\u251C\u2500\u2500 style\n\
-          \u2514\u2500\u2500 template.tex \n Going inside the orchestration/packer\
-          \ subdirectory will show the available Packer recipes including the one\
-          \ compatible with the NeCTAR Research Cloud, btp-qemu.json. The available\
-          \ Packer recipes for the BTP are: \n \u251C\u2500\u2500 btp-aws.json\n\u251C\
-          \u2500\u2500 btp-qemu.json\n\u251C\u2500\u2500 btp-virtualbox.json\n\u251C\
-          \u2500\u2500 btp-vmware.json \n Launch Packer \n Before launching Packer,\
-          \ the content of the recipe file btp-qemu.json can be viewed. Descriptions\
-          \ for each recipe section are highlighted below. \n The image creation process\
-          \ can then be started by feeding the recipe into Packer. This assumes that\
-          \ the Packer is already installed on the client (build) machine. Packer\
-          \ can then be launched, with the recipe filename passed as a command line\
-          \ argument: \n packer build btp-qemu.json \n Packer will start the image\
-          \ creation process and the first thing this will do is to download the latest\
-          \ available alternate Ubuntu ISO from the internet. So the client machine\
-          \ must have access to the internet to download the ISO file. \n Upload Image\
-          \ \n Deploying BTP Instances \n Prerequisites for Deploying BTP Instances\
-          \ \n \n NeCTAR OpenStack Credentials \n OpenStack Nova Command Line Client\
-          \ \n NoMachine (NX) Client \n \n Using the BTP Instances for Training \n\
-          \n\n"
+          \u2514\u2500\u2500 template.tex \n The numberings (e.g 010_trainers, 015_preamble)\
+          \ are used by the build system to order by which the training modules are\
+          \ ordered in the training handouts. Each training module has an associated\
+          \ handouts subdirectory where the LaTeX file for that module is located.\
+          \ Going inside the orchestration/packer subdirectory will show the available\
+          \ Packer recipes including the one compatible with the NeCTAR Research Cloud,\
+          \ btp-qemu.json. The available Packer recipes for the BTP are: \n \u251C\
+          \u2500\u2500 btp-aws.json\n\u251C\u2500\u2500 btp-qemu.json\n\u251C\u2500\
+          \u2500 btp-virtualbox.json\n\u251C\u2500\u2500 btp-vmware.json \n Launch\
+          \ Packer \n Before launching Packer, the content of the recipe file btp-qemu.json\
+          \ can be viewed. Descriptions for each recipe section are highlighted below.\
+          \ \n The image creation process can then be started by feeding the recipe\
+          \ into Packer. This assumes that the Packer is already installed on the\
+          \ client (build) machine. Packer can then be launched, with the recipe filename\
+          \ passed as a command line argument: \n packer build btp-qemu.json \n Packer\
+          \ will start the image creation process and the first thing this will do\
+          \ is to download the latest available alternate Ubuntu ISO from the internet.\
+          \ So the client machine must have access to the internet to download the\
+          \ ISO file. \n Upload Image \n Deploying BTP Instances \n Prerequisites\
+          \ for Deploying BTP Instances \n \n NeCTAR OpenStack Credentials \n OpenStack\
+          \ Nova Command Line Client \n NoMachine (NX) Client \n \n Using the BTP\
+          \ Instances for Training \n\n\n"
         description: "<h1>Bioinformatics Training Platform (BTP) User Guide</h1>\n\
           <h2>Introduction</h2>\n<p><a href=\"https://platforms.monash.edu/eresearch/\"\
           >Monash eResearch Centre</a> have been <a href=\"https://rcblog.erc.monash.edu.au/blog/2013/12/bioinformatics-training-on-rcmon/\"\
@@ -22077,15 +22102,16 @@
           \ of the BTP. A high level overview of the BTP architecture is show below:</p>\n\
           <p><img alt=\"Bioinformatics Training Platform Architecture\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/btp-architecture.png?raw=true\"\
           ></p>\n<p>A workshop is composed of a number of training modules. Each training\
-          \ module has an associated tools and datasets metadata. These metadata are\
-          \ used by the orchestration system for automation of tools installation\
+          \ module has an associated analysis tools and datasets metadata. These metadata\
+          \ are used by the orchestration system for automation of tools installation\
           \ during BTP image creation and datasets syncing during BTP instance deployments.</p>\n\
           <hr>\n<h2>Components</h2>\n<p>The BTP as a solution is composed of a number\
           \ of components: <strong>Analysis Tools</strong>, <strong>Datasets</strong>\
-          \ and <strong>Training Materials</strong>. A brief summary of each one are\
-          \ included below.</p>\n<h3>Analysis Tools</h3>\n<p>Analysis tools are essential\
-          \ for delivering hands-on training workshops.\nThe BTP teaches trainees\
-          \ how these tools can be used to help interrogate and interpret their analysis\
+          \ and <strong>Training Materials</strong>. These components are encapsulated\
+          \ on each of the training modules. A brief summary of each one are included\
+          \ below.</p>\n<h3>Analysis Tools</h3>\n<p>Analysis tools are essential for\
+          \ delivering hands-on training workshops.\nThe BTP teaches trainees how\
+          \ these tools can be used to help interrogate and interpret their analysis\
           \ results. Most of these analysis tools are available as stand alone executables\
           \ while others have to be built from source. The most common analysis tools\
           \ used and packaged in the BTP are listed in the table below:</p>\n<table>\n\
@@ -22116,9 +22142,35 @@
           \ the SAM format</td>\n</tr>\n<tr>\n<td align=\"left\">Skewer</td>\n<td\
           \ align=\"left\">Adapter trimmer for paired-end reads</td>\n</tr>\n</tbody>\n\
           </table>\n<p>These analysis tools are packaged and installed into the <strong>BTP\
-          \ Image</strong> upon creation using the automated workflows described below.</p>\n\
-          <h4>Packaging of Analysis Tools</h4>\n<h3>Datasets</h3>\n<p>Datasets used\
-          \ by the BTP are stored on <a href=\"http://support.rc.nectar.org.au/docs/object-storage\"\
+          \ Image</strong> upon creation. This process is described in detail in the\
+          \ [BTP Workflows][#btp-workflows] section below.</p>\n<h4>Packaging of Analysis\
+          \ Tools</h4>\n<p>To make maintenance and deployment of the BTP easier, most\
+          \ of the analysis tools included in the BTP are packaged as stand-alone\
+          \ <code>*.deb</code> installers, installable on Ubuntu-based operating systems.\
+          \ <a href=\"https://github.com/bernd/fpm-cookery\"><code>fpm-cookery</code></a>\
+          \ is used to create the <code>*.deb</code> installers using recipes. The\
+          \ current <strong>BTP Images</strong> are based on Ubuntu Precise LTS which\
+          \ is supported until 2017. The BTP <a href=\"https://github.com/BPA-CSIRO-Workshops/btp-tools.git\"\
+          >maintains a set of recipes on GitHub</a> which is also integrated with\
+          \ <a href=\"https://travis-ci.org/BPA-CSIRO-Workshops/btp-tools\">Travis\
+          \ CI</a> for continuous integration. Whenever a tool recipe is updated or\
+          \ new recipe is added into the repository, <strong>Travis CI</strong> ensures\
+          \ that the recipes builds correctly.</p>\n<p>The <code>.deb</code> installers\
+          \ can also be manually created on a client machine. This step is not mandatory\
+          \ for creating the BTP images and deployment of BTP instances. One can clone\
+          \ the BTP Tools repository, and using <code>fpm-cookery</code>, create the\
+          \ <code>.deb</code> installers.</p>\n<p>Clone the BTP Tools repository:</p>\n\
+          <p><code>git clone https://github.com/BPA-CSIRO-Workshops/btp-tools.git</code></p>\n\
+          <p>The <code>.deb</code> installer for a particular analysis tool can then\
+          \ be built using <code>fpm-cookery</code>:</p>\n<p><code>cd btp-tools/bwa\n\
+          fpm-cookery .</code></p>\n<p><code>fpm-cookery</code> will read the instructions\
+          \ in the recipe and build the <code>.deb</code> installer. In the example\
+          \ above, <code>fpm-cookery</code> will get the source code for <code>bwa</code>\
+          \ from GitHub, then will proceed with the standard configuration, compilation\
+          \ and building of the tool. <code>fpm-cookery</code> will place the resulting\
+          \ <code>.deb</code> installer inside the <code>pkg</code> subdirectory:</p>\n\
+          <p><code>ls pkg/\nbwa_0.7.12-0_amd64.deb</code></p>\n<h3>Datasets</h3>\n\
+          <p>Datasets used by the BTP are stored on <a href=\"http://support.rc.nectar.org.au/docs/object-storage\"\
           >NeCTAR Object Storage (Swift)</a>. Each training modules has a corresponding\
           \ publicly readable container where its datasets are accessible. The containers\
           \ for the NGS training modules are listed in the table below:</p>\n<table>\n\
@@ -22132,15 +22184,16 @@
           </tr>\n<tr>\n<td align=\"left\">De novo Assembly</td>\n<td align=\"left\"\
           >NGSDataDeNovo</td>\n</tr>\n</tbody>\n</table>\n<p>The complete container\
           \ URL are used to pull down the datasets into the BTP instances. The URLs\
-          \ are defined on the datasets metadata.</p>\n<h3>Training Materials</h3>\n\
-          <hr>\n<h2>BTP Workflows</h2>\n<h3>Creating the BTP Image</h3>\n<h4>Prerequisites\
-          \ for Creating BTP Images</h4>\n<ul>\n<li>git</li>\n<li>Packer</li>\n<li>OpenStack\
-          \ Glance Command Line Client</li>\n<li>NeCTAR OpenStack Credentials</li>\n\
-          <li>internet access</li>\n</ul>\n<p>The BTP uses the <a href=\"https://www.packer.io\"\
-          >Packer</a> tool for creating new virtual machine images compatible with\
-          \ NeCTAR Research Cloud.</p>\n<h4>Get Workshop Repository</h4>\n<p>A collection\
-          \ of Packer recipes are included as part of the orchestration module inside\
-          \ the <a href=\"https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs\"\
+          \ are defined on the datasets metadata file, which is used by <strong>Puppet</strong>\
+          \ to pull down the datasets into the BTP instances upon deployment.</p>\n\
+          <h3>Training Materials</h3>\n<hr>\n<h2>BTP Workflows</h2>\n<h3>Creating\
+          \ the BTP Image</h3>\n<h4>Prerequisites for Creating BTP Images</h4>\n<ul>\n\
+          <li>git</li>\n<li>Packer</li>\n<li>OpenStack Glance Command Line Client</li>\n\
+          <li>NeCTAR OpenStack Credentials</li>\n<li>internet access</li>\n</ul>\n\
+          <p>The BTP uses the <a href=\"https://www.packer.io\">Packer</a> tool for\
+          \ creating new virtual machine images compatible with NeCTAR Research Cloud.</p>\n\
+          <h4>Get Workshop Repository</h4>\n<p>A collection of Packer recipes are\
+          \ included as part of the orchestration module inside the <a href=\"https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs\"\
           >BPA-CSIRO Workshop NGS Repository</a>. This repository must be cloned together\
           \ with the training submodules on the client machine where the BTP image\
           \ will be created:</p>\n<p><code>git clone --recurse-submodules https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs.git</code></p>\n\
@@ -22152,26 +22205,31 @@
           \u2500 090_velvet\n\u251C\u2500\u2500 905_post-workshop\n\u251C\u2500\u2500\
           \ Makefile\n\u251C\u2500\u2500 README.md\n\u251C\u2500\u2500 developers\n\
           \u251C\u2500\u2500 licences\n\u251C\u2500\u2500 orchestration\n\u251C\u2500\
-          \u2500 style\n\u2514\u2500\u2500 template.tex</code></p>\n<p>Going inside\
-          \ the <code>orchestration/packer</code> subdirectory will show the available\
-          \ Packer recipes including the one compatible with the NeCTAR Research Cloud,\
-          \ <code>btp-qemu.json</code>. The available Packer recipes for the BTP are:</p>\n\
-          <p><code>\u251C\u2500\u2500 btp-aws.json\n\u251C\u2500\u2500 btp-qemu.json\n\
-          \u251C\u2500\u2500 btp-virtualbox.json\n\u251C\u2500\u2500 btp-vmware.json</code></p>\n\
-          <h4>Launch Packer</h4>\n<p>Before launching Packer, the content of the recipe\
-          \ file <code>btp-qemu.json</code> can be viewed. Descriptions for each recipe\
-          \ section are highlighted below.</p>\n<p>The image creation process can\
-          \ then be started by feeding the recipe into Packer. This assumes that the\
-          \ Packer is already installed on the client (build) machine. Packer can\
-          \ then be launched, with the recipe filename passed as a command line argument:</p>\n\
-          <p><code>packer build btp-qemu.json</code></p>\n<p>Packer will start the\
-          \ image creation process and the first thing this will do is to download\
-          \ the latest available alternate Ubuntu ISO from the internet. So the client\
-          \ machine must have access to the internet to download the ISO file.</p>\n\
-          <h4>Upload Image</h4>\n<h3>Deploying BTP Instances</h3>\n<h4>Prerequisites\
-          \ for Deploying BTP Instances</h4>\n<ul>\n<li>NeCTAR OpenStack Credentials</li>\n\
-          <li>OpenStack Nova Command Line Client</li>\n<li>NoMachine (NX) Client</li>\n\
-          </ul>\n<h4>Using the BTP Instances for Training</h4>\n\n\n"
+          \u2500 style\n\u2514\u2500\u2500 template.tex</code></p>\n<p>The numberings\
+          \ (e.g <code>010_trainers</code>, <code>015_preamble</code>) are used by\
+          \ the build system to order by which the training modules are ordered in\
+          \ the training handouts. Each training module has an associated handouts\
+          \ subdirectory where the <em>LaTeX</em> file for that module is located.\
+          \ Going inside the <code>orchestration/packer</code> subdirectory will show\
+          \ the available Packer recipes including the one compatible with the NeCTAR\
+          \ Research Cloud, <code>btp-qemu.json</code>. The available Packer recipes\
+          \ for the BTP are:</p>\n<p><code>\u251C\u2500\u2500 btp-aws.json\n\u251C\
+          \u2500\u2500 btp-qemu.json\n\u251C\u2500\u2500 btp-virtualbox.json\n\u251C\
+          \u2500\u2500 btp-vmware.json</code></p>\n<h4>Launch Packer</h4>\n<p>Before\
+          \ launching Packer, the content of the recipe file <code>btp-qemu.json</code>\
+          \ can be viewed. Descriptions for each recipe section are highlighted below.</p>\n\
+          <p>The image creation process can then be started by feeding the recipe\
+          \ into Packer. This assumes that the Packer is already installed on the\
+          \ client (build) machine. Packer can then be launched, with the recipe filename\
+          \ passed as a command line argument:</p>\n<p><code>packer build btp-qemu.json</code></p>\n\
+          <p>Packer will start the image creation process and the first thing this\
+          \ will do is to download the latest available alternate Ubuntu ISO from\
+          \ the internet. So the client machine must have access to the internet to\
+          \ download the ISO file.</p>\n<h4>Upload Image</h4>\n<h3>Deploying BTP Instances</h3>\n\
+          <h4>Prerequisites for Deploying BTP Instances</h4>\n<ul>\n<li>NeCTAR OpenStack\
+          \ Credentials</li>\n<li>OpenStack Nova Command Line Client</li>\n<li>NoMachine\
+          \ (NX) Client</li>\n</ul>\n<h4>Using the BTP Instances for Training</h4>\n\
+          \n\n"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:07-04:00'
@@ -22186,17 +22244,17 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 1
         id: 6000093606
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-12-02T19:33:41-05:00'
+        modified_at: '2015-12-07T16:37:19-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000093606
-        position: 12
+        position: 7
         seo_data: {}
         status: 2
         string_01: null
@@ -22205,7 +22263,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Monash Bioinformatics Training Platform User Guide
-        updated_at: '2015-12-02T19:33:41-05:00'
+        updated_at: '2015-12-07T16:37:19-05:00'
         user_id: 6002464727
   html: "<h1>Bioinformatics Training Platform (BTP) User Guide</h1>\n<h2>Introduction</h2>\n\
     <p><a href=\"https://platforms.monash.edu/eresearch/\">Monash eResearch Centre</a>\
@@ -22233,17 +22291,18 @@
     \ alt=\"Bioinformatics Training Platform Architecture\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/btp-architecture.png?raw=true\"\
     ></p>\n<p>A workshop is composed of a number of training modules. Each training\
-    \ module has an associated tools and datasets metadata. These metadata are used\
-    \ by the orchestration system for automation of tools installation during BTP\
-    \ image creation and datasets syncing during BTP instance deployments.</p>\n<hr>\n\
-    <h2>Components</h2>\n<p>The BTP as a solution is composed of a number of components:\
-    \ <strong>Analysis Tools</strong>, <strong>Datasets</strong> and <strong>Training\
-    \ Materials</strong>. A brief summary of each one are included below.</p>\n<h3>Analysis\
-    \ Tools</h3>\n<p>Analysis tools are essential for delivering hands-on training\
-    \ workshops.\nThe BTP teaches trainees how these tools can be used to help interrogate\
-    \ and interpret their analysis results. Most of these analysis tools are available\
-    \ as stand alone executables while others have to be built from source. The most\
-    \ common analysis tools used and packaged in the BTP are listed in the table below:</p>\n\
+    \ module has an associated analysis tools and datasets metadata. These metadata\
+    \ are used by the orchestration system for automation of tools installation during\
+    \ BTP image creation and datasets syncing during BTP instance deployments.</p>\n\
+    <hr>\n<h2>Components</h2>\n<p>The BTP as a solution is composed of a number of\
+    \ components: <strong>Analysis Tools</strong>, <strong>Datasets</strong> and <strong>Training\
+    \ Materials</strong>. These components are encapsulated on each of the training\
+    \ modules. A brief summary of each one are included below.</p>\n<h3>Analysis Tools</h3>\n\
+    <p>Analysis tools are essential for delivering hands-on training workshops.\n\
+    The BTP teaches trainees how these tools can be used to help interrogate and interpret\
+    \ their analysis results. Most of these analysis tools are available as stand\
+    \ alone executables while others have to be built from source. The most common\
+    \ analysis tools used and packaged in the BTP are listed in the table below:</p>\n\
     <table>\n<thead>\n<tr>\n<th align=\"left\">Tools</th>\n<th align=\"left\">Function</th>\n\
     </tr>\n</thead>\n<tbody>\n<tr>\n<td align=\"left\">AMOS Hawkeye</td>\n<td align=\"\
     left\">Genome data visualization</td>\n</tr>\n<tr>\n<td align=\"left\">BEDTools</td>\n\
@@ -22269,9 +22328,32 @@
     \ alignments in the SAM format</td>\n</tr>\n<tr>\n<td align=\"left\">Skewer</td>\n\
     <td align=\"left\">Adapter trimmer for paired-end reads</td>\n</tr>\n</tbody>\n\
     </table>\n<p>These analysis tools are packaged and installed into the <strong>BTP\
-    \ Image</strong> upon creation using the automated workflows described below.</p>\n\
-    <h4>Packaging of Analysis Tools</h4>\n<h3>Datasets</h3>\n<p>Datasets used by the\
-    \ BTP are stored on <a href=\"http://support.rc.nectar.org.au/docs/object-storage\"\
+    \ Image</strong> upon creation. This process is described in detail in the [BTP\
+    \ Workflows][#btp-workflows] section below.</p>\n<h4>Packaging of Analysis Tools</h4>\n\
+    <p>To make maintenance and deployment of the BTP easier, most of the analysis\
+    \ tools included in the BTP are packaged as stand-alone <code>*.deb</code> installers,\
+    \ installable on Ubuntu-based operating systems. <a href=\"https://github.com/bernd/fpm-cookery\"\
+    ><code>fpm-cookery</code></a> is used to create the <code>*.deb</code> installers\
+    \ using recipes. The current <strong>BTP Images</strong> are based on Ubuntu Precise\
+    \ LTS which is supported until 2017. The BTP <a href=\"https://github.com/BPA-CSIRO-Workshops/btp-tools.git\"\
+    >maintains a set of recipes on GitHub</a> which is also integrated with <a href=\"\
+    https://travis-ci.org/BPA-CSIRO-Workshops/btp-tools\">Travis CI</a> for continuous\
+    \ integration. Whenever a tool recipe is updated or new recipe is added into the\
+    \ repository, <strong>Travis CI</strong> ensures that the recipes builds correctly.</p>\n\
+    <p>The <code>.deb</code> installers can also be manually created on a client machine.\
+    \ This step is not mandatory for creating the BTP images and deployment of BTP\
+    \ instances. One can clone the BTP Tools repository, and using <code>fpm-cookery</code>,\
+    \ create the <code>.deb</code> installers.</p>\n<p>Clone the BTP Tools repository:</p>\n\
+    <p><code>git clone https://github.com/BPA-CSIRO-Workshops/btp-tools.git</code></p>\n\
+    <p>The <code>.deb</code> installer for a particular analysis tool can then be\
+    \ built using <code>fpm-cookery</code>:</p>\n<p><code>cd btp-tools/bwa\nfpm-cookery\
+    \ .</code></p>\n<p><code>fpm-cookery</code> will read the instructions in the\
+    \ recipe and build the <code>.deb</code> installer. In the example above, <code>fpm-cookery</code>\
+    \ will get the source code for <code>bwa</code> from GitHub, then will proceed\
+    \ with the standard configuration, compilation and building of the tool. <code>fpm-cookery</code>\
+    \ will place the resulting <code>.deb</code> installer inside the <code>pkg</code>\
+    \ subdirectory:</p>\n<p><code>ls pkg/\nbwa_0.7.12-0_amd64.deb</code></p>\n<h3>Datasets</h3>\n\
+    <p>Datasets used by the BTP are stored on <a href=\"http://support.rc.nectar.org.au/docs/object-storage\"\
     >NeCTAR Object Storage (Swift)</a>. Each training modules has a corresponding\
     \ publicly readable container where its datasets are accessible. The containers\
     \ for the NGS training modules are listed in the table below:</p>\n<table>\n<thead>\n\
@@ -22284,18 +22366,19 @@
     <td align=\"left\">NGSDataRNASeq</td>\n</tr>\n<tr>\n<td align=\"left\">De novo\
     \ Assembly</td>\n<td align=\"left\">NGSDataDeNovo</td>\n</tr>\n</tbody>\n</table>\n\
     <p>The complete container URL are used to pull down the datasets into the BTP\
-    \ instances. The URLs are defined on the datasets metadata.</p>\n<h3>Training\
-    \ Materials</h3>\n<hr>\n<h2>BTP Workflows</h2>\n<h3>Creating the BTP Image</h3>\n\
-    <h4>Prerequisites for Creating BTP Images</h4>\n<ul>\n<li>git</li>\n<li>Packer</li>\n\
-    <li>OpenStack Glance Command Line Client</li>\n<li>NeCTAR OpenStack Credentials</li>\n\
-    <li>internet access</li>\n</ul>\n<p>The BTP uses the <a href=\"https://www.packer.io\"\
-    >Packer</a> tool for creating new virtual machine images compatible with NeCTAR\
-    \ Research Cloud.</p>\n<h4>Get Workshop Repository</h4>\n<p>A collection of Packer\
-    \ recipes are included as part of the orchestration module inside the <a href=\"\
-    https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs\">BPA-CSIRO Workshop NGS\
-    \ Repository</a>. This repository must be cloned together with the training submodules\
-    \ on the client machine where the BTP image will be created:</p>\n<p><code>git\
-    \ clone --recurse-submodules https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs.git</code></p>\n\
+    \ instances. The URLs are defined on the datasets metadata file, which is used\
+    \ by <strong>Puppet</strong> to pull down the datasets into the BTP instances\
+    \ upon deployment.</p>\n<h3>Training Materials</h3>\n<hr>\n<h2>BTP Workflows</h2>\n\
+    <h3>Creating the BTP Image</h3>\n<h4>Prerequisites for Creating BTP Images</h4>\n\
+    <ul>\n<li>git</li>\n<li>Packer</li>\n<li>OpenStack Glance Command Line Client</li>\n\
+    <li>NeCTAR OpenStack Credentials</li>\n<li>internet access</li>\n</ul>\n<p>The\
+    \ BTP uses the <a href=\"https://www.packer.io\">Packer</a> tool for creating\
+    \ new virtual machine images compatible with NeCTAR Research Cloud.</p>\n<h4>Get\
+    \ Workshop Repository</h4>\n<p>A collection of Packer recipes are included as\
+    \ part of the orchestration module inside the <a href=\"https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs\"\
+    >BPA-CSIRO Workshop NGS Repository</a>. This repository must be cloned together\
+    \ with the training submodules on the client machine where the BTP image will\
+    \ be created:</p>\n<p><code>git clone --recurse-submodules https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs.git</code></p>\n\
     <h4>Orchestration</h4>\n<p>Once the workshop repository and the training submodules\
     \ have been cloned, the local copy will have the following contents structure:</p>\n\
     <p><code>\u251C\u2500\u2500 010_trainers\n\u251C\u2500\u2500 015_preamble\n\u251C\
@@ -22304,7 +22387,10 @@
     \u251C\u2500\u2500 905_post-workshop\n\u251C\u2500\u2500 Makefile\n\u251C\u2500\
     \u2500 README.md\n\u251C\u2500\u2500 developers\n\u251C\u2500\u2500 licences\n\
     \u251C\u2500\u2500 orchestration\n\u251C\u2500\u2500 style\n\u2514\u2500\u2500\
-    \ template.tex</code></p>\n<p>Going inside the <code>orchestration/packer</code>\
+    \ template.tex</code></p>\n<p>The numberings (e.g <code>010_trainers</code>, <code>015_preamble</code>)\
+    \ are used by the build system to order by which the training modules are ordered\
+    \ in the training handouts. Each training module has an associated handouts subdirectory\
+    \ where the <em>LaTeX</em> file for that module is located. Going inside the <code>orchestration/packer</code>\
     \ subdirectory will show the available Packer recipes including the one compatible\
     \ with the NeCTAR Research Cloud, <code>btp-qemu.json</code>. The available Packer\
     \ recipes for the BTP are:</p>\n<p><code>\u251C\u2500\u2500 btp-aws.json\n\u251C\
@@ -22324,7 +22410,7 @@
     <li>NoMachine (NX) Client</li>\n</ul>\n<h4>Using the BTP Instances for Training</h4>\n\
     <!-- Links -->\n\n<!-- Figures -->"
   parent: 24
-  sha1: e3bb0bbc886d17e7563c52a31bbaefe7bf24be38
+  sha1: 0821a4e8a8aa973a34520faaffe4fa3589885107
   title: Monash Bioinformatics Training Platform User Guide
 101:
   freshdesk:
