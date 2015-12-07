@@ -3226,16 +3226,18 @@
           \ host machines disk,\nready to be resumed from there. \n Swift - The OpenStack\
           \ object storage API, and associated command-line tool. \n T \n tar - The\
           \ standard file archive utility (and format) for Unix, Linux and\nrelated\
-          \ platforms.  (Analogous to ZIP files on Windows.) \n Tenant - Openstack\
-          \ terminology for \"isolated resource containers forming the\nprincipal\
-          \ organizational structure within the Compute service\". Note: NeCTAR uses\
-          \ /\nprefers the term \"project\". \n Terminate - OpenStack terminology\
-          \ for permanently destroy an Instance and its\nephemeral storage. \n TERN\
-          \ - The Terrestrial Ecosystem Research Network connects ecosystem scientists\n\
-          and enables them to collect, contribute, store, share and integrate data\
-          \ across\ndisciplines. \n Ticket - Synonym for support ticket. \n Tier n\
-          \ Support - IT support terminology: support functions are typically classified\n\
-          by the 4 tiers below. The 'n' references the fact that are multiple tiers.\
+          \ platforms.  (Analogous to ZIP files on Windows.) \n Telemetry An integrated\
+          \ project that provides metering and measuring facilities for \nOpenStack.\
+          \ The project name of Telemetry is ceilometer. \n Tenant - Openstack terminology\
+          \ for \"isolated resource containers forming the\nprincipal organizational\
+          \ structure within the Compute service\". Note: NeCTAR uses /\nprefers the\
+          \ term \"project\". \n Terminate - OpenStack terminology for permanently\
+          \ destroy an Instance and its\nephemeral storage. \n TERN - The Terrestrial\
+          \ Ecosystem Research Network connects ecosystem scientists\nand enables\
+          \ them to collect, contribute, store, share and integrate data across\n\
+          disciplines. \n Ticket - Synonym for support ticket. \n Tier n Support -\
+          \ IT support terminology: support functions are typically classified\nby\
+          \ the 4 tiers below. The 'n' references the fact that are multiple tiers.\
           \ \n \n Tier 0 is user self-help - e.g. using online help, reading user\
           \ guides, HOW-TOs\n  and FAQs, and \"googling\". \n Tier 1 is non-technical\
           \ support - e.g. problem triage, providing solutions for\n  common mistakes,\
@@ -3763,14 +3765,16 @@
           \ object storage API, and associated command-line tool.</p>\n<h3>T</h3>\n\
           <p><strong><code>tar</code></strong> - The standard file archive utility\
           \ (and format) for Unix, Linux and\nrelated platforms.  (Analogous to ZIP\
-          \ files on Windows.)</p>\n<p><strong>Tenant</strong> - Openstack terminology\
-          \ for \"isolated resource containers forming the\nprincipal organizational\
-          \ structure within the Compute service\". Note: NeCTAR uses /\nprefers the\
-          \ term \"project\".</p>\n<p><strong>Terminate</strong> - OpenStack terminology\
-          \ for permanently destroy an Instance and its\nephemeral storage.</p>\n\
-          <p><strong>TERN</strong> - The Terrestrial Ecosystem Research Network connects\
-          \ ecosystem scientists\nand enables them to collect, contribute, store,\
-          \ share and integrate data across\ndisciplines.</p>\n<p><strong>Ticket</strong>\
+          \ files on Windows.)</p>\n<p><strong>Telemetry</strong> An integrated project\
+          \ that provides metering and measuring facilities for \nOpenStack. The project\
+          \ name of Telemetry is ceilometer.</p>\n<p><strong>Tenant</strong> - Openstack\
+          \ terminology for \"isolated resource containers forming the\nprincipal\
+          \ organizational structure within the Compute service\". Note: NeCTAR uses\
+          \ /\nprefers the term \"project\".</p>\n<p><strong>Terminate</strong> -\
+          \ OpenStack terminology for permanently destroy an Instance and its\nephemeral\
+          \ storage.</p>\n<p><strong>TERN</strong> - The Terrestrial Ecosystem Research\
+          \ Network connects ecosystem scientists\nand enables them to collect, contribute,\
+          \ store, share and integrate data across\ndisciplines.</p>\n<p><strong>Ticket</strong>\
           \ - Synonym for support ticket.</p>\n<p><strong>Tier n Support</strong>\
           \ - IT support terminology: support functions are typically classified\n\
           by the 4 tiers below. The 'n' references the fact that are multiple tiers.</p>\n\
@@ -3845,13 +3849,13 @@
           updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 51
+        hits: 54
         id: 6000055445
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-12-02T21:09:43-05:00'
+        modified_at: '2015-12-06T23:28:04-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000055445
@@ -3864,7 +3868,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Glossary
-        updated_at: '2015-12-02T21:09:43-05:00'
+        updated_at: '2015-12-06T23:28:04-05:00'
         user_id: 6002464727
   html: "<p>This content is heavily sourced from the excellent <a href=\"https://espaces.edu.au/vwrangler/nectar-openstack-glossary\"\
     >eSpaces glossary</a>\nproduced by Steve Crawley at QCIF.</p>\n<p>The full glossary\
@@ -4307,7 +4311,9 @@
     \ - The OpenStack object storage API, and associated command-line tool.</p>\n\
     <h3>T</h3>\n<p><strong><code>tar</code></strong> - The standard file archive utility\
     \ (and format) for Unix, Linux and\nrelated platforms.  (Analogous to ZIP files\
-    \ on Windows.)</p>\n<p><strong>Tenant</strong> - Openstack terminology for \"\
+    \ on Windows.)</p>\n<p><strong>Telemetry</strong> An integrated project that provides\
+    \ metering and measuring facilities for \nOpenStack. The project name of Telemetry\
+    \ is ceilometer.</p>\n<p><strong>Tenant</strong> - Openstack terminology for \"\
     isolated resource containers forming the\nprincipal organizational structure within\
     \ the Compute service\". Note: NeCTAR uses /\nprefers the term \"project\".</p>\n\
     <p><strong>Terminate</strong> - OpenStack terminology for permanently destroy\
@@ -4371,7 +4377,7 @@
     <h3>Z</h3>\n<p><strong>Zope</strong> A framework for building web applications\
     \ based on Python.</p>"
   parent: 21
-  sha1: 0f591f65022c173e6093adfaa33c475b68c3b62c
+  sha1: b671b92fbc951047324add2fdd5192c9a3030128
   title: Glossary
 53:
   freshdesk:
