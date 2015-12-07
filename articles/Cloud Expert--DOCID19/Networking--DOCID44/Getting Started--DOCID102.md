@@ -20,6 +20,7 @@ SUSE Linux Enterprise, Debian, and Ubuntu via command line.
   ```
 
   zypper addrepo -f obs://Cloud:OpenStack:Kilo/SLE_12 Kilo
+  
   zypper install python-neutronclient
   
 
@@ -32,6 +33,7 @@ If you want to install sources packages, you can follow the below instructions.
  ```
 
  easy_install pip
+ 
  pip install python-neutronclient
 
  ```
@@ -41,7 +43,9 @@ If you want to install sources packages, you can follow the below instructions.
  ```
 
  sudo apt-get install python-pip python-dev build-essential
+ 
  sudo pip install --upgrade pip
+ 
  pip install python-neutronclient
 
  ```
@@ -51,7 +55,9 @@ If you want to install sources packages, you can follow the below instructions.
  ```
 
  yum install python-devel python-pip
+ 
  sudo pip install --upgrade pip
+ 
  pip install python-neutronclient
 
  ```
@@ -61,7 +67,9 @@ If you want to install sources packages, you can follow the below instructions.
  ```
 
  zypper install python-devel python-pip
+ 
  sudo pip install --upgrade pip
+ 
  pip install python-neutronclient
 
  ```
@@ -134,10 +142,15 @@ You can use the below sample code to get authenticated.
 ```
 
 from neutronclient.v2_0 import client
+
 username='adminUser'
+
 password='secretword'
+
 tenant_name='openstackDemo'
+
 auth_url='http://192.168.206.130:5000/v2.0'
+
 neutron = client.Client(username=username, password=password, tenant_name=tenant_name, auth_url=auth_url)
 
 ```
@@ -167,10 +180,15 @@ See below for a sample code:
 ```
 
 from neutronclient.v2_0 import client
+
 username='adminUser'
+
 password='secretword'
+
 tenant_name='openstackDemo'
+
 auth_url='http://192.168.206.130:5000/v2.0'
+
 neutron = client.Client(username=username, password=password, tenant_name=tenant_name, auth_url=auth_url)
 
 networks = neutron.list_networks()
