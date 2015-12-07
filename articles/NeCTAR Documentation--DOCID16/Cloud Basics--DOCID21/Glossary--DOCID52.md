@@ -712,6 +712,9 @@ ready to be resumed from there.
 **`tar`** - The standard file archive utility (and format) for Unix, Linux and
 related platforms.  (Analogous to ZIP files on Windows.)
 
+**Telemetry** An integrated project that provides metering and measuring facilities for 
+OpenStack. The project name of Telemetry is ceilometer.
+
 **Tenant** - Openstack terminology for "isolated resource containers forming the
 principal organizational structure within the Compute service". Note: NeCTAR uses /
 prefers the term "project".
