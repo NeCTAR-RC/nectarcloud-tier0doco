@@ -22426,23 +22426,24 @@
         delta: true
         desc_un_html: " CoESRA Remote Desktop - User Guide \n Type \n The Collaborative\
           \ Environment for Ecosystem Science Research and Analysis\n(CoESRA) is a\
-          \ Platform-as-a-Service (PaaS) service developed by the TERN\nnetwork to\
-          \ serve the ecosystem science community. \n Description \n The CoESRA is\
-          \ a workflow-based web platform that allows researchers\n(primarily ecosystem\
-          \ scientists) to perform complex analyses without\nhaving to set up experiments\
-          \ from scratch and worry about having enough\nresources to run the analyses.\
-          \ CoESRA provides users with a cloud-based,\n'remote desktop' platform with\
-          \ pre-loaded analytical and synthesis tools.\nIt was built to enable ecosystem\
-          \ scientists to orchestrate, compose and\nexecute experiments as repeatable\
-          \ workflows. Kepler is used within the\ndesktop as a composition, orchestration\
-          \ and execution engine. Kepler is\nan open source workflow management tool\
-          \ for the design and execution of\nscientific workflows. \n The CoESRA service\
-          \ provides an opportunity not only to re-use data but\nalso to reuse tools\
-          \ for data manipulation, scripts for data visualisation,\nand algorithms\
-          \ for analysis processes. Once a specific analysis has been\nconducted,\
-          \ the entire workflow can be stored and shared with other scientists.\n\
-          Finally, the workflow can published to\nResearch Data Australia(RDA). \n\
-          \ The community will gain access to data streams, tools and often hidden\n\
+          \ Platform-as-a-Service (PaaS) service developed by the\nTerrestrial Ecosystem\
+          \ Research Network\nnetwork to serve the ecosystem science community. \n\
+          \ Description \n The CoESRA is a workflow-based web platform that allows\
+          \ researchers\n(primarily ecosystem scientists) to perform complex analyses\
+          \ without\nhaving to set up experiments from scratch and worry about having\
+          \ enough\nresources to run the analyses. CoESRA provides users with a cloud-based,\n\
+          'remote desktop' platform with pre-loaded analytical and synthesis tools.\n\
+          It was built to enable ecosystem scientists to orchestrate, compose and\n\
+          execute experiments as repeatable workflows. Kepler is used within the\n\
+          desktop as a composition, orchestration and execution engine. Kepler is\n\
+          an open source workflow management tool for the design and execution of\n\
+          scientific workflows. \n The CoESRA service provides an opportunity not\
+          \ only to reuse data but\nalso to reuse tools for data manipulation, scripts\
+          \ for data visualisation,\nand algorithms for analysis processes. Once a\
+          \ specific analysis has been\nconducted, the entire workflow can be stored\
+          \ and shared with other scientists.\nFinally, the workflow can published\
+          \ to\nResearch Data Australia(RDA). \n Through use of the CoeSRA desktop,\
+          \ the community will gain access\nto data streams, tools and often hidden\n\
           'pipeline' processes to leverage further knowledge about ecosystem\nscience\
           \ experiments. \n The Linux-based virtual desktop platform is best accessed\
           \ via the Chrome\nWeb browser. It enables users to access Web-based data\
@@ -22458,33 +22459,32 @@
           \ \n On launch, the platform includes the following applications: R, RStudio,\n\
           Python and Kepler. It also includes Nimrod software, which is explained\n\
           in detail elsewhere. Other software can be added to the live desktop by\
-          \ users. \n CoESRA was initiated by the Terrestrial Ecosystem Research Network\
-          \ (TERN). \n The CoESRA desktop is a time-limited service. It is provisioned\
+          \ users. \n The CoESRA desktop is a time-limited service. It is provisioned\
           \ initially\nfor two days. A user will get an email notification six hours\
           \ before the\nvirtual desktop is remotely terminated. If users want to extend\
           \ their access,\nthey can request an extension from the system administrator.\
           \ \n Target audience \n The service has been developed to meet the needs\
           \ of the ecosystem science\ncommunity, including researchers in the TERN\
-          \ network. \n Resource requirements \n Currently, CoESRA is accessible using\
+          \ network. \n Resource requirements \n CuNo installation is required as\
+          \ the desktop is virtually hosted. \n Currently, CoESRA is accessible using\
           \ the Google Chrome browser only. Other\nbrowsers will eventually be supported.\
           \ \n Firefox is the only browser available as part of the virtual desktop\
-          \ platform\nonce the platform has launched. \n No installation is required\
-          \ as the desktop is virtually hosted. \n How to access \n Users can access\
-          \ CoESRA via their\nAustralian Access Federation (AAF) credentials. \n Steps:\
-          \ \n 1) Go to CoESRA. \n 2) Click on Register. \n If this is a user's first\
-          \ visit, s/he will be taken to the\nAAF's Log in through your organisation\
-          \ service. \n \n The user should select the institution name from the drop-down\
-          \ list and\nthen check one of two options for subsequent log ins: \n \n\
-          \ \n Remember my organisation for this web browser session only \n \n \n\
-          \ Remember my organisation permanently and skip this selection from now\
-          \ on \n \n \n To simplify future access, users should select the 'Remember\
-          \ my organisation\npermanently' option. \n The user should then follow the\
-          \ steps to log in via their own institution.\nOnce the organisation has\
-          \ been selected, the user will be taken to the log\nin site for that institution,\
-          \ e.g., a user coming in via\nThe University of Queensland will see this\
-          \ screen: \n \n 3) Once a user has successfully entered credentials, the\
-          \ screen will\nrefresh with \n \n 4) The desktop will then deploy. \n \n\
-          \ A virtual desktop will load, with the Kepler environment open by default.\
+          \ platform\nonce the platform has launched. \n How to access \n Users can\
+          \ access CoESRA via their\nAustralian Access Federation (AAF) credentials.\
+          \ \n Steps: \n 1) Go to CoESRA. \n 2) Click on Register. \n If this is a\
+          \ user's first visit, s/he will be taken to the\nAAF's Log in through your\
+          \ organisation service. \n \n The user should select the institution name\
+          \ from the drop-down list and\nthen check one of two options for subsequent\
+          \ log ins: \n \n \n Remember my organisation for this web browser session\
+          \ only \n \n \n Remember my organisation permanently and skip this selection\
+          \ from now on \n \n \n To simplify future access, users should select the\
+          \ 'Remember my organisation\npermanently' option. \n The user should then\
+          \ follow the steps to log in via their own institution.\nOnce the organisation\
+          \ has been selected, the user will be taken to the log\nin site for that\
+          \ institution, e.g., a user coming in via\nThe University of Queensland\
+          \ will see this screen: \n \n 3) Once a user has successfully entered credentials,\
+          \ the screen will\nrefresh with \n \n 4) The desktop will then deploy. \n\
+          \ \n A virtual desktop will load, with the Kepler environment open by default.\
           \ \n On the left-hand side menu in Kepler, click on \"Coesra-tern\" and\
           \ subsequent\nfolders to see the workflow icons. \n \n Double-click on the\
           \ workflow icon of your choice and the workflow will\nopen in a new Kepler\
@@ -22522,7 +22522,9 @@
 
           <p>The Collaborative Environment for Ecosystem Science Research and Analysis
 
-          (CoESRA) is a Platform-as-a-Service (PaaS) service developed by the TERN
+          (CoESRA) is a Platform-as-a-Service (PaaS) service developed by the
+
+          <a href="http://tern.org.au/">Terrestrial Ecosystem Research Network</a>
 
           network to serve the ecosystem science community.</p>
 
@@ -22548,7 +22550,7 @@
 
           scientific workflows.</p>
 
-          <p>The CoESRA service provides an opportunity not only to re-use data but
+          <p>The CoESRA service provides an opportunity not only to reuse data but
 
           also to reuse tools for data manipulation, scripts for data visualisation,
 
@@ -22560,7 +22562,9 @@
 
           <a href="https://researchdata.ands.org.au/">Research Data Australia</a>(RDA).</p>
 
-          <p>The community will gain access to data streams, tools and often hidden
+          <p>Through use of the CoeSRA desktop, the community will gain access
+
+          to data streams, tools and often hidden
 
           ''pipeline'' processes to leverage further knowledge about ecosystem
 
@@ -22602,8 +22606,6 @@
           in detail elsewhere. Other software can be added to the live desktop by
           users.</p>
 
-          <p>CoESRA was initiated by the Terrestrial Ecosystem Research Network (TERN).</p>
-
           <p>The CoESRA desktop is a time-limited service. It is provisioned initially
 
           for two days. A user will get an email notification six hours before the
@@ -22620,6 +22622,8 @@
 
           <h2>Resource requirements</h2>
 
+          <p>CuNo installation is required as the desktop is virtually hosted.</p>
+
           <p>Currently, CoESRA is accessible using the Google Chrome browser only.
           Other
 
@@ -22629,8 +22633,6 @@
           platform
 
           once the platform has launched.</p>
-
-          <p>No installation is required as the desktop is virtually hosted.</p>
 
           <h2>How to access</h2>
 
@@ -22832,17 +22834,17 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 8
         id: 6000094838
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-12-06T22:48:08-05:00'
+        modified_at: '2015-12-07T19:40:22-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000094838
-        position: 13
+        position: 9
         seo_data: {}
         status: 2
         string_01: null
@@ -22850,8 +22852,8 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: QCIF_TERN_CoESRA
-        updated_at: '2015-12-06T22:48:08-05:00'
+        title: QCIF TERN CoESRA
+        updated_at: '2015-12-07T19:40:22-05:00'
         user_id: 6002464727
   html: '<h1>CoESRA Remote Desktop - User Guide</h1>
 
@@ -22859,7 +22861,9 @@
 
     <p>The Collaborative Environment for Ecosystem Science Research and Analysis
 
-    (CoESRA) is a Platform-as-a-Service (PaaS) service developed by the TERN
+    (CoESRA) is a Platform-as-a-Service (PaaS) service developed by the
+
+    <a href="http://tern.org.au/">Terrestrial Ecosystem Research Network</a>
 
     network to serve the ecosystem science community.</p>
 
@@ -22885,7 +22889,7 @@
 
     scientific workflows.</p>
 
-    <p>The CoESRA service provides an opportunity not only to re-use data but
+    <p>The CoESRA service provides an opportunity not only to reuse data but
 
     also to reuse tools for data manipulation, scripts for data visualisation,
 
@@ -22897,7 +22901,9 @@
 
     <a href="https://researchdata.ands.org.au/">Research Data Australia</a>(RDA).</p>
 
-    <p>The community will gain access to data streams, tools and often hidden
+    <p>Through use of the CoeSRA desktop, the community will gain access
+
+    to data streams, tools and often hidden
 
     ''pipeline'' processes to leverage further knowledge about ecosystem
 
@@ -22937,8 +22943,6 @@
 
     in detail elsewhere. Other software can be added to the live desktop by users.</p>
 
-    <p>CoESRA was initiated by the Terrestrial Ecosystem Research Network (TERN).</p>
-
     <p>The CoESRA desktop is a time-limited service. It is provisioned initially
 
     for two days. A user will get an email notification six hours before the
@@ -22955,6 +22959,8 @@
 
     <h2>Resource requirements</h2>
 
+    <p>CuNo installation is required as the desktop is virtually hosted.</p>
+
     <p>Currently, CoESRA is accessible using the Google Chrome browser only. Other
 
     browsers will eventually be supported.</p>
@@ -22962,8 +22968,6 @@
     <p>Firefox is the only browser available as part of the virtual desktop platform
 
     once the platform has launched.</p>
-
-    <p>No installation is required as the desktop is virtually hosted.</p>
 
     <h2>How to access</h2>
 
@@ -23155,8 +23159,8 @@
 
     <p>Please email <a href="mailto:tern.coesra@gmail.com">tern.coesra@gmail.com</a>.</p>'
   parent: 24
-  sha1: 47191179eeb8369cfddb9b13c7bb08b9e1bb1d0f
-  title: QCIF_TERN_CoESRA
+  sha1: 01d958d03b57c2fc0f02b15d6a0e749286abe7c3
+  title: QCIF TERN CoESRA
 102:
   freshdesk:
     fd_attributes:
