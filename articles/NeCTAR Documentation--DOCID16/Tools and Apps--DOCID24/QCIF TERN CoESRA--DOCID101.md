@@ -3,7 +3,8 @@
 ## Type
 
 The Collaborative Environment for Ecosystem Science Research and Analysis
-(CoESRA) is a Platform-as-a-Service (PaaS) service developed by the TERN
+(CoESRA) is a Platform-as-a-Service (PaaS) service developed by the
+[Terrestrial Ecosystem Research Network](http://tern.org.au/)
 network to serve the ecosystem science community.
 
 ## Description
@@ -19,14 +20,15 @@ desktop as a composition, orchestration and execution engine. Kepler is
 an open source workflow management tool for the design and execution of
 scientific workflows.
 
-The CoESRA service provides an opportunity not only to re-use data but
+The CoESRA service provides an opportunity not only to reuse data but
 also to reuse tools for data manipulation, scripts for data visualisation,
 and algorithms for analysis processes. Once a specific analysis has been
 conducted, the entire workflow can be stored and shared with other scientists.
 Finally, the workflow can published to
 [Research Data Australia](https://researchdata.ands.org.au/)(RDA).
 
-The community will gain access to data streams, tools and often hidden
+Through use of the CoeSRA desktop, the community will gain access
+to data streams, tools and often hidden
 'pipeline' processes to leverage further knowledge about ecosystem
 science experiments.
 
@@ -51,8 +53,6 @@ On launch, the platform includes the following applications: R, RStudio,
 Python and Kepler. It also includes Nimrod software, which is explained
 in detail elsewhere. Other software can be added to the live desktop by users.
 
-CoESRA was initiated by the Terrestrial Ecosystem Research Network (TERN).
-
 The CoESRA desktop is a time-limited service. It is provisioned initially
 for two days. A user will get an email notification six hours before the
 virtual desktop is remotely terminated. If users want to extend their access,
@@ -65,13 +65,13 @@ community, including researchers in the TERN network.
 
 ## Resource requirements
 
+CuNo installation is required as the desktop is virtually hosted.
+
 Currently, CoESRA is accessible using the Google Chrome browser only. Other
 browsers will eventually be supported.
 
 Firefox is the only browser available as part of the virtual desktop platform
 once the platform has launched.
-
-No installation is required as the desktop is virtually hosted.
 
 ## How to access
 
