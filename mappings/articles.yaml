@@ -23814,3 +23814,197 @@
   parent: 44
   sha1: 7d4091507e81e37b92d790232484619e35754299
   title: Getting Started
+103:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-12-07T19:41:23-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Neutron Command Line API \n The Neutron client is the command-line\
+          \ interface (CLI) for the OpenStack Network\nAPI and its extensions. \n\
+          \ It is same as nova client and any other OpenStack APIs, you need to authenticate\n\
+          before you can use it. Please refer the Networking Getting Started\narticle\
+          \ to see how to get authenticated. \n Please also refer to Networking Getting\
+          \ Started for\nhow to install the Neutron client. \n The below shows some\
+          \ Neutron commands: \n\n\n\nShell Command\nAction\n\n\n\n\nneutron net-list\n\
+          list all networks that belong to a given tenant\n\n\nneutron security-group-list\n\
+          list all security groups\n\n\nneutron security-group-create\ncreate a security\
+          \ group\n\n\nneutron subnet-list\nlist all subnet that belong to a given\
+          \ tenant\n\n\nneutron subnet-delete\ndelete a subnet\n\n\nneutron subnet\
+          \ show\nshow information of a given subnet\n\n\n\n The below shows an example\
+          \ about how to create a subnet: \n neutron subnet-create   \n  positional\
+          \ arguments: \n \n \n network name: network id or name this subnet belongs\
+          \ to, example: my-network \n \n \n CIDR: CIDR of subnet to create, example:\
+          \ 192.168.1.0/24 \n \n \n Optional arguments: \n \n \n name: name of the\
+          \ subnet, example: my-subnet \n \n \n ip-version (4,6): IP version with\
+          \ default 4. \n \n \n gateway: gateway IP of this subnet, example: 192.168.1.1\
+          \ \n \n \n no-gateway: no distribution of gateway \n \n \n dns-nameserver:\
+          \ DNS name server for this subnet (This option can be repeated),\n example:\
+          \ 192.168.0.1 \n \n \n disable-dhcp: Disable DHCP for this subnet \n \n\
+          \ \n To create a subnet: \n neutron subnet-create my-network 192.168.1.0/24\
+          \ --gateway 192.168.1.1 \n You can execute neutron help to see what commands\
+          \ are available and\nrun neutron help <command> find out more information\
+          \ about a command. \n Neutron Python Client \n You can also use Neutron\
+          \ python API to access and manage the networking. \n Sample Python code:\
+          \ \n ``` \n from neutronclient.v2_0 import client \n username='adminUser'\
+          \ \n password='secretword' \n tenant_name='openstackDemo' \n auth_url='http://192.168.206.130:5000/v2.0'\
+          \ \n neutron = client.Client(username=username, password=password, tenant_name=tenant_name,\
+          \ auth_url=auth_url) \n nets = neutron.list_networks() \n sub_nets = neutron.list_subnets()\
+          \ \n ``` \n The above authurl, user, password and tenant_name are only for\
+          \ demonstration purpose.\nPlease refer to instruction for how to obtain\
+          \ authurl,\nuser, password and tenant_name. \n Some commands are listed\
+          \ as below: \n\n\n\nPython Command\nAction\n\n\n\n\nlist_networks()\nlist\
+          \ all networks\n\n\nlist_subnets()\nlist all sub networks\n\n\nlist_ports()\n\
+          list all ports\n\n\ncreate_subnet()\ncreate a new subnet\n\n\ncreate_network()\n\
+          upload data to the container\n\n\nupdate_network()\nupdate an exisitng network\n\
+          \n\n\n Please refer to the Neutron python client document for more\ninformation.\
+          \ You can also read the source file in /usr/lib/python2.7/dist-packages/neutronclient/v2_0/client.py\
+          \ (for Ubuntu) to get the completed list of what methods you can call. "
+        description: "<h2>Neutron Command Line API</h2>\n<p>The Neutron client is\
+          \ the command-line interface (CLI) for the OpenStack Network\nAPI and its\
+          \ extensions.</p>\n<p>It is same as nova client and any other OpenStack\
+          \ APIs, you need to authenticate\nbefore you can use it. Please refer the\
+          \ <a href=\"https://support.nectar.org.au/support/solutions/articles/6000094839-getting-started\"\
+          >Networking Getting Started</a>\narticle to see how to get authenticated.</p>\n\
+          <p>Please also refer to <a href=\"https://support.nectar.org.au/support/solutions/articles/6000094839-getting-started\"\
+          >Networking Getting Started</a> for\nhow to install the Neutron client.</p>\n\
+          <p>The below shows some Neutron commands:</p>\n<table>\n<thead>\n<tr>\n\
+          <th>Shell Command</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n\
+          <td><code>neutron net-list</code></td>\n<td>list all networks that belong\
+          \ to a given tenant</td>\n</tr>\n<tr>\n<td><code>neutron security-group-list</code></td>\n\
+          <td>list all security groups</td>\n</tr>\n<tr>\n<td><code>neutron security-group-create</code></td>\n\
+          <td>create a security group</td>\n</tr>\n<tr>\n<td><code>neutron subnet-list</code></td>\n\
+          <td>list all subnet that belong to a given tenant</td>\n</tr>\n<tr>\n<td><code>neutron\
+          \ subnet-delete</code></td>\n<td>delete a subnet</td>\n</tr>\n<tr>\n<td><code>neutron\
+          \ subnet show</code></td>\n<td>show information of a given subnet</td>\n\
+          </tr>\n</tbody>\n</table>\n<p>The below shows an example about how to create\
+          \ a subnet:</p>\n<p>neutron subnet-create  </p>\n<p><strong> positional\
+          \ arguments</strong>:</p>\n<ul>\n<li>\n<p>network name: network id or name\
+          \ this subnet belongs to, example: my-network</p>\n</li>\n<li>\n<p>CIDR:\
+          \ CIDR of subnet to create, example: 192.168.1.0/24</p>\n</li>\n</ul>\n\
+          <p><strong>Optional arguments</strong>:</p>\n<ul>\n<li>\n<p>name: name of\
+          \ the subnet, example: my-subnet</p>\n</li>\n<li>\n<p>ip-version (4,6):\
+          \ IP version with default 4.</p>\n</li>\n<li>\n<p>gateway: gateway IP of\
+          \ this subnet, example: 192.168.1.1</p>\n</li>\n<li>\n<p>no-gateway: no\
+          \ distribution of gateway</p>\n</li>\n<li>\n<p>dns-nameserver: DNS name\
+          \ server for this subnet (This option can be repeated),\n example: 192.168.0.1</p>\n\
+          </li>\n<li>\n<p>disable-dhcp: Disable DHCP for this subnet</p>\n</li>\n\
+          </ul>\n<p>To create a subnet:</p>\n<p><code>neutron subnet-create my-network\
+          \ 192.168.1.0/24 --gateway 192.168.1.1</code></p>\n<p>You can execute <code>neutron\
+          \ help</code> to see what commands are available and\nrun <code>neutron\
+          \ help &lt;command&gt;</code> find out more information about a command.</p>\n\
+          <h2>Neutron Python Client</h2>\n<p>You can also use Neutron python API to\
+          \ access and manage the networking.</p>\n<p>Sample Python code:</p>\n<p>```</p>\n\
+          <p>from neutronclient.v2_0 import client</p>\n<p>username='adminUser'</p>\n\
+          <p>password='secretword'</p>\n<p>tenant_name='openstackDemo'</p>\n<p>auth_url='http://192.168.206.130:5000/v2.0'</p>\n\
+          <p>neutron = client.Client(username=username, password=password, tenant_name=tenant_name,\
+          \ auth_url=auth_url)</p>\n<p>nets = neutron.list_networks()</p>\n<p>sub_nets\
+          \ = neutron.list_subnets()</p>\n<p>```</p>\n<p>The above authurl, user,\
+          \ password and tenant_name are only for demonstration purpose.\nPlease refer\
+          \ to <a href=\"https://support.nectar.org.au/support/solutions/articles/6000094839-getting-started\"\
+          >instruction</a> for how to obtain authurl,\nuser, password and tenant_name.</p>\n\
+          <p>Some commands are listed as below:</p>\n<table>\n<thead>\n<tr>\n<th>Python\
+          \ Command</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>list_networks()</code></td>\n\
+          <td>list all networks</td>\n</tr>\n<tr>\n<td><code>list_subnets()</code></td>\n\
+          <td>list all sub networks</td>\n</tr>\n<tr>\n<td><code>list_ports()</code></td>\n\
+          <td>list all ports</td>\n</tr>\n<tr>\n<td><code>create_subnet()</code></td>\n\
+          <td>create a new subnet</td>\n</tr>\n<tr>\n<td><code>create_network()</code></td>\n\
+          <td>upload data to the container</td>\n</tr>\n<tr>\n<td><code>update_network()</code></td>\n\
+          <td>update an exisitng network</td>\n</tr>\n</tbody>\n</table>\n<p>Please\
+          \ refer to the <a href=\"http://docs.openstack.org/developer/python-neutronclient/\"\
+          >Neutron python client document</a> for more\ninformation. You can also\
+          \ read the source file in /usr/lib/python2.7/dist-packages/neutronclient/v2_0/client.py\
+          \ (for Ubuntu) to get the completed list of what methods you can call.</p>"
+        folder:
+          category_id: 6000122279
+          created_at: '2015-12-01T18:22:33-05:00'
+          customer_folders: []
+          description: Networking
+          id: 6000210730
+          is_default: false
+          language_id: 6
+          name: Networking
+          parent_id: 6000210730
+          position: 8
+          updated_at: '2015-12-01T18:22:33-05:00'
+          visibility: 1
+        folder_id: 6000210730
+        hits: 0
+        id: 6000095293
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-12-07T19:41:23-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000095293
+        position: 3
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: API
+        updated_at: '2015-12-07T19:41:23-05:00'
+        user_id: 6002464727
+  html: "<h2>Neutron Command Line API</h2>\n<p>The Neutron client is the command-line\
+    \ interface (CLI) for the OpenStack Network\nAPI and its extensions.</p>\n<p>It\
+    \ is same as nova client and any other OpenStack APIs, you need to authenticate\n\
+    before you can use it. Please refer the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000094839-getting-started\"\
+    >Networking Getting Started</a>\narticle to see how to get authenticated.</p>\n\
+    <p>Please also refer to <a href=\"https://support.nectar.org.au/support/solutions/articles/6000094839-getting-started\"\
+    >Networking Getting Started</a> for\nhow to install the Neutron client.</p>\n\
+    <p>The below shows some Neutron commands:</p>\n<table>\n<thead>\n<tr>\n<th>Shell\
+    \ Command</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>neutron\
+    \ net-list</code></td>\n<td>list all networks that belong to a given tenant</td>\n\
+    </tr>\n<tr>\n<td><code>neutron security-group-list</code></td>\n<td>list all security\
+    \ groups</td>\n</tr>\n<tr>\n<td><code>neutron security-group-create</code></td>\n\
+    <td>create a security group</td>\n</tr>\n<tr>\n<td><code>neutron subnet-list</code></td>\n\
+    <td>list all subnet that belong to a given tenant</td>\n</tr>\n<tr>\n<td><code>neutron\
+    \ subnet-delete</code></td>\n<td>delete a subnet</td>\n</tr>\n<tr>\n<td><code>neutron\
+    \ subnet show</code></td>\n<td>show information of a given subnet</td>\n</tr>\n\
+    </tbody>\n</table>\n<p>The below shows an example about how to create a subnet:</p>\n\
+    <p>neutron subnet-create <network name> <CIDR></p>\n<p><strong> positional arguments</strong>:</p>\n\
+    <ul>\n<li>\n<p>network name: network id or name this subnet belongs to, example:\
+    \ my-network</p>\n</li>\n<li>\n<p>CIDR: CIDR of subnet to create, example: 192.168.1.0/24</p>\n\
+    </li>\n</ul>\n<p><strong>Optional arguments</strong>:</p>\n<ul>\n<li>\n<p>name:\
+    \ name of the subnet, example: my-subnet</p>\n</li>\n<li>\n<p>ip-version (4,6):\
+    \ IP version with default 4.</p>\n</li>\n<li>\n<p>gateway: gateway IP of this\
+    \ subnet, example: 192.168.1.1</p>\n</li>\n<li>\n<p>no-gateway: no distribution\
+    \ of gateway</p>\n</li>\n<li>\n<p>dns-nameserver: DNS name server for this subnet\
+    \ (This option can be repeated),\n example: 192.168.0.1</p>\n</li>\n<li>\n<p>disable-dhcp:\
+    \ Disable DHCP for this subnet</p>\n</li>\n</ul>\n<p>To create a subnet:</p>\n\
+    <p><code>neutron subnet-create my-network 192.168.1.0/24 --gateway 192.168.1.1</code></p>\n\
+    <p>You can execute <code>neutron help</code> to see what commands are available\
+    \ and\nrun <code>neutron help &lt;command&gt;</code> find out more information\
+    \ about a command.</p>\n<h2>Neutron Python Client</h2>\n<p>You can also use Neutron\
+    \ python API to access and manage the networking.</p>\n<p>Sample Python code:</p>\n\
+    <p>```</p>\n<p>from neutronclient.v2_0 import client</p>\n<p>username='adminUser'</p>\n\
+    <p>password='secretword'</p>\n<p>tenant_name='openstackDemo'</p>\n<p>auth_url='http://192.168.206.130:5000/v2.0'</p>\n\
+    <p>neutron = client.Client(username=username, password=password, tenant_name=tenant_name,\
+    \ auth_url=auth_url)</p>\n<p>nets = neutron.list_networks()</p>\n<p>sub_nets =\
+    \ neutron.list_subnets()</p>\n<p>```</p>\n<p>The above authurl, user, password\
+    \ and tenant_name are only for demonstration purpose.\nPlease refer to <a href=\"\
+    https://support.nectar.org.au/support/solutions/articles/6000094839-getting-started\"\
+    >instruction</a> for how to obtain authurl,\nuser, password and tenant_name.</p>\n\
+    <p>Some commands are listed as below:</p>\n<table>\n<thead>\n<tr>\n<th>Python\
+    \ Command</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>list_networks()</code></td>\n\
+    <td>list all networks</td>\n</tr>\n<tr>\n<td><code>list_subnets()</code></td>\n\
+    <td>list all sub networks</td>\n</tr>\n<tr>\n<td><code>list_ports()</code></td>\n\
+    <td>list all ports</td>\n</tr>\n<tr>\n<td><code>create_subnet()</code></td>\n\
+    <td>create a new subnet</td>\n</tr>\n<tr>\n<td><code>create_network()</code></td>\n\
+    <td>upload data to the container</td>\n</tr>\n<tr>\n<td><code>update_network()</code></td>\n\
+    <td>update an exisitng network</td>\n</tr>\n</tbody>\n</table>\n<p>Please refer\
+    \ to the <a href=\"http://docs.openstack.org/developer/python-neutronclient/\"\
+    >Neutron python client document</a> for more\ninformation. You can also read the\
+    \ source file in /usr/lib/python2.7/dist-packages/neutronclient/v2_0/client.py\
+    \ (for Ubuntu) to get the completed list of what methods you can call.</p>"
+  parent: 44
+  sha1: 558d3322391589a032322e1e93e1ea66964cb9b4
+  title: API
