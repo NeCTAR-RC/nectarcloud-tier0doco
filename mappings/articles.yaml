@@ -24008,3 +24008,1665 @@
   parent: 44
   sha1: 558d3322391589a032322e1e93e1ea66964cb9b4
   title: API
+104:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-12-07T20:00:50-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Nimrod toolkit for high throughput computing in the cloud\
+          \ \n Introduction \n The Nimrod tool family facilitates high-throughput\
+          \ science by allowing\nresearchers to use computational models to explore\
+          \ complex design\nspaces. Models can be executed across changing input parameters.\n\
+          Different members of the tool family support complete and partial\nparameter\
+          \ sweeps, numerical search by non-linear optimisation, and even\nworkflows.\
+          \ Further, Nimrod allows computational researchers to use a\nmixture of\
+          \ university-level infrastructure and commercial clouds. \n There are several\
+          \ \u2018flavours\u2019 of Nimrod. Which Nimrod you choose to use,\neither\
+          \ singly, or in combination, will depend on the kind of experiment\nyou\
+          \ want to run. \n Nimrod/G \n Nimrod/G can directly execute large-scale\
+          \ distributed parameter sweep\nand Monte-Carlo computational experiments.\
+          \ It provides a simple means to\ndramatically scale-up your computational\
+          \ experiments. Each experiment\ncan run over an aggregated ad-hoc computational\
+          \ grid/pool/cloud; start\nfrom your desktop, local server or cluster; add\
+          \ grid resources (e.g.\nclusters and Condor pools); overflow to pay-as-go\
+          \ cloud services and\ncontrol your budget with Nimrod/G's economic scheduling\
+          \ capabilities. \n Nimrod/K \n Nimrod/K is built on Kepler using Kepler\u2019\
+          s runtime engine Ptolemy. It\nextends Kepler by adding parameter tools and\
+          \ grid/cloud services and by\nproviding dynamic parallelism in workflows.\
+          \ \n It uses a dataflow execution model that was originally developed for\n\
+          highly parallel dataflow computers in the 1980\u2019s, and this provides\
+          \ an\nextremely rich execution mechanism. It leverages a number of the\n\
+          techniques developed in the earlier Nimrod tools for distributing tasks\n\
+          to the Grid. \n Nimrod/O \n Provides an optimisation framework for optimising\
+          \ a target output value\nof an application. It allows a user to run an arbitrary\
+          \ computational\nmodel as the core of a non-linear optimization process.\
+          \ Nimrod/O allows\na user to specify the domain and type of parameters to\
+          \ the model, and\nalso a specification of which output variable is to be\
+          \ minimized or\nmaximized. Accordingly, a user can formulate a question\
+          \ like: what\nparameter settings will minimize the model output? Nimrod/O\
+          \ currently\nemploys a number of built-in optimization algorithms: \n \n\
+          \ \n BFGS \n \n \n Simplex \n \n \n Divide and Conquer \n \n \n Simulated\
+          \ Annealing. \n \n \n Jobs can be executed on a variety of platforms, which\
+          \ when combined with\nNimrod/G includes distributed clusters and Computational\
+          \ Grid resources. \n Target Audience \n The following research activities\
+          \ can benefit from using Nimrod. \n \n \n You need to run your computational\
+          \ model many times and average the\n    results because the model is stochastic.\
+          \ These types of Monte Carlo\n    simulations are greatly facilitated by\
+          \ Nimrod/G. It will generate\n    multiple jobs, furnishing them with different\
+          \ random number seeds\n    and execute them concurrently on the grid. \n\
+          \ \n \n You wish to explore the effect of varying the inputs to your model.\n\
+          \    Inputs may be in the form of command line parameters or of values in\n\
+          \    some input file; in Nimrod these are both called parameters. Either\n\
+          \    way Nimrod/G will let you specify values for each parameter, will\n\
+          \    generate the jobs for all possible combinations of these values and\n\
+          \    execute the jobs on the Grid. \n \n \n You wish to explore the effect\
+          \ of input parameters but for certain\n    combinations are not allowed.\
+          \ There are several possible ways to\n    do this. If the disallowed combinations\
+          \ give jobs that quickly fail\n    then you may schedule all possible combinations\
+          \ and let those bad\n    jobs fail. However, if those jobs will use substantial\
+          \ resources\n    then it would be better to filter them out first. This\
+          \ can be done\n    in Nimrod/G by processing the run file. Alternatively\
+          \ Nimrod/O may\n    be used in sweep mode as it provides the functionality\
+          \ to add\n    formulas for constraints on the parameters. \n \n \n You are\
+          \ running several different experiments. They may produce some\n    jobs\
+          \ with the same inputs and you don't want to waste resources\n    duplicating\
+          \ these jobs. Nimrod/O can be invoked with a persistent\n    cache shared\
+          \ by the experiments, so avoiding duplications. \n \n \n You wish to find\
+          \ the combination of input parameters that produce an\n    optimal output.\
+          \ Nimrod/O allows you to specify the inputs that vary,\n    any constraints\
+          \ on those inputs, and the output to be maximized\n    or minimized. It\
+          \ offers a selection of search methods for finding\n    the optimum. Multiple\
+          \ searches, perhaps using different optimization\n    methods, may be run\
+          \ in parallel. \n \n \n You want to find the inputs that generate the best\
+          \ output. Nimrod/O\n    allows optimization where human input may be used\
+          \ to assess the\n    quality of an output. This is especially useful for\
+          \ complex outputs\n    such as images or animations. \n \n \n There are\
+          \ several aspects of your model output that you wish\n    to optimize. Nimrod/O\
+          \ is currently being modified to facilitate such\n    multi-objective optimization.\
+          \ \n \n \n You wish to perform multiple optimizations on the output of your\n\
+          \    model, one optimization for each combination of some\n    parameter\
+          \ settings. This can be done using Nimrod/G to sweep over\n    the setting\
+          \ and having it call Nimrod/O to do each optimization. \n \n \n You wish\
+          \ to run your model in reverse. In other words you want to\n    find the\
+          \ input values that will produce a given output. Nimrod/O is\n    commonly\
+          \ used for this task. You need to have a way of measuring the\n    discrepancy\
+          \ between your output and the desired one. Then run an\n    optimization\
+          \ to minimize this discrepancy. \n \n \n You have developed your own optimization\
+          \ method. You wish to use the\n    method, taking advantage of the distributed\
+          \ execution of jobs and\n    the caching supplied in Nimrod/O. \n \n \n\
+          \ Different parts of your model need to run on different machines\n    because\
+          \ of data files perhaps or licence requirements. Nimrod/G can\n    schedule\
+          \ such workflow experiments and perform the appropriate\n    communication\
+          \ between the parts. Where possible a downstream\n    component may start\
+          \ processing its input file before an upstream\n    component has completed\
+          \ that file. \n \n \n Some of your model executions require prior execution\
+          \ of\n    other models. Nimrod/G can handle such dependencies. \n \n \n\
+          \ How to install \n Nimrod allows computational researchers to use a mixture\
+          \ of\nuniversity-level infrastructure and commercial clouds. \n Users can\
+          \ trial their Nimrod experiments using the Nimrod Portal\nresource pool.\
+          \ Users are encouraged to bring their own compute resources\n(e.g. cluster,\
+          \ cloud allocation) to use with Nimrod. Please contact Minh\nDinh and Hoang\
+          \ Anh Nguyen regarding adding new remote compute resources\nto their experiments.\
+          \ \n Users can still opt to install Nimrod Toolkit on their local system,\n\
+          provided that system meets the software and operating system\nrequirements\
+          \ outlined in the Resource Requirements section. If the user\nchooses to\
+          \ do that, here are step by step procedures for installing\nindividual Nimrod\
+          \ Toolkit. \n Installing Nimrod/G \n Users must executed the following steps\
+          \ to install Nimrod/G: \n \n \n Download Nimrod/G source distribution \n\
+          \ \n \n Setup Nimrod/G environment \n \n \n Create experiments directory\
+          \ \n \n \n Install Nimrod/G \n \n \n Setup Nimrod/G database \n \n \n Download\
+          \ Nimrod/G Distribution \n Download from following link: \n \n https://messagelab.monash.edu.au/Downloads\
+          \ \n \n Download the Nimrod/G source archive to your home directory, which\n\
+          should create a file: \n \n $HOME/nimrodg-[version].tar.gz \n \n Setup Nimrod/G\
+          \ Environment \n We recommend editing your shell\_rc\_scripts\n(.profile\_\
+          or\_.bashrc\_or\_.cshrc, etc), or adding\nan\_/etc/profile.d/nimrod.sh\_\
+          script for system-wide installs.\nFor\_sh\_based shells you will need something\
+          \ like (paths should be\naltered as appropriate for your install/system):\
+          \ \n \n export NIMROD_INSTALL=$HOME/bin/nimrodg export\nNIMROD_DATABASE=pgsql-pool\
+          \ \n export PSQL_LOCATION=/usr/bin # in this case /usr/bin/psql should be\n\
+          a valid path \n export PYTHONPATH=${NIMROD_INSTALL}/share/nimrod:${PYTHONPATH}\\\
+          \nexport PATH=${NIMROD_INSTALL}/bin:${PATH} \n \n Create Experiments Directory\
+          \ \n Nimrod/G keeps all the experiments it runs in a subdirectory of user's\n\
+          home directory\_$HOME/.nimrod/experiments. Create that directory by\nexecuting\
+          \ the following command: \n \n $ mkdir -p $HOME/.nimrod/experiments \n \n\
+          \ Install Nimrod/G \n \n Decompress Nimrod/G source archive. Let\u2019s\
+          \ assume we downloaded a\n    source archive for Nimrod/G version 4.0.2:\
+          \ \n \n \n $ cd $HOME \n $ tar -zxvf nimrodg-4.0.2.tar.gz \n \n \n Configure\
+          \ and install Nimrod/G \n \n \n $ cd nimrodg-4.0.2 \n $ ./configure --prefix=$NIMROD_INSTALL\
+          \ \n $ make; make install \n \n Setup Nimrod/G Database \n Nimrod/G runs\
+          \ on top of PostgreSQL relational database. Before anything\ncan be done,\
+          \ user must create a database which will be used by Nimrod/G.\nEach Nimrod/G\
+          \ user requires their own PostgreSQL database. \n \n As a PostgreSQL admin\
+          \ user create a PostgreSQL user. Must ensure\n    > that the user can create\
+          \ databases (prompted during the process): \n \n \n $ createuser <username>\
+          \ \n \n \n As the user, create a database \n \n \n $ createdb \n \n \n As\
+          \ the user, populate that database with Nimrod/G database schema \n \n \n\
+          \ $ nimrod dbcreate \n \n Platform and Version Specific Notes \n \n Python\
+          \ 2.6 \n \n \n To configure the Nimrod build files against Python2.6 (confirmed\
+          \ on\nUbuntu 10.04) it seems to be necessary to set LDFLAGS=-lm. \n \n \n\
+          \ Ubuntu 10.04 \n \n \n To configure the Nimrod build files against the\
+          \ included Python2.6 on\nUbuntu 10.04 it seems to be necessary to set LDFLAGS=-lm.\
+          \ \n \n \n RHEL6 \n \n \n Using the OS default Python (2.6) to install Nimrod\
+          \ may result in the\nmake install step failing to install 3rd party modules\
+          \ that are\npackaged with Nimrod, with an error message like: \n You are\
+          \ attempting to install a package to a directory that is not on\nPYTHONPATH\
+          \ and which Python does not read \".pth\" files from. \n This can be remedied\
+          \ by ensuring $NIMROD_INSTALL/share/nimrod is in\nyour $PYTHONPATH environment\
+          \ variable. \n \n Installing Nimrod/K \n Users must executed the following\
+          \ steps to install Nimrod/K: \n \n \n Download Nimrod/K distribution \n\
+          \ \n \n Install Nimrod/K \n \n \n Download Nimrod/K Distribution \n This\
+          \ can be done by following Nimrod/K link at: \n \n https://messagelab.monash.edu.au/Downloads\
+          \ \n \n Download the Nimrod/K distribution to your home directory which\
+          \ should\ncreate a file: \n \n $HOME/nimrodk-[version].jar \n \n Steps to\
+          \ install Nimrod/K \n For the purposes of this installation guide, we will\
+          \ assume that the\nversion we are working on is 2.0.0. Nimrod/K major version\
+          \ number will\nalways follow Kepler's major version number so version 2.0.0\
+          \ means that\nthis version of Nimrod/K will work with latest version of\
+          \ Kepler with\nmajor version number \n Nimrod/K jar file has following install\
+          \ options: \n \n options: \n --help|-h -- print this message \n --acceptlicense|-a\
+          \ -- accept Nimrod/K license without prompting. If\nomitted user will be\
+          \ \n given a choice (declining will stop the installation). \n --prefix=<path>\
+          \ -- set a location of where all Nimrod/K modules\nare installed (eg. \u2013\
+          \ \n prefix=/usr/local/kepler/2.4/lib). If omitted it will prompt for \n\
+          \ the prefix \n --keplerversion=<major version number> -- set a kepler version\n\
+          (eg. --keplerversion=2.4). \n If ommitted installer will look for it in\
+          \ the following files and \n in the order they are listed here: \n a) <prefix>/build-area/install-id.txt\
+          \ \n b) $KEPLER/build-area/install-id.txt \n --version|-v -- prints the\
+          \ Nimrod/K version \n \n Using the above options install Nimrod/K: \n \n\
+          \ java -jar nimrodk-2.0.0.jar [options] \n \n Installing Nimrod/O \n A comprehensive\
+          \ manual for Nimrod/O can be downloaded from: \n http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&upname=NimrodOUsersGuide3.1.pdf.\
+          \ \n It contains information on how to install Nimrod/O. \n How to launch\
+          \ \n Running Nimrod/G \n In order to run Nimrod/G experiments from command\
+          \ line user needs to do\nthe following: \n \n \n Manage Resources \n \n\
+          \ \n Manage Experiments \n \n \n Once these are done, experiments can be\
+          \ executed on selected resources. \n Resource Management \n Adding Resources\
+          \ \n Nimrod resources need to be first added to the database before they\
+          \ can\nbe assigned to and used by experiments. Syntax for adding resources\
+          \ is\nas follows: \n \n $ nimrod resource add <resource_type>\n<resource_details>\
+          \ \n \n Resource types supported by Nimrod/G include: \n \n Fork \n \n \n\
+          \ $ nimrod resource add fork \n \n \n \nPBS\_- With PBS we need to know\
+          \ the name of a PBS queue and the\n    > hostname of the PBS server. Lets\
+          \ say queue name is\_workq\_and\n    > the hostname is\_localhost\n \n \n\
+          \ \n $ nimrod resource add pbs workq@localhost \n \n \n \n SGE\_- Same as\
+          \ PBS \n \n \n EC2 \n \n \n Removing Resources \n Syntax for removing resources\
+          \ is as follows: \n \n $ nimrod resource remove <resource_type>\n<resource_details>\
+          \ \n \n Experiment Management \n This section will describe how to create,\
+          \ monitor and manage Nimrod/G\nexperiments. \n Creating a Plan File \n Nimrod/G\
+          \ uses a simple declarative language to describe the experiments.\nThis\
+          \ description is usually written as a simple script file we call\na\_plan\
+          \ file. \n There are two sections in this plan file. The first one describes\
+          \ the\nparameters that your experiment has while the second one describes\
+          \ the\ntask/s that Nimrod/G needs to execute to complete a single instance\
+          \ (or\na job) from your experiment. The example below shows a fictional\
+          \ plan\nfile for an experiment investigating wing performance. \n \n parameter\
+          \ aircraft_model files select anyof \"A3??.dat\" \"737-*.dat\"; \n parameter\
+          \ AoA label \"Angle of attack\" float range from -45 to 45 step\n2.5; \n\
+          \ parameter winglets text select anyof \"none\" \"fence\" \"blended\" \"\
+          raked\"; \n parameter airspeed integer range from 50 to 600 step 50; \n\
+          \ parameter turbulence label \"Normalized Reynolds\" float random from 1\n\
+          to 2; \n task main \n copy ${aircraft_model} node:. \n copy wing_test.zip\
+          \ node:. \n node:execute unzip wing_test.zip \n node:execute ./run_wing_test.sh\
+          \ ${aircraft_model} ${winglets}\n${AoA} \\ \n ${airspeed} ${turbulence}\
+          \ >> output.${jobname} \n node:execute zip results.${jobname} * \n copy\
+          \ node:results.${jobname}.zip . \n endtask \n \n This is a somewhat contrived\
+          \ example demonstrating various parameter\ntypes but it illustrates the\
+          \ basic functionality of defining parameters\nfor the main task and handling\
+          \ input, execution and output for each of\nthe parameter combinations. The\
+          \ two subsections below explain the\n'parameter' and 'task' definitions\
+          \ in the plan file. \n Parameters \n Parameters define lists of values,\
+          \ constant single values or dynamic\nvalues (of various types). A unique\
+          \ combination of parameter values is\nassigned to each job and each parameter\
+          \ value is bound to a named\nidentifier in the job environment. Nimrod/G\
+          \ experiments usually create a\ncross-product of all parameters to define\
+          \ the jobs which make up the\nexperiment, we call this a full parameter\
+          \ sweep. The syntax for\nparameter lines in the plan file is: \n \n parameter\
+          \ <name> <type> [<domain>]; \n \n \n \n name\_- This is the parameter name\
+          \ which must be unique. \n \n \n type\_- This part of the parameter tells\
+          \ Nimrod/G what type of\n    parameter this is. There are five types and\
+          \ they are \n \n \n float\_- floating point number \n \n \n integer\_- integer\
+          \ (whole) number \n \n \n text\_- textual values as shown in the example\
+          \ above \n \n \n files\_- this type allow you to apply glob style file name\n\
+          \    matching to create a list of files names within the experiment\n  \
+          \  directory which match the given pattern(s), you could use this\n    to\
+          \ parameterize the input files for your computation (like the\n    example\
+          \ above). The files type\_must be\_used with the \"select\n    anyof\" domain.\
+          \ \n \n \n fromfile\_- this type must refer to a text file that contains\n\
+          \    a list of values, i.e., the file contains the entire range. \n \n \n\
+          \ \n \n domain\_- A parameter domain is optional in some cases but\n   \
+          \ usually required. The following domains are available: \n \n \ndefault-\
+          \ this domain type has only a single value. The\n    syntax for this domain\
+          \ is: \n \n \n \n \n default <value \n \n \n \nrange\_- this domain type\
+          \ has a number of values (points) that\n    are within a specified range.\
+          \ The syntax for the range domain is: \n \n \n range from <value> to <value>\
+          \ points <value> \n range from <value> to <value> step <value> \n \n \n\
+          \ \nrandom\_- this domain type has a number of random points\n    generated\
+          \ between specified lower and upper bounds. The syntax for\n    this domain\
+          \ is \n \n \n random from <value> to <value> [points <value>] \n \n \n \n\
+          select anyof\_- this domain type is usually used for text and\n    files\
+          \ but is also useful for listing fixed numerical values. The\n    syntax\
+          \ for this domain is: \n \n \n select anyof <value_list> [default <value_list>]\
+          \ \n \n \n \nselect oneof\_- Similar to 'select anyof' except that only\
+          \ one\n    value will be selected for use from this list. If the default\
+          \ value\n    is not specified the first value in the value_list is used.\
+          \ The\n    syntax for this domain is: \n \n \n select oneof <value_list>\
+          \ [default <value>] \n \n \n \n(some input file)\_- when using the fromfile\
+          \ type, the domain is\n    an input file that lists the values for the parameter.\
+          \ For example: \n \n \n parameter x fromfile inputfile.txt \n means that\_\
+          inputfile.txt\_contains a list of single values (one per\nline) for parameter\_\
+          x. \n \n Tasks \n This part of the plan file describes the process of executing\
+          \ a single\ninstance of your experiment. There are a number of\noperations/commands/directives\
+          \ that can be performed in a task: \n \n \n Copy files to and from compute\
+          \ resources \n \n \n Executing an experiment executable \n \n \n Substituting\
+          \ place-holders in the input files with the real values \n \n \n What to\
+          \ do in case the job fails. \n \n \n Task operations are typically location\n\
+          dependent.\_copy\_and\_execute\_directives must specify where the\noperation\
+          \ should be performed or where the file locations are while\ncopying. This\
+          \ is done by using\_node:\_or\_root:\_modifiers. \n \n \n node:\_indicates\
+          \ remote location for the operation. In case\n    of\_copy\_operation it\
+          \ indicates that the file resides on remote\n    machine, while in case\
+          \ of execute\_command it indicates that the\n    executable should be run\
+          \ on the remote server. \n \n \n root:\_on the other hand indicates that\
+          \ files are on the same\n    machine where Nimrod/G is running, and that\_\
+          execute\_command that\n    executables are to be run on that same machine,\
+          \ and not on the\n    remote server. Please note that\_root:execute\_can\
+          \ only be\n    executed in\_rootstart\_and\_rootfinishtasks. \n \n \n NOTE:\
+          \ In a typical parameter sweep all program invocations will\noccur on computational\
+          \ nodes and hence the main task will only use\nnode:execute. \n Following\
+          \ is a more thorough description of the task operations: \n \n \ncopy\_\
+          - this operation is used to copy both input and\n    > output files. Syntax\
+          \ for this operations is as follows: \n \n \n copy <source> <destination>\
+          \ \n For example if you are copying input file to a remote location: \n\
+          \ copy root:input.txt node:input.txt \n And if you are copying output file\
+          \ back to the server where Nimrod/G\nis running: \n copy node:result.txt\
+          \ root:result.txt \n \n \n \nexecute\_- this operation is used to execute\
+          \ some executable. The\n    syntax for this operatio is: \n \n \n node:execute\
+          \ <user_command> \n user_command\_is passed to shell (/bin/sh), so it can\
+          \ contain\nshell constructs (redirection like >, >> etc). \n For example\
+          \ if we wanted to execute\_hostname\_command and redirect\nits output into\
+          \ a file called\_hostname.txt\_this is what\nthe\_executeoperation would\
+          \ look like: \n node:execute /bin/hostname > hostname.txt \n \n \n onerror\_\
+          - this operation indicates how Nimrod/G should behave in\n    case some\
+          \ part of the job fails. It has a scope which is from the\n    point it\
+          \ appears until another\_onerror\_statement is found. The\n    syntax for\
+          \ this operation is: \n \n \n onerror <option> \n Valid options are: \n\
+          \ \n \n \n fail\_- fail the job. This is the default behaviour and will\
+          \ be\n    > used even if\_onerror\_is never specified in the plan file \n\
+          \ \n \n ignore\_- ignore the error and proceed with the task, ie. move\n\
+          \    > onto the next line in the plan file and continue executing it. \n\
+          \ \n \n\n\n \n \nsubstitute\_- Nimrod/G allows can use skeleton input file\
+          \ for\n    > their experiments. This skeleton input file may contain\n \
+          \   > placeholders in it that are to be substituted by the actual\n    >\
+          \ parameter values before the execution begins. \n \n \n This operation\
+          \ is used to replace the parameter placeholders in input\nfile with a job\
+          \ parameter value. The syntax of this operation is: \n substitute <source>\
+          \ <destination> \n Both source and destination require neither 'node:' nor\
+          \ 'root:' in\nfront of them, i.e. they are just plain filenames. For example,\
+          \ this\ncould be a main task of a plan file: \n task main \n copy input.skeleton\
+          \ node:. \n substitute input.skeleton input.txt \n node:execute ./process.sh\
+          \ input.txt > result.txt \n copy node:result.txt . \n endtask \n \n Creating\
+          \ Experiments \n Nimrod/G stores experiments in a specific location in user's\
+          \ home\ndirectory: \n \n $HOME/.nimrod/experiments/ \n \n Each experiment\
+          \ will have a dedicated subdirectory in that location that\nmatches experiment\
+          \ name. For example: \n \n \n Experiment named\_demo\_will be\n    > in\_\
+          $HOME/.nimrod/experiments/demo/ \n \n \n Plan file called\_demo.pln\_will\
+          \ be in that directory \n \n \n All files related to that experiment will\
+          \ also be location in\n    > that directory \n \n \n \n \n In order to create\
+          \ experiment execute the following steps: \n \n \n Create a plan file following\
+          \ instructions from the previous section.\n    > Lets assume we create a\
+          \ plan file called\_demo.pln \n \n \n Create an experiment directory: \n\
+          \ \n \n \n $ mkdir -p $HOME/.nimrod/experiments/demo \n \n \n \n Place the\_\
+          demo.pln\_file in that directory \n \n \n Create a file containing all possible\
+          \ parameter combinations: \n \n \n \n nimrod generate demo.pln \n \n \n\
+          \ Add the experiment to the Nimrod/G database: \n \n \n nimrod create demo\
+          \ \n \n Assign Resources to Experiments \n In section\_Resource Management\_\
+          we added compute resources to the\ndatabase. In order for them to be used\
+          \ by an experiment they have to be\nassigned to that experiment. The syntax\
+          \ for adding resources to\nexperiments is as follows: \n \n nimrod addserver\
+          \ <exp_name> <resource_details>\n<resource_type> \n \n Resource type and\
+          \ resource details are exact same details that were used\nwhen resources\
+          \ were added to database. An example of adding a PBS\nresource to a demo\
+          \ experiment can be seen below: \n \n nimrod addserver demo workq@localhost\
+          \ pbs \n \n Launching Nimrod/G \n With experiments defined and configured\
+          \ Nimrod/G can be launched. The\nsyntax for this command is as follows:\
+          \ \n \n nimrod startexp <exp_name> \n \n For example, to start the experiment\
+          \ called\_demo\_run: \n \n nimrod startexp demo \n \n Using Nimrod/K \n\
+          \ Nimrod/K extends\_Kepler by adding parameter tools and grid/cloud\nservices\
+          \ and by providing dynamic parallelism in workflows. As such\nNimrod/K functionality\
+          \ is simply used by adding the Nimrod/K director\nand Nimrod/K actors to\
+          \ Kepler workflows. \n Using Nimrod/O \n A comprehensive manual for Nimrod/O\
+          \ can be downloaded from: \n http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&upname=NimrodOUsersGuide3.1.pdf.\
+          \ \n It contains information on how to launch Nimrod/O. \n Resource Requirements\
+          \ \n Nimrod Toolkit runs on Unix based platforms only, which includes all\n\
+          flavours of Linux as well as Mac OS X. However, Nimrod Portal component\n\
+          is browser based which allows users of all platforms (including Windows)\n\
+          to access Nimrod and execute computational experiments through any\nbrowser.\
+          \ \n \n \n Software Requirements: \n \n \n Python \u2013 version 2.5 or\
+          \ higher \n \n \n PostgreSQL \u2013 version 8.4 or higher \n \n \n \n \n\
+          \ Operating System Requirements \n \n \n Linux \n \n \n Mac OS X \n \n \n\
+          \ \n \n Nimrod/O can run in standalone mode, in which case Nimrod/G is not\n\
+          required. However in standalone mode Nimrod/O loses the ability to run\n\
+          its jobs on distributed clusters and computational grid resources.\nFor\
+          \ distributing jobs, Nimrod/G 4.0 or higher required \n Similar to Nimrod/O,\
+          \ Nimrod/K can run as a standalone application, in\nwhich case Nimrod/G\
+          \ is not required. When running in standalone mode\nNimrod/K can be installed\
+          \ and used on Windows machines. \n Compute Resources \n Nimrod allows computational\
+          \ researchers to use a mixture of\nuniversity-level infrastructure and commercial\
+          \ clouds. For beginners,\nusers can trial their Nimrod experiments using\
+          \ the Nimrod_Portal[^1]\nresource pool. Users are encouraged to bring their\
+          \ own compute resources\n(e.g. cluster, cloud allocation) to use with Nimrod.\
+          \ Please contact Minh\nDinh and Hoang Anh Nguyen regarding adding new remote\
+          \ compute resources\nto their experiments. \n Nimrod Portal \n A web service\
+          \ for using Nimrod/G. Nimrod portal provides a web interface\nfor users\
+          \ to use Nimrod and its resources. Users can create Nimrod/G\nexperiments\
+          \ without installing Nimrod toolkit on their local system.\nThis allows\
+          \ users develop, execute, maintain and share Nimrod parameter\nsweep experiments.\
+          \ \n Installation \n Nimrod portal consists of two components: a RESTful\
+          \ Web service and a\nWeb portal. The RESTful service is to expose Nimrod\
+          \ functionality to the\nWeb and the Web portal provides user-friendly interface\
+          \ to the users. \n The installation process requires two steps: installation\
+          \ of the Web\nservice and installation of the Web portal. This two-step\
+          \ process takes\nplace in two separate VMs. Nimrod needs to be installed\
+          \ in the Web\nservice VM. \n Install Nimrod Web service \n The Web service\
+          \ is currently available at:\nhttps://bitbucket.org/jhtngu/nimrod.webservice.\
+          \ \n This is not a public repository. Please email hoangnguyen177@gmail.com\n\
+          to gain access. \n \n Once clone the repository, modify the buildout.cfg\
+          \ as followed \n \n \n [sources] \n Nimrodrestapi = git\nhttps://yournamehere@bitbucket.org/jhtngu/nimrod.restfulweb.git\n\
+          branch=addresources \n nimrodrpcdaemon = git https:// yournamehere\n@bitbucket.org/jhtngu/nimrod.rpcdaemon.git\
+          \ branch=addresources \n \n \n \n Execute \u201Cpython bootstrap.py\u201D\
+          \ to setup the environment. This\n    requires setuptools installed. \n\
+          \ \n \n Execute \u201C./bin/buildout\u201D to clone and install necessary\
+          \ packages,\n    including Nimrod Web service. \n \n \n Install any missing\
+          \ dependencies as suggested by the build process. \n \n \n Modify configuration\
+          \ files in the \u201Cetc\u201D folder accordingly. \n \n \n Install the\
+          \ Web portal \n \n \n Install Liferay 6.1\n    (http://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.1.1%20GA2/).\n\
+          \    The recommended location is: /var/www. \n \n \n Follow Liferay instructions\
+          \ to install with Postgres DB\n    (https://www.liferay.com/community/wiki/-/wiki/Main/Quick+Installation+Instructions)\
+          \ \n \n \n Go to Liferay market and install Private Plugin Installer\n \
+          \   (https://www.liferay.com/marketplace/-/mp/application/15474932) \n \n\
+          \ \n Install Vaadin into Liferay\n    (https://vaadin.com/wiki/-/wiki/Main/Integrating+Vaadin+7+with+Liferay)\
+          \ \n \n \n Install Nimrod portlets, which are available at:\n    https://bitbucket.org/hoangnguyen177/nimrodportal2.\
+          \ Or contact\n    hoangnguyen177@gmail.com for compiled version. \n \n \n\
+          \ Install Nimrod portlets \n \n \n Configure the portal and the Web service\
+          \ VM \n From NeCTAR dashboard, make sure the port of the Web service (8081\
+          \ by\ndefault) is accessible by the Web portal and Nimrod ports (40000 -\n\
+          41000) are accessible by all. \n Launch \n Launch the Web portal first:\
+          \ \n \n cd /var/www/liferay-portal-xxxx/tomcat-xxx/bin; sudo ./startup.sh\
+          \ \n \n Then launch the Web service: \n \n cd \\~/nimrod.webservice/bin;\
+          \ ./supervisord; \n \n Plan file web editor \n Instead of using a text editor,\
+          \ the Nimrod Portal provides a simple\nfriendly GUI for users to develop\
+          \ plan file for Nimrod/G experiments. \n \n How to access it \n Interested\
+          \ users can register for an account using their AAF credential\nat the following\
+          \ page (will need to be updated later):\nhttp://vm-203-101-224-118.qld.nectar.org.au/\
+          \ \n The portal provides a friendly web interface for users to define,\n\
+          execute and monitor their experiments. For users who have existing\nNimrod\
+          \ experiments, they can upload the plan files. User can also create\nnew\
+          \ experiments using a simple GUI. Input and output files can be\nuploaded\
+          \ and downloaded using the web interface. For technical supports\nand learning\
+          \ to use Nimrod, please contact Minh Dinh and/or Hoang Anh\nNguyen. \n Configuration\
+          \ guide \n Configuring Nimrod/G \n Nimrod/G installation comes with two\
+          \ configuration files, both located\nin\_$NIMROD_INSTALL\_directory: \n\
+          \ \n \n nimrod.cfg\_- Configuration values contained within can be\n   \
+          \ overridden by a user level configuration file of the same name,\n    which\
+          \ may be located in $HOME/.nimrod/ directory, or by an\n    immutable configuration\
+          \ file described below. \n \n \n nimrod.immutable.cfg\_- Configuration values\
+          \ contained within\n    will override any other configuration, either user\
+          \ or system level. \n \n \n Most of the configuration values can be left\
+          \ as is but some may be\nchanged to match the system requirements. \n Each\
+          \ configuration file may contain following sections: \n \n \n email\_- used\
+          \ to configure email settings. This is used to report\n    experiment completion.\
+          \ \n \n \n nimserver\_- configures Nimrod/G component called Nimrod Server.\n\
+          \    Nimrod/G uses executables called\_Agents\_to execute jobs on\n    remote\
+          \ resources.\_Agents\_use Nimrod Server to communicate with\n    database\
+          \ as well as to copy files to and from remote locations. \n \n \n \n Most\
+          \ of the configuration can be left as is. It is important however\nto ensure\
+          \ that\_default_port_range\_configuration value has a\nrange of ports that\
+          \ can be reached by outside networks. When it\nstarts,\_Nimrod Server\_\
+          will select a first available port from that\nrange and will use that to\
+          \ listen for incoming connectinos\nfrom\_Agents. If the port it selects\
+          \ is unreachable, no jobs will\nrun. \n For example (port will be selected\
+          \ anywhere between 30000 and 31000\ninclusive): \n nimserver: { \n default_port_range:\
+          \ '30000,31000' \n key_path: $user_dir + '.nimserver' \n remote_suffix:\
+          \ $remote_suffix \n remote_key_fname: '.nimserver' + $nimserver.remote_suffix\
+          \ + '.pub' \n port_path: $user_dir + '.nimport' + $nimserver.remote_suffix\
+          \ \n remote_port_fname: '.nimport' + $nimserver.remote_suffix \n } \n \n\
+          \ \n \n actuator\_- configures resource actuators, components that\n   \
+          \ control how resources are used. It can be used to change how often\n \
+          \   actuators poll database to see if there are any work they need\n   \
+          \ to do. Configuration can apply to actuators for all resource types,\n\
+          \    but can also only apply to a specific resource type. \n \n \n azure\_\
+          - configure\_azure\_resource settings. Can be left\n    as is. \n \n \n\
+          \ ec2\_- configures\_ec2\_resource settings. Can be left as is \n \n \n\
+          \ generate\_- configures\_generate\_subcommand. This subcommand\n    is\
+          \ used to parse the plan file and create another files that\n    contains\
+          \ a cross-product of all parameters. Some of the settings\n    include limits\
+          \ on how many jobs single experiment can have, or how\n    long a parameter\
+          \ name can be. \n \n \n \n For example: \n generate: { \n max_jobs: 100000\
+          \ \n param_len_limit: 56 \n } \n \n Configuring Nimrod/K \n There is no\
+          \ Nimrod/K specific configuration. \n Configuring Nimrod/O \n A comprehensive\
+          \ manual for Nimrod/O can be downloaded from: \n http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&upname=NimrodOUsersGuide3.1.pdf.\
+          \ \n It contains information on how to configure Nimrod/O. \n Technical\
+          \ blueprint \n To date, Nimrod tools are deployed through several Nimrod\
+          \ portals\nstationed at Monash University, Griffith University and The University\n\
+          of Queensland. These portals provide the machinery to automate the tasks\n\
+          of formulating complex experiments and workflows, and execute them\nacross\
+          \ a variety of computing resources including NecTAR VMs. In\nparticular,\
+          \ we ran several projects to test the migration of scientific\nsoftware\
+          \ to HPC platforms, including the NeCTAR research cloud, to\nprovide enhanced\
+          \ utility for the following research projects. \n Terrestrial Ecosystem\
+          \ Research Network (TERN) \n Supporting the creation and execution of sensory\
+          \ data analysis using\nNimrod portal to access available computing resources\
+          \ in the NecTAR\ncloud. \n \n CVL Symmetric Model Creation \n Coupling Nimrod\
+          \ to perform expensive computations efficiently and\nintegrating visualization\
+          \ library to enable examination of intermediate\nmodels. \n \n MARXAN \n\
+          \ Coupling the MARXAN web portal with Nimrod to provide access to HPC and\n\
+          cloud resources. \n \n Troubleshooting \n There are multiple points of failure\
+          \ that are possible when running\nNimrod/G experiments: \n \n Problem with\
+          \ executables (applications) that Nimrod/G is trying to\n    execute \n\
+          \ \n \n These will be reported back to database. In scenario like this is\n\
+          highly possible that all jobs will fail because of it. However the\nproblem\
+          \ can be environmental in which case it will only fail on a\nparticular\
+          \ resource or even a particular machine on that resource. \n \n \n Problem\
+          \ with remote machines where Nimrod Agents are running \n \n \n These kind\
+          \ of problems occur when a particular machine on a\ncomputational resource\
+          \ is not working correctly. There are many\nreasons this may occur, which\
+          \ includes missing libraries, faulty\nhardware etc. \n If the agents manage\
+          \ to start then these are easy to identify. Nimrod\nAgents will fail the\
+          \ jobs and record which host the job failed on.\nListing failed jobs, and\
+          \ seeing that all failed on a particular host\nwill indicate a problem with\
+          \ that host. \n \n \n Firewall issues preventing Nimrod Agents connecting\
+          \ back to Nimrod\n    Server \n \n \n If Agents are perpetually stuck in\_\
+          pending/queued\_state, it\nusually indicates that they cannot connect back\
+          \ to Nimrod Server. One\nreason is that there is a faulty host and\_Agents\_\
+          never start, and\nsecond reason is that firewall on either host is preventing\n\
+          those\_Agents\_connections. \n \n There are number of commands that can\
+          \ be executed to collect information\nthat may help identify the issue:\
+          \ \n \n Get reported errors \n \n \n $ nimrod geterrors <exp_name> \n \n\
+          \ \n Check if there are any agents running on resources \n \n \n $ nimrod\
+          \ getagents <exp_name> \n Output returns a list of resources where each\
+          \ line has the resource\nname and agent information in following order:\
+          \ \n \n \n \n Agents that have stopped running (cleanly) \n \n \n Agents\
+          \ that are still running \n \n \n Agents that have been submitted to a remote\
+          \ queue \n \n \n Agents that have been created in database, but not submitted\
+          \ to a\n    remote queue \n \n \n Agents that have failed to start. Some\
+          \ agents may fail to start but\n    won't be reported here. This will occur\
+          \ if firewall is blocking\n    the connections. \n \n \n Check the progress\
+          \ of experiment and see if there any failed jobs: \n \n \n \n $ nimrod enfapi\
+          \ <exp_name> jobstatus \n \n \n If there are failed jobs, get errors for\
+          \ all failed jobs: \n \n \n $ nimrod enfapi <exp_name> getjobinfo all error\
+          \ \n \n Support \n Administration \n Please contact Hoang Anh Nguyen or\
+          \ Minh Dinh for the Nimrod Portal \n Technical Support \n All queries regarding\
+          \ the for the Nimrod Portal and WorkWays portal,\nplease contact Hoang Anh\
+          \ Nguyen or Minh Dinh \n Learning to use Nimrod or integrating Nimrod into\
+          \ your internal service \n Please contact Minh Dinh regarding learning to\
+          \ use Kepler and Nimrod.\nFor consultation on how Kepler and Nimrod can\
+          \ be applicable for specific\nresearch fields, please contact Minh Dinh.\
+          \ \n Contact \n Dr Minh Dinh \n QCIF - eResearch Analyst \n Reserch Fellow\
+          \ - Research Computing Center (RCC) \n Email: m.dinh1@uq.edu.au \n Mr Hoang\
+          \ Anh Nguyen \n Email: hoangnguyen177@gmail.com \n Glossary of Terms \n\
+          \ [^1]: Nimrod_Portal is a Nectar allocation that consists of up 120\n \
+          \   compute cores. It is designated for deploying Nimrod services and\n\
+          \    conducting Nimrod runs. It is an independent testbed for new users\n\
+          \    to trial Nimrod and its tools "
+        description: "<h1>Nimrod toolkit for high throughput computing in the cloud</h1>\n\
+          <h2>Introduction</h2>\n<p>The Nimrod tool family facilitates high-throughput\
+          \ science by allowing\nresearchers to use computational models to explore\
+          \ complex design\nspaces. Models can be executed across changing input parameters.\n\
+          Different members of the tool family support complete and partial\nparameter\
+          \ sweeps, numerical search by non-linear optimisation, and even\nworkflows.\
+          \ Further, Nimrod allows computational researchers to use a\nmixture of\
+          \ university-level infrastructure and commercial clouds.</p>\n<p>There are\
+          \ several \u2018flavours\u2019 of Nimrod. Which Nimrod you choose to use,\n\
+          either singly, or in combination, will depend on the kind of experiment\n\
+          you want to run.</p>\n<h3>Nimrod/G</h3>\n<p>Nimrod/G can directly execute\
+          \ large-scale distributed parameter sweep\nand Monte-Carlo computational\
+          \ experiments. It provides a simple means to\ndramatically scale-up your\
+          \ computational experiments. Each experiment\ncan run over an aggregated\
+          \ ad-hoc computational grid/pool/cloud; start\nfrom your desktop, local\
+          \ server or cluster; add grid resources (e.g.\nclusters and Condor pools);\
+          \ overflow to pay-as-go cloud services and\ncontrol your budget with Nimrod/G's\
+          \ economic scheduling capabilities.</p>\n<h3>Nimrod/K</h3>\n<p>Nimrod/K\
+          \ is built on Kepler using Kepler\u2019s runtime engine Ptolemy. It\nextends\
+          \ Kepler by adding parameter tools and grid/cloud services and by\nproviding\
+          \ dynamic parallelism in workflows.</p>\n<p>It uses a dataflow execution\
+          \ model that was originally developed for\nhighly parallel dataflow computers\
+          \ in the 1980\u2019s, and this provides an\nextremely rich execution mechanism.\
+          \ It leverages a number of the\ntechniques developed in the earlier Nimrod\
+          \ tools for distributing tasks\nto the Grid.</p>\n<h3>Nimrod/O</h3>\n<p>Provides\
+          \ an optimisation framework for optimising a target output value\nof an\
+          \ application. It allows a user to run an arbitrary computational\nmodel\
+          \ as the core of a non-linear optimization process. Nimrod/O allows\na user\
+          \ to specify the domain and type of parameters to the model, and\nalso a\
+          \ specification of which output variable is to be minimized or\nmaximized.\
+          \ Accordingly, a user can formulate a question like: what\nparameter settings\
+          \ will minimize the model output? Nimrod/O currently\nemploys a number of\
+          \ built-in optimization algorithms:</p>\n<ul>\n<li>\n<p>BFGS</p>\n</li>\n\
+          <li>\n<p>Simplex</p>\n</li>\n<li>\n<p>Divide and Conquer</p>\n</li>\n<li>\n\
+          <p>Simulated Annealing.</p>\n</li>\n</ul>\n<p>Jobs can be executed on a\
+          \ variety of platforms, which when combined with\nNimrod/G includes distributed\
+          \ clusters and Computational Grid resources.</p>\n<h2>Target Audience</h2>\n\
+          <p>The following research activities can benefit from using Nimrod.</p>\n\
+          <ol>\n<li>\n<p>You need to run your computational model many times and average\
+          \ the\n    results because the model is stochastic. These types of Monte\
+          \ Carlo\n    simulations are greatly facilitated by Nimrod/G. It will generate\n\
+          \    multiple jobs, furnishing them with different random number seeds\n\
+          \    and execute them concurrently on the grid.</p>\n</li>\n<li>\n<p>You\
+          \ wish to explore the effect of varying the inputs to your model.\n    Inputs\
+          \ may be in the form of command line parameters or of values in\n    some\
+          \ input file; in Nimrod these are both called parameters. Either\n    way\
+          \ Nimrod/G will let you specify values for each parameter, will\n    generate\
+          \ the jobs for all possible combinations of these values and\n    execute\
+          \ the jobs on the Grid.</p>\n</li>\n<li>\n<p>You wish to explore the effect\
+          \ of input parameters but for certain\n    combinations are not allowed.\
+          \ There are several possible ways to\n    do this. If the disallowed combinations\
+          \ give jobs that quickly fail\n    then you may schedule all possible combinations\
+          \ and let those bad\n    jobs fail. However, if those jobs will use substantial\
+          \ resources\n    then it would be better to filter them out first. This\
+          \ can be done\n    in Nimrod/G by processing the run file. Alternatively\
+          \ Nimrod/O may\n    be used in sweep mode as it provides the functionality\
+          \ to add\n    formulas for constraints on the parameters.</p>\n</li>\n<li>\n\
+          <p>You are running several different experiments. They may produce some\n\
+          \    jobs with the same inputs and you don't want to waste resources\n \
+          \   duplicating these jobs. Nimrod/O can be invoked with a persistent\n\
+          \    cache shared by the experiments, so avoiding duplications.</p>\n</li>\n\
+          <li>\n<p>You wish to find the combination of input parameters that produce\
+          \ an\n    optimal output. Nimrod/O allows you to specify the inputs that\
+          \ vary,\n    any constraints on those inputs, and the output to be maximized\n\
+          \    or minimized. It offers a selection of search methods for finding\n\
+          \    the optimum. Multiple searches, perhaps using different optimization\n\
+          \    methods, may be run in parallel.</p>\n</li>\n<li>\n<p>You want to find\
+          \ the inputs that generate the best output. Nimrod/O\n    allows optimization\
+          \ where human input may be used to assess the\n    quality of an output.\
+          \ This is especially useful for complex outputs\n    such as images or animations.</p>\n\
+          </li>\n<li>\n<p>There are several aspects of your model output that you\
+          \ wish\n    to optimize. Nimrod/O is currently being modified to facilitate\
+          \ such\n    multi-objective optimization.</p>\n</li>\n<li>\n<p>You wish\
+          \ to perform multiple optimizations on the output of your\n    model, one\
+          \ optimization for each combination of some\n    parameter settings. This\
+          \ can be done using Nimrod/G to sweep over\n    the setting and having it\
+          \ call Nimrod/O to do each optimization.</p>\n</li>\n<li>\n<p>You wish to\
+          \ run your model in reverse. In other words you want to\n    find the input\
+          \ values that will produce a given output. Nimrod/O is\n    commonly used\
+          \ for this task. You need to have a way of measuring the\n    discrepancy\
+          \ between your output and the desired one. Then run an\n    optimization\
+          \ to minimize this discrepancy.</p>\n</li>\n<li>\n<p>You have developed\
+          \ your own optimization method. You wish to use the\n    method, taking\
+          \ advantage of the distributed execution of jobs and\n    the caching supplied\
+          \ in Nimrod/O.</p>\n</li>\n<li>\n<p>Different parts of your model need to\
+          \ run on different machines\n    because of data files perhaps or licence\
+          \ requirements. Nimrod/G can\n    schedule such workflow experiments and\
+          \ perform the appropriate\n    communication between the parts. Where possible\
+          \ a downstream\n    component may start processing its input file before\
+          \ an upstream\n    component has completed that file.</p>\n</li>\n<li>\n\
+          <p>Some of your model executions require prior execution of\n    other models.\
+          \ Nimrod/G can handle such dependencies.</p>\n</li>\n</ol>\n<h2>How to install</h2>\n\
+          <p>Nimrod allows computational researchers to use a mixture of\nuniversity-level\
+          \ infrastructure and commercial clouds.</p>\n<p>Users can trial their Nimrod\
+          \ experiments using the Nimrod Portal\nresource pool. Users are encouraged\
+          \ to bring their own compute resources\n(e.g. cluster, cloud allocation)\
+          \ to use with Nimrod. Please contact Minh\nDinh and Hoang Anh Nguyen regarding\
+          \ adding new remote compute resources\nto their experiments.</p>\n<p>Users\
+          \ can still opt to install Nimrod Toolkit on their local system,\nprovided\
+          \ that system meets the software and operating system\nrequirements outlined\
+          \ in the Resource Requirements section. If the user\nchooses to do that,\
+          \ here are step by step procedures for installing\nindividual Nimrod Toolkit.</p>\n\
+          <h3>Installing Nimrod/G</h3>\n<p>Users must executed the following steps\
+          \ to install Nimrod/G:</p>\n<ol>\n<li>\n<p>Download Nimrod/G source distribution</p>\n\
+          </li>\n<li>\n<p>Setup Nimrod/G environment</p>\n</li>\n<li>\n<p>Create experiments\
+          \ directory</p>\n</li>\n<li>\n<p>Install Nimrod/G</p>\n</li>\n<li>\n<p>Setup\
+          \ Nimrod/G database</p>\n</li>\n</ol>\n<h4>Download Nimrod/G Distribution</h4>\n\
+          <p>Download from following link:</p>\n<ul>\n<li>https://messagelab.monash.edu.au/Downloads</li>\n\
+          </ul>\n<p>Download the Nimrod/G source archive to your home directory, which\n\
+          should create a file:</p>\n<ul>\n<li><strong>$HOME/nimrodg-[version].tar.gz</strong></li>\n\
+          </ul>\n<h4>Setup Nimrod/G Environment</h4>\n<p>We recommend editing your\
+          \ shell\_<strong>rc</strong>\_scripts\n(<strong>.profile</strong>\_or\_\
+          <strong>.bashrc</strong>\_or\_<strong>.cshrc</strong>, etc), or adding\n\
+          an\_<strong>/etc/profile.d/nimrod.sh</strong>\_script for system-wide installs.\n\
+          For\_<strong>sh</strong>\_based shells you will need something like (paths\
+          \ should be\naltered as appropriate for your install/system):</p>\n<blockquote>\n\
+          <p>export NIMROD_INSTALL=$HOME/bin/nimrodg export\nNIMROD_DATABASE=pgsql-pool</p>\n\
+          <p>export PSQL_LOCATION=/usr/bin # in this case /usr/bin/psql should be\n\
+          a valid path</p>\n<p>export PYTHONPATH=${NIMROD_INSTALL}/share/nimrod:${PYTHONPATH}\\\
+          \nexport PATH=${NIMROD_INSTALL}/bin:${PATH}</p>\n</blockquote>\n<h4>Create\
+          \ Experiments Directory</h4>\n<p>Nimrod/G keeps all the experiments it runs\
+          \ in a subdirectory of user's\nhome directory\_$HOME/.nimrod/experiments.\
+          \ Create that directory by\nexecuting the following command:</p>\n<blockquote>\n\
+          <p>$ mkdir -p $HOME/.nimrod/experiments</p>\n</blockquote>\n<h4>Install\
+          \ Nimrod/G</h4>\n<ol>\n<li>Decompress Nimrod/G source archive. Let\u2019\
+          s assume we downloaded a\n    source archive for Nimrod/G version 4.0.2:</li>\n\
+          </ol>\n<blockquote>\n<p>$ cd $HOME</p>\n<p>$ tar -zxvf nimrodg-4.0.2.tar.gz</p>\n\
+          </blockquote>\n<ol>\n<li>Configure and install Nimrod/G</li>\n</ol>\n<blockquote>\n\
+          <p>$ cd nimrodg-4.0.2</p>\n<p>$ ./configure --prefix=$NIMROD_INSTALL</p>\n\
+          <p>$ make; make install</p>\n</blockquote>\n<h4>Setup Nimrod/G Database</h4>\n\
+          <p>Nimrod/G runs on top of PostgreSQL relational database. Before anything\n\
+          can be done, user must create a database which will be used by Nimrod/G.\n\
+          Each Nimrod/G user requires their own PostgreSQL database.</p>\n<ol>\n<li>As\
+          \ a PostgreSQL admin user create a PostgreSQL user. Must ensure\n    &gt;\
+          \ that the user can create databases (prompted during the process):</li>\n\
+          </ol>\n<blockquote>\n<p>$ createuser &lt;username&gt;</p>\n</blockquote>\n\
+          <ol>\n<li>As the user, create a database</li>\n</ol>\n<blockquote>\n<p>$\
+          \ createdb</p>\n</blockquote>\n<ol>\n<li>As the user, populate that database\
+          \ with Nimrod/G database schema</li>\n</ol>\n<blockquote>\n<p>$ nimrod dbcreate</p>\n\
+          </blockquote>\n<h4>Platform and Version Specific Notes</h4>\n<ul>\n<li>Python\
+          \ 2.6</li>\n</ul>\n<blockquote>\n<p>To configure the Nimrod build files\
+          \ against Python2.6 (confirmed on\nUbuntu 10.04) it seems to be necessary\
+          \ to set LDFLAGS=-lm.</p>\n</blockquote>\n<ul>\n<li>Ubuntu 10.04</li>\n\
+          </ul>\n<blockquote>\n<p>To configure the Nimrod build files against the\
+          \ included Python2.6 on\nUbuntu 10.04 it seems to be necessary to set LDFLAGS=-lm.</p>\n\
+          </blockquote>\n<ul>\n<li>RHEL6</li>\n</ul>\n<blockquote>\n<p>Using the OS\
+          \ default Python (2.6) to install Nimrod may result in the\nmake install\
+          \ step failing to install 3rd party modules that are\npackaged with Nimrod,\
+          \ with an error message like:</p>\n<p>You are attempting to install a package\
+          \ to a directory that is not on\nPYTHONPATH and which Python does not read\
+          \ \".pth\" files from.</p>\n<p>This can be remedied by ensuring $NIMROD_INSTALL/share/nimrod\
+          \ is in\nyour $PYTHONPATH environment variable.</p>\n</blockquote>\n<h3>Installing\
+          \ Nimrod/K</h3>\n<p>Users must executed the following steps to install Nimrod/K:</p>\n\
+          <ol>\n<li>\n<p>Download Nimrod/K distribution</p>\n</li>\n<li>\n<p>Install\
+          \ Nimrod/K</p>\n</li>\n</ol>\n<h4>Download Nimrod/K Distribution</h4>\n\
+          <p>This can be done by following Nimrod/K link at:</p>\n<ul>\n<li>https://messagelab.monash.edu.au/Downloads</li>\n\
+          </ul>\n<p>Download the Nimrod/K distribution to your home directory which\
+          \ should\ncreate a file:</p>\n<ul>\n<li>$HOME/nimrodk-[version].jar</li>\n\
+          </ul>\n<h4>Steps to install Nimrod/K</h4>\n<p>For the purposes of this installation\
+          \ guide, we will assume that the\nversion we are working on is 2.0.0. Nimrod/K\
+          \ major version number will\nalways follow Kepler's major version number\
+          \ so version 2.0.0 means that\nthis version of Nimrod/K will work with latest\
+          \ version of Kepler with\nmajor version number</p>\n<p>Nimrod/K jar file\
+          \ has following install options:</p>\n<blockquote>\n<p>options:</p>\n<p>--help|-h\
+          \ -- print this message</p>\n<p>--acceptlicense|-a -- accept Nimrod/K license\
+          \ without prompting. If\nomitted user will be</p>\n<p>given a choice (declining\
+          \ will stop the installation).</p>\n<p>--prefix=&lt;path&gt; -- set a location\
+          \ of where all Nimrod/K modules\nare installed (eg. \u2013</p>\n<p>prefix=/usr/local/kepler/2.4/lib).\
+          \ If omitted it will prompt for</p>\n<p>the prefix</p>\n<p>--keplerversion=&lt;major\
+          \ version number&gt; -- set a kepler version\n(eg. --keplerversion=2.4).</p>\n\
+          <p>If ommitted installer will look for it in the following files and</p>\n\
+          <p>in the order they are listed here:</p>\n<p>a) &lt;prefix&gt;/build-area/install-id.txt</p>\n\
+          <p>b) $KEPLER/build-area/install-id.txt</p>\n<p>--version|-v -- prints the\
+          \ Nimrod/K version</p>\n</blockquote>\n<p>Using the above options install\
+          \ Nimrod/K:</p>\n<blockquote>\n<p>java -jar nimrodk-2.0.0.jar [options]</p>\n\
+          </blockquote>\n<h3>Installing Nimrod/O</h3>\n<p>A comprehensive manual for\
+          \ Nimrod/O can be downloaded from:</p>\n<p><a href=\"http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&amp;upname=NimrodOUsersGuide3.1.pdf\"\
+          >http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&amp;upname=NimrodOUsersGuide3.1.pdf</a>.</p>\n\
+          <p>It contains information on how to install Nimrod/O.</p>\n<h2>How to launch</h2>\n\
+          <h3>Running Nimrod/G</h3>\n<p>In order to run Nimrod/G experiments from\
+          \ command line user needs to do\nthe following:</p>\n<ul>\n<li>\n<p>Manage\
+          \ Resources</p>\n</li>\n<li>\n<p>Manage Experiments</p>\n</li>\n</ul>\n\
+          <p>Once these are done, experiments can be executed on selected resources.</p>\n\
+          <h4>Resource Management</h4>\n<h5>Adding Resources</h5>\n<p>Nimrod resources\
+          \ need to be first added to the database before they can\nbe assigned to\
+          \ and used by experiments. Syntax for adding resources is\nas follows:</p>\n\
+          <blockquote>\n<p>$ nimrod resource add &lt;resource_type&gt;\n&lt;resource_details&gt;</p>\n\
+          </blockquote>\n<p>Resource types supported by Nimrod/G include:</p>\n<ul>\n\
+          <li><strong>Fork</strong></li>\n</ul>\n<blockquote>\n<p>$ nimrod resource\
+          \ add fork</p>\n</blockquote>\n<ul>\n<li>\n<strong>PBS</strong>\_- With\
+          \ PBS we need to know the name of a PBS queue and the\n    &gt; hostname\
+          \ of the PBS server. Lets say queue name is\_<strong>workq</strong>\_and\n\
+          \    &gt; the hostname is\_<strong>localhost</strong>\n</li>\n</ul>\n<blockquote>\n\
+          <p>$ nimrod resource add pbs workq@localhost</p>\n</blockquote>\n<ul>\n\
+          <li>\n<p><strong>SGE</strong>\_- Same as PBS</p>\n</li>\n<li>\n<p><strong>EC2</strong></p>\n\
+          </li>\n</ul>\n<h5>Removing Resources</h5>\n<p>Syntax for removing resources\
+          \ is as follows:</p>\n<blockquote>\n<p>$ nimrod resource remove &lt;resource_type&gt;\n\
+          &lt;resource_details&gt;</p>\n</blockquote>\n<h4>Experiment Management</h4>\n\
+          <p>This section will describe how to create, monitor and manage Nimrod/G\n\
+          experiments.</p>\n<h5>Creating a Plan File</h5>\n<p>Nimrod/G uses a simple\
+          \ declarative language to describe the experiments.\nThis description is\
+          \ usually written as a simple script file we call\na\_<strong>plan file</strong>.</p>\n\
+          <p>There are two sections in this plan file. The first one describes the\n\
+          parameters that your experiment has while the second one describes the\n\
+          task/s that Nimrod/G needs to execute to complete a single instance (or\n\
+          a job) from your experiment. The example below shows a fictional plan\n\
+          file for an experiment investigating wing performance.</p>\n<blockquote>\n\
+          <p>parameter aircraft_model files select anyof \"A3??.dat\" \"737-*.dat\"\
+          ;</p>\n<p>parameter AoA label \"Angle of attack\" float range from -45 to\
+          \ 45 step\n2.5;</p>\n<p>parameter winglets text select anyof \"none\" \"\
+          fence\" \"blended\" \"raked\";</p>\n<p>parameter airspeed integer range\
+          \ from 50 to 600 step 50;</p>\n<p>parameter turbulence label \"Normalized\
+          \ Reynolds\" float random from 1\nto 2;</p>\n<p>task main</p>\n<p>copy ${aircraft_model}\
+          \ node:.</p>\n<p>copy wing_test.zip node:.</p>\n<p>node:execute unzip wing_test.zip</p>\n\
+          <p>node:execute ./run_wing_test.sh ${aircraft_model} ${winglets}\n${AoA}\
+          \ \\</p>\n<p>${airspeed} ${turbulence} &gt;&gt; output.${jobname}</p>\n\
+          <p>node:execute zip results.${jobname} *</p>\n<p>copy node:results.${jobname}.zip\
+          \ .</p>\n<p>endtask</p>\n</blockquote>\n<p>This is a somewhat contrived\
+          \ example demonstrating various parameter\ntypes but it illustrates the\
+          \ basic functionality of defining parameters\nfor the main task and handling\
+          \ input, execution and output for each of\nthe parameter combinations. The\
+          \ two subsections below explain the\n'parameter' and 'task' definitions\
+          \ in the plan file.</p>\n<h5>Parameters</h5>\n<p>Parameters define lists\
+          \ of values, constant single values or dynamic\nvalues (of various types).\
+          \ A unique combination of parameter values is\nassigned to each job and\
+          \ each parameter value is bound to a named\nidentifier in the job environment.\
+          \ Nimrod/G experiments usually create a\ncross-product of all parameters\
+          \ to define the jobs which make up the\nexperiment, we call this a full\
+          \ parameter sweep. The syntax for\nparameter lines in the plan file is:</p>\n\
+          <blockquote>\n<p>parameter &lt;name&gt; &lt;type&gt; [&lt;domain&gt;];</p>\n\
+          </blockquote>\n<ul>\n<li>\n<p><strong>name</strong>\_- This is the parameter\
+          \ name which must be unique.</p>\n</li>\n<li>\n<p><strong>type</strong>\_\
+          - This part of the parameter tells Nimrod/G what type of\n    parameter\
+          \ this is. There are five types and they are</p>\n<ul>\n<li>\n<p><strong>float</strong>\_\
+          - floating point number</p>\n</li>\n<li>\n<p><strong>integer</strong>\_\
+          - integer (whole) number</p>\n</li>\n<li>\n<p><strong>text</strong>\_- textual\
+          \ values as shown in the example above</p>\n</li>\n<li>\n<p><strong>files</strong>\_\
+          - this type allow you to apply glob style file name\n    matching to create\
+          \ a list of files names within the experiment\n    directory which match\
+          \ the given pattern(s), you could use this\n    to parameterize the input\
+          \ files for your computation (like the\n    example above). The files type\_\
+          <strong>must be</strong>\_used with the \"select\n    anyof\" domain.</p>\n\
+          </li>\n<li>\n<p><strong>fromfile</strong>\_- this type must refer to a text\
+          \ file that contains\n    a list of values, i.e., the file contains the\
+          \ entire range.</p>\n</li>\n</ul>\n</li>\n<li>\n<p><strong>domain</strong>\_\
+          - A parameter domain is optional in some cases but\n    usually required.\
+          \ The following domains are available:</p>\n<ul>\n<li>\n<strong>default</strong>-\
+          \ this domain type has only a single value. The\n    syntax for this domain\
+          \ is:</li>\n</ul>\n</li>\n</ul>\n<blockquote>\n<p>default &lt;value</p>\n\
+          </blockquote>\n<ul>\n<li>\n<strong>range</strong>\_- this domain type has\
+          \ a number of values (points) that\n    are within a specified range. The\
+          \ syntax for the range domain is:</li>\n</ul>\n<blockquote>\n<p>range from\
+          \ &lt;value&gt; to &lt;value&gt; points &lt;value&gt;</p>\n<p>range from\
+          \ &lt;value&gt; to &lt;value&gt; step &lt;value&gt;</p>\n</blockquote>\n\
+          <ul>\n<li>\n<strong>random</strong>\_- this domain type has a number of\
+          \ random points\n    generated between specified lower and upper bounds.\
+          \ The syntax for\n    this domain is</li>\n</ul>\n<blockquote>\n<p>random\
+          \ from &lt;value&gt; to &lt;value&gt; [points &lt;value&gt;]</p>\n</blockquote>\n\
+          <ul>\n<li>\n<strong>select anyof</strong>\_- this domain type is usually\
+          \ used for text and\n    files but is also useful for listing fixed numerical\
+          \ values. The\n    syntax for this domain is:</li>\n</ul>\n<blockquote>\n\
+          <p>select anyof &lt;value_list&gt; [default &lt;value_list&gt;]</p>\n</blockquote>\n\
+          <ul>\n<li>\n<strong>select oneof</strong>\_- Similar to 'select anyof' except\
+          \ that only one\n    value will be selected for use from this list. If the\
+          \ default value\n    is not specified the first value in the value_list\
+          \ is used. The\n    syntax for this domain is:</li>\n</ul>\n<blockquote>\n\
+          <p>select oneof &lt;value_list&gt; [default &lt;value&gt;]</p>\n</blockquote>\n\
+          <ul>\n<li>\n<strong>(some input file)</strong>\_- when using the fromfile\
+          \ type, the domain is\n    an input file that lists the values for the parameter.\
+          \ For example:</li>\n</ul>\n<blockquote>\n<p>parameter x fromfile inputfile.txt</p>\n\
+          <p>means that\_<strong>inputfile.txt</strong>\_contains a list of single\
+          \ values (one per\nline) for parameter\_<strong>x</strong>.</p>\n</blockquote>\n\
+          <h5>Tasks</h5>\n<p>This part of the plan file describes the process of executing\
+          \ a single\ninstance of your experiment. There are a number of\noperations/commands/directives\
+          \ that can be performed in a task:</p>\n<ul>\n<li>\n<p>Copy files to and\
+          \ from compute resources</p>\n</li>\n<li>\n<p>Executing an experiment executable</p>\n\
+          </li>\n<li>\n<p>Substituting place-holders in the input files with the real\
+          \ values</p>\n</li>\n<li>\n<p>What to do in case the job fails.</p>\n</li>\n\
+          </ul>\n<p>Task operations are typically location\ndependent.\_<strong>copy</strong>\_\
+          and\_<strong>execute</strong>\_directives must specify where the\noperation\
+          \ should be performed or where the file locations are while\ncopying. This\
+          \ is done by using\_<strong>node:</strong>\_or\_<strong>root:</strong>\_\
+          modifiers.</p>\n<ul>\n<li>\n<p><strong>node:</strong>\_indicates remote\
+          \ location for the operation. In case\n    of\_<strong>copy</strong>\_operation\
+          \ it indicates that the file resides on remote\n    machine, while in case\
+          \ of <strong>execute</strong>\_command it indicates that the\n    executable\
+          \ should be run on the remote server.</p>\n</li>\n<li>\n<p><strong>root:</strong>\_\
+          on the other hand indicates that files are on the same\n    machine where\
+          \ Nimrod/G is running, and that\_<strong>execute</strong>\_command that\n\
+          \    executables are to be run on that same machine, and not on the\n  \
+          \  remote server. Please note that\_<strong>root:execute</strong>\_can only\
+          \ be\n    executed in\_<strong>rootstart</strong>\_and\_<strong>rootfinish</strong>tasks.</p>\n\
+          </li>\n</ul>\n<p><strong>NOTE</strong>: In a typical parameter sweep all\
+          \ program invocations will\noccur on computational nodes and hence the main\
+          \ task will only use\n<strong>node:execute</strong>.</p>\n<p>Following is\
+          \ a more thorough description of the task operations:</p>\n<ul>\n<li>\n\
+          <strong>copy</strong>\_- this operation is used to copy both input and\n\
+          \    &gt; output files. Syntax for this operations is as follows:</li>\n\
+          </ul>\n<blockquote>\n<p>copy &lt;source&gt; &lt;destination&gt;</p>\n<p>For\
+          \ example if you are copying input file to a remote location:</p>\n<p>copy\
+          \ root:input.txt node:input.txt</p>\n<p>And if you are copying output file\
+          \ back to the server where Nimrod/G\nis running:</p>\n<p>copy node:result.txt\
+          \ root:result.txt</p>\n</blockquote>\n<ul>\n<li>\n<strong>execute</strong>\_\
+          - this operation is used to execute some executable. The\n    syntax for\
+          \ this operatio is:</li>\n</ul>\n<blockquote>\n<p>node:execute &lt;user_command&gt;</p>\n\
+          <p><strong>user_command</strong>\_is passed to shell (<strong>/bin/sh</strong>),\
+          \ so it can contain\nshell constructs (redirection like &gt;, &gt;&gt; etc).</p>\n\
+          <p>For example if we wanted to execute\_<strong>hostname</strong>\_command\
+          \ and redirect\nits output into a file called\_<strong>hostname.txt</strong>\_\
+          this is what\nthe\_<strong>execute</strong>operation would look like:</p>\n\
+          <p>node:execute /bin/hostname &gt; hostname.txt</p>\n</blockquote>\n<ul>\n\
+          <li><strong>onerror\_- this operation indicates how Nimrod/G should behave\
+          \ in\n    case some part of the job fails. It has a scope which is from\
+          \ the\n    point it appears until another\_onerror\_statement is found.\
+          \ The\n    syntax for this operation is:</strong></li>\n</ul>\n<blockquote>\n\
+          <p>onerror &lt;option&gt;</p>\n<p>Valid options are:</p>\n</blockquote>\n\
+          <ul>\n<li>\n<p><strong>fail</strong>\_- fail the job. This is the default\
+          \ behaviour and will be\n    &gt; used even if\_<strong>onerror</strong>\_\
+          is never specified in the plan file</p>\n</li>\n<li>\n<p><strong>ignore</strong>\_\
+          - ignore the error and proceed with the task, ie. move\n    &gt; onto the\
+          \ next line in the plan file and continue executing it.</p>\n</li>\n</ul>\n\
+          \n\n<ul>\n<li>\n<strong>substitute</strong>\_- Nimrod/G allows can use skeleton\
+          \ input file for\n    &gt; their experiments. This skeleton input file may\
+          \ contain\n    &gt; placeholders in it that are to be substituted by the\
+          \ actual\n    &gt; parameter values before the execution begins.</li>\n\
+          </ul>\n<blockquote>\n<p>This operation is used to replace the parameter\
+          \ placeholders in input\nfile with a job parameter value. The syntax of\
+          \ this operation is:</p>\n<p>substitute &lt;source&gt; &lt;destination&gt;</p>\n\
+          <p>Both source and destination require neither 'node:' nor 'root:' in\n\
+          front of them, i.e. they are just plain filenames. For example, this\ncould\
+          \ be a main task of a plan file:</p>\n<p>task main</p>\n<p>copy input.skeleton\
+          \ node:.</p>\n<p>substitute input.skeleton input.txt</p>\n<p>node:execute\
+          \ ./process.sh input.txt &gt; result.txt</p>\n<p>copy node:result.txt .</p>\n\
+          <p>endtask</p>\n</blockquote>\n<h4>Creating Experiments</h4>\n<p>Nimrod/G\
+          \ stores experiments in a specific location in user's home\ndirectory:</p>\n\
+          <blockquote>\n<p>$HOME/.nimrod/experiments/</p>\n</blockquote>\n<p>Each\
+          \ experiment will have a dedicated subdirectory in that location that\n\
+          matches experiment name. For example:</p>\n<ul>\n<li>\n<p>Experiment named\_\
+          <strong>demo</strong>\_will be\n    &gt; in\_<strong>$HOME/.nimrod/experiments/demo/</strong></p>\n\
+          <ul>\n<li>\n<p>Plan file called\_<strong>demo.pln</strong>\_will be in that\
+          \ directory</p>\n</li>\n<li>\n<p>All files related to that experiment will\
+          \ also be location in\n    &gt; that directory</p>\n</li>\n</ul>\n</li>\n\
+          </ul>\n<p>In order to create experiment execute the following steps:</p>\n\
+          <ol>\n<li>\n<p>Create a plan file following instructions from the previous\
+          \ section.\n    &gt; Lets assume we create a plan file called\_<strong>demo.pln</strong></p>\n\
+          </li>\n<li>\n<p>Create an experiment directory:</p>\n</li>\n</ol>\n<blockquote>\n\
+          <p>$ mkdir -p $HOME/.nimrod/experiments/demo</p>\n</blockquote>\n<ol>\n\
+          <li>\n<p>Place the\_demo.pln\_file in that directory</p>\n</li>\n<li>\n\
+          <p>Create a file containing all possible parameter combinations:</p>\n</li>\n\
+          </ol>\n<blockquote>\n<p>nimrod generate demo.pln</p>\n</blockquote>\n<ol>\n\
+          <li>Add the experiment to the Nimrod/G database:</li>\n</ol>\n<blockquote>\n\
+          <p>nimrod create demo</p>\n</blockquote>\n<h4>Assign Resources to Experiments</h4>\n\
+          <p>In section\_Resource Management\_we added compute resources to the\n\
+          database. In order for them to be used by an experiment they have to be\n\
+          assigned to that experiment. The syntax for adding resources to\nexperiments\
+          \ is as follows:</p>\n<blockquote>\n<p>nimrod addserver &lt;exp_name&gt;\
+          \ &lt;resource_details&gt;\n&lt;resource_type&gt;</p>\n</blockquote>\n<p>Resource\
+          \ type and resource details are exact same details that were used\nwhen\
+          \ resources were added to database. An example of adding a PBS\nresource\
+          \ to a demo experiment can be seen below:</p>\n<blockquote>\n<p>nimrod addserver\
+          \ demo workq@localhost pbs</p>\n</blockquote>\n<h4>Launching Nimrod/G</h4>\n\
+          <p>With experiments defined and configured Nimrod/G can be launched. The\n\
+          syntax for this command is as follows:</p>\n<blockquote>\n<p>nimrod startexp\
+          \ &lt;exp_name&gt;</p>\n</blockquote>\n<p>For example, to start the experiment\
+          \ called\_demo\_run:</p>\n<blockquote>\n<p>nimrod startexp demo</p>\n</blockquote>\n\
+          <h3>Using Nimrod/K</h3>\n<p>Nimrod/K extends\_Kepler by adding parameter\
+          \ tools and grid/cloud\nservices and by providing dynamic parallelism in\
+          \ workflows. As such\nNimrod/K functionality is simply used by adding the\
+          \ Nimrod/K director\nand Nimrod/K actors to Kepler workflows.</p>\n<h3>Using\
+          \ Nimrod/O</h3>\n<p>A comprehensive manual for Nimrod/O can be downloaded\
+          \ from:</p>\n<p><a href=\"http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&amp;upname=NimrodOUsersGuide3.1.pdf\"\
+          >http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&amp;upname=NimrodOUsersGuide3.1.pdf</a>.</p>\n\
+          <p>It contains information on how to launch Nimrod/O.</p>\n<h2>Resource\
+          \ Requirements</h2>\n<p>Nimrod Toolkit runs on Unix based platforms only,\
+          \ which includes all\nflavours of Linux as well as Mac OS X. However, Nimrod\
+          \ Portal component\nis browser based which allows users of all platforms\
+          \ (including Windows)\nto access Nimrod and execute computational experiments\
+          \ through any\nbrowser.</p>\n<ul>\n<li>\n<p>Software Requirements:</p>\n\
+          <ul>\n<li>\n<p>Python \u2013 version 2.5 or higher</p>\n</li>\n<li>\n<p>PostgreSQL\
+          \ \u2013 version 8.4 or higher</p>\n</li>\n</ul>\n</li>\n<li>\n<p>Operating\
+          \ System Requirements</p>\n<ul>\n<li>\n<p>Linux</p>\n</li>\n<li>\n<p>Mac\
+          \ OS X</p>\n</li>\n</ul>\n</li>\n</ul>\n<p>Nimrod/O can run in standalone\
+          \ mode, in which case Nimrod/G is not\nrequired. However in standalone mode\
+          \ Nimrod/O loses the ability to run\nits jobs on distributed clusters and\
+          \ computational grid resources.\nFor distributing jobs, Nimrod/G 4.0 or\
+          \ higher required</p>\n<p>Similar to Nimrod/O, Nimrod/K can run as a standalone\
+          \ application, in\nwhich case Nimrod/G is not required. When running in\
+          \ standalone mode\nNimrod/K can be installed and used on Windows machines.</p>\n\
+          <h3>Compute Resources</h3>\n<p>Nimrod allows computational researchers to\
+          \ use a mixture of\nuniversity-level infrastructure and commercial clouds.\
+          \ For beginners,\nusers can trial their Nimrod experiments using the Nimrod_Portal[^1]\n\
+          resource pool. Users are encouraged to bring their own compute resources\n\
+          (e.g. cluster, cloud allocation) to use with Nimrod. Please contact Minh\n\
+          Dinh and Hoang Anh Nguyen regarding adding new remote compute resources\n\
+          to their experiments.</p>\n<h2>Nimrod Portal</h2>\n<p>A web service for\
+          \ using Nimrod/G. Nimrod portal provides a web interface\nfor users to use\
+          \ Nimrod and its resources. Users can create Nimrod/G\nexperiments without\
+          \ installing Nimrod toolkit on their local system.\nThis allows users develop,\
+          \ execute, maintain and share Nimrod parameter\nsweep experiments.</p>\n\
+          <h3>Installation</h3>\n<p>Nimrod portal consists of two components: a RESTful\
+          \ Web service and a\nWeb portal. The RESTful service is to expose Nimrod\
+          \ functionality to the\nWeb and the Web portal provides user-friendly interface\
+          \ to the users.</p>\n<p>The installation process requires two steps: installation\
+          \ of the Web\nservice and installation of the Web portal. This two-step\
+          \ process takes\nplace in two separate VMs. Nimrod needs to be installed\
+          \ in the Web\nservice VM.</p>\n<h4>Install Nimrod Web service</h4>\n<p>The\
+          \ Web service is currently available at:\n<a href=\"https://bitbucket.org/jhtngu/nimrod.webservice\"\
+          >https://bitbucket.org/jhtngu/nimrod.webservice</a>.</p>\n<p>This is not\
+          \ a public repository. Please email <a href=\"mailto:hoangnguyen177@gmail.com\"\
+          >hoangnguyen177@gmail.com</a>\nto gain access.</p>\n<ul>\n<li>Once clone\
+          \ the repository, modify the buildout.cfg as followed</li>\n</ul>\n<blockquote>\n\
+          <p>[sources]</p>\n<p>Nimrodrestapi = git\nhttps://yournamehere@bitbucket.org/jhtngu/nimrod.restfulweb.git\n\
+          branch=addresources</p>\n<p>nimrodrpcdaemon = git https:// yournamehere\n\
+          @bitbucket.org/jhtngu/nimrod.rpcdaemon.git branch=addresources</p>\n</blockquote>\n\
+          <ul>\n<li>\n<p>Execute \u201Cpython bootstrap.py\u201D to setup the environment.\
+          \ This\n    requires setuptools installed.</p>\n</li>\n<li>\n<p>Execute\
+          \ \u201C./bin/buildout\u201D to clone and install necessary packages,\n\
+          \    including Nimrod Web service.</p>\n</li>\n<li>\n<p>Install any missing\
+          \ dependencies as suggested by the build process.</p>\n</li>\n<li>\n<p>Modify\
+          \ configuration files in the \u201Cetc\u201D folder accordingly.</p>\n</li>\n\
+          </ul>\n<h4>Install the Web portal</h4>\n<ul>\n<li>\n<p>Install Liferay 6.1\n\
+          \    (<a href=\"http://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.1.1%20GA2/\"\
+          >http://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.1.1%20GA2/</a>).\n\
+          \    The recommended location is: /var/www.</p>\n</li>\n<li>\n<p>Follow\
+          \ Liferay instructions to install with Postgres DB\n    (<a href=\"https://www.liferay.com/community/wiki/-/wiki/Main/Quick+Installation+Instructions\"\
+          >https://www.liferay.com/community/wiki/-/wiki/Main/Quick+Installation+Instructions</a>)</p>\n\
+          </li>\n<li>\n<p>Go to Liferay market and install Private Plugin Installer\n\
+          \    (<a href=\"https://www.liferay.com/marketplace/-/mp/application/15474932\"\
+          >https://www.liferay.com/marketplace/-/mp/application/15474932</a>)</p>\n\
+          </li>\n<li>\n<p>Install Vaadin into Liferay\n    (<a href=\"https://vaadin.com/wiki/-/wiki/Main/Integrating+Vaadin+7+with+Liferay\"\
+          >https://vaadin.com/wiki/-/wiki/Main/Integrating+Vaadin+7+with+Liferay</a>)</p>\n\
+          </li>\n<li>\n<p>Install Nimrod portlets, which are available at:\n    <a\
+          \ href=\"https://bitbucket.org/hoangnguyen177/nimrodportal2\">https://bitbucket.org/hoangnguyen177/nimrodportal2</a>.\
+          \ Or contact\n    <a href=\"mailto:hoangnguyen177@gmail.com\">hoangnguyen177@gmail.com</a>\
+          \ for compiled version.</p>\n</li>\n<li>\n<p>Install Nimrod portlets</p>\n\
+          </li>\n</ul>\n<h4>Configure the portal and the Web service VM</h4>\n<p>From\
+          \ NeCTAR dashboard, make sure the port of the Web service (8081 by\ndefault)\
+          \ is accessible by the Web portal and Nimrod ports (40000 -\n41000) are\
+          \ accessible by all.</p>\n<h3>Launch</h3>\n<p>Launch the Web portal first:</p>\n\
+          <blockquote>\n<p>cd /var/www/liferay-portal-xxxx/tomcat-xxx/bin; sudo ./startup.sh</p>\n\
+          </blockquote>\n<p>Then launch the Web service:</p>\n<blockquote>\n<p>cd\
+          \ \\~/nimrod.webservice/bin; ./supervisord;</p>\n</blockquote>\n<h3>Plan\
+          \ file web editor</h3>\n<p>Instead of using a text editor, the Nimrod Portal\
+          \ provides a simple\nfriendly GUI for users to develop plan file for Nimrod/G\
+          \ experiments.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/nimrod_qcif1.png?raw=true\"\
+          ></p>\n<h2>How to access it</h2>\n<p>Interested users can register for an\
+          \ account using their AAF credential\nat the following page (will need to\
+          \ be updated later):\n<a href=\"http://vm-203-101-224-118.qld.nectar.org.au/\"\
+          >http://vm-203-101-224-118.qld.nectar.org.au/</a></p>\n<p>The portal provides\
+          \ a friendly web interface for users to define,\nexecute and monitor their\
+          \ experiments. For users who have existing\nNimrod experiments, they can\
+          \ upload the plan files. User can also create\nnew experiments using a simple\
+          \ GUI. Input and output files can be\nuploaded and downloaded using the\
+          \ web interface. For technical supports\nand learning to use Nimrod, please\
+          \ contact Minh Dinh and/or Hoang Anh\nNguyen.</p>\n<h2>Configuration guide</h2>\n\
+          <h3>Configuring Nimrod/G</h3>\n<p>Nimrod/G installation comes with two configuration\
+          \ files, both located\nin\_<strong>$NIMROD_INSTALL</strong>\_directory:</p>\n\
+          <ul>\n<li>\n<p><strong>nimrod.cfg</strong>\_- Configuration values contained\
+          \ within can be\n    overridden by a user level configuration file of the\
+          \ same name,\n    which may be located in $HOME/.nimrod/ directory, or by\
+          \ an\n    immutable configuration file described below.</p>\n</li>\n<li>\n\
+          <p><strong>nimrod.immutable.cfg</strong>\_- Configuration values contained\
+          \ within\n    will override any other configuration, either user or system\
+          \ level.</p>\n</li>\n</ul>\n<p>Most of the configuration values can be left\
+          \ as is but some may be\nchanged to match the system requirements.</p>\n\
+          <p>Each configuration file may contain following sections:</p>\n<ul>\n<li>\n\
+          <p><strong>email</strong>\_- used to configure email settings. This is used\
+          \ to report\n    experiment completion.</p>\n</li>\n<li>\n<p><strong>nimserver</strong>\_\
+          - configures Nimrod/G component called Nimrod Server.\n    Nimrod/G uses\
+          \ executables called\_<strong>Agents</strong>\_to execute jobs on\n    remote\
+          \ resources.\_<strong>Agents</strong>\_use Nimrod Server to communicate\
+          \ with\n    database as well as to copy files to and from remote locations.</p>\n\
+          </li>\n</ul>\n<blockquote>\n<p>Most of the configuration can be left as\
+          \ is. It is important however\nto ensure that\_<strong>default_port_range</strong>\_\
+          configuration value has a\nrange of ports that can be reached by outside\
+          \ networks. When it\nstarts,\_<strong>Nimrod Server</strong>\_will select\
+          \ a first available port from that\nrange and will use that to listen for\
+          \ incoming connectinos\nfrom\_<strong>Agents</strong>. If the port it selects\
+          \ is unreachable, no jobs will\nrun.</p>\n<p>For example (port will be selected\
+          \ anywhere between 30000 and 31000\ninclusive):</p>\n<p>nimserver: {</p>\n\
+          <p>default_port_range: '30000,31000'</p>\n<p>key_path: $user_dir + '.nimserver'</p>\n\
+          <p>remote_suffix: $remote_suffix</p>\n<p>remote_key_fname: '.nimserver'\
+          \ + $nimserver.remote_suffix + '.pub'</p>\n<p>port_path: $user_dir + '.nimport'\
+          \ + $nimserver.remote_suffix</p>\n<p>remote_port_fname: '.nimport' + $nimserver.remote_suffix</p>\n\
+          <p>}</p>\n</blockquote>\n<ul>\n<li>\n<p><strong>actuator</strong>\_- configures\
+          \ resource actuators, components that\n    control how resources are used.\
+          \ It can be used to change how often\n    actuators poll database to see\
+          \ if there are any work they need\n    to do. Configuration can apply to\
+          \ actuators for all resource types,\n    but can also only apply to a specific\
+          \ resource type.</p>\n</li>\n<li>\n<p><strong>azure</strong>\_- configure\_\
+          <strong>azure</strong>\_resource settings. Can be left\n    as is.</p>\n\
+          </li>\n<li>\n<p><strong>ec2</strong>\_- configures\_<strong>ec2</strong>\_\
+          resource settings. Can be left as is</p>\n</li>\n<li>\n<p><strong>generate</strong>\_\
+          - configures\_<strong>generate</strong>\_subcommand. This subcommand\n \
+          \   is used to parse the plan file and create another files that\n    contains\
+          \ a cross-product of all parameters. Some of the settings\n    include limits\
+          \ on how many jobs single experiment can have, or how\n    long a parameter\
+          \ name can be.</p>\n</li>\n</ul>\n<blockquote>\n<p>For example:</p>\n<p>generate:\
+          \ {</p>\n<p>max_jobs: 100000</p>\n<p>param_len_limit: 56</p>\n<p>}</p>\n\
+          </blockquote>\n<h3>Configuring Nimrod/K</h3>\n<p>There is no Nimrod/K specific\
+          \ configuration.</p>\n<h3>Configuring Nimrod/O</h3>\n<p>A comprehensive\
+          \ manual for Nimrod/O can be downloaded from:</p>\n<p><a href=\"http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&amp;upname=NimrodOUsersGuide3.1.pdf\"\
+          >http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&amp;upname=NimrodOUsersGuide3.1.pdf</a>.</p>\n\
+          <p>It contains information on how to configure Nimrod/O.</p>\n<h2>Technical\
+          \ blueprint</h2>\n<p>To date, Nimrod tools are deployed through several\
+          \ Nimrod portals\nstationed at Monash University, Griffith University and\
+          \ The University\nof Queensland. These portals provide the machinery to\
+          \ automate the tasks\nof formulating complex experiments and workflows,\
+          \ and execute them\nacross a variety of computing resources including NecTAR\
+          \ VMs. In\nparticular, we ran several projects to test the migration of\
+          \ scientific\nsoftware to HPC platforms, including the NeCTAR research cloud,\
+          \ to\nprovide enhanced utility for the following research projects.</p>\n\
+          <h3>Terrestrial Ecosystem Research Network (TERN)</h3>\n<p>Supporting the\
+          \ creation and execution of sensory data analysis using\nNimrod portal to\
+          \ access available computing resources in the NecTAR\ncloud.</p>\n<p><img\
+          \ alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/nimrod_qcif2.png?raw=true\"\
+          ></p>\n<h3>CVL Symmetric Model Creation</h3>\n<p>Coupling Nimrod to perform\
+          \ expensive computations efficiently and\nintegrating visualization library\
+          \ to enable examination of intermediate\nmodels.</p>\n<p><img alt=\"\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/nimrod_qcif3.png?raw=true\"\
+          ></p>\n<h3>MARXAN</h3>\n<p>Coupling the MARXAN web portal with Nimrod to\
+          \ provide access to HPC and\ncloud resources.</p>\n<p><img alt=\"\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/nimrod_qcif4.png?raw=true\"\
+          ></p>\n<h2>Troubleshooting</h2>\n<p>There are multiple points of failure\
+          \ that are possible when running\nNimrod/G experiments:</p>\n<ul>\n<li>Problem\
+          \ with executables (applications) that Nimrod/G is trying to\n    execute</li>\n\
+          </ul>\n<blockquote>\n<p>These will be reported back to database. In scenario\
+          \ like this is\nhighly possible that all jobs will fail because of it. However\
+          \ the\nproblem can be environmental in which case it will only fail on a\n\
+          particular resource or even a particular machine on that resource.</p>\n\
+          </blockquote>\n<ul>\n<li>Problem with remote machines where Nimrod Agents\
+          \ are running</li>\n</ul>\n<blockquote>\n<p>These kind of problems occur\
+          \ when a particular machine on a\ncomputational resource is not working\
+          \ correctly. There are many\nreasons this may occur, which includes missing\
+          \ libraries, faulty\nhardware etc.</p>\n<p>If the agents manage to start\
+          \ then these are easy to identify. Nimrod\nAgents will fail the jobs and\
+          \ record which host the job failed on.\nListing failed jobs, and seeing\
+          \ that all failed on a particular host\nwill indicate a problem with that\
+          \ host.</p>\n</blockquote>\n<ul>\n<li>Firewall issues preventing Nimrod\
+          \ Agents connecting back to Nimrod\n    Server</li>\n</ul>\n<blockquote>\n\
+          <p>If Agents are perpetually stuck in\_<strong>pending/queued</strong>\_\
+          state, it\nusually indicates that they cannot connect back to Nimrod Server.\
+          \ One\nreason is that there is a faulty host and\_<strong>Agents</strong>\_\
+          never start, and\nsecond reason is that firewall on either host is preventing\n\
+          those\_<strong>Agents</strong>\_connections.</p>\n</blockquote>\n<p>There\
+          \ are number of commands that can be executed to collect information\nthat\
+          \ may help identify the issue:</p>\n<ol>\n<li>Get reported errors</li>\n\
+          </ol>\n<blockquote>\n<p>$ nimrod geterrors &lt;exp_name&gt;</p>\n</blockquote>\n\
+          <ol>\n<li>Check if there are any agents running on resources</li>\n</ol>\n\
+          <blockquote>\n<p>$ nimrod getagents &lt;exp_name&gt;</p>\n<p>Output returns\
+          \ a list of resources where each line has the resource\nname and agent information\
+          \ in following order:</p>\n</blockquote>\n<ul>\n<li>\n<p>Agents that have\
+          \ stopped running (cleanly)</p>\n</li>\n<li>\n<p>Agents that are still running</p>\n\
+          </li>\n<li>\n<p>Agents that have been submitted to a remote queue</p>\n\
+          </li>\n<li>\n<p>Agents that have been created in database, but not submitted\
+          \ to a\n    remote queue</p>\n</li>\n<li>\n<p>Agents that have failed to\
+          \ start. Some agents may fail to start but\n    won't be reported here.\
+          \ This will occur if firewall is blocking\n    the connections.</p>\n</li>\n\
+          <li>\n<p>Check the progress of experiment and see if there any failed jobs:</p>\n\
+          </li>\n</ul>\n<blockquote>\n<p>$ nimrod enfapi &lt;exp_name&gt; jobstatus</p>\n\
+          </blockquote>\n<ol>\n<li>If there are failed jobs, get errors for all failed\
+          \ jobs:</li>\n</ol>\n<blockquote>\n<p>$ nimrod enfapi &lt;exp_name&gt; getjobinfo\
+          \ all error</p>\n</blockquote>\n<h2>Support</h2>\n<h3>Administration</h3>\n\
+          <p>Please contact Hoang Anh Nguyen or Minh Dinh for the Nimrod Portal</p>\n\
+          <h3>Technical Support</h3>\n<p>All queries regarding the for the Nimrod\
+          \ Portal and WorkWays portal,\nplease contact Hoang Anh Nguyen or Minh Dinh</p>\n\
+          <h3>Learning to use Nimrod or integrating Nimrod into your internal service</h3>\n\
+          <p>Please contact Minh Dinh regarding learning to use Kepler and Nimrod.\n\
+          For consultation on how Kepler and Nimrod can be applicable for specific\n\
+          research fields, please contact Minh Dinh.</p>\n<h2>Contact</h2>\n<p>Dr\
+          \ Minh Dinh</p>\n<p>QCIF - eResearch Analyst</p>\n<p>Reserch Fellow - Research\
+          \ Computing Center (RCC)</p>\n<p>Email: <a href=\"mailto:m.dinh1@uq.edu.au\"\
+          >m.dinh1@uq.edu.au</a></p>\n<p>Mr Hoang Anh Nguyen</p>\n<p>Email: <a href=\"\
+          mailto:hoangnguyen177@gmail.com\">hoangnguyen177@gmail.com</a></p>\n<h2>Glossary\
+          \ of Terms</h2>\n<p>[^1]: Nimrod_Portal is a Nectar allocation that consists\
+          \ of up 120\n    compute cores. It is designated for deploying Nimrod services\
+          \ and\n    conducting Nimrod runs. It is an independent testbed for new\
+          \ users\n    to trial Nimrod and its tools</p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000095294
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-12-07T20:00:50-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000095294
+        position: 14
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: QCIF Nimrod
+        updated_at: '2015-12-07T20:00:50-05:00'
+        user_id: 6002464727
+  html: "<h1>Nimrod toolkit for high throughput computing in the cloud</h1>\n<h2>Introduction</h2>\n\
+    <p>The Nimrod tool family facilitates high-throughput science by allowing\nresearchers\
+    \ to use computational models to explore complex design\nspaces. Models can be\
+    \ executed across changing input parameters.\nDifferent members of the tool family\
+    \ support complete and partial\nparameter sweeps, numerical search by non-linear\
+    \ optimisation, and even\nworkflows. Further, Nimrod allows computational researchers\
+    \ to use a\nmixture of university-level infrastructure and commercial clouds.</p>\n\
+    <p>There are several \u2018flavours\u2019 of Nimrod. Which Nimrod you choose to\
+    \ use,\neither singly, or in combination, will depend on the kind of experiment\n\
+    you want to run.</p>\n<h3>Nimrod/G</h3>\n<p>Nimrod/G can directly execute large-scale\
+    \ distributed parameter sweep\nand Monte-Carlo computational experiments. It provides\
+    \ a simple means to\ndramatically scale-up your computational experiments. Each\
+    \ experiment\ncan run over an aggregated ad-hoc computational grid/pool/cloud;\
+    \ start\nfrom your desktop, local server or cluster; add grid resources (e.g.\n\
+    clusters and Condor pools); overflow to pay-as-go cloud services and\ncontrol\
+    \ your budget with Nimrod/G's economic scheduling capabilities.</p>\n<h3>Nimrod/K</h3>\n\
+    <p>Nimrod/K is built on Kepler using Kepler\u2019s runtime engine Ptolemy. It\n\
+    extends Kepler by adding parameter tools and grid/cloud services and by\nproviding\
+    \ dynamic parallelism in workflows.</p>\n<p>It uses a dataflow execution model\
+    \ that was originally developed for\nhighly parallel dataflow computers in the\
+    \ 1980\u2019s, and this provides an\nextremely rich execution mechanism. It leverages\
+    \ a number of the\ntechniques developed in the earlier Nimrod tools for distributing\
+    \ tasks\nto the Grid.</p>\n<h3>Nimrod/O</h3>\n<p>Provides an optimisation framework\
+    \ for optimising a target output value\nof an application. It allows a user to\
+    \ run an arbitrary computational\nmodel as the core of a non-linear optimization\
+    \ process. Nimrod/O allows\na user to specify the domain and type of parameters\
+    \ to the model, and\nalso a specification of which output variable is to be minimized\
+    \ or\nmaximized. Accordingly, a user can formulate a question like: what\nparameter\
+    \ settings will minimize the model output? Nimrod/O currently\nemploys a number\
+    \ of built-in optimization algorithms:</p>\n<ul>\n<li>\n<p>BFGS</p>\n</li>\n<li>\n\
+    <p>Simplex</p>\n</li>\n<li>\n<p>Divide and Conquer</p>\n</li>\n<li>\n<p>Simulated\
+    \ Annealing.</p>\n</li>\n</ul>\n<p>Jobs can be executed on a variety of platforms,\
+    \ which when combined with\nNimrod/G includes distributed clusters and Computational\
+    \ Grid resources.</p>\n<h2>Target Audience</h2>\n<p>The following research activities\
+    \ can benefit from using Nimrod.</p>\n<ol>\n<li>\n<p>You need to run your computational\
+    \ model many times and average the\n    results because the model is stochastic.\
+    \ These types of Monte Carlo\n    simulations are greatly facilitated by Nimrod/G.\
+    \ It will generate\n    multiple jobs, furnishing them with different random number\
+    \ seeds\n    and execute them concurrently on the grid.</p>\n</li>\n<li>\n<p>You\
+    \ wish to explore the effect of varying the inputs to your model.\n    Inputs\
+    \ may be in the form of command line parameters or of values in\n    some input\
+    \ file; in Nimrod these are both called parameters. Either\n    way Nimrod/G will\
+    \ let you specify values for each parameter, will\n    generate the jobs for all\
+    \ possible combinations of these values and\n    execute the jobs on the Grid.</p>\n\
+    </li>\n<li>\n<p>You wish to explore the effect of input parameters but for certain\n\
+    \    combinations are not allowed. There are several possible ways to\n    do\
+    \ this. If the disallowed combinations give jobs that quickly fail\n    then you\
+    \ may schedule all possible combinations and let those bad\n    jobs fail. However,\
+    \ if those jobs will use substantial resources\n    then it would be better to\
+    \ filter them out first. This can be done\n    in Nimrod/G by processing the run\
+    \ file. Alternatively Nimrod/O may\n    be used in sweep mode as it provides the\
+    \ functionality to add\n    formulas for constraints on the parameters.</p>\n\
+    </li>\n<li>\n<p>You are running several different experiments. They may produce\
+    \ some\n    jobs with the same inputs and you don't want to waste resources\n\
+    \    duplicating these jobs. Nimrod/O can be invoked with a persistent\n    cache\
+    \ shared by the experiments, so avoiding duplications.</p>\n</li>\n<li>\n<p>You\
+    \ wish to find the combination of input parameters that produce an\n    optimal\
+    \ output. Nimrod/O allows you to specify the inputs that vary,\n    any constraints\
+    \ on those inputs, and the output to be maximized\n    or minimized. It offers\
+    \ a selection of search methods for finding\n    the optimum. Multiple searches,\
+    \ perhaps using different optimization\n    methods, may be run in parallel.</p>\n\
+    </li>\n<li>\n<p>You want to find the inputs that generate the best output. Nimrod/O\n\
+    \    allows optimization where human input may be used to assess the\n    quality\
+    \ of an output. This is especially useful for complex outputs\n    such as images\
+    \ or animations.</p>\n</li>\n<li>\n<p>There are several aspects of your model\
+    \ output that you wish\n    to optimize. Nimrod/O is currently being modified\
+    \ to facilitate such\n    multi-objective optimization.</p>\n</li>\n<li>\n<p>You\
+    \ wish to perform multiple optimizations on the output of your\n    model, one\
+    \ optimization for each combination of some\n    parameter settings. This can\
+    \ be done using Nimrod/G to sweep over\n    the setting and having it call Nimrod/O\
+    \ to do each optimization.</p>\n</li>\n<li>\n<p>You wish to run your model in\
+    \ reverse. In other words you want to\n    find the input values that will produce\
+    \ a given output. Nimrod/O is\n    commonly used for this task. You need to have\
+    \ a way of measuring the\n    discrepancy between your output and the desired\
+    \ one. Then run an\n    optimization to minimize this discrepancy.</p>\n</li>\n\
+    <li>\n<p>You have developed your own optimization method. You wish to use the\n\
+    \    method, taking advantage of the distributed execution of jobs and\n    the\
+    \ caching supplied in Nimrod/O.</p>\n</li>\n<li>\n<p>Different parts of your model\
+    \ need to run on different machines\n    because of data files perhaps or licence\
+    \ requirements. Nimrod/G can\n    schedule such workflow experiments and perform\
+    \ the appropriate\n    communication between the parts. Where possible a downstream\n\
+    \    component may start processing its input file before an upstream\n    component\
+    \ has completed that file.</p>\n</li>\n<li>\n<p>Some of your model executions\
+    \ require prior execution of\n    other models. Nimrod/G can handle such dependencies.</p>\n\
+    </li>\n</ol>\n<h2>How to install</h2>\n<p>Nimrod allows computational researchers\
+    \ to use a mixture of\nuniversity-level infrastructure and commercial clouds.</p>\n\
+    <p>Users can trial their Nimrod experiments using the Nimrod Portal\nresource\
+    \ pool. Users are encouraged to bring their own compute resources\n(e.g. cluster,\
+    \ cloud allocation) to use with Nimrod. Please contact Minh\nDinh and Hoang Anh\
+    \ Nguyen regarding adding new remote compute resources\nto their experiments.</p>\n\
+    <p>Users can still opt to install Nimrod Toolkit on their local system,\nprovided\
+    \ that system meets the software and operating system\nrequirements outlined in\
+    \ the Resource Requirements section. If the user\nchooses to do that, here are\
+    \ step by step procedures for installing\nindividual Nimrod Toolkit.</p>\n<h3>Installing\
+    \ Nimrod/G</h3>\n<p>Users must executed the following steps to install Nimrod/G:</p>\n\
+    <ol>\n<li>\n<p>Download Nimrod/G source distribution</p>\n</li>\n<li>\n<p>Setup\
+    \ Nimrod/G environment</p>\n</li>\n<li>\n<p>Create experiments directory</p>\n\
+    </li>\n<li>\n<p>Install Nimrod/G</p>\n</li>\n<li>\n<p>Setup Nimrod/G database</p>\n\
+    </li>\n</ol>\n<h4>Download Nimrod/G Distribution</h4>\n<p>Download from following\
+    \ link:</p>\n<ul>\n<li>https://messagelab.monash.edu.au/Downloads</li>\n</ul>\n\
+    <p>Download the Nimrod/G source archive to your home directory, which\nshould\
+    \ create a file:</p>\n<ul>\n<li><strong>$HOME/nimrodg-[version].tar.gz</strong></li>\n\
+    </ul>\n<h4>Setup Nimrod/G Environment</h4>\n<p>We recommend editing your shell\_\
+    <strong>rc</strong>\_scripts\n(<strong>.profile</strong>\_or\_<strong>.bashrc</strong>\_\
+    or\_<strong>.cshrc</strong>, etc), or adding\nan\_<strong>/etc/profile.d/nimrod.sh</strong>\_\
+    script for system-wide installs.\nFor\_<strong>sh</strong>\_based shells you will\
+    \ need something like (paths should be\naltered as appropriate for your install/system):</p>\n\
+    <blockquote>\n<p>export NIMROD_INSTALL=$HOME/bin/nimrodg export\nNIMROD_DATABASE=pgsql-pool</p>\n\
+    <p>export PSQL_LOCATION=/usr/bin # in this case /usr/bin/psql should be\na valid\
+    \ path</p>\n<p>export PYTHONPATH=${NIMROD_INSTALL}/share/nimrod:${PYTHONPATH}\\\
+    \nexport PATH=${NIMROD_INSTALL}/bin:${PATH}</p>\n</blockquote>\n<h4>Create Experiments\
+    \ Directory</h4>\n<p>Nimrod/G keeps all the experiments it runs in a subdirectory\
+    \ of user's\nhome directory\_$HOME/.nimrod/experiments. Create that directory\
+    \ by\nexecuting the following command:</p>\n<blockquote>\n<p>$ mkdir -p $HOME/.nimrod/experiments</p>\n\
+    </blockquote>\n<h4>Install Nimrod/G</h4>\n<ol>\n<li>Decompress Nimrod/G source\
+    \ archive. Let\u2019s assume we downloaded a\n    source archive for Nimrod/G\
+    \ version 4.0.2:</li>\n</ol>\n<blockquote>\n<p>$ cd $HOME</p>\n<p>$ tar -zxvf\
+    \ nimrodg-4.0.2.tar.gz</p>\n</blockquote>\n<ol>\n<li>Configure and install Nimrod/G</li>\n\
+    </ol>\n<blockquote>\n<p>$ cd nimrodg-4.0.2</p>\n<p>$ ./configure --prefix=$NIMROD_INSTALL</p>\n\
+    <p>$ make; make install</p>\n</blockquote>\n<h4>Setup Nimrod/G Database</h4>\n\
+    <p>Nimrod/G runs on top of PostgreSQL relational database. Before anything\ncan\
+    \ be done, user must create a database which will be used by Nimrod/G.\nEach Nimrod/G\
+    \ user requires their own PostgreSQL database.</p>\n<ol>\n<li>As a PostgreSQL\
+    \ admin user create a PostgreSQL user. Must ensure\n    &gt; that the user can\
+    \ create databases (prompted during the process):</li>\n</ol>\n<blockquote>\n\
+    <p>$ createuser &lt;username&gt;</p>\n</blockquote>\n<ol>\n<li>As the user, create\
+    \ a database</li>\n</ol>\n<blockquote>\n<p>$ createdb</p>\n</blockquote>\n<ol>\n\
+    <li>As the user, populate that database with Nimrod/G database schema</li>\n</ol>\n\
+    <blockquote>\n<p>$ nimrod dbcreate</p>\n</blockquote>\n<h4>Platform and Version\
+    \ Specific Notes</h4>\n<ul>\n<li>Python 2.6</li>\n</ul>\n<blockquote>\n<p>To configure\
+    \ the Nimrod build files against Python2.6 (confirmed on\nUbuntu 10.04) it seems\
+    \ to be necessary to set LDFLAGS=-lm.</p>\n</blockquote>\n<ul>\n<li>Ubuntu 10.04</li>\n\
+    </ul>\n<blockquote>\n<p>To configure the Nimrod build files against the included\
+    \ Python2.6 on\nUbuntu 10.04 it seems to be necessary to set LDFLAGS=-lm.</p>\n\
+    </blockquote>\n<ul>\n<li>RHEL6</li>\n</ul>\n<blockquote>\n<p>Using the OS default\
+    \ Python (2.6) to install Nimrod may result in the\nmake install step failing\
+    \ to install 3rd party modules that are\npackaged with Nimrod, with an error message\
+    \ like:</p>\n<p>You are attempting to install a package to a directory that is\
+    \ not on\nPYTHONPATH and which Python does not read \".pth\" files from.</p>\n\
+    <p>This can be remedied by ensuring $NIMROD_INSTALL/share/nimrod is in\nyour $PYTHONPATH\
+    \ environment variable.</p>\n</blockquote>\n<h3>Installing Nimrod/K</h3>\n<p>Users\
+    \ must executed the following steps to install Nimrod/K:</p>\n<ol>\n<li>\n<p>Download\
+    \ Nimrod/K distribution</p>\n</li>\n<li>\n<p>Install Nimrod/K</p>\n</li>\n</ol>\n\
+    <h4>Download Nimrod/K Distribution</h4>\n<p>This can be done by following Nimrod/K\
+    \ link at:</p>\n<ul>\n<li>https://messagelab.monash.edu.au/Downloads</li>\n</ul>\n\
+    <p>Download the Nimrod/K distribution to your home directory which should\ncreate\
+    \ a file:</p>\n<ul>\n<li>$HOME/nimrodk-[version].jar</li>\n</ul>\n<h4>Steps to\
+    \ install Nimrod/K</h4>\n<p>For the purposes of this installation guide, we will\
+    \ assume that the\nversion we are working on is 2.0.0. Nimrod/K major version\
+    \ number will\nalways follow Kepler's major version number so version 2.0.0 means\
+    \ that\nthis version of Nimrod/K will work with latest version of Kepler with\n\
+    major version number</p>\n<p>Nimrod/K jar file has following install options:</p>\n\
+    <blockquote>\n<p>options:</p>\n<p>--help|-h -- print this message</p>\n<p>--acceptlicense|-a\
+    \ -- accept Nimrod/K license without prompting. If\nomitted user will be</p>\n\
+    <p>given a choice (declining will stop the installation).</p>\n<p>--prefix=&lt;path&gt;\
+    \ -- set a location of where all Nimrod/K modules\nare installed (eg. \u2013</p>\n\
+    <p>prefix=/usr/local/kepler/2.4/lib). If omitted it will prompt for</p>\n<p>the\
+    \ prefix</p>\n<p>--keplerversion=&lt;major version number&gt; -- set a kepler\
+    \ version\n(eg. --keplerversion=2.4).</p>\n<p>If ommitted installer will look\
+    \ for it in the following files and</p>\n<p>in the order they are listed here:</p>\n\
+    <p>a) &lt;prefix&gt;/build-area/install-id.txt</p>\n<p>b) $KEPLER/build-area/install-id.txt</p>\n\
+    <p>--version|-v -- prints the Nimrod/K version</p>\n</blockquote>\n<p>Using the\
+    \ above options install Nimrod/K:</p>\n<blockquote>\n<p>java -jar nimrodk-2.0.0.jar\
+    \ [options]</p>\n</blockquote>\n<h3>Installing Nimrod/O</h3>\n<p>A comprehensive\
+    \ manual for Nimrod/O can be downloaded from:</p>\n<p><a href=\"http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&amp;upname=NimrodOUsersGuide3.1.pdf\"\
+    >http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&amp;upname=NimrodOUsersGuide3.1.pdf</a>.</p>\n\
+    <p>It contains information on how to install Nimrod/O.</p>\n<h2>How to launch</h2>\n\
+    <h3>Running Nimrod/G</h3>\n<p>In order to run Nimrod/G experiments from command\
+    \ line user needs to do\nthe following:</p>\n<ul>\n<li>\n<p>Manage Resources</p>\n\
+    </li>\n<li>\n<p>Manage Experiments</p>\n</li>\n</ul>\n<p>Once these are done,\
+    \ experiments can be executed on selected resources.</p>\n<h4>Resource Management</h4>\n\
+    <h5>Adding Resources</h5>\n<p>Nimrod resources need to be first added to the database\
+    \ before they can\nbe assigned to and used by experiments. Syntax for adding resources\
+    \ is\nas follows:</p>\n<blockquote>\n<p>$ nimrod resource add &lt;resource_type&gt;\n\
+    &lt;resource_details&gt;</p>\n</blockquote>\n<p>Resource types supported by Nimrod/G\
+    \ include:</p>\n<ul>\n<li><strong>Fork</strong></li>\n</ul>\n<blockquote>\n<p>$\
+    \ nimrod resource add fork</p>\n</blockquote>\n<ul>\n<li><strong>PBS</strong>\_\
+    - With PBS we need to know the name of a PBS queue and the\n    &gt; hostname\
+    \ of the PBS server. Lets say queue name is\_<strong>workq</strong>\_and\n   \
+    \ &gt; the hostname is\_<strong>localhost</strong></li>\n</ul>\n<blockquote>\n\
+    <p>$ nimrod resource add pbs workq@localhost</p>\n</blockquote>\n<ul>\n<li>\n\
+    <p><strong>SGE</strong>\_- Same as PBS</p>\n</li>\n<li>\n<p><strong>EC2</strong></p>\n\
+    </li>\n</ul>\n<h5>Removing Resources</h5>\n<p>Syntax for removing resources is\
+    \ as follows:</p>\n<blockquote>\n<p>$ nimrod resource remove &lt;resource_type&gt;\n\
+    &lt;resource_details&gt;</p>\n</blockquote>\n<h4>Experiment Management</h4>\n\
+    <p>This section will describe how to create, monitor and manage Nimrod/G\nexperiments.</p>\n\
+    <h5>Creating a Plan File</h5>\n<p>Nimrod/G uses a simple declarative language\
+    \ to describe the experiments.\nThis description is usually written as a simple\
+    \ script file we call\na\_<strong>plan file</strong>.</p>\n<p>There are two sections\
+    \ in this plan file. The first one describes the\nparameters that your experiment\
+    \ has while the second one describes the\ntask/s that Nimrod/G needs to execute\
+    \ to complete a single instance (or\na job) from your experiment. The example\
+    \ below shows a fictional plan\nfile for an experiment investigating wing performance.</p>\n\
+    <blockquote>\n<p>parameter aircraft_model files select anyof \"A3??.dat\" \"737-*.dat\"\
+    ;</p>\n<p>parameter AoA label \"Angle of attack\" float range from -45 to 45 step\n\
+    2.5;</p>\n<p>parameter winglets text select anyof \"none\" \"fence\" \"blended\"\
+    \ \"raked\";</p>\n<p>parameter airspeed integer range from 50 to 600 step 50;</p>\n\
+    <p>parameter turbulence label \"Normalized Reynolds\" float random from 1\nto\
+    \ 2;</p>\n<p>task main</p>\n<p>copy ${aircraft_model} node:.</p>\n<p>copy wing_test.zip\
+    \ node:.</p>\n<p>node:execute unzip wing_test.zip</p>\n<p>node:execute ./run_wing_test.sh\
+    \ ${aircraft_model} ${winglets}\n${AoA} \\</p>\n<p>${airspeed} ${turbulence} &gt;&gt;\
+    \ output.${jobname}</p>\n<p>node:execute zip results.${jobname} *</p>\n<p>copy\
+    \ node:results.${jobname}.zip .</p>\n<p>endtask</p>\n</blockquote>\n<p>This is\
+    \ a somewhat contrived example demonstrating various parameter\ntypes but it illustrates\
+    \ the basic functionality of defining parameters\nfor the main task and handling\
+    \ input, execution and output for each of\nthe parameter combinations. The two\
+    \ subsections below explain the\n'parameter' and 'task' definitions in the plan\
+    \ file.</p>\n<h5>Parameters</h5>\n<p>Parameters define lists of values, constant\
+    \ single values or dynamic\nvalues (of various types). A unique combination of\
+    \ parameter values is\nassigned to each job and each parameter value is bound\
+    \ to a named\nidentifier in the job environment. Nimrod/G experiments usually\
+    \ create a\ncross-product of all parameters to define the jobs which make up the\n\
+    experiment, we call this a full parameter sweep. The syntax for\nparameter lines\
+    \ in the plan file is:</p>\n<blockquote>\n<p>parameter &lt;name&gt; &lt;type&gt;\
+    \ [&lt;domain&gt;];</p>\n</blockquote>\n<ul>\n<li>\n<p><strong>name</strong>\_\
+    - This is the parameter name which must be unique.</p>\n</li>\n<li>\n<p><strong>type</strong>\_\
+    - This part of the parameter tells Nimrod/G what type of\n    parameter this is.\
+    \ There are five types and they are</p>\n<ul>\n<li>\n<p><strong>float</strong>\_\
+    - floating point number</p>\n</li>\n<li>\n<p><strong>integer</strong>\_- integer\
+    \ (whole) number</p>\n</li>\n<li>\n<p><strong>text</strong>\_- textual values\
+    \ as shown in the example above</p>\n</li>\n<li>\n<p><strong>files</strong>\_\
+    - this type allow you to apply glob style file name\n    matching to create a\
+    \ list of files names within the experiment\n    directory which match the given\
+    \ pattern(s), you could use this\n    to parameterize the input files for your\
+    \ computation (like the\n    example above). The files type\_<strong>must be</strong>\_\
+    used with the \"select\n    anyof\" domain.</p>\n</li>\n<li>\n<p><strong>fromfile</strong>\_\
+    - this type must refer to a text file that contains\n    a list of values, i.e.,\
+    \ the file contains the entire range.</p>\n</li>\n</ul>\n</li>\n<li>\n<p><strong>domain</strong>\_\
+    - A parameter domain is optional in some cases but\n    usually required. The\
+    \ following domains are available:</p>\n<ul>\n<li><strong>default</strong>- this\
+    \ domain type has only a single value. The\n    syntax for this domain is:</li>\n\
+    </ul>\n</li>\n</ul>\n<blockquote>\n<p>default &lt;value</p>\n</blockquote>\n<ul>\n\
+    <li><strong>range</strong>\_- this domain type has a number of values (points)\
+    \ that\n    are within a specified range. The syntax for the range domain is:</li>\n\
+    </ul>\n<blockquote>\n<p>range from &lt;value&gt; to &lt;value&gt; points &lt;value&gt;</p>\n\
+    <p>range from &lt;value&gt; to &lt;value&gt; step &lt;value&gt;</p>\n</blockquote>\n\
+    <ul>\n<li><strong>random</strong>\_- this domain type has a number of random points\n\
+    \    generated between specified lower and upper bounds. The syntax for\n    this\
+    \ domain is</li>\n</ul>\n<blockquote>\n<p>random from &lt;value&gt; to &lt;value&gt;\
+    \ [points &lt;value&gt;]</p>\n</blockquote>\n<ul>\n<li><strong>select anyof</strong>\_\
+    - this domain type is usually used for text and\n    files but is also useful\
+    \ for listing fixed numerical values. The\n    syntax for this domain is:</li>\n\
+    </ul>\n<blockquote>\n<p>select anyof &lt;value_list&gt; [default &lt;value_list&gt;]</p>\n\
+    </blockquote>\n<ul>\n<li><strong>select oneof</strong>\_- Similar to 'select anyof'\
+    \ except that only one\n    value will be selected for use from this list. If\
+    \ the default value\n    is not specified the first value in the value_list is\
+    \ used. The\n    syntax for this domain is:</li>\n</ul>\n<blockquote>\n<p>select\
+    \ oneof &lt;value_list&gt; [default &lt;value&gt;]</p>\n</blockquote>\n<ul>\n\
+    <li><strong>(some input file)</strong>\_- when using the fromfile type, the domain\
+    \ is\n    an input file that lists the values for the parameter. For example:</li>\n\
+    </ul>\n<blockquote>\n<p>parameter x fromfile inputfile.txt</p>\n<p>means that\_\
+    <strong>inputfile.txt</strong>\_contains a list of single values (one per\nline)\
+    \ for parameter\_<strong>x</strong>.</p>\n</blockquote>\n<h5>Tasks</h5>\n<p>This\
+    \ part of the plan file describes the process of executing a single\ninstance\
+    \ of your experiment. There are a number of\noperations/commands/directives that\
+    \ can be performed in a task:</p>\n<ul>\n<li>\n<p>Copy files to and from compute\
+    \ resources</p>\n</li>\n<li>\n<p>Executing an experiment executable</p>\n</li>\n\
+    <li>\n<p>Substituting place-holders in the input files with the real values</p>\n\
+    </li>\n<li>\n<p>What to do in case the job fails.</p>\n</li>\n</ul>\n<p>Task operations\
+    \ are typically location\ndependent.\_<strong>copy</strong>\_and\_<strong>execute</strong>\_\
+    directives must specify where the\noperation should be performed or where the\
+    \ file locations are while\ncopying. This is done by using\_<strong>node:</strong>\_\
+    or\_<strong>root:</strong>\_modifiers.</p>\n<ul>\n<li>\n<p><strong>node:</strong>\_\
+    indicates remote location for the operation. In case\n    of\_<strong>copy</strong>\_\
+    operation it indicates that the file resides on remote\n    machine, while in\
+    \ case of <strong>execute</strong>\_command it indicates that the\n    executable\
+    \ should be run on the remote server.</p>\n</li>\n<li>\n<p><strong>root:</strong>\_\
+    on the other hand indicates that files are on the same\n    machine where Nimrod/G\
+    \ is running, and that\_<strong>execute</strong>\_command that\n    executables\
+    \ are to be run on that same machine, and not on the\n    remote server. Please\
+    \ note that\_<strong>root:execute</strong>\_can only be\n    executed in\_<strong>rootstart</strong>\_\
+    and\_<strong>rootfinish</strong>tasks.</p>\n</li>\n</ul>\n<p><strong>NOTE</strong>:\
+    \ In a typical parameter sweep all program invocations will\noccur on computational\
+    \ nodes and hence the main task will only use\n<strong>node:execute</strong>.</p>\n\
+    <p>Following is a more thorough description of the task operations:</p>\n<ul>\n\
+    <li><strong>copy</strong>\_- this operation is used to copy both input and\n \
+    \   &gt; output files. Syntax for this operations is as follows:</li>\n</ul>\n\
+    <blockquote>\n<p>copy &lt;source&gt; &lt;destination&gt;</p>\n<p>For example if\
+    \ you are copying input file to a remote location:</p>\n<p>copy root:input.txt\
+    \ node:input.txt</p>\n<p>And if you are copying output file back to the server\
+    \ where Nimrod/G\nis running:</p>\n<p>copy node:result.txt root:result.txt</p>\n\
+    </blockquote>\n<ul>\n<li><strong>execute</strong>\_- this operation is used to\
+    \ execute some executable. The\n    syntax for this operatio is:</li>\n</ul>\n\
+    <blockquote>\n<p>node:execute &lt;user_command&gt;</p>\n<p><strong>user_command</strong>\_\
+    is passed to shell (<strong>/bin/sh</strong>), so it can contain\nshell constructs\
+    \ (redirection like &gt;, &gt;&gt; etc).</p>\n<p>For example if we wanted to execute\_\
+    <strong>hostname</strong>\_command and redirect\nits output into a file called\_\
+    <strong>hostname.txt</strong>\_this is what\nthe\_<strong>execute</strong>operation\
+    \ would look like:</p>\n<p>node:execute /bin/hostname &gt; hostname.txt</p>\n\
+    </blockquote>\n<ul>\n<li><strong>onerror\_- this operation indicates how Nimrod/G\
+    \ should behave in\n    case some part of the job fails. It has a scope which\
+    \ is from the\n    point it appears until another\_onerror\_statement is found.\
+    \ The\n    syntax for this operation is:</strong></li>\n</ul>\n<blockquote>\n\
+    <p>onerror &lt;option&gt;</p>\n<p>Valid options are:</p>\n</blockquote>\n<ul>\n\
+    <li>\n<p><strong>fail</strong>\_- fail the job. This is the default behaviour\
+    \ and will be\n    &gt; used even if\_<strong>onerror</strong>\_is never specified\
+    \ in the plan file</p>\n</li>\n<li>\n<p><strong>ignore</strong>\_- ignore the\
+    \ error and proceed with the task, ie. move\n    &gt; onto the next line in the\
+    \ plan file and continue executing it.</p>\n</li>\n</ul>\n<!-- -->\n\n<ul>\n<li><strong>substitute</strong>\_\
+    - Nimrod/G allows can use skeleton input file for\n    &gt; their experiments.\
+    \ This skeleton input file may contain\n    &gt; placeholders in it that are to\
+    \ be substituted by the actual\n    &gt; parameter values before the execution\
+    \ begins.</li>\n</ul>\n<blockquote>\n<p>This operation is used to replace the\
+    \ parameter placeholders in input\nfile with a job parameter value. The syntax\
+    \ of this operation is:</p>\n<p>substitute &lt;source&gt; &lt;destination&gt;</p>\n\
+    <p>Both source and destination require neither 'node:' nor 'root:' in\nfront of\
+    \ them, i.e. they are just plain filenames. For example, this\ncould be a main\
+    \ task of a plan file:</p>\n<p>task main</p>\n<p>copy input.skeleton node:.</p>\n\
+    <p>substitute input.skeleton input.txt</p>\n<p>node:execute ./process.sh input.txt\
+    \ &gt; result.txt</p>\n<p>copy node:result.txt .</p>\n<p>endtask</p>\n</blockquote>\n\
+    <h4>Creating Experiments</h4>\n<p>Nimrod/G stores experiments in a specific location\
+    \ in user's home\ndirectory:</p>\n<blockquote>\n<p>$HOME/.nimrod/experiments/</p>\n\
+    </blockquote>\n<p>Each experiment will have a dedicated subdirectory in that location\
+    \ that\nmatches experiment name. For example:</p>\n<ul>\n<li>\n<p>Experiment named\_\
+    <strong>demo</strong>\_will be\n    &gt; in\_<strong>$HOME/.nimrod/experiments/demo/</strong></p>\n\
+    <ul>\n<li>\n<p>Plan file called\_<strong>demo.pln</strong>\_will be in that directory</p>\n\
+    </li>\n<li>\n<p>All files related to that experiment will also be location in\n\
+    \    &gt; that directory</p>\n</li>\n</ul>\n</li>\n</ul>\n<p>In order to create\
+    \ experiment execute the following steps:</p>\n<ol>\n<li>\n<p>Create a plan file\
+    \ following instructions from the previous section.\n    &gt; Lets assume we create\
+    \ a plan file called\_<strong>demo.pln</strong></p>\n</li>\n<li>\n<p>Create an\
+    \ experiment directory:</p>\n</li>\n</ol>\n<blockquote>\n<p>$ mkdir -p $HOME/.nimrod/experiments/demo</p>\n\
+    </blockquote>\n<ol>\n<li>\n<p>Place the\_demo.pln\_file in that directory</p>\n\
+    </li>\n<li>\n<p>Create a file containing all possible parameter combinations:</p>\n\
+    </li>\n</ol>\n<blockquote>\n<p>nimrod generate demo.pln</p>\n</blockquote>\n<ol>\n\
+    <li>Add the experiment to the Nimrod/G database:</li>\n</ol>\n<blockquote>\n<p>nimrod\
+    \ create demo</p>\n</blockquote>\n<h4>Assign Resources to Experiments</h4>\n<p>In\
+    \ section\_Resource Management\_we added compute resources to the\ndatabase. In\
+    \ order for them to be used by an experiment they have to be\nassigned to that\
+    \ experiment. The syntax for adding resources to\nexperiments is as follows:</p>\n\
+    <blockquote>\n<p>nimrod addserver &lt;exp_name&gt; &lt;resource_details&gt;\n\
+    &lt;resource_type&gt;</p>\n</blockquote>\n<p>Resource type and resource details\
+    \ are exact same details that were used\nwhen resources were added to database.\
+    \ An example of adding a PBS\nresource to a demo experiment can be seen below:</p>\n\
+    <blockquote>\n<p>nimrod addserver demo workq@localhost pbs</p>\n</blockquote>\n\
+    <h4>Launching Nimrod/G</h4>\n<p>With experiments defined and configured Nimrod/G\
+    \ can be launched. The\nsyntax for this command is as follows:</p>\n<blockquote>\n\
+    <p>nimrod startexp &lt;exp_name&gt;</p>\n</blockquote>\n<p>For example, to start\
+    \ the experiment called\_demo\_run:</p>\n<blockquote>\n<p>nimrod startexp demo</p>\n\
+    </blockquote>\n<h3>Using Nimrod/K</h3>\n<p>Nimrod/K extends\_Kepler by adding\
+    \ parameter tools and grid/cloud\nservices and by providing dynamic parallelism\
+    \ in workflows. As such\nNimrod/K functionality is simply used by adding the Nimrod/K\
+    \ director\nand Nimrod/K actors to Kepler workflows.</p>\n<h3>Using Nimrod/O</h3>\n\
+    <p>A comprehensive manual for Nimrod/O can be downloaded from:</p>\n<p><a href=\"\
+    http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&amp;upname=NimrodOUsersGuide3.1.pdf\"\
+    >http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&amp;upname=NimrodOUsersGuide3.1.pdf</a>.</p>\n\
+    <p>It contains information on how to launch Nimrod/O.</p>\n<h2>Resource Requirements</h2>\n\
+    <p>Nimrod Toolkit runs on Unix based platforms only, which includes all\nflavours\
+    \ of Linux as well as Mac OS X. However, Nimrod Portal component\nis browser based\
+    \ which allows users of all platforms (including Windows)\nto access Nimrod and\
+    \ execute computational experiments through any\nbrowser.</p>\n<ul>\n<li>\n<p>Software\
+    \ Requirements:</p>\n<ul>\n<li>\n<p>Python \u2013 version 2.5 or higher</p>\n\
+    </li>\n<li>\n<p>PostgreSQL \u2013 version 8.4 or higher</p>\n</li>\n</ul>\n</li>\n\
+    <li>\n<p>Operating System Requirements</p>\n<ul>\n<li>\n<p>Linux</p>\n</li>\n\
+    <li>\n<p>Mac OS X</p>\n</li>\n</ul>\n</li>\n</ul>\n<p>Nimrod/O can run in standalone\
+    \ mode, in which case Nimrod/G is not\nrequired. However in standalone mode Nimrod/O\
+    \ loses the ability to run\nits jobs on distributed clusters and computational\
+    \ grid resources.\nFor distributing jobs, Nimrod/G 4.0 or higher required</p>\n\
+    <p>Similar to Nimrod/O, Nimrod/K can run as a standalone application, in\nwhich\
+    \ case Nimrod/G is not required. When running in standalone mode\nNimrod/K can\
+    \ be installed and used on Windows machines.</p>\n<h3>Compute Resources</h3>\n\
+    <p>Nimrod allows computational researchers to use a mixture of\nuniversity-level\
+    \ infrastructure and commercial clouds. For beginners,\nusers can trial their\
+    \ Nimrod experiments using the Nimrod_Portal[^1]\nresource pool. Users are encouraged\
+    \ to bring their own compute resources\n(e.g. cluster, cloud allocation) to use\
+    \ with Nimrod. Please contact Minh\nDinh and Hoang Anh Nguyen regarding adding\
+    \ new remote compute resources\nto their experiments.</p>\n<h2>Nimrod Portal</h2>\n\
+    <p>A web service for using Nimrod/G. Nimrod portal provides a web interface\n\
+    for users to use Nimrod and its resources. Users can create Nimrod/G\nexperiments\
+    \ without installing Nimrod toolkit on their local system.\nThis allows users\
+    \ develop, execute, maintain and share Nimrod parameter\nsweep experiments.</p>\n\
+    <h3>Installation</h3>\n<p>Nimrod portal consists of two components: a RESTful\
+    \ Web service and a\nWeb portal. The RESTful service is to expose Nimrod functionality\
+    \ to the\nWeb and the Web portal provides user-friendly interface to the users.</p>\n\
+    <p>The installation process requires two steps: installation of the Web\nservice\
+    \ and installation of the Web portal. This two-step process takes\nplace in two\
+    \ separate VMs. Nimrod needs to be installed in the Web\nservice VM.</p>\n<h4>Install\
+    \ Nimrod Web service</h4>\n<p>The Web service is currently available at:\n<a href=\"\
+    https://bitbucket.org/jhtngu/nimrod.webservice\">https://bitbucket.org/jhtngu/nimrod.webservice</a>.</p>\n\
+    <p>This is not a public repository. Please email <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#111;&#97;&#110;&#103;&#110;&#103;&#117;&#121;&#101;&#110;&#49;&#55;&#55;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;\"\
+    >&#104;&#111;&#97;&#110;&#103;&#110;&#103;&#117;&#121;&#101;&#110;&#49;&#55;&#55;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>\n\
+    to gain access.</p>\n<ul>\n<li>Once clone the repository, modify the buildout.cfg\
+    \ as followed</li>\n</ul>\n<blockquote>\n<p>[sources]</p>\n<p>Nimrodrestapi =\
+    \ git\nhttps://yournamehere@bitbucket.org/jhtngu/nimrod.restfulweb.git\nbranch=addresources</p>\n\
+    <p>nimrodrpcdaemon = git https:// yournamehere\n@bitbucket.org/jhtngu/nimrod.rpcdaemon.git\
+    \ branch=addresources</p>\n</blockquote>\n<ul>\n<li>\n<p>Execute \u201Cpython\
+    \ bootstrap.py\u201D to setup the environment. This\n    requires setuptools installed.</p>\n\
+    </li>\n<li>\n<p>Execute \u201C./bin/buildout\u201D to clone and install necessary\
+    \ packages,\n    including Nimrod Web service.</p>\n</li>\n<li>\n<p>Install any\
+    \ missing dependencies as suggested by the build process.</p>\n</li>\n<li>\n<p>Modify\
+    \ configuration files in the \u201Cetc\u201D folder accordingly.</p>\n</li>\n\
+    </ul>\n<h4>Install the Web portal</h4>\n<ul>\n<li>\n<p>Install Liferay 6.1\n \
+    \   (<a href=\"http://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.1.1%20GA2/\"\
+    >http://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.1.1%20GA2/</a>).\n\
+    \    The recommended location is: /var/www.</p>\n</li>\n<li>\n<p>Follow Liferay\
+    \ instructions to install with Postgres DB\n    (<a href=\"https://www.liferay.com/community/wiki/-/wiki/Main/Quick+Installation+Instructions\"\
+    >https://www.liferay.com/community/wiki/-/wiki/Main/Quick+Installation+Instructions</a>)</p>\n\
+    </li>\n<li>\n<p>Go to Liferay market and install Private Plugin Installer\n  \
+    \  (<a href=\"https://www.liferay.com/marketplace/-/mp/application/15474932\"\
+    >https://www.liferay.com/marketplace/-/mp/application/15474932</a>)</p>\n</li>\n\
+    <li>\n<p>Install Vaadin into Liferay\n    (<a href=\"https://vaadin.com/wiki/-/wiki/Main/Integrating+Vaadin+7+with+Liferay\"\
+    >https://vaadin.com/wiki/-/wiki/Main/Integrating+Vaadin+7+with+Liferay</a>)</p>\n\
+    </li>\n<li>\n<p>Install Nimrod portlets, which are available at:\n    <a href=\"\
+    https://bitbucket.org/hoangnguyen177/nimrodportal2\">https://bitbucket.org/hoangnguyen177/nimrodportal2</a>.\
+    \ Or contact\n    <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#111;&#97;&#110;&#103;&#110;&#103;&#117;&#121;&#101;&#110;&#49;&#55;&#55;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;\"\
+    >&#104;&#111;&#97;&#110;&#103;&#110;&#103;&#117;&#121;&#101;&#110;&#49;&#55;&#55;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>\
+    \ for compiled version.</p>\n</li>\n<li>\n<p>Install Nimrod portlets</p>\n</li>\n\
+    </ul>\n<h4>Configure the portal and the Web service VM</h4>\n<p>From NeCTAR dashboard,\
+    \ make sure the port of the Web service (8081 by\ndefault) is accessible by the\
+    \ Web portal and Nimrod ports (40000 -\n41000) are accessible by all.</p>\n<h3>Launch</h3>\n\
+    <p>Launch the Web portal first:</p>\n<blockquote>\n<p>cd /var/www/liferay-portal-xxxx/tomcat-xxx/bin;\
+    \ sudo ./startup.sh</p>\n</blockquote>\n<p>Then launch the Web service:</p>\n\
+    <blockquote>\n<p>cd \\~/nimrod.webservice/bin; ./supervisord;</p>\n</blockquote>\n\
+    <h3>Plan file web editor</h3>\n<p>Instead of using a text editor, the Nimrod Portal\
+    \ provides a simple\nfriendly GUI for users to develop plan file for Nimrod/G\
+    \ experiments.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/nimrod_qcif1.png?raw=true\"\
+    ></p>\n<h2>How to access it</h2>\n<p>Interested users can register for an account\
+    \ using their AAF credential\nat the following page (will need to be updated later):\n\
+    <a href=\"http://vm-203-101-224-118.qld.nectar.org.au/\">http://vm-203-101-224-118.qld.nectar.org.au/</a></p>\n\
+    <p>The portal provides a friendly web interface for users to define,\nexecute\
+    \ and monitor their experiments. For users who have existing\nNimrod experiments,\
+    \ they can upload the plan files. User can also create\nnew experiments using\
+    \ a simple GUI. Input and output files can be\nuploaded and downloaded using the\
+    \ web interface. For technical supports\nand learning to use Nimrod, please contact\
+    \ Minh Dinh and/or Hoang Anh\nNguyen.</p>\n<h2>Configuration guide</h2>\n<h3>Configuring\
+    \ Nimrod/G</h3>\n<p>Nimrod/G installation comes with two configuration files,\
+    \ both located\nin\_<strong>$NIMROD_INSTALL</strong>\_directory:</p>\n<ul>\n<li>\n\
+    <p><strong>nimrod.cfg</strong>\_- Configuration values contained within can be\n\
+    \    overridden by a user level configuration file of the same name,\n    which\
+    \ may be located in $HOME/.nimrod/ directory, or by an\n    immutable configuration\
+    \ file described below.</p>\n</li>\n<li>\n<p><strong>nimrod.immutable.cfg</strong>\_\
+    - Configuration values contained within\n    will override any other configuration,\
+    \ either user or system level.</p>\n</li>\n</ul>\n<p>Most of the configuration\
+    \ values can be left as is but some may be\nchanged to match the system requirements.</p>\n\
+    <p>Each configuration file may contain following sections:</p>\n<ul>\n<li>\n<p><strong>email</strong>\_\
+    - used to configure email settings. This is used to report\n    experiment completion.</p>\n\
+    </li>\n<li>\n<p><strong>nimserver</strong>\_- configures Nimrod/G component called\
+    \ Nimrod Server.\n    Nimrod/G uses executables called\_<strong>Agents</strong>\_\
+    to execute jobs on\n    remote resources.\_<strong>Agents</strong>\_use Nimrod\
+    \ Server to communicate with\n    database as well as to copy files to and from\
+    \ remote locations.</p>\n</li>\n</ul>\n<blockquote>\n<p>Most of the configuration\
+    \ can be left as is. It is important however\nto ensure that\_<strong>default_port_range</strong>\_\
+    configuration value has a\nrange of ports that can be reached by outside networks.\
+    \ When it\nstarts,\_<strong>Nimrod Server</strong>\_will select a first available\
+    \ port from that\nrange and will use that to listen for incoming connectinos\n\
+    from\_<strong>Agents</strong>. If the port it selects is unreachable, no jobs\
+    \ will\nrun.</p>\n<p>For example (port will be selected anywhere between 30000\
+    \ and 31000\ninclusive):</p>\n<p>nimserver: {</p>\n<p>default_port_range: '30000,31000'</p>\n\
+    <p>key_path: $user_dir + '.nimserver'</p>\n<p>remote_suffix: $remote_suffix</p>\n\
+    <p>remote_key_fname: '.nimserver' + $nimserver.remote_suffix + '.pub'</p>\n<p>port_path:\
+    \ $user_dir + '.nimport' + $nimserver.remote_suffix</p>\n<p>remote_port_fname:\
+    \ '.nimport' + $nimserver.remote_suffix</p>\n<p>}</p>\n</blockquote>\n<ul>\n<li>\n\
+    <p><strong>actuator</strong>\_- configures resource actuators, components that\n\
+    \    control how resources are used. It can be used to change how often\n    actuators\
+    \ poll database to see if there are any work they need\n    to do. Configuration\
+    \ can apply to actuators for all resource types,\n    but can also only apply\
+    \ to a specific resource type.</p>\n</li>\n<li>\n<p><strong>azure</strong>\_-\
+    \ configure\_<strong>azure</strong>\_resource settings. Can be left\n    as is.</p>\n\
+    </li>\n<li>\n<p><strong>ec2</strong>\_- configures\_<strong>ec2</strong>\_resource\
+    \ settings. Can be left as is</p>\n</li>\n<li>\n<p><strong>generate</strong>\_\
+    - configures\_<strong>generate</strong>\_subcommand. This subcommand\n    is used\
+    \ to parse the plan file and create another files that\n    contains a cross-product\
+    \ of all parameters. Some of the settings\n    include limits on how many jobs\
+    \ single experiment can have, or how\n    long a parameter name can be.</p>\n\
+    </li>\n</ul>\n<blockquote>\n<p>For example:</p>\n<p>generate: {</p>\n<p>max_jobs:\
+    \ 100000</p>\n<p>param_len_limit: 56</p>\n<p>}</p>\n</blockquote>\n<h3>Configuring\
+    \ Nimrod/K</h3>\n<p>There is no Nimrod/K specific configuration.</p>\n<h3>Configuring\
+    \ Nimrod/O</h3>\n<p>A comprehensive manual for Nimrod/O can be downloaded from:</p>\n\
+    <p><a href=\"http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&amp;upname=NimrodOUsersGuide3.1.pdf\"\
+    >http://messagelab.monash.edu.au/NimrodO/Documentation?action=download&amp;upname=NimrodOUsersGuide3.1.pdf</a>.</p>\n\
+    <p>It contains information on how to configure Nimrod/O.</p>\n<h2>Technical blueprint</h2>\n\
+    <p>To date, Nimrod tools are deployed through several Nimrod portals\nstationed\
+    \ at Monash University, Griffith University and The University\nof Queensland.\
+    \ These portals provide the machinery to automate the tasks\nof formulating complex\
+    \ experiments and workflows, and execute them\nacross a variety of computing resources\
+    \ including NecTAR VMs. In\nparticular, we ran several projects to test the migration\
+    \ of scientific\nsoftware to HPC platforms, including the NeCTAR research cloud,\
+    \ to\nprovide enhanced utility for the following research projects.</p>\n<h3>Terrestrial\
+    \ Ecosystem Research Network (TERN)</h3>\n<p>Supporting the creation and execution\
+    \ of sensory data analysis using\nNimrod portal to access available computing\
+    \ resources in the NecTAR\ncloud.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/nimrod_qcif2.png?raw=true\"\
+    ></p>\n<h3>CVL Symmetric Model Creation</h3>\n<p>Coupling Nimrod to perform expensive\
+    \ computations efficiently and\nintegrating visualization library to enable examination\
+    \ of intermediate\nmodels.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/nimrod_qcif3.png?raw=true\"\
+    ></p>\n<h3>MARXAN</h3>\n<p>Coupling the MARXAN web portal with Nimrod to provide\
+    \ access to HPC and\ncloud resources.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/nimrod_qcif4.png?raw=true\"\
+    ></p>\n<h2>Troubleshooting</h2>\n<p>There are multiple points of failure that\
+    \ are possible when running\nNimrod/G experiments:</p>\n<ul>\n<li>Problem with\
+    \ executables (applications) that Nimrod/G is trying to\n    execute</li>\n</ul>\n\
+    <blockquote>\n<p>These will be reported back to database. In scenario like this\
+    \ is\nhighly possible that all jobs will fail because of it. However the\nproblem\
+    \ can be environmental in which case it will only fail on a\nparticular resource\
+    \ or even a particular machine on that resource.</p>\n</blockquote>\n<ul>\n<li>Problem\
+    \ with remote machines where Nimrod Agents are running</li>\n</ul>\n<blockquote>\n\
+    <p>These kind of problems occur when a particular machine on a\ncomputational\
+    \ resource is not working correctly. There are many\nreasons this may occur, which\
+    \ includes missing libraries, faulty\nhardware etc.</p>\n<p>If the agents manage\
+    \ to start then these are easy to identify. Nimrod\nAgents will fail the jobs\
+    \ and record which host the job failed on.\nListing failed jobs, and seeing that\
+    \ all failed on a particular host\nwill indicate a problem with that host.</p>\n\
+    </blockquote>\n<ul>\n<li>Firewall issues preventing Nimrod Agents connecting back\
+    \ to Nimrod\n    Server</li>\n</ul>\n<blockquote>\n<p>If Agents are perpetually\
+    \ stuck in\_<strong>pending/queued</strong>\_state, it\nusually indicates that\
+    \ they cannot connect back to Nimrod Server. One\nreason is that there is a faulty\
+    \ host and\_<strong>Agents</strong>\_never start, and\nsecond reason is that firewall\
+    \ on either host is preventing\nthose\_<strong>Agents</strong>\_connections.</p>\n\
+    </blockquote>\n<p>There are number of commands that can be executed to collect\
+    \ information\nthat may help identify the issue:</p>\n<ol>\n<li>Get reported errors</li>\n\
+    </ol>\n<blockquote>\n<p>$ nimrod geterrors &lt;exp_name&gt;</p>\n</blockquote>\n\
+    <ol>\n<li>Check if there are any agents running on resources</li>\n</ol>\n<blockquote>\n\
+    <p>$ nimrod getagents &lt;exp_name&gt;</p>\n<p>Output returns a list of resources\
+    \ where each line has the resource\nname and agent information in following order:</p>\n\
+    </blockquote>\n<ul>\n<li>\n<p>Agents that have stopped running (cleanly)</p>\n\
+    </li>\n<li>\n<p>Agents that are still running</p>\n</li>\n<li>\n<p>Agents that\
+    \ have been submitted to a remote queue</p>\n</li>\n<li>\n<p>Agents that have\
+    \ been created in database, but not submitted to a\n    remote queue</p>\n</li>\n\
+    <li>\n<p>Agents that have failed to start. Some agents may fail to start but\n\
+    \    won't be reported here. This will occur if firewall is blocking\n    the\
+    \ connections.</p>\n</li>\n<li>\n<p>Check the progress of experiment and see if\
+    \ there any failed jobs:</p>\n</li>\n</ul>\n<blockquote>\n<p>$ nimrod enfapi &lt;exp_name&gt;\
+    \ jobstatus</p>\n</blockquote>\n<ol>\n<li>If there are failed jobs, get errors\
+    \ for all failed jobs:</li>\n</ol>\n<blockquote>\n<p>$ nimrod enfapi &lt;exp_name&gt;\
+    \ getjobinfo all error</p>\n</blockquote>\n<h2>Support</h2>\n<h3>Administration</h3>\n\
+    <p>Please contact Hoang Anh Nguyen or Minh Dinh for the Nimrod Portal</p>\n<h3>Technical\
+    \ Support</h3>\n<p>All queries regarding the for the Nimrod Portal and WorkWays\
+    \ portal,\nplease contact Hoang Anh Nguyen or Minh Dinh</p>\n<h3>Learning to use\
+    \ Nimrod or integrating Nimrod into your internal service</h3>\n<p>Please contact\
+    \ Minh Dinh regarding learning to use Kepler and Nimrod.\nFor consultation on\
+    \ how Kepler and Nimrod can be applicable for specific\nresearch fields, please\
+    \ contact Minh Dinh.</p>\n<h2>Contact</h2>\n<p>Dr Minh Dinh</p>\n<p>QCIF - eResearch\
+    \ Analyst</p>\n<p>Reserch Fellow - Research Computing Center (RCC)</p>\n<p>Email:\
+    \ <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#46;&#100;&#105;&#110;&#104;&#49;&#64;&#117;&#113;&#46;&#101;&#100;&#117;&#46;&#97;&#117;\"\
+    >&#109;&#46;&#100;&#105;&#110;&#104;&#49;&#64;&#117;&#113;&#46;&#101;&#100;&#117;&#46;&#97;&#117;</a></p>\n\
+    <p>Mr Hoang Anh Nguyen</p>\n<p>Email: <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#111;&#97;&#110;&#103;&#110;&#103;&#117;&#121;&#101;&#110;&#49;&#55;&#55;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;\"\
+    >&#104;&#111;&#97;&#110;&#103;&#110;&#103;&#117;&#121;&#101;&#110;&#49;&#55;&#55;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>\n\
+    <h2>Glossary of Terms</h2>\n<p>[^1]: Nimrod_Portal is a Nectar allocation that\
+    \ consists of up 120\n    compute cores. It is designated for deploying Nimrod\
+    \ services and\n    conducting Nimrod runs. It is an independent testbed for new\
+    \ users\n    to trial Nimrod and its tools</p>"
+  parent: 24
+  sha1: 7c38bf34d75a35fd33a877021bb51828bed70c33
+  title: QCIF Nimrod
