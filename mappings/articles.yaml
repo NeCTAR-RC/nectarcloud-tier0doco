@@ -25670,3 +25670,885 @@
   parent: 24
   sha1: 7c38bf34d75a35fd33a877021bb51828bed70c33
   title: QCIF Nimrod
+105:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-12-07T23:28:52-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Videos \n There many useful videos about Neutron available\
+          \ on the youtube. You can\ntype in 'Neutron openstack' to search for Neutron\
+          \ videos. \n The below provides some links for useful Neutron videos: \n\
+          \ \n \n Virtual Networking in OpenStack: Neutron 101 \n \n \n Neutron L2\
+          \ and L3 agents: How They Work and How Kilo Improves Them \n \n \n Navigating\
+          \ OpenStack Networking: Nova-networks, Neutron and Advanced Services \n\
+          \ \n \n OpenStack Networking (Neutron) - 2014 Update \n \n \n The Distributed\
+          \ Virtual Router in Neutron: From Juno to Kilo \n \n \n OpenStack Networking\
+          \ Hands-on Lab \n \n \n Documentation \n The following documentations provides\
+          \ reference and guidance information for the\nNeutron API: \n \n \n Neutron\
+          \ Python API reference \n \n \n Neutron Command Line API Reference  \n \n\
+          \ \n Neutron API Reference \n \n \n Neutron wiki \n \n \n The following\
+          \ documentations explain how to configure and run Neutron: \n \n \n OpenStack\
+          \ Networking Guide \n \n \n Operation guide for Networking \n \n \n Security\
+          \ guide for Networking \n \n \n NeCTAR Support \n If you have a problem\
+          \ and you cannot resolve it, you can always go to NecTAR\nHelpDesk to log\
+          \ a support ticket and the NeCTAR support staff are\nmore than happy to\
+          \ help you. "
+        description: '<h2>Videos</h2>
+
+          <p>There many useful videos about Neutron available on the <a href="https://www.youtube.com/">youtube</a>.
+          You can
+
+          type in ''Neutron openstack'' to search for Neutron videos.</p>
+
+          <p>The below provides some links for useful Neutron videos:</p>
+
+          <ul>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=Li0Ed1VEziQ">Virtual Networking
+          in OpenStack: Neutron 101</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=uNAkDfkTGBw">Neutron L2 and
+          L3 agents: How They Work and How Kilo Improves Them</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=YLo9_t-77Kg">Navigating OpenStack
+          Networking: Nova-networks, Neutron and Advanced Services</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=4CKSm3bwv78&amp;list=PLbsn6UCyoyknyaeo2EVyvqCNeg_gt2-wk">OpenStack
+          Networking (Neutron) - 2014 Update</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=zEyBJOcqfGw">The Distributed
+          Virtual Router in Neutron: From Juno to Kilo</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://www.youtube.com/watch?v=wc5ymrropjU">OpenStack Networking
+          Hands-on Lab</a></p>
+
+          </li>
+
+          </ul>
+
+          <h2>Documentation</h2>
+
+          <p>The following documentations provides reference and guidance information
+          for the
+
+          Neutron API:</p>
+
+          <ul>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/developer/python-neutronclient/#id1">Neutron
+          Python API reference</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/cli-reference/content/neutronclient_commands.html">Neutron
+          Command Line API Reference</a> </p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://developer.openstack.org/api-ref-networking-v2.html">Neutron
+          API Reference</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="https://wiki.openstack.org/wiki/Neutron">Neutron wiki</a></p>
+
+          </li>
+
+          </ul>
+
+          <p>The following documentations explain how to configure and run Neutron:</p>
+
+          <ul>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/networking-guide/">OpenStack Networking
+          Guide</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/openstack-ops/content/network_troubleshooting.html">Operation
+          guide for Networking</a></p>
+
+          </li>
+
+          <li>
+
+          <p><a href="http://docs.openstack.org/ha-guide/networking-ha.html">Security
+          guide for Networking</a></p>
+
+          </li>
+
+          </ul>
+
+          <h2>NeCTAR Support</h2>
+
+          <p>If you have a problem and you cannot resolve it, you can always go to
+          NecTAR
+
+          <a href="https://support.nectar.org.au/support/home">HelpDesk</a> to log
+          a support ticket and the NeCTAR support staff are
+
+          more than happy to help you.</p>'
+        folder:
+          category_id: 6000122279
+          created_at: '2015-12-01T18:22:33-05:00'
+          customer_folders: []
+          description: Networking
+          id: 6000210730
+          is_default: false
+          language_id: 6
+          name: Networking
+          parent_id: 6000210730
+          position: 6
+          updated_at: '2015-12-07T19:43:55-05:00'
+          visibility: 1
+        folder_id: 6000210730
+        hits: 0
+        id: 6000095317
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-12-07T23:28:51-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000095317
+        position: 4
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: More Info
+        updated_at: '2015-12-07T23:28:52-05:00'
+        user_id: 6002464727
+  html: '<h2>Videos</h2>
+
+    <p>There many useful videos about Neutron available on the <a href="https://www.youtube.com/">youtube</a>.
+    You can
+
+    type in ''Neutron openstack'' to search for Neutron videos.</p>
+
+    <p>The below provides some links for useful Neutron videos:</p>
+
+    <ul>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=Li0Ed1VEziQ">Virtual Networking in
+    OpenStack: Neutron 101</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=uNAkDfkTGBw">Neutron L2 and L3 agents:
+    How They Work and How Kilo Improves Them</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=YLo9_t-77Kg">Navigating OpenStack
+    Networking: Nova-networks, Neutron and Advanced Services</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=4CKSm3bwv78&amp;list=PLbsn6UCyoyknyaeo2EVyvqCNeg_gt2-wk">OpenStack
+    Networking (Neutron) - 2014 Update</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=zEyBJOcqfGw">The Distributed Virtual
+    Router in Neutron: From Juno to Kilo</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://www.youtube.com/watch?v=wc5ymrropjU">OpenStack Networking
+    Hands-on Lab</a></p>
+
+    </li>
+
+    </ul>
+
+    <h2>Documentation</h2>
+
+    <p>The following documentations provides reference and guidance information for
+    the
+
+    Neutron API:</p>
+
+    <ul>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/developer/python-neutronclient/#id1">Neutron
+    Python API reference</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/cli-reference/content/neutronclient_commands.html">Neutron
+    Command Line API Reference</a> </p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://developer.openstack.org/api-ref-networking-v2.html">Neutron
+    API Reference</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="https://wiki.openstack.org/wiki/Neutron">Neutron wiki</a></p>
+
+    </li>
+
+    </ul>
+
+    <p>The following documentations explain how to configure and run Neutron:</p>
+
+    <ul>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/networking-guide/">OpenStack Networking
+    Guide</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/openstack-ops/content/network_troubleshooting.html">Operation
+    guide for Networking</a></p>
+
+    </li>
+
+    <li>
+
+    <p><a href="http://docs.openstack.org/ha-guide/networking-ha.html">Security guide
+    for Networking</a></p>
+
+    </li>
+
+    </ul>
+
+    <h2>NeCTAR Support</h2>
+
+    <p>If you have a problem and you cannot resolve it, you can always go to NecTAR
+
+    <a href="https://support.nectar.org.au/support/home">HelpDesk</a> to log a support
+    ticket and the NeCTAR support staff are
+
+    more than happy to help you.</p>'
+  parent: 44
+  sha1: e6564c6a49547b3df1e2512dd80cc6a7b5288195
+  title: More Info
+106:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-12-07T23:28:53-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Debugging Neutron Command line Client \n These instructions\
+          \ assume you have installed Neutron command client in a Linux\nenvironment.\
+          \ If you have other operating systems, the debugging process might be\n\
+          a slightly different, however, the general rules should still apply. \n\
+          \ Neutron command line client is very much like other Linux commands, it\
+          \ outputs\nerrors in the standard output, which is the monitor. \n If you\
+          \ get an error, you can always read the error message and generally it give\n\
+          you very good hints about what might be wrong. \n For example, if you execute\
+          \ neutron net-list on the command line without\nauthentication, the error\
+          \ message might look like this: \n ERROR: You must provide a username via\
+          \ either --os-username or env[OS_USERNAME] \n The above message indicates\
+          \ you need to be authenticated before you can use the\nAPI. The authentication\
+          \ requires some environment variables to be set. To set\nthese environment\
+          \ variables you can either source the script file obtained from\nNeCTAR\
+          \ Dashboard or you can override it by using command line options. \n Please\
+          \ refer to Networking Getting Started article. \n You can always execute\
+          \ man neutron or simply neutron help to get\nmore help information and to\
+          \ learn each supported options. \n If you find a useful command, you can\
+          \ also execute nova help command,\nthis will give your more specific help\
+          \ for the command. \n Debugging Neutron Python API \n Debugging Neutron\
+          \ Python API takes more effects as it depends on how familiar\nwith Python\
+          \ programming and what development environment you use. \n The below provides\
+          \ some basic information about how you debug the Neutron Python\nAPI. \n\
+          \ You can debug your python code using Python debugger called pdb and you\
+          \ can find\nmore information here. \n The below code uses pdb debuuger to\
+          \ debug a python file contains clinet python\nAPI code. \n pdb file_name.py\
+          \ \n Once you executed the above code, the command line will be stopped\
+          \ on the first\nline of code and you can use some commands to control the\
+          \ execution flow. \n Some useful ones to use are: \n\n\n\nCommand\nAction\n\
+          \n\n\n\nb\nset a breakpoint\n\n\nc\ncontinue debugging until you hit a breakpoint\n\
+          \n\ns\nstep through the code\n\n\nn\nto go to next line of code\n\n\nl\n\
+          list source code for the current file\n\n\nu\nnavigate up a stack frame\n\
+          \n\nd\nnavigate down a stack frame\n\n\np\nto print the value of an expression\
+          \ in the current context\n\n\n\n Debugging Via HTTP \n The both of command\
+          \ line API and python API are restful web service client.\nThus the requests\
+          \ are all made by using HTTP and you can always refer to\nOpenStack Service\
+          \ End for further references about what should be\npresented in the HTTP\
+          \ requests. The Neutron API uses requests library\nto send and receive HTTP\
+          \ requests/responses. \n For command line client, you can add --debug option\
+          \ to print out HTTP request\nheader and HTTP response header, which give\
+          \ you a lot of more insight\ninformation. To verify parameters in the request\
+          \ header, you can refer to\nOpenStack service API to see what are expected.\
+          \ \n To enable debugging information on the standard out for Python API,\
+          \ you can add\nthe below code: \n ``` \n import logging \n logger = logging.getLogger(\"\
+          neutronclient\") \n logging.basicConfig(level=logging.DEBUG) \n ``` \n The\
+          \ will print the same output as adding --debug option for command line API.\
+          \ \n Debugging via Source Code \n If the above techniques are still not\
+          \ helpful, you can always look at the source\ncode to find the problems.\
+          \ \n The below source file structure is based on the installation in Ubuntu.\
+          \ \n The command line neutron command is located in '/usr/bin/neutron'.\
+          \ By looking at this\nfile, you should get a idea of how the various options\
+          \ are interpreted. This file\nacts as an interface for Python API. \n The\
+          \ Python API files are located under\n'/usr/lib/python2.7/dist-packages/neutronclient/v2_0/'\
+          \ and the most important file to look\nat is 'client.py'. This file does\
+          \ all the request preparation, sending request and\nreceiving response.\
+          \ It is also used by the command line Neutron client. "
+        description: '<h2>Debugging Neutron Command line Client</h2>
+
+          <p>These instructions assume you have installed Neutron command client in
+          a Linux
+
+          environment. If you have other operating systems, the debugging process
+          might be
+
+          a slightly different, however, the general rules should still apply.</p>
+
+          <p>Neutron command line client is very much like other Linux commands, it
+          outputs
+
+          errors in the standard output, which is the monitor.</p>
+
+          <p>If you get an error, you can always read the error message and generally
+          it give
+
+          you very good hints about what might be wrong.</p>
+
+          <p>For example, if you execute <code>neutron net-list</code> on the command
+          line without
+
+          authentication, the error message might look like this:</p>
+
+          <p><code>ERROR: You must provide a username via either --os-username or
+          env[OS_USERNAME]</code></p>
+
+          <p>The above message indicates you need to be authenticated before you can
+          use the
+
+          API. The authentication requires some environment variables to be set. To
+          set
+
+          these environment variables you can either source the script file obtained
+          from
+
+          NeCTAR <a href="https://dashboard.rc.nectar.org.au">Dashboard</a> or you
+          can override it by using command line options.</p>
+
+          <p>Please refer to <a href="https://support.nectar.org.au/support/solutions/articles/6000094839-getting-started">Networking
+          Getting Started</a> article.</p>
+
+          <p>You can always execute <code>man neutron</code> or simply <code>neutron
+          help</code> to get
+
+          more help information and to learn each supported options.</p>
+
+          <p>If you find a useful command, you can also execute <code>nova help command</code>,
+
+          this will give your more specific help for the command.</p>
+
+          <h2>Debugging Neutron Python API</h2>
+
+          <p>Debugging Neutron Python API takes more effects as it depends on how
+          familiar
+
+          with Python programming and what development environment you use.</p>
+
+          <p>The below provides some basic information about how you debug the Neutron
+          Python
+
+          API.</p>
+
+          <p>You can debug your python code using Python debugger called pdb and you
+          can find
+
+          more information <a href="https://docs.python.org/2/library/pdb.html">here</a>.</p>
+
+          <p>The below code uses pdb debuuger to debug a python file contains clinet
+          python
+
+          API code.</p>
+
+          <p><code>pdb file_name.py</code></p>
+
+          <p>Once you executed the above code, the command line will be stopped on
+          the first
+
+          line of code and you can use some commands to control the execution flow.</p>
+
+          <p>Some useful ones to use are:</p>
+
+          <table>
+
+          <thead>
+
+          <tr>
+
+          <th align="right">Command</th>
+
+          <th align="left">Action</th>
+
+          </tr>
+
+          </thead>
+
+          <tbody>
+
+          <tr>
+
+          <td align="right">b</td>
+
+          <td align="left">set a breakpoint</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">c</td>
+
+          <td align="left">continue debugging until you hit a breakpoint</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">s</td>
+
+          <td align="left">step through the code</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">n</td>
+
+          <td align="left">to go to next line of code</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">l</td>
+
+          <td align="left">list source code for the current file</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">u</td>
+
+          <td align="left">navigate up a stack frame</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">d</td>
+
+          <td align="left">navigate down a stack frame</td>
+
+          </tr>
+
+          <tr>
+
+          <td align="right">p</td>
+
+          <td align="left">to print the value of an expression in the current context</td>
+
+          </tr>
+
+          </tbody>
+
+          </table>
+
+          <h2>Debugging Via HTTP</h2>
+
+          <p>The both of command line API and python API are restful web service client.
+
+          Thus the requests are all made by using HTTP and you can always refer to
+
+          <a href="http://developer.openstack.org/api-ref-networking-v2.html">OpenStack
+          Service End</a> for further references about what should be
+
+          presented in the HTTP requests. The Neutron API uses <a href="http://www.python-requests.org/en/latest/">requests</a>
+          library
+
+          to send and receive HTTP requests/responses.</p>
+
+          <p>For command line client, you can add --debug option to print out HTTP
+          request
+
+          header and HTTP response header, which give you a lot of more insight
+
+          information. To verify parameters in the request header, you can refer to
+
+          OpenStack service <a href="http://developer.openstack.org/api-ref-networking-v2.html">API</a>
+          to see what are expected.</p>
+
+          <p>To enable debugging information on the standard out for Python API, you
+          can add
+
+          the below code:</p>
+
+          <p>```</p>
+
+          <p>import logging</p>
+
+          <p>logger = logging.getLogger("neutronclient")</p>
+
+          <p>logging.basicConfig(level=logging.DEBUG)</p>
+
+          <p>```</p>
+
+          <p>The will print the same output as adding --debug option for command line
+          API.</p>
+
+          <h2>Debugging via Source Code</h2>
+
+          <p>If the above techniques are still not helpful, you can always look at
+          the source
+
+          code to find the problems.</p>
+
+          <p>The below source file structure is based on the installation in Ubuntu.</p>
+
+          <p>The command line neutron command is located in ''/usr/bin/neutron''.
+          By looking at this
+
+          file, you should get a idea of how the various options are interpreted.
+          This file
+
+          acts as an interface for Python API.</p>
+
+          <p>The Python API files are located under
+
+          ''/usr/lib/python2.7/dist-packages/neutronclient/v2_0/'' and the most important
+          file to look
+
+          at is ''client.py''. This file does all the request preparation, sending
+          request and
+
+          receiving response. It is also used by the command line Neutron client.</p>'
+        folder:
+          category_id: 6000122279
+          created_at: '2015-12-01T18:22:33-05:00'
+          customer_folders: []
+          description: Networking
+          id: 6000210730
+          is_default: false
+          language_id: 6
+          name: Networking
+          parent_id: 6000210730
+          position: 6
+          updated_at: '2015-12-07T19:43:55-05:00'
+          visibility: 1
+        folder_id: 6000210730
+        hits: 0
+        id: 6000095318
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-12-07T23:28:53-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000095318
+        position: 5
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Trouble Shooting
+        updated_at: '2015-12-07T23:28:53-05:00'
+        user_id: 6002464727
+  html: '<h2>Debugging Neutron Command line Client</h2>
+
+    <p>These instructions assume you have installed Neutron command client in a Linux
+
+    environment. If you have other operating systems, the debugging process might
+    be
+
+    a slightly different, however, the general rules should still apply.</p>
+
+    <p>Neutron command line client is very much like other Linux commands, it outputs
+
+    errors in the standard output, which is the monitor.</p>
+
+    <p>If you get an error, you can always read the error message and generally it
+    give
+
+    you very good hints about what might be wrong.</p>
+
+    <p>For example, if you execute <code>neutron net-list</code> on the command line
+    without
+
+    authentication, the error message might look like this:</p>
+
+    <p><code>ERROR: You must provide a username via either --os-username or env[OS_USERNAME]</code></p>
+
+    <p>The above message indicates you need to be authenticated before you can use
+    the
+
+    API. The authentication requires some environment variables to be set. To set
+
+    these environment variables you can either source the script file obtained from
+
+    NeCTAR <a href="https://dashboard.rc.nectar.org.au">Dashboard</a> or you can override
+    it by using command line options.</p>
+
+    <p>Please refer to <a href="https://support.nectar.org.au/support/solutions/articles/6000094839-getting-started">Networking
+    Getting Started</a> article.</p>
+
+    <p>You can always execute <code>man neutron</code> or simply <code>neutron help</code>
+    to get
+
+    more help information and to learn each supported options.</p>
+
+    <p>If you find a useful command, you can also execute <code>nova help command</code>,
+
+    this will give your more specific help for the command.</p>
+
+    <h2>Debugging Neutron Python API</h2>
+
+    <p>Debugging Neutron Python API takes more effects as it depends on how familiar
+
+    with Python programming and what development environment you use.</p>
+
+    <p>The below provides some basic information about how you debug the Neutron Python
+
+    API.</p>
+
+    <p>You can debug your python code using Python debugger called pdb and you can
+    find
+
+    more information <a href="https://docs.python.org/2/library/pdb.html">here</a>.</p>
+
+    <p>The below code uses pdb debuuger to debug a python file contains clinet python
+
+    API code.</p>
+
+    <p><code>pdb file_name.py</code></p>
+
+    <p>Once you executed the above code, the command line will be stopped on the first
+
+    line of code and you can use some commands to control the execution flow.</p>
+
+    <p>Some useful ones to use are:</p>
+
+    <table>
+
+    <thead>
+
+    <tr>
+
+    <th align="right">Command</th>
+
+    <th align="left">Action</th>
+
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr>
+
+    <td align="right">b</td>
+
+    <td align="left">set a breakpoint</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">c</td>
+
+    <td align="left">continue debugging until you hit a breakpoint</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">s</td>
+
+    <td align="left">step through the code</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">n</td>
+
+    <td align="left">to go to next line of code</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">l</td>
+
+    <td align="left">list source code for the current file</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">u</td>
+
+    <td align="left">navigate up a stack frame</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">d</td>
+
+    <td align="left">navigate down a stack frame</td>
+
+    </tr>
+
+    <tr>
+
+    <td align="right">p</td>
+
+    <td align="left">to print the value of an expression in the current context</td>
+
+    </tr>
+
+    </tbody>
+
+    </table>
+
+    <h2>Debugging Via HTTP</h2>
+
+    <p>The both of command line API and python API are restful web service client.
+
+    Thus the requests are all made by using HTTP and you can always refer to
+
+    <a href="http://developer.openstack.org/api-ref-networking-v2.html">OpenStack
+    Service End</a> for further references about what should be
+
+    presented in the HTTP requests. The Neutron API uses <a href="http://www.python-requests.org/en/latest/">requests</a>
+    library
+
+    to send and receive HTTP requests/responses.</p>
+
+    <p>For command line client, you can add --debug option to print out HTTP request
+
+    header and HTTP response header, which give you a lot of more insight
+
+    information. To verify parameters in the request header, you can refer to
+
+    OpenStack service <a href="http://developer.openstack.org/api-ref-networking-v2.html">API</a>
+    to see what are expected.</p>
+
+    <p>To enable debugging information on the standard out for Python API, you can
+    add
+
+    the below code:</p>
+
+    <p>```</p>
+
+    <p>import logging</p>
+
+    <p>logger = logging.getLogger("neutronclient")</p>
+
+    <p>logging.basicConfig(level=logging.DEBUG)</p>
+
+    <p>```</p>
+
+    <p>The will print the same output as adding --debug option for command line API.</p>
+
+    <h2>Debugging via Source Code</h2>
+
+    <p>If the above techniques are still not helpful, you can always look at the source
+
+    code to find the problems.</p>
+
+    <p>The below source file structure is based on the installation in Ubuntu.</p>
+
+    <p>The command line neutron command is located in ''/usr/bin/neutron''. By looking
+    at this
+
+    file, you should get a idea of how the various options are interpreted. This file
+
+    acts as an interface for Python API.</p>
+
+    <p>The Python API files are located under
+
+    ''/usr/lib/python2.7/dist-packages/neutronclient/v2_0/'' and the most important
+    file to look
+
+    at is ''client.py''. This file does all the request preparation, sending request
+    and
+
+    receiving response. It is also used by the command line Neutron client.</p>'
+  parent: 44
+  sha1: 9acbb5d011cc0ca185cceb3755b02ccde3f6dd89
+  title: Trouble Shooting
