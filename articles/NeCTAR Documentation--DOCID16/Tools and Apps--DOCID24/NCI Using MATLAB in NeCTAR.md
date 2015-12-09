@@ -1,7 +1,7 @@
-Using MATLAB in NeCTAR – A quick start guide.
+#Using MATLAB in NeCTAR – A quick start guide.
 =============================================
 
-Prerequisites
+##Prerequisites
 -------------
 
 Please note that any Node that you wish to run MATLAB from will need to meet the first of the following prerequisites. The NCI Node, principally the Tenjin NeCTAR Partner Cloud, has met these requirements. NCI has included the MATLAB software on the VDI images within Tenjin.
@@ -12,7 +12,7 @@ Each researcher, either individually, or as part of an institutional account wil
 
 2.  A MathWorks account with a MATLAB licence associated (to download and install MATLAB).
 
-Setup
+##Setup
 -----
 
 1.  Download the MATLAB installer to your local machine from the MathWorks site and get the file installation key for your licence.
