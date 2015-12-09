@@ -25,6 +25,7 @@
         - [Amending your changes for review](#Amending)  
         - [Cleaning up your local branches](#Cleaning)  
   - [A word of Caution](#caution)
+  - [Tips, tricks and troubleshooting](#tips)
 
 # NeCTAR Cloud Tier 0 Documentation
 
@@ -224,6 +225,10 @@ Approvers: Never merge a new article that has a DOCID already in the title (it m
 
 We use the branching feature of git to keep your changes separate from
  other peoples changes.
+ 
+- Before you create a branch, make sure your directory is up-to-date 
+    `git checkout master`  
+    `git pull`  
 
 - create a new git branch for your changes.  The branch name should be one word
  and explain what your change is about.  For example, the content you are
@@ -355,6 +360,8 @@ upload those changes for review to Gerrit.  But before you can do that, you need
  commit.
 
     `git add <file>`
+    
+    Quick tip: use `git add -A` if you want to add ALL the files mentioned in the `git status` readout.
 
 - then you need to commit your changes
 
@@ -492,6 +499,11 @@ And waiting for some more feedback via email.
 
 See the NeCTAR wiki for more documentation on [making changes after commiting](https://wiki.rc.nectar.org.au/wiki/ChangeWorkflow#Making_more_changes_after_committing.).
 
+After this, you can return to the master branch and update it. It is important to update the master branch each time before you create a new branch and make modifications. Use these commands before and after you make modifications to the git repository.
+
+`git checkout master`  
+`git pull`  
+
 #### Cleaning up your local branches <a name='Cleaning'></a>
 
 This workflow can lead to a lot of local branches on your machine that have been merged into the master branch.
@@ -525,5 +537,28 @@ you dicover any new ways of making the system have a tantrum.
   - Adding sub-folders at level 2 has been successful (remember to add it without any DOCID, this will be assigned automatically). Add the folder at the same time as you add contents to the folder as docobot ignores empty folders.
   
   - Never submit a new article or directory with a DOCID. Docobot will automatically add a DOCID after the merge. If Gerrit is reset for some reason (as a troubleshooting measure), you may need to re-commit a new article that was merged in the period that has been rewound. In this case, the article was given a DOCID already, but because of the reset, the DOCID needs to be deleted from the filename before it can be resubmitted.
+  
+## Tips, tricks and troubleshooting <a name='tips'></a>
 
+- The title of the article is the same as the filename of your .md file (minus the DOCID bit). Thus it is important that you use spaces rather than underscores between words in the filename.
+
+- If you forget to checkout a new branch before making your changes, and have been modifying the master branch instead;
+  - Create a new branch and the modifications you have made will be transferred to this branch for you to add, commit and merge.
+  
+- If there have been a lot of changes in the master branch since you did your last `git pull`, your changes may create a 'merge conflict'
+  - Create a local copy of any changes you have made (e.g. on your desktop)
+  - Delete the NeCTAR tier 0 directory from your computer, then clone it again with  
+  `git clone https://github.com/NeCTAR-RC/nectarcloud-tier0doco.git`
+  - Create a new branch and paste the modified/new articles into the directory
+  - Continue with adding and committing the changes as usual.
+
+### Some things Jenkins is fussy about - please add to list
+
+- There is not allowed to be punctuation at the end of a sub/heading
+- There is not allowed to be a single sentence paragraph with emphasis (use subheadings instead)
+- There must be blank lines before and after headings and lists (check for automatically inputted indentation spaces)
+- If there are MS-DOS line breaks, Jenkins won't recognise blank lines and will call errors. Convert your file to UNIX line breaks only.
+- Jenkins is very fussy about list syntax. Be consistent. If you want a numbered list with e.g. screenshots in between list elements, Jenkins won't let you assign numbers and will call each element **'1. '**  
+If you want to define your own list numbers, use parentheses e.g. 1) 2)... as Jenkins won't recognise this as a list and won't give you an error message.
+- If you want to preserve a single line break, use two spaces at the end of the line before hitting enter. This will prevent the lines from concatenating into a single line.
 
