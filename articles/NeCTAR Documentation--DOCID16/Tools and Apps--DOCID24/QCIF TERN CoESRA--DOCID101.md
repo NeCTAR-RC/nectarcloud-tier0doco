@@ -50,13 +50,15 @@ To have a workflow integrated into the CoESRA platform, please email
 [tern.coesra@gmail.com](mailto:tern.coesra@gmail.com).
 
 On launch, the platform includes the following applications: R, RStudio,
-Python and Kepler. It also includes Nimrod software, which is explained
-in detail elsewhere. Other software can be added to the live desktop by users.
+Python and Kepler. It also includes
+[Nimrod software](https://support.nectar.org.au/support/solutions/articles/6000095294-qcif-nimrod).
+Other software can be added to the live desktop by users.
 
 The CoESRA desktop is a time-limited service. It is provisioned initially
 for two days. A user will get an email notification six hours before the
 virtual desktop is remotely terminated. If users want to extend their access,
-they can request an extension from the system administrator.
+they can request an extension from the system administrator, or by responding
+to the desktop termination reminder email.
 
 ## Target audience
 
