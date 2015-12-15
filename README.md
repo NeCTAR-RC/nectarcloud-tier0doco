@@ -65,7 +65,6 @@ is extensively documented at the git website already so we haven't bothered
 trying to replicate it here.
 
 
-
 ## How to contribute <a name='How'></a>
 
 For the uninitiated, the initial setup may seem daunting; there are several new
