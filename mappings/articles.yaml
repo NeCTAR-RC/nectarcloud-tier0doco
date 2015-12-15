@@ -16428,17 +16428,17 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 24
         id: 6000090906
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-22T23:58:49-05:00'
+        modified_at: '2015-12-14T22:14:48-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000090906
-        position: 4
+        position: 14
         seo_data: {}
         status: 2
         string_01: null
@@ -16446,8 +16446,8 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: TPAC R-Studio with X2go
-        updated_at: '2015-11-22T23:58:49-05:00'
+        title: TPAC R-Studio with Remote Desktop
+        updated_at: '2015-12-14T22:14:48-05:00'
         user_id: 6002464727
   html: "<p>Using remote desktop in the NeCTAR cloud is the easiest way to start\n\
     incorporating cloud computing into you research practice. The cloud can enable\n\
@@ -16548,7 +16548,7 @@
     \ Eresearch service providers.</p>"
   parent: 24
   sha1: 2046451b0669cf00d8b8e004b9db03579307f6bc
-  title: TPAC R-Studio with X2go
+  title: TPAC R-Studio with Remote Desktop
 91:
   freshdesk:
     fd_attributes:
