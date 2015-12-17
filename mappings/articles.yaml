@@ -26586,54 +26586,54 @@
           \ commands are relevant for Ubuntu and Debian users and were tested on a\
           \ Mac and PC, through MobaXterm virtual Linux emulator. \n There is an assumption\
           \ that the user already has a basic understanding of Linux command line\
-          \ coding and is familiar with the NeCTAR research cloud (i.e. setting up\
+          \ coding and is familiar with the NeCTAR Research Cloud (i.e. setting up\
           \ ssh-keypairs and launching and logging into instances, etc.). However,\
           \ guidance is provided throughout if experience is limited. Security and\
           \ maintenance of NeCTAR cloud instances are the responsibility of the user,\
           \ although some support is provided by the NeCTAR Helpdesk as well as extensive\
-          \ documentation available for using the NeCTAR Research Cloud. \n \n \n\
-          \ Installing R \n R is available for installation in many Linux distribution\
-          \ package repositories, including the most commonly used Ubuntu and Debian\
-          \ operating systems. To install the default version of R and dependent packages\
-          \ for the distribution you are using, perform these commands in your terminal\
-          \ window: \n $ sudo apt-get update \n$ sudo apt-get install r-base  \n$\
-          \ R \n>   \n Your terminal window is now your R console. \n \n updating\
-          \ to the newest version of R \n As new versions of R are released more regularly\
-          \ than versions of operating systems are, your Linux distribution will not\
-          \ always have the newest, or required, version of R in its software package\
-          \ repository. To install the newest version of R you will need to add the\
-          \ repository address to your package sources file so it will be downloaded\
-          \ when you perform a system update. \n $ sudo nano /etc/apt/sources.list\
-          \ \n Note: nano is a text editor, but you can use other similar editors.\
-          \ To install nano: \n $ sudo apt-get install nano \n The command will open\
-          \ your sources.list file and allow you to perform edits to it. The address\
-          \ you add will depend on both your preferred CRAN mirror and the specific\
-          \ Linux distribution you are using.  \n deb http://<cran.mirror>/bin/linux/<OS\
-          \ type and version> \n \n You will then need to obtain and add the appropriate\
-          \ public key: \n The Ubuntu archives on CRAN are signed with the key of\
-          \ \"Michael Rutter\" with key ID E084DAB9. You can fetch and add this key\
-          \ with: \n $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key\
-          \ E084DAB9  \n The Debian archives on CRAN are signed with the key of \"\
-          Johannes Ranke\" with key ID 381BA480. You can fetch and add this key with:\
-          \ \n $ sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480 \
-          \  \n Now perform an update to install the most recent version of R: \n\
-          \ $ sudo apt-get update \n$ sudo apt-get install r-base \n$ R    \n>   \n\
-          \ \n \n Installing RStudio Server GUI \n RStudio Server can be installed\
-          \ on Debian (8+) or Ubuntu (12.04+) systems. \nFor installation guidelines\
-          \ for other distributions reference the RStudio Server website.  \n In the\
-          \ cloud, RStudio is accessed via your web browser using your instance's\
-          \ IP address and a unique username and password to authenticate users. By\
-          \ default RStudio Server uses port 8787. If your instance's current security\
-          \ group rules do not allow for connections across this port you can change\
-          \ this in your NeCTAR Dashboard. To add this rule go to the Access & Security\
-          \ tab from the left hand toolbar and select Manage Rules and then Add Rule,\
-          \ for the relevant security group. In the pop-up window, create a new Custom\
-          \ TCP Rule and add port 8787.  \n \n Before you can connect to your RStudio\
-          \ Server you must download and install the package from within your terminal\
-          \ window.  \n Note: installation of .deb files requires prior installation\
-          \ of package gdebi-core: \n $ sudo apt-get install gdebi-core \n Next, download\
-          \ and install your preferred RStudio package (Check the RStudio website\
-          \ for an updated version): \n 64bit \nVersion: 0.99.489 \n $ wget https://download2.rstudio.org/rstudio-server-0.99.489-amd64.deb\
+          \ documentation available for using NeCTAR. \n \n \n Installing R \n R is\
+          \ available for installation in many Linux distribution package repositories,\
+          \ including the most commonly used Ubuntu and Debian operating systems.\
+          \ To install the default version of R and dependent packages for the distribution\
+          \ you are using, perform these commands in your terminal window: \n $ sudo\
+          \ apt-get update \n$ sudo apt-get install r-base  \n$ R \n>   \n Your terminal\
+          \ window is now your R console. \n \n updating to the newest version of\
+          \ R \n As new versions of R are released more regularly than versions of\
+          \ operating systems are, your Linux distribution will not always have the\
+          \ newest, or required, version of R in its software package repository.\
+          \ To install the newest version of R you will need to add the repository\
+          \ address to your package sources file so it will be downloaded when you\
+          \ perform a system update. \n $ sudo nano /etc/apt/sources.list \n Note:\
+          \ nano is a text editor, but you can use other similar editors. To install\
+          \ nano: \n $ sudo apt-get install nano \n The command will open your sources.list\
+          \ file and allow you to perform edits to it. The address you add will depend\
+          \ on both your preferred CRAN mirror and the specific Linux distribution\
+          \ you are using.  \n deb http://<cran.mirror>/bin/linux/<OS type and version>\
+          \ \n \n You will then need to obtain and add the appropriate public key:\
+          \ \n The Ubuntu archives on CRAN are signed with the key of \"Michael Rutter\"\
+          \ with key ID E084DAB9. You can fetch and add this key with: \n $ sudo apt-key\
+          \ adv --keyserver keyserver.ubuntu.com --recv-key E084DAB9  \n The Debian\
+          \ archives on CRAN are signed with the key of \"Johannes Ranke\" with key\
+          \ ID 381BA480. You can fetch and add this key with: \n $ sudo apt-key adv\
+          \ --keyserver keys.gnupg.net --recv-key 381BA480   \n Now perform an update\
+          \ to install the most recent version of R: \n $ sudo apt-get update \n$\
+          \ sudo apt-get install r-base \n$ R    \n>   \n \n \n Installing RStudio\
+          \ Server GUI \n RStudio Server can be installed on Debian (8+) or Ubuntu\
+          \ (12.04+) systems. \nFor installation guidelines for other distributions\
+          \ reference the RStudio Server website.  \n In the cloud, RStudio is accessed\
+          \ via your web browser using your instance's IP address and a unique username\
+          \ and password to authenticate users. By default RStudio Server uses port\
+          \ 8787. If your instance's current security group rules do not allow for\
+          \ connections across this port you can change this in your NeCTAR Dashboard.\
+          \ To add this rule go to the Access & Security tab from the left hand toolbar\
+          \ and select Manage Rules and then Add Rule, for the relevant security group.\
+          \ In the pop-up window, create a new Custom TCP Rule and add port 8787.\
+          \  \n \n Before you can connect to your RStudio Server you must download\
+          \ and install the package from within your terminal window.  \n Note: installation\
+          \ of .deb files requires prior installation of package gdebi-core: \n $\
+          \ sudo apt-get install gdebi-core \n Next, download and install your preferred\
+          \ RStudio package (Check RStudio for an updated version): \n 64bit \nVersion:\
+          \ 0.99.489 \n $ wget https://download2.rstudio.org/rstudio-server-0.99.489-amd64.deb\
           \ \n $ sudo gdebi rstudio-server-0.99.489-amd64.deb \n 32bit \nVersion:\
           \ 0.99.489 \n $ wget https://download2.rstudio.org/rstudio-server-0.99.489-i386.deb\
           \ \n $ sudo gdebi rstudio-server-0.99.489-i386.deb \n Now that RStudio Server\
@@ -26792,9 +26792,9 @@
         description: "<hr>\n<h2>Table of Contents</h2>\n<ul>\n<li><a href=\"#Intro\"\
           >Introduction</a></li>\n<li><a href=\"#R\">Installing R</a></li>\n<li><a\
           \ href=\"#Updating\">Updating to the newest version of R</a></li>\n<li><a\
-          \ href=\"#Installing%20RStudio\">Installing RStudio Server GUI</a></li>\n\
-          <li><a href=\"#Troubleshooting\">Troubleshooting and server management</a></li>\n\
-          <li><a href=\"#multiple%20versions\">Installing and switching between multiple\
+          \ href=\"#RStudio\">Installing RStudio Server GUI</a></li>\n<li><a href=\"\
+          #Troubleshooting\">Troubleshooting and server management</a></li>\n<li><a\
+          \ href=\"#multiple%20versions\">Installing and switching between multiple\
           \ versions of R</a></li>\n<li><a href=\"#RStudio%20multiple%20versions\"\
           >Using RStudio under multiple versions of R</a></li>\n<li><a href=\"#Transfer%20files\"\
           >Transferring files between your local and remote systems</a></li>\n<li><a\
@@ -26811,27 +26811,27 @@
           \ run R in the cloud. The commands are relevant for Ubuntu and Debian users\
           \ and were tested on a Mac and PC, through MobaXterm virtual Linux emulator.</p>\n\
           <p>There is an assumption that the user already has a basic understanding\
-          \ of Linux command line coding and is familiar with the NeCTAR research\
-          \ cloud (i.e. setting up ssh-keypairs and launching and logging into instances,\
+          \ of Linux command line coding and is familiar with the NeCTAR Research\
+          \ Cloud (i.e. setting up ssh-keypairs and launching and logging into instances,\
           \ etc.). However, guidance is provided throughout if experience is limited.\
           \ Security and maintenance of NeCTAR cloud instances are the responsibility\
           \ of the user, although some support is provided by the <a href=\"https://support.rc.nectar.org.au/docs/support\"\
           >NeCTAR Helpdesk</a> as well as extensive documentation available for using\
-          \ the <a href=\"https://support.rc.nectar.org.au/docs/getting-started\"\
-          >NeCTAR Research Cloud</a>.</p>\n<hr>\n<p><a name=\"R\"></a></p>\n<h2>Installing\
-          \ R</h2>\n<p>R is available for installation in many Linux distribution\
-          \ package repositories, including the most commonly used Ubuntu and Debian\
-          \ operating systems. To install the default version of R and dependent packages\
-          \ for the distribution you are using, perform these commands in your terminal\
-          \ window:</p>\n<p><code>$ sudo apt-get update</code><br>\n<code>$ sudo apt-get\
-          \ install r-base</code> <br>\n<code>$ R</code><br>\n<code>&gt;</code>  </p>\n\
-          <p>Your terminal window is now your R console.</p>\n<p><a name=\"Updating\"\
-          ></a></p>\n<h3>updating to the newest version of R</h3>\n<p>As new versions\
-          \ of R are released more regularly than versions of operating systems are,\
-          \ your Linux distribution will not always have the newest, or required,\
-          \ version of R in its software package repository. To install the newest\
-          \ version of R you will need to add the repository address to your package\
-          \ sources file so it will be downloaded when you perform a system update.</p>\n\
+          \ <a href=\"https://support.rc.nectar.org.au/docs/getting-started\">NeCTAR</a>.</p>\n\
+          <hr>\n<p><a name=\"R\"></a></p>\n<h2>Installing R</h2>\n<p>R is available\
+          \ for installation in many Linux distribution package repositories, including\
+          \ the most commonly used Ubuntu and Debian operating systems. To install\
+          \ the default version of R and dependent packages for the distribution you\
+          \ are using, perform these commands in your terminal window:</p>\n<p><code>$\
+          \ sudo apt-get update</code><br>\n<code>$ sudo apt-get install r-base</code>\
+          \ <br>\n<code>$ R</code><br>\n<code>&gt;</code>  </p>\n<p>Your terminal\
+          \ window is now your R console.</p>\n<p><a name=\"Updating\"></a></p>\n\
+          <h3>updating to the newest version of R</h3>\n<p>As new versions of R are\
+          \ released more regularly than versions of operating systems are, your Linux\
+          \ distribution will not always have the newest, or required, version of\
+          \ R in its software package repository. To install the newest version of\
+          \ R you will need to add the repository address to your package sources\
+          \ file so it will be downloaded when you perform a system update.</p>\n\
           <p><code>$ sudo nano /etc/apt/sources.list</code></p>\n<p>Note: nano is\
           \ a text editor, but you can use other similar editors. To install nano:</p>\n\
           <p><code>$ sudo apt-get install nano</code></p>\n<p>The command will open\
@@ -26868,8 +26868,8 @@
           \ and install the package from within your terminal window. </p>\n<p>Note:\
           \ installation of .deb files requires prior installation of package gdebi-core:</p>\n\
           <p><code>$ sudo apt-get install gdebi-core</code></p>\n<p>Next, download\
-          \ and install your preferred RStudio package (Check the <a href=\"www.rstudio.com/products/rstudio/download-server/\"\
-          >RStudio website</a> for an updated version):</p>\n<p><strong>64bit</strong><br>\n\
+          \ and install your preferred RStudio package (Check <a href=\"https://www.rstudio.com/products/rstudio/download-server/\"\
+          >RStudio</a> for an updated version):</p>\n<p><strong>64bit</strong><br>\n\
           <strong>Version: 0.99.489</strong></p>\n<p><code>$ wget https://download2.rstudio.org/rstudio-server-0.99.489-amd64.deb</code></p>\n\
           <p><code>$ sudo gdebi rstudio-server-0.99.489-amd64.deb</code></p>\n<p><strong>32bit</strong><br>\n\
           <strong>Version: 0.99.489</strong></p>\n<p><code>$ wget https://download2.rstudio.org/rstudio-server-0.99.489-i386.deb</code></p>\n\
@@ -27080,13 +27080,13 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 3
+        hits: 5
         id: 6000098750
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-12-16T19:26:12-05:00'
+        modified_at: '2015-12-16T21:45:46-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000098750
@@ -27099,16 +27099,16 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Pawsey- Installing R and RStudio in the cloud
-        updated_at: '2015-12-16T19:26:12-05:00'
+        updated_at: '2015-12-16T21:45:46-05:00'
         user_id: 6002464727
   html: "<hr>\n<h2>Table of Contents</h2>\n<ul>\n<li><a href=\"#Intro\">Introduction</a></li>\n\
     <li><a href=\"#R\">Installing R</a></li>\n<li><a href=\"#Updating\">Updating to\
-    \ the newest version of R</a></li>\n<li><a href=\"#Installing RStudio\">Installing\
-    \ RStudio Server GUI</a></li>\n<li><a href=\"#Troubleshooting\">Troubleshooting\
-    \ and server management</a></li>\n<li><a href=\"#multiple versions\">Installing\
-    \ and switching between multiple versions of R</a></li>\n<li><a href=\"#RStudio\
-    \ multiple versions\">Using RStudio under multiple versions of R</a></li>\n<li><a\
-    \ href=\"#Transfer files\">Transferring files between your local and remote systems</a></li>\n\
+    \ the newest version of R</a></li>\n<li><a href=\"#RStudio\">Installing RStudio\
+    \ Server GUI</a></li>\n<li><a href=\"#Troubleshooting\">Troubleshooting and server\
+    \ management</a></li>\n<li><a href=\"#multiple versions\">Installing and switching\
+    \ between multiple versions of R</a></li>\n<li><a href=\"#RStudio multiple versions\"\
+    >Using RStudio under multiple versions of R</a></li>\n<li><a href=\"#Transfer\
+    \ files\">Transferring files between your local and remote systems</a></li>\n\
     <li><a href=\"#to\">Transferring files to your remote instance</a></li>\n<li><a\
     \ href=\"#from\">Transferring files from your remote system</a></li>\n<li><a href=\"\
     #R packages\">Installation and management of R packages</a></li>\n<li><a href=\"\
@@ -27121,31 +27121,30 @@
     \ guidance for how to actually run R in the cloud. The commands are relevant for\
     \ Ubuntu and Debian users and were tested on a Mac and PC, through MobaXterm virtual\
     \ Linux emulator.</p>\n<p>There is an assumption that the user already has a basic\
-    \ understanding of Linux command line coding and is familiar with the NeCTAR research\
-    \ cloud (i.e. setting up ssh-keypairs and launching and logging into instances,\
+    \ understanding of Linux command line coding and is familiar with the NeCTAR Research\
+    \ Cloud (i.e. setting up ssh-keypairs and launching and logging into instances,\
     \ etc.). However, guidance is provided throughout if experience is limited. Security\
     \ and maintenance of NeCTAR cloud instances are the responsibility of the user,\
     \ although some support is provided by the <a href=\"https://support.rc.nectar.org.au/docs/support\"\
-    >NeCTAR Helpdesk</a> as well as extensive documentation available for using the\
-    \ <a href=\"https://support.rc.nectar.org.au/docs/getting-started\">NeCTAR Research\
-    \ Cloud</a>.</p>\n<hr>\n<p><a name=\"R\"></a></p>\n<h2>Installing R</h2>\n<p>R\
-    \ is available for installation in many Linux distribution package repositories,\
-    \ including the most commonly used Ubuntu and Debian operating systems. To install\
-    \ the default version of R and dependent packages for the distribution you are\
-    \ using, perform these commands in your terminal window:</p>\n<p><code>$ sudo\
-    \ apt-get update</code><br>\n<code>$ sudo apt-get install r-base</code> <br>\n\
-    <code>$ R</code><br>\n<code>&gt;</code>  </p>\n<p>Your terminal window is now\
-    \ your R console.</p>\n<p><a name=\"Updating\"></a></p>\n<h3>updating to the newest\
-    \ version of R</h3>\n<p>As new versions of R are released more regularly than\
-    \ versions of operating systems are, your Linux distribution will not always have\
-    \ the newest, or required, version of R in its software package repository. To\
-    \ install the newest version of R you will need to add the repository address\
-    \ to your package sources file so it will be downloaded when you perform a system\
-    \ update.</p>\n<p><code>$ sudo nano /etc/apt/sources.list</code></p>\n<p>Note:\
-    \ nano is a text editor, but you can use other similar editors. To install nano:</p>\n\
-    <p><code>$ sudo apt-get install nano</code></p>\n<p>The command will open your\
-    \ sources.list file and allow you to perform edits to it. The address you add\
-    \ will depend on both your preferred <a href=\"https://cran.r-project.org/mirrors.html\"\
+    >NeCTAR Helpdesk</a> as well as extensive documentation available for using <a\
+    \ href=\"https://support.rc.nectar.org.au/docs/getting-started\">NeCTAR</a>.</p>\n\
+    <hr>\n<p><a name=\"R\"></a></p>\n<h2>Installing R</h2>\n<p>R is available for\
+    \ installation in many Linux distribution package repositories, including the\
+    \ most commonly used Ubuntu and Debian operating systems. To install the default\
+    \ version of R and dependent packages for the distribution you are using, perform\
+    \ these commands in your terminal window:</p>\n<p><code>$ sudo apt-get update</code><br>\n\
+    <code>$ sudo apt-get install r-base</code> <br>\n<code>$ R</code><br>\n<code>&gt;</code>\
+    \  </p>\n<p>Your terminal window is now your R console.</p>\n<p><a name=\"Updating\"\
+    ></a></p>\n<h3>updating to the newest version of R</h3>\n<p>As new versions of\
+    \ R are released more regularly than versions of operating systems are, your Linux\
+    \ distribution will not always have the newest, or required, version of R in its\
+    \ software package repository. To install the newest version of R you will need\
+    \ to add the repository address to your package sources file so it will be downloaded\
+    \ when you perform a system update.</p>\n<p><code>$ sudo nano /etc/apt/sources.list</code></p>\n\
+    <p>Note: nano is a text editor, but you can use other similar editors. To install\
+    \ nano:</p>\n<p><code>$ sudo apt-get install nano</code></p>\n<p>The command will\
+    \ open your sources.list file and allow you to perform edits to it. The address\
+    \ you add will depend on both your preferred <a href=\"https://cran.r-project.org/mirrors.html\"\
     >CRAN mirror</a> and the specific <a href=\"https://cran.rstudio.com/bin/linux/\"\
     >Linux distribution</a> you are using. </p>\n<p><code>deb http://&lt;cran.mirror&gt;/bin/linux/&lt;OS\
     \ type and version&gt;</code></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
@@ -27177,9 +27176,9 @@
     \ install the package from within your terminal window. </p>\n<p>Note: installation\
     \ of .deb files requires prior installation of package gdebi-core:</p>\n<p><code>$\
     \ sudo apt-get install gdebi-core</code></p>\n<p>Next, download and install your\
-    \ preferred RStudio package (Check the <a href=\"www.rstudio.com/products/rstudio/download-server/\"\
-    >RStudio website</a> for an updated version):</p>\n<p><strong>64bit</strong><br>\n\
-    <strong>Version: 0.99.489</strong></p>\n<p><code>$ wget https://download2.rstudio.org/rstudio-server-0.99.489-amd64.deb</code></p>\n\
+    \ preferred RStudio package (Check <a href=\"https://www.rstudio.com/products/rstudio/download-server/\"\
+    >RStudio</a> for an updated version):</p>\n<p><strong>64bit</strong><br>\n<strong>Version:\
+    \ 0.99.489</strong></p>\n<p><code>$ wget https://download2.rstudio.org/rstudio-server-0.99.489-amd64.deb</code></p>\n\
     <p><code>$ sudo gdebi rstudio-server-0.99.489-amd64.deb</code></p>\n<p><strong>32bit</strong><br>\n\
     <strong>Version: 0.99.489</strong></p>\n<p><code>$ wget https://download2.rstudio.org/rstudio-server-0.99.489-i386.deb</code></p>\n\
     <p><code>$ sudo gdebi rstudio-server-0.99.489-i386.deb</code></p>\n<p>Now that\
@@ -27367,5 +27366,5 @@
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/R8_top.jpg?raw=true\"\
     ></p>\n<hr>"
   parent: 24
-  sha1: 264b4b414fae0198c80e6ea832d5f4f9a3b5cf49
+  sha1: fe17b3e097cf75ecd5aeaba2d6eddf8dece4621c
   title: Pawsey- Installing R and RStudio in the cloud
