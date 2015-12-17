@@ -26570,71 +26570,70 @@
         created_at: '2015-12-15T21:34:49-05:00'
         datetime_01: null
         delta: true
-        desc_un_html: " Table of Contents \n \n Introduction \n Installing R \n Updating\
-          \ to the newest version of R \n Installing RStudio Server GUI \n Troubleshooting\
-          \ and server management \n Installing and switching between multiple versions\
-          \ of R \n Using RStudio under multiple versions of R \n Transferring files\
-          \ between your local and remote systems \n Transferring files to your remote\
-          \ instance \n Transferring files from your remote system \n Installation\
-          \ and management of R packages \n Running R in the cloud \n \n Installing\
-          \ R and RStudio Server in a NeCTAR Cloud Instance \n Introduction \n This\
-          \ documentation provides a step-by-step guide for installing and configuring\
-          \ a ready-to-use R environment, and optional RStudio Server graphical user\
-          \ interface, within the NeCTAR Research Cloud. Beyond basic software installation\
-          \ and version management, information is also provided for how to import\
-          \ and export data to and from your cloud instance as well as guidance for\
-          \ how to actually run R in the cloud. The commands are relevant for Ubuntu\
-          \ and Debian users and were tested on a Mac and PC, through MobaXterm virtual\
-          \ Linux emulator. \n There is an assumption that the user already has a\
-          \ basic understanding of Linux command line coding and is familiar with\
-          \ the NeCTAR research cloud (i.e. setting up ssh-keypairs and launching\
-          \ and logging into instances, etc.). However, guidance is provided throughout\
-          \ if experience is limited. Security and maintenance of NeCTAR cloud instances\
-          \ are the responsibility of the user, although some support is provided\
-          \ by the NeCTAR Helpdesk as well as extensive documentation available for\
-          \ using the NeCTAR Research Cloud. \n Installing R \n R is available for\
-          \ installation in many Linux distribution package repositories, including\
-          \ the most commonly used Ubuntu and Debian operating systems. To install\
-          \ the default version of R and dependent packages for the distribution you\
-          \ are using, perform these commands in your terminal window: \n ```\n$ sudo\
-          \ apt-get update\n$ sudo apt-get install r-base \n$ R  \n \n ``` \n \n Your\
-          \ terminal window is now your R console. \n Updating to the newest version\
-          \ of R \n As new versions of R are released more regularly than versions\
-          \ of operating systems are, your Linux distribution will not always have\
-          \ the newest, or required, version of R in its software package repository.\
-          \ To install the newest version of R you will need to add the repository\
-          \ address to your package sources file so it will be downloaded when you\
-          \ perform a system update. \n $ sudo nano /etc/apt/sources.list \n Note:\
-          \ nano is a text editor, but you can use other similar editors. To install\
-          \ nano:\n$ sudo apt-get install nano. \n The command will open your sources.list\
-          \ file and allow you to perform edits to it. The address you add will depend\
-          \ on both your preferred CRAN mirror and the specific Linux distribution\
-          \ you are using.  \n deb http://<cran.mirror>/bin/linux/<OS type and version>\
-          \ \n \n You will then need to obtain and add the appropriate public key:\
-          \ \n The Ubuntu archives on CRAN are signed with the key of \"Michael Rutter\"\
-          \ with key ID E084DAB9. You can fetch and add this key with: \n $ sudo apt-key\
-          \ adv --keyserver keyserver.ubuntu.com --recv-key E084DAB9  \n The Debian\
-          \ archives on CRAN are signed with the key of \"Johannes Ranke\" with key\
-          \ ID 381BA480. You can fetch and add this key with: \n $ sudo apt-key adv\
-          \ --keyserver keys.gnupg.net --recv-key 381BA480   \n Now perform an update\
-          \ to install the most recent version of R: \n ```\n$ sudo apt-get update\
-          \ \n$ sudo apt-get install r-base\n$ R  \n \n ``` \n \n Installing RStudio\
-          \ Server GUI \n RStudio Server can be installed on Debian (8+) or Ubuntu\
-          \ (12.04+) systems. \nFor installation guidelines for other distributions\
-          \ reference the RStudio Server website.  \n In the cloud, RStudio is accessed\
-          \ via your web browser using your instance's IP address and a unique username\
-          \ and password to authenticate users. By default RStudio Server uses port\
-          \ 8787. If your instance's current security group rules do not allow for\
-          \ connections across this port you can change this in your NeCTAR Dashboard.\
-          \ To add this rule go to the Access & Security tab from the left hand toolbar\
-          \ and select Manage Rules and then Add Rule, for the relevant security group.\
-          \ In the pop-up window, create a new Custom TCP Rule and add port 8787.\
-          \  \n \n Before you can connect to your RStudio Server you must download\
-          \ and install the package from within your terminal window.  \n Note: installation\
-          \ of .deb files requires prior installation of package gdebi-core:\n$ sudo\
-          \ apt-get install gdebi-core \n Next, download and install your preferred\
-          \ RStudio package (Check the RStudio website for an updated version): \n\
-          \ 64bit \nVersion: 0.99.489 \n $ wget https://download2.rstudio.org/rstudio-server-0.99.489-amd64.deb\
+        desc_un_html: " \n Table of Contents \n \n Introduction \n Installing R \n\
+          \ Updating to the newest version of R \n Installing RStudio Server GUI \n\
+          \ Troubleshooting and server management \n Installing and switching between\
+          \ multiple versions of R \n Using RStudio under multiple versions of R \n\
+          \ Transferring files between your local and remote systems \n Transferring\
+          \ files to your remote instance \n Transferring files from your remote system\
+          \ \n Installation and management of R packages \n Running R in the cloud\
+          \ \n \n \n \n Introduction \n This documentation provides a step-by-step\
+          \ guide for installing and configuring a ready-to-use R environment, and\
+          \ optional RStudio Server graphical user interface, within the NeCTAR Research\
+          \ Cloud. Beyond basic software installation and version management, information\
+          \ is also provided for how to import and export data to and from your cloud\
+          \ instance as well as guidance for how to actually run R in the cloud. The\
+          \ commands are relevant for Ubuntu and Debian users and were tested on a\
+          \ Mac and PC, through MobaXterm virtual Linux emulator. \n There is an assumption\
+          \ that the user already has a basic understanding of Linux command line\
+          \ coding and is familiar with the NeCTAR research cloud (i.e. setting up\
+          \ ssh-keypairs and launching and logging into instances, etc.). However,\
+          \ guidance is provided throughout if experience is limited. Security and\
+          \ maintenance of NeCTAR cloud instances are the responsibility of the user,\
+          \ although some support is provided by the NeCTAR Helpdesk as well as extensive\
+          \ documentation available for using the NeCTAR Research Cloud. \n \n \n\
+          \ Installing R \n R is available for installation in many Linux distribution\
+          \ package repositories, including the most commonly used Ubuntu and Debian\
+          \ operating systems. To install the default version of R and dependent packages\
+          \ for the distribution you are using, perform these commands in your terminal\
+          \ window: \n $ sudo apt-get update \n$ sudo apt-get install r-base  \n$\
+          \ R \n>   \n Your terminal window is now your R console. \n \n updating\
+          \ to the newest version of R \n As new versions of R are released more regularly\
+          \ than versions of operating systems are, your Linux distribution will not\
+          \ always have the newest, or required, version of R in its software package\
+          \ repository. To install the newest version of R you will need to add the\
+          \ repository address to your package sources file so it will be downloaded\
+          \ when you perform a system update. \n $ sudo nano /etc/apt/sources.list\
+          \ \n Note: nano is a text editor, but you can use other similar editors.\
+          \ To install nano: \n $ sudo apt-get install nano \n The command will open\
+          \ your sources.list file and allow you to perform edits to it. The address\
+          \ you add will depend on both your preferred CRAN mirror and the specific\
+          \ Linux distribution you are using.  \n deb http://<cran.mirror>/bin/linux/<OS\
+          \ type and version> \n \n You will then need to obtain and add the appropriate\
+          \ public key: \n The Ubuntu archives on CRAN are signed with the key of\
+          \ \"Michael Rutter\" with key ID E084DAB9. You can fetch and add this key\
+          \ with: \n $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key\
+          \ E084DAB9  \n The Debian archives on CRAN are signed with the key of \"\
+          Johannes Ranke\" with key ID 381BA480. You can fetch and add this key with:\
+          \ \n $ sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480 \
+          \  \n Now perform an update to install the most recent version of R: \n\
+          \ $ sudo apt-get update \n$ sudo apt-get install r-base \n$ R    \n>   \n\
+          \ \n \n Installing RStudio Server GUI \n RStudio Server can be installed\
+          \ on Debian (8+) or Ubuntu (12.04+) systems. \nFor installation guidelines\
+          \ for other distributions reference the RStudio Server website.  \n In the\
+          \ cloud, RStudio is accessed via your web browser using your instance's\
+          \ IP address and a unique username and password to authenticate users. By\
+          \ default RStudio Server uses port 8787. If your instance's current security\
+          \ group rules do not allow for connections across this port you can change\
+          \ this in your NeCTAR Dashboard. To add this rule go to the Access & Security\
+          \ tab from the left hand toolbar and select Manage Rules and then Add Rule,\
+          \ for the relevant security group. In the pop-up window, create a new Custom\
+          \ TCP Rule and add port 8787.  \n \n Before you can connect to your RStudio\
+          \ Server you must download and install the package from within your terminal\
+          \ window.  \n Note: installation of .deb files requires prior installation\
+          \ of package gdebi-core: \n $ sudo apt-get install gdebi-core \n Next, download\
+          \ and install your preferred RStudio package (Check the RStudio website\
+          \ for an updated version): \n 64bit \nVersion: 0.99.489 \n $ wget https://download2.rstudio.org/rstudio-server-0.99.489-amd64.deb\
           \ \n $ sudo gdebi rstudio-server-0.99.489-amd64.deb \n 32bit \nVersion:\
           \ 0.99.489 \n $ wget https://download2.rstudio.org/rstudio-server-0.99.489-i386.deb\
           \ \n $ sudo gdebi rstudio-server-0.99.489-i386.deb \n Now that RStudio Server\
@@ -26657,7 +26656,7 @@
           \ sudo usermod -a -G ubuntu <username> \n Now, this new username and password\
           \ can be used to login to RStudio Server. You can access /mnt by selecting\
           \ [...] at the top right of the Files tab, and upload or export between\
-          \ your local system and /mnt using Upload and More -> Export.... \n Troubleshooting\
+          \ your local system and /mnt using Upload and More -> Export.... \n \n troubleshooting\
           \ and server management \n The following commands are useful for management\
           \ of your RStudio Server, and for troubleshooting installation and server\
           \ access issues. For further information see the RStudio Server Administrator's\
@@ -26667,94 +26666,95 @@
           \ current status: \n$ sudo rstudio-server status \n Takes system online\
           \ or offline: \n$ sudo rstudio-server online\n$ sudo rstudio-server offline\
           \ \n Views system log, filtering for RStudio: \n$ more /var/log/syslog |\
-          \ grep RStudio \n Installing and switching between multiple versions of\
-          \ R \n Older versions of R must be built from their source code. The easiest\
-          \ way to manage multiple versions of R within your instance is to create\
-          \ a special directory in which to hold and configure these files. For example:\
-          \ \n $ mkdir R.versions\n$ cd R.versions\n~/R.versions$ \n To install any\
-          \ compatible version of R from source you first need to obtain the build\
-          \ dependencies: \n $ sudo apt-get build-dep r-base \n Next, within this\
-          \ new directory, obtain and unarchive the source code for the version of\
-          \ R you require. The example here will install R 3.2.2: \n $ wget https://cran.rstudio.com/src/base/R-3/R-3.2.2.tar.gz\
-          \ \n Unpack the file: \n $ tar -xvzf R-3.2.2.tar.gz \n Now from within the\
-          \ extracted directory, configure and install R from source. \nNote: Defining\
-          \ the prefix to a specific path is required to allow RStudio to find the\
-          \ relevant directory and shared libraries must be enabled for RStudio to\
-          \ access them. \n $ ./configure --prefix=/local/bin/R-3.2.2 --enable-R-shlib\
-          \ \n $ make \n R can be run at this point, without being fully installed,\
-          \ by executing the following command from within the directory where R-3.2.2\
-          \ was configured: \n ```\n$ bin/R \n \n ``` \n \n However, for RStudio to\
-          \ run you will need to perform a full installation: \n $ sudo make install\
-          \    \n Other optional commands: \n $ more INSTALL  -> reads installation\
-          \ guide \n$ make check  -> checks installation built correctly \n$ make\
-          \ pdf        -> writes PDF manuals \n$ make info       -> writes info files\
-          \ \n Note: to go back to using the default version of R, you use the same\
-          \ command (within any directory) as prior to installing the additional version\
-          \ ($ R). \n Using RStudio under multiple versions of R \n At this point\
-          \ RStudio is ready to run under any installed version of R- you only need\
-          \ to specify which version to run in the configuration file, adding a line\
-          \ to the file which indicates the directory for RStudio to use. \n $ sudo\
-          \ nano /etc/rstudio/rserver.conf \n The line you add will depend on the\
-          \ path you specified when R was configured and the version of R: \n rsession-which-r=/local/bin/R-3.2.2/bin/R\
-          \ \n \n Next, restart RStudio to allow the changes to take effect: \n $\
-          \ sudo rstudio-server restart \n Note: you may also need to quit your current\
+          \ grep RStudio \n \n \n Installing and switching between multiple versions\
+          \ of R \n Older versions of R must be built from their source code. The\
+          \ easiest way to manage multiple versions of R within your instance is to\
+          \ create a special directory in which to hold and configure these files.\
+          \ For example: \n $ mkdir R.versions   \n$ cd R.versions   \n~/R.versions$\
+          \   \n To install any compatible version of R from source you first need\
+          \ to obtain the build dependencies: \n $ sudo apt-get build-dep r-base \n\
+          \ Next, within this new directory, obtain and unarchive the source code\
+          \ for the version of R you require. The example here will install R 3.2.2:\
+          \ \n $ wget https://cran.rstudio.com/src/base/R-3/R-3.2.2.tar.gz \n Unpack\
+          \ the file: \n $ tar -xvzf R-3.2.2.tar.gz \n Now from within the extracted\
+          \ directory, configure and install R from source. \nNote: Defining the prefix\
+          \ to a specific path is required to allow RStudio to find the relevant directory\
+          \ and shared libraries must be enabled for RStudio to access them. \n $\
+          \ ./configure --prefix=/local/bin/R-3.2.2 --enable-R-shlib \n$ make \n R\
+          \ can be run at this point, without being fully installed, by executing\
+          \ the following command from within the directory where R-3.2.2 was configured:\
+          \ \n $ bin/R \n>   \n However, for RStudio to run you will need to perform\
+          \ a full installation: \n $ sudo make install    \n Other optional commands:\
+          \ \n $ more INSTALL  -> reads installation guide \n$ make check  -> checks\
+          \ installation built correctly \n$ make pdf        -> writes PDF manuals\
+          \ \n$ make info       -> writes info files \n Note: to go back to using\
+          \ the default version of R, you use the same command (within any directory)\
+          \ as prior to installing the additional version ($ R). \n \n using RStudio\
+          \ under multiple versions of R \n At this point RStudio is ready to run\
+          \ under any installed version of R- you only need to specify which version\
+          \ to run in the configuration file, adding a line to the file which indicates\
+          \ the directory for RStudio to use. \n $ sudo nano /etc/rstudio/rserver.conf\
+          \ \n The line you add will depend on the path you specified when R was configured\
+          \ and the version of R: \n rsession-which-r=/local/bin/R-3.2.2/bin/R \n\
+          \ \n Next, restart RStudio to allow the changes to take effect: \n $ sudo\
+          \ rstudio-server restart \n Note: you may also need to quit your current\
           \ RStudio session in your browser: File -> Quit RStudio (which will reopen\
           \ a new session). Then, type this command in your R console to confirm the\
-          \ appropriate version is running. \n ``` \n \n R.version.string\n[1] \"\
-          version 3.2.2 (2015-08-14)\"\n``` \n \n Transferring files between your\
-          \ local and remote systems \n How you transfer files in and out of your\
-          \ instance will depend on a number of factors, including where your input\
-          \ data is stored and how much of it there is, and whether you are using\
-          \ R through your terminal window or RStudio Server in your web browser.\
-          \ If you are using RStudio you already have a direct connection from your\
-          \ local computer to your instance to facilitate file transfers. If you are\
-          \ using R through your terminal window there are a couple options for this\
-          \ (See NeCTAR Support). This section will provide a short overview for transferring\
-          \ files via SFTP, or Secure File Transfer Protocol. \n For information on\
-          \ how to attach NeCTAR Volume or Object storage see additional NeCTAR Tier\
-          \ 0 Documentation \n SFTP is related to SSH (secure shell) as it uses the\
-          \ same key-pair you generated to initially log into your instance, to create\
-          \ a secure connection for transferring files. To initialise a SFTP link\
-          \ between your computer and remote instance you use a similar command as\
-          \ when using SSH. The prompt you see when the connection has been established\
-          \ is similar to the R console command line. \n $sftp -i ~/directory/key_name.key\
-          \ ubuntu@<IPaddress>\nsftp> \n The commands you use under SFTP are essentially\
-          \ the same standard Linux commands used for navigating and managing file\
-          \ systems when SSH'd into your instance. Some differences include that you\
-          \ must specify when you want to refer to your local directory by placing\
-          \ a 'l' or an '!' before each command, and that the SFTP prompt does not\
-          \ change based on what directory you are in. \n First, check your current\
-          \ local and remote directories \n ``` \n \n pwd\nlpwd\n``` \n \n Now, navigate\
-          \ through your local and remote file systems to the appropriate directories\
-          \ where your files are currently stored and where you would like them to\
-          \ be moved to, using the following common Linux commands (alternatively\
-          \ you can specify directory within the transfer command).  \n\n\n\nRemote\
-          \ instance\nLocal computer\nCommand use\n\n\n\n\nls\nlls\nlists all visible\
-          \ files in current directory\n\n\nls -al\nlls -al\nlists visible and hidden\
-          \ files in current directory\n\n\ncd\nlcd\nchanges directory\n\n\nmkdir\n\
-          ! mkdir\ncreates new directory\n\n\n\n Transferring files to your remote\
-          \ instance \n To transfer data files, scripts, or entire directories from\
-          \ your local terminal, the command put is used. Here is an example showing\
-          \ how to transfer an individual csv file.  \n > put data.csv \n \n To transfer\
-          \ an entire directory you will need to first create a destination directory\
-          \ with the same name. \n ``` \n \n mkdir R_scripts \nput -r R_scripts\n\
-          ``` \n \n \n Transferring files from your remote system \n When transferring\
-          \ files from your remote instance, the command get is used. Note: you can\
-          \ change a file/directory name by specifying a new name at the end of the\
-          \ command, and if names contain spaces they must be enclosed in ' '.  \n\
-          \ ``` \n \n get     \n mkdir \nget -r \n``` \n \n \n To terminate your SFTP\
-          \ connection use the same command as when connected through ssh: \n > exit\
-          \ \n Installation and management of R packages \n A number of R packages,\
-          \ all part of the r-recommended bundle, are included in R installation packages\
-          \ for Ubuntu and Debian Linux distributions. A list of these can be found\
-          \ at the CRAN website or by executing library(), which will also return\
-          \ the default library directory. \n When installing additional packages\
-          \ you will be prompted to create a personal library where all supplementary\
+          \ appropriate version is running. \n > R.version.string \n[1] \"version\
+          \ 3.2.2 (2015-08-14)\"   \n \n \n Transferring files between your local\
+          \ and remote systems \n How you transfer files in and out of your instance\
+          \ will depend on a number of factors, including where your input data is\
+          \ stored and how much of it there is, and whether you are using R through\
+          \ your terminal window or RStudio Server in your web browser. If you are\
+          \ using RStudio you already have a direct connection from your local computer\
+          \ to your instance to facilitate file transfers. If you are using R through\
+          \ your terminal window there are a couple options for this (See NeCTAR Support).\
+          \ This section will provide a short overview for transferring files via\
+          \ SFTP, or Secure File Transfer Protocol. \n For information on how to attach\
+          \ NeCTAR Volume or Object storage see additional NeCTAR Tier 0 Documentation\
+          \ \n SFTP is related to SSH (secure shell) as it uses the same key-pair\
+          \ you generated to initially log into your instance, to create a secure\
+          \ connection for transferring files. To initialise a SFTP link between your\
+          \ computer and remote instance you use a similar command as when using SSH.\
+          \ The prompt you see when the connection has been established is similar\
+          \ to the R console command line. \n $sftp -i ~/directory/key_name.key ubuntu@<IPaddress>\
+          \   \nsftp>   \n The commands you use under SFTP are essentially the same\
+          \ standard Linux commands used for navigating and managing file systems\
+          \ when SSH'd into your instance. Some differences include that you must\
+          \ specify when you want to refer to your local directory by placing a 'l'\
+          \ or an '!' before each command, and that the SFTP prompt does not change\
+          \ based on what directory you are in. \n First, check your current local\
+          \ and remote directories \n > pwd \n> lpwd   \n Now, navigate through your\
+          \ local and remote file systems to the appropriate directories where your\
+          \ files are currently stored and where you would like them to be moved to,\
+          \ using the following common Linux commands (alternatively you can specify\
+          \ directory within the transfer command).  \n\n\n\nRemote instance\nLocal\
+          \ computer\nCommand use\n\n\n\n\nls\nlls\nlists all visible files in current\
+          \ directory\n\n\nls -al\nlls -al\nlists visible and hidden files in current\
+          \ directory\n\n\ncd\nlcd\nchanges directory\n\n\nmkdir\n! mkdir\ncreates\
+          \ new directory\n\n\n\n \n transferring files to your remote instance \n\
+          \ To transfer data files, scripts, or entire directories from your local\
+          \ terminal, the command put is used. Here is an example showing how to transfer\
+          \ an individual csv file.  \n > put data.csv \n \n To transfer an entire\
+          \ directory you will need to first create a destination directory with the\
+          \ same name. \n > mkdir R_scripts  \n> put -r R_scripts   \n \n \n transferring\
+          \ files from your remote system \n When transferring files from your remote\
+          \ instance, the command get is used. Note: you can change a file/directory\
+          \ name by specifying a new name at the end of the command, and if names\
+          \ contain spaces they must be enclosed in ' '.  \n > get <file_name> <new_file_name>\
+          \     \n > mkdir <directory> \n> get -r <directory>   \n \n To terminate\
+          \ your SFTP connection use the same command as when connected through ssh:\
+          \ \n > exit \n \n \n Installation and management of R packages \n A number\
+          \ of R packages, all part of the r-recommended bundle, are included in R\
+          \ installation packages for Ubuntu and Debian Linux distributions. A list\
+          \ of these can be found at the CRAN website or by executing library(), which\
+          \ will also return the default library directory. \n When installing additional\
+          \ packages you will be prompted to create a personal library where all supplementary\
           \ packages will be installed to. R creates this directory on its own, once\
           \ permissions have been given, however a pop-up window will appear requesting\
           \ you to select your preferred CRAN mirror. Your personal library will act\
           \ as a second default library, meaning loading packages does not require\
-          \ you to specify the directory.  \n Running R in the cloud \n Scientists\
+          \ you to specify the directory.  \n \n \n Running R in the cloud \n Scientists\
           \ may want to conduct their research in the cloud for a variety of reasons,\
           \ and this diversity holds for those using R in the cloud. How you run scripts\
           \ in R and whether you use R through your terminal window or with RStudio\
@@ -26788,23 +26788,21 @@
           \ running by user 'test', the command 'rsession' indicates it is RStudio,\
           \ and a process owned by ubuntu (user ssh'd into instance) and the command\
           \ indicates R is running. The last example command below is for terminating\
-          \ a job by its PID. \n $ top\n1\n$ kill -9 <PID> \n "
-        description: "<h2>Table of Contents</h2>\n<ul>\n<li><a href=\"#%20Introduction\"\
-          >Introduction</a></li>\n<li><a href=\"#%20Installing%20R\">Installing R</a></li>\n\
-          <li><a href=\"#%20Updating%20to%20the%20newest%20version%20of%20R\">Updating\
-          \ to the newest version of R</a></li>\n<li><a href=\"#%20Installing%20RStudio%20Server%20GUI\"\
-          >Installing RStudio Server GUI</a></li>\n<li><a href=\"#%20Troubleshooting%20and%20server%20management\"\
-          >Troubleshooting and server management</a></li>\n<li><a href=\"#%20Installing%20and%20switching%20between%20multiple%20versions%20of%20R\"\
-          >Installing and switching between multiple versions of R</a></li>\n<li><a\
-          \ href=\"#%20Using%20RStudio%20under%20multiple%20versions%20of%20R\">Using\
-          \ RStudio under multiple versions of R</a></li>\n<li><a href=\"#%20Transferring%20files%20between%20your%20local%20and%20remote%20systems\"\
+          \ a job by its PID. \n $ top   \n1   \n$ kill -9 <PID>   \n \n "
+        description: "<hr>\n<h2>Table of Contents</h2>\n<ul>\n<li><a href=\"#Intro\"\
+          >Introduction</a></li>\n<li><a href=\"#R\">Installing R</a></li>\n<li><a\
+          \ href=\"#Updating\">Updating to the newest version of R</a></li>\n<li><a\
+          \ href=\"#Installing%20RStudio\">Installing RStudio Server GUI</a></li>\n\
+          <li><a href=\"#Troubleshooting\">Troubleshooting and server management</a></li>\n\
+          <li><a href=\"#multiple%20versions\">Installing and switching between multiple\
+          \ versions of R</a></li>\n<li><a href=\"#RStudio%20multiple%20versions\"\
+          >Using RStudio under multiple versions of R</a></li>\n<li><a href=\"#Transfer%20files\"\
           >Transferring files between your local and remote systems</a></li>\n<li><a\
-          \ href=\"#%20Transferring%20files%20to%20your%20remote%20instance\">Transferring\
-          \ files to your remote instance</a></li>\n<li><a href=\"#%20Transferring%20files%20from%20your%20remote%20system\"\
-          >Transferring files from your remote system</a></li>\n<li><a href=\"#%20Installation%20and%20management%20of%20R%20packages\"\
-          >Installation and management of R packages</a></li>\n<li><a href=\"#%20Running%20R%20in%20the%20cloud\"\
-          >Running R in the cloud</a></li>\n</ul>\n<h1>Installing R and RStudio Server\
-          \ in a NeCTAR Cloud Instance</h1>\n<h2>Introduction</h2>\n<p>This documentation\
+          \ href=\"#to\">Transferring files to your remote instance</a></li>\n<li><a\
+          \ href=\"#from\">Transferring files from your remote system</a></li>\n<li><a\
+          \ href=\"#R%20packages\">Installation and management of R packages</a></li>\n\
+          <li><a href=\"#Running%20R\">Running R in the cloud</a></li>\n</ul>\n<hr>\n\
+          <p><a name=\"intro\"></a></p>\n<h2>Introduction</h2>\n<p>This documentation\
           \ provides a step-by-step guide for installing and configuring a ready-to-use\
           \ R environment, and optional RStudio Server graphical user interface, within\
           \ the NeCTAR Research Cloud. Beyond basic software installation and version\
@@ -26820,22 +26818,23 @@
           \ of the user, although some support is provided by the <a href=\"https://support.rc.nectar.org.au/docs/support\"\
           >NeCTAR Helpdesk</a> as well as extensive documentation available for using\
           \ the <a href=\"https://support.rc.nectar.org.au/docs/getting-started\"\
-          >NeCTAR Research Cloud</a>.</p>\n<h2>Installing R</h2>\n<p>R is available\
-          \ for installation in many Linux distribution package repositories, including\
-          \ the most commonly used Ubuntu and Debian operating systems. To install\
-          \ the default version of R and dependent packages for the distribution you\
-          \ are using, perform these commands in your terminal window:</p>\n<p>```\n\
-          $ sudo apt-get update\n$ sudo apt-get install r-base \n$ R </p>\n<blockquote>\n\
-          <p>```</p>\n</blockquote>\n<p>Your terminal window is now your R console.</p>\n\
-          <h3>Updating to the newest version of R</h3>\n<p>As new versions of R are\
-          \ released more regularly than versions of operating systems are, your Linux\
-          \ distribution will not always have the newest, or required, version of\
-          \ R in its software package repository. To install the newest version of\
-          \ R you will need to add the repository address to your package sources\
-          \ file so it will be downloaded when you perform a system update.</p>\n\
+          >NeCTAR Research Cloud</a>.</p>\n<hr>\n<p><a name=\"R\"></a></p>\n<h2>Installing\
+          \ R</h2>\n<p>R is available for installation in many Linux distribution\
+          \ package repositories, including the most commonly used Ubuntu and Debian\
+          \ operating systems. To install the default version of R and dependent packages\
+          \ for the distribution you are using, perform these commands in your terminal\
+          \ window:</p>\n<p><code>$ sudo apt-get update</code><br>\n<code>$ sudo apt-get\
+          \ install r-base</code> <br>\n<code>$ R</code><br>\n<code>&gt;</code>  </p>\n\
+          <p>Your terminal window is now your R console.</p>\n<p><a name=\"Updating\"\
+          ></a></p>\n<h3>updating to the newest version of R</h3>\n<p>As new versions\
+          \ of R are released more regularly than versions of operating systems are,\
+          \ your Linux distribution will not always have the newest, or required,\
+          \ version of R in its software package repository. To install the newest\
+          \ version of R you will need to add the repository address to your package\
+          \ sources file so it will be downloaded when you perform a system update.</p>\n\
           <p><code>$ sudo nano /etc/apt/sources.list</code></p>\n<p>Note: nano is\
-          \ a text editor, but you can use other similar editors. To install nano:\n\
-          <code>$ sudo apt-get install nano</code>.</p>\n<p>The command will open\
+          \ a text editor, but you can use other similar editors. To install nano:</p>\n\
+          <p><code>$ sudo apt-get install nano</code></p>\n<p>The command will open\
           \ your sources.list file and allow you to perform edits to it. The address\
           \ you add will depend on both your preferred <a href=\"https://cran.r-project.org/mirrors.html\"\
           >CRAN mirror</a> and the specific <a href=\"https://cran.rstudio.com/bin/linux/\"\
@@ -26849,27 +26848,27 @@
           \ on CRAN are signed with the key of \"Johannes Ranke\" with key ID 381BA480.\
           \ You can fetch and add this key with:</p>\n<p><code>$ sudo apt-key adv\
           \ --keyserver keys.gnupg.net --recv-key 381BA480</code>  </p>\n<p>Now perform\
-          \ an update to install the most recent version of R:</p>\n<p>```\n$ sudo\
-          \ apt-get update \n$ sudo apt-get install r-base\n$ R </p>\n<blockquote>\n\
-          <p>```</p>\n</blockquote>\n<h2>Installing RStudio Server GUI</h2>\n<p>RStudio\
-          \ Server can be installed on Debian (8+) or Ubuntu (12.04+) systems. \n\
-          For installation guidelines for other distributions reference the <a href=\"\
-          https://www.rstudio.com/products/rstudio/download-server/\">RStudio Server\
-          \ website</a>. </p>\n<p>In the cloud, RStudio is accessed via your web browser\
-          \ using your instance's IP address and a unique username and password to\
-          \ authenticate users. By default RStudio Server uses port 8787. If your\
-          \ instance's current security group rules do not allow for connections across\
-          \ this port you can change this in your NeCTAR Dashboard. To add this rule\
-          \ go to the <strong>Access &amp; Security</strong> tab from the left hand\
-          \ toolbar and select <strong>Manage Rules</strong> and then <strong>Add\
-          \ Rule</strong>, for the relevant security group. In the pop-up window,\
-          \ create a new <strong>Custom TCP Rule</strong> and add port <strong>8787</strong>.\
-          \ </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R2_newrule.png?raw=true\"\
+          \ an update to install the most recent version of R:</p>\n<p><code>$ sudo\
+          \ apt-get update</code><br>\n<code>$ sudo apt-get install r-base</code><br>\n\
+          <code>$ R</code>   <br>\n<code>&gt;</code>  </p>\n<hr>\n<p><a name=\"RStudio\"\
+          ></a></p>\n<h2>Installing RStudio Server GUI</h2>\n<p>RStudio Server can\
+          \ be installed on Debian (8+) or Ubuntu (12.04+) systems. \nFor installation\
+          \ guidelines for other distributions reference the <a href=\"https://www.rstudio.com/products/rstudio/download-server/\"\
+          >RStudio Server website</a>. </p>\n<p>In the cloud, RStudio is accessed\
+          \ via your web browser using your instance's IP address and a unique username\
+          \ and password to authenticate users. By default RStudio Server uses port\
+          \ 8787. If your instance's current security group rules do not allow for\
+          \ connections across this port you can change this in your NeCTAR Dashboard.\
+          \ To add this rule go to the <strong>Access &amp; Security</strong> tab\
+          \ from the left hand toolbar and select <strong>Manage Rules</strong> and\
+          \ then <strong>Add Rule</strong>, for the relevant security group. In the\
+          \ pop-up window, create a new <strong>Custom TCP Rule</strong> and add port\
+          \ <strong>8787</strong>. </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R2_newrule.png?raw=true\"\
           ></p>\n<p>Before you can connect to your RStudio Server you must download\
           \ and install the package from within your terminal window. </p>\n<p>Note:\
-          \ installation of .deb files requires prior installation of package gdebi-core:\n\
-          <code>$ sudo apt-get install gdebi-core</code></p>\n<p>Next, download and\
-          \ install your preferred RStudio package (Check the <a href=\"www.rstudio.com/products/rstudio/download-server/\"\
+          \ installation of .deb files requires prior installation of package gdebi-core:</p>\n\
+          <p><code>$ sudo apt-get install gdebi-core</code></p>\n<p>Next, download\
+          \ and install your preferred RStudio package (Check the <a href=\"www.rstudio.com/products/rstudio/download-server/\"\
           >RStudio website</a> for an updated version):</p>\n<p><strong>64bit</strong><br>\n\
           <strong>Version: 0.99.489</strong></p>\n<p><code>$ wget https://download2.rstudio.org/rstudio-server-0.99.489-amd64.deb</code></p>\n\
           <p><code>$ sudo gdebi rstudio-server-0.99.489-amd64.deb</code></p>\n<p><strong>32bit</strong><br>\n\
@@ -26899,10 +26898,11 @@
           \ You can access /mnt by selecting <strong>[...]</strong> at the top right\
           \ of the <strong>Files</strong> tab, and upload or export between your local\
           \ system and /mnt using <strong>Upload</strong> and <strong>More</strong>\
-          \ -&gt; <strong>Export...</strong>.</p>\n<h3>Troubleshooting and server\
-          \ management</h3>\n<p>The following commands are useful for management of\
-          \ your RStudio Server, and for troubleshooting installation and server access\
-          \ issues. For further information see the <a href=\"https://s3.amazonaws.com/rstudio-server/rstudio-server-pro-0.98.507-admin-guide.pdf\"\
+          \ -&gt; <strong>Export...</strong>.</p>\n<p><a name=\"Troubleshooting\"\
+          ></a></p>\n<h3>troubleshooting and server management</h3>\n<p>The following\
+          \ commands are useful for management of your RStudio Server, and for troubleshooting\
+          \ installation and server access issues. For further information see the\
+          \ <a href=\"https://s3.amazonaws.com/rstudio-server/rstudio-server-pro-0.98.507-admin-guide.pdf\"\
           >RStudio Server Administrator's Guide</a>.</p>\n<p>Tests correct installation\
           \ and connection with installed R:<br>\n<code>$ sudo rstudio-server verify-installation</code></p>\n\
           <p>Restarts RStudio after changes or updates are made:<br>\n<code>$ sudo\
@@ -26910,14 +26910,15 @@
           \ sudo rstudio-server status</code></p>\n<p>Takes system online or offline:<br>\n\
           <code>$ sudo rstudio-server online</code>\n<code>$ sudo rstudio-server offline</code></p>\n\
           <p>Views system log, filtering for RStudio:<br>\n<code>$ more /var/log/syslog\
-          \ | grep RStudio</code></p>\n<h2>Installing and switching between multiple\
-          \ versions of R</h2>\n<p>Older versions of R must be built from their source\
-          \ code. The easiest way to manage multiple versions of R within your instance\
-          \ is to create a special directory in which to hold and configure these\
-          \ files. For example:</p>\n<p><code>$ mkdir R.versions\n$ cd R.versions\n\
-          ~/R.versions$</code></p>\n<p>To install any compatible version of R from\
-          \ source you first need to obtain the build dependencies:</p>\n<p><code>$\
-          \ sudo apt-get build-dep r-base</code></p>\n<p>Next, <strong>within</strong>\
+          \ | grep RStudio</code></p>\n<hr>\n<p><a name=\"multiple%20versions\"></a></p>\n\
+          <h2>Installing and switching between multiple versions of R</h2>\n<p>Older\
+          \ versions of R must be built from their source code. The easiest way to\
+          \ manage multiple versions of R within your instance is to create a special\
+          \ directory in which to hold and configure these files. For example:</p>\n\
+          <p><code>$ mkdir R.versions</code>  <br>\n<code>$ cd R.versions</code> \
+          \ <br>\n<code>~/R.versions$</code>  </p>\n<p>To install any compatible version\
+          \ of R from source you first need to obtain the build dependencies:</p>\n\
+          <p><code>$ sudo apt-get build-dep r-base</code></p>\n<p>Next, <strong>within</strong>\
           \ this new directory, <a href=\"https://cran.rstudio.com/src/base\">obtain</a>\
           \ and unarchive the source code for the version of R you require. The example\
           \ here will install R 3.2.2:</p>\n<p><code>$ wget https://cran.rstudio.com/src/base/R-3/R-3.2.2.tar.gz</code></p>\n\
@@ -26926,60 +26927,61 @@
           \ install R from source. \nNote: Defining the prefix to a specific path\
           \ is required to allow RStudio to find the relevant directory and shared\
           \ libraries must be enabled for RStudio to access them.</p>\n<p><code>$\
-          \ ./configure --prefix=/local/bin/R-3.2.2 --enable-R-shlib</code></p>\n\
-          <p><code>$ make</code></p>\n<p>R can be run at this point, without being\
-          \ fully installed, by executing the following command from within the directory\
-          \ where R-3.2.2 was configured:</p>\n<p>```\n$ bin/R</p>\n<blockquote>\n\
-          <p>```</p>\n</blockquote>\n<p>However, for RStudio to run you will need\
-          \ to perform a full installation:</p>\n<p><code>$ sudo make install</code>\
-          \   </p>\n<p>Other optional commands:</p>\n<p><code>$ more INSTALL</code>\
-          \  -&gt; reads installation guide<br>\n<code>$ make check</code>  -&gt;\
-          \ checks installation built correctly<br>\n<code>$ make pdf</code>     \
-          \   -&gt; writes PDF manuals<br>\n<code>$ make info</code>       -&gt; writes\
-          \ info files</p>\n<p>Note: to go back to using the default version of R,\
-          \ you use the same command (within any directory) as prior to installing\
-          \ the additional version (<code>$ R</code>).</p>\n<h3>Using RStudio under\
-          \ multiple versions of R</h3>\n<p>At this point RStudio is ready to run\
-          \ under any installed version of R- you only need to specify which version\
-          \ to run in the configuration file, adding a line to the file which indicates\
-          \ the directory for RStudio to use.</p>\n<p><code>$ sudo nano /etc/rstudio/rserver.conf</code></p>\n\
-          <p>The line you add will depend on the path you specified when R was configured\
-          \ and the version of R:</p>\n<p><code>rsession-which-r=/local/bin/R-3.2.2/bin/R</code></p>\n\
-          <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R4_Rversion.png?raw=true\"\
+          \ ./configure --prefix=/local/bin/R-3.2.2 --enable-R-shlib</code><br>\n\
+          <code>$ make</code></p>\n<p>R can be run at this point, without being fully\
+          \ installed, by executing the following command from within the directory\
+          \ where R-3.2.2 was configured:</p>\n<p><code>$ bin/R</code><br>\n<code>&gt;</code>\
+          \  </p>\n<p>However, for RStudio to run you will need to perform a full\
+          \ installation:</p>\n<p><code>$ sudo make install</code>   </p>\n<p>Other\
+          \ optional commands:</p>\n<p><code>$ more INSTALL</code>  -&gt; reads installation\
+          \ guide<br>\n<code>$ make check</code>  -&gt; checks installation built\
+          \ correctly<br>\n<code>$ make pdf</code>        -&gt; writes PDF manuals<br>\n\
+          <code>$ make info</code>       -&gt; writes info files</p>\n<p>Note: to\
+          \ go back to using the default version of R, you use the same command (within\
+          \ any directory) as prior to installing the additional version (<code>$\
+          \ R</code>).</p>\n<p><a name=\"RStudio%20multiple%20versions\"></a></p>\n\
+          <h3>using RStudio under multiple versions of R</h3>\n<p>At this point RStudio\
+          \ is ready to run under any installed version of R- you only need to specify\
+          \ which version to run in the configuration file, adding a line to the file\
+          \ which indicates the directory for RStudio to use.</p>\n<p><code>$ sudo\
+          \ nano /etc/rstudio/rserver.conf</code></p>\n<p>The line you add will depend\
+          \ on the path you specified when R was configured and the version of R:</p>\n\
+          <p><code>rsession-which-r=/local/bin/R-3.2.2/bin/R</code></p>\n<p><img alt=\"\
+          \" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R4_Rversion.png?raw=true\"\
           ></p>\n<p>Next, restart RStudio to allow the changes to take effect:</p>\n\
           <p><code>$ sudo rstudio-server restart</code></p>\n<p>Note: you may also\
           \ need to quit your current RStudio session in your browser: <strong>File</strong>\
           \ -&gt; <strong>Quit RStudio</strong> (which will reopen a new session).\
           \ Then, type this command in your R console to confirm the appropriate version\
-          \ is running.</p>\n<p>```</p>\n<blockquote>\n<p>R.version.string\n[1] \"\
-          version 3.2.2 (2015-08-14)\"\n```</p>\n</blockquote>\n<h2>Transferring files\
-          \ between your local and remote systems</h2>\n<p>How you transfer files\
-          \ in and out of your instance will depend on a number of factors, including\
-          \ where your input data is stored and how much of it there is, and whether\
-          \ you are using R through your terminal window or RStudio Server in your\
-          \ web browser. If you are using RStudio you already have a direct connection\
-          \ from your local computer to your instance to facilitate file transfers.\
-          \ If you are using R through your terminal window there are a couple options\
-          \ for this (<a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
+          \ is running.</p>\n<p><code>&gt; R.version.string</code><br>\n<code>[1]\
+          \ \"version 3.2.2 (2015-08-14)\"</code>  </p>\n<hr>\n<p><a name=\"Transfer%20files\"\
+          ></a></p>\n<h2>Transferring files between your local and remote systems</h2>\n\
+          <p>How you transfer files in and out of your instance will depend on a number\
+          \ of factors, including where your input data is stored and how much of\
+          \ it there is, and whether you are using R through your terminal window\
+          \ or RStudio Server in your web browser. If you are using RStudio you already\
+          \ have a direct connection from your local computer to your instance to\
+          \ facilitate file transfers. If you are using R through your terminal window\
+          \ there are a couple options for this (<a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
           >See NeCTAR Support</a>). This section will provide a short overview for\
           \ transferring files via SFTP, or Secure File Transfer Protocol.</p>\n<p>For\
-          \ information on how to attach NeCTAR Volume or Object storage see additional\
-          \ <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
+          \ information on how to attach <strong>NeCTAR Volume</strong> or <strong>Object</strong>\
+          \ storage see additional <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
           >NeCTAR Tier 0 Documentation</a></p>\n<p>SFTP is related to SSH (secure\
           \ shell) as it uses the same key-pair you generated to initially log into\
           \ your instance, to create a secure connection for transferring files. To\
           \ initialise a SFTP link between your computer and remote instance you use\
           \ a similar command as when using SSH. The prompt you see when the connection\
           \ has been established is similar to the R console command line.</p>\n<p><code>$sftp\
-          \ -i ~/directory/key_name.key ubuntu@&lt;IPaddress&gt;\nsftp&gt;</code></p>\n\
-          <p>The commands you use under SFTP are essentially the same standard Linux\
-          \ commands used for navigating and managing file systems when SSH'd into\
-          \ your instance. Some differences include that you must specify when you\
-          \ want to refer to your local directory by placing a '<code>l</code>' or\
-          \ an '<code>!</code>' before each command, and that the SFTP prompt does\
+          \ -i ~/directory/key_name.key ubuntu@&lt;IPaddress&gt;</code>  <br>\n<code>sftp&gt;</code>\
+          \  </p>\n<p>The commands you use under SFTP are essentially the same standard\
+          \ Linux commands used for navigating and managing file systems when SSH'd\
+          \ into your instance. Some differences include that you must specify when\
+          \ you want to refer to your local directory by placing a '<code>l</code>'\
+          \ or an '<code>!</code>' before each command, and that the SFTP prompt does\
           \ not change based on what directory you are in.</p>\n<p>First, check your\
-          \ current local and remote directories</p>\n<p>```</p>\n<blockquote>\n<p>pwd\n\
-          lpwd\n```</p>\n</blockquote>\n<p>Now, navigate through your local and remote\
+          \ current local and remote directories</p>\n<p><code>&gt; pwd</code><br>\n\
+          <code>&gt; lpwd</code>  </p>\n<p>Now, navigate through your local and remote\
           \ file systems to the appropriate directories where your files are currently\
           \ stored and where you would like them to be moved to, using the following\
           \ common Linux commands (alternatively you can specify directory within\
@@ -26991,47 +26993,51 @@
           <td align=\"left\">lists visible and hidden files in current directory</td>\n\
           </tr>\n<tr>\n<td>cd</td>\n<td>lcd</td>\n<td align=\"left\">changes directory</td>\n\
           </tr>\n<tr>\n<td>mkdir</td>\n<td>! mkdir</td>\n<td align=\"left\">creates\
-          \ new directory</td>\n</tr>\n</tbody>\n</table>\n<h3>Transferring files\
-          \ to your remote instance</h3>\n<p>To transfer data files, scripts, or entire\
-          \ directories from your local terminal, the command <code>put</code> is\
-          \ used. Here is an example showing how to transfer an individual csv file.\
-          \ </p>\n<p><code>&gt; put data.csv</code></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R5_sftp.png?raw=true\"\
+          \ new directory</td>\n</tr>\n</tbody>\n</table>\n<p><a name=\"to\"></a></p>\n\
+          <h3>transferring files to your remote instance</h3>\n<p>To transfer data\
+          \ files, scripts, or entire directories from your local terminal, the command\
+          \ <code>put</code> is used. Here is an example showing how to transfer an\
+          \ individual csv file. </p>\n<p><code>&gt; put data.csv</code></p>\n<p><img\
+          \ alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R5_sftp.png?raw=true\"\
           ></p>\n<p>To transfer an entire directory you will need to first create\
-          \ a destination directory with the same name.</p>\n<p>```</p>\n<blockquote>\n\
-          <p>mkdir R_scripts \nput -r R_scripts\n```</p>\n</blockquote>\n<p><img alt=\"\
-          \" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R6_sftp.png?raw=true\"\
-          ></p>\n<h3>Transferring files from your remote system</h3>\n<p>When transferring\
-          \ files from your remote instance, the command <code>get</code> is used.\
-          \ Note: you can change a file/directory name by specifying a new name at\
-          \ the end of the command, and if names contain spaces they must be enclosed\
-          \ in ' '. </p>\n<p>```</p>\n<blockquote>\n<p>get    </p>\n<p>mkdir \nget\
-          \ -r \n```</p>\n</blockquote>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R7_sftp.png?raw=true\"\
+          \ a destination directory with the same name.</p>\n<p><code>&gt; mkdir R_scripts</code>\
+          \ <br>\n<code>&gt; put -r R_scripts</code>  </p>\n<p><img alt=\"\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R6_sftp.png?raw=true\"\
+          ></p>\n<p><a name=\"from\"></a></p>\n<h3>transferring files from your remote\
+          \ system</h3>\n<p>When transferring files from your remote instance, the\
+          \ command <code>get</code> is used. Note: you can change a file/directory\
+          \ name by specifying a new name at the end of the command, and if names\
+          \ contain spaces they must be enclosed in ' '. </p>\n<p><code>&gt; get &lt;file_name&gt;\
+          \ &lt;new_file_name&gt;</code>    </p>\n<p><code>&gt; mkdir &lt;directory&gt;</code><br>\n\
+          <code>&gt; get -r &lt;directory&gt;</code>  </p>\n<p><img alt=\"\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R7_sftp.png?raw=true\"\
           ></p>\n<p>To terminate your SFTP connection use the same command as when\
-          \ connected through ssh:</p>\n<p><code>&gt; exit</code></p>\n<h2>Installation\
-          \ and management of R packages</h2>\n<p>A number of R packages, all part\
-          \ of the r-recommended bundle, are included in R installation packages for\
-          \ Ubuntu and Debian Linux distributions. A list of these can be found at\
-          \ the <a href=\"https://cran.r-project.org/bin/linux/\">CRAN website</a>\
-          \ or by executing <code>library()</code>, which will also return the default\
-          \ library directory.</p>\n<p>When installing additional packages you will\
-          \ be prompted to create a personal library where all supplementary packages\
-          \ will be installed to. R creates this directory on its own, once permissions\
-          \ have been given, however a pop-up window will appear requesting you to\
-          \ select your preferred CRAN mirror. Your personal library will act as a\
-          \ second default library, meaning loading packages does not require you\
-          \ to specify the directory. </p>\n<h2>Running R in the cloud</h2>\n<p>Scientists\
-          \ may want to conduct their research in the cloud for a variety of reasons,\
-          \ and this diversity holds for those using R in the cloud. How you run scripts\
-          \ in R and whether you use R through your terminal window or with RStudio\
-          \ Server will depend on a multitude of factors, including individual preferences.\
-          \ In general, the cloud is most useful for non-interactive scripts, which\
-          \ can run in the 'background' allowing you to terminate the ssh connection\
-          \ between your local and remote systems, or logout and close your RStudio\
-          \ browser.</p>\n<p>While RStudio automatically runs R in the background,\
-          \ running R through your terminal window requires you to use commands to\
-          \ specify this (Note: ssh connections will break after periods of inactivity\
-          \ and, therefore, any jobs running in the forefront will be terminated).\
-          \ The command <code>nohup</code> coupled with either <a href=\"http://www.rdocumentation.org/packages/utils/functions/Rscript\"\
+          \ connected through ssh:</p>\n<p><code>&gt; exit</code></p>\n<hr>\n<p><a\
+          \ name=\"R%20packages\"></a></p>\n<h2>Installation and management of R packages</h2>\n\
+          <p>A number of R packages, all part of the r-recommended bundle, are included\
+          \ in R installation packages for Ubuntu and Debian Linux distributions.\
+          \ A list of these can be found at the <a href=\"https://cran.r-project.org/bin/linux/\"\
+          >CRAN website</a> or by executing <code>library()</code>, which will also\
+          \ return the default library directory.</p>\n<p>When installing additional\
+          \ packages you will be prompted to create a personal library where all supplementary\
+          \ packages will be installed to. R creates this directory on its own, once\
+          \ permissions have been given, however a pop-up window will appear requesting\
+          \ you to select your preferred CRAN mirror. Your personal library will act\
+          \ as a second default library, meaning loading packages does not require\
+          \ you to specify the directory. </p>\n<hr>\n<p><a name=\"Running%20R\"></a></p>\n\
+          <h2>Running R in the cloud</h2>\n<p>Scientists may want to conduct their\
+          \ research in the cloud for a variety of reasons, and this diversity holds\
+          \ for those using R in the cloud. How you run scripts in R and whether you\
+          \ use R through your terminal window or with RStudio Server will depend\
+          \ on a multitude of factors, including individual preferences. In general,\
+          \ the cloud is most useful for non-interactive scripts, which can run in\
+          \ the 'background' allowing you to terminate the ssh connection between\
+          \ your local and remote systems, or logout and close your RStudio browser.</p>\n\
+          <p>While RStudio automatically runs R in the background, running R through\
+          \ your terminal window requires you to use commands to specify this (Note:\
+          \ ssh connections will break after periods of inactivity and, therefore,\
+          \ any jobs running in the forefront will be terminated). The command <code>nohup</code>\
+          \ coupled with either <a href=\"http://www.rdocumentation.org/packages/utils/functions/Rscript\"\
           ><code>Rscript</code></a> or <a href=\"http://www.rdocumentation.org/packages/utils/functions/BATCH\"\
           ><code>R CMD BATCH</code></a> can be used to submit R scripts to run in\
           \ the background of your instance. Here are examples of each:</p>\n<p><code>$\
@@ -27056,9 +27062,10 @@
           \ image below there is a process running by user 'test', the command 'rsession'\
           \ indicates it is RStudio, and a process owned by ubuntu (user ssh'd into\
           \ instance) and the command indicates R is running. The last example command\
-          \ below is for terminating a job by its PID.</p>\n<p><code>$ top\n1\n$ kill\
-          \ -9 &lt;PID&gt;</code></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R8_top.jpg?raw=true\"\
-          ></p>"
+          \ below is for terminating a job by its PID.</p>\n<p><code>$ top</code>\
+          \  <br>\n<code>1</code>  <br>\n<code>$ kill -9 &lt;PID&gt;</code>  </p>\n\
+          <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R8_top.jpg?raw=true\"\
+          ></p>\n<hr>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:07-04:00'
@@ -27079,7 +27086,7 @@
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-12-15T21:34:49-05:00'
+        modified_at: '2015-12-16T19:26:12-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000098750
@@ -27091,26 +27098,22 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: Pawsey Installing R and RStudio
-        updated_at: '2015-12-16T19:25:38-05:00'
+        title: Pawsey- Installing R and RStudio in the cloud
+        updated_at: '2015-12-16T19:26:12-05:00'
         user_id: 6002464727
-  html: "<h2>Table of Contents</h2>\n<ul>\n<li><a href=\"# Introduction\">Introduction</a></li>\n\
-    <li><a href=\"# Installing R\">Installing R</a></li>\n<li><a href=\"# Updating\
-    \ to the newest version of R\">Updating to the newest version of R</a></li>\n\
-    <li><a href=\"# Installing RStudio Server GUI\">Installing RStudio Server GUI</a></li>\n\
-    <li><a href=\"# Troubleshooting and server management\">Troubleshooting and server\
-    \ management</a></li>\n<li><a href=\"# Installing and switching between multiple\
-    \ versions of R\">Installing and switching between multiple versions of R</a></li>\n\
-    <li><a href=\"# Using RStudio under multiple versions of R\">Using RStudio under\
-    \ multiple versions of R</a></li>\n<li><a href=\"# Transferring files between\
-    \ your local and remote systems\">Transferring files between your local and remote\
-    \ systems</a></li>\n<li><a href=\"# Transferring files to your remote instance\"\
-    >Transferring files to your remote instance</a></li>\n<li><a href=\"# Transferring\
-    \ files from your remote system\">Transferring files from your remote system</a></li>\n\
-    <li><a href=\"# Installation and management of R packages\">Installation and management\
-    \ of R packages</a></li>\n<li><a href=\"# Running R in the cloud\">Running R in\
-    \ the cloud</a></li>\n</ul>\n<h1>Installing R and RStudio Server in a NeCTAR Cloud\
-    \ Instance</h1>\n<h2>Introduction</h2>\n<p>This documentation provides a step-by-step\
+  html: "<hr>\n<h2>Table of Contents</h2>\n<ul>\n<li><a href=\"#Intro\">Introduction</a></li>\n\
+    <li><a href=\"#R\">Installing R</a></li>\n<li><a href=\"#Updating\">Updating to\
+    \ the newest version of R</a></li>\n<li><a href=\"#Installing RStudio\">Installing\
+    \ RStudio Server GUI</a></li>\n<li><a href=\"#Troubleshooting\">Troubleshooting\
+    \ and server management</a></li>\n<li><a href=\"#multiple versions\">Installing\
+    \ and switching between multiple versions of R</a></li>\n<li><a href=\"#RStudio\
+    \ multiple versions\">Using RStudio under multiple versions of R</a></li>\n<li><a\
+    \ href=\"#Transfer files\">Transferring files between your local and remote systems</a></li>\n\
+    <li><a href=\"#to\">Transferring files to your remote instance</a></li>\n<li><a\
+    \ href=\"#from\">Transferring files from your remote system</a></li>\n<li><a href=\"\
+    #R packages\">Installation and management of R packages</a></li>\n<li><a href=\"\
+    #Running R\">Running R in the cloud</a></li>\n</ul>\n<hr>\n<p><a name=\"intro\"\
+    ></a></p>\n<h2>Introduction</h2>\n<p>This documentation provides a step-by-step\
     \ guide for installing and configuring a ready-to-use R environment, and optional\
     \ RStudio Server graphical user interface, within the NeCTAR Research Cloud. Beyond\
     \ basic software installation and version management, information is also provided\
@@ -27125,24 +27128,25 @@
     \ although some support is provided by the <a href=\"https://support.rc.nectar.org.au/docs/support\"\
     >NeCTAR Helpdesk</a> as well as extensive documentation available for using the\
     \ <a href=\"https://support.rc.nectar.org.au/docs/getting-started\">NeCTAR Research\
-    \ Cloud</a>.</p>\n<h2>Installing R</h2>\n<p>R is available for installation in\
-    \ many Linux distribution package repositories, including the most commonly used\
-    \ Ubuntu and Debian operating systems. To install the default version of R and\
-    \ dependent packages for the distribution you are using, perform these commands\
-    \ in your terminal window:</p>\n<p>```\n$ sudo apt-get update\n$ sudo apt-get\
-    \ install r-base \n$ R </p>\n<blockquote>\n<p>```</p>\n</blockquote>\n<p>Your\
-    \ terminal window is now your R console.</p>\n<h3>Updating to the newest version\
-    \ of R</h3>\n<p>As new versions of R are released more regularly than versions\
-    \ of operating systems are, your Linux distribution will not always have the newest,\
-    \ or required, version of R in its software package repository. To install the\
-    \ newest version of R you will need to add the repository address to your package\
-    \ sources file so it will be downloaded when you perform a system update.</p>\n\
-    <p><code>$ sudo nano /etc/apt/sources.list</code></p>\n<p>Note: nano is a text\
-    \ editor, but you can use other similar editors. To install nano:\n<code>$ sudo\
-    \ apt-get install nano</code>.</p>\n<p>The command will open your sources.list\
-    \ file and allow you to perform edits to it. The address you add will depend on\
-    \ both your preferred <a href=\"https://cran.r-project.org/mirrors.html\">CRAN\
-    \ mirror</a> and the specific <a href=\"https://cran.rstudio.com/bin/linux/\"\
+    \ Cloud</a>.</p>\n<hr>\n<p><a name=\"R\"></a></p>\n<h2>Installing R</h2>\n<p>R\
+    \ is available for installation in many Linux distribution package repositories,\
+    \ including the most commonly used Ubuntu and Debian operating systems. To install\
+    \ the default version of R and dependent packages for the distribution you are\
+    \ using, perform these commands in your terminal window:</p>\n<p><code>$ sudo\
+    \ apt-get update</code><br>\n<code>$ sudo apt-get install r-base</code> <br>\n\
+    <code>$ R</code><br>\n<code>&gt;</code>  </p>\n<p>Your terminal window is now\
+    \ your R console.</p>\n<p><a name=\"Updating\"></a></p>\n<h3>updating to the newest\
+    \ version of R</h3>\n<p>As new versions of R are released more regularly than\
+    \ versions of operating systems are, your Linux distribution will not always have\
+    \ the newest, or required, version of R in its software package repository. To\
+    \ install the newest version of R you will need to add the repository address\
+    \ to your package sources file so it will be downloaded when you perform a system\
+    \ update.</p>\n<p><code>$ sudo nano /etc/apt/sources.list</code></p>\n<p>Note:\
+    \ nano is a text editor, but you can use other similar editors. To install nano:</p>\n\
+    <p><code>$ sudo apt-get install nano</code></p>\n<p>The command will open your\
+    \ sources.list file and allow you to perform edits to it. The address you add\
+    \ will depend on both your preferred <a href=\"https://cran.r-project.org/mirrors.html\"\
+    >CRAN mirror</a> and the specific <a href=\"https://cran.rstudio.com/bin/linux/\"\
     >Linux distribution</a> you are using. </p>\n<p><code>deb http://&lt;cran.mirror&gt;/bin/linux/&lt;OS\
     \ type and version&gt;</code></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/R1_sources.list.png?raw=true\"\
@@ -27154,10 +27158,11 @@
     \ of \"Johannes Ranke\" with key ID 381BA480. You can fetch and add this key with:</p>\n\
     <p><code>$ sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480</code>\
     \  </p>\n<p>Now perform an update to install the most recent version of R:</p>\n\
-    <p>```\n$ sudo apt-get update \n$ sudo apt-get install r-base\n$ R </p>\n<blockquote>\n\
-    <p>```</p>\n</blockquote>\n<h2>Installing RStudio Server GUI</h2>\n<p>RStudio\
-    \ Server can be installed on Debian (8+) or Ubuntu (12.04+) systems. \nFor installation\
-    \ guidelines for other distributions reference the <a href=\"https://www.rstudio.com/products/rstudio/download-server/\"\
+    <p><code>$ sudo apt-get update</code><br>\n<code>$ sudo apt-get install r-base</code><br>\n\
+    <code>$ R</code>   <br>\n<code>&gt;</code>  </p>\n<hr>\n<p><a name=\"RStudio\"\
+    ></a></p>\n<h2>Installing RStudio Server GUI</h2>\n<p>RStudio Server can be installed\
+    \ on Debian (8+) or Ubuntu (12.04+) systems. \nFor installation guidelines for\
+    \ other distributions reference the <a href=\"https://www.rstudio.com/products/rstudio/download-server/\"\
     >RStudio Server website</a>. </p>\n<p>In the cloud, RStudio is accessed via your\
     \ web browser using your instance's IP address and a unique username and password\
     \ to authenticate users. By default RStudio Server uses port 8787. If your instance's\
@@ -27170,9 +27175,9 @@
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/R2_newrule.png?raw=true\"\
     ></p>\n<p>Before you can connect to your RStudio Server you must download and\
     \ install the package from within your terminal window. </p>\n<p>Note: installation\
-    \ of .deb files requires prior installation of package gdebi-core:\n<code>$ sudo\
-    \ apt-get install gdebi-core</code></p>\n<p>Next, download and install your preferred\
-    \ RStudio package (Check the <a href=\"www.rstudio.com/products/rstudio/download-server/\"\
+    \ of .deb files requires prior installation of package gdebi-core:</p>\n<p><code>$\
+    \ sudo apt-get install gdebi-core</code></p>\n<p>Next, download and install your\
+    \ preferred RStudio package (Check the <a href=\"www.rstudio.com/products/rstudio/download-server/\"\
     >RStudio website</a> for an updated version):</p>\n<p><strong>64bit</strong><br>\n\
     <strong>Version: 0.99.489</strong></p>\n<p><code>$ wget https://download2.rstudio.org/rstudio-server-0.99.489-amd64.deb</code></p>\n\
     <p><code>$ sudo gdebi rstudio-server-0.99.489-amd64.deb</code></p>\n<p><strong>32bit</strong><br>\n\
@@ -27201,9 +27206,10 @@
     \ You can access /mnt by selecting <strong>[...]</strong> at the top right of\
     \ the <strong>Files</strong> tab, and upload or export between your local system\
     \ and /mnt using <strong>Upload</strong> and <strong>More</strong> -&gt; <strong>Export...</strong>.</p>\n\
-    <h3>Troubleshooting and server management</h3>\n<p>The following commands are\
-    \ useful for management of your RStudio Server, and for troubleshooting installation\
-    \ and server access issues. For further information see the <a href=\"https://s3.amazonaws.com/rstudio-server/rstudio-server-pro-0.98.507-admin-guide.pdf\"\
+    <p><a name=\"Troubleshooting\"></a></p>\n<h3>troubleshooting and server management</h3>\n\
+    <p>The following commands are useful for management of your RStudio Server, and\
+    \ for troubleshooting installation and server access issues. For further information\
+    \ see the <a href=\"https://s3.amazonaws.com/rstudio-server/rstudio-server-pro-0.98.507-admin-guide.pdf\"\
     >RStudio Server Administrator's Guide</a>.</p>\n<p>Tests correct installation\
     \ and connection with installed R:<br>\n<code>$ sudo rstudio-server verify-installation</code></p>\n\
     <p>Restarts RStudio after changes or updates are made:<br>\n<code>$ sudo rstudio-server\
@@ -27211,122 +27217,128 @@
     \ status</code></p>\n<p>Takes system online or offline:<br>\n<code>$ sudo rstudio-server\
     \ online</code>\n<code>$ sudo rstudio-server offline</code></p>\n<p>Views system\
     \ log, filtering for RStudio:<br>\n<code>$ more /var/log/syslog | grep RStudio</code></p>\n\
-    <h2>Installing and switching between multiple versions of R</h2>\n<p>Older versions\
-    \ of R must be built from their source code. The easiest way to manage multiple\
-    \ versions of R within your instance is to create a special directory in which\
-    \ to hold and configure these files. For example:</p>\n<p><code>$ mkdir R.versions\n\
-    $ cd R.versions\n~/R.versions$</code></p>\n<p>To install any compatible version\
-    \ of R from source you first need to obtain the build dependencies:</p>\n<p><code>$\
-    \ sudo apt-get build-dep r-base</code></p>\n<p>Next, <strong>within</strong> this\
-    \ new directory, <a href=\"https://cran.rstudio.com/src/base\">obtain</a> and\
-    \ unarchive the source code for the version of R you require. The example here\
-    \ will install R 3.2.2:</p>\n<p><code>$ wget https://cran.rstudio.com/src/base/R-3/R-3.2.2.tar.gz</code></p>\n\
+    <hr>\n<p><a name=\"multiple versions\"></a></p>\n<h2>Installing and switching\
+    \ between multiple versions of R</h2>\n<p>Older versions of R must be built from\
+    \ their source code. The easiest way to manage multiple versions of R within your\
+    \ instance is to create a special directory in which to hold and configure these\
+    \ files. For example:</p>\n<p><code>$ mkdir R.versions</code>  <br>\n<code>$ cd\
+    \ R.versions</code>  <br>\n<code>~/R.versions$</code>  </p>\n<p>To install any\
+    \ compatible version of R from source you first need to obtain the build dependencies:</p>\n\
+    <p><code>$ sudo apt-get build-dep r-base</code></p>\n<p>Next, <strong>within</strong>\
+    \ this new directory, <a href=\"https://cran.rstudio.com/src/base\">obtain</a>\
+    \ and unarchive the source code for the version of R you require. The example\
+    \ here will install R 3.2.2:</p>\n<p><code>$ wget https://cran.rstudio.com/src/base/R-3/R-3.2.2.tar.gz</code></p>\n\
     <p>Unpack the file:</p>\n<p><code>$ tar -xvzf R-3.2.2.tar.gz</code></p>\n<p>Now\
     \ from <strong>within</strong> the extracted directory, configure and install\
     \ R from source. \nNote: Defining the prefix to a specific path is required to\
     \ allow RStudio to find the relevant directory and shared libraries must be enabled\
     \ for RStudio to access them.</p>\n<p><code>$ ./configure --prefix=/local/bin/R-3.2.2\
-    \ --enable-R-shlib</code></p>\n<p><code>$ make</code></p>\n<p>R can be run at\
-    \ this point, without being fully installed, by executing the following command\
-    \ from within the directory where R-3.2.2 was configured:</p>\n<p>```\n$ bin/R</p>\n\
-    <blockquote>\n<p>```</p>\n</blockquote>\n<p>However, for RStudio to run you will\
-    \ need to perform a full installation:</p>\n<p><code>$ sudo make install</code>\
-    \   </p>\n<p>Other optional commands:</p>\n<p><code>$ more INSTALL</code>  -&gt;\
-    \ reads installation guide<br>\n<code>$ make check</code>  -&gt; checks installation\
-    \ built correctly<br>\n<code>$ make pdf</code>        -&gt; writes PDF manuals<br>\n\
-    <code>$ make info</code>       -&gt; writes info files</p>\n<p>Note: to go back\
-    \ to using the default version of R, you use the same command (within any directory)\
-    \ as prior to installing the additional version (<code>$ R</code>).</p>\n<h3>Using\
-    \ RStudio under multiple versions of R</h3>\n<p>At this point RStudio is ready\
-    \ to run under any installed version of R- you only need to specify which version\
-    \ to run in the configuration file, adding a line to the file which indicates\
-    \ the directory for RStudio to use.</p>\n<p><code>$ sudo nano /etc/rstudio/rserver.conf</code></p>\n\
-    <p>The line you add will depend on the path you specified when R was configured\
-    \ and the version of R:</p>\n<p><code>rsession-which-r=/local/bin/R-3.2.2/bin/R</code></p>\n\
-    <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ --enable-R-shlib</code><br>\n<code>$ make</code></p>\n<p>R can be run at this\
+    \ point, without being fully installed, by executing the following command from\
+    \ within the directory where R-3.2.2 was configured:</p>\n<p><code>$ bin/R</code><br>\n\
+    <code>&gt;</code>  </p>\n<p>However, for RStudio to run you will need to perform\
+    \ a full installation:</p>\n<p><code>$ sudo make install</code>   </p>\n<p>Other\
+    \ optional commands:</p>\n<p><code>$ more INSTALL</code>  -&gt; reads installation\
+    \ guide<br>\n<code>$ make check</code>  -&gt; checks installation built correctly<br>\n\
+    <code>$ make pdf</code>        -&gt; writes PDF manuals<br>\n<code>$ make info</code>\
+    \       -&gt; writes info files</p>\n<p>Note: to go back to using the default\
+    \ version of R, you use the same command (within any directory) as prior to installing\
+    \ the additional version (<code>$ R</code>).</p>\n<p><a name=\"RStudio multiple\
+    \ versions\"></a></p>\n<h3>using RStudio under multiple versions of R</h3>\n<p>At\
+    \ this point RStudio is ready to run under any installed version of R- you only\
+    \ need to specify which version to run in the configuration file, adding a line\
+    \ to the file which indicates the directory for RStudio to use.</p>\n<p><code>$\
+    \ sudo nano /etc/rstudio/rserver.conf</code></p>\n<p>The line you add will depend\
+    \ on the path you specified when R was configured and the version of R:</p>\n\
+    <p><code>rsession-which-r=/local/bin/R-3.2.2/bin/R</code></p>\n<p><img alt=\"\"\
+    \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/R4_Rversion.png?raw=true\"\
     ></p>\n<p>Next, restart RStudio to allow the changes to take effect:</p>\n<p><code>$\
     \ sudo rstudio-server restart</code></p>\n<p>Note: you may also need to quit your\
     \ current RStudio session in your browser: <strong>File</strong> -&gt; <strong>Quit\
     \ RStudio</strong> (which will reopen a new session). Then, type this command\
-    \ in your R console to confirm the appropriate version is running.</p>\n<p>```</p>\n\
-    <blockquote>\n<p>R.version.string\n[1] \"version 3.2.2 (2015-08-14)\"\n```</p>\n\
-    </blockquote>\n<h2>Transferring files between your local and remote systems</h2>\n\
-    <p>How you transfer files in and out of your instance will depend on a number\
-    \ of factors, including where your input data is stored and how much of it there\
-    \ is, and whether you are using R through your terminal window or RStudio Server\
-    \ in your web browser. If you are using RStudio you already have a direct connection\
-    \ from your local computer to your instance to facilitate file transfers. If you\
-    \ are using R through your terminal window there are a couple options for this\
-    \ (<a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
+    \ in your R console to confirm the appropriate version is running.</p>\n<p><code>&gt;\
+    \ R.version.string</code><br>\n<code>[1] \"version 3.2.2 (2015-08-14)\"</code>\
+    \  </p>\n<hr>\n<p><a name=\"Transfer files\"></a></p>\n<h2>Transferring files\
+    \ between your local and remote systems</h2>\n<p>How you transfer files in and\
+    \ out of your instance will depend on a number of factors, including where your\
+    \ input data is stored and how much of it there is, and whether you are using\
+    \ R through your terminal window or RStudio Server in your web browser. If you\
+    \ are using RStudio you already have a direct connection from your local computer\
+    \ to your instance to facilitate file transfers. If you are using R through your\
+    \ terminal window there are a couple options for this (<a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
     >See NeCTAR Support</a>). This section will provide a short overview for transferring\
     \ files via SFTP, or Secure File Transfer Protocol.</p>\n<p>For information on\
-    \ how to attach NeCTAR Volume or Object storage see additional <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
+    \ how to attach <strong>NeCTAR Volume</strong> or <strong>Object</strong> storage\
+    \ see additional <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
     >NeCTAR Tier 0 Documentation</a></p>\n<p>SFTP is related to SSH (secure shell)\
     \ as it uses the same key-pair you generated to initially log into your instance,\
     \ to create a secure connection for transferring files. To initialise a SFTP link\
     \ between your computer and remote instance you use a similar command as when\
     \ using SSH. The prompt you see when the connection has been established is similar\
     \ to the R console command line.</p>\n<p><code>$sftp -i ~/directory/key_name.key\
-    \ ubuntu@&lt;IPaddress&gt;\nsftp&gt;</code></p>\n<p>The commands you use under\
-    \ SFTP are essentially the same standard Linux commands used for navigating and\
-    \ managing file systems when SSH'd into your instance. Some differences include\
-    \ that you must specify when you want to refer to your local directory by placing\
-    \ a '<code>l</code>' or an '<code>!</code>' before each command, and that the\
-    \ SFTP prompt does not change based on what directory you are in.</p>\n<p>First,\
-    \ check your current local and remote directories</p>\n<p>```</p>\n<blockquote>\n\
-    <p>pwd\nlpwd\n```</p>\n</blockquote>\n<p>Now, navigate through your local and\
-    \ remote file systems to the appropriate directories where your files are currently\
-    \ stored and where you would like them to be moved to, using the following common\
-    \ Linux commands (alternatively you can specify directory within the transfer\
-    \ command). </p>\n<table>\n<thead>\n<tr>\n<th><strong>Remote instance</strong></th>\n\
-    <th><strong>Local computer</strong></th>\n<th align=\"left\"><strong>Command use</strong></th>\n\
+    \ ubuntu@&lt;IPaddress&gt;</code>  <br>\n<code>sftp&gt;</code>  </p>\n<p>The commands\
+    \ you use under SFTP are essentially the same standard Linux commands used for\
+    \ navigating and managing file systems when SSH'd into your instance. Some differences\
+    \ include that you must specify when you want to refer to your local directory\
+    \ by placing a '<code>l</code>' or an '<code>!</code>' before each command, and\
+    \ that the SFTP prompt does not change based on what directory you are in.</p>\n\
+    <p>First, check your current local and remote directories</p>\n<p><code>&gt; pwd</code><br>\n\
+    <code>&gt; lpwd</code>  </p>\n<p>Now, navigate through your local and remote file\
+    \ systems to the appropriate directories where your files are currently stored\
+    \ and where you would like them to be moved to, using the following common Linux\
+    \ commands (alternatively you can specify directory within the transfer command).\
+    \ </p>\n<table>\n<thead>\n<tr>\n<th><strong>Remote instance</strong></th>\n<th><strong>Local\
+    \ computer</strong></th>\n<th align=\"left\"><strong>Command use</strong></th>\n\
     </tr>\n</thead>\n<tbody>\n<tr>\n<td>ls</td>\n<td>lls</td>\n<td align=\"left\"\
     >lists all visible files in current directory</td>\n</tr>\n<tr>\n<td>ls -al</td>\n\
     <td>lls -al</td>\n<td align=\"left\">lists visible and hidden files in current\
     \ directory</td>\n</tr>\n<tr>\n<td>cd</td>\n<td>lcd</td>\n<td align=\"left\">changes\
     \ directory</td>\n</tr>\n<tr>\n<td>mkdir</td>\n<td>! mkdir</td>\n<td align=\"\
-    left\">creates new directory</td>\n</tr>\n</tbody>\n</table>\n<h3>Transferring\
-    \ files to your remote instance</h3>\n<p>To transfer data files, scripts, or entire\
-    \ directories from your local terminal, the command <code>put</code> is used.\
-    \ Here is an example showing how to transfer an individual csv file. </p>\n<p><code>&gt;\
-    \ put data.csv</code></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    left\">creates new directory</td>\n</tr>\n</tbody>\n</table>\n<p><a name=\"to\"\
+    ></a></p>\n<h3>transferring files to your remote instance</h3>\n<p>To transfer\
+    \ data files, scripts, or entire directories from your local terminal, the command\
+    \ <code>put</code> is used. Here is an example showing how to transfer an individual\
+    \ csv file. </p>\n<p><code>&gt; put data.csv</code></p>\n<p><img alt=\"\" src=\"\
+    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/R5_sftp.png?raw=true\"\
     ></p>\n<p>To transfer an entire directory you will need to first create a destination\
-    \ directory with the same name.</p>\n<p>```</p>\n<blockquote>\n<p>mkdir R_scripts\
-    \ \nput -r R_scripts\n```</p>\n</blockquote>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ directory with the same name.</p>\n<p><code>&gt; mkdir R_scripts</code> <br>\n\
+    <code>&gt; put -r R_scripts</code>  </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/R6_sftp.png?raw=true\"\
-    ></p>\n<h3>Transferring files from your remote system</h3>\n<p>When transferring\
-    \ files from your remote instance, the command <code>get</code> is used. Note:\
-    \ you can change a file/directory name by specifying a new name at the end of\
-    \ the command, and if names contain spaces they must be enclosed in ' '. </p>\n\
-    <p>```</p>\n<blockquote>\n<p>get <file_name> <new_file_name>  </p>\n<p>mkdir <directory>\n\
-    get -r <directory>\n```</p>\n</blockquote>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    ></p>\n<p><a name=\"from\"></a></p>\n<h3>transferring files from your remote system</h3>\n\
+    <p>When transferring files from your remote instance, the command <code>get</code>\
+    \ is used. Note: you can change a file/directory name by specifying a new name\
+    \ at the end of the command, and if names contain spaces they must be enclosed\
+    \ in ' '. </p>\n<p><code>&gt; get &lt;file_name&gt; &lt;new_file_name&gt;</code>\
+    \    </p>\n<p><code>&gt; mkdir &lt;directory&gt;</code><br>\n<code>&gt; get -r\
+    \ &lt;directory&gt;</code>  </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/R7_sftp.png?raw=true\"\
     ></p>\n<p>To terminate your SFTP connection use the same command as when connected\
-    \ through ssh:</p>\n<p><code>&gt; exit</code></p>\n<h2>Installation and management\
-    \ of R packages</h2>\n<p>A number of R packages, all part of the r-recommended\
-    \ bundle, are included in R installation packages for Ubuntu and Debian Linux\
-    \ distributions. A list of these can be found at the <a href=\"https://cran.r-project.org/bin/linux/\"\
-    >CRAN website</a> or by executing <code>library()</code>, which will also return\
-    \ the default library directory.</p>\n<p>When installing additional packages you\
-    \ will be prompted to create a personal library where all supplementary packages\
-    \ will be installed to. R creates this directory on its own, once permissions\
-    \ have been given, however a pop-up window will appear requesting you to select\
-    \ your preferred CRAN mirror. Your personal library will act as a second default\
-    \ library, meaning loading packages does not require you to specify the directory.\
-    \ </p>\n<h2>Running R in the cloud</h2>\n<p>Scientists may want to conduct their\
-    \ research in the cloud for a variety of reasons, and this diversity holds for\
-    \ those using R in the cloud. How you run scripts in R and whether you use R through\
-    \ your terminal window or with RStudio Server will depend on a multitude of factors,\
-    \ including individual preferences. In general, the cloud is most useful for non-interactive\
-    \ scripts, which can run in the 'background' allowing you to terminate the ssh\
-    \ connection between your local and remote systems, or logout and close your RStudio\
-    \ browser.</p>\n<p>While RStudio automatically runs R in the background, running\
-    \ R through your terminal window requires you to use commands to specify this\
-    \ (Note: ssh connections will break after periods of inactivity and, therefore,\
-    \ any jobs running in the forefront will be terminated). The command <code>nohup</code>\
-    \ coupled with either <a href=\"http://www.rdocumentation.org/packages/utils/functions/Rscript\"\
+    \ through ssh:</p>\n<p><code>&gt; exit</code></p>\n<hr>\n<p><a name=\"R packages\"\
+    ></a></p>\n<h2>Installation and management of R packages</h2>\n<p>A number of\
+    \ R packages, all part of the r-recommended bundle, are included in R installation\
+    \ packages for Ubuntu and Debian Linux distributions. A list of these can be found\
+    \ at the <a href=\"https://cran.r-project.org/bin/linux/\">CRAN website</a> or\
+    \ by executing <code>library()</code>, which will also return the default library\
+    \ directory.</p>\n<p>When installing additional packages you will be prompted\
+    \ to create a personal library where all supplementary packages will be installed\
+    \ to. R creates this directory on its own, once permissions have been given, however\
+    \ a pop-up window will appear requesting you to select your preferred CRAN mirror.\
+    \ Your personal library will act as a second default library, meaning loading\
+    \ packages does not require you to specify the directory. </p>\n<hr>\n<p><a name=\"\
+    Running R\"></a></p>\n<h2>Running R in the cloud</h2>\n<p>Scientists may want\
+    \ to conduct their research in the cloud for a variety of reasons, and this diversity\
+    \ holds for those using R in the cloud. How you run scripts in R and whether you\
+    \ use R through your terminal window or with RStudio Server will depend on a multitude\
+    \ of factors, including individual preferences. In general, the cloud is most\
+    \ useful for non-interactive scripts, which can run in the 'background' allowing\
+    \ you to terminate the ssh connection between your local and remote systems, or\
+    \ logout and close your RStudio browser.</p>\n<p>While RStudio automatically runs\
+    \ R in the background, running R through your terminal window requires you to\
+    \ use commands to specify this (Note: ssh connections will break after periods\
+    \ of inactivity and, therefore, any jobs running in the forefront will be terminated).\
+    \ The command <code>nohup</code> coupled with either <a href=\"http://www.rdocumentation.org/packages/utils/functions/Rscript\"\
     ><code>Rscript</code></a> or <a href=\"http://www.rdocumentation.org/packages/utils/functions/BATCH\"\
     ><code>R CMD BATCH</code></a> can be used to submit R scripts to run in the background\
     \ of your instance. Here are examples of each:</p>\n<p><code>$ nohup Rscript Rcode_test.R</code>\
@@ -27350,9 +27362,10 @@
     \ 'test', the command 'rsession' indicates it is RStudio, and a process owned\
     \ by ubuntu (user ssh'd into instance) and the command indicates R is running.\
     \ The last example command below is for terminating a job by its PID.</p>\n<p><code>$\
-    \ top\n1\n$ kill -9 &lt;PID&gt;</code></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ top</code>  <br>\n<code>1</code>  <br>\n<code>$ kill -9 &lt;PID&gt;</code> \
+    \ </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/R8_top.jpg?raw=true\"\
-    ></p>"
+    ></p>\n<hr>"
   parent: 24
-  sha1: e47738cf88725e7285c7ac3905c41d5a9539871c
-  title: Pawsey Installing R and RStudio
+  sha1: 264b4b414fae0198c80e6ea832d5f4f9a3b5cf49
+  title: Pawsey- Installing R and RStudio in the cloud
