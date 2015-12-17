@@ -27073,7 +27073,7 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 3
         id: 6000098750
         int_01: null
         int_02: null
@@ -27092,7 +27092,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Pawsey Installing R and RStudio
-        updated_at: '2015-12-15T21:34:49-05:00'
+        updated_at: '2015-12-16T19:25:38-05:00'
         user_id: 6002464727
   html: "<h2>Table of Contents</h2>\n<ul>\n<li><a href=\"# Introduction\">Introduction</a></li>\n\
     <li><a href=\"# Installing R\">Installing R</a></li>\n<li><a href=\"# Updating\
