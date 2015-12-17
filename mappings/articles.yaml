@@ -27368,3 +27368,399 @@
   parent: 24
   sha1: fe17b3e097cf75ecd5aeaba2d6eddf8dece4621c
   title: Pawsey- Installing R and RStudio in the cloud
+108:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-12-16T21:53:27-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " \n Pawsey bcbio-nextgen in the Nectar Research Cloud \n \n\
+          \ Introduction \n System Requirements \n Package Configuration \n Ubuntu\
+          \ - APT \n CentOS - YUM \n Common Environment Configuration \n git - configure\
+          \ \n Create the Tool directory \n Access to Ephemeral storage for reference\
+          \ data storage \n Installing bcbio-nextgen \n Getting Started with bcbio-nextgen\
+          \ \n \n \n \n Introduction \n Blue Collar Bioinformatics (bcbio) is community-developed\
+          \ tools to enable variant calling, RNA-seq \nand small RNA analysis. The\
+          \ python toolkit bcbio-nextgen provides best-practice pipelines for fully\n\
+          \ automated high throughput sequencing analysis. The goal of bcbio-nextgen\
+          \ is to provide pipelines that \nare: Quantifiable, Analyzable, Scalable,\
+          \ Reproducible, Community developed, and Accessible.  It is \ncurrent being\
+          \ used at institutions around the world such as: Harvard School of Public\
+          \ Health, \nScience for Life Laboratory, Institute of Human Genetics at\
+          \ UCSF, and IRCCS \"Mario Negri\" Institute for \nPharmacological Research\
+          \ here is a link to some of the bcbio-casestudies and how it is being applied.\
+          \ \n This guide is to aid in local configuration of the default  Nectar\
+          \ images, (CentOS7, Ubuntu-15.04) \nso that the automate bcbio-nextgen scripts\
+          \ can be used. It is not intended to be a user guide for\n bcbio-nextgen.\
+          \ The bcbio-nextgen provides excellent documentation and tutorials to help\
+          \ with learning\nbcbio.  \n Top of page \n \n \n System Requirements \n\
+          \ The install of bcbio-nextgen will take approximately 2.6GB of disk space\
+          \ and will easily fit in the \nroot disk of all m1 and most of the m2 Nectar\
+          \ flavors. However the reference \ngenome data is over 38GB when installed\
+          \ but requires over 45GB of space during the installation \nprocess.  This\
+          \ will require you to set the path for data directory to either your ephemeral\
+          \ \nstorage or to an attached volume storage of sufficient size. The m1.xlarge,\
+          \ m1.xxlarge and \nm2.xlarge flavors all have more than sufficient ephemeral\
+          \ disk space for the reference data.\nThe ephemeral storage is exactly that\
+          \ ephemaral and should be used ideally for \nscratch space. Using the ephemeral\
+          \ storage is can be used when evaluating the bcbio pipelines, \ntesting\
+          \ workflows, or short-term projects that do not require large amount of\
+          \ storage.    \n Persistent volume or object store is better suited for\
+          \ the reference genome data as it remains \noutside of your instances and\
+          \ can be used across multiple instances or projects. More information\n\
+          about ephemeral volume or object storage can be found here. \nhttps://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\
+          \ \n Top of page \n \n \n Package Configuration \n The default Nectar images\
+          \ are very lightweight and will require additional packages to be\ninstalled.\
+          \ The minimum configuration to be able to run the bcbio_nextgen_install.py\
+          \ script for \nthe Ubuntu 15.04 image and the CentOS7 image is covered.\
+          \  \n \n Ubuntu - APT \n The Advanced Packaging Tool from Ubuntu provides\
+          \ the command-line tool apt-get. The apt-get \ncommand will download the\
+          \ missing packages and all of it's dependent packages from a software \n\
+          repositories to your instance and install the packages into your root disk\
+          \ making the software\navailable immediately to your default user environment\
+          \ upon completion.  The minimum \nconfiguration requires: \n $sudo apt-get\
+          \ update \n$sudo apt-get install git \n$sudo apt-get install ruby  \n$sudo\
+          \ apt-get install perlbrew \n$sudo apt-get install gcc \n$sudo apt-get install\
+          \ g++ \n$sudo apt-get install gfortran \n$sudo apt-get install unzip \n\
+          $sudo apt-get install openjdk-8-jdk \n$sudo apt-get install xorg   \n \n\
+          \ CentOS - YUM (DNF coming soon) \n CentOS use YUM (Yellowdog Updater, Modified)\
+          \ for package management, it is a command-line \ntool used to install, update\
+          \ and remove packages from your default user environment.   \n $sudo yum\
+          \ update \n$sudo yum install git \n$sudo yum install ruby \n$sudo yum install\
+          \ gcc \n$sudo yum install gcc-c++ \n$sudo yum install gcc-gfortran \n$sudo\
+          \ yum install unzip \n$sudo yum install java-1.8.0-openjdk \n$sudo yum install\
+          \ xorg-x11-xauth   \n Top of page \n \n \n Common Environment Configuration\
+          \ \n With the necessary packages added to your respective instance you will\
+          \ need to configure\nyour environment and ensure that the tool and data\
+          \ directories have the correct permissions\nand ownership set.    \n \n\
+          \ git - configure \n You will need to add your email and user name to your\
+          \ local git configuration. This is a \nsimple procedure as shown. \n $git\
+          \ config --global user.email \"jane.doe@best_uni.edu.au\" \n$git config\
+          \ --global user.name Jane Doe   \n Create the Tool directory \n Create a\
+          \ new directory in the root (/) directory where bcbio_nextgen_install.py\
+          \ will \ninstall the src and all executables.  Then you will need to change\
+          \ the ownership to allow\nyour default group access to your new directory.\
+          \ \n Note: You need to use sudo to do this. \n For Ubuntu \n sudo mkdir\
+          \ /nectar \nsudo chown -R ubuntu /nectar   \n For CentOS \n sudo mkdir /nectar\
+          \ \nsudo chown -R ec2-user /nectar   \n Access to Ephemeral storage for\
+          \ reference data storage \n With the CentOS and Ubuntu images your ephemeral\
+          \ directory (/mnt) are already configured and mounted. \nHowever they are\
+          \ still owned by root to be able access so you must change the ownership\
+          \ as well. \n For Ubuntu \n sudo chown -R ubuntu /mnt \nmkdir -p /mnt/bcbio-data\
+          \   \n For CentOS \n sudo chown -R ec2-user /mnt \nmkdir -p /mnt/bcbio-data\
+          \   \n Note: Once you have mounted your Volume storage it is same procedure\
+          \ as it is for Ephemeral. \n Top of page \n \n \n Installing bcbio-nextgen\
+          \ \n The procedure for installing bcbio is very straight forward on the\
+          \ Centos and Ubuntu images once the previous \nsteps have been completed.\
+          \  The commands used with the instances running on Nectar are shown here:\
+          \ \n $wget https://raw.github.com/chapmanb/bcbio-nextgen/master/scripts/bcbio_nextgen_install.py\
+          \ \n$python bcbio_nextgen_install.py /mnt/bcbio-data --tooldir=/nectar/bcbio\
+          \ \\ \n--genomes GRCh37 --aligners bwa --aligners bowtie2   \n The reference\
+          \ data takes a couple of hours to install so be patience. You should be\
+          \ able to use\nnohup (no hangup) to allow you exit from your instance and\
+          \ let it run in the background. \n $nohup python bcbio_nextgen_install.py\
+          \ /mnt/bcbio-data --tooldir=/nectar/bcbio \\ \n--genomes GRCh37 --aligners\
+          \ bwa --aligners bowtie2   &   \n If all goes well you will see something\
+          \ like this... \n Creating manifest of installed packages in /mnt/bcbio/manifest\
+          \ \nThird party tools upgrade complete. \nUpgrade completed successfully.\
+          \ \nFinished: bcbio-nextgen, tools and data installed \nGenome data installed\
+          \ in: \n/mnt/bcbio \nTools installed in: \n/nectar/bcbio \nReady to use\
+          \ system configuration at: \n/mnt/bcbio/galaxy/bcbio_system.yaml \nEdit\
+          \ configuration file as needed to match your machine or cluster   \n You\
+          \ should now be able to proceed to the next section and begin using bcbio!\
+          \ \n Top of page \n \n \n Getting Started with bcbio-nextgen \n The Getting\
+          \ Started section provides detailed documentation about running bcbio as\
+          \ well \nas a test suite to assist in validating your local installation\
+          \ of bcbio.  \n Top of page "
+        description: "<p><a name=\"top\"></a></p>\n<h2>Pawsey bcbio-nextgen in the\
+          \ Nectar Research Cloud</h2>\n<ul>\n<li><a href=\"#introduction\">Introduction</a></li>\n\
+          <li><a href=\"#system\">System Requirements</a></li>\n<li><a href=\"#package\"\
+          >Package Configuration</a></li>\n<li><a href=\"#ubuntu\">Ubuntu - APT</a></li>\n\
+          <li><a href=\"#centos\">CentOS - YUM</a></li>\n<li><a href=\"#environ\"\
+          >Common Environment Configuration</a></li>\n<li><a href=\"#git\">git - configure</a></li>\n\
+          <li><a href=\"#tool\">Create the Tool directory</a></li>\n<li><a href=\"\
+          #data\">Access to Ephemeral storage for reference data storage</a></li>\n\
+          <li><a href=\"#bcbio\">Installing bcbio-nextgen</a></li>\n<li><a href=\"\
+          #start\">Getting Started with bcbio-nextgen</a></li>\n</ul>\n<hr>\n<p><a\
+          \ name=\"introduction\"></a></p>\n<h2>Introduction</h2>\n<p>Blue Collar\
+          \ Bioinformatics (<a href=\"bcb.io\" title=\"Blue Collar Bioinformatics\"\
+          >bcbio</a>) is community-developed tools to enable variant calling, RNA-seq\
+          \ \nand small RNA analysis. The python toolkit <a href=\"https://bcbio-nextgen.readthedocs.org/en/latest/\"\
+          \ title=\"bcbio-nextgen\">bcbio-nextgen</a> provides best-practice pipelines\
+          \ for fully\n automated high throughput sequencing analysis. The goal of\
+          \ bcbio-nextgen is to provide pipelines that \nare: Quantifiable, Analyzable,\
+          \ Scalable, Reproducible, Community developed, and Accessible.  It is \n\
+          current being used at institutions around the world such as: Harvard School\
+          \ of Public Health, \nScience for Life Laboratory, Institute of Human Genetics\
+          \ at UCSF, and IRCCS \"Mario Negri\" Institute for \nPharmacological Research\
+          \ here is a link to some of the <a href=\"https://bcbio-nextgen.readthedocs.org/en/latest/contents/introduction.html#\"\
+          \ title=\"bcbio-casestudies\">bcbio-casestudies</a> and how it is being\
+          \ applied.</p>\n<p>This guide is to aid in local configuration of the <strong>default</strong>\
+          \  Nectar images, (CentOS7, Ubuntu-15.04) \nso that the automate bcbio-nextgen\
+          \ scripts can be used. <strong>It is not intended to be a user guide for\n\
+          \ bcbio-nextgen.</strong> The bcbio-nextgen provides excellent documentation\
+          \ and tutorials to help with learning\nbcbio. </p>\n<p><a href=\"#top\"\
+          >Top of page</a></p>\n<hr>\n<p><a name=\"system\"></a></p>\n<h2>System Requirements</h2>\n\
+          <p>The install of bcbio-nextgen will take approximately 2.6GB of disk space\
+          \ and will easily fit in the \n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
+          \ title=\"root disk\">root</a> disk of all m1 and most of the m2 Nectar\
+          \ <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you\"\
+          \ title=\"Nectar flavors\">flavors</a>. However the reference \ngenome data\
+          \ is over 38GB when installed but requires over 45GB of space during the\
+          \ installation \nprocess.  This will require you to set the path for data\
+          \ directory to either your ephemeral \nstorage or to an attached volume\
+          \ storage of sufficient size. The m1.xlarge, m1.xxlarge and \nm2.xlarge\
+          \ flavors all have more than sufficient ephemeral disk space for the reference\
+          \ data.\nThe <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
+          \ title=\"ephemeral\">ephemeral</a> storage is exactly that <strong>ephemaral</strong>\
+          \ and should be used ideally for \nscratch space. Using the ephemeral storage\
+          \ is can be used when evaluating the bcbio pipelines, \ntesting workflows,\
+          \ or short-term projects that do not require large amount of storage.  \
+          \ </p>\n<p>Persistent <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
+          \ title=\"volume\">volume</a> or object store is better suited for the reference\
+          \ genome data as it remains \noutside of your instances and can be used\
+          \ across multiple instances or projects. More information\nabout ephemeral\
+          \ volume or object storage can be found here. \nhttps://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage</p>\n\
+          <p><a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"package\"></a></p>\n\
+          <h2>Package Configuration</h2>\n<p>The default Nectar images are very lightweight\
+          \ and will require additional packages to be\ninstalled. The minimum configuration\
+          \ to be able to run the <code>bcbio_nextgen_install.py</code> script for\
+          \ \nthe Ubuntu 15.04 image and the CentOS7 image is covered. </p>\n<p><a\
+          \ name=\"ubuntu\"></a></p>\n<h3>Ubuntu - APT</h3>\n<p>The Advanced Packaging\
+          \ Tool from Ubuntu provides the command-line tool <code>apt-get</code>.\
+          \ The <code>apt-get</code> \ncommand will download the missing packages\
+          \ and all of it's dependent packages from a software \nrepositories to your\
+          \ instance and install the packages into your root disk making the software\n\
+          available immediately to your default user environment upon completion.\
+          \  The minimum \nconfiguration requires:</p>\n<p><code>$sudo apt-get update</code><br>\n\
+          <code>$sudo apt-get install git</code><br>\n<code>$sudo apt-get install\
+          \ ruby</code> <br>\n<code>$sudo apt-get install perlbrew</code><br>\n<code>$sudo\
+          \ apt-get install gcc</code><br>\n<code>$sudo apt-get install g++</code><br>\n\
+          <code>$sudo apt-get install gfortran</code><br>\n<code>$sudo apt-get install\
+          \ unzip</code><br>\n<code>$sudo apt-get install openjdk-8-jdk</code><br>\n\
+          <code>$sudo apt-get install xorg</code>  </p>\n<p><a name=\"centos\"></a></p>\n\
+          <h3>CentOS - YUM (DNF coming soon)</h3>\n<p>CentOS use YUM (Yellowdog Updater,\
+          \ Modified) for package management, it is a command-line \ntool used to\
+          \ install, update and remove packages from your default user environment.\
+          \  </p>\n<p><code>$sudo yum update</code><br>\n<code>$sudo yum install git</code><br>\n\
+          <code>$sudo yum install ruby</code><br>\n<code>$sudo yum install gcc</code><br>\n\
+          <code>$sudo yum install gcc-c++</code><br>\n<code>$sudo yum install gcc-gfortran</code><br>\n\
+          <code>$sudo yum install unzip</code><br>\n<code>$sudo yum install java-1.8.0-openjdk</code><br>\n\
+          <code>$sudo yum install xorg-x11-xauth</code>  </p>\n<p><a href=\"#top\"\
+          >Top of page</a></p>\n<hr>\n<p><a name=\"environ\"></a></p>\n<h2>Common\
+          \ Environment Configuration</h2>\n<p>With the necessary packages added to\
+          \ your respective instance you will need to configure\nyour environment\
+          \ and ensure that the tool and data directories have the correct permissions\n\
+          and ownership set.   </p>\n<p><a name=\"git\"></a></p>\n<h3>git - configure</h3>\n\
+          <p>You will need to add your email and user name to your local git configuration.\
+          \ This is a \nsimple procedure as shown.</p>\n<p><code>$git config --global\
+          \ user.email \"jane.doe@best_uni.edu.au\"</code><br>\n<code>$git config\
+          \ --global user.name Jane Doe</code>  </p>\n<h3>Create the Tool directory</h3>\n\
+          <p>Create a new directory in the <strong>root</strong> (/) directory where\
+          \ bcbio_nextgen_install.py will \ninstall the src and all executables. \
+          \ Then you will need to change the ownership to allow\nyour default group\
+          \ access to your new directory.</p>\n<p>Note: You need to use <code>sudo</code>\
+          \ to do this.</p>\n<p>For Ubuntu</p>\n<p><code>sudo mkdir /nectar</code><br>\n\
+          <code>sudo chown -R ubuntu /nectar</code>  </p>\n<p>For CentOS</p>\n<p><code>sudo\
+          \ mkdir /nectar</code><br>\n<code>sudo chown -R ec2-user /nectar</code>\
+          \  </p>\n<h3>Access to Ephemeral storage for reference data storage</h3>\n\
+          <p>With the CentOS and Ubuntu images your ephemeral directory (<strong>/mnt</strong>)\
+          \ are already configured and mounted. \nHowever they are still owned by\
+          \ <code>root</code> to be able access so you must change the ownership as\
+          \ well.</p>\n<p>For Ubuntu</p>\n<p><code>sudo chown -R ubuntu /mnt</code><br>\n\
+          <code>mkdir -p /mnt/bcbio-data</code>  </p>\n<p>For CentOS</p>\n<p><code>sudo\
+          \ chown -R ec2-user /mnt</code><br>\n<code>mkdir -p /mnt/bcbio-data</code>\
+          \  </p>\n<p>Note: Once you have mounted your Volume storage it is same procedure\
+          \ as it is for Ephemeral.</p>\n<p><a href=\"#top\">Top of page</a></p>\n\
+          <hr>\n<p><a name=\"bcbio\"></a></p>\n<h2>Installing bcbio-nextgen</h2>\n\
+          <p>The procedure for installing bcbio is very straight forward on the Centos\
+          \ and Ubuntu images once the previous \nsteps have been completed.  The\
+          \ commands used with the instances running on Nectar are shown here:</p>\n\
+          <p><code>$wget https://raw.github.com/chapmanb/bcbio-nextgen/master/scripts/bcbio_nextgen_install.py</code><br>\n\
+          <code>$python bcbio_nextgen_install.py /mnt/bcbio-data --tooldir=/nectar/bcbio\
+          \ \\</code><br>\n<code>--genomes GRCh37 --aligners bwa --aligners bowtie2</code>\
+          \  </p>\n<p>The reference data takes a couple of hours to install so be\
+          \ patience. You should be able to use\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000089713-tips-for-running-jobs-on-your-vm#nohup\"\
+          \ title=\"nohup\">nohup</a> (no hangup) to allow you exit from your instance\
+          \ and let it run in the background.</p>\n<p><code>$nohup python bcbio_nextgen_install.py\
+          \ /mnt/bcbio-data --tooldir=/nectar/bcbio \\</code><br>\n<code>--genomes\
+          \ GRCh37 --aligners bwa --aligners bowtie2   &amp;</code>  </p>\n<p>If all\
+          \ goes well you will see something like this...</p>\n<p><code>Creating manifest\
+          \ of installed packages in /mnt/bcbio/manifest</code><br>\n<code>Third party\
+          \ tools upgrade complete</code>.<br>\n<code>Upgrade completed successfully.</code><br>\n\
+          <code>Finished: bcbio-nextgen, tools and data installed</code><br>\n<code>Genome\
+          \ data installed in:</code><br>\n<code>/mnt/bcbio</code><br>\n<code>Tools\
+          \ installed in:</code><br>\n<code>/nectar/bcbio</code><br>\n<code>Ready\
+          \ to use system configuration at:</code><br>\n<code>/mnt/bcbio/galaxy/bcbio_system.yaml</code><br>\n\
+          <code>Edit configuration file as needed to match your machine or cluster</code>\
+          \  </p>\n<p>You should now be able to proceed to the next section and begin\
+          \ using bcbio!</p>\n<p><a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a\
+          \ name=\"start\"></a></p>\n<h2>Getting Started with bcbio-nextgen</h2>\n\
+          <p>The <a href=\"https://bcbio-nextgen.readthedocs.org/en/latest/contents/testing.html\"\
+          \ title=\"getting started with bcbio\">Getting Started</a> section provides\
+          \ detailed documentation about running bcbio as well \nas a <a href=\"https://bcbio-nextgen.readthedocs.org/en/latest/contents/testing.html#test-suite\"\
+          \ title=\"test suite\">test suite</a> to assist in validating your local\
+          \ installation of bcbio. </p>\n<p><a href=\"#top\">Top of page</a></p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000099064
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-12-16T21:53:27-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000099064
+        position: 16
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Pawsey bcbio in the Nectar Research Cloud
+        updated_at: '2015-12-16T21:53:27-05:00'
+        user_id: 6002464727
+  html: "<p><a name=\"top\"></a></p>\n<h2>Pawsey bcbio-nextgen in the Nectar Research\
+    \ Cloud</h2>\n<ul>\n<li><a href=\"#introduction\">Introduction</a></li>\n<li><a\
+    \ href=\"#system\">System Requirements</a></li>\n<li><a href=\"#package\">Package\
+    \ Configuration</a></li>\n<li><a href=\"#ubuntu\">Ubuntu - APT</a></li>\n<li><a\
+    \ href=\"#centos\">CentOS - YUM</a></li>\n<li><a href=\"#environ\">Common Environment\
+    \ Configuration</a></li>\n<li><a href=\"#git\">git - configure</a></li>\n<li><a\
+    \ href=\"#tool\">Create the Tool directory</a></li>\n<li><a href=\"#data\">Access\
+    \ to Ephemeral storage for reference data storage</a></li>\n<li><a href=\"#bcbio\"\
+    >Installing bcbio-nextgen</a></li>\n<li><a href=\"#start\">Getting Started with\
+    \ bcbio-nextgen</a></li>\n</ul>\n<hr>\n<p><a name=\"introduction\"></a></p>\n\
+    <h2>Introduction</h2>\n<p>Blue Collar Bioinformatics (<a href=\"bcb.io\" title=\"\
+    Blue Collar Bioinformatics\">bcbio</a>) is community-developed tools to enable\
+    \ variant calling, RNA-seq \nand small RNA analysis. The python toolkit <a href=\"\
+    https://bcbio-nextgen.readthedocs.org/en/latest/\" title=\"bcbio-nextgen\">bcbio-nextgen</a>\
+    \ provides best-practice pipelines for fully\n automated high throughput sequencing\
+    \ analysis. The goal of bcbio-nextgen is to provide pipelines that \nare: Quantifiable,\
+    \ Analyzable, Scalable, Reproducible, Community developed, and Accessible.  It\
+    \ is \ncurrent being used at institutions around the world such as: Harvard School\
+    \ of Public Health, \nScience for Life Laboratory, Institute of Human Genetics\
+    \ at UCSF, and IRCCS \"Mario Negri\" Institute for \nPharmacological Research\
+    \ here is a link to some of the <a href=\"https://bcbio-nextgen.readthedocs.org/en/latest/contents/introduction.html#\"\
+    \ title=\"bcbio-casestudies\">bcbio-casestudies</a> and how it is being applied.</p>\n\
+    <p>This guide is to aid in local configuration of the <strong>default</strong>\
+    \  Nectar images, (CentOS7, Ubuntu-15.04) \nso that the automate bcbio-nextgen\
+    \ scripts can be used. <strong>It is not intended to be a user guide for\n bcbio-nextgen.</strong>\
+    \ The bcbio-nextgen provides excellent documentation and tutorials to help with\
+    \ learning\nbcbio. </p>\n<p><a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a\
+    \ name=\"system\"></a></p>\n<h2>System Requirements</h2>\n<p>The install of bcbio-nextgen\
+    \ will take approximately 2.6GB of disk space and will easily fit in the \n<a\
+    \ href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
+    \ title=\"root disk\">root</a> disk of all m1 and most of the m2 Nectar <a href=\"\
+    https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you\"\
+    \ title=\"Nectar flavors\">flavors</a>. However the reference \ngenome data is\
+    \ over 38GB when installed but requires over 45GB of space during the installation\
+    \ \nprocess.  This will require you to set the path for data directory to either\
+    \ your ephemeral \nstorage or to an attached volume storage of sufficient size.\
+    \ The m1.xlarge, m1.xxlarge and \nm2.xlarge flavors all have more than sufficient\
+    \ ephemeral disk space for the reference data.\nThe <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
+    \ title=\"ephemeral\">ephemeral</a> storage is exactly that <strong>ephemaral</strong>\
+    \ and should be used ideally for \nscratch space. Using the ephemeral storage\
+    \ is can be used when evaluating the bcbio pipelines, \ntesting workflows, or\
+    \ short-term projects that do not require large amount of storage.   </p>\n<p>Persistent\
+    \ <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
+    \ title=\"volume\">volume</a> or object store is better suited for the reference\
+    \ genome data as it remains \noutside of your instances and can be used across\
+    \ multiple instances or projects. More information\nabout ephemeral volume or\
+    \ object storage can be found here. \nhttps://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage</p>\n\
+    <p><a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"package\"></a></p>\n\
+    <h2>Package Configuration</h2>\n<p>The default Nectar images are very lightweight\
+    \ and will require additional packages to be\ninstalled. The minimum configuration\
+    \ to be able to run the <code>bcbio_nextgen_install.py</code> script for \nthe\
+    \ Ubuntu 15.04 image and the CentOS7 image is covered. </p>\n<p><a name=\"ubuntu\"\
+    ></a></p>\n<h3>Ubuntu - APT</h3>\n<p>The Advanced Packaging Tool from Ubuntu provides\
+    \ the command-line tool <code>apt-get</code>. The <code>apt-get</code> \ncommand\
+    \ will download the missing packages and all of it's dependent packages from a\
+    \ software \nrepositories to your instance and install the packages into your\
+    \ root disk making the software\navailable immediately to your default user environment\
+    \ upon completion.  The minimum \nconfiguration requires:</p>\n<p><code>$sudo\
+    \ apt-get update</code><br>\n<code>$sudo apt-get install git</code><br>\n<code>$sudo\
+    \ apt-get install ruby</code> <br>\n<code>$sudo apt-get install perlbrew</code><br>\n\
+    <code>$sudo apt-get install gcc</code><br>\n<code>$sudo apt-get install g++</code><br>\n\
+    <code>$sudo apt-get install gfortran</code><br>\n<code>$sudo apt-get install unzip</code><br>\n\
+    <code>$sudo apt-get install openjdk-8-jdk</code><br>\n<code>$sudo apt-get install\
+    \ xorg</code>  </p>\n<p><a name=\"centos\"></a></p>\n<h3>CentOS - YUM (DNF coming\
+    \ soon)</h3>\n<p>CentOS use YUM (Yellowdog Updater, Modified) for package management,\
+    \ it is a command-line \ntool used to install, update and remove packages from\
+    \ your default user environment.  </p>\n<p><code>$sudo yum update</code><br>\n\
+    <code>$sudo yum install git</code><br>\n<code>$sudo yum install ruby</code><br>\n\
+    <code>$sudo yum install gcc</code><br>\n<code>$sudo yum install gcc-c++</code><br>\n\
+    <code>$sudo yum install gcc-gfortran</code><br>\n<code>$sudo yum install unzip</code><br>\n\
+    <code>$sudo yum install java-1.8.0-openjdk</code><br>\n<code>$sudo yum install\
+    \ xorg-x11-xauth</code>  </p>\n<p><a href=\"#top\">Top of page</a></p>\n<hr>\n\
+    <p><a name=\"environ\"></a></p>\n<h2>Common Environment Configuration</h2>\n<p>With\
+    \ the necessary packages added to your respective instance you will need to configure\n\
+    your environment and ensure that the tool and data directories have the correct\
+    \ permissions\nand ownership set.   </p>\n<p><a name=\"git\"></a></p>\n<h3>git\
+    \ - configure</h3>\n<p>You will need to add your email and user name to your local\
+    \ git configuration. This is a \nsimple procedure as shown.</p>\n<p><code>$git\
+    \ config --global user.email \"jane.doe@best_uni.edu.au\"</code><br>\n<code>$git\
+    \ config --global user.name Jane Doe</code>  </p>\n<h3>Create the Tool directory</h3>\n\
+    <p>Create a new directory in the <strong>root</strong> (/) directory where bcbio_nextgen_install.py\
+    \ will \ninstall the src and all executables.  Then you will need to change the\
+    \ ownership to allow\nyour default group access to your new directory.</p>\n<p>Note:\
+    \ You need to use <code>sudo</code> to do this.</p>\n<p>For Ubuntu</p>\n<p><code>sudo\
+    \ mkdir /nectar</code><br>\n<code>sudo chown -R ubuntu /nectar</code>  </p>\n\
+    <p>For CentOS</p>\n<p><code>sudo mkdir /nectar</code><br>\n<code>sudo chown -R\
+    \ ec2-user /nectar</code>  </p>\n<h3>Access to Ephemeral storage for reference\
+    \ data storage</h3>\n<p>With the CentOS and Ubuntu images your ephemeral directory\
+    \ (<strong>/mnt</strong>) are already configured and mounted. \nHowever they are\
+    \ still owned by <code>root</code> to be able access so you must change the ownership\
+    \ as well.</p>\n<p>For Ubuntu</p>\n<p><code>sudo chown -R ubuntu /mnt</code><br>\n\
+    <code>mkdir -p /mnt/bcbio-data</code>  </p>\n<p>For CentOS</p>\n<p><code>sudo\
+    \ chown -R ec2-user /mnt</code><br>\n<code>mkdir -p /mnt/bcbio-data</code>  </p>\n\
+    <p>Note: Once you have mounted your Volume storage it is same procedure as it\
+    \ is for Ephemeral.</p>\n<p><a href=\"#top\">Top of page</a></p>\n<hr>\n<p><a\
+    \ name=\"bcbio\"></a></p>\n<h2>Installing bcbio-nextgen</h2>\n<p>The procedure\
+    \ for installing bcbio is very straight forward on the Centos and Ubuntu images\
+    \ once the previous \nsteps have been completed.  The commands used with the instances\
+    \ running on Nectar are shown here:</p>\n<p><code>$wget https://raw.github.com/chapmanb/bcbio-nextgen/master/scripts/bcbio_nextgen_install.py</code><br>\n\
+    <code>$python bcbio_nextgen_install.py /mnt/bcbio-data --tooldir=/nectar/bcbio\
+    \ \\</code><br>\n<code>--genomes GRCh37 --aligners bwa --aligners bowtie2</code>\
+    \  </p>\n<p>The reference data takes a couple of hours to install so be patience.\
+    \ You should be able to use\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000089713-tips-for-running-jobs-on-your-vm#nohup\"\
+    \ title=\"nohup\">nohup</a> (no hangup) to allow you exit from your instance and\
+    \ let it run in the background.</p>\n<p><code>$nohup python bcbio_nextgen_install.py\
+    \ /mnt/bcbio-data --tooldir=/nectar/bcbio \\</code><br>\n<code>--genomes GRCh37\
+    \ --aligners bwa --aligners bowtie2   &amp;</code>  </p>\n<p>If all goes well\
+    \ you will see something like this...</p>\n<p><code>Creating manifest of installed\
+    \ packages in /mnt/bcbio/manifest</code><br>\n<code>Third party tools upgrade\
+    \ complete</code>.<br>\n<code>Upgrade completed successfully.</code><br>\n<code>Finished:\
+    \ bcbio-nextgen, tools and data installed</code><br>\n<code>Genome data installed\
+    \ in:</code><br>\n<code>/mnt/bcbio</code><br>\n<code>Tools installed in:</code><br>\n\
+    <code>/nectar/bcbio</code><br>\n<code>Ready to use system configuration at:</code><br>\n\
+    <code>/mnt/bcbio/galaxy/bcbio_system.yaml</code><br>\n<code>Edit configuration\
+    \ file as needed to match your machine or cluster</code>  </p>\n<p>You should\
+    \ now be able to proceed to the next section and begin using bcbio!</p>\n<p><a\
+    \ href=\"#top\">Top of page</a></p>\n<hr>\n<p><a name=\"start\"></a></p>\n<h2>Getting\
+    \ Started with bcbio-nextgen</h2>\n<p>The <a href=\"https://bcbio-nextgen.readthedocs.org/en/latest/contents/testing.html\"\
+    \ title=\"getting started with bcbio\">Getting Started</a> section provides detailed\
+    \ documentation about running bcbio as well \nas a <a href=\"https://bcbio-nextgen.readthedocs.org/en/latest/contents/testing.html#test-suite\"\
+    \ title=\"test suite\">test suite</a> to assist in validating your local installation\
+    \ of bcbio. </p>\n<p><a href=\"#top\">Top of page</a></p>"
+  parent: 24
+  sha1: b3254147d7dfbc8fcde90fa2c6d493d389fb3a4f
+  title: Pawsey bcbio in the Nectar Research Cloud
