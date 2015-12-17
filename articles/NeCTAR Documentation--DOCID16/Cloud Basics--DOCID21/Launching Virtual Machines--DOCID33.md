@@ -17,12 +17,12 @@ You need to create a public/private key pair before you can use SSH to login to
 the newly created instance. The public key will be stored on the instance and
 the private key is used on your desktop/laptop. 
 
-1. Keys can be created on the Nectar dashboard, and the private key downloaded to your computer.
-1. Keys can be created by your computer, and the public key uploaded to Nectar, or 
+1. Keys can be created on the Nectar dashboard, and the private key downloaded to your computer, or
+1. Keys can be created by your computer, and the public key uploaded to Nectar.
 
 
 
-## 1. Alternatively: Create Keys on the Nectar Cloud Dashboard
+## 1. Create Keys on the Nectar Cloud Dashboard
 
 ![`create_keypair`](images/create_keypair.png)
 
@@ -57,7 +57,7 @@ The SSH private key will need to be converted for use with PuTTY.
 ![`puttygen3`](images/puttygen3.png) 
 
 
-## 2. Create a keypair locally
+## 2. Alternatively: Create a keypair locally
 
 ### Windows User
 
