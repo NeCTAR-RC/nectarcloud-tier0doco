@@ -26814,30 +26814,30 @@
           \ Cloud (i.e. setting up ssh-keypairs and launching and logging into instances,\
           \ etc.). However, guidance is provided throughout if experience is limited.\
           \ Security and maintenance of NeCTAR cloud instances are the responsibility\
-          \ of the user, although some support is provided by the <a href=\"https://support.rc.nectar.org.au/docs/support\"\
+          \ of the user, although some support is provided by the <a href=\"https://nectar.org.au/support/\"\
           >NeCTAR Helpdesk</a> as well as extensive documentation available for using\
-          \ <a href=\"https://support.rc.nectar.org.au/docs/getting-started\">NeCTAR</a>.</p>\n\
-          <hr>\n<p><a name=\"R\"></a></p>\n<h2>Installing R</h2>\n<p>R is available\
-          \ for installation in many Linux distribution package repositories, including\
-          \ the most commonly used Ubuntu and Debian operating systems. To install\
-          \ the default version of R and dependent packages for the distribution you\
-          \ are using, perform these commands in your terminal window:</p>\n<p><code>$\
-          \ sudo apt-get update</code><br>\n<code>$ sudo apt-get install r-base</code>\
-          \ <br>\n<code>$ R</code><br>\n<code>&gt;</code>  </p>\n<p>Your terminal\
-          \ window is now your R console.</p>\n<p><a name=\"Updating\"></a></p>\n\
-          <h3>updating to the newest version of R</h3>\n<p>As new versions of R are\
-          \ released more regularly than versions of operating systems are, your Linux\
-          \ distribution will not always have the newest, or required, version of\
-          \ R in its software package repository. To install the newest version of\
-          \ R you will need to add the repository address to your package sources\
-          \ file so it will be downloaded when you perform a system update.</p>\n\
-          <p><code>$ sudo nano /etc/apt/sources.list</code></p>\n<p>Note: nano is\
-          \ a text editor, but you can use other similar editors. To install nano:</p>\n\
-          <p><code>$ sudo apt-get install nano</code></p>\n<p>The command will open\
-          \ your sources.list file and allow you to perform edits to it. The address\
-          \ you add will depend on both your preferred <a href=\"https://cran.r-project.org/mirrors.html\"\
-          >CRAN mirror</a> and the specific <a href=\"https://cran.rstudio.com/bin/linux/\"\
-          >Linux distribution</a> you are using. </p>\n<p><code>deb http://&lt;cran.mirror&gt;/bin/linux/&lt;OS\
+          \ <a href=\"https://nectar.org.au/cloudpage/\">NeCTAR</a>.</p>\n<hr>\n<p><a\
+          \ name=\"R\"></a></p>\n<h2>Installing R</h2>\n<p>R is available for installation\
+          \ in many Linux distribution package repositories, including the most commonly\
+          \ used Ubuntu and Debian operating systems. To install the default version\
+          \ of R and dependent packages for the distribution you are using, perform\
+          \ these commands in your terminal window:</p>\n<p><code>$ sudo apt-get update</code><br>\n\
+          <code>$ sudo apt-get install r-base</code> <br>\n<code>$ R</code><br>\n\
+          <code>&gt;</code>  </p>\n<p>Your terminal window is now your R console.</p>\n\
+          <p><a name=\"Updating\"></a></p>\n<h3>updating to the newest version of\
+          \ R</h3>\n<p>As new versions of R are released more regularly than versions\
+          \ of operating systems are, your Linux distribution will not always have\
+          \ the newest, or required, version of R in its software package repository.\
+          \ To install the newest version of R you will need to add the repository\
+          \ address to your package sources file so it will be downloaded when you\
+          \ perform a system update.</p>\n<p><code>$ sudo nano /etc/apt/sources.list</code></p>\n\
+          <p>Note: nano is a text editor, but you can use other similar editors. To\
+          \ install nano:</p>\n<p><code>$ sudo apt-get install nano</code></p>\n<p>The\
+          \ command will open your sources.list file and allow you to perform edits\
+          \ to it. The address you add will depend on both your preferred <a href=\"\
+          https://cran.r-project.org/mirrors.html\">CRAN mirror</a> and the specific\
+          \ <a href=\"https://cran.rstudio.com/bin/linux/\">Linux distribution</a>\
+          \ you are using. </p>\n<p><code>deb http://&lt;cran.mirror&gt;/bin/linux/&lt;OS\
           \ type and version&gt;</code></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/R1_sources.list.png?raw=true\"\
           ></p>\n<p>You will then need to obtain and add the appropriate public key:</p>\n\
           <p>The <strong>Ubuntu</strong> archives on CRAN are signed with the key\
@@ -27079,13 +27079,13 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 5
+        hits: 8
         id: 6000098750
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-12-16T21:45:46-05:00'
+        modified_at: '2015-12-17T18:38:38-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000098750
@@ -27098,7 +27098,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Pawsey- Installing R and RStudio in the cloud
-        updated_at: '2015-12-16T21:45:46-05:00'
+        updated_at: '2015-12-17T18:38:38-05:00'
         user_id: 6002464727
   html: "<hr>\n<h2>Table of Contents</h2>\n<ul>\n<li><a href=\"#Intro\">Introduction</a></li>\n\
     <li><a href=\"#R\">Installing R</a></li>\n<li><a href=\"#Updating\">Updating to\
@@ -27124,15 +27124,15 @@
     \ Cloud (i.e. setting up ssh-keypairs and launching and logging into instances,\
     \ etc.). However, guidance is provided throughout if experience is limited. Security\
     \ and maintenance of NeCTAR cloud instances are the responsibility of the user,\
-    \ although some support is provided by the <a href=\"https://support.rc.nectar.org.au/docs/support\"\
+    \ although some support is provided by the <a href=\"https://nectar.org.au/support/\"\
     >NeCTAR Helpdesk</a> as well as extensive documentation available for using <a\
-    \ href=\"https://support.rc.nectar.org.au/docs/getting-started\">NeCTAR</a>.</p>\n\
-    <hr>\n<p><a name=\"R\"></a></p>\n<h2>Installing R</h2>\n<p>R is available for\
-    \ installation in many Linux distribution package repositories, including the\
-    \ most commonly used Ubuntu and Debian operating systems. To install the default\
-    \ version of R and dependent packages for the distribution you are using, perform\
-    \ these commands in your terminal window:</p>\n<p><code>$ sudo apt-get update</code><br>\n\
-    <code>$ sudo apt-get install r-base</code> <br>\n<code>$ R</code><br>\n<code>&gt;</code>\
+    \ href=\"https://nectar.org.au/cloudpage/\">NeCTAR</a>.</p>\n<hr>\n<p><a name=\"\
+    R\"></a></p>\n<h2>Installing R</h2>\n<p>R is available for installation in many\
+    \ Linux distribution package repositories, including the most commonly used Ubuntu\
+    \ and Debian operating systems. To install the default version of R and dependent\
+    \ packages for the distribution you are using, perform these commands in your\
+    \ terminal window:</p>\n<p><code>$ sudo apt-get update</code><br>\n<code>$ sudo\
+    \ apt-get install r-base</code> <br>\n<code>$ R</code><br>\n<code>&gt;</code>\
     \  </p>\n<p>Your terminal window is now your R console.</p>\n<p><a name=\"Updating\"\
     ></a></p>\n<h3>updating to the newest version of R</h3>\n<p>As new versions of\
     \ R are released more regularly than versions of operating systems are, your Linux\
@@ -27365,7 +27365,7 @@
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/R8_top.jpg?raw=true\"\
     ></p>\n<hr>"
   parent: 24
-  sha1: fe17b3e097cf75ecd5aeaba2d6eddf8dece4621c
+  sha1: 359bb8106ebbefe5922023a33daacbf6cf43d7ed
   title: Pawsey- Installing R and RStudio in the cloud
 108:
   freshdesk:
