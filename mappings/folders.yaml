@@ -76,3 +76,11 @@
         position: 8, updated_at: '2015-12-01T18:22:33-05:00', visibility: 1}
   parent: 19
   title: Networking
+45:
+  freshdesk:
+    fd_attributes:
+      folder: {category_id: 6000122279, created_at: '2015-12-16T22:33:23-05:00', description: FAQ,
+        id: 6000211701, is_default: false, language_id: null, name: FAQ, parent_id: null,
+        position: 9, updated_at: '2015-12-16T22:33:23-05:00', visibility: 1}
+  parent: 19
+  title: FAQ

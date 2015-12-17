@@ -27763,3 +27763,542 @@
   parent: 24
   sha1: b3254147d7dfbc8fcde90fa2c6d493d389fb3a4f
   title: Pawsey bcbio in the Nectar Research Cloud
+109:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        bool_01: null
+        created_at: '2015-12-16T22:33:24-05:00'
+        datetime_01: null
+        delta: true
+        desc_un_html: " Public IP ranges for instances in the NeCTAR cloud for each\
+          \ node \n\n\n\nNode\nAvailability Zone\nCIDR\nStart\nEnd\n\n\n\n\neRSA\n\
+          SA\n130.220.208.0/20\n130.220.208.0\n130.220.223.255\n\n\nUniversity of\
+          \ Melbourne\nmelbourne-np\n115.146.92.0/22\n115.146.92.0\n115.146.95.255\n\
+          \n\n\nmelbourne-qh2\n115.146.84.0/22\n115.146.84.0\n115.146.87.255\n\n\n\
+          \nmelbourne-qh2-uom\n45.113.232.0/22\n45.113.232.0\n45.113.235.255\n\n\n\
+          Monash / R@CMon\nmonash-01\n118.138.240.0/21\n118.138.240.0\n118.138.247.255\n\
+          \n\n\n\n2001:388:608c:28a8::/64\n2001:388:608c:28a8::\n2001:388:608c:28a8:ffff:ffff:ffff:ffff\n\
+          \n\n\nmonash-02\n118.138.232.0/21\n118.138.232.0\n118.138.239.255\n\n\n\n\
+          \n2001:388:608c:28aa::/64\n2001:388:608c:28aa::\n2001:388:608c:28aa:ffff:ffff:ffff:ffff\n\
+          \n\nQCIF\nqld\n130.102.154.0/23\n130.102.154.0\n130.102.155.255\n\n\n\n\
+          QRIScloud\n203.101.224.0/20\n203.101.224.100\n203.101.239.254\n\n\nNCI\n\
+          NCI\n130.56.248.0/21\n130.56.248.0\n130.56.255.255\n\n\nTasmania\nTasmania\n\
+          144.6.224.0/19\n144.6.224.0\n144.6.255.255\n\n\nIntersect\nintersect-01\n\
+          43.240.96.0/22\n43.240.96.0\n43.240.99.255\n\n\n\nintersect-02\n137.92.56.0/22\n\
+          137.92.56.0\n137.92.59.255\n\n\nPawsey\npawsey-01\n146.118.96.0/20\n146.118.96.2\n\
+          146.118.111.254\n\n\n"
+        description: '<h2>Public IP ranges for instances in the NeCTAR cloud for each
+          node</h2>
+
+          <table>
+
+          <thead>
+
+          <tr>
+
+          <th>Node</th>
+
+          <th>Availability Zone</th>
+
+          <th>CIDR</th>
+
+          <th>Start</th>
+
+          <th>End</th>
+
+          </tr>
+
+          </thead>
+
+          <tbody>
+
+          <tr>
+
+          <td>eRSA</td>
+
+          <td>SA</td>
+
+          <td>130.220.208.0/20</td>
+
+          <td>130.220.208.0</td>
+
+          <td>130.220.223.255</td>
+
+          </tr>
+
+          <tr>
+
+          <td>University of Melbourne</td>
+
+          <td>melbourne-np</td>
+
+          <td>115.146.92.0/22</td>
+
+          <td>115.146.92.0</td>
+
+          <td>115.146.95.255</td>
+
+          </tr>
+
+          <tr>
+
+          <td></td>
+
+          <td>melbourne-qh2</td>
+
+          <td>115.146.84.0/22</td>
+
+          <td>115.146.84.0</td>
+
+          <td>115.146.87.255</td>
+
+          </tr>
+
+          <tr>
+
+          <td></td>
+
+          <td>melbourne-qh2-uom</td>
+
+          <td>45.113.232.0/22</td>
+
+          <td>45.113.232.0</td>
+
+          <td>45.113.235.255</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Monash / R@CMon</td>
+
+          <td>monash-01</td>
+
+          <td>118.138.240.0/21</td>
+
+          <td>118.138.240.0</td>
+
+          <td>118.138.247.255</td>
+
+          </tr>
+
+          <tr>
+
+          <td></td>
+
+          <td></td>
+
+          <td>2001:388:608c:28a8::/64</td>
+
+          <td>2001:388:608c:28a8::</td>
+
+          <td>2001:388:608c:28a8:ffff:ffff:ffff:ffff</td>
+
+          </tr>
+
+          <tr>
+
+          <td></td>
+
+          <td>monash-02</td>
+
+          <td>118.138.232.0/21</td>
+
+          <td>118.138.232.0</td>
+
+          <td>118.138.239.255</td>
+
+          </tr>
+
+          <tr>
+
+          <td></td>
+
+          <td></td>
+
+          <td>2001:388:608c:28aa::/64</td>
+
+          <td>2001:388:608c:28aa::</td>
+
+          <td>2001:388:608c:28aa:ffff:ffff:ffff:ffff</td>
+
+          </tr>
+
+          <tr>
+
+          <td>QCIF</td>
+
+          <td>qld</td>
+
+          <td>130.102.154.0/23</td>
+
+          <td>130.102.154.0</td>
+
+          <td>130.102.155.255</td>
+
+          </tr>
+
+          <tr>
+
+          <td></td>
+
+          <td>QRIScloud</td>
+
+          <td>203.101.224.0/20</td>
+
+          <td>203.101.224.100</td>
+
+          <td>203.101.239.254</td>
+
+          </tr>
+
+          <tr>
+
+          <td>NCI</td>
+
+          <td>NCI</td>
+
+          <td>130.56.248.0/21</td>
+
+          <td>130.56.248.0</td>
+
+          <td>130.56.255.255</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Tasmania</td>
+
+          <td>Tasmania</td>
+
+          <td>144.6.224.0/19</td>
+
+          <td>144.6.224.0</td>
+
+          <td>144.6.255.255</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Intersect</td>
+
+          <td>intersect-01</td>
+
+          <td>43.240.96.0/22</td>
+
+          <td>43.240.96.0</td>
+
+          <td>43.240.99.255</td>
+
+          </tr>
+
+          <tr>
+
+          <td></td>
+
+          <td>intersect-02</td>
+
+          <td>137.92.56.0/22</td>
+
+          <td>137.92.56.0</td>
+
+          <td>137.92.59.255</td>
+
+          </tr>
+
+          <tr>
+
+          <td>Pawsey</td>
+
+          <td>pawsey-01</td>
+
+          <td>146.118.96.0/20</td>
+
+          <td>146.118.96.2</td>
+
+          <td>146.118.111.254</td>
+
+          </tr>
+
+          </tbody>
+
+          </table>'
+        folder:
+          category_id: 6000122279
+          created_at: '2015-12-16T22:33:23-05:00'
+          customer_folders: []
+          description: FAQ
+          id: 6000211701
+          is_default: false
+          language_id: 6
+          name: FAQ
+          parent_id: 6000211701
+          position: 9
+          updated_at: '2015-12-16T22:33:23-05:00'
+          visibility: 1
+        folder_id: 6000211701
+        hits: 0
+        id: 6000099065
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2015-12-16T22:33:24-05:00'
+        modified_by: null
+        outdated: false
+        parent_id: 6000099065
+        position: 1
+        seo_data: {}
+        status: 2
+        string_01: null
+        string_02: null
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: IP Ranges for Instances in the Cloud
+        updated_at: '2015-12-16T22:33:24-05:00'
+        user_id: 6002464727
+  html: '<h2>Public IP ranges for instances in the NeCTAR cloud for each node</h2>
+
+    <table>
+
+    <thead>
+
+    <tr>
+
+    <th>Node</th>
+
+    <th>Availability Zone</th>
+
+    <th>CIDR</th>
+
+    <th>Start</th>
+
+    <th>End</th>
+
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr>
+
+    <td>eRSA</td>
+
+    <td>SA</td>
+
+    <td>130.220.208.0/20</td>
+
+    <td>130.220.208.0</td>
+
+    <td>130.220.223.255</td>
+
+    </tr>
+
+    <tr>
+
+    <td>University of Melbourne</td>
+
+    <td>melbourne-np</td>
+
+    <td>115.146.92.0/22</td>
+
+    <td>115.146.92.0</td>
+
+    <td>115.146.95.255</td>
+
+    </tr>
+
+    <tr>
+
+    <td></td>
+
+    <td>melbourne-qh2</td>
+
+    <td>115.146.84.0/22</td>
+
+    <td>115.146.84.0</td>
+
+    <td>115.146.87.255</td>
+
+    </tr>
+
+    <tr>
+
+    <td></td>
+
+    <td>melbourne-qh2-uom</td>
+
+    <td>45.113.232.0/22</td>
+
+    <td>45.113.232.0</td>
+
+    <td>45.113.235.255</td>
+
+    </tr>
+
+    <tr>
+
+    <td>Monash / R@CMon</td>
+
+    <td>monash-01</td>
+
+    <td>118.138.240.0/21</td>
+
+    <td>118.138.240.0</td>
+
+    <td>118.138.247.255</td>
+
+    </tr>
+
+    <tr>
+
+    <td></td>
+
+    <td></td>
+
+    <td>2001:388:608c:28a8::/64</td>
+
+    <td>2001:388:608c:28a8::</td>
+
+    <td>2001:388:608c:28a8:ffff:ffff:ffff:ffff</td>
+
+    </tr>
+
+    <tr>
+
+    <td></td>
+
+    <td>monash-02</td>
+
+    <td>118.138.232.0/21</td>
+
+    <td>118.138.232.0</td>
+
+    <td>118.138.239.255</td>
+
+    </tr>
+
+    <tr>
+
+    <td></td>
+
+    <td></td>
+
+    <td>2001:388:608c:28aa::/64</td>
+
+    <td>2001:388:608c:28aa::</td>
+
+    <td>2001:388:608c:28aa:ffff:ffff:ffff:ffff</td>
+
+    </tr>
+
+    <tr>
+
+    <td>QCIF</td>
+
+    <td>qld</td>
+
+    <td>130.102.154.0/23</td>
+
+    <td>130.102.154.0</td>
+
+    <td>130.102.155.255</td>
+
+    </tr>
+
+    <tr>
+
+    <td></td>
+
+    <td>QRIScloud</td>
+
+    <td>203.101.224.0/20</td>
+
+    <td>203.101.224.100</td>
+
+    <td>203.101.239.254</td>
+
+    </tr>
+
+    <tr>
+
+    <td>NCI</td>
+
+    <td>NCI</td>
+
+    <td>130.56.248.0/21</td>
+
+    <td>130.56.248.0</td>
+
+    <td>130.56.255.255</td>
+
+    </tr>
+
+    <tr>
+
+    <td>Tasmania</td>
+
+    <td>Tasmania</td>
+
+    <td>144.6.224.0/19</td>
+
+    <td>144.6.224.0</td>
+
+    <td>144.6.255.255</td>
+
+    </tr>
+
+    <tr>
+
+    <td>Intersect</td>
+
+    <td>intersect-01</td>
+
+    <td>43.240.96.0/22</td>
+
+    <td>43.240.96.0</td>
+
+    <td>43.240.99.255</td>
+
+    </tr>
+
+    <tr>
+
+    <td></td>
+
+    <td>intersect-02</td>
+
+    <td>137.92.56.0/22</td>
+
+    <td>137.92.56.0</td>
+
+    <td>137.92.59.255</td>
+
+    </tr>
+
+    <tr>
+
+    <td>Pawsey</td>
+
+    <td>pawsey-01</td>
+
+    <td>146.118.96.0/20</td>
+
+    <td>146.118.96.2</td>
+
+    <td>146.118.111.254</td>
+
+    </tr>
+
+    </tbody>
+
+    </table>'
+  parent: 45
+  sha1: 3c68b1fe1b3414a10e91876a1da6fa8be6cb950a
+  title: IP Ranges for Instances in the Cloud
