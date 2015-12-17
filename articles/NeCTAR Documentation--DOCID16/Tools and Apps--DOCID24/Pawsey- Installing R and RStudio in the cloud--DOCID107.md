@@ -6,7 +6,7 @@
 - [Introduction](#Intro)
 - [Installing R](#R)
   - [Updating to the newest version of R](#Updating)
-- [Installing RStudio Server GUI](#Installing RStudio)
+- [Installing RStudio Server GUI](#RStudio)
   - [Troubleshooting and server management](#Troubleshooting)
 - [Installing and switching between multiple versions of R](#multiple versions)
   - [Using RStudio under multiple versions of R](#RStudio multiple versions)
@@ -25,7 +25,7 @@
 
 This documentation provides a step-by-step guide for installing and configuring a ready-to-use R environment, and optional RStudio Server graphical user interface, within the NeCTAR Research Cloud. Beyond basic software installation and version management, information is also provided for how to import and export data to and from your cloud instance as well as guidance for how to actually run R in the cloud. The commands are relevant for Ubuntu and Debian users and were tested on a Mac and PC, through MobaXterm virtual Linux emulator.
 
-There is an assumption that the user already has a basic understanding of Linux command line coding and is familiar with the NeCTAR research cloud (i.e. setting up ssh-keypairs and launching and logging into instances, etc.). However, guidance is provided throughout if experience is limited. Security and maintenance of NeCTAR cloud instances are the responsibility of the user, although some support is provided by the [NeCTAR Helpdesk](https://support.rc.nectar.org.au/docs/support) as well as extensive documentation available for using the [NeCTAR Research Cloud](https://support.rc.nectar.org.au/docs/getting-started).
+There is an assumption that the user already has a basic understanding of Linux command line coding and is familiar with the NeCTAR Research Cloud (i.e. setting up ssh-keypairs and launching and logging into instances, etc.). However, guidance is provided throughout if experience is limited. Security and maintenance of NeCTAR cloud instances are the responsibility of the user, although some support is provided by the [NeCTAR Helpdesk](https://support.rc.nectar.org.au/docs/support) as well as extensive documentation available for using [NeCTAR](https://support.rc.nectar.org.au/docs/getting-started).
 
 ----
 
@@ -97,7 +97,7 @@ Note: installation of .deb files requires prior installation of package gdebi-co
 
 `$ sudo apt-get install gdebi-core`
 
-Next, download and install your preferred RStudio package (Check the [RStudio website](www.rstudio.com/products/rstudio/download-server/) for an updated version):
+Next, download and install your preferred RStudio package (Check [RStudio](https://www.rstudio.com/products/rstudio/download-server/) for an updated version):
 
 **64bit**  
 **Version: 0.99.489**
