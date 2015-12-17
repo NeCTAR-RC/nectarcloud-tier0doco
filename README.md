@@ -289,7 +289,7 @@ simple as
 And then I simply point my web browser at [http://localhost:6419/](http://localhost:6419/)
 and voila, there's my markdown rendered into html.
 
-You can also find tools such as web browser plugins that will render markdown documents (e.g. [Chrome extension "Markdown Preview](https://chrome.google.com/webstore/detail/markdown-preview/jmchmkecamhbiokiopfpnfgbidieafmd?utm_source=chrome-app-launcher-info-dialog)
+You can also find tools such as online tools that will render markdown documents (e.g. <https://stackedit.io/editor> - copy/paste your text into the left pane)
 
 ##### The NeCTAR style guide <a name='style'></a>
 

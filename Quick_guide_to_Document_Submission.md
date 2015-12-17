@@ -77,6 +77,10 @@ simple as
 And then I simply point my web browser at [http://localhost:6419/](http://localhost:6419/)
 and voila, there's my markdown rendered into html.
 
+OR
+
+You can also find tools such as online tools that will render markdown documents (e.g. <https://stackedit.io/editor> - copy/paste your text into the left pane)
+
 <a name="mdl"></a> 
 
 **mdl - markdown parsing tool**  (Very useful, let's you know if Jenkins will approve your document without having to submit it.)
