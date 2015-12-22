@@ -29,8 +29,8 @@ login to the [NeCTAR Dashboard](https://dashboard.rc.nectar.org.au/):
 
 ![`aaf3`](images/aaf3.png)
 
-- Type in username/password supplied by your institution/organization and click
- 'Continue' button, if successful, you should see the NeCTAR Dashboard
+- Type in the username/password that was supplied by your institution/organization and click the
+ 'Continue' button. If this was successful, you should see the NeCTAR Dashboard.
 
 
 If you have any issues contact the NecTAR [HelpDesk][helpdesk].
