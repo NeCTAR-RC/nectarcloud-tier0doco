@@ -3,7 +3,7 @@
 - [Access via web browser](#password)
 
 
-This section enables you to access the virtual machine (VM) created earlier.
+This section enables you to access the virtual machine (VM) that you created earlier.
 This will give you a console for entering Shell commands to your Linux VM.
 Later sections will help you start to use your VM.
 
@@ -23,19 +23,19 @@ To do this you will need to enter the IP Address of the VM.
 ## Windows User <a name="Windows"></a>
 
 - Download PuTTY(putty.exe) from [PuTTY download page][putty]
-- Double click putty.exe
+- Double-click putty.exe
 
   ![`putty1`](images/putty1.png)
 
 - Copy/paste the IP address to 'Host Name'
-- Under 'Connection' on the right side, expand 'SSH' and click 'Auth'
+- Under 'Connection' on the right-hand side, expand 'SSH' and click 'Auth'
 
   ![`putty2`](images/putty2.png)
 
 - Click the Browse button and select the private key created earlier
-- Click 'Session' on the right side Category
-- Click 'Open' button
-- Type username 'ubuntu' for Ubuntu image and 'root' for other images
+- Click 'Session' on the right-hand side Category
+- Click the 'Open' button
+- Type the username 'ubuntu' for Ubuntu image or 'root' for other images
 
 ---
 
@@ -47,8 +47,7 @@ Type the following command into the console:
 ssh -i Nectar_Key ubuntu@XX.XX.XX.XX
 ```
 
-- Replace 'Nectar_Key' with the created private key name earlier. You may also
- need to specify the full path for the private key (usually '~/.ssh/Nectar_Key')
+- Replace 'Nectar_Key' with the name of the private key that was created earlier. You may also need to specify the full path for the private key (usually '~/.ssh/Nectar_Key')
 - Replace 'ubuntu' with 'root' if you are not using an Ubuntu image
 - Replace XX.XX.XX.XX with the IP address
 
@@ -64,7 +63,7 @@ being accessible from any computer, without needing the private key to be saved 
 
 1. First, you need to get SSH access to the VM command line in order to set a password.
 1. In PuTTY or Terminal, enter `  sudo passwd ubuntu  ` (or 'root' if your OS isn't Ubuntu)
-1. Enter a password, that you will use to access the VM through a browser.
+1. Enter a password; you will use this password to access the VM through a browser.
 
 ### Log on through the dashboard
 
