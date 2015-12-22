@@ -1,4 +1,5 @@
 33:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -544,6 +545,7 @@
   sha1: d02d0b32d98f5b8019dddfd09eb00eeeb55d17ef
   title: Launching Virtual Machines
 34:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -670,6 +672,7 @@
   sha1: f10da9763e9420b97a4186bd8d50fe20f34e4f82
   title: Getting an account
 35:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -935,6 +938,7 @@
   sha1: 5107317db550e4e09840ae5c0eb92ed58fde7f74
   title: Welcome
 36:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -1244,6 +1248,7 @@
   sha1: 16b9cd15a0754709d46f6e8ff5dfda05615d4df6
   title: Good Practices
 37:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -1390,6 +1395,7 @@
   sha1: 61c1492a41b681772259eb522df85061c526b6d9
   title: Resources available to you
 38:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -1538,6 +1544,7 @@
   sha1: f3833959eda87b1b543c43245a1f6c223da0f4bf
   title: Availability Zones
 39:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -2013,170 +2020,7 @@
   parent: 21
   sha1: cefb5447304e6dde5e59187590e25598103cc923
   title: Introduction to Cloud Storage
-46:
-  freshdesk:
-    fd_attributes:
-      article:
-        art_type: 1
-        bool_01: null
-        created_at: '2015-09-03T01:28:19-04:00'
-        datetime_01: null
-        delta: true
-        desc_un_html: " \n Heat \n Heat is a template driven service that automates\
-          \ the management of the entire\nlifecycle of your application on the NeCTAR\
-          \ cloud. \n A 'template driven service' simply means that you define your\
-          \ application's\nrequirements in a human readable text file - the template.\
-          \ In this file you to\ndescribe both the infrastructure and its relationships\
-          \ that your application\nwill need to run on the NeCTAR cloud. \n Heat then\
-          \ uses this template to provision the required infrastructure and\nmanage\
-          \ the lifecycle of your application from start to finish. This template,\n\
-          and the infrastructure that it has created, is termed a 'stack'. \n As part\
-          \ of the life cycle management, the Heat service supports both scaling on\n\
-          demand and the freeing up of infrastructure once the application is finished.\
-          \ \n Heat integrates well with configuration management tools, such as Chef\
-          \ and\nPuppet. Thus the Heat service offers executable documentation of\
-          \ your\napplication's deployment and lifecycle, making your deployments\
-          \ repeatable and\nreliable. The net effect is to limit human error and to\
-          \ save you time. Thus\nsaving you money. \n The stack template format(s)\
-          \ \n Heat is modelled after Amazon's CloudFormation\nservice, and endeavours\
-          \ to maintain some degree of compatibility with this\nservice. Hence Heat\
-          \ supports two different template formats. \n \n The first is a JSON based\
-          \ implementation that\n  mimics the Amazon specification. \n The second\
-          \ is a YAML based native OpenStack\n  implementation termed 'HOT'. \n \n\
-          \ We strongly recommend that you use the HOT format. \n The stack lifecycle\
-          \ \n A template is created, using a standard text editor (such as Brackets).\n\
-          It is then uploaded into the OpenStack Heat service, either by means of\
-          \ the\nHeat command line client, or the Horizon dashboard. \n If uploaded\
-          \ via the command line client, the engine expects any mandatory\nparameters\
-          \ to be provided as arguments added at the point the template was\nuploaded.\
-          \ \n If, however, uploaded via the dashboard, then the dashboard will create\
-          \ an\ninput wizard that will step the person who uploaded the template through\
-          \ the\nprocess of entering the required parameter values. \n Once all the\
-          \ required data has been gathered the stack is then provisioned and\nlaunched.\
-          \ \n The template and its associated parameters will remain in the Heat\
-          \ database\nuntil such time as the engine is instructed to destroy the stack.\
-          \ \n At that point all the provisioned infrastructure will be destroyed,\
-          \ its\nresources released, and then the template and its parameters will\
-          \ be removed\nfrom the Heat database \n For more on Heat, read the other\
-          \ articles on this site. "
-        description: "<h1>\n<img alt=\"flame logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Heat--DOCID42/images/glossy_flame.png?raw=true\"\
-          > Heat</h1>\n<p>Heat is a template driven service that automates the management\
-          \ of the entire\nlifecycle of your application on the NeCTAR cloud.</p>\n\
-          <p>A 'template driven service' simply means that you define your application's\n\
-          requirements in a human readable text file - the template. In this file\
-          \ you to\ndescribe both the infrastructure and its relationships that your\
-          \ application\nwill need to run on the NeCTAR cloud.</p>\n<p>Heat then uses\
-          \ this template to provision the required infrastructure and\nmanage the\
-          \ lifecycle of your application from start to finish. This template,\nand\
-          \ the infrastructure that it has created, is termed a 'stack'.</p>\n<p>As\
-          \ part of the life cycle management, the Heat service supports both scaling\
-          \ on\ndemand and the freeing up of infrastructure once the application is\
-          \ finished.</p>\n<p>Heat integrates well with configuration management tools,\
-          \ such as Chef and\nPuppet. Thus the Heat service offers executable documentation\
-          \ of your\napplication's deployment and lifecycle, making your deployments\
-          \ repeatable and\nreliable. The net effect is to limit human error and to\
-          \ save you time. Thus\nsaving you money.</p>\n<h2>The stack template format(s)</h2>\n\
-          <p>Heat is modelled after Amazon's <a href=\"http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/Welcome.html\"\
-          >CloudFormation</a>\nservice, and endeavours to maintain some degree of\
-          \ compatibility with this\nservice. Hence Heat supports two different template\
-          \ formats.</p>\n<ul>\n<li>The first is a <a href=\"http://www.json.org/\"\
-          >JSON</a> based implementation that\n  mimics the Amazon specification.</li>\n\
-          <li>The second is a <a href=\"http://www.yaml.org/\">YAML</a> based native\
-          \ OpenStack\n  implementation termed 'HOT'.</li>\n</ul>\n<p>We strongly\
-          \ recommend that you use the HOT format.</p>\n<h2>The stack lifecycle</h2>\n\
-          <p>A template is created, using a standard text editor (such as <a href=\"\
-          http://brackets.io/\">Brackets</a>).\nIt is then uploaded into the OpenStack\
-          \ Heat service, either by means of the\nHeat command line client, or the\
-          \ Horizon dashboard.</p>\n<p>If uploaded via the command line client, the\
-          \ engine expects any mandatory\nparameters to be provided as arguments added\
-          \ at the point the template was\nuploaded.</p>\n<p>If, however, uploaded\
-          \ via the dashboard, then the dashboard will create an\ninput wizard that\
-          \ will step the person who uploaded the template through the\nprocess of\
-          \ entering the required parameter values.</p>\n<p>Once all the required\
-          \ data has been gathered the stack is then provisioned and\nlaunched.</p>\n\
-          <p>The template and its associated parameters will remain in the Heat database\n\
-          until such time as the engine is instructed to destroy the stack.</p>\n\
-          <p>At that point all the provisioned infrastructure will be destroyed, its\n\
-          resources released, and then the template and its parameters will be removed\n\
-          from the Heat database</p>\n<p>For more on Heat, read the other articles\
-          \ on this site.</p>"
-        folder:
-          category_id: 6000122279
-          created_at: '2015-09-03T01:28:02-04:00'
-          customer_folders: []
-          description: Heat
-          id: 6000190148
-          is_default: false
-          language_id: 6
-          name: Heat
-          parent_id: 6000190148
-          position: 4
-          updated_at: '2015-09-03T01:28:02-04:00'
-          visibility: 1
-        folder_id: 6000190148
-        hits: 12
-        id: 6000055383
-        int_01: null
-        int_02: null
-        int_03: null
-        language_id: 6
-        modified_at: '2015-10-14T20:46:31-04:00'
-        modified_by: null
-        outdated: false
-        parent_id: 6000055383
-        position: 1
-        seo_data: {}
-        status: 2
-        string_01: null
-        string_02: null
-        tags: []
-        thumbs_down: 0
-        thumbs_up: 0
-        title: Introduction to HEAT
-        updated_at: '2015-10-14T20:46:31-04:00'
-        user_id: 6002464727
-  html: "<h1><img alt=\"flame logo\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud\
-    \ Expert--DOCID19/Heat--DOCID42/images/glossy_flame.png?raw=true\"> Heat</h1>\n\
-    <p>Heat is a template driven service that automates the management of the entire\n\
-    lifecycle of your application on the NeCTAR cloud.</p>\n<p>A 'template driven\
-    \ service' simply means that you define your application's\nrequirements in a\
-    \ human readable text file - the template. In this file you to\ndescribe both\
-    \ the infrastructure and its relationships that your application\nwill need to\
-    \ run on the NeCTAR cloud.</p>\n<p>Heat then uses this template to provision the\
-    \ required infrastructure and\nmanage the lifecycle of your application from start\
-    \ to finish. This template,\nand the infrastructure that it has created, is termed\
-    \ a 'stack'.</p>\n<p>As part of the life cycle management, the Heat service supports\
-    \ both scaling on\ndemand and the freeing up of infrastructure once the application\
-    \ is finished.</p>\n<p>Heat integrates well with configuration management tools,\
-    \ such as Chef and\nPuppet. Thus the Heat service offers executable documentation\
-    \ of your\napplication's deployment and lifecycle, making your deployments repeatable\
-    \ and\nreliable. The net effect is to limit human error and to save you time.\
-    \ Thus\nsaving you money.</p>\n<h2>The stack template format(s)</h2>\n<p>Heat\
-    \ is modelled after Amazon's <a href=\"http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/Welcome.html\"\
-    >CloudFormation</a>\nservice, and endeavours to maintain some degree of compatibility\
-    \ with this\nservice. Hence Heat supports two different template formats.</p>\n\
-    <ul>\n<li>The first is a <a href=\"http://www.json.org/\">JSON</a> based implementation\
-    \ that\n  mimics the Amazon specification.</li>\n<li>The second is a <a href=\"\
-    http://www.yaml.org/\">YAML</a> based native OpenStack\n  implementation termed\
-    \ 'HOT'.</li>\n</ul>\n<p>We strongly recommend that you use the HOT format.</p>\n\
-    <h2>The stack lifecycle</h2>\n<p>A template is created, using a standard text\
-    \ editor (such as <a href=\"http://brackets.io/\">Brackets</a>).\nIt is then uploaded\
-    \ into the OpenStack Heat service, either by means of the\nHeat command line client,\
-    \ or the Horizon dashboard.</p>\n<p>If uploaded via the command line client, the\
-    \ engine expects any mandatory\nparameters to be provided as arguments added at\
-    \ the point the template was\nuploaded.</p>\n<p>If, however, uploaded via the\
-    \ dashboard, then the dashboard will create an\ninput wizard that will step the\
-    \ person who uploaded the template through the\nprocess of entering the required\
-    \ parameter values.</p>\n<p>Once all the required data has been gathered the stack\
-    \ is then provisioned and\nlaunched.</p>\n<p>The template and its associated parameters\
-    \ will remain in the Heat database\nuntil such time as the engine is instructed\
-    \ to destroy the stack.</p>\n<p>At that point all the provisioned infrastructure\
-    \ will be destroyed, its\nresources released, and then the template and its parameters\
-    \ will be removed\nfrom the Heat database</p>\n<p>For more on Heat, read the other\
-    \ articles on this site.</p>"
-  parent: 42
-  sha1: 988556590c11d69c9e0bcb5f54dc6ae2aa14f0b1
-  title: Introduction to HEAT
+46: {title: Introduction to HEAT}
 47:
   freshdesk:
     fd_attributes:
@@ -2635,6 +2479,7 @@
   sha1: ecd3e2fb4506878099b3828936b5fd6455e1cdd9
   title: Introduction to YAML
 50:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -2813,6 +2658,7 @@
   sha1: 1e7bfd723d5df5568137a1694554ae952820aa86
   title: Security Groups
 52:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -4379,6 +4225,7 @@
   sha1: b671b92fbc951047324add2fdd5192c9a3030128
   title: Glossary
 53:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -4555,6 +4402,7 @@
   sha1: 654c8267329e977abc6512e5ba453d3807613354
   title: Accessing Instances
 54:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -5000,6 +4848,7 @@
   sha1: c05dabd105fa47fb3ba200a7edcc90bb6fc3a078
   title: Getting Started
 55:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -5194,6 +5043,7 @@
   sha1: 4fb51710944a71beb2c2efeb135fb867663e309c
   title: Introduction to Object Storage
 56:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -5987,6 +5837,7 @@
   sha1: 49018f63c2365519bbb102f7706503b28c97870e
   title: Trouble Shooting
 58:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -6158,6 +6009,7 @@
   sha1: bba65138cc3ac626e863e69f7a0c6ee103e4a792
   title: Managing An Allocation
 59:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -6385,6 +6237,7 @@
   sha1: c401b0c4754bf55fc6819040848b0c9d78e5e4c8
   title: Introduction
 60:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -6648,6 +6501,7 @@
   sha1: 9eecb6e94744460ef2b64df6275159329ba2d106
   title: Getting Started
 61:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -7181,6 +7035,7 @@
   sha1: e5724c0fd44f2de8e3a66b69344905e82ff5e26c
   title: API
 63:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -7590,6 +7445,7 @@
   sha1: f4b263876c9c9bfaea917cc20fa0ac3635a38e27
   title: Getting Started
 64:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -7926,6 +7782,7 @@
   sha1: b0eef8930f013f4ac1ac0334f5b6447c898ff3c7
   title: API
 65:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -8477,6 +8334,7 @@
   sha1: fb3ab57b531b8f5119c4b1f7d9fecf66000bc209
   title: Trouble Shooting
 66:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -9113,6 +8971,7 @@
   sha1: 5fe40b8d23dab31c94978688fa9f5608cf655b64
   title: Heat Actions
 70:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -9699,6 +9558,7 @@
   sha1: 924f2142908742e324041f06f5c3f9692fd30c3d
   title: Trouble Shooting
 71:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -9860,6 +9720,7 @@
   sha1: 0cf114be6248c63a0793dd7bf20ab5bd3398ec4f
   title: Nectar Dashboard
 72:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -9982,6 +9843,7 @@
   sha1: 1429751e6be5381585de71a85215189648511d05
   title: More Info
 73:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -10108,6 +9970,7 @@
   sha1: 1015e0aca8a081cf30c5762985683eb2eb68b987
   title: Best Practice
 74:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -10359,6 +10222,7 @@
   sha1: 8bf0cd6f62150c2ac27a0abe5d967b52cb893020
   title: Getting Started
 75:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -10630,6 +10494,7 @@
   sha1: 0625128a66318e3b7dc0886b244435ce2a03c6c8
   title: Introduction to Authentication
 76:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -10820,6 +10685,7 @@
   sha1: ac55360179d9e08115e5cd9e597d4d52bd9add95
   title: More Info
 77:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -10947,6 +10813,7 @@
   sha1: 63c25723ed3e8e74971a1f4a7b9b7c4a15faca4e
   title: Security Assessment
 78:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -11349,6 +11216,7 @@
   sha1: 089d0705ebfb8b4f5b3e44575ba5c620f3f6245b
   title: More Info
 80:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -11518,6 +11386,7 @@
   sha1: a0a89025845b291ff839964ddc5e31321d6be8bf
   title: API
 81:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -11743,6 +11612,7 @@
   sha1: 72a60e59f1612bf38c706d80dd49230706a52992
   title: More Info
 82:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -12099,6 +11969,7 @@
   sha1: 2fe4990b09f16547777dcccbc4d135ec6397c94b
   title: Trouble Shooting
 83:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -12713,6 +12584,7 @@
   sha1: 13c13cd4896f70425a317c11c3ca41da251485fc
   title: Quick Reference for Commands
 84:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -13053,6 +12925,7 @@
   sha1: 9331d018fb124e3564a5fe829f1f94f5334ebe3b
   title: Back-up and Restore
 85:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -13354,6 +13227,7 @@
   sha1: 9e05cea693cc98342af866991372889982f39f2a
   title: Transferring Data to your VM
 86:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -14013,6 +13887,7 @@
   sha1: e407d13fe0a56c232cccf2d99f1cf6b56d8c1d2b
   title: Tips for Running Jobs on your VM
 87:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -14571,6 +14446,7 @@
   sha1: c44ddaf6c9149cba165937d9c41e0bac293c9d92
   title: eRSA Windows in the Cloud - user guide
 88:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -15447,6 +15323,7 @@
   sha1: e4cb7e4fc3faf091a40f153c83c9e0228d1485f7
   title: Intersect Twitter Scraper User Guide
 89:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -16218,6 +16095,7 @@
   sha1: 8cd94a617ddb1393c793efdab7bec35a8464d4f7
   title: eRSA Cloud Software Repository - user guide
 90:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -16549,6 +16427,7 @@
   sha1: 2046451b0669cf00d8b8e004b9db03579307f6bc
   title: TPAC R-Studio with Remote Desktop
 91:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -16909,6 +16788,7 @@
   sha1: f6f9841777a9c3afaa24f5fbbe9ae8c166fb07a1
   title: TPAC Matlab with Remote Desktop
 92:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -17852,6 +17732,7 @@
   sha1: fe20d93bd25169a4c7dc3426f4f3173b37471714
   title: TPAC Remote Desktop User Guide
 93:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -18611,6 +18492,7 @@
   sha1: 59474bdce392a8260dfba83a519239a93d27c3b5
   title: Intersect Launchpod User Guide
 94:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -18820,6 +18702,7 @@
   sha1: ec2713fd8a6436c2d4f4dacb21e5724ed84995cf
   title: Intersect DIVER User Guide
 95:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -19041,6 +18924,7 @@
   sha1: 1f41c7ec9ff193240456cfe0886ee4667d8b2667
   title: Security Compromise Checklist
 96:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -20033,6 +19917,7 @@
   sha1: 2517bac240c7b107be86f42b63dab67526177c4c
   title: eRSA Emu Cluster in the Cloud - user guide
 97:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -20892,6 +20777,7 @@
   sha1: 65f37559fc52b3c9c3cf99d07232ade055e589e0
   title: QCIF NFS Mounting
 98:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -21114,6 +21000,7 @@
   sha1: 96d9097503dfc18445585dd2f725b7bb0dc2ec34
   title: TPAC Aurora User Guide
 99:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -21953,6 +21840,7 @@
   sha1: cdc5cd37a3ca0b9c9d285716b7d55320585e86ce
   title: Introduction
 100:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -22415,6 +22303,7 @@
   sha1: 0821a4e8a8aa973a34520faaffe4fa3589885107
   title: Monash Bioinformatics Training Platform User Guide
 101:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -23170,6 +23059,7 @@
   sha1: 91d15d3b3a455215847d5af3da7780f8893f7610
   title: QCIF TERN CoESRA
 102:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -23823,6 +23713,7 @@
   sha1: 7d4091507e81e37b92d790232484619e35754299
   title: Getting Started
 103:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -24017,6 +23908,7 @@
   sha1: 558d3322391589a032322e1e93e1ea66964cb9b4
   title: API
 104:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -25679,6 +25571,7 @@
   sha1: 7c38bf34d75a35fd33a877021bb51828bed70c33
   title: QCIF Nimrod
 105:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -26001,6 +25894,7 @@
   sha1: e6564c6a49547b3df1e2512dd80cc6a7b5288195
   title: More Info
 106:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -26561,6 +26455,7 @@
   sha1: 9acbb5d011cc0ca185cceb3755b02ccde3f6dd89
   title: Trouble Shooting
 107:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -27368,6 +27263,7 @@
   sha1: 359bb8106ebbefe5922023a33daacbf6cf43d7ed
   title: Pawsey- Installing R and RStudio in the cloud
 108:
+  found: true
   freshdesk:
     fd_attributes:
       article:
