@@ -137,7 +137,7 @@ Initially you will need to install (or have access to) and setup the following t
 
 ![](images/Gerrit_ssh-key.png)
 
-- Test `git-review` by using the ssh -p 29418 `Look_ma_Im_using_Gerrit@review.rc.nectar.org.au`
+- Test `git-review` by using the ssh -p 29418 `Look_Ma_Im_using_Gerrit@review.rc.nectar.org.au`
   - if successful you should get back somthing like this....
   
   `****    Welcome to Gerrit Code Review    ****`
