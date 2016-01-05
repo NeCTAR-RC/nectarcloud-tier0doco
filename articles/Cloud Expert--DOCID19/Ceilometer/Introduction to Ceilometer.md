@@ -73,7 +73,7 @@ There are currently three possible types of meters:
 
 - Cumulative: an accumulating value is recorded (i.e.: the total)
 
-- Delta: changes between values are recorded
+- Delta: changes between values are recorded 
 
 - Gauge: only the current value at the time of reading is recorded.
 
