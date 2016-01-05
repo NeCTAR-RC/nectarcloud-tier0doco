@@ -13084,7 +13084,7 @@
           \ '.ppk' extension if available).\n FileZilla might ask to convert the fileformat.\
           \ Click OK. \n \n \n \n \n \n Open  File -> Site Manager .  \n Click New\
           \ Site and give it a name.  \n Insert the IP address of the instance as\
-          \ Host\n \n \nLogon Type is interactive \n The user is 'ubuntu' (or 'host'\
+          \ Host\n \n \nLogon Type is interactive \n The user is 'ubuntu' (or 'root'\
           \ if your VM has a different operating system) \n Click Connect\n \n \n\
           \ \n FileZilla connection \n The left side of the FileZilla window will\
           \ list the files of your computer. \nThe right side will contain the folders\
@@ -13141,7 +13141,7 @@
           \ on your VM, using programs on your local computer.</p>\n<h3>Download and\
           \ Install FileZilla</h3>\n<ol>\n<li>For Ubuntu - Install from the Ubuntu\
           \ Software Centre app</li>\n<li>Mac and Windows - Download the program file\
-          \ <a href=\"http://sourceforge.net/projects/filezilla/\">FileZilla</a>\n\
+          \ <a href=\"https://filezilla-project.org/download.php?type=client\">FileZilla</a>\n\
           </li>\n<li>Double click file - follow installation instructions for Windows</li>\n\
           <li>For Mac - drag the filezilla.app file to your Applications folder.</li>\n\
           <li>Open FileZilla</li>\n</ol>\n<h3>SFTP connection to the VM</h3>\n<ul>\n\
@@ -13164,7 +13164,7 @@
           \ . </li>\n<li>Click <strong><em>New Site</em></strong> and give it a name.\
           \ </li>\n<li>Insert the <em>IP address</em> of the instance as <strong><em>Host</em></strong>\n\
           </li>\n<li>\n<strong><em>Logon Type</em></strong> is interactive</li>\n\
-          <li>The user is <strong>'ubuntu'</strong> (or 'host' if your VM has a different\
+          <li>The user is <strong>'ubuntu'</strong> (or 'root' if your VM has a different\
           \ operating system)</li>\n<li>Click <strong><em>Connect</em></strong>\n\
           </li>\n</ol>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Cloud%20Basics--DOCID21/images/FZ_site_manager.png?raw=true\"\
           ></p>\n<h3>FileZilla connection</h3>\n<p>The left side of the FileZilla\
@@ -13238,17 +13238,17 @@
           updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 7
+        hits: 48
         id: 6000085114
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-08T17:57:12-05:00'
+        modified_at: '2016-01-04T22:48:22-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000085114
-        position: 12
+        position: 7
         seo_data: {}
         status: 2
         string_01: null
@@ -13257,7 +13257,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Transferring Data to your VM
-        updated_at: '2015-11-08T17:57:12-05:00'
+        updated_at: '2016-01-04T22:48:22-05:00'
         user_id: 6002464727
   html: "<h2>Contents</h2>\n<ol>\n<li><a href=\"#filezilla\">FileZilla: GUI sftp client</a></li>\n\
     <li><a href=\"#scp\">SCP: secure copy</a></li>\n<li><a href=\"#sftp\">SFTP via\
@@ -13268,7 +13268,7 @@
     \ edit documents that are on your VM, using programs on your local computer.</p>\n\
     <h3>Download and Install FileZilla</h3>\n<ol>\n<li>For Ubuntu - Install from the\
     \ Ubuntu Software Centre app</li>\n<li>Mac and Windows - Download the program\
-    \ file <a href=\"http://sourceforge.net/projects/filezilla/\">FileZilla</a></li>\n\
+    \ file <a href=\"https://filezilla-project.org/download.php?type=client\">FileZilla</a></li>\n\
     <li>Double click file - follow installation instructions for Windows</li>\n<li>For\
     \ Mac - drag the filezilla.app file to your Applications folder.</li>\n<li>Open\
     \ FileZilla</li>\n</ol>\n<h3>SFTP connection to the VM</h3>\n<ul>\n<li>\n<p>Click\
@@ -13292,7 +13292,7 @@
     <li>Click <strong><em>New Site</em></strong> and give it a name. </li>\n<li>Insert\
     \ the <em>IP address</em> of the instance as <strong><em>Host</em></strong></li>\n\
     <li><strong><em>Logon Type</em></strong> is interactive</li>\n<li>The user is\
-    \ <strong>'ubuntu'</strong> (or 'host' if your VM has a different operating system)</li>\n\
+    \ <strong>'ubuntu'</strong> (or 'root' if your VM has a different operating system)</li>\n\
     <li>Click <strong><em>Connect</em></strong></li>\n</ol>\n<p><img alt=\"\" src=\"\
     https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Cloud Basics--DOCID21/images/FZ_site_manager.png?raw=true\"\
@@ -13352,7 +13352,7 @@
     <p><code>put &lt;/mnt/localVM_destination/file.txt&gt; &lt;remote_directory/&gt;</code></p>\n\
     <p>to close the sftp connection, type <code>exit</code>.</p>"
   parent: 21
-  sha1: 9e05cea693cc98342af866991372889982f39f2a
+  sha1: 9d23b8bbeb78ea67d27dc3a96969a27b2bda7fde
   title: Transferring Data to your VM
 86:
   freshdesk:
