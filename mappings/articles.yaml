@@ -27356,3 +27356,104 @@
   parent: 24
   sha1: e47738cf88725e7285c7ac3905c41d5a9539871c
   title: Pawsey Installing R and RStudio
+108: {html: "<p>In the cloud environment, billing requires multiple steps and services\
+    \ to support\nit. The required steps and services are metering, rating and billing.\
+    \ The Ceilometer\nproject was originally designed to provide the metering service\
+    \ as it gathers the\ndata required by the billing systems that vendors would implement\
+    \ for their OpenStack installations. This service collects information and required\
+    \ data about the system\nand saves it in the form of samples in order to provide\
+    \ data about anything that\ncan be billed.</p>\n<p>The primary purposes of the\
+    \ Ceilometer are the following:</p>\n<ul>\n<li>\n<p>The efficient collection of\
+    \ metering data.</p>\n</li>\n<li>\n<p>Collecting data by monitoring notifications\
+    \ sent from services or by polling the \n resources.</p>\n</li>\n<li>\n<p>Configuring\
+    \ the type of collected data to meet various requirements.</p>\n</li>\n<li>\n\
+    <p>Accessing data through the REST API.</p>\n</li>\n<li>\n<p>Expanding the framework\
+    \ to collect custom usage data by additional plugins.</p>\n</li>\n<li>\n<p>Producing\
+    \ signed and non-repudiable metering messages.</p>\n</li>\n</ul>\n<p>But since\
+    \ its inception more features have been added to Ceilometer, the most\nimportant\
+    \ of which is the addition of alarms that can be set to fire when monitored\n\
+    data streams cross user set thresholds.</p>\n<p>Unlike the rest of OpenStack there\
+    \ is currently no Ceilometer dashboard component\nfor end users. You either have\
+    \ to use the command line client or the RESTful web\nAPI (the command line client\
+    \ does offer Python bindings).</p>\n<p>So the simplest path to follow when it\
+    \ comes to Ceilometer is to grab the command\nline tool and to get going with\
+    \ that.</p>\n<h2>Architecture of OpenStack Ceilometer</h2>\n<ul>\n<li>\n<p>API\
+    \ Server: provides access to metering data in the database via REST API</p>\n\
+    </li>\n<li>\n<p>Central agent: polls utilization data for resources not tied to\
+    \ compute nodes.\n There may be only one central agent running for the infrastructure.</p>\n\
+    </li>\n<li>\n<p>Compute agent: polls metering data from the compute node. Compute\
+    \ agents must\n run on compute nodes.</p>\n</li>\n<li>\n<p>Collector: monitors\
+    \ the message queues (data sent by the infrastructure and coming\n from agents).\
+    \ The messages are processed, converted in to metering data, signed,\n and put\
+    \ back to the queue.</p>\n</li>\n<li>\n<p>Data store: save the metering data from\
+    \ collectors and provide the metering data\n to API server.</p>\n</li>\n</ul>\n\
+    <h2>Ceilometer meters</h2>\n<p>In the Ceilometer world, \u201CMeters\u201D is\
+    \ the term to indicate a tool that measures an\naspect of resource usage.</p>\n\
+    <p>So for any one resource there can be many meters measuring different aspects\
+    \ of\nhe resource.</p>\n<p>A meter has a name, a type and a unit of measurement\
+    \ associated with it.</p>\n<p>For example:</p>\n<blockquote>\n<p>Name: cpu\nType:\
+    \ cumulative\nUnit: ns\nResource ID: 0488d02d\nUser ID: 308\nProject ID: 201 \
+    \   </p>\n</blockquote>\n<p>There are currently three possible types of meters:</p>\n\
+    <ul>\n<li>\n<p>Cumulative: an accumulating value is recorded (i.e.: the total)</p>\n\
+    </li>\n<li>\n<p>Delta: changes between values are recorded </p>\n</li>\n<li>\n\
+    <p>Gauge: only the current value at the time of reading is recorded.</p>\n</li>\n\
+    </ul>\n<p>Note that in older versions of Ceilometer meters were termed 'counters'.</p>\n\
+    <p>You can also see the resource the meter is associated with, and the owning\n\
+    project and user.</p>\n<p>More detail on meters, and their types and units can\
+    \ be found in the <a href=\"http://docs.openstack.org/developer/ceilometer/measurements.html.\"\
+    >OpenStack documentation</a>.</p>\n<h2>Ceilometer Meters on the NeCTAR Cloud</h2>\n\
+    <p>At NeCTAR the meters available to a given project depend upon the resources\
+    \ that\nare available to that project.</p>\n<p>So for a project that has volumes,\
+    \ these are the meters that would typically be\nseen that relate to the guest\
+    \ machines at this moment in time:</p>\n<table>\n<thead>\n<tr>\n<th>Name</th>\n\
+    <th>Type</th>\n<th>Unit</th>\n<th>Meaning</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n\
+    <td>cpu</td>\n<td>cumulative</td>\n<td>ns</td>\n<td>The total CPU time used.</td>\n\
+    </tr>\n<tr>\n<td>cpu_util</td>\n<td>gauge</td>\n<td>%</td>\n<td>The average CPU\
+    \ utilisation.</td>\n</tr>\n<tr>\n<td>disk.ephemeral.size</td>\n<td>gauge</td>\n\
+    <td>GB</td>\n<td>The ephemeral disk size.</td>\n</tr>\n<tr>\n<td>disk.read.bytes</td>\n\
+    <td>cumulative</td>\n<td>B</td>\n<td>The total number of bytes read.</td>\n</tr>\n\
+    <tr>\n<td>disk.read.requests</td>\n<td>cumulative</td>\n<td>request</td>\n<td>The\
+    \ total number of read requests made.</td>\n</tr>\n<tr>\n<td>disk.root.size</td>\n\
+    <td>gauge</td>\n<td>GB</td>\n<td>The root disk size.</td>\n</tr>\n<tr>\n<td>disk.write.bytes</td>\n\
+    <td>cumulative</td>\n<td>request</td>\n<td>The total number of bytes written.</td>\n\
+    </tr>\n<tr>\n<td>disk.write.request</td>\n<td>cumulative</td>\n<td>request</td>\n\
+    <td>The total number of write requests.</td>\n</tr>\n<tr>\n<td>instance</td>\n\
+    <td>gauge</td>\n<td>instance</td>\n<td>The number of instances in existence.</td>\n\
+    </tr>\n<tr>\n<td>instance:m1.large</td>\n<td>gauge</td>\n<td>instance</td>\n<td>The\
+    \ number of large instances in existence.</td>\n</tr>\n<tr>\n<td>instance:m1.medium</td>\n\
+    <td>gauge</td>\n<td>instance</td>\n<td>The number of medium instances in existence.</td>\n\
+    </tr>\n<tr>\n<td>instance:m1.small</td>\n<td>gauge</td>\n<td>instance</td>\n<td>The\
+    \ number of small instances in existence.</td>\n</tr>\n<tr>\n<td>instance:m1.xlarge</td>\n\
+    <td>gauge</td>\n<td>instance</td>\n<td>The number of extra large instances in\
+    \ existence.</td>\n</tr>\n<tr>\n<td>memory</td>\n<td>gauge</td>\n<td>MB</td>\n\
+    <td>The memory allocated by the hypervisor to the instance.</td>\n</tr>\n<tr>\n\
+    <td>network.incoming.bytes</td>\n<td>cumulative</td>\n<td>B</td>\n<td>The total\
+    \ number of bytes incoming on a network interface.</td>\n</tr>\n<tr>\n<td>network.incoming.packets</td>\n\
+    <td>cumulative</td>\n<td>B</td>\n<td>The total number of packets incoming on a\
+    \ network interface</td>\n</tr>\n<tr>\n<td>network.outgoing.bytes</td>\n<td>cumulative</td>\n\
+    <td>B</td>\n<td>The total number of bytes outgoing on a network interface.</td>\n\
+    </tr>\n<tr>\n<td>network.outgoing.packets</td>\n<td>cumulative</td>\n<td>packet</td>\n\
+    <td>The total number of packets outgoing on a network interface</td>\n</tr>\n\
+    <tr>\n<td>vcpus</td>\n<td>gauge</td>\n<td>vcpu</td>\n<td>The number of virtual\
+    \ cpu's</td>\n</tr>\n</tbody>\n</table>\n<p>The following are the meters typically\
+    \ seen on a project that relate to Glance:</p>\n<table>\n<thead>\n<tr>\n<th>Name</th>\n\
+    <th>Type</th>\n<th>Unit</th>\n<th>Meaning</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n\
+    <td>image</td>\n<td>gauge</td>\n<td>image</td>\n<td>Records the existence of an\
+    \ image.</td>\n</tr>\n<tr>\n<td>image.size</td>\n<td>gauge</td>\n<td>B</td>\n\
+    <td>The uploaded size of the image.</td>\n</tr>\n</tbody>\n</table>\n<p>The following\
+    \ are the meters typically seen on a project that relate to Swift:</p>\n<table>\n\
+    <thead>\n<tr>\n<th>Name</th>\n<th>Type</th>\n<th>Unit</th>\n<th>Meaning</th>\n\
+    </tr>\n</thead>\n<tbody>\n<tr>\n<td>storage.objects</td>\n<td>gauge</td>\n<td>object</td>\n\
+    <td>The total number of objects.</td>\n</tr>\n<tr>\n<td>storage.objects.containers</td>\n\
+    <td>gauge</td>\n<td>container</td>\n<td>The number of containers.</td>\n</tr>\n\
+    <tr>\n<td>storage.objects.size</td>\n<td>gauge</td>\n<td>B</td>\n<td>The total\
+    \ size of the stored objects.</td>\n</tr>\n</tbody>\n</table>\n<p>The following\
+    \ are the meters typically seen on a project that relate to Cinder:</p>\n<table>\n\
+    <thead>\n<tr>\n<th>Name</th>\n<th>Type</th>\n<th>Unit</th>\n<th>Meaning</th>\n\
+    </tr>\n</thead>\n<tbody>\n<tr>\n<td>volume</td>\n<td>gauge</td>\n<td>volume</td>\n\
+    <td>Records the existence of an image.</td>\n</tr>\n<tr>\n<td>volume.size</td>\n\
+    <td>gauge</td>\n<td>GB</td>\n<td>The size of a volume.</td>\n</tr>\n</tbody>\n\
+    </table>\n<p>A complete list of meters, and their types and units can be found\
+    \ in the <a href=\"http://docs.openstack.org/developer/ceilometer/measurements.html.\"\
+    >OpenStack documentation</a>.</p>", parent: 45, sha1: 30ed71aa34e561b7b3cf5d0f83d970d24dce63c8,
+  title: Introduction to Ceilometer}
