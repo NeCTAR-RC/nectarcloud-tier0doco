@@ -47,7 +47,7 @@ but you can also open and edit documents that are on your VM, using programs on 
 1. Click ***New Site*** and give it a name. 
 1. Insert the *IP address* of the instance as ***Host***
 1. ***Logon Type*** is interactive
-1. The user is **'ubuntu'** (or 'host' if your VM has a different operating system)
+1. The user is **'ubuntu'** (or 'root' if your VM has a different operating system)
 1. Click ***Connect***
 
 ![](images/FZ_site_manager.png)
@@ -152,4 +152,4 @@ The commands `get` and `put` will transfer data between the machines:
 to close the sftp connection, type `exit`.
 
   
-[filezilla]: http://sourceforge.net/projects/filezilla/  
+[filezilla]: https://filezilla-project.org/download.php?type=client 
