@@ -39,17 +39,16 @@ sudo pip install python-novaclient
 RHEL, CentOS, or Fedora
 
 
-```
 
-sudo yum install python-setuptools
+    sudo yum install python-setuptools
 
-sudo easy_install pip
+    sudo easy_install pip
 
-sudo pip install --upgrade setuptools
+    sudo pip install --upgrade setuptools
 
-sudo pip install python-novaclient
+    sudo pip install python-novaclient
 
-```
+
 
 Windows
 
