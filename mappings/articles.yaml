@@ -7613,44 +7613,43 @@
           \ instructions: \n OS X \n sudo easy_install pip \n sudo pip install --upgrade\
           \ setuptools \n sudo pip install python-novaclient \n Ubuntu \n ``` \n sudo\
           \ apt-get install python-pip \n sudo pip install python-novaclient \n ```\
-          \ \n RHEL, CentOS, or Fedora \n ``` \n sudo yum install python-setuptools\
-          \ \n sudo easy_install pip \n sudo pip install --upgrade setuptools \n sudo\
-          \ pip install python-novaclient \n ``` \n Windows \n See pip windows for\
-          \ instructions on installing pip for Windows. \n pip install python-novaclient\
-          \ \n Configuration \n Before you can use the python nova client and command\
-          \ line API you need to be\nauthenticated to the NeCTAR cloud. The below\
-          \ shows the instructions of how to\nget username/password and get authenticated.\
-          \ \n \n \n Login to NeCTAR Cloud Dashboard \n \n \n Click the drop down\
-          \ list beside the top left nectar logo to select a project \n \n \n Click\
-          \ 'Access & Security' \n \n \n On the 'Access & Security' page, click tab\
-          \ 'API Access' \n \n \n Click button \"Download OpenStack RC File\" \n \n\
-          \ \n Save the file into a directory \n \n \n Click the drop down list with\
-          \ your email on the right top of page, then click\n Settings \n \n \n Click\
-          \ 'Reset Password' and save the password appeared on the screen \n \n \n\
-          \ Nova API normally requires 4 environment variables to be set for authentication:\
-          \ \n \n auth URL \n username \n project id or name (most clients can handle\
-          \ either) \n password \n \n When using the script file you downloaded from\
-          \ NeCTAR Dashboard, these\nvariables are set by the script file and you\
-          \ can see these variables\nif you open the file. Example: \n \n OS_AUTH_URL:\
-          \ https://keystone.rc.nectar.org.au:5000/v2.0/ \nOS_TENANT_NAME=my_science_project\
-          \ \nOS_TENANT_ID=sdfsdfsfwrwewer \nOS_USERNAME=clouduser@example.edu.au\
-          \ \nOS_PASSWORD=XXXXXX \n \n Authentication for Command Line API \n The\
-          \ below instruction assumes you use Linux operating system. \n Once you\
-          \ have obtained the authentication script and password, you can execute\n\
-          the script using source file-name.sh. and type in the password you\nobtained\
-          \ from Dashboard. \n Authentication for python swift API \n You can use\
-          \ the below sample code to get authenticated.  \n from novaclient import\
-          \ client \n nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME,\
-          \ AUTH_URL) \n The VERSION parameter can be \"1.1\" or \"2\". You can get\
-          \ USERNAME, PROJECT_NAME and\nAUTH_URL from the above .sh file obtained\
-          \ from the NeCTAR Dashboard and you can\nalso get the PASSWORD from above\
-          \ as copied from the NeCTAR Dashboard. \n Nova Command Line API \n To get\
-          \ information about about managing instances in a selected project: \n\n\
-          \n\nCommand\nAction\n\n\n\n\n\nnova --help or nova\n\nDiscover the available\
-          \ options and sub-commands\n\n\nnova help <command-name>\nInformation on\
-          \ a specific sub-command\n\n\nnova list\nTo list all active instances in\
-          \ one project\n\n\nnova flavor-list\nTo list all available flavors\n\n\n\
-          nova image-list\nTo list all available images\n\n\nnova secgroup-list\n\
+          \ \n RHEL, CentOS, or Fedora \n sudo yum install python-setuptools\n\nsudo\
+          \ easy_install pip\n\nsudo pip install --upgrade setuptools\n\nsudo pip\
+          \ install python-novaclient\n \n Windows \n See pip windows for instructions\
+          \ on installing pip for Windows. \n pip install python-novaclient \n Configuration\
+          \ \n Before you can use the python nova client and command line API you\
+          \ need to be\nauthenticated to the NeCTAR cloud. The below shows the instructions\
+          \ of how to\nget username/password and get authenticated. \n \n \n Login\
+          \ to NeCTAR Cloud Dashboard \n \n \n Click the drop down list beside the\
+          \ top left nectar logo to select a project \n \n \n Click 'Access & Security'\
+          \ \n \n \n On the 'Access & Security' page, click tab 'API Access' \n \n\
+          \ \n Click button \"Download OpenStack RC File\" \n \n \n Save the file\
+          \ into a directory \n \n \n Click the drop down list with your email on\
+          \ the right top of page, then click\n Settings \n \n \n Click 'Reset Password'\
+          \ and save the password appeared on the screen \n \n \n Nova API normally\
+          \ requires 4 environment variables to be set for authentication: \n \n auth\
+          \ URL \n username \n project id or name (most clients can handle either)\
+          \ \n password \n \n When using the script file you downloaded from NeCTAR\
+          \ Dashboard, these\nvariables are set by the script file and you can see\
+          \ these variables\nif you open the file. Example: \n \n OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/\
+          \ \nOS_TENANT_NAME=my_science_project \nOS_TENANT_ID=sdfsdfsfwrwewer \n\
+          OS_USERNAME=clouduser@example.edu.au \nOS_PASSWORD=XXXXXX \n \n Authentication\
+          \ for Command Line API \n The below instruction assumes you use Linux operating\
+          \ system. \n Once you have obtained the authentication script and password,\
+          \ you can execute\nthe script using source file-name.sh. and type in the\
+          \ password you\nobtained from Dashboard. \n Authentication for python swift\
+          \ API \n You can use the below sample code to get authenticated.  \n from\
+          \ novaclient import client \n nova = client.Client(VERSION, USERNAME, PASSWORD,\
+          \ PROJECT_NAME, AUTH_URL) \n The VERSION parameter can be \"1.1\" or \"\
+          2\". You can get USERNAME, PROJECT_NAME and\nAUTH_URL from the above .sh\
+          \ file obtained from the NeCTAR Dashboard and you can\nalso get the PASSWORD\
+          \ from above as copied from the NeCTAR Dashboard. \n Nova Command Line API\
+          \ \n To get information about about managing instances in a selected project:\
+          \ \n\n\n\nCommand\nAction\n\n\n\n\n\nnova --help or nova\n\nDiscover the\
+          \ available options and sub-commands\n\n\nnova help <command-name>\nInformation\
+          \ on a specific sub-command\n\n\nnova list\nTo list all active instances\
+          \ in one project\n\n\nnova flavor-list\nTo list all available flavors\n\n\
+          \nnova image-list\nTo list all available images\n\n\nnova secgroup-list\n\
           To list all available security groups\n\n\nnova keypair-list\nTo list all\
           \ available key pairs\n\n\nnova availability-zone-list\nTo list all available\
           \ availability zones\n\n\n\n Note: not all options are available as there\
@@ -7700,10 +7699,10 @@
           \ pip</code></p>\n<p><code>sudo pip install --upgrade setuptools</code></p>\n\
           <p><code>sudo pip install python-novaclient</code></p>\n<p>Ubuntu</p>\n\
           <p>```</p>\n<p>sudo apt-get install python-pip</p>\n<p>sudo pip install\
-          \ python-novaclient</p>\n<p>```</p>\n<p>RHEL, CentOS, or Fedora</p>\n<p>```</p>\n\
-          <p>sudo yum install python-setuptools</p>\n<p>sudo easy_install pip</p>\n\
-          <p>sudo pip install --upgrade setuptools</p>\n<p>sudo pip install python-novaclient</p>\n\
-          <p>```</p>\n<p>Windows</p>\n<p>See <a href=\"http://docs.python-guide.org/en/latest/starting/install/win/\"\
+          \ python-novaclient</p>\n<p>```</p>\n<p>RHEL, CentOS, or Fedora</p>\n<pre><code>sudo\
+          \ yum install python-setuptools\n\nsudo easy_install pip\n\nsudo pip install\
+          \ --upgrade setuptools\n\nsudo pip install python-novaclient\n</code></pre>\n\
+          <p>Windows</p>\n<p>See <a href=\"http://docs.python-guide.org/en/latest/starting/install/win/\"\
           >pip windows</a> for instructions on installing pip for Windows.</p>\n<p><code>pip\
           \ install python-novaclient</code></p>\n<h2>Configuration</h2>\n<p>Before\
           \ you can use the python nova client and command line API you need to be\n\
@@ -7801,17 +7800,17 @@
           language_id: 6
           name: Instance Management
           parent_id: 6000190145
-          position: 1
-          updated_at: '2015-09-03T01:27:59-04:00'
+          position: 3
+          updated_at: '2015-12-07T19:43:55-05:00'
           visibility: 1
         folder_id: 6000190145
-        hits: 46
+        hits: 70
         id: 6000075747
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2015-11-17T19:27:07-05:00'
+        modified_at: '2016-01-26T18:22:21-05:00'
         modified_by: null
         outdated: false
         parent_id: 6000075747
@@ -7824,7 +7823,7 @@
         thumbs_down: 1
         thumbs_up: 1
         title: API
-        updated_at: '2015-11-17T19:27:07-05:00'
+        updated_at: '2016-01-26T18:22:21-05:00'
         user_id: 6002464727
   html: "<h2>Manage instance via API</h2>\n<p>The NeCTAR Dashboard is one way to manage\
     \ your instances in projects and NeCTAR\ncloud provides instance management via\
@@ -7840,50 +7839,49 @@
     <p><code>sudo pip install --upgrade setuptools</code></p>\n<p><code>sudo pip install\
     \ python-novaclient</code></p>\n<p>Ubuntu</p>\n<p>```</p>\n<p>sudo apt-get install\
     \ python-pip</p>\n<p>sudo pip install python-novaclient</p>\n<p>```</p>\n<p>RHEL,\
-    \ CentOS, or Fedora</p>\n<p>```</p>\n<p>sudo yum install python-setuptools</p>\n\
-    <p>sudo easy_install pip</p>\n<p>sudo pip install --upgrade setuptools</p>\n<p>sudo\
-    \ pip install python-novaclient</p>\n<p>```</p>\n<p>Windows</p>\n<p>See <a href=\"\
-    http://docs.python-guide.org/en/latest/starting/install/win/\">pip windows</a>\
-    \ for instructions on installing pip for Windows.</p>\n<p><code>pip install python-novaclient</code></p>\n\
-    <h2>Configuration</h2>\n<p>Before you can use the python nova client and command\
-    \ line API you need to be\nauthenticated to the NeCTAR cloud. The below shows\
-    \ the instructions of how to\nget username/password and get authenticated.</p>\n\
-    <ul>\n<li>\n<p>Login to NeCTAR Cloud <a href=\"https://dashboard.rc.nectar.org.au\"\
-    >Dashboard</a></p>\n</li>\n<li>\n<p>Click the drop down list beside the top left\
-    \ nectar logo to select a project</p>\n</li>\n<li>\n<p>Click 'Access &amp; Security'</p>\n\
-    </li>\n<li>\n<p>On the 'Access &amp; Security' page, click tab 'API Access'</p>\n\
-    </li>\n<li>\n<p>Click button \"Download OpenStack RC File\"</p>\n</li>\n<li>\n\
-    <p>Save the file into a directory</p>\n</li>\n<li>\n<p>Click the drop down list\
-    \ with your email on the right top of page, then click\n Settings</p>\n</li>\n\
-    <li>\n<p>Click 'Reset Password' and save the password appeared on the screen</p>\n\
-    </li>\n</ul>\n<p>Nova API normally requires 4 environment variables to be set\
-    \ for authentication:</p>\n<ul>\n<li>auth URL</li>\n<li>username</li>\n<li>project\
-    \ id or name (most clients can handle either)</li>\n<li>password</li>\n</ul>\n\
-    <p>When using the script file you downloaded from NeCTAR Dashboard, these\nvariables\
-    \ are set by the script file and you can see these variables\nif you open the\
-    \ file. Example:</p>\n<blockquote>\n<p>OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/\
-    \ \nOS_TENANT_NAME=my_science_project \nOS_TENANT_ID=sdfsdfsfwrwewer \nOS_USERNAME=clouduser@example.edu.au\
-    \ \nOS_PASSWORD=XXXXXX</p>\n</blockquote>\n<h3>Authentication for Command Line\
-    \ API</h3>\n<p>The below instruction assumes you use Linux operating system.</p>\n\
-    <p>Once you have obtained the authentication script and password, you can execute\n\
-    the script using <code>source file-name.sh</code>. and type in the password you\n\
-    obtained from Dashboard.</p>\n<h3>Authentication for python swift API</h3>\n<p>You\
-    \ can use the below sample code to get authenticated. </p>\n<p><code>from novaclient\
-    \ import client</code></p>\n<p><code>nova = client.Client(VERSION, USERNAME, PASSWORD,\
-    \ PROJECT_NAME, AUTH_URL)</code></p>\n<p>The VERSION parameter can be \"1.1\"\
-    \ or \"2\". You can get USERNAME, PROJECT_NAME and\nAUTH_URL from the above .sh\
-    \ file obtained from the NeCTAR Dashboard and you can\nalso get the PASSWORD from\
-    \ above as copied from the NeCTAR Dashboard.</p>\n<h2>Nova Command Line API</h2>\n\
-    <p>To get information about about managing instances in a selected project:</p>\n\
-    <table>\n<thead>\n<tr>\n<th>Command</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n\
-    <tr>\n<td><code>nova --help</code> or <code>nova</code></td>\n<td>Discover the\
-    \ available options and sub-commands</td>\n</tr>\n<tr>\n<td><code>nova help &lt;command-name&gt;</code></td>\n\
-    <td>Information on a specific sub-command</td>\n</tr>\n<tr>\n<td><code>nova list</code></td>\n\
-    <td>To list all active instances in one project</td>\n</tr>\n<tr>\n<td><code>nova\
-    \ flavor-list</code></td>\n<td>To list all available flavors</td>\n</tr>\n<tr>\n\
-    <td><code>nova image-list</code></td>\n<td>To list all available images</td>\n\
-    </tr>\n<tr>\n<td><code>nova secgroup-list</code></td>\n<td>To list all available\
-    \ security groups</td>\n</tr>\n<tr>\n<td><code>nova keypair-list</code></td>\n\
+    \ CentOS, or Fedora</p>\n<pre><code>sudo yum install python-setuptools\n\nsudo\
+    \ easy_install pip\n\nsudo pip install --upgrade setuptools\n\nsudo pip install\
+    \ python-novaclient\n</code></pre>\n<p>Windows</p>\n<p>See <a href=\"http://docs.python-guide.org/en/latest/starting/install/win/\"\
+    >pip windows</a> for instructions on installing pip for Windows.</p>\n<p><code>pip\
+    \ install python-novaclient</code></p>\n<h2>Configuration</h2>\n<p>Before you\
+    \ can use the python nova client and command line API you need to be\nauthenticated\
+    \ to the NeCTAR cloud. The below shows the instructions of how to\nget username/password\
+    \ and get authenticated.</p>\n<ul>\n<li>\n<p>Login to NeCTAR Cloud <a href=\"\
+    https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n</li>\n<li>\n<p>Click\
+    \ the drop down list beside the top left nectar logo to select a project</p>\n\
+    </li>\n<li>\n<p>Click 'Access &amp; Security'</p>\n</li>\n<li>\n<p>On the 'Access\
+    \ &amp; Security' page, click tab 'API Access'</p>\n</li>\n<li>\n<p>Click button\
+    \ \"Download OpenStack RC File\"</p>\n</li>\n<li>\n<p>Save the file into a directory</p>\n\
+    </li>\n<li>\n<p>Click the drop down list with your email on the right top of page,\
+    \ then click\n Settings</p>\n</li>\n<li>\n<p>Click 'Reset Password' and save the\
+    \ password appeared on the screen</p>\n</li>\n</ul>\n<p>Nova API normally requires\
+    \ 4 environment variables to be set for authentication:</p>\n<ul>\n<li>auth URL</li>\n\
+    <li>username</li>\n<li>project id or name (most clients can handle either)</li>\n\
+    <li>password</li>\n</ul>\n<p>When using the script file you downloaded from NeCTAR\
+    \ Dashboard, these\nvariables are set by the script file and you can see these\
+    \ variables\nif you open the file. Example:</p>\n<blockquote>\n<p>OS_AUTH_URL:\
+    \ https://keystone.rc.nectar.org.au:5000/v2.0/ \nOS_TENANT_NAME=my_science_project\
+    \ \nOS_TENANT_ID=sdfsdfsfwrwewer \nOS_USERNAME=clouduser@example.edu.au \nOS_PASSWORD=XXXXXX</p>\n\
+    </blockquote>\n<h3>Authentication for Command Line API</h3>\n<p>The below instruction\
+    \ assumes you use Linux operating system.</p>\n<p>Once you have obtained the authentication\
+    \ script and password, you can execute\nthe script using <code>source file-name.sh</code>.\
+    \ and type in the password you\nobtained from Dashboard.</p>\n<h3>Authentication\
+    \ for python swift API</h3>\n<p>You can use the below sample code to get authenticated.\
+    \ </p>\n<p><code>from novaclient import client</code></p>\n<p><code>nova = client.Client(VERSION,\
+    \ USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)</code></p>\n<p>The VERSION parameter\
+    \ can be \"1.1\" or \"2\". You can get USERNAME, PROJECT_NAME and\nAUTH_URL from\
+    \ the above .sh file obtained from the NeCTAR Dashboard and you can\nalso get\
+    \ the PASSWORD from above as copied from the NeCTAR Dashboard.</p>\n<h2>Nova Command\
+    \ Line API</h2>\n<p>To get information about about managing instances in a selected\
+    \ project:</p>\n<table>\n<thead>\n<tr>\n<th>Command</th>\n<th>Action</th>\n</tr>\n\
+    </thead>\n<tbody>\n<tr>\n<td><code>nova --help</code> or <code>nova</code></td>\n\
+    <td>Discover the available options and sub-commands</td>\n</tr>\n<tr>\n<td><code>nova\
+    \ help &lt;command-name&gt;</code></td>\n<td>Information on a specific sub-command</td>\n\
+    </tr>\n<tr>\n<td><code>nova list</code></td>\n<td>To list all active instances\
+    \ in one project</td>\n</tr>\n<tr>\n<td><code>nova flavor-list</code></td>\n<td>To\
+    \ list all available flavors</td>\n</tr>\n<tr>\n<td><code>nova image-list</code></td>\n\
+    <td>To list all available images</td>\n</tr>\n<tr>\n<td><code>nova secgroup-list</code></td>\n\
+    <td>To list all available security groups</td>\n</tr>\n<tr>\n<td><code>nova keypair-list</code></td>\n\
     <td>To list all available key pairs</td>\n</tr>\n<tr>\n<td><code>nova availability-zone-list</code></td>\n\
     <td>To list all available availability zones</td>\n</tr>\n</tbody>\n</table>\n\
     <p>Note: not all options are available as there is a security policy applied and\n\
@@ -7924,7 +7922,7 @@
     <p>You can find more information about nova python API from this <a href=\"http://docs.openstack.org/developer/python-novaclient/api.html\"\
     >link</a></p>"
   parent: 39
-  sha1: b0eef8930f013f4ac1ac0334f5b6447c898ff3c7
+  sha1: 8b2543e77d41a55fccec2aa0fa471663ffcfce04
   title: API
 65:
   freshdesk:
