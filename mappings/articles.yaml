@@ -28480,80 +28480,8 @@
       article:
         art_type: 1
         created_at: '2016-01-31T17:30:51-05:00'
-        desc_un_html: " Cluster as a Service (CAAS) \u2013 eRSA Dynamic Cluster Documentation\
-          \ Source \n Installation plans \n eRSA is moving towards setting up a new\
-          \ production instance on our Node, using an HA setup for Torque and other\
-          \ key components, which should be ready in a couple of weeks (this has been\
-          \ delayed since both of our cloud sysadmins left recently to work on commercial\
-          \ clouds), then we will move to helping QCIF to install it, and hopefully\
-          \ others. \n CAAS Description \n For the WP7.2 CaaS project, eRSA has created\
-          \ version 1.0 of Dynamic Cluster, which is software that provides automated\
-          \ dynamic provisioning of VMs for clusters in the cloud  (i.e. will automatically\
-          \ scale based on load). It can work with OpenStack and AWS clouds and supports\
-          \ multiple cluster management systems (currently Torque and SGE). It is\
-          \ currently being used with OpenStack and Torque, AWS and SGE have been\
-          \ tested but not yet run in production. \n Basic CAAS software repository\
-          \ \n The software is openly available from github here. This version requires\
-          \ configuration for desired set up: \n https://github.com/eResearchSA/dynamiccluster\
-          \ \n The documentation is also available in markdown through github\u2019\
-          s standard documentation system: \n http://eresearchsa.github.io/dynamiccluster/\
-          \ \n Preconfigured CAAS installation \n Since clusters can be configured\
-          \ in many different ways (and Dynamic Cluster is highly configurable to\
-          \ support this), and setting up a cluster (even one not in the cloud) involves\
-          \ a lot of other other things like choice of cluster management system,\
-          \ authentication and authorisation systems, automated deployment scripts,\
-          \ monitoring, etc that are independent of the Dynamic Cluster software,\
-          \ we have also set up a separate github project (Dynamic Cluster as a Service)\
-          \ with some example reference architectures and script/tools etc to set\
-          \ up different types of clusters for different requirements. \n At the moment\
-          \ we just have a Basic setup (which deploys a basic cluster for a single\
-          \ user via a Heat template, which could be easily extended to support multiple\
-          \ users), and an Advanced setup (which is modelled on what we use for CoEPP\
-          \ and eRSA, which allows for multiple users, multiple availability zones\
-          \ and multiple project allocations). We are aiming to add some others before\
-          \ the end of the project, including one for high availability of key components\
-          \ (e.g. using Torque HA mode), but this is it for version 1.  \n The github\
-          \ repository is here: \n https://github.com/eResearchSA/dcaas \n and the\
-          \ documentation is here: \n http://eresearchsa.github.io/dcaas/ "
-        description: "<h1>Cluster as a Service (CAAS) \u2013 eRSA Dynamic Cluster\
-          \ Documentation Source</h1>\n<h2>Installation plans</h2>\n<p>eRSA is moving\
-          \ towards setting up a new production instance on our Node, using an HA\
-          \ setup for Torque and other key components, which should be ready in a\
-          \ couple of weeks (this has been delayed since both of our cloud sysadmins\
-          \ left recently to work on commercial clouds), then we will move to helping\
-          \ QCIF to install it, and hopefully others.</p>\n<h2>CAAS Description</h2>\n\
-          <p>For the WP7.2 CaaS project, eRSA has created version 1.0 of Dynamic Cluster,\
-          \ which is software that provides automated dynamic provisioning of VMs\
-          \ for clusters in the cloud  (i.e. will automatically scale based on load).\
-          \ It can work with OpenStack and AWS clouds and supports multiple cluster\
-          \ management systems (currently Torque and SGE). It is currently being used\
-          \ with OpenStack and Torque, AWS and SGE have been tested but not yet run\
-          \ in production.</p>\n<h2>Basic CAAS software repository</h2>\n<p>The software\
-          \ is openly available from github here. This version requires configuration\
-          \ for desired set up:</p>\n<p><a href=\"https://github.com/eResearchSA/dynamiccluster\"\
-          >https://github.com/eResearchSA/dynamiccluster</a></p>\n<p>The documentation\
-          \ is also available in markdown through github\u2019s standard documentation\
-          \ system:</p>\n<p><a href=\"http://eresearchsa.github.io/dynamiccluster/\"\
-          >http://eresearchsa.github.io/dynamiccluster/</a></p>\n<h2>Preconfigured\
-          \ CAAS installation</h2>\n<p>Since clusters can be configured in many different\
-          \ ways (and Dynamic Cluster is highly configurable to support this), and\
-          \ setting up a cluster (even one not in the cloud) involves a lot of other\
-          \ other things like choice of cluster management system, authentication\
-          \ and authorisation systems, automated deployment scripts, monitoring, etc\
-          \ that are independent of the Dynamic Cluster software, we have also set\
-          \ up a separate github project (Dynamic Cluster as a Service) with some\
-          \ example reference architectures and script/tools etc to set up different\
-          \ types of clusters for different requirements.</p>\n<p>At the moment we\
-          \ just have a Basic setup (which deploys a basic cluster for a single user\
-          \ via a Heat template, which could be easily extended to support multiple\
-          \ users), and an Advanced setup (which is modelled on what we use for CoEPP\
-          \ and eRSA, which allows for multiple users, multiple availability zones\
-          \ and multiple project allocations). We are aiming to add some others before\
-          \ the end of the project, including one for high availability of key components\
-          \ (e.g. using Torque HA mode), but this is it for version 1. </p>\n<p>The\
-          \ github repository is here:</p>\n<p><a href=\"https://github.com/eResearchSA/dcaas\"\
-          >https://github.com/eResearchSA/dcaas</a></p>\n<p>and the documentation\
-          \ is here:</p>\n<p><a href=\"http://eresearchsa.github.io/dcaas/\">http://eresearchsa.github.io/dcaas/</a></p>"
+        desc_un_html: ' Sorry, this page is being edited and is not currently available. '
+        description: <p>Sorry, this page is being edited and is not currently available.</p>
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:07-04:00'
@@ -28568,9 +28496,9 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 1
         id: 6000108746
-        modified_at: '2016-01-31T17:30:51-05:00'
+        modified_at: '2016-02-01T18:36:35-05:00'
         modified_by: null
         position: 19
         seo_data: {}
@@ -28579,44 +28507,9 @@
         thumbs_down: 0
         thumbs_up: 0
         title: Cluster as a Service (CAAS)--eRSA Dynamic Cluster Documentation
-        updated_at: '2016-01-31T17:30:51-05:00'
+        updated_at: '2016-02-01T18:36:35-05:00'
         user_id: 6002464727
-  html: "<h1>Cluster as a Service (CAAS) \u2013 eRSA Dynamic Cluster Documentation\
-    \ Source</h1>\n<h2>Installation plans</h2>\n<p>eRSA is moving towards setting\
-    \ up a new production instance on our Node, using an HA setup for Torque and other\
-    \ key components, which should be ready in a couple of weeks (this has been delayed\
-    \ since both of our cloud sysadmins left recently to work on commercial clouds),\
-    \ then we will move to helping QCIF to install it, and hopefully others.</p>\n\
-    <h2>CAAS Description</h2>\n<p>For the WP7.2 CaaS project, eRSA has created version\
-    \ 1.0 of Dynamic Cluster, which is software that provides automated dynamic provisioning\
-    \ of VMs for clusters in the cloud  (i.e. will automatically scale based on load).\
-    \ It can work with OpenStack and AWS clouds and supports multiple cluster management\
-    \ systems (currently Torque and SGE). It is currently being used with OpenStack\
-    \ and Torque, AWS and SGE have been tested but not yet run in production.</p>\n\
-    <h2>Basic CAAS software repository</h2>\n<p>The software is openly available from\
-    \ github here. This version requires configuration for desired set up:</p>\n<p><a\
-    \ href=\"https://github.com/eResearchSA/dynamiccluster\">https://github.com/eResearchSA/dynamiccluster</a></p>\n\
-    <p>The documentation is also available in markdown through github\u2019s standard\
-    \ documentation system:</p>\n<p><a href=\"http://eresearchsa.github.io/dynamiccluster/\"\
-    >http://eresearchsa.github.io/dynamiccluster/</a></p>\n<h2>Preconfigured CAAS\
-    \ installation</h2>\n<p>Since clusters can be configured in many different ways\
-    \ (and Dynamic Cluster is highly configurable to support this), and setting up\
-    \ a cluster (even one not in the cloud) involves a lot of other other things like\
-    \ choice of cluster management system, authentication and authorisation systems,\
-    \ automated deployment scripts, monitoring, etc that are independent of the Dynamic\
-    \ Cluster software, we have also set up a separate github project (Dynamic Cluster\
-    \ as a Service) with some example reference architectures and script/tools etc\
-    \ to set up different types of clusters for different requirements.</p>\n<p>At\
-    \ the moment we just have a Basic setup (which deploys a basic cluster for a single\
-    \ user via a Heat template, which could be easily extended to support multiple\
-    \ users), and an Advanced setup (which is modelled on what we use for CoEPP and\
-    \ eRSA, which allows for multiple users, multiple availability zones and multiple\
-    \ project allocations). We are aiming to add some others before the end of the\
-    \ project, including one for high availability of key components (e.g. using Torque\
-    \ HA mode), but this is it for version 1. </p>\n<p>The github repository is here:</p>\n\
-    <p><a href=\"https://github.com/eResearchSA/dcaas\">https://github.com/eResearchSA/dcaas</a></p>\n\
-    <p>and the documentation is here:</p>\n<p><a href=\"http://eresearchsa.github.io/dcaas/\"\
-    >http://eresearchsa.github.io/dcaas/</a></p>"
+  html: <p>Sorry, this page is being edited and is not currently available.</p>
   parent: 24
-  sha1: 5cf3f19755ffd464abafd79815b8de9161eafe14
+  sha1: c7b4783d920760b038a91463772066ac1403a91f
   title: Cluster as a Service (CAAS)--eRSA Dynamic Cluster Documentation
