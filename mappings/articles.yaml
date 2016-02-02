@@ -28480,8 +28480,97 @@
       article:
         art_type: 1
         created_at: '2016-01-31T17:30:51-05:00'
-        desc_un_html: ' Sorry, this page is being edited and is not currently available. '
-        description: <p>Sorry, this page is being edited and is not currently available.</p>
+        desc_un_html: " Dynamic Cluster as a Service (DCaaS) \u2013 eRSA Dynamic Cluster\
+          \ Documentation Source \n Description \n Dynamic Cluster as a Service (DCaaS)\
+          \ provides solutions for deploying dynamic compute clusters in the cloud.\
+          \ \nSince clusters can be configured in a number of different ways, DCaaS\
+          \ provides example solutions to enable cluster administrators to easily\
+          \ set up a dynamic cluster in the cloud for different requirements, cluster\
+          \ components and cloud middleware. \n All solutions are based on the Dynamic\
+          \ Cluster software, which can dynamically provision cluster worker nodes\
+          \ in the cloud, automatically scaling the size of the cluster to meet the\
+          \ workload (the number of queued or running jobs). It can work with OpenStack\
+          \ and AWS clouds and supports multiple cluster management systems (currently\
+          \ Torque and SGE, but others can be added using a simple plugin mechanism).\
+          \  \n Installations \n The DCaaS software is aimed at organisations such\
+          \ as NeCTAR Nodes, universities or large research groups, to set up a managed\
+          \ cluster in the cloud for their researchers. \n During 2015 eRSA ran a\
+          \ pilot compute cluster in the cloud, called Emu, which used a prototype\
+          \ version of the Dynamic Cluster software. An improved, production version\
+          \ of this cluster, using the release version 1 of Dynamic Cluster and DCaaS,\
+          \ is expected to be available in early 2016.  \n The ARC Centre of Excellence\
+          \ in Particle Physics (CoEPP) has been using the prototype version of the\
+          \ software since 2014, to run two clusters in the NeCTAR cloud which are\
+          \ used to support CoEPP researchers and the ATLAS project at CERN. \n Dynamic\
+          \ Cluster software repository \n The Dynamic Cluster software which automatically\
+          \ adds and removes compute nodes in the cluster based on workload is openly\
+          \ available from github here. This version requires configuration for desired\
+          \ set up: \n https://github.com/eResearchSA/dynamiccluster \n The documentation\
+          \ is also available in markdown through github\u2019s standard documentation\
+          \ system: \n http://eresearchsa.github.io/dynamiccluster/ \n Dynamic Cluster\
+          \ as a Service (DCaaS) installation \n Since clusters can be configured\
+          \ in many different ways (and Dynamic Cluster is highly configurable to\
+          \ support this), and setting up a cluster (even one not in the cloud) involves\
+          \ a lot of other other things like choice of cluster management system,\
+          \ authentication and authorisation systems, automated deployment scripts,\
+          \ monitoring, etc that are independent of the Dynamic Cluster software,\
+          \ a separate github project (Dynamic Cluster as a Service) has been created\
+          \ which provides some example reference architectures and script/tools etc\
+          \ to set up different types of clusters in the cloud for different requirements.\
+          \ \n Version 1 of DCaaS supports two options for cluster setup: \n \n Basic\
+          \ setup deploys a basic cluster for a single user via an OpenStack Heat\
+          \ template. This could easily be extended to support multiple users. \n\
+          \ Advanced setup is is modelled on the installation at eRSA, which allows\
+          \ for multiple users, multiple availability zones and multiple project allocations.\
+          \  \n \n The github repository is here: \n https://github.com/eResearchSA/dcaas\
+          \ \n and the documentation is here: \n http://eresearchsa.github.io/dcaas/ "
+        description: "<h1>Dynamic Cluster as a Service (DCaaS) \u2013 eRSA Dynamic\
+          \ Cluster Documentation Source</h1>\n<h2>Description</h2>\n<p>Dynamic Cluster\
+          \ as a Service (DCaaS) provides solutions for deploying dynamic compute\
+          \ clusters in the cloud. \nSince clusters can be configured in a number\
+          \ of different ways, DCaaS provides example solutions to enable cluster\
+          \ administrators to easily set up a dynamic cluster in the cloud for different\
+          \ requirements, cluster components and cloud middleware.</p>\n<p>All solutions\
+          \ are based on the Dynamic Cluster software, which can dynamically provision\
+          \ cluster worker nodes in the cloud, automatically scaling the size of the\
+          \ cluster to meet the workload (the number of queued or running jobs). It\
+          \ can work with OpenStack and AWS clouds and supports multiple cluster management\
+          \ systems (currently Torque and SGE, but others can be added using a simple\
+          \ plugin mechanism). </p>\n<h2>Installations</h2>\n<p>The DCaaS software\
+          \ is aimed at organisations such as NeCTAR Nodes, universities or large\
+          \ research groups, to set up a managed cluster in the cloud for their researchers.</p>\n\
+          <p>During 2015 eRSA ran a pilot compute cluster in the cloud, called Emu,\
+          \ which used a prototype version of the Dynamic Cluster software. An improved,\
+          \ production version of this cluster, using the release version 1 of Dynamic\
+          \ Cluster and DCaaS, is expected to be available in early 2016. </p>\n<p>The\
+          \ ARC Centre of Excellence in Particle Physics (CoEPP) has been using the\
+          \ prototype version of the software since 2014, to run two clusters in the\
+          \ NeCTAR cloud which are used to support CoEPP researchers and the ATLAS\
+          \ project at CERN.</p>\n<h2>Dynamic Cluster software repository</h2>\n<p>The\
+          \ Dynamic Cluster software which automatically adds and removes compute\
+          \ nodes in the cluster based on workload is openly available from github\
+          \ here. This version requires configuration for desired set up:</p>\n<p><a\
+          \ href=\"https://github.com/eResearchSA/dynamiccluster\">https://github.com/eResearchSA/dynamiccluster</a></p>\n\
+          <p>The documentation is also available in markdown through github\u2019\
+          s standard documentation system:</p>\n<p><a href=\"http://eresearchsa.github.io/dynamiccluster/\"\
+          >http://eresearchsa.github.io/dynamiccluster/</a></p>\n<h2>Dynamic Cluster\
+          \ as a Service (DCaaS) installation</h2>\n<p>Since clusters can be configured\
+          \ in many different ways (and Dynamic Cluster is highly configurable to\
+          \ support this), and setting up a cluster (even one not in the cloud) involves\
+          \ a lot of other other things like choice of cluster management system,\
+          \ authentication and authorisation systems, automated deployment scripts,\
+          \ monitoring, etc that are independent of the Dynamic Cluster software,\
+          \ a separate github project (Dynamic Cluster as a Service) has been created\
+          \ which provides some example reference architectures and script/tools etc\
+          \ to set up different types of clusters in the cloud for different requirements.</p>\n\
+          <p>Version 1 of DCaaS supports two options for cluster setup:</p>\n<ul>\n\
+          <li>Basic setup deploys a basic cluster for a single user via an OpenStack\
+          \ Heat template. This could easily be extended to support multiple users.</li>\n\
+          <li>Advanced setup is is modelled on the installation at eRSA, which allows\
+          \ for multiple users, multiple availability zones and multiple project allocations.\
+          \ </li>\n</ul>\n<p>The github repository is here:</p>\n<p><a href=\"https://github.com/eResearchSA/dcaas\"\
+          >https://github.com/eResearchSA/dcaas</a></p>\n<p>and the documentation\
+          \ is here:</p>\n<p><a href=\"http://eresearchsa.github.io/dcaas/\">http://eresearchsa.github.io/dcaas/</a></p>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:07-04:00'
@@ -28496,9 +28585,9 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 1
+        hits: 2
         id: 6000108746
-        modified_at: '2016-02-01T18:36:35-05:00'
+        modified_at: '2016-02-02T18:56:42-05:00'
         modified_by: null
         position: 19
         seo_data: {}
@@ -28506,10 +28595,53 @@
         tags: []
         thumbs_down: 0
         thumbs_up: 0
-        title: Cluster as a Service (CAAS)--eRSA Dynamic Cluster Documentation
-        updated_at: '2016-02-01T18:36:35-05:00'
+        title: Dynamic Cluster as a Service (DCaaS)--eRSA Dynamic Cluster Documentation
+        updated_at: '2016-02-02T18:56:42-05:00'
         user_id: 6002464727
-  html: <p>Sorry, this page is being edited and is not currently available.</p>
+  html: "<h1>Dynamic Cluster as a Service (DCaaS) \u2013 eRSA Dynamic Cluster Documentation\
+    \ Source</h1>\n<h2>Description</h2>\n<p>Dynamic Cluster as a Service (DCaaS) provides\
+    \ solutions for deploying dynamic compute clusters in the cloud. \nSince clusters\
+    \ can be configured in a number of different ways, DCaaS provides example solutions\
+    \ to enable cluster administrators to easily set up a dynamic cluster in the cloud\
+    \ for different requirements, cluster components and cloud middleware.</p>\n<p>All\
+    \ solutions are based on the Dynamic Cluster software, which can dynamically provision\
+    \ cluster worker nodes in the cloud, automatically scaling the size of the cluster\
+    \ to meet the workload (the number of queued or running jobs). It can work with\
+    \ OpenStack and AWS clouds and supports multiple cluster management systems (currently\
+    \ Torque and SGE, but others can be added using a simple plugin mechanism). </p>\n\
+    <h2>Installations</h2>\n<p>The DCaaS software is aimed at organisations such as\
+    \ NeCTAR Nodes, universities or large research groups, to set up a managed cluster\
+    \ in the cloud for their researchers.</p>\n<p>During 2015 eRSA ran a pilot compute\
+    \ cluster in the cloud, called Emu, which used a prototype version of the Dynamic\
+    \ Cluster software. An improved, production version of this cluster, using the\
+    \ release version 1 of Dynamic Cluster and DCaaS, is expected to be available\
+    \ in early 2016. </p>\n<p>The ARC Centre of Excellence in Particle Physics (CoEPP)\
+    \ has been using the prototype version of the software since 2014, to run two\
+    \ clusters in the NeCTAR cloud which are used to support CoEPP researchers and\
+    \ the ATLAS project at CERN.</p>\n<h2>Dynamic Cluster software repository</h2>\n\
+    <p>The Dynamic Cluster software which automatically adds and removes compute nodes\
+    \ in the cluster based on workload is openly available from github here. This\
+    \ version requires configuration for desired set up:</p>\n<p><a href=\"https://github.com/eResearchSA/dynamiccluster\"\
+    >https://github.com/eResearchSA/dynamiccluster</a></p>\n<p>The documentation is\
+    \ also available in markdown through github\u2019s standard documentation system:</p>\n\
+    <p><a href=\"http://eresearchsa.github.io/dynamiccluster/\">http://eresearchsa.github.io/dynamiccluster/</a></p>\n\
+    <h2>Dynamic Cluster as a Service (DCaaS) installation</h2>\n<p>Since clusters\
+    \ can be configured in many different ways (and Dynamic Cluster is highly configurable\
+    \ to support this), and setting up a cluster (even one not in the cloud) involves\
+    \ a lot of other other things like choice of cluster management system, authentication\
+    \ and authorisation systems, automated deployment scripts, monitoring, etc that\
+    \ are independent of the Dynamic Cluster software, a separate github project (Dynamic\
+    \ Cluster as a Service) has been created which provides some example reference\
+    \ architectures and script/tools etc to set up different types of clusters in\
+    \ the cloud for different requirements.</p>\n<p>Version 1 of DCaaS supports two\
+    \ options for cluster setup:</p>\n<ul>\n<li>Basic setup deploys a basic cluster\
+    \ for a single user via an OpenStack Heat template. This could easily be extended\
+    \ to support multiple users.</li>\n<li>Advanced setup is is modelled on the installation\
+    \ at eRSA, which allows for multiple users, multiple availability zones and multiple\
+    \ project allocations. </li>\n</ul>\n<p>The github repository is here:</p>\n<p><a\
+    \ href=\"https://github.com/eResearchSA/dcaas\">https://github.com/eResearchSA/dcaas</a></p>\n\
+    <p>and the documentation is here:</p>\n<p><a href=\"http://eresearchsa.github.io/dcaas/\"\
+    >http://eresearchsa.github.io/dcaas/</a></p>"
   parent: 24
-  sha1: c7b4783d920760b038a91463772066ac1403a91f
-  title: Cluster as a Service (CAAS)--eRSA Dynamic Cluster Documentation
+  sha1: 432ee39eebf4d71bfe842e348d44fc54749bb255
+  title: Dynamic Cluster as a Service (DCaaS)--eRSA Dynamic Cluster Documentation
