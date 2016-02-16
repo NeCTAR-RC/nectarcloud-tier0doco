@@ -1,7 +1,7 @@
-## Table of Contents
+## Table of Contents 
 
 
-- NeCTAR Cloud Tier 0 Documentation  
+- NeCTAR Cloud Tier 0 Documentation 
   - [Licensing](#Licensing)  
   - [Sourcing content and attribution](#Sourcing)  
   - [How to contribute](#How)  
@@ -81,20 +81,7 @@ If you get stuck talk to the nectar docs team or ask on the #nectar IRC channel
 
 ### Initial setup  <a name='Initial'></a>
 
-Initially you will need to install (or have access to) the following tools;
-
-- The leading distributed version control system [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-
-- The git plugin for Gerrit [git-review](https://www.mediawiki.org/wiki/Gerrit/git-review)
-
-- a launchpad id to authenticate yourself to Gerrit
-  - [launchpad login](https://login.launchpad.net/)
-  - [Gerrit login](https://review.rc.nectar.org.au/login)
-  - Email [Sarah Nisbet](mailto:sarah.nisbet@ersa.edu.au) with your git username to be added to the teir0 doco project.
-
-- email, text editors and other such things.
-
-Then you need to understand basic concepts around
+You need to understand basic concepts around
 
 - operating a computer via the command line.
 
@@ -102,7 +89,7 @@ Then you need to understand basic concepts around
 
 - writing documentation for github in [github flavoured markdown](https://help.github.com/articles/github-flavored-markdown/);
 
-- ssh keys
+- using ssh-keygen, as you will need a new set for `git review`.
 
 and then finally, you'll need to become familiar with
 
@@ -118,6 +105,55 @@ Note that git and git-review are command line programs - they don't come
 with a graphical user interface - and whilst one or another graphical front end
  may (or may not) work, how to make them work is outside the scope of this
 document.
+
+## Access the the NeCTAR-RC/nectarcloud-tier0doco repository
+
+You will need to create an account on github if you don't already have one.
+
+- Email [Sarah Nisbet](mailto:sarah.nisbet@ersa.edu.au) with your github username to be added as a member to the nectarcloud-teir0doco project
+
+Initially you will need to install (or have access to) and setup the following tools;
+
+- The leading distributed version control system [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+- The git plugin for Gerrit [git-review](https://www.mediawiki.org/wiki/Gerrit/git-review)
+
+- a launchpad id to authenticate yourself to Gerrit 
+  
+  - [launchpad login](https://login.launchpad.net/)
+  - [Gerrit login](https://review.rc.nectar.org.au/login)
+  - create a new set of ssh keys using `ssh-keygen -t rsa -f my_gerrit.key` then copy both files to your $HOME/.ssh directory. 
+    This is needed for a passwordless login for the `git review`   
+  - Once you are able to login to the Gerrit via launchpad you will need to create a Gerrit "username" and add the new set of 
+    ssh keys. This is done within your account/profile settings
+
+![](images/Gerrit_settings1.png)
+
+- add a username `Look_ma_Im_using_Gerrit`
+
+![](images/Gerrit_username.png)
+
+- click on the Add Key button and copy your `my_gerrit.key.pub` into the field provided.
+
+![](images/Gerrit_ssh-key.png)
+
+- Test `git-review` by using the ssh -p 29418 `Look_Ma_Im_using_Gerrit@review.rc.nectar.org.au`
+  - if successful you should get back somthing like this....
+  
+  `****    Welcome to Gerrit Code Review    ****`
+
+  `Hi Chris Bording, you have successfully connected over SSH.`
+
+  `Unfortunately, interactive shells are disabled.`
+  ` To clone a hosted Git repository, use:`
+
+  `git clone ssh://Look_ma_Im_using_Gerrit@review.rc.nectar.org.au:29418/REPOSITORY_NAME.git`
+
+  `Connection to review.rc.nectar.org.au closed.`
+  
+   
+- email, text editors and other such things.
+
 
 ## Github, Gerrit and the documentation workflow <a name='Github'></a>
 
@@ -289,7 +325,7 @@ simple as
 And then I simply point my web browser at [http://localhost:6419/](http://localhost:6419/)
 and voila, there's my markdown rendered into html.
 
-You can also find tools such as web browser plugins that will render markdown documents (e.g. [Chrome extension "Markdown Preview](https://chrome.google.com/webstore/detail/markdown-preview/jmchmkecamhbiokiopfpnfgbidieafmd?utm_source=chrome-app-launcher-info-dialog)
+You can also find tools such as online tools that will render markdown documents (e.g. <https://stackedit.io/editor> - copy/paste your text into the left pane)
 
 ##### The NeCTAR style guide <a name='style'></a>
 
