@@ -1,5 +1,8 @@
-## Table of Contents - NeCTAR Cloud Tier 0 Documentation 
-  - [Licensing](#Licensing)  
+## Table of Contents 
+
+
+- NeCTAR Cloud Tier 0 Documentation
+  - [Licensing](#Licensing)
   - [Sourcing content and attribution](#Sourcing)  
   - [How to contribute](#How)  
      - [Initial setup](#Initial)  
@@ -44,7 +47,7 @@ review.  Together this thing can be awesome :).
 
 
 
-## Licensing <a name='Licensing'></a>
+## Licensing <a name="Licensing"></a>
 
 All documentation produced under this repository is licensed under the
 [Apache v2 licence](http://directory.fsf.org/wiki/License:Apache2.0).
