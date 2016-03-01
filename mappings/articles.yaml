@@ -28645,3 +28645,783 @@
   parent: 24
   sha1: 432ee39eebf4d71bfe842e348d44fc54749bb255
   title: Dynamic Cluster as a Service (DCaaS)--eRSA Dynamic Cluster Documentation
+115:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        created_at: '2016-02-29T21:39:10-05:00'
+        desc_un_html: " \n Bioinformatics using the Cloud Storage with NCBI data \n\
+          \ Table of Contents \n \n Introduction \n NeCTAR Research Cloud storage\
+          \ components review using the OpenStack Dashboard \n Attached Storage \n\
+          \ root disk \n ephemeral \n External Storage - Volume and Object \n What\
+          \ is volume or block-storage \n What is object storage \n File I/O best\
+          \ practices \n Using the Openstack APIs to Manage NCBI Data \n \nDownloading\
+          \ NCBI datasets directly to your instance  \n Summary \n \n Top of page\n\
+          \ \n Introduction \n This guide is a reference on how to easily utilize\
+          \ all the different storage components \nof the NeCTAR into a bioinformatics\
+          \ framework so that you can work more efficiently.  For \nthe puposes of\
+          \ developing our framework will use the NCBI-BLAST+\nas it is a popular\
+          \ application across many areas of bioinformatics. The BLAST data sets can\
+          \ be\nvery large and that present challenges to store and access that data\
+          \ locally making \nit difficult to implement in the NeCTAR research clould.\
+          \     \n Top of page \n NeCTAR Research Cloud storage components review\
+          \ using the OpenStack Dashboard \n \n The NeCTAR is a federated research\
+          \ cloud that uses OpenStack as the cloud operating system it \ncontrols\
+          \ the compute, storage and networking resources across the different zones\
+          \ that make up \nthe research cloud. The OpenStack dashboard lets user provision\
+          \ resources for their instances \nthrough a web interface. The storage resources\
+          \ can be classified as attached and external disks\neach of which has different\
+          \ purpose that needs some basic explanation. \n \n Attached storage \n With\
+          \ your instance you have access to limited diskspace with the  \"root disk\"\
+          \ partition \"/\" and \n\"ephemeral disk\" partition that is accessed via\
+          \ the /mnt directory of the default NeCTAR images. \nThe size of the the\
+          \ \"root disk\" and \"ephemeral disk\" varies with the different hardware\
+          \ templates \nor [flavors] (https://Support.Nectar.Org.Au/Support/Solutions/Articles/6000055380-Resources-Available-To-You)\
+          \ \nthat are available when you are configuring your instance. So understanding\
+          \ your research data \nrequirements is key so you can select the correct\
+          \ flavor for your instance.\nHowever, as with everything including the research\
+          \ cloud it does require a bit more insight of how a \nresearch might make\
+          \ the best use of these storage components in a bioinformatic workflow.\
+          \ Fortunately, NeCTAR is\na the ideal resource to allow researchers to improve\
+          \ their technical knowledge of to how to use the research cloud\nfor their\
+          \ computational work. \n Top of page\n \n What is the root disk \n The root\
+          \ disk is an ephemeral disk that the operating system (OS) image is copied\
+          \ to when you launch \na virtual machine. It is also where your home directory\
+          \ is located in you virtual machine. When you \nsnapshot your instance it\
+          \ is what is copied to create your snapshot image. \n Top of page\n  \n\
+          \ What is ephemeral disk \n Ephemeral is a secondary ephemeral data disk.\
+          \ That is an empty disk and exists only for the life \nof the instance.\
+          \ When you terminate an instance all data in ephemeral is lost. With the\
+          \ NeCTAR \ndefault images that have ephemeral storage are mounted with the\
+          \ instance and located at /mnt \nbut you will need to change the ownership\
+          \ of the /mnt directoryto be able to have read/write \naccess to do this\
+          \ on a ubuntu instance use: \n $ sudo chown ubuntu /mnt \n on a fedora,\
+          \ centos, scientific linux instances \n $ sudo chown ec2-user /mnt \n and\
+          \ on a debian instance. \n $ sudo chown debian /mnt \n This ephemeral disk\
+          \ space is where you should run you analysis as your home directory is too\
+          \ small. \n Top of page \n \n External Storage - Volume and Object \n When\
+          \ you apply for you NeCTAR allocation you are able \nto apply for object\
+          \ and volume storage to use for research project.   \n \n Assuming that\
+          \ your allocation request has either volume or object storage or both when\
+          \ you configure your\nvolume or object storage you need to remember to do\
+          \ select a sensible availability zones to use with your data. \n \n What\
+          \ is volume or block-storage \n Persistent block-storage \nor volume storage\
+          \ can live outside of you instance. This means that you read and write data\
+          \ in the persistent volume storage \nand it can be moved around to different\
+          \ instances but can only be mounted to one instance at any given time. \n\
+          You can find more information about creating and attaching persistent volumes\
+          \ through the NeCTAR dashboard on the NeCTAR support page. Once it is attached\
+          \ to an instance the dashboard will show what the this: \n \n note the volume\
+          \ names are hyperlinks that show the volume overview, \n \n The Attachments\
+          \ show what device the that the volume is attached to in the is case  \n\
+          \ /dev/vdd \n where /dev is the name of the device files and /vd* is the\
+          \ name of the virtuo block device. \n The important commands to that you\
+          \ need to know to configure the persistent volume storage once you have\
+          \ attached to your instance. \nFor most NeCTAR research cloud users an ext4\
+          \ filesystem is more than sufficient and the different filesystems are beyond\
+          \ the scope of\nthis document. \n To to create an ext4 filesystem on the\
+          \ device or persistent volume use \n $ sudo mkfs.ext4 /dev/vdd \n WARNING:\
+          \ You only need to do this once as this reformats the device any data on\
+          \ the device will be lost! \n Create a directory to mount the volume to\
+          \ it can be anything but should be meaningful and consistent for your work.\
+          \ \n $ sudo mkdir /volume_data \n To mount the persistent volume the command\
+          \ is: \n $ sudo mount /dev/vdd /volume_data -t auto \n Lastly you will need\
+          \ to change the ownership of the /volume_data directoryto be able to have\
+          \ read/write \naccess to do this on a ubuntu instance use: \n $ sudo chown\
+          \ ubuntu /volume_data \n on a fedora, centos, scientific linux instances\
+          \ \n $ sudo chown ec2-user /volume_data \n and on a debian instance. \n\
+          \ $ sudo chown debian /volume_data \n To unmount the volume from your instance\
+          \ use these command umount\nNOTE: Do not umount the device if you are in\
+          \ that directory so cd to your home directory first otherwise you it will\
+          \ fail.\n$ cd \n$ sudo umount /volume_data \n Top of page\n \n What is object\
+          \ storage \n What is object storage? \n \n A more useful definition can\
+          \ be found on the NeCTAR support page. \n From the NeCTAR dashboard you\
+          \ can create containers in the Object Store. \n   \n click the create container\
+          \ button \n   \n Fill in the Container name and the click the create container\
+          \ button. You can then choose if you want to make the object container public\
+          \ or private. \n \n The private objects are only available within your NeCTAR\
+          \ project. While object in public containers are exactly as the note states\
+          \ in the window \nwhen you created your container  \n \n It is available\
+          \ to anyone that knows the URL to that object including users who don't\
+          \ have access to NeCTAR instances. \n You can upload object data from you\
+          \ local computer to the container using the dashboard just select the Upload\
+          \ Object button. To \ndownload an object to your local computer just select\
+          \ the Download button. \n \n To download the object to your instance you\
+          \ just neeed to use wget \n wget https://dashboard.rc.nectar.org.au/project/containers/blast/wgs.99.tar.gz\
+          \ \n Top of page\n \n File I/O best practices \n Moving data to and from\
+          \ you instance instance depending on the size of the files your are try\
+          \ to move can be trival for small data but large \ndata sets can become\
+          \ very difficult depending on many different things. Here are some things\
+          \ to keep in mind with data I/O and the cloud. \n \n \n Compress your data\
+          \ files if they are larger than 10Mb with gzip or some other compression\
+          \ tool it should be installed in your instance.  \n \n \n If you have to\
+          \ move a directory create tar files.  \n \n \n Don't try to move data over\
+          \ a wireless network, plugin to an ethernet contection, preferably at your\
+          \ local institution they have larger bandwidth. \n \n \n If you data move\
+          \ still time out or are getting throttled contact your the local institutes\
+          \ IT support to see if they can help. \n \n \n Ohio-(Only handle it once)\
+          \ if you are uploading data to your instance try to move it directly to\
+          \ your instance, NeCTAR is on a fast networks as most\n  nectar nodes are\
+          \ housed within University or HPC data centers.  \n \n \n With smaller data\
+          \ you can try any of the methods coverd on the NeCTAR support page it has\
+          \ excellent instructions.  This will work for moving data to and from your\
+          \ ephemeral or volume storage attached to your instances.  \n Top of page\n\
+          \ \n Using the OpenStack APIs for Managing NCBI Data \n The National Center\
+          \ for Biotechnology Information (NCBI) is located in Bethesda, Marylanl\
+          \ and hosts the Basic Local Alignment Search Tool (BLAST) data and is available\
+          \ directly from the NCBI FTP site ftp://ftp.ncbi.nlm.nih.gov. It is necessary\
+          \ for researchs to be able to access these data sets easily as they are\
+          \ required for many different Bioinformatic tools specifically BLAST. However\
+          \ we will not present how to actually run BLAST but how to manage the NeCTAR\
+          \ reseach cloud storage resources to enable researchers to utilize the NCBI\
+          \ BLAST data sets effectively. \n Install the Python client tools \n First\
+          \ you will need to update your instance and install a set of packages that\
+          \ support the OpenStack APIs.\nThese are the commands for a ubuntu instance.\
+          \ \n $ sudo apt-get update \n $ sudo apt-get install python-novaclient \n\
+          \ $ sudo apt-get install python-keystoneclient \n $ sudo apt-get install\
+          \ python-cinderclient \n $ sudo apt-get install python-swiftclient \n Top\
+          \ of page \n Configuring your instance to use the Openstack API \n This\
+          \ the basic procedure to configure within your instance to use the OpenStack\
+          \ APIs with the Python clients.\nThe first step is to set or reset your\
+          \ your password from the OpenStack dashboard through your user account settings.\
+          \  \n   \n Select the Reset Password tab: \n   \n that takes you to the\
+          \ Password Reset Form where you reset your password \n   \n This is your\
+          \ new password it is case sensitive. We will use this in the OpenStack RC\
+          \ file. \n   \n From the OpenStack dashboard under the Compute -> Access\
+          \ & Security, select the Download OpenStack RC File\nthat will automatically\
+          \ download a RC-file to your local machine. \n   \n The OpenStack RC File\
+          \ that you just downloaded will have the name Project_name-openrc.sh\nYou\
+          \ will need to edit the following lines in the Project_name-openrc.sh file.\
+          \ \n   \n So that the new password is hardcoded into the Project_name-openrc.sh\
+          \ file. \n   \n You will need to the copy that file and your ssh key file\
+          \ either the ssh pem file or the ssh key file that is associated with your\
+          \ instance\nfrom your local machine to your instance. Using any of the method\
+          \ described in  NeCTAR support documents. You should move your key file\
+          \ or pem file to your .ssh directory in your home directory on your instance.\
+          \ \n On your instance you will need to source the Project_name-openrc.sh\
+          \ file to configure your environment to authenticate access to the OpenStack\
+          \ services. \n $ source Project_name-openrc.sh \n You will need to source\
+          \ the script before you can run any of the commands otherwise the environment\
+          \ is not set properly. \n note: If you see this  \n   \n you forget to source\
+          \ the OpenStack RC file.  \n If you source your OpenStack RC file and see\
+          \ this: \n   \n You did not edit the OpenStack RC file! \n Testing you API\
+          \ authentication \n To test your access authentication you can use the command\
+          \ \n $ nova list \n this should show the list of your current instances\
+          \ that indicates your authentication access was successful! \n   \n Top\
+          \ of page\n \n Downloading NCBI datasets directly to your instance \n The\
+          \ data transferring program listed NeCTAR support documents\nwork nicely\
+          \ from your local computer but can be difficult to implement in the cloud\
+          \ because of gui's or poor performance.\nWhat we need is a program to allow\
+          \ us to download from the NCBI ftp site directly to our instance's ephemeral\
+          \ or volume storage that \nworks from the commandline.    \n NCBI has had\
+          \ good success with the lftp program available from the image packages repository\
+          \ has shown to \nwork nicely from the UNIX/Linux commandline. To install\
+          \ it to your instance you can just use the package managment tools for ubuntu\
+          \ the command is: \n $ sudo apt-get install lftp \n you can then use the\
+          \ lftp command \n $ lftp ftp.ncbi.nlm.nih.gov \n Then you can use the same\
+          \ ftp commands to navigate between the local and remote systems and download\
+          \ with get and upload with put.\nThis figure shows how simple this process\
+          \ is to get to the blast datasets  \n   \n Now you can use get to download\
+          \ the data to your instance directly. \n Using the swift API create a new\
+          \ container \n To list all the containers in your project. \n $ swift list\
+          \ \n To create a new private container with the swift API from the command\
+          \ line \n $ swift post container_name \n To create a new public container\
+          \ the swift API use: \n `$ swift post -r .r:* container_name`` \n To upload\
+          \ the data into the container. \n $ swift upload 'container_name' 'data_file'\
+          \ \n   \n To see your new container  \n $ swift list \n and the objects\
+          \ in your new container \n $ swift list 'container_name' \n   \n Top of\
+          \ page\n \n Summary \n We have covered the difference between root, ephemeral,\
+          \ volume and object storage available through the NeCTAR research cloud\
+          \ \nand what programs are used to be able to store you data correctly so\
+          \ that you can make effective use of you virtual machine. \n \n \n The root\
+          \ storage is for the Operating system and you home directory. You should\
+          \ install all applications there and your home directory\nis should not\
+          \ store any data but small scripts and files. \n \n \n The ephemeral storage\
+          \ is your workspace so all of you analysis should be done there and you\
+          \ can store your local data there. Remember\nto get the right size hardware\
+          \ flavor.  It needs to have enough disk space for analysis to run and store\
+          \ any associated data.  It is your\nresponsibilty to maintain and will require\
+          \ regular housekeeping.  Please delete files that are not needed and move\
+          \ important results back to\neither your local machine or to volume/object\
+          \ storage to share them with your group or the world. \n \n \n The volume\
+          \ storage can be used for storing results, working data, or as a working\
+          \ directory if needed. If you have multiple researcher who\nhave access\
+          \ to your project then you can share data via the volume storage.  It is\
+          \ also possible to attach more that one volume storage instance\nto your\
+          \ compute instance as well so you can one for input data and have a second\
+          \ for results.   \n \n \n The object storage should be used for static datasets\
+          \ either reference ones like the NCBI-BLAST data sets or analysis results\
+          \ you wish to share\nwith collaborators.  Static data can be downloaded\
+          \ easly to your volume or ephemeral storage as part of you workflow or pipeline.\
+          \ With an orginal\ncopy in object storage you can delete it from either\
+          \ volume or ephemeral storage then with out having to get a new copy to\
+          \ your instance.  \n \n \n NOTE: There are some unresolved issues with uploading\
+          \ large data sets (>5GB) in to object storage. \nUnderstanding how to split/merge\
+          \ files that are larger than 5GB and being able to manage them easily..\
+          \ \n Top of page "
+        description: "<p><a name=\"top\"></a></p>\n<h1>Bioinformatics using the Cloud\
+          \ Storage with NCBI data</h1>\n<h2>Table of Contents</h2>\n<ul>\n<li><a\
+          \ href=\"#intro\">Introduction</a></li>\n<li><a href=\"#dashboard\">NeCTAR\
+          \ Research Cloud storage components review using the OpenStack Dashboard</a></li>\n\
+          <li><a href=\"#attached\">Attached Storage</a></li>\n<li><a href=\"#root\"\
+          >root disk</a></li>\n<li><a href=\"#ephemeral\">ephemeral</a></li>\n<li><a\
+          \ href=\"#external\">External Storage - Volume and Object</a></li>\n<li><a\
+          \ href=\"#volume\">What is volume or block-storage</a></li>\n<li><a href=\"\
+          #object\">What is object storage</a></li>\n<li><a href=\"#io\">File I/O\
+          \ best practices</a></li>\n<li><a href=\"#openstack\">Using the Openstack\
+          \ APIs to Manage NCBI Data</a></li>\n<li>\n<a href=\"#ncbi\">Downloading\
+          \ NCBI datasets directly to your instance</a> </li>\n<li><a href=\"#summary\"\
+          >Summary</a></li>\n</ul>\n<p><a href=\"#top\">Top of page</a>\n<a name=\"\
+          intro\"></a></p>\n<h2>Introduction</h2>\n<p>This guide is a reference on\
+          \ how to easily utilize all the different storage components \nof the NeCTAR\
+          \ into a bioinformatics framework so that you can work more efficiently.\
+          \  For \nthe puposes of developing our framework will use the <a href=\"\
+          http://blast.ncbi.nlm.nih.gov/Blast.cgi\">NCBI-BLAST+</a>\nas it is a popular\
+          \ application across many areas of bioinformatics. The BLAST data sets can\
+          \ be\nvery large and that present challenges to store and access that data\
+          \ locally making \nit difficult to implement in the NeCTAR research clould.\
+          \    </p>\n<p><a href=\"#top\">Top of page</a></p>\n<h2>NeCTAR Research\
+          \ Cloud storage components review using the OpenStack Dashboard <a name=\"\
+          dashboard\"></a>\n</h2>\n<p>The NeCTAR is a federated research cloud that\
+          \ uses OpenStack as the cloud operating system it \ncontrols the compute,\
+          \ storage and networking resources across the different zones that make\
+          \ up \nthe research cloud. The OpenStack dashboard lets user <code>provision</code>\
+          \ resources for their instances \nthrough a web interface. The storage resources\
+          \ can be classified as attached and external disks\neach of which has different\
+          \ purpose that needs some basic explanation.</p>\n<p><a name=\"attached\"\
+          ></a></p>\n<h3>Attached storage</h3>\n<p>With your instance you have access\
+          \ to limited diskspace with the  \"root disk\" partition \"/\" and \n\"\
+          ephemeral disk\" partition that is accessed via the /mnt directory of the\
+          \ default NeCTAR images. \nThe size of the the \"root disk\" and \"ephemeral\
+          \ disk\" varies with the different hardware templates \nor [flavors] (https://Support.Nectar.Org.Au/Support/Solutions/Articles/6000055380-Resources-Available-To-You)\
+          \ \nthat are available when you are configuring your instance. So understanding\
+          \ your research data \nrequirements is key so you can select the correct\
+          \ <code>flavor</code> for your instance.\nHowever, as with everything including\
+          \ the research cloud it does require a bit more insight of how a \nresearch\
+          \ might make the best use of these storage components in a bioinformatic\
+          \ workflow. Fortunately, NeCTAR is\na the ideal resource to allow researchers\
+          \ to improve their technical knowledge of to how to use the research cloud\n\
+          for their computational work.</p>\n<p><a href=\"#top\">Top of page</a>\n\
+          <a name=\"root\"></a></p>\n<h3>What is the root disk</h3>\n<p>The root disk\
+          \ is an ephemeral disk that the operating system (OS) image is copied to\
+          \ when you launch \na virtual machine. It is also where your home directory\
+          \ is located in you virtual machine. When you \nsnapshot your instance it\
+          \ is what is copied to create your snapshot image.</p>\n<p><a href=\"#top\"\
+          >Top of page</a>\n <a name=\"ephemeral\"></a></p>\n<h3>What is ephemeral\
+          \ disk</h3>\n<p>Ephemeral is a secondary ephemeral data disk. That is an\
+          \ empty disk and exists only for the life \nof the instance. When you terminate\
+          \ an instance all data in ephemeral is lost. With the NeCTAR \ndefault images\
+          \ that have ephemeral storage are mounted with the instance and located\
+          \ at <code>/mnt</code> \nbut you will need to change the ownership of the\
+          \ <code>/mnt</code> directoryto be able to have read/write \naccess to do\
+          \ this on a ubuntu instance use:</p>\n<p><code>$ sudo chown ubuntu /mnt</code></p>\n\
+          <p>on a fedora, centos, scientific linux instances</p>\n<p><code>$ sudo\
+          \ chown ec2-user /mnt</code></p>\n<p>and on a debian instance.</p>\n<p><code>$\
+          \ sudo chown debian /mnt</code></p>\n<p>This ephemeral disk space is where\
+          \ you should run you analysis as your <code>home</code> directory is too\
+          \ small.</p>\n<p><a href=\"#top\">Top of page</a></p>\n<p><a name=\"external\"\
+          ></a></p>\n<h2>External Storage - Volume and Object</h2>\n<p>When you apply\
+          \ for you NeCTAR <a href=\"https://dashboard.rc.nectar.org.au\">allocation</a>\
+          \ you are able \nto apply for object and volume storage to use for research\
+          \ project.  </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_storage_request.png?raw=true\"\
+          ></p>\n<p>Assuming that your allocation request has either volume or object\
+          \ storage or both when you configure your\nvolume or object storage you\
+          \ need to remember to do select a sensible <a href=\"https://support.nectar.org.au/solution/articles/6000055381-availability-zones\"\
+          >availability zones</a> to use with your data.</p>\n<p><a name=\"volume\"\
+          ></a></p>\n<h3>What is volume or block-storage</h3>\n<p>Persistent <a href=\"\
+          http://docs.openstack.org/openstack-ops/content/user_facing_block_storage.html\"\
+          >block-storage</a> \nor volume storage can live outside of you instance.\
+          \ This means that you read and write data in the persistent volume storage\
+          \ \nand it can be moved around to different instances but can only be mounted\
+          \ to one instance at any given time. \nYou can find more information about\
+          \ creating and attaching persistent volumes through the NeCTAR dashboard\
+          \ on the NeCTAR <a href=\"https://support.nectar.org.au/solution/articles/6000055382-introduction-to-cloud-storage\"\
+          >support</a> page. Once it is attached to an instance the dashboard will\
+          \ show what the this:</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_vol_dash.png?raw=true\"\
+          ></p>\n<p>note the volume names are hyperlinks that show the volume overview,</p>\n\
+          <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_vol_overview.png?raw=true\"\
+          ></p>\n<p>The Attachments show what device the that the volume is attached\
+          \ to in the is case </p>\n<p><code>/dev/vdd</code></p>\n<p>where <code>/dev</code>\
+          \ is the name of the device files and <code>/vd*</code> is the name of the\
+          \ virtuo block device.</p>\n<p>The important commands to that you need to\
+          \ know to configure the persistent volume storage once you have attached\
+          \ to your instance. \nFor most NeCTAR research cloud users an ext4 filesystem\
+          \ is more than sufficient and the different filesystems are beyond the scope\
+          \ of\nthis document.</p>\n<p>To to create an ext4 filesystem on the device\
+          \ or persistent volume use</p>\n<p><code>$ sudo mkfs.ext4 /dev/vdd</code></p>\n\
+          <p>WARNING: You only need to do this once as this reformats the device any\
+          \ data on the device will be lost!</p>\n<p>Create a directory to mount the\
+          \ volume to it can be anything but should be meaningful and consistent for\
+          \ your work.</p>\n<p><code>$ sudo mkdir /volume_data</code></p>\n<p>To mount\
+          \ the persistent volume the command is:</p>\n<p><code>$ sudo mount /dev/vdd\
+          \ /volume_data -t auto</code></p>\n<p>Lastly you will need to change the\
+          \ ownership of the <code>/volume_data</code> directoryto be able to have\
+          \ read/write \naccess to do this on a ubuntu instance use:</p>\n<p><code>$\
+          \ sudo chown ubuntu /volume_data</code></p>\n<p>on a fedora, centos, scientific\
+          \ linux instances</p>\n<p><code>$ sudo chown ec2-user /volume_data</code></p>\n\
+          <p>and on a debian instance.</p>\n<p><code>$ sudo chown debian /volume_data</code></p>\n\
+          <p>To unmount the volume from your instance use these command <code>umount</code>\n\
+          NOTE: Do not umount the device if you are in that directory so <code>cd</code>\
+          \ to your home directory first otherwise you it will fail.\n<code>$ cd</code><br>\n\
+          <code>$ sudo umount /volume_data</code></p>\n<p><a href=\"#top\">Top of\
+          \ page</a>\n<a name=\"object\"></a></p>\n<h3>What is object storage</h3>\n\
+          <p>What is object storage?</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_obj_def.png?raw=true\"\
+          ></p>\n<p>A more useful definition can be found on the NeCTAR <a href=\"\
+          https://support.nectar.org.au/solution/articles/6000055382-introduction-to-cloud-storage\"\
+          >support</a> page.</p>\n<p>From the NeCTAR dashboard you can create <code>containers</code>\
+          \ in the Object Store.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_obj_1.png?raw=true\"\
+          > </p>\n<p>click the create container button</p>\n<p><img alt=\"\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_obj_2.png?raw=true\"\
+          > </p>\n<p>Fill in the Container name and the click the create container\
+          \ button. You can then choose if you want to make the object container public\
+          \ or private.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_obj_3.png?raw=true\"\
+          ></p>\n<p>The private objects are only available within your NeCTAR project.\
+          \ While object in public containers are exactly as the note states in the\
+          \ window \nwhen you created your container </p>\n<p><img alt=\"\" src=\"\
+          https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_obj_4.png?raw=true\"\
+          ></p>\n<p>It is available to anyone that knows the URL to that object including\
+          \ users who don't have access to NeCTAR instances.</p>\n<p>You can upload\
+          \ object data from you local computer to the container using the dashboard\
+          \ just select the <code>Upload Object</code> button. To \ndownload an object\
+          \ to your local computer just select the <code>Download</code> button.</p>\n\
+          <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_obj_5.png?raw=true\"\
+          ></p>\n<p>To download the object to your instance you just neeed to use\
+          \ <code>wget</code></p>\n<p><code>wget https://dashboard.rc.nectar.org.au/project/containers/blast/wgs.99.tar.gz</code></p>\n\
+          <p><a href=\"#top\">Top of page</a>\n<a name=\"io\"></a></p>\n<h2>File I/O\
+          \ best practices</h2>\n<p>Moving data to and from you instance instance\
+          \ depending on the size of the files your are try to move can be trival\
+          \ for small data but large \ndata sets can become very difficult depending\
+          \ on many different things. Here are some things to keep in mind with data\
+          \ I/O and the cloud.</p>\n<ul>\n<li>\n<p>Compress your data files if they\
+          \ are larger than 10Mb with <a href=\"http://www.math.utah.edu/docs/info/gzip_4.html#SEC7\"\
+          ><strong>gzip</strong></a> or some other compression tool it should be installed\
+          \ in your instance. </p>\n</li>\n<li>\n<p>If you have to move a directory\
+          \ create <a href=\"https://www.cs.colostate.edu/helpdocs/tar.html\"><strong>tar</strong></a>\
+          \ files. </p>\n</li>\n<li>\n<p>Don't try to move data over a wireless network,\
+          \ plugin to an ethernet contection, preferably at your local institution\
+          \ they have larger bandwidth.</p>\n</li>\n<li>\n<p>If you data move still\
+          \ time out or are getting throttled contact your the local institutes IT\
+          \ support to see if they can help.</p>\n</li>\n<li>\n<p>Ohio-(Only handle\
+          \ it once) if you are uploading data to your instance try to move it directly\
+          \ to your instance, NeCTAR is on a fast networks as most\n  nectar nodes\
+          \ are housed within University or HPC data centers. </p>\n</li>\n</ul>\n\
+          <p>With smaller data you can try any of the methods coverd on the NeCTAR\
+          \ <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
+          >support</a> page it has excellent instructions.  This will work for moving\
+          \ data to and from your ephemeral or volume storage attached to your instances.\
+          \ </p>\n<p><a href=\"#top\">Top of page</a>\n<a name=\"openstack\"></a></p>\n\
+          <h2>Using the OpenStack APIs for Managing NCBI Data</h2>\n<p>The National\
+          \ Center for Biotechnology Information (<a href=\"http://www.ncbi.nlm.nih.gov/\"\
+          ><strong>NCBI</strong></a>) is located in Bethesda, Marylanl and hosts the\
+          \ Basic Local Alignment Search Tool (<a href=\"http://blast.ncbi.nlm.nih.gov/Blast.cgi\"\
+          ><strong>BLAST</strong></a>) data and is available directly from the NCBI\
+          \ FTP site <code>ftp://ftp.ncbi.nlm.nih.gov</code>. It is necessary for\
+          \ researchs to be able to access these data sets easily as they are required\
+          \ for many different Bioinformatic tools specifically BLAST. However we\
+          \ will not present how to actually run BLAST but how to manage the NeCTAR\
+          \ reseach cloud storage resources to enable researchers to utilize the NCBI\
+          \ BLAST data sets effectively.</p>\n<h3>Install the Python client tools</h3>\n\
+          <p>First you will need to update your instance and install a set of packages\
+          \ that support the OpenStack APIs.\nThese are the commands for a ubuntu\
+          \ instance.</p>\n<p><code>$ sudo apt-get update</code></p>\n<p><code>$ sudo\
+          \ apt-get install python-novaclient</code></p>\n<p><code>$ sudo apt-get\
+          \ install python-keystoneclient</code></p>\n<p><code>$ sudo apt-get install\
+          \ python-cinderclient</code></p>\n<p><code>$ sudo apt-get install python-swiftclient</code></p>\n\
+          <p><a href=\"#top\">Top of page</a></p>\n<h3>Configuring your instance to\
+          \ use the Openstack API</h3>\n<p>This the basic procedure to configure within\
+          \ your instance to use the OpenStack APIs with the Python clients.\nThe\
+          \ first step is to set or reset your your password from the OpenStack dashboard\
+          \ through your user account settings. </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_1.png?raw=true\"\
+          > </p>\n<p>Select the Reset Password tab:</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_2.png?raw=true\"\
+          > </p>\n<p>that takes you to the Password Reset Form where you reset your\
+          \ password</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_3.png?raw=true\"\
+          > </p>\n<p>This is your new password it is case sensitive. We will use this\
+          \ in the OpenStack RC file.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_4.png?raw=true\"\
+          > </p>\n<p>From the OpenStack dashboard under the Compute -&gt; Access &amp;\
+          \ Security, select the <code>Download OpenStack RC File</code>\nthat will\
+          \ automatically download a RC-file to your local machine.</p>\n<p><img alt=\"\
+          \" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_5.png?raw=true\"\
+          > </p>\n<p>The OpenStack RC File that you just downloaded will have the\
+          \ name Project_name-openrc.sh\nYou will need to edit the following lines\
+          \ in the Project_name-openrc.sh file.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_6.png?raw=true\"\
+          > </p>\n<p>So that the new password is hardcoded into the Project_name-openrc.sh\
+          \ file.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_7.png?raw=true\"\
+          > </p>\n<p>You will need to the copy that file and your ssh key file either\
+          \ the ssh <strong>pem file</strong> or the ssh <strong>key</strong> file\
+          \ that is associated with your instance\nfrom your local machine to your\
+          \ instance. Using any of the method described in  NeCTAR <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
+          >support</a> documents. You should move your key file or pem file to your\
+          \ <code>.ssh</code> directory in your home directory on your instance.</p>\n\
+          <p>On your instance you will need to source the Project_name-openrc.sh file\
+          \ to configure your environment to authenticate access to the OpenStack\
+          \ services.</p>\n<p><code>$ source Project_name-openrc.sh</code></p>\n<p>You\
+          \ will need to source the script before you can run any of the commands\
+          \ otherwise the environment is not set properly.</p>\n<p>note: If you see\
+          \ this </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_8.png?raw=true\"\
+          > </p>\n<p>you forget to source the OpenStack RC file. </p>\n<p>If you source\
+          \ your OpenStack RC file and see this:</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_9.png?raw=true\"\
+          > </p>\n<p>You did not edit the OpenStack RC file!</p>\n<h3>Testing you\
+          \ API authentication</h3>\n<p>To test your access authentication you can\
+          \ use the command</p>\n<p><code>$ nova list</code></p>\n<p>this should show\
+          \ the list of your current instances that indicates your authentication\
+          \ access was successful!</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_10.png?raw=true\"\
+          > </p>\n<p><a href=\"#top\">Top of page</a>\n<a name=\"ncbi\"></a></p>\n\
+          <h3>Downloading NCBI datasets directly to your instance</h3>\n<p>The data\
+          \ transferring program listed NeCTAR <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
+          >support</a> documents\nwork nicely from your local computer but can be\
+          \ difficult to implement in the cloud because of gui's or poor performance.\n\
+          What we need is a program to allow us to download from the NCBI ftp site\
+          \ directly to our instance's ephemeral or volume storage that \nworks from\
+          \ the commandline.   </p>\n<p>NCBI has had good success with the <a href=\"\
+          http://lftp.yar.ru/desc.html\"><strong>lftp</strong></a> program available\
+          \ from the image packages repository has shown to \nwork nicely from the\
+          \ UNIX/Linux commandline. To install it to your instance you can just use\
+          \ the package managment tools for ubuntu the command is:</p>\n<p><code>$\
+          \ sudo apt-get install lftp</code></p>\n<p>you can then use the <code>lftp</code>\
+          \ command</p>\n<p><code>$ lftp ftp.ncbi.nlm.nih.gov</code></p>\n<p>Then\
+          \ you can use the same <code>ftp</code> commands to navigate between the\
+          \ local and remote systems and download with <code>get</code> and upload\
+          \ with <code>put</code>.\nThis figure shows how simple this process is to\
+          \ get to the blast datasets </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_11.png?raw=true\"\
+          > </p>\n<p>Now you can use get to download the data to your instance directly.</p>\n\
+          <h3>Using the swift API create a new container</h3>\n<p>To list all the\
+          \ containers in your project.</p>\n<p><code>$ swift list</code></p>\n<p>To\
+          \ create a new <strong>private</strong> container with the swift API from\
+          \ the command line</p>\n<p><code>$ swift post container_name</code></p>\n\
+          <p>To create a new <strong>public</strong> container the swift API use:</p>\n\
+          <p>`$ swift post -r .r:* container_name``</p>\n<p>To upload the data into\
+          \ the container.</p>\n<p><code>$ swift upload 'container_name' 'data_file'</code></p>\n\
+          <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_12.png?raw=true\"\
+          > </p>\n<p>To see your new container </p>\n<p><code>$ swift list</code></p>\n\
+          <p>and the objects in your new container</p>\n<p><code>$ swift list 'container_name'</code></p>\n\
+          <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/Pawsey_ncbi_api_13.png?raw=true\"\
+          > </p>\n<p><a href=\"#top\">Top of page</a>\n<a name=\"summary\"></a></p>\n\
+          <h2>Summary</h2>\n<p>We have covered the difference between root, ephemeral,\
+          \ volume and object storage available through the NeCTAR research cloud\
+          \ \nand what programs are used to be able to store you data correctly so\
+          \ that you can make effective use of you virtual machine.</p>\n<ul>\n<li>\n\
+          <p>The root storage is for the Operating system and you home directory.\
+          \ You should install all applications there and your home directory\nis\
+          \ should not store any data but small scripts and files.</p>\n</li>\n<li>\n\
+          <p>The ephemeral storage is your workspace so all of you analysis should\
+          \ be done there and you can store your local data there. Remember\nto get\
+          \ the right size hardware flavor.  It needs to have enough disk space for\
+          \ analysis to run and store any associated data.  It is your\nresponsibilty\
+          \ to maintain and will require regular housekeeping.  Please <strong><em>delete</em></strong>\
+          \ files that are not needed and move important results back to\neither your\
+          \ local machine or to volume/object storage to share them with your group\
+          \ or the world.</p>\n</li>\n<li>\n<p>The volume storage can be used for\
+          \ storing results, working data, or as a working directory if needed. If\
+          \ you have multiple researcher who\nhave access to your project then you\
+          \ can share data via the volume storage.  It is also possible to attach\
+          \ more that one volume storage instance\nto your compute instance as well\
+          \ so you can one for input data and have a second for results.  </p>\n</li>\n\
+          <li>\n<p>The object storage should be used for static datasets either reference\
+          \ ones like the NCBI-BLAST data sets or analysis results you wish to share\n\
+          with collaborators.  Static data can be downloaded easly to your volume\
+          \ or ephemeral storage as part of you workflow or pipeline. With an orginal\n\
+          copy in object storage you can delete it from either volume or ephemeral\
+          \ storage then with out having to get a new copy to your instance. </p>\n\
+          </li>\n</ul>\n<p>NOTE: There are some unresolved issues with uploading large\
+          \ data sets (&gt;5GB) in to object storage. \nUnderstanding how to split/merge\
+          \ files that are larger than 5GB and being able to manage them easily..</p>\n\
+          <p><a href=\"#top\">Top of page</a></p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000115009
+        modified_at: '2016-02-29T21:39:10-05:00'
+        modified_by: null
+        position: 22
+        seo_data: {}
+        status: 2
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Pawsey NeCTAR Storage and NCBI data
+        updated_at: '2016-02-29T21:39:10-05:00'
+        user_id: 6002464727
+  html: "<p><a name=\"top\"></a></p>\n<h1>Bioinformatics using the Cloud Storage with\
+    \ NCBI data</h1>\n<h2>Table of Contents</h2>\n<ul>\n<li><a href=\"#intro\">Introduction</a></li>\n\
+    <li><a href=\"#dashboard\">NeCTAR Research Cloud storage components review using\
+    \ the OpenStack Dashboard</a></li>\n<li><a href=\"#attached\">Attached Storage</a></li>\n\
+    <li><a href=\"#root\">root disk</a></li>\n<li><a href=\"#ephemeral\">ephemeral</a></li>\n\
+    <li><a href=\"#external\">External Storage - Volume and Object</a></li>\n<li><a\
+    \ href=\"#volume\">What is volume or block-storage</a></li>\n<li><a href=\"#object\"\
+    >What is object storage</a></li>\n<li><a href=\"#io\">File I/O best practices</a></li>\n\
+    <li><a href=\"#openstack\">Using the Openstack APIs to Manage NCBI Data</a></li>\n\
+    <li><a href=\"#ncbi\">Downloading NCBI datasets directly to your instance</a>\
+    \ </li>\n<li><a href=\"#summary\">Summary</a></li>\n</ul>\n<p><a href=\"#top\"\
+    >Top of page</a>\n<a name=\"intro\"></a></p>\n<h2>Introduction</h2>\n<p>This guide\
+    \ is a reference on how to easily utilize all the different storage components\
+    \ \nof the NeCTAR into a bioinformatics framework so that you can work more efficiently.\
+    \  For \nthe puposes of developing our framework will use the <a href=\"http://blast.ncbi.nlm.nih.gov/Blast.cgi\"\
+    >NCBI-BLAST+</a>\nas it is a popular application across many areas of bioinformatics.\
+    \ The BLAST data sets can be\nvery large and that present challenges to store\
+    \ and access that data locally making \nit difficult to implement in the NeCTAR\
+    \ research clould.    </p>\n<p><a href=\"#top\">Top of page</a></p>\n<h2>NeCTAR\
+    \ Research Cloud storage components review using the OpenStack Dashboard <a name=\"\
+    dashboard\"></a></h2>\n<p>The NeCTAR is a federated research cloud that uses OpenStack\
+    \ as the cloud operating system it \ncontrols the compute, storage and networking\
+    \ resources across the different zones that make up \nthe research cloud. The\
+    \ OpenStack dashboard lets user <code>provision</code> resources for their instances\
+    \ \nthrough a web interface. The storage resources can be classified as attached\
+    \ and external disks\neach of which has different purpose that needs some basic\
+    \ explanation.</p>\n<p><a name=\"attached\"></a></p>\n<h3>Attached storage</h3>\n\
+    <p>With your instance you have access to limited diskspace with the  \"root disk\"\
+    \ partition \"/\" and \n\"ephemeral disk\" partition that is accessed via the\
+    \ /mnt directory of the default NeCTAR images. \nThe size of the the \"root disk\"\
+    \ and \"ephemeral disk\" varies with the different hardware templates \nor [flavors]\
+    \ (https://Support.Nectar.Org.Au/Support/Solutions/Articles/6000055380-Resources-Available-To-You)\
+    \ \nthat are available when you are configuring your instance. So understanding\
+    \ your research data \nrequirements is key so you can select the correct <code>flavor</code>\
+    \ for your instance.\nHowever, as with everything including the research cloud\
+    \ it does require a bit more insight of how a \nresearch might make the best use\
+    \ of these storage components in a bioinformatic workflow. Fortunately, NeCTAR\
+    \ is\na the ideal resource to allow researchers to improve their technical knowledge\
+    \ of to how to use the research cloud\nfor their computational work.</p>\n<p><a\
+    \ href=\"#top\">Top of page</a>\n<a name=\"root\"></a></p>\n<h3>What is the root\
+    \ disk</h3>\n<p>The root disk is an ephemeral disk that the operating system (OS)\
+    \ image is copied to when you launch \na virtual machine. It is also where your\
+    \ home directory is located in you virtual machine. When you \nsnapshot your instance\
+    \ it is what is copied to create your snapshot image.</p>\n<p><a href=\"#top\"\
+    >Top of page</a>\n <a name=\"ephemeral\"></a></p>\n<h3>What is ephemeral disk</h3>\n\
+    <p>Ephemeral is a secondary ephemeral data disk. That is an empty disk and exists\
+    \ only for the life \nof the instance. When you terminate an instance all data\
+    \ in ephemeral is lost. With the NeCTAR \ndefault images that have ephemeral storage\
+    \ are mounted with the instance and located at <code>/mnt</code> \nbut you will\
+    \ need to change the ownership of the <code>/mnt</code> directoryto be able to\
+    \ have read/write \naccess to do this on a ubuntu instance use:</p>\n<p><code>$\
+    \ sudo chown ubuntu /mnt</code></p>\n<p>on a fedora, centos, scientific linux\
+    \ instances</p>\n<p><code>$ sudo chown ec2-user /mnt</code></p>\n<p>and on a debian\
+    \ instance.</p>\n<p><code>$ sudo chown debian /mnt</code></p>\n<p>This ephemeral\
+    \ disk space is where you should run you analysis as your <code>home</code> directory\
+    \ is too small.</p>\n<p><a href=\"#top\">Top of page</a></p>\n<p><a name=\"external\"\
+    ></a></p>\n<h2>External Storage - Volume and Object</h2>\n<p>When you apply for\
+    \ you NeCTAR <a href=\"https://dashboard.rc.nectar.org.au\">allocation</a> you\
+    \ are able \nto apply for object and volume storage to use for research project.\
+    \  </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_storage_request.png?raw=true\"\
+    ></p>\n<p>Assuming that your allocation request has either volume or object storage\
+    \ or both when you configure your\nvolume or object storage you need to remember\
+    \ to do select a sensible <a href=\"https://support.nectar.org.au/solution/articles/6000055381-availability-zones\"\
+    >availability zones</a> to use with your data.</p>\n<p><a name=\"volume\"></a></p>\n\
+    <h3>What is volume or block-storage</h3>\n<p>Persistent <a href=\"http://docs.openstack.org/openstack-ops/content/user_facing_block_storage.html\"\
+    >block-storage</a> \nor volume storage can live outside of you instance. This\
+    \ means that you read and write data in the persistent volume storage \nand it\
+    \ can be moved around to different instances but can only be mounted to one instance\
+    \ at any given time. \nYou can find more information about creating and attaching\
+    \ persistent volumes through the NeCTAR dashboard on the NeCTAR <a href=\"https://support.nectar.org.au/solution/articles/6000055382-introduction-to-cloud-storage\"\
+    >support</a> page. Once it is attached to an instance the dashboard will show\
+    \ what the this:</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_vol_dash.png?raw=true\"\
+    ></p>\n<p>note the volume names are hyperlinks that show the volume overview,</p>\n\
+    <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_vol_overview.png?raw=true\"\
+    ></p>\n<p>The Attachments show what device the that the volume is attached to\
+    \ in the is case </p>\n<p><code>/dev/vdd</code></p>\n<p>where <code>/dev</code>\
+    \ is the name of the device files and <code>/vd*</code> is the name of the virtuo\
+    \ block device.</p>\n<p>The important commands to that you need to know to configure\
+    \ the persistent volume storage once you have attached to your instance. \nFor\
+    \ most NeCTAR research cloud users an ext4 filesystem is more than sufficient\
+    \ and the different filesystems are beyond the scope of\nthis document.</p>\n\
+    <p>To to create an ext4 filesystem on the device or persistent volume use</p>\n\
+    <p><code>$ sudo mkfs.ext4 /dev/vdd</code></p>\n<p>WARNING: You only need to do\
+    \ this once as this reformats the device any data on the device will be lost!</p>\n\
+    <p>Create a directory to mount the volume to it can be anything but should be\
+    \ meaningful and consistent for your work.</p>\n<p><code>$ sudo mkdir /volume_data</code></p>\n\
+    <p>To mount the persistent volume the command is:</p>\n<p><code>$ sudo mount /dev/vdd\
+    \ /volume_data -t auto</code></p>\n<p>Lastly you will need to change the ownership\
+    \ of the <code>/volume_data</code> directoryto be able to have read/write \naccess\
+    \ to do this on a ubuntu instance use:</p>\n<p><code>$ sudo chown ubuntu /volume_data</code></p>\n\
+    <p>on a fedora, centos, scientific linux instances</p>\n<p><code>$ sudo chown\
+    \ ec2-user /volume_data</code></p>\n<p>and on a debian instance.</p>\n<p><code>$\
+    \ sudo chown debian /volume_data</code></p>\n<p>To unmount the volume from your\
+    \ instance use these command <code>umount</code>\nNOTE: Do not umount the device\
+    \ if you are in that directory so <code>cd</code> to your home directory first\
+    \ otherwise you it will fail.\n<code>$ cd</code><br>\n<code>$ sudo umount /volume_data</code></p>\n\
+    <p><a href=\"#top\">Top of page</a>\n<a name=\"object\"></a></p>\n<h3>What is\
+    \ object storage</h3>\n<p>What is object storage?</p>\n<p><img alt=\"\" src=\"\
+    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_obj_def.png?raw=true\"\
+    ></p>\n<p>A more useful definition can be found on the NeCTAR <a href=\"https://support.nectar.org.au/solution/articles/6000055382-introduction-to-cloud-storage\"\
+    >support</a> page.</p>\n<p>From the NeCTAR dashboard you can create <code>containers</code>\
+    \ in the Object Store.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_obj_1.png?raw=true\"\
+    > </p>\n<p>click the create container button</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_obj_2.png?raw=true\"\
+    > </p>\n<p>Fill in the Container name and the click the create container button.\
+    \ You can then choose if you want to make the object container public or private.</p>\n\
+    <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_obj_3.png?raw=true\"\
+    ></p>\n<p>The private objects are only available within your NeCTAR project. While\
+    \ object in public containers are exactly as the note states in the window \n\
+    when you created your container </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_obj_4.png?raw=true\"\
+    ></p>\n<p>It is available to anyone that knows the URL to that object including\
+    \ users who don't have access to NeCTAR instances.</p>\n<p>You can upload object\
+    \ data from you local computer to the container using the dashboard just select\
+    \ the <code>Upload Object</code> button. To \ndownload an object to your local\
+    \ computer just select the <code>Download</code> button.</p>\n<p><img alt=\"\"\
+    \ src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_obj_5.png?raw=true\"\
+    ></p>\n<p>To download the object to your instance you just neeed to use <code>wget</code></p>\n\
+    <p><code>wget https://dashboard.rc.nectar.org.au/project/containers/blast/wgs.99.tar.gz</code></p>\n\
+    <p><a href=\"#top\">Top of page</a>\n<a name=\"io\"></a></p>\n<h2>File I/O best\
+    \ practices</h2>\n<p>Moving data to and from you instance instance depending on\
+    \ the size of the files your are try to move can be trival for small data but\
+    \ large \ndata sets can become very difficult depending on many different things.\
+    \ Here are some things to keep in mind with data I/O and the cloud.</p>\n<ul>\n\
+    <li>\n<p>Compress your data files if they are larger than 10Mb with <a href=\"\
+    http://www.math.utah.edu/docs/info/gzip_4.html#SEC7\"><strong>gzip</strong></a>\
+    \ or some other compression tool it should be installed in your instance. </p>\n\
+    </li>\n<li>\n<p>If you have to move a directory create <a href=\"https://www.cs.colostate.edu/helpdocs/tar.html\"\
+    ><strong>tar</strong></a> files. </p>\n</li>\n<li>\n<p>Don't try to move data\
+    \ over a wireless network, plugin to an ethernet contection, preferably at your\
+    \ local institution they have larger bandwidth.</p>\n</li>\n<li>\n<p>If you data\
+    \ move still time out or are getting throttled contact your the local institutes\
+    \ IT support to see if they can help.</p>\n</li>\n<li>\n<p>Ohio-(Only handle it\
+    \ once) if you are uploading data to your instance try to move it directly to\
+    \ your instance, NeCTAR is on a fast networks as most\n  nectar nodes are housed\
+    \ within University or HPC data centers. </p>\n</li>\n</ul>\n<p>With smaller data\
+    \ you can try any of the methods coverd on the NeCTAR <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
+    >support</a> page it has excellent instructions.  This will work for moving data\
+    \ to and from your ephemeral or volume storage attached to your instances. </p>\n\
+    <p><a href=\"#top\">Top of page</a>\n<a name=\"openstack\"></a></p>\n<h2>Using\
+    \ the OpenStack APIs for Managing NCBI Data</h2>\n<p>The National Center for Biotechnology\
+    \ Information (<a href=\"http://www.ncbi.nlm.nih.gov/\"><strong>NCBI</strong></a>)\
+    \ is located in Bethesda, Marylanl and hosts the Basic Local Alignment Search\
+    \ Tool (<a href=\"http://blast.ncbi.nlm.nih.gov/Blast.cgi\"><strong>BLAST</strong></a>)\
+    \ data and is available directly from the NCBI FTP site <code>ftp://ftp.ncbi.nlm.nih.gov</code>.\
+    \ It is necessary for researchs to be able to access these data sets easily as\
+    \ they are required for many different Bioinformatic tools specifically BLAST.\
+    \ However we will not present how to actually run BLAST but how to manage the\
+    \ NeCTAR reseach cloud storage resources to enable researchers to utilize the\
+    \ NCBI BLAST data sets effectively.</p>\n<h3>Install the Python client tools</h3>\n\
+    <p>First you will need to update your instance and install a set of packages that\
+    \ support the OpenStack APIs.\nThese are the commands for a ubuntu instance.</p>\n\
+    <p><code>$ sudo apt-get update</code></p>\n<p><code>$ sudo apt-get install python-novaclient</code></p>\n\
+    <p><code>$ sudo apt-get install python-keystoneclient</code></p>\n<p><code>$ sudo\
+    \ apt-get install python-cinderclient</code></p>\n<p><code>$ sudo apt-get install\
+    \ python-swiftclient</code></p>\n<p><a href=\"#top\">Top of page</a></p>\n<h3>Configuring\
+    \ your instance to use the Openstack API</h3>\n<p>This the basic procedure to\
+    \ configure within your instance to use the OpenStack APIs with the Python clients.\n\
+    The first step is to set or reset your your password from the OpenStack dashboard\
+    \ through your user account settings. </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_1.png?raw=true\"\
+    > </p>\n<p>Select the Reset Password tab:</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_2.png?raw=true\"\
+    > </p>\n<p>that takes you to the Password Reset Form where you reset your password</p>\n\
+    <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_3.png?raw=true\"\
+    > </p>\n<p>This is your new password it is case sensitive. We will use this in\
+    \ the OpenStack RC file.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_4.png?raw=true\"\
+    > </p>\n<p>From the OpenStack dashboard under the Compute -&gt; Access &amp; Security,\
+    \ select the <code>Download OpenStack RC File</code>\nthat will automatically\
+    \ download a RC-file to your local machine.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_5.png?raw=true\"\
+    > </p>\n<p>The OpenStack RC File that you just downloaded will have the name Project_name-openrc.sh\n\
+    You will need to edit the following lines in the Project_name-openrc.sh file.</p>\n\
+    <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_6.png?raw=true\"\
+    > </p>\n<p>So that the new password is hardcoded into the Project_name-openrc.sh\
+    \ file.</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_7.png?raw=true\"\
+    > </p>\n<p>You will need to the copy that file and your ssh key file either the\
+    \ ssh <strong>pem file</strong> or the ssh <strong>key</strong> file that is associated\
+    \ with your instance\nfrom your local machine to your instance. Using any of the\
+    \ method described in  NeCTAR <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
+    >support</a> documents. You should move your key file or pem file to your <code>.ssh</code>\
+    \ directory in your home directory on your instance.</p>\n<p>On your instance\
+    \ you will need to source the Project_name-openrc.sh file to configure your environment\
+    \ to authenticate access to the OpenStack services.</p>\n<p><code>$ source Project_name-openrc.sh</code></p>\n\
+    <p>You will need to source the script before you can run any of the commands otherwise\
+    \ the environment is not set properly.</p>\n<p>note: If you see this </p>\n<p><img\
+    \ alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_8.png?raw=true\"\
+    > </p>\n<p>you forget to source the OpenStack RC file. </p>\n<p>If you source\
+    \ your OpenStack RC file and see this:</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_9.png?raw=true\"\
+    > </p>\n<p>You did not edit the OpenStack RC file!</p>\n<h3>Testing you API authentication</h3>\n\
+    <p>To test your access authentication you can use the command</p>\n<p><code>$\
+    \ nova list</code></p>\n<p>this should show the list of your current instances\
+    \ that indicates your authentication access was successful!</p>\n<p><img alt=\"\
+    \" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_10.png?raw=true\"\
+    > </p>\n<p><a href=\"#top\">Top of page</a>\n<a name=\"ncbi\"></a></p>\n<h3>Downloading\
+    \ NCBI datasets directly to your instance</h3>\n<p>The data transferring program\
+    \ listed NeCTAR <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
+    >support</a> documents\nwork nicely from your local computer but can be difficult\
+    \ to implement in the cloud because of gui's or poor performance.\nWhat we need\
+    \ is a program to allow us to download from the NCBI ftp site directly to our\
+    \ instance's ephemeral or volume storage that \nworks from the commandline.  \
+    \ </p>\n<p>NCBI has had good success with the <a href=\"http://lftp.yar.ru/desc.html\"\
+    ><strong>lftp</strong></a> program available from the image packages repository\
+    \ has shown to \nwork nicely from the UNIX/Linux commandline. To install it to\
+    \ your instance you can just use the package managment tools for ubuntu the command\
+    \ is:</p>\n<p><code>$ sudo apt-get install lftp</code></p>\n<p>you can then use\
+    \ the <code>lftp</code> command</p>\n<p><code>$ lftp ftp.ncbi.nlm.nih.gov</code></p>\n\
+    <p>Then you can use the same <code>ftp</code> commands to navigate between the\
+    \ local and remote systems and download with <code>get</code> and upload with\
+    \ <code>put</code>.\nThis figure shows how simple this process is to get to the\
+    \ blast datasets </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_11.png?raw=true\"\
+    > </p>\n<p>Now you can use get to download the data to your instance directly.</p>\n\
+    <h3>Using the swift API create a new container</h3>\n<p>To list all the containers\
+    \ in your project.</p>\n<p><code>$ swift list</code></p>\n<p>To create a new <strong>private</strong>\
+    \ container with the swift API from the command line</p>\n<p><code>$ swift post\
+    \ container_name</code></p>\n<p>To create a new <strong>public</strong> container\
+    \ the swift API use:</p>\n<p>`$ swift post -r .r:* container_name``</p>\n<p>To\
+    \ upload the data into the container.</p>\n<p><code>$ swift upload 'container_name'\
+    \ 'data_file'</code></p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_12.png?raw=true\"\
+    > </p>\n<p>To see your new container </p>\n<p><code>$ swift list</code></p>\n\
+    <p>and the objects in your new container</p>\n<p><code>$ swift list 'container_name'</code></p>\n\
+    <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_13.png?raw=true\"\
+    > </p>\n<p><a href=\"#top\">Top of page</a>\n<a name=\"summary\"></a></p>\n<h2>Summary</h2>\n\
+    <p>We have covered the difference between root, ephemeral, volume and object storage\
+    \ available through the NeCTAR research cloud \nand what programs are used to\
+    \ be able to store you data correctly so that you can make effective use of you\
+    \ virtual machine.</p>\n<ul>\n<li>\n<p>The root storage is for the Operating system\
+    \ and you home directory. You should install all applications there and your home\
+    \ directory\nis should not store any data but small scripts and files.</p>\n</li>\n\
+    <li>\n<p>The ephemeral storage is your workspace so all of you analysis should\
+    \ be done there and you can store your local data there. Remember\nto get the\
+    \ right size hardware flavor.  It needs to have enough disk space for analysis\
+    \ to run and store any associated data.  It is your\nresponsibilty to maintain\
+    \ and will require regular housekeeping.  Please <strong><em>delete</em></strong>\
+    \ files that are not needed and move important results back to\neither your local\
+    \ machine or to volume/object storage to share them with your group or the world.</p>\n\
+    </li>\n<li>\n<p>The volume storage can be used for storing results, working data,\
+    \ or as a working directory if needed. If you have multiple researcher who\nhave\
+    \ access to your project then you can share data via the volume storage.  It is\
+    \ also possible to attach more that one volume storage instance\nto your compute\
+    \ instance as well so you can one for input data and have a second for results.\
+    \  </p>\n</li>\n<li>\n<p>The object storage should be used for static datasets\
+    \ either reference ones like the NCBI-BLAST data sets or analysis results you\
+    \ wish to share\nwith collaborators.  Static data can be downloaded easly to your\
+    \ volume or ephemeral storage as part of you workflow or pipeline. With an orginal\n\
+    copy in object storage you can delete it from either volume or ephemeral storage\
+    \ then with out having to get a new copy to your instance. </p>\n</li>\n</ul>\n\
+    <p>NOTE: There are some unresolved issues with uploading large data sets (&gt;5GB)\
+    \ in to object storage. \nUnderstanding how to split/merge files that are larger\
+    \ than 5GB and being able to manage them easily..</p>\n<p><a href=\"#top\">Top\
+    \ of page</a></p>"
+  parent: 24
+  sha1: e64ccf77ecc13bd9e9c89011d8ea0603f9c5b836
+  title: Pawsey NeCTAR Storage and NCBI data
