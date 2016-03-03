@@ -29425,3 +29425,926 @@
   parent: 24
   sha1: e64ccf77ecc13bd9e9c89011d8ea0603f9c5b836
   title: Pawsey NeCTAR Storage and NCBI data
+116:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        created_at: '2016-03-02T20:58:18-05:00'
+        desc_un_html: " Introduction to MonARCH \n \n MonARCH (Monash Advanced Research\n\
+          Computing Hybrid) is the next-generation HPC/HTC Cluster, designed from\
+          \ the\nground up to address the emergent and future needs of the research\
+          \ communities\nsupported by Monash. \n A key feature of MonARCH is that\
+          \ it is provisioned through R@CMon, the Research\nCloud @ Monash facility.\
+          \ Through the use of advanced cloud technology, MonARCH\nis able to configure\
+          \ and grow dynamically. As with any HPC cluster, MonARCH\npresents a single\
+          \ point-of-access to computational researchers to run\ncalculations on its\
+          \ constituent servers. \n MonARCH aims to continually develop over time.\
+          \ Currently, it consists of 35\nservers under two complementary hardware\
+          \ specifications: \n \n high-core servers - two Haswell CPU sockets with\
+          \ a total of 24 physical cores\n  (or 48 hyperthreaded cores) at 2.80 GHz\
+          \ \n high-speed servers - two Haswell CPU sockets with a total of 16 physical\n\
+          \  cores (or 32 hyperthreaded cores) at 3.20 GHz \n \n For data storage,\
+          \ we have deployed a parallel file system service using Intel\nEnterprise\
+          \ Lustre; providing over 300 TB usable storage with room for future\nexpansion.\
+          \ \n The MonARCH service is operated by the Monash HPC team and continuing\
+          \ technical\nand operational support from the R@CMon team, this includes\
+          \ technical\nstaff from both the Monash eResearch Centre and Monash eSolutions.\
+          \ \n If you have found the MonARCH useful for your research, we will be\
+          \ very\ngrateful if you kindly acknowledge us with a text along the lines\
+          \ of: \n \n This research was supported in part by the Monash eResearch\
+          \ Centre and\neSolutions-Research Support Services through the use of the\
+          \ MonARCH HPC\nCluster. \n \n How to Access MonARCH \n To access MonARCH\
+          \ you will need to \n \n Create a username and password for the Monash HPC\
+          \ systems \n Request access to the MonARCH resource \n Use SSH or Strudel\
+          \ to access MonARCH \n \n Apply for access to Monash HPC systems and MonARCH\
+          \ \n \n From a web browser, visit The Monash HPC Identity Management System\n\
+          \ \n \n This web page will bootstrap your Monash HPC account using information\
+          \ provided\nby your Institution and the AAF. \n Depending on your settings,\
+          \ usually the next step will be to select your\ninstitution, in this example,\
+          \ \"Monash University\". \n \n 2: You will be redirected to your institutions\
+          \ secure Identity Provider\nservice. You should enter your institutional\
+          \ username and password to\nauthenticate to your institution.  In the background,\
+          \ your institution will\ntell us information like your Name and email address\
+          \ (but never your password).\nDepending on your settings, you may be asked\
+          \ to approve your institution\ntelling us this information. \n \n 3: The\
+          \ next step is Username Selection. You will be presented with a list of\n\
+          available usernames, It is important to note that this username is not\n\
+          necessarily the same as your institute username. This username is for SSH\
+          \ and\nSCP access to the MonARCH login node. \n In the example below, the\
+          \ user's University username is \"authcate\" but their username\nfor MonARCH\
+          \ is \"demo1\". \n \n 4: Apply to access MonARCH. Select the \"Use MonARCH\"\
+          \ option. \n This will send a request to the MonARCH team to approve access\
+          \ to the cluster. \n \n The above screen-grab shows that the application\
+          \ is pending for approval. \n The application will the go through an approval\
+          \ process. First the project\nleader will approve the application, then\
+          \ the administrators will approve the\napplication While the approval process\
+          \ is ongoing, if you click on the\n\"Applications\" button you should see\
+          \ something like this: \n ![Screen show of HPC ID system in waiting for\
+          \ admin state)(images/wait_admin.jpg) \n Once the application has been approved,\
+          \ you'll receive an email and be able to\nmove onto the next step. \n 5:\
+          \ Change your MonARCH cluster password. Note that this DOES NOT change your\n\
+          Institutional password. Choose \"Personal\" and click \"Change Password\"\
+          . \n Important: This DOES NOT change or affect your Institutional password.\
+          \ This\npassword is for SSH and SCP access to the cluster. \n \n Accessing\
+          \ MonARCH \n Using SSH \n You will need to use ssh (secure-shell) to login\
+          \ to the head node. This program\nencrypts your interactions with the server.\
+          \ How to get and use ssh depends upon\nyour desktop operating system. \n\
+          \ Linux and MacOS \n Linux and MacOS both have SSH built in. Simply open\
+          \ a terminal and type \n \n ssh username@monarch.erc.monash.edu.au \n \n\
+          \ where username is the selected username from Step 3. In the above example,\n\
+          the username is \"demo1\", so: \n \n ssh demo1@monarch.erc.monash.edu.au\
+          \ \n \n Microsoft Windows \n ssh is not native to Windows, but you can download\
+          \ several free versions. Many\nMonash PCs have a version of ssh installed\
+          \ already on them. \n putty \n You can download putty from the putty website\
+          \ Once\ninstalled you run putty: \n \n Start->All Programs->PuTTY->PuTTY\
+          \ \n \n Select \u201CSession:\u201D on the left pane. \n In the text box\
+          \ on the right pane labelled \"Host Name (or IP address)\"\nenter monarch.erc.monash.edu.au\
+          \ \n Click open. You will be prompted for your username and password. These\
+          \ are the\nusername and password you set for the Monash HPC ID system, not\
+          \ your\ninstitutional username and password. \n SLURM \n Introduction \n\
+          \ MonARCH uses the SLURM scheduler for running jobs.  The home page for\
+          \ SLURM is http://slurm.schedmd.com/, and it is used in many computing systems,\
+          \ such as MASSIVE and VLSCI.\nSLURM is an open-source workload manager designed\
+          \ for Linux clusters of all sizes. It provides three key functions. \n \n\
+          \ It allocates exclusive and/or non-exclusive access to resources (computer\
+          \ nodes) to users for some duration of time so they can perform work. \n\
+          \ It provides a framework for starting, executing, and monitoring work (typically\
+          \ a parallel job) on a set of allocated nodes. \n It arbitrates contention\
+          \ for resources by managing a queue of pending work. \n \n The following\
+          \ material will explain how users can use SLURM.  At the bottom of the page\
+          \ there is a PBS, SGE comparison section. \n SLURM Glossary \n It is important\
+          \ to understand that some SLURM syntax have meanings which may differ from\
+          \ syntax in other batch or resource schedulers. \n\n\n\nTerm\nDescription\n\
+          \n\n\n\nResource\nA mix of CPUs, memory and time\n\n\nTask\nA task under\
+          \ SLURM is a synonym for a process, and is often the number of MPI processes\
+          \ that are required\n\n\nPartition\nSLURM groups nodes into sets called\
+          \ partitions. Jobs are submitted to a partition to run. In other batch systems\
+          \ the term queue is used\n\n\nAccount\nThe term account is used to describe\
+          \ the entity to which used resources are charged to\n\n\nBatch jobs\nA chain\
+          \ of commands in a script file\n\n\nSuccess\nA job completes and terminates\
+          \ well (with exit status 0) (cancelled jobs are not considered successful)\n\
+          \n\nFailure\nAnything that lacks success\n\n\nCPUs\nThe term CPU is used\
+          \ to describe the smallest physical consumable, and for multi-core machines\
+          \ this will be the core. For multi-core machines where hyper-threading is\
+          \ enabled this will be a hardware thread.\n\n\nNode\nA node contains one\
+          \ or more sockets\n\n\nSocket\nA socket contains one processor\n\n\nProcessor\n\
+          A processor contains one or more cores\n\n\nCore\nA CPU core\n\n\n\n SLURM\
+          \ Shell Commands \n Users submit jobs to the MonARCH using SLURM commands\
+          \ called from the Unix shell (such as bash, or csh). Typically a user creates\
+          \ a batch submission script that specifies what computing resources they\
+          \ want from the cluster, as well as the commands to execute when the job\
+          \ is running.  They then use sbatch filename to submit the job.  Users can\
+          \ kill, pause and interrogate the jobs they are running.  Here is a list\
+          \ of common commands: \n Commands to submit/delete a job in the queue \n\
+          \n\n\nCommand\nDescription\n\n\n\n\nsbatch\nsbatch is used to submit a job\
+          \ script for later execution. The script will typically contain one or more\
+          \ srun commands to launch parallel tasks.\n\n\nscancel\nDeletes a job from\
+          \ the queue, or stops it running.\n\n\n\n Commands to run an executable\
+          \ \n\n\n\nCommand\nDescription\n\n\n\n\nsrun\nsrun should be used to execute\
+          \ each program in your job script. It supersedes mpirun and is capable of\
+          \ starting highly parallel jobs much faster than mpirun\n\n\n\n Examining\
+          \ and Controlling the queue \n\n\n\nCommand\nDescription\n\n\n\n\nsinfo\n\
+          reports the state of partitions and nodes managed by Slurm. It has a wide\
+          \ variety of filtering, sorting, and formatting options.\n\n\nsqueue\nreports\
+          \ the state of jobs or job steps. It has a wide variety of filtering, sorting,\
+          \ and formatting options. By default, it reports the running jobs in priority\
+          \ order and then the pending jobs in priority order.\n\n\nscontrol\nReport\
+          \  or modify details of a job\n\n\nsinteractive\nIt is possible to run a\
+          \ job as an interactive session using ' sinteractive '. The program hangs\
+          \ until the session is scheduled to run, and then the user is logged into\
+          \ the compute node. Exiting the shell (or logging out) ends the session\
+          \ and the user is returned to the original node.\n\n\n\n Viewing job metrics\
+          \ \n\n\n\nCommand\nDescription\n\n\n\n\nsacct\nThe command sacct shows metrics\
+          \ from past jobs.\n\n\nsstat\nThe command sstat shows metrics from currently\
+          \ running jobs when given a job number. Note, you need to launch jobs with\
+          \ srun to get this information.\n\n\n\n More on Shell Commands \n Users\
+          \ have several ways of getting information on shell commands. \n \n The\
+          \ commands have man pages (via the unix manual). e.g. man sbatch \n The\
+          \ commands have built-in help options, e.g. sbatch --help or sbatch --usage.\
+          \ \n help print brief description \n usage  prints list of options \n There\
+          \ are online manuals and information pages \n \n Most commands have options\
+          \ in two formats: \n \n single letter e.g. -N 1 \n verbose  e.g. --nodes=1\
+          \ \n \n Note the double dash -- in the verbose format. A non-\xAD\u2010\
+          zero exit code indicates failure in a command. \n Some default behaviours\
+          \ \n \n SLURM processes launched with srun are not run under a shell, so\
+          \ none of the following are executed: \n ~/.profile \n ~/.baschrc \n ~/.login\
+          \ \n ~/.cshrc, etc \n SLURM exports user environment by default (or --export=NONE)\
+          \ \n SLURM runs in the current directory (no need to cd $PBS_O_WORKDIR)\
+          \ \n SLURM combines stdout and stderr and outputs directly (and naming is\
+          \ different). The SLURM stdout /stderr file will be appended,not overwritten\
+          \ (if it exists) \n SLURM is case insensitive (e.g. project names are lower\
+          \ case) \n Use #SBATCH instead of #PBS in batch scripts \n \n Batch Scripts\
+          \ \n A job script has a header section which specifies the resources that\
+          \ are\nrequired to run the job as well as the commands that must be executed.\
+          \ An\nexample script is shown below. \n ```bash \n !/bin/bash \n SBATCH\
+          \ --job-name=example \n SBATCH --account=director100 \n SBATCH --partition=workq\
+          \ \n SBATCH --time=01:00:00 \n SBATCH --ntasks=32 \n SBATCH --ntasks-per-node=16\
+          \ \n SBATCH --cpus-per-task=1 \n SBATCH --export=NONE \n module load intel\n\
+          uname -a\nsrun uname -a\n``` \n Here are some of the SLURM directives you\
+          \ can use in a batch script. \n\n\n\nSLURM directive\nDescription\n\n\n\n\
+          \n--job-name=[job name]\nThe job name for the allocation, defaults to the\
+          \ script name.\n\n\n--account=[account name]\nCharge resources used to this\
+          \ account. A default account is configured for each user.\n\n\n--partition=[partition\
+          \ name]\nRequest an allocation on the specified partition. If not specified\
+          \ jobs will be submitted to the default partition.\n\n\n--time=[time spec]\n\
+          The total walltime for the job allocation.\n\n\n--array=[job spec]\nSubmit\
+          \ a job array with the defined indices.\n\n\n--dependency=[dependency list]\n\
+          Specify a job dependency.\n\n\n--nodes=[total nodes]\nSpecify the total\
+          \ number of nodes.\n\n\n--ntasks=[total tasks]\nSpecify the total number\
+          \ of tasks.\n\n\n--ntasks-per-node=[ntasks]\nSpecify the number of tasks\
+          \ per node.\n\n\n--cpus-per-task=[ncpus]\nSpecify the number of CPUs per\
+          \ task.\n\n\n--ntasks-per-core=[ntasks]\nSpecify the number of tasks per\
+          \ CPU core.\n\n\n--export=[variable\\\nALL\\\n\n\n\n NOTE: SLURM will copy\
+          \ the entire environment from the shell where a job is\nsubmitted from.\
+          \ This may break existing batch scripts that require a different\nenvironment\
+          \ than say a login environment. To guard against this --export=NONE\ncan\
+          \ be specified for each batch script. \n MonARCH Hardware Summary \n There\
+          \ are two classes of compute nodes on MonARCH. They are broken into \"High\n\
+          Speed\" and \"High Core Count\" flavours. \n \n \n config A: high-ish CPU\
+          \ clock speed, lower-core count, standard RAM \n \n \n 16 physical cores\
+          \ or 32 HT cores ==> two Intel Xeon E5-2667 v3 3.2GHz, 20M\n    Cache, 9.60GT/s\
+          \ QPI, Turbo, HT, 8C/16T (135W) \n \n 128 GB RAM == 8 x 16GB RDIMM, 2133\
+          \ MT/s, Dual Rank, x4 Data Width \n config B: lower CPU clock speed, high-core\
+          \ count, higher RAM \n 24 physical cores or 48 HT cores ==> two Intel Xeon\
+          \ E5-2680 v3 2.5GHz, 30M\n    Cache, 9.60GT/s QPI, Turbo, HT, 12C/24T (120W)\
+          \ \n 256 GB RAM == 16 x 16GB RDIMM, 2133 MT/s, Dual Rank, x4 Data Width\
+          \ \n \n MonARCH supports a wide range of software  packages. The Linux environment\
+          \ module utility is used to load and unload different software packages.\
+          \ When a module is loaded, it sets specific environment variables (e.g.,\
+          \ PATH, LD_LIBRARY_PATH, etc.) to the appropriate pathnames where the software\
+          \ is installed. \n Environment Modules \n There may be occasions where you\
+          \ need to use different compilers and/or libraries from those found in your\
+          \ usual environment, and you therefore need to adjust your environment variables\
+          \ accordingly. The module command makes this easy. Some examples of its\
+          \ use are: \n\n\n\nmodule avail\nShows what modules are available on the\
+          \ system\n\n\n\n\nmodule whatis\nShows what they do\n\n\nmodule load openmpi-intel\n\
+          Makes Intel MPI libraries and Intel Fortran compiler available\n\n\nmodule\
+          \ list\nShows which module are loaded\n\n\nmodule purge\nUnloads all of\
+          \ them\n\n\nmodule unload openmpi-intel intel\nUnloads Intel MPI and Intel\
+          \ Fortran modules\n\n\nmodule display [modulefile]Software\nUse this command\
+          \ to see exactly what a given modulefile will do to your environment, such\
+          \ as what will be added to the PATH, MANPATH, etc. environment variables.\n\
+          \n\n\n Here is an example of how to load the GNU C/C++ compiler. \n ```bash\
+          \ \n $module load gcc/4.3.5\n``` \n That's all! Now here we put some extra\
+          \ Linux commands to show that, by loading\nthe module, we override the default\
+          \ System compiler. \n Load the gcc compiler, showing paths and versions:\
+          \ \n ```bash \n \n show that we have the default compiler \n \n $which gcc\n\
+          /usr/bin/gcc\n$gcc -v\nUsing built-in specs.\nTarget: x86_64-redhat-linux\n\
+          Configured with: ../configure --prefix=/usr --mandir=/usr/share/man\n--infodir=/usr/share/info\n\
+          --enable-shared --enable-threads=posix --enable-checking=release\n--with-system-zlib\
+          \ --enable-__cxa_atexit\n--disable-libunwind-exceptions --enable-libgcj-multifile\n\
+          --enable-languages=c,c++,objc,obj-c++,java,fortran,ada\n--enable-java-awt=gtk\
+          \ --disable-dssi --enable-plugin\n--with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre\n\
+          --with-cpu=generic --host=x86_64-redhat-linux\nThread model: posix\ngcc\
+          \ version 4.1.2 20080704 (Red Hat 4.1.2-46) \n \n load a different compiler\
+          \ \n \n $module load gcc/4.3.5 \n \n check that we have a new version \n\
+          \ \n $which gcc\n/opt/sw/gcc-4.3.5/bin/gcc\n$gcc -v\nUsing built-in specs.\n\
+          Target: x86_64-unknown-linux-gnu\nConfigured with: ../gcc-4.3.5/configure\
+          \ --prefix=/opt/sw/gcc-4.3.5\nThread model: posix\ngcc version 4.3.5 (GCC)\n\
+          ``` \n Suppose we wanted to know more about a module we wanted to load?\
+          \ That can be done via the 'show' command 'module show' example \n ```bash\n\
+          module show gcc/4.3.5 \n \n /opt/sw/Modules/modulefiles/gcc/4.3.5:\nmodule-whatis\
+          \    GNU Compiler Collection is ...\nconflict     gcc/4.8.0\nconflict  \
+          \   gcc/4.4.4\nconflict     gcc/4.5.3\nconflict     intel/10.0.025\nconflict\
+          \     intelC/10.0.025\nprepend-path PATH /opt/sw/gcc-4.3.5/bin:/opt/sw/gcc-4.3.5/libexec/gcc/x86_64-unknown-linux-gnu/4.3.5\n\
+          prepend-path     LD_LIBRARY_PATH /opt/sw/gcc-4.3.5/lib64:/opt/sw/gcc-4.3.5/lib\n\
+          prepend-path     MANPATH /opt/sw/gcc-4.3.5/man \n \n ``` \n Suppose we wanted\
+          \ to use the system compiler again. All you do is unload the module.\nUnload\
+          \ the gcc compiler \n ```bash\nmodule unload gcc/4.3.5 \n ``` \n Here we\
+          \ unload the compiler, checking that we have the right versions when finished.\
+          \ \n Check that we load the correct compiler: \n ```bash \n \n unload compiler\
+          \ \n \n $ module unload gcc/4.3.5 \n \n show that we have the default compiler\
+          \ \n \n $which gcc\n/usr/bin/gcc\n$gcc -v\nUsing built-in specs.\nTarget:\
+          \ x86_64-redhat-linux\nConfigured with: ../configure --prefix=/usr --mandir=/usr/share/man\
+          \ --infodir=/usr/share/info --enable-shared --enable-threads=posix --enable-checking=release\
+          \ --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions\
+          \ --enable-libgcj-multifile --enable-languages=c,c++,objc,obj-c++,java,fortran,ada\
+          \ --enable-java-awt=gtk --disable-dssi --enable-plugin --with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre\
+          \ --with-cpu=generic --host=x86_64-redhat-linux\nThread model: posix\ngcc\
+          \ version 4.1.2 20080704 (Red Hat 4.1.2-46)\n``` \n An advantage of using\
+          \ the module command is that it warns you about conflicting packages.  You\
+          \ can't load two different gcc compilers at the same time! \n bash\n$ module\
+          \ load gcc/4.3.5\n$ module load gcc/4.2.3\ngcc/4.2.3(15):ERROR:150:    Module\
+          \ 'gcc/4.2.3' conflicts with the currently loaded module(s) 'gcc/4.3.5'\n\
+          gcc/4.2.3(15):ERROR:102:    Tcl command execution failed: conflict gcc/4.3.5\
+          \ \n Note. Some modules load other modules! Also, if the software is licensed,\n\
+          loading a module does not mean you will be allowed access to it.  Please\
+          \  email\nmcc-help@monash.edu to gain access to proprietary software. Here,\
+          \ loading the\nvasp module will not allow you access to it. \n Example of\
+          \ 'module list': \n bash\nmodule list\nCurrently Loaded Modulefiles:\n \
+          \ 1) gcc/4.3.5               3) mpfr/2.4.2              5) openmpi/1.6-gcc-4.5.3\
+          \   7) vasp/5.3.2-2D\n  2) gmp/4.3.2               4) mpc/0.9          \
+          \       6) fftw/3.2.2-openmp \n If you do not explicitly give a version\
+          \ number, module will use the default module. \n Example of 'module display'\
+          \ \n ```bash\nmodule display gcc \n \n /opt/sw/Modules/modulefiles/gcc/4.4.4:\
+          \ \n             module-whatis     GNU Compiler Collection is ...\n    \
+          \        module         load gmp mpfr\n            conflict     gcc/4.8.0\n\
+          \            conflict     gcc/4.3.5\n            conflict     gcc/4.5.3\n\
+          \            conflict     intel/10.0.025\n            conflict     intelC/10.0.025\n\
+          \            prepend-path    PATH/opt/sw/gcc-4.4.4/bin:/opt/sw/gcc-4.4.4/libexec/gcc/x86_64-unknown-linux-gnu/4.4.4\n\
+          \            prepend-path    LD_LIBRARY_PATH /opt/sw/gcc-4.4.4//lib64\n\
+          \            prepend-path    MANPATH /opt/sw/gcc-4.4.4//man\n          \
+          \  -------------------------------------------------------------------\n\
+          \ \n ``` \n This is the output of 'module avail'.  You can interrogate any\
+          \ module with the commands listed above.\nOutput of 'module avail' \n ```bash\n\
+          module avail\n------------------------------ /usr/share/Modules/modulefiles\
+          \ -------------------------------\ndot                    matlab-compiler/R2011a\
+          \ module-info            null\nmatlab/R2011a-local    module-cvs       \
+          \      modules                use.own \n ------------------------------\
+          \ /opt/sw/Modules/modulefiles ----------------------------------\nFEniCS/1.0\
+          \                         fluent/proto                       libctl/3.0.3(default)\n\
+          Mesa/7.0.1(default)                freeglut/2.6.0                     libctl/3.1\n\
+          Mesa/7.0.2                         freeimage/3.13.1                   libctl/3.2.1\n\
+          Mesa/7.2                           freesurfer/5.0.0                   libxc/2.0.2\n\
+          OpenBUGS/3.1.1                     fsc/1.1.2                          libxml2/2.7.2\n\
+          OpenCV/2.2.0                       fsl/4.0.2                          macmolplt/7.4.2\n\
+          Qt/3.3.8b                          fsl/4.1.0-test                     mallet/2.0.7\n\
+          Qt/4.2.3                           fsl/4.1.5                          ...\n\
+          ...\n``` "
+        description: "<h1>Introduction to MonARCH</h1>\n<p><img alt=\"MonARCH Compute\
+          \ Nodes\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/MonARCH.png?raw=true\"\
+          ></p>\n<p>MonARCH (Monash Advanced Research\nComputing Hybrid) is the next-generation\
+          \ HPC/HTC Cluster, designed from the\nground up to address the emergent\
+          \ and future needs of the research communities\nsupported by Monash.</p>\n\
+          <p>A key feature of MonARCH is that it is provisioned through R@CMon, the\
+          \ Research\nCloud @ Monash facility. Through the use of advanced cloud technology,\
+          \ MonARCH\nis able to configure and grow dynamically. As with any HPC cluster,\
+          \ MonARCH\npresents a single point-of-access to computational researchers\
+          \ to run\ncalculations on its constituent servers.</p>\n<p>MonARCH aims\
+          \ to continually develop over time. Currently, it consists of 35\nservers\
+          \ under two complementary hardware specifications:</p>\n<ul>\n<li>high-core\
+          \ servers - two Haswell CPU sockets with a total of 24 physical cores\n\
+          \  (or 48 hyperthreaded cores) at 2.80 GHz</li>\n<li>high-speed servers\
+          \ - two Haswell CPU sockets with a total of 16 physical\n  cores (or 32\
+          \ hyperthreaded cores) at 3.20 GHz</li>\n</ul>\n<p>For data storage, we\
+          \ have deployed a parallel file system service using Intel\nEnterprise Lustre;\
+          \ providing over 300 TB usable storage with room for future\nexpansion.</p>\n\
+          <p>The MonARCH service is operated by the Monash HPC team and continuing\
+          \ technical\nand operational support from the R@CMon team, this includes\
+          \ technical\nstaff from both the Monash eResearch Centre and Monash eSolutions.</p>\n\
+          <p>If you have found the MonARCH useful for your research, we will be very\n\
+          grateful if you kindly acknowledge us with a text along the lines of:</p>\n\
+          <blockquote>\n<p>This research was supported in part by the Monash eResearch\
+          \ Centre and\neSolutions-Research Support Services through the use of the\
+          \ MonARCH HPC\nCluster.</p>\n</blockquote>\n<h2>How to Access MonARCH</h2>\n\
+          <p>To access MonARCH you will need to</p>\n<ul>\n<li>Create a username and\
+          \ password for the Monash HPC systems</li>\n<li>Request access to the MonARCH\
+          \ resource</li>\n<li>Use SSH or Strudel to access MonARCH</li>\n</ul>\n\
+          <h3>Apply for access to Monash HPC systems and MonARCH</h3>\n<ol>\n<li>From\
+          \ a web browser, visit <a href=\"https://hpc.erc.monash.edu.au/aafbootstrap\"\
+          >The Monash HPC Identity Management System</a>\n</li>\n</ol>\n<p>This web\
+          \ page will bootstrap your Monash HPC account using information provided\n\
+          by your Institution and the AAF.</p>\n<p>Depending on your settings, usually\
+          \ the next step will be to select your\ninstitution, in this example, \"\
+          Monash University\".</p>\n<p><img alt=\"Screen shot of the AAF Discovery\
+          \ Service\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/aaf_ds.jpg?raw=true\"\
+          ></p>\n<p>2: You will be redirected to your institutions secure Identity\
+          \ Provider\nservice. You should enter your institutional username and password\
+          \ to\nauthenticate to your institution.  In the background, your institution\
+          \ will\ntell us information like your Name and email address (but never\
+          \ your password).\nDepending on your settings, you may be asked to approve\
+          \ your institution\ntelling us this information.</p>\n<p><img alt=\"Screen\
+          \ shot of the Monash AAF Identity Provider\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/monash_shib.jpg?raw=true\"\
+          ></p>\n<p>3: The next step is Username Selection. You will be presented\
+          \ with a list of\navailable usernames, It is important to note that this\
+          \ username is not\nnecessarily the same as your institute username. This\
+          \ username is for SSH and\nSCP access to the MonARCH login node.</p>\n<p>In\
+          \ the example below, the user's University username is \"authcate\" but\
+          \ their username\nfor MonARCH is \"demo1\".</p>\n<p><img alt=\"Screen shot\
+          \ of HPC Id selecting a username\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/username_selection.jpg?raw=true\"\
+          ></p>\n<p>4: Apply to access MonARCH. Select the <strong>\"Use MonARCH\"\
+          </strong> option.</p>\n<p>This will send a request to the MonARCH team to\
+          \ approve access to the cluster.</p>\n<p><img alt=\"Screen shot of HPC ID\
+          \ system showing a pending application\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/application_pending.jpg?raw=true\"\
+          ></p>\n<p>The above screen-grab shows that the application is pending for\
+          \ approval.</p>\n<p>The application will the go through an approval process.\
+          \ First the project\nleader will approve the application, then the administrators\
+          \ will approve the\napplication While the approval process is ongoing, if\
+          \ you click on the\n<strong>\"Applications\"</strong> button you should\
+          \ see something like this:</p>\n<p>![Screen show of HPC ID system in waiting\
+          \ for admin state)(images/wait_admin.jpg)</p>\n<p>Once the application has\
+          \ been approved, you'll receive an email and be able to\nmove onto the next\
+          \ step.</p>\n<p>5: Change your MonARCH cluster password. Note that this\
+          \ <em>DOES NOT</em> change your\nInstitutional password. Choose <strong>\"\
+          Personal\"</strong> and click <strong>\"Change Password\"</strong>.</p>\n\
+          <p>Important: This <em>DOES NOT</em> change or affect your Institutional\
+          \ password. This\npassword is for SSH and SCP access to the cluster.</p>\n\
+          <p><img alt=\"Screen shot of the HPC Id system showing how to\nchange a\
+          \ password\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR%20Documentation--DOCID16/Tools%20and%20Apps--DOCID24/images/set_password.jpg?raw=true\"\
+          ></p>\n<h3>Accessing MonARCH</h3>\n<h4>Using SSH</h4>\n<p>You will need\
+          \ to use ssh (secure-shell) to login to the head node. This program\nencrypts\
+          \ your interactions with the server. How to get and use ssh depends upon\n\
+          your desktop operating system.</p>\n<h5>Linux and MacOS</h5>\n<p>Linux and\
+          \ MacOS both have SSH built in. Simply open a terminal and type</p>\n<blockquote>\n\
+          <p>ssh <em>username</em>@monarch.erc.monash.edu.au</p>\n</blockquote>\n\
+          <p>where <em>username</em> is the selected username from Step 3. In the\
+          \ above example,\nthe username is \"demo1\", so:</p>\n<blockquote>\n<p>ssh\
+          \ demo1@monarch.erc.monash.edu.au</p>\n</blockquote>\n<h5>Microsoft Windows</h5>\n\
+          <p>ssh is not native to Windows, but you can download several free versions.\
+          \ Many\nMonash PCs have a version of ssh installed already on them.</p>\n\
+          <h6>putty</h6>\n<p>You can download putty from <a href=\"http://www.putty.org/\"\
+          >the putty website</a> Once\ninstalled you run putty:</p>\n<blockquote>\n\
+          <p>Start-&gt;All Programs-&gt;PuTTY-&gt;PuTTY</p>\n</blockquote>\n<p>Select\
+          \ \u201CSession:\u201D on the left pane.</p>\n<p>In the text box on the\
+          \ right pane labelled <strong>\"Host Name (or IP address)\"</strong>\nenter\
+          \ <strong>monarch.erc.monash.edu.au</strong></p>\n<p>Click open. You will\
+          \ be prompted for your username and password. These are the\nusername and\
+          \ password you set for the Monash HPC ID system, not your\ninstitutional\
+          \ username and password.</p>\n<h2>SLURM</h2>\n<h3>Introduction</h3>\n<p>MonARCH\
+          \ uses the SLURM scheduler for running jobs.  The home page for SLURM is\
+          \ <a href=\"http://slurm.schedmd.com/\">http://slurm.schedmd.com/</a>, and\
+          \ it is used in many computing systems, such as MASSIVE and VLSCI.\nSLURM\
+          \ is an open-source workload manager designed for Linux clusters of all\
+          \ sizes. It provides three key functions.</p>\n<ul>\n<li>It allocates exclusive\
+          \ and/or non-exclusive access to resources (computer nodes) to users for\
+          \ some duration of time so they can perform work.</li>\n<li>It provides\
+          \ a framework for starting, executing, and monitoring work (typically a\
+          \ parallel job) on a set of allocated nodes.</li>\n<li>It arbitrates contention\
+          \ for resources by managing a queue of pending work.</li>\n</ul>\n<p>The\
+          \ following material will explain how users can use SLURM.  At the bottom\
+          \ of the page there is a PBS, SGE comparison section.</p>\n<h3>SLURM Glossary</h3>\n\
+          <p>It is important to understand that some SLURM syntax have meanings which\
+          \ may differ from syntax in other batch or resource schedulers.</p>\n<table>\n\
+          <thead>\n<tr>\n<th>Term</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n\
+          <tr>\n<td>Resource</td>\n<td>A mix of CPUs, memory and time</td>\n</tr>\n\
+          <tr>\n<td>Task</td>\n<td>A task under SLURM is a synonym for a process,\
+          \ and is often the number of MPI processes that are required</td>\n</tr>\n\
+          <tr>\n<td>Partition</td>\n<td>SLURM groups nodes into sets called partitions.\
+          \ Jobs are submitted to a partition to run. In other batch systems the term\
+          \ queue is used</td>\n</tr>\n<tr>\n<td>Account</td>\n<td>The term account\
+          \ is used to describe the entity to which used resources are charged to</td>\n\
+          </tr>\n<tr>\n<td>Batch jobs</td>\n<td>A chain of commands in a script file</td>\n\
+          </tr>\n<tr>\n<td>Success</td>\n<td>A job completes and terminates well (with\
+          \ exit status 0) (cancelled jobs are not considered successful)</td>\n</tr>\n\
+          <tr>\n<td>Failure</td>\n<td>Anything that lacks success</td>\n</tr>\n<tr>\n\
+          <td>CPUs</td>\n<td>The term CPU is used to describe the smallest physical\
+          \ consumable, and for multi-core machines this will be the core. For multi-core\
+          \ machines where hyper-threading is enabled this will be a hardware thread.</td>\n\
+          </tr>\n<tr>\n<td>Node</td>\n<td>A node contains one or more sockets</td>\n\
+          </tr>\n<tr>\n<td>Socket</td>\n<td>A socket contains one processor</td>\n\
+          </tr>\n<tr>\n<td>Processor</td>\n<td>A processor contains one or more cores</td>\n\
+          </tr>\n<tr>\n<td>Core</td>\n<td>A CPU core</td>\n</tr>\n</tbody>\n</table>\n\
+          <h3>SLURM Shell Commands</h3>\n<p>Users submit jobs to the MonARCH using\
+          \ SLURM commands called from the Unix shell (such as bash, or csh). Typically\
+          \ a user creates a batch submission script that specifies what computing\
+          \ resources they want from the cluster, as well as the commands to execute\
+          \ when the job is running.  They then use sbatch <em>filename</em> to submit\
+          \ the job.  Users can kill, pause and interrogate the jobs they are running.\
+          \  Here is a list of common commands:</p>\n<h4>Commands to submit/delete\
+          \ a job in the queue</h4>\n<table>\n<thead>\n<tr>\n<th>Command</th>\n<th>Description</th>\n\
+          </tr>\n</thead>\n<tbody>\n<tr>\n<td>sbatch</td>\n<td>sbatch is used to submit\
+          \ a job script for later execution. The script will typically contain one\
+          \ or more srun commands to launch parallel tasks.</td>\n</tr>\n<tr>\n<td>scancel</td>\n\
+          <td>Deletes a job from the queue, or stops it running.</td>\n</tr>\n</tbody>\n\
+          </table>\n<h4>Commands to run an executable</h4>\n<table>\n<thead>\n<tr>\n\
+          <th>Command</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n\
+          <td>srun</td>\n<td>srun should be used to execute each program in your job\
+          \ script. It supersedes mpirun and is capable of starting highly parallel\
+          \ jobs much faster than mpirun</td>\n</tr>\n</tbody>\n</table>\n<h4>Examining\
+          \ and Controlling the queue</h4>\n<table>\n<thead>\n<tr>\n<th>Command</th>\n\
+          <th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>sinfo</td>\n<td>reports\
+          \ the state of partitions and nodes managed by Slurm. It has a wide variety\
+          \ of filtering, sorting, and formatting options.</td>\n</tr>\n<tr>\n<td>squeue</td>\n\
+          <td>reports the state of jobs or job steps. It has a wide variety of filtering,\
+          \ sorting, and formatting options. By default, it reports the running jobs\
+          \ in priority order and then the pending jobs in priority order.</td>\n\
+          </tr>\n<tr>\n<td>scontrol</td>\n<td>Report  or modify details of a job</td>\n\
+          </tr>\n<tr>\n<td>sinteractive</td>\n<td>It is possible to run a job as an\
+          \ interactive session using ' sinteractive '. The program hangs until the\
+          \ session is scheduled to run, and then the user is logged into the compute\
+          \ node. Exiting the shell (or logging out) ends the session and the user\
+          \ is returned to the original node.</td>\n</tr>\n</tbody>\n</table>\n<h4>Viewing\
+          \ job metrics</h4>\n<table>\n<thead>\n<tr>\n<th>Command</th>\n<th>Description</th>\n\
+          </tr>\n</thead>\n<tbody>\n<tr>\n<td>sacct</td>\n<td>The command sacct shows\
+          \ metrics from past jobs.</td>\n</tr>\n<tr>\n<td>sstat</td>\n<td>The command\
+          \ sstat shows metrics from currently running jobs when given a job number.\
+          \ Note, you need to launch jobs with srun to get this information.</td>\n\
+          </tr>\n</tbody>\n</table>\n<h3>More on Shell Commands</h3>\n<p>Users have\
+          \ several ways of getting information on shell commands.</p>\n<ul>\n<li>The\
+          \ commands have man pages (via the unix manual). e.g. man sbatch</li>\n\
+          <li>The commands have built-in help options, e.g. sbatch --help or sbatch\
+          \ --usage.</li>\n<li>help print brief description</li>\n<li>usage  prints\
+          \ list of options</li>\n<li>There are online manuals and information pages</li>\n\
+          </ul>\n<p>Most commands have options in two formats:</p>\n<ul>\n<li>single\
+          \ letter e.g. -N 1</li>\n<li>verbose  e.g. --nodes=1</li>\n</ul>\n<p>Note\
+          \ the double dash -- in the verbose format. A non-\xAD\u2010zero exit code\
+          \ indicates failure in a command.</p>\n<h4>Some default behaviours</h4>\n\
+          <ul>\n<li>SLURM processes launched with srun are not run under a shell,\
+          \ so none of the following are executed:</li>\n<li>~/.profile</li>\n<li>~/.baschrc</li>\n\
+          <li>~/.login</li>\n<li>~/.cshrc, etc</li>\n<li>SLURM exports user environment\
+          \ by default (or --export=NONE)</li>\n<li>SLURM runs in the current directory\
+          \ (no need to cd $PBS_O_WORKDIR)</li>\n<li>SLURM combines stdout and stderr\
+          \ and outputs directly (and naming is different). The SLURM stdout /stderr\
+          \ file will be appended,not overwritten (if it exists)</li>\n<li>SLURM is\
+          \ case insensitive (e.g. project names are lower case)</li>\n<li>Use #SBATCH\
+          \ instead of #PBS in batch scripts</li>\n</ul>\n<h3>Batch Scripts</h3>\n\
+          <p>A job script has a header section which specifies the resources that\
+          \ are\nrequired to run the job as well as the commands that must be executed.\
+          \ An\nexample script is shown below.</p>\n<p>```bash</p>\n<h1>!/bin/bash</h1>\n\
+          <h1>SBATCH --job-name=example</h1>\n<h1>SBATCH --account=director100</h1>\n\
+          <h1>SBATCH --partition=workq</h1>\n<h1>SBATCH --time=01:00:00</h1>\n<h1>SBATCH\
+          \ --ntasks=32</h1>\n<h1>SBATCH --ntasks-per-node=16</h1>\n<h1>SBATCH --cpus-per-task=1</h1>\n\
+          <h1>SBATCH --export=NONE</h1>\n<p>module load intel\nuname -a\nsrun uname\
+          \ -a\n```</p>\n<p>Here are some of the SLURM directives you can use in a\
+          \ batch script.</p>\n<table>\n<thead>\n<tr>\n<th>SLURM directive</th>\n\
+          <th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>--job-name=[job\
+          \ name]</td>\n<td>The job name for the allocation, defaults to the script\
+          \ name.</td>\n</tr>\n<tr>\n<td>--account=[account name]</td>\n<td>Charge\
+          \ resources used to this account. A default account is configured for each\
+          \ user.</td>\n</tr>\n<tr>\n<td>--partition=[partition name]</td>\n<td>Request\
+          \ an allocation on the specified partition. If not specified jobs will be\
+          \ submitted to the default partition.</td>\n</tr>\n<tr>\n<td>--time=[time\
+          \ spec]</td>\n<td>The total walltime for the job allocation.</td>\n</tr>\n\
+          <tr>\n<td>--array=[job spec]</td>\n<td>Submit a job array with the defined\
+          \ indices.</td>\n</tr>\n<tr>\n<td>--dependency=[dependency list]</td>\n\
+          <td>Specify a job dependency.</td>\n</tr>\n<tr>\n<td>--nodes=[total nodes]</td>\n\
+          <td>Specify the total number of nodes.</td>\n</tr>\n<tr>\n<td>--ntasks=[total\
+          \ tasks]</td>\n<td>Specify the total number of tasks.</td>\n</tr>\n<tr>\n\
+          <td>--ntasks-per-node=[ntasks]</td>\n<td>Specify the number of tasks per\
+          \ node.</td>\n</tr>\n<tr>\n<td>--cpus-per-task=[ncpus]</td>\n<td>Specify\
+          \ the number of CPUs per task.</td>\n</tr>\n<tr>\n<td>--ntasks-per-core=[ntasks]</td>\n\
+          <td>Specify the number of tasks per CPU core.</td>\n</tr>\n<tr>\n<td>--export=[variable\\\
+          </td>\n<td>ALL\\</td>\n</tr>\n</tbody>\n</table>\n<p>NOTE: SLURM will copy\
+          \ the entire environment from the shell where a job is\nsubmitted from.\
+          \ This may break existing batch scripts that require a different\nenvironment\
+          \ than say a login environment. To guard against this --export=NONE\ncan\
+          \ be specified for each batch script.</p>\n<h2>MonARCH Hardware Summary</h2>\n\
+          <p>There are two classes of compute nodes on MonARCH. They are broken into\
+          \ \"High\nSpeed\" and \"High Core Count\" flavours.</p>\n<ul>\n<li>\n<p>config\
+          \ A: high-ish CPU clock speed, lower-core count, standard RAM</p>\n</li>\n\
+          <li>\n<p>16 physical cores or 32 HT cores ==&gt; two Intel Xeon E5-2667\
+          \ v3 3.2GHz, 20M\n    Cache, 9.60GT/s QPI, Turbo, HT, 8C/16T (135W)</p>\n\
+          </li>\n<li>128 GB RAM == 8 x 16GB RDIMM, 2133 MT/s, Dual Rank, x4 Data Width</li>\n\
+          <li>config B: lower CPU clock speed, high-core count, higher RAM</li>\n\
+          <li>24 physical cores or 48 HT cores ==&gt; two Intel Xeon E5-2680 v3 2.5GHz,\
+          \ 30M\n    Cache, 9.60GT/s QPI, Turbo, HT, 12C/24T (120W)</li>\n<li>256\
+          \ GB RAM == 16 x 16GB RDIMM, 2133 MT/s, Dual Rank, x4 Data Width</li>\n\
+          </ul>\n<p>MonARCH supports a wide range of software  packages. The Linux\
+          \ environment module utility is used to load and unload different software\
+          \ packages. When a module is loaded, it sets specific environment variables\
+          \ (e.g., PATH, LD_LIBRARY_PATH, etc.) to the appropriate pathnames where\
+          \ the software is installed.</p>\n<h2>Environment Modules</h2>\n<p>There\
+          \ may be occasions where you need to use different compilers and/or libraries\
+          \ from those found in your usual environment, and you therefore need to\
+          \ adjust your environment variables accordingly. The module command makes\
+          \ this easy. Some examples of its use are:</p>\n<table>\n<thead>\n<tr>\n\
+          <th>module avail</th>\n<th>Shows what modules are available on the system</th>\n\
+          </tr>\n</thead>\n<tbody>\n<tr>\n<td>module whatis</td>\n<td>Shows what they\
+          \ do</td>\n</tr>\n<tr>\n<td>module load openmpi-intel</td>\n<td>Makes Intel\
+          \ MPI libraries and Intel Fortran compiler available</td>\n</tr>\n<tr>\n\
+          <td>module list</td>\n<td>Shows which module are loaded</td>\n</tr>\n<tr>\n\
+          <td>module purge</td>\n<td>Unloads all of them</td>\n</tr>\n<tr>\n<td>module\
+          \ unload openmpi-intel intel</td>\n<td>Unloads Intel MPI and Intel Fortran\
+          \ modules</td>\n</tr>\n<tr>\n<td>module display [modulefile]Software</td>\n\
+          <td>Use this command to see exactly what a given modulefile will do to your\
+          \ environment, such as what will be added to the PATH, MANPATH, etc. environment\
+          \ variables.</td>\n</tr>\n</tbody>\n</table>\n<p>Here is an example of how\
+          \ to load the GNU C/C++ compiler.</p>\n<p>```bash</p>\n<p>$module load gcc/4.3.5\n\
+          ```</p>\n<p>That's all! Now here we put some extra Linux commands to show\
+          \ that, by loading\nthe module, we override the default System compiler.</p>\n\
+          <p>Load the gcc compiler, showing paths and versions:</p>\n<p>```bash</p>\n\
+          <h1></h1>\n<h1>show that we have the default compiler</h1>\n<h1></h1>\n\
+          <p>$which gcc\n/usr/bin/gcc\n$gcc -v\nUsing built-in specs.\nTarget: x86_64-redhat-linux\n\
+          Configured with: ../configure --prefix=/usr --mandir=/usr/share/man\n--infodir=/usr/share/info\n\
+          --enable-shared --enable-threads=posix --enable-checking=release\n--with-system-zlib\
+          \ --enable-__cxa_atexit\n--disable-libunwind-exceptions --enable-libgcj-multifile\n\
+          --enable-languages=c,c++,objc,obj-c++,java,fortran,ada\n--enable-java-awt=gtk\
+          \ --disable-dssi --enable-plugin\n--with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre\n\
+          --with-cpu=generic --host=x86_64-redhat-linux\nThread model: posix\ngcc\
+          \ version 4.1.2 20080704 (Red Hat 4.1.2-46)</p>\n<h1></h1>\n<h1>load a different\
+          \ compiler</h1>\n<h1></h1>\n<p>$module load gcc/4.3.5</p>\n<h1></h1>\n<h1>check\
+          \ that we have a new version</h1>\n<h1></h1>\n<p>$which gcc\n/opt/sw/gcc-4.3.5/bin/gcc\n\
+          $gcc -v\nUsing built-in specs.\nTarget: x86_64-unknown-linux-gnu\nConfigured\
+          \ with: ../gcc-4.3.5/configure --prefix=/opt/sw/gcc-4.3.5\nThread model:\
+          \ posix\ngcc version 4.3.5 (GCC)\n```</p>\n<p>Suppose we wanted to know\
+          \ more about a module we wanted to load? That can be done via the 'show'\
+          \ command 'module show' example</p>\n<p>```bash\nmodule show gcc/4.3.5</p>\n\
+          <hr>\n<p>/opt/sw/Modules/modulefiles/gcc/4.3.5:\nmodule-whatis    GNU Compiler\
+          \ Collection is ...\nconflict     gcc/4.8.0\nconflict     gcc/4.4.4\nconflict\
+          \     gcc/4.5.3\nconflict     intel/10.0.025\nconflict     intelC/10.0.025\n\
+          prepend-path PATH /opt/sw/gcc-4.3.5/bin:/opt/sw/gcc-4.3.5/libexec/gcc/x86_64-unknown-linux-gnu/4.3.5\n\
+          prepend-path     LD_LIBRARY_PATH /opt/sw/gcc-4.3.5/lib64:/opt/sw/gcc-4.3.5/lib\n\
+          prepend-path     MANPATH /opt/sw/gcc-4.3.5/man</p>\n<hr>\n<p>```</p>\n<p>Suppose\
+          \ we wanted to use the system compiler again. All you do is unload the module.\n\
+          Unload the gcc compiler</p>\n<p>```bash\nmodule unload gcc/4.3.5</p>\n<p>```</p>\n\
+          <p>Here we unload the compiler, checking that we have the right versions\
+          \ when finished.</p>\n<p>Check that we load the correct compiler:</p>\n\
+          <p>```bash</p>\n<h1></h1>\n<h1>unload compiler</h1>\n<h1></h1>\n<p>$ module\
+          \ unload gcc/4.3.5</p>\n<h1></h1>\n<h1>show that we have the default compiler</h1>\n\
+          <h1></h1>\n<p>$which gcc\n/usr/bin/gcc\n$gcc -v\nUsing built-in specs.\n\
+          Target: x86_64-redhat-linux\nConfigured with: ../configure --prefix=/usr\
+          \ --mandir=/usr/share/man --infodir=/usr/share/info --enable-shared --enable-threads=posix\
+          \ --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions\
+          \ --enable-libgcj-multifile --enable-languages=c,c++,objc,obj-c++,java,fortran,ada\
+          \ --enable-java-awt=gtk --disable-dssi --enable-plugin --with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre\
+          \ --with-cpu=generic --host=x86_64-redhat-linux\nThread model: posix\ngcc\
+          \ version 4.1.2 20080704 (Red Hat 4.1.2-46)\n```</p>\n<p>An advantage of\
+          \ using the module command is that it warns you about conflicting packages.\
+          \  You can't load two different gcc compilers at the same time!</p>\n<p><code>bash\n\
+          $ module load gcc/4.3.5\n$ module load gcc/4.2.3\ngcc/4.2.3(15):ERROR:150:\
+          \    Module 'gcc/4.2.3' conflicts with the currently loaded module(s) 'gcc/4.3.5'\n\
+          gcc/4.2.3(15):ERROR:102:    Tcl command execution failed: conflict gcc/4.3.5</code></p>\n\
+          <p>Note. Some modules load other modules! Also, if the software is licensed,\n\
+          loading a module does not mean you will be allowed access to it.  Please\
+          \  email\nmcc-help@monash.edu to gain access to proprietary software. Here,\
+          \ loading the\nvasp module will not allow you access to it.</p>\n<p>Example\
+          \ of 'module list':</p>\n<p><code>bash\nmodule list\nCurrently Loaded Modulefiles:\n\
+          \  1) gcc/4.3.5               3) mpfr/2.4.2              5) openmpi/1.6-gcc-4.5.3\
+          \   7) vasp/5.3.2-2D\n  2) gmp/4.3.2               4) mpc/0.9          \
+          \       6) fftw/3.2.2-openmp</code></p>\n<p>If you do not explicitly give\
+          \ a version number, module will use the default module.</p>\n<p>Example\
+          \ of 'module display'</p>\n<p>```bash\nmodule display gcc</p>\n<hr>\n<p>/opt/sw/Modules/modulefiles/gcc/4.4.4:</p>\n\
+          <pre><code>            module-whatis     GNU Compiler Collection is ...\n\
+          \            module         load gmp mpfr\n            conflict     gcc/4.8.0\n\
+          \            conflict     gcc/4.3.5\n            conflict     gcc/4.5.3\n\
+          \            conflict     intel/10.0.025\n            conflict     intelC/10.0.025\n\
+          \            prepend-path    PATH/opt/sw/gcc-4.4.4/bin:/opt/sw/gcc-4.4.4/libexec/gcc/x86_64-unknown-linux-gnu/4.4.4\n\
+          \            prepend-path    LD_LIBRARY_PATH /opt/sw/gcc-4.4.4//lib64\n\
+          \            prepend-path    MANPATH /opt/sw/gcc-4.4.4//man\n          \
+          \  -------------------------------------------------------------------\n\
+          </code></pre>\n<p>```</p>\n<p>This is the output of 'module avail'.  You\
+          \ can interrogate any module with the commands listed above.\nOutput of\
+          \ 'module avail'</p>\n<p>```bash\nmodule avail\n------------------------------\
+          \ /usr/share/Modules/modulefiles -------------------------------\ndot  \
+          \                  matlab-compiler/R2011a module-info            null\n\
+          matlab/R2011a-local    module-cvs             modules                use.own</p>\n\
+          <p>------------------------------ /opt/sw/Modules/modulefiles ----------------------------------\n\
+          FEniCS/1.0                         fluent/proto                       libctl/3.0.3(default)\n\
+          Mesa/7.0.1(default)                freeglut/2.6.0                     libctl/3.1\n\
+          Mesa/7.0.2                         freeimage/3.13.1                   libctl/3.2.1\n\
+          Mesa/7.2                           freesurfer/5.0.0                   libxc/2.0.2\n\
+          OpenBUGS/3.1.1                     fsc/1.1.2                          libxml2/2.7.2\n\
+          OpenCV/2.2.0                       fsl/4.0.2                          macmolplt/7.4.2\n\
+          Qt/3.3.8b                          fsl/4.1.0-test                     mallet/2.0.7\n\
+          Qt/4.2.3                           fsl/4.1.5                          ...\n\
+          ...\n```</p>"
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:07-04:00'
+          customer_folders: []
+          description: Tools and Apps
+          id: 6000190153
+          is_default: false
+          language_id: 6
+          name: Tools and Apps
+          parent_id: 6000190153
+          position: 3
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190153
+        hits: 0
+        id: 6000115468
+        modified_at: '2016-03-02T20:58:18-05:00'
+        modified_by: null
+        position: 23
+        seo_data: {}
+        status: 2
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Monash MonARCH User Documentation
+        updated_at: '2016-03-02T20:58:18-05:00'
+        user_id: 6002464727
+  html: "<h1>Introduction to MonARCH</h1>\n<p><img alt=\"MonARCH Compute Nodes\" src=\"\
+    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/MonARCH.png?raw=true\"\
+    ></p>\n<p>MonARCH (Monash Advanced Research\nComputing Hybrid) is the next-generation\
+    \ HPC/HTC Cluster, designed from the\nground up to address the emergent and future\
+    \ needs of the research communities\nsupported by Monash.</p>\n<p>A key feature\
+    \ of MonARCH is that it is provisioned through R@CMon, the Research\nCloud @ Monash\
+    \ facility. Through the use of advanced cloud technology, MonARCH\nis able to\
+    \ configure and grow dynamically. As with any HPC cluster, MonARCH\npresents a\
+    \ single point-of-access to computational researchers to run\ncalculations on\
+    \ its constituent servers.</p>\n<p>MonARCH aims to continually develop over time.\
+    \ Currently, it consists of 35\nservers under two complementary hardware specifications:</p>\n\
+    <ul>\n<li>high-core servers - two Haswell CPU sockets with a total of 24 physical\
+    \ cores\n  (or 48 hyperthreaded cores) at 2.80 GHz</li>\n<li>high-speed servers\
+    \ - two Haswell CPU sockets with a total of 16 physical\n  cores (or 32 hyperthreaded\
+    \ cores) at 3.20 GHz</li>\n</ul>\n<p>For data storage, we have deployed a parallel\
+    \ file system service using Intel\nEnterprise Lustre; providing over 300 TB usable\
+    \ storage with room for future\nexpansion.</p>\n<p>The MonARCH service is operated\
+    \ by the Monash HPC team and continuing technical\nand operational support from\
+    \ the R@CMon team, this includes technical\nstaff from both the Monash eResearch\
+    \ Centre and Monash eSolutions.</p>\n<p>If you have found the MonARCH useful for\
+    \ your research, we will be very\ngrateful if you kindly acknowledge us with a\
+    \ text along the lines of:</p>\n<blockquote>\n<p>This research was supported in\
+    \ part by the Monash eResearch Centre and\neSolutions-Research Support Services\
+    \ through the use of the MonARCH HPC\nCluster.</p>\n</blockquote>\n<h2>How to\
+    \ Access MonARCH</h2>\n<p>To access MonARCH you will need to</p>\n<ul>\n<li>Create\
+    \ a username and password for the Monash HPC systems</li>\n<li>Request access\
+    \ to the MonARCH resource</li>\n<li>Use SSH or Strudel to access MonARCH</li>\n\
+    </ul>\n<h3>Apply for access to Monash HPC systems and MonARCH</h3>\n<ol>\n<li>From\
+    \ a web browser, visit <a href=\"https://hpc.erc.monash.edu.au/aafbootstrap\"\
+    >The Monash HPC Identity Management System</a></li>\n</ol>\n<p>This web page will\
+    \ bootstrap your Monash HPC account using information provided\nby your Institution\
+    \ and the AAF.</p>\n<p>Depending on your settings, usually the next step will\
+    \ be to select your\ninstitution, in this example, \"Monash University\".</p>\n\
+    <p><img alt=\"Screen shot of the AAF Discovery Service\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/aaf_ds.jpg?raw=true\"\
+    ></p>\n<p>2: You will be redirected to your institutions secure Identity Provider\n\
+    service. You should enter your institutional username and password to\nauthenticate\
+    \ to your institution.  In the background, your institution will\ntell us information\
+    \ like your Name and email address (but never your password).\nDepending on your\
+    \ settings, you may be asked to approve your institution\ntelling us this information.</p>\n\
+    <p><img alt=\"Screen shot of the Monash AAF Identity Provider\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/monash_shib.jpg?raw=true\"\
+    ></p>\n<p>3: The next step is Username Selection. You will be presented with a\
+    \ list of\navailable usernames, It is important to note that this username is\
+    \ not\nnecessarily the same as your institute username. This username is for SSH\
+    \ and\nSCP access to the MonARCH login node.</p>\n<p>In the example below, the\
+    \ user's University username is \"authcate\" but their username\nfor MonARCH is\
+    \ \"demo1\".</p>\n<p><img alt=\"Screen shot of HPC Id selecting a username\" src=\"\
+    https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/username_selection.jpg?raw=true\"\
+    ></p>\n<p>4: Apply to access MonARCH. Select the <strong>\"Use MonARCH\"</strong>\
+    \ option.</p>\n<p>This will send a request to the MonARCH team to approve access\
+    \ to the cluster.</p>\n<p><img alt=\"Screen shot of HPC ID system showing a pending\
+    \ application\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/application_pending.jpg?raw=true\"\
+    ></p>\n<p>The above screen-grab shows that the application is pending for approval.</p>\n\
+    <p>The application will the go through an approval process. First the project\n\
+    leader will approve the application, then the administrators will approve the\n\
+    application While the approval process is ongoing, if you click on the\n<strong>\"\
+    Applications\"</strong> button you should see something like this:</p>\n<p>![Screen\
+    \ show of HPC ID system in waiting for admin state)(images/wait_admin.jpg)</p>\n\
+    <p>Once the application has been approved, you'll receive an email and be able\
+    \ to\nmove onto the next step.</p>\n<p>5: Change your MonARCH cluster password.\
+    \ Note that this <em>DOES NOT</em> change your\nInstitutional password. Choose\
+    \ <strong>\"Personal\"</strong> and click <strong>\"Change Password\"</strong>.</p>\n\
+    <p>Important: This <em>DOES NOT</em> change or affect your Institutional password.\
+    \ This\npassword is for SSH and SCP access to the cluster.</p>\n<p><img alt=\"\
+    Screen shot of the HPC Id system showing how to\nchange a password\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ Documentation--DOCID16/Tools and Apps--DOCID24/images/set_password.jpg?raw=true\"\
+    ></p>\n<h3>Accessing MonARCH</h3>\n<h4>Using SSH</h4>\n<p>You will need to use\
+    \ ssh (secure-shell) to login to the head node. This program\nencrypts your interactions\
+    \ with the server. How to get and use ssh depends upon\nyour desktop operating\
+    \ system.</p>\n<h5>Linux and MacOS</h5>\n<p>Linux and MacOS both have SSH built\
+    \ in. Simply open a terminal and type</p>\n<blockquote>\n<p>ssh <em>username</em>@monarch.erc.monash.edu.au</p>\n\
+    </blockquote>\n<p>where <em>username</em> is the selected username from Step 3.\
+    \ In the above example,\nthe username is \"demo1\", so:</p>\n<blockquote>\n<p>ssh\
+    \ demo1@monarch.erc.monash.edu.au</p>\n</blockquote>\n<h5>Microsoft Windows</h5>\n\
+    <p>ssh is not native to Windows, but you can download several free versions. Many\n\
+    Monash PCs have a version of ssh installed already on them.</p>\n<h6>putty</h6>\n\
+    <p>You can download putty from <a href=\"http://www.putty.org/\">the putty website</a>\
+    \ Once\ninstalled you run putty:</p>\n<blockquote>\n<p>Start-&gt;All Programs-&gt;PuTTY-&gt;PuTTY</p>\n\
+    </blockquote>\n<p>Select \u201CSession:\u201D on the left pane.</p>\n<p>In the\
+    \ text box on the right pane labelled <strong>\"Host Name (or IP address)\"</strong>\n\
+    enter <strong>monarch.erc.monash.edu.au</strong></p>\n<p>Click open. You will\
+    \ be prompted for your username and password. These are the\nusername and password\
+    \ you set for the Monash HPC ID system, not your\ninstitutional username and password.</p>\n\
+    <h2>SLURM</h2>\n<h3>Introduction</h3>\n<p>MonARCH uses the SLURM scheduler for\
+    \ running jobs.  The home page for SLURM is <a href=\"http://slurm.schedmd.com/\"\
+    >http://slurm.schedmd.com/</a>, and it is used in many computing systems, such\
+    \ as MASSIVE and VLSCI.\nSLURM is an open-source workload manager designed for\
+    \ Linux clusters of all sizes. It provides three key functions.</p>\n<ul>\n<li>It\
+    \ allocates exclusive and/or non-exclusive access to resources (computer nodes)\
+    \ to users for some duration of time so they can perform work.</li>\n<li>It provides\
+    \ a framework for starting, executing, and monitoring work (typically a parallel\
+    \ job) on a set of allocated nodes.</li>\n<li>It arbitrates contention for resources\
+    \ by managing a queue of pending work.</li>\n</ul>\n<p>The following material\
+    \ will explain how users can use SLURM.  At the bottom of the page there is a\
+    \ PBS, SGE comparison section.</p>\n<h3>SLURM Glossary</h3>\n<p>It is important\
+    \ to understand that some SLURM syntax have meanings which may differ from syntax\
+    \ in other batch or resource schedulers.</p>\n<table>\n<thead>\n<tr>\n<th>Term</th>\n\
+    <th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Resource</td>\n<td>A\
+    \ mix of CPUs, memory and time</td>\n</tr>\n<tr>\n<td>Task</td>\n<td>A task under\
+    \ SLURM is a synonym for a process, and is often the number of MPI processes that\
+    \ are required</td>\n</tr>\n<tr>\n<td>Partition</td>\n<td>SLURM groups nodes into\
+    \ sets called partitions. Jobs are submitted to a partition to run. In other batch\
+    \ systems the term queue is used</td>\n</tr>\n<tr>\n<td>Account</td>\n<td>The\
+    \ term account is used to describe the entity to which used resources are charged\
+    \ to</td>\n</tr>\n<tr>\n<td>Batch jobs</td>\n<td>A chain of commands in a script\
+    \ file</td>\n</tr>\n<tr>\n<td>Success</td>\n<td>A job completes and terminates\
+    \ well (with exit status 0) (cancelled jobs are not considered successful)</td>\n\
+    </tr>\n<tr>\n<td>Failure</td>\n<td>Anything that lacks success</td>\n</tr>\n<tr>\n\
+    <td>CPUs</td>\n<td>The term CPU is used to describe the smallest physical consumable,\
+    \ and for multi-core machines this will be the core. For multi-core machines where\
+    \ hyper-threading is enabled this will be a hardware thread.</td>\n</tr>\n<tr>\n\
+    <td>Node</td>\n<td>A node contains one or more sockets</td>\n</tr>\n<tr>\n<td>Socket</td>\n\
+    <td>A socket contains one processor</td>\n</tr>\n<tr>\n<td>Processor</td>\n<td>A\
+    \ processor contains one or more cores</td>\n</tr>\n<tr>\n<td>Core</td>\n<td>A\
+    \ CPU core</td>\n</tr>\n</tbody>\n</table>\n<h3>SLURM Shell Commands</h3>\n<p>Users\
+    \ submit jobs to the MonARCH using SLURM commands called from the Unix shell (such\
+    \ as bash, or csh). Typically a user creates a batch submission script that specifies\
+    \ what computing resources they want from the cluster, as well as the commands\
+    \ to execute when the job is running.  They then use sbatch <em>filename</em>\
+    \ to submit the job.  Users can kill, pause and interrogate the jobs they are\
+    \ running.  Here is a list of common commands:</p>\n<h4>Commands to submit/delete\
+    \ a job in the queue</h4>\n<table>\n<thead>\n<tr>\n<th>Command</th>\n<th>Description</th>\n\
+    </tr>\n</thead>\n<tbody>\n<tr>\n<td>sbatch</td>\n<td>sbatch is used to submit\
+    \ a job script for later execution. The script will typically contain one or more\
+    \ srun commands to launch parallel tasks.</td>\n</tr>\n<tr>\n<td>scancel</td>\n\
+    <td>Deletes a job from the queue, or stops it running.</td>\n</tr>\n</tbody>\n\
+    </table>\n<h4>Commands to run an executable</h4>\n<table>\n<thead>\n<tr>\n<th>Command</th>\n\
+    <th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>srun</td>\n<td>srun\
+    \ should be used to execute each program in your job script. It supersedes mpirun\
+    \ and is capable of starting highly parallel jobs much faster than mpirun</td>\n\
+    </tr>\n</tbody>\n</table>\n<h4>Examining and Controlling the queue</h4>\n<table>\n\
+    <thead>\n<tr>\n<th>Command</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n\
+    <tr>\n<td>sinfo</td>\n<td>reports the state of partitions and nodes managed by\
+    \ Slurm. It has a wide variety of filtering, sorting, and formatting options.</td>\n\
+    </tr>\n<tr>\n<td>squeue</td>\n<td>reports the state of jobs or job steps. It has\
+    \ a wide variety of filtering, sorting, and formatting options. By default, it\
+    \ reports the running jobs in priority order and then the pending jobs in priority\
+    \ order.</td>\n</tr>\n<tr>\n<td>scontrol</td>\n<td>Report  or modify details of\
+    \ a job</td>\n</tr>\n<tr>\n<td>sinteractive</td>\n<td>It is possible to run a\
+    \ job as an interactive session using ' sinteractive '. The program hangs until\
+    \ the session is scheduled to run, and then the user is logged into the compute\
+    \ node. Exiting the shell (or logging out) ends the session and the user is returned\
+    \ to the original node.</td>\n</tr>\n</tbody>\n</table>\n<h4>Viewing job metrics</h4>\n\
+    <table>\n<thead>\n<tr>\n<th>Command</th>\n<th>Description</th>\n</tr>\n</thead>\n\
+    <tbody>\n<tr>\n<td>sacct</td>\n<td>The command sacct shows metrics from past jobs.</td>\n\
+    </tr>\n<tr>\n<td>sstat</td>\n<td>The command sstat shows metrics from currently\
+    \ running jobs when given a job number. Note, you need to launch jobs with srun\
+    \ to get this information.</td>\n</tr>\n</tbody>\n</table>\n<h3>More on Shell\
+    \ Commands</h3>\n<p>Users have several ways of getting information on shell commands.</p>\n\
+    <ul>\n<li>The commands have man pages (via the unix manual). e.g. man sbatch</li>\n\
+    <li>The commands have built-in help options, e.g. sbatch --help or sbatch --usage.</li>\n\
+    <li>help print brief description</li>\n<li>usage  prints list of options</li>\n\
+    <li>There are online manuals and information pages</li>\n</ul>\n<p>Most commands\
+    \ have options in two formats:</p>\n<ul>\n<li>single letter e.g. -N 1</li>\n<li>verbose\
+    \  e.g. --nodes=1</li>\n</ul>\n<p>Note the double dash -- in the verbose format.\
+    \ A non-\xAD\u2010zero exit code indicates failure in a command.</p>\n<h4>Some\
+    \ default behaviours</h4>\n<ul>\n<li>SLURM processes launched with srun are not\
+    \ run under a shell, so none of the following are executed:</li>\n<li>~/.profile</li>\n\
+    <li>~/.baschrc</li>\n<li>~/.login</li>\n<li>~/.cshrc, etc</li>\n<li>SLURM exports\
+    \ user environment by default (or --export=NONE)</li>\n<li>SLURM runs in the current\
+    \ directory (no need to cd $PBS_O_WORKDIR)</li>\n<li>SLURM combines stdout and\
+    \ stderr and outputs directly (and naming is different). The SLURM stdout /stderr\
+    \ file will be appended,not overwritten (if it exists)</li>\n<li>SLURM is case\
+    \ insensitive (e.g. project names are lower case)</li>\n<li>Use #SBATCH instead\
+    \ of #PBS in batch scripts</li>\n</ul>\n<h3>Batch Scripts</h3>\n<p>A job script\
+    \ has a header section which specifies the resources that are\nrequired to run\
+    \ the job as well as the commands that must be executed. An\nexample script is\
+    \ shown below.</p>\n<p>```bash</p>\n<h1>!/bin/bash</h1>\n<h1>SBATCH --job-name=example</h1>\n\
+    <h1>SBATCH --account=director100</h1>\n<h1>SBATCH --partition=workq</h1>\n<h1>SBATCH\
+    \ --time=01:00:00</h1>\n<h1>SBATCH --ntasks=32</h1>\n<h1>SBATCH --ntasks-per-node=16</h1>\n\
+    <h1>SBATCH --cpus-per-task=1</h1>\n<h1>SBATCH --export=NONE</h1>\n<p>module load\
+    \ intel\nuname -a\nsrun uname -a\n```</p>\n<p>Here are some of the SLURM directives\
+    \ you can use in a batch script.</p>\n<table>\n<thead>\n<tr>\n<th>SLURM directive</th>\n\
+    <th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>--job-name=[job name]</td>\n\
+    <td>The job name for the allocation, defaults to the script name.</td>\n</tr>\n\
+    <tr>\n<td>--account=[account name]</td>\n<td>Charge resources used to this account.\
+    \ A default account is configured for each user.</td>\n</tr>\n<tr>\n<td>--partition=[partition\
+    \ name]</td>\n<td>Request an allocation on the specified partition. If not specified\
+    \ jobs will be submitted to the default partition.</td>\n</tr>\n<tr>\n<td>--time=[time\
+    \ spec]</td>\n<td>The total walltime for the job allocation.</td>\n</tr>\n<tr>\n\
+    <td>--array=[job spec]</td>\n<td>Submit a job array with the defined indices.</td>\n\
+    </tr>\n<tr>\n<td>--dependency=[dependency list]</td>\n<td>Specify a job dependency.</td>\n\
+    </tr>\n<tr>\n<td>--nodes=[total nodes]</td>\n<td>Specify the total number of nodes.</td>\n\
+    </tr>\n<tr>\n<td>--ntasks=[total tasks]</td>\n<td>Specify the total number of\
+    \ tasks.</td>\n</tr>\n<tr>\n<td>--ntasks-per-node=[ntasks]</td>\n<td>Specify the\
+    \ number of tasks per node.</td>\n</tr>\n<tr>\n<td>--cpus-per-task=[ncpus]</td>\n\
+    <td>Specify the number of CPUs per task.</td>\n</tr>\n<tr>\n<td>--ntasks-per-core=[ntasks]</td>\n\
+    <td>Specify the number of tasks per CPU core.</td>\n</tr>\n<tr>\n<td>--export=[variable\\\
+    </td>\n<td>ALL\\</td>\n</tr>\n</tbody>\n</table>\n<p>NOTE: SLURM will copy the\
+    \ entire environment from the shell where a job is\nsubmitted from. This may break\
+    \ existing batch scripts that require a different\nenvironment than say a login\
+    \ environment. To guard against this --export=NONE\ncan be specified for each\
+    \ batch script.</p>\n<h2>MonARCH Hardware Summary</h2>\n<p>There are two classes\
+    \ of compute nodes on MonARCH. They are broken into \"High\nSpeed\" and \"High\
+    \ Core Count\" flavours.</p>\n<ul>\n<li>\n<p>config A: high-ish CPU clock speed,\
+    \ lower-core count, standard RAM</p>\n</li>\n<li>\n<p>16 physical cores or 32\
+    \ HT cores ==&gt; two Intel Xeon E5-2667 v3 3.2GHz, 20M\n    Cache, 9.60GT/s QPI,\
+    \ Turbo, HT, 8C/16T (135W)</p>\n</li>\n<li>128 GB RAM == 8 x 16GB RDIMM, 2133\
+    \ MT/s, Dual Rank, x4 Data Width</li>\n<li>config B: lower CPU clock speed, high-core\
+    \ count, higher RAM</li>\n<li>24 physical cores or 48 HT cores ==&gt; two Intel\
+    \ Xeon E5-2680 v3 2.5GHz, 30M\n    Cache, 9.60GT/s QPI, Turbo, HT, 12C/24T (120W)</li>\n\
+    <li>256 GB RAM == 16 x 16GB RDIMM, 2133 MT/s, Dual Rank, x4 Data Width</li>\n\
+    </ul>\n<p>MonARCH supports a wide range of software  packages. The Linux environment\
+    \ module utility is used to load and unload different software packages. When\
+    \ a module is loaded, it sets specific environment variables (e.g., PATH, LD_LIBRARY_PATH,\
+    \ etc.) to the appropriate pathnames where the software is installed.</p>\n<h2>Environment\
+    \ Modules</h2>\n<p>There may be occasions where you need to use different compilers\
+    \ and/or libraries from those found in your usual environment, and you therefore\
+    \ need to adjust your environment variables accordingly. The module command makes\
+    \ this easy. Some examples of its use are:</p>\n<table>\n<thead>\n<tr>\n<th>module\
+    \ avail</th>\n<th>Shows what modules are available on the system</th>\n</tr>\n\
+    </thead>\n<tbody>\n<tr>\n<td>module whatis</td>\n<td>Shows what they do</td>\n\
+    </tr>\n<tr>\n<td>module load openmpi-intel</td>\n<td>Makes Intel MPI libraries\
+    \ and Intel Fortran compiler available</td>\n</tr>\n<tr>\n<td>module list</td>\n\
+    <td>Shows which module are loaded</td>\n</tr>\n<tr>\n<td>module purge</td>\n<td>Unloads\
+    \ all of them</td>\n</tr>\n<tr>\n<td>module unload openmpi-intel intel</td>\n\
+    <td>Unloads Intel MPI and Intel Fortran modules</td>\n</tr>\n<tr>\n<td>module\
+    \ display [modulefile]Software</td>\n<td>Use this command to see exactly what\
+    \ a given modulefile will do to your environment, such as what will be added to\
+    \ the PATH, MANPATH, etc. environment variables.</td>\n</tr>\n</tbody>\n</table>\n\
+    <p>Here is an example of how to load the GNU C/C++ compiler.</p>\n<p>```bash</p>\n\
+    <p>$module load gcc/4.3.5\n```</p>\n<p>That's all! Now here we put some extra\
+    \ Linux commands to show that, by loading\nthe module, we override the default\
+    \ System compiler.</p>\n<p>Load the gcc compiler, showing paths and versions:</p>\n\
+    <p>```bash</p>\n<h1></h1>\n<h1>show that we have the default compiler</h1>\n<h1></h1>\n\
+    <p>$which gcc\n/usr/bin/gcc\n$gcc -v\nUsing built-in specs.\nTarget: x86_64-redhat-linux\n\
+    Configured with: ../configure --prefix=/usr --mandir=/usr/share/man\n--infodir=/usr/share/info\n\
+    --enable-shared --enable-threads=posix --enable-checking=release\n--with-system-zlib\
+    \ --enable-__cxa_atexit\n--disable-libunwind-exceptions --enable-libgcj-multifile\n\
+    --enable-languages=c,c++,objc,obj-c++,java,fortran,ada\n--enable-java-awt=gtk\
+    \ --disable-dssi --enable-plugin\n--with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre\n\
+    --with-cpu=generic --host=x86_64-redhat-linux\nThread model: posix\ngcc version\
+    \ 4.1.2 20080704 (Red Hat 4.1.2-46)</p>\n<h1></h1>\n<h1>load a different compiler</h1>\n\
+    <h1></h1>\n<p>$module load gcc/4.3.5</p>\n<h1></h1>\n<h1>check that we have a\
+    \ new version</h1>\n<h1></h1>\n<p>$which gcc\n/opt/sw/gcc-4.3.5/bin/gcc\n$gcc\
+    \ -v\nUsing built-in specs.\nTarget: x86_64-unknown-linux-gnu\nConfigured with:\
+    \ ../gcc-4.3.5/configure --prefix=/opt/sw/gcc-4.3.5\nThread model: posix\ngcc\
+    \ version 4.3.5 (GCC)\n```</p>\n<p>Suppose we wanted to know more about a module\
+    \ we wanted to load? That can be done via the 'show' command 'module show' example</p>\n\
+    <p>```bash\nmodule show gcc/4.3.5</p>\n<hr>\n<p>/opt/sw/Modules/modulefiles/gcc/4.3.5:\n\
+    module-whatis    GNU Compiler Collection is ...\nconflict     gcc/4.8.0\nconflict\
+    \     gcc/4.4.4\nconflict     gcc/4.5.3\nconflict     intel/10.0.025\nconflict\
+    \     intelC/10.0.025\nprepend-path PATH /opt/sw/gcc-4.3.5/bin:/opt/sw/gcc-4.3.5/libexec/gcc/x86_64-unknown-linux-gnu/4.3.5\n\
+    prepend-path     LD_LIBRARY_PATH /opt/sw/gcc-4.3.5/lib64:/opt/sw/gcc-4.3.5/lib\n\
+    prepend-path     MANPATH /opt/sw/gcc-4.3.5/man</p>\n<hr>\n<p>```</p>\n<p>Suppose\
+    \ we wanted to use the system compiler again. All you do is unload the module.\n\
+    Unload the gcc compiler</p>\n<p>```bash\nmodule unload gcc/4.3.5</p>\n<p>```</p>\n\
+    <p>Here we unload the compiler, checking that we have the right versions when\
+    \ finished.</p>\n<p>Check that we load the correct compiler:</p>\n<p>```bash</p>\n\
+    <h1></h1>\n<h1>unload compiler</h1>\n<h1></h1>\n<p>$ module unload gcc/4.3.5</p>\n\
+    <h1></h1>\n<h1>show that we have the default compiler</h1>\n<h1></h1>\n<p>$which\
+    \ gcc\n/usr/bin/gcc\n$gcc -v\nUsing built-in specs.\nTarget: x86_64-redhat-linux\n\
+    Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info\
+    \ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib\
+    \ --enable-__cxa_atexit --disable-libunwind-exceptions --enable-libgcj-multifile\
+    \ --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk\
+    \ --disable-dssi --enable-plugin --with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre\
+    \ --with-cpu=generic --host=x86_64-redhat-linux\nThread model: posix\ngcc version\
+    \ 4.1.2 20080704 (Red Hat 4.1.2-46)\n```</p>\n<p>An advantage of using the module\
+    \ command is that it warns you about conflicting packages.  You can't load two\
+    \ different gcc compilers at the same time!</p>\n<p><code>bash\n$ module load\
+    \ gcc/4.3.5\n$ module load gcc/4.2.3\ngcc/4.2.3(15):ERROR:150:    Module 'gcc/4.2.3'\
+    \ conflicts with the currently loaded module(s) 'gcc/4.3.5'\ngcc/4.2.3(15):ERROR:102:\
+    \    Tcl command execution failed: conflict gcc/4.3.5</code></p>\n<p>Note. Some\
+    \ modules load other modules! Also, if the software is licensed,\nloading a module\
+    \ does not mean you will be allowed access to it.  Please  email\nmcc-help@monash.edu\
+    \ to gain access to proprietary software. Here, loading the\nvasp module will\
+    \ not allow you access to it.</p>\n<p>Example of 'module list':</p>\n<p><code>bash\n\
+    module list\nCurrently Loaded Modulefiles:\n  1) gcc/4.3.5               3) mpfr/2.4.2\
+    \              5) openmpi/1.6-gcc-4.5.3   7) vasp/5.3.2-2D\n  2) gmp/4.3.2   \
+    \            4) mpc/0.9                 6) fftw/3.2.2-openmp</code></p>\n<p>If\
+    \ you do not explicitly give a version number, module will use the default module.</p>\n\
+    <p>Example of 'module display'</p>\n<p>```bash\nmodule display gcc</p>\n<hr>\n\
+    <p>/opt/sw/Modules/modulefiles/gcc/4.4.4:</p>\n<pre><code>            module-whatis\
+    \     GNU Compiler Collection is ...\n            module         load gmp mpfr\n\
+    \            conflict     gcc/4.8.0\n            conflict     gcc/4.3.5\n    \
+    \        conflict     gcc/4.5.3\n            conflict     intel/10.0.025\n   \
+    \         conflict     intelC/10.0.025\n            prepend-path    PATH/opt/sw/gcc-4.4.4/bin:/opt/sw/gcc-4.4.4/libexec/gcc/x86_64-unknown-linux-gnu/4.4.4\n\
+    \            prepend-path    LD_LIBRARY_PATH /opt/sw/gcc-4.4.4//lib64\n      \
+    \      prepend-path    MANPATH /opt/sw/gcc-4.4.4//man\n            -------------------------------------------------------------------\n\
+    </code></pre>\n<p>```</p>\n<p>This is the output of 'module avail'.  You can interrogate\
+    \ any module with the commands listed above.\nOutput of 'module avail'</p>\n<p>```bash\n\
+    module avail\n------------------------------ /usr/share/Modules/modulefiles -------------------------------\n\
+    dot                    matlab-compiler/R2011a module-info            null\nmatlab/R2011a-local\
+    \    module-cvs             modules                use.own</p>\n<p>------------------------------\
+    \ /opt/sw/Modules/modulefiles ----------------------------------\nFEniCS/1.0 \
+    \                        fluent/proto                       libctl/3.0.3(default)\n\
+    Mesa/7.0.1(default)                freeglut/2.6.0                     libctl/3.1\n\
+    Mesa/7.0.2                         freeimage/3.13.1                   libctl/3.2.1\n\
+    Mesa/7.2                           freesurfer/5.0.0                   libxc/2.0.2\n\
+    OpenBUGS/3.1.1                     fsc/1.1.2                          libxml2/2.7.2\n\
+    OpenCV/2.2.0                       fsl/4.0.2                          macmolplt/7.4.2\n\
+    Qt/3.3.8b                          fsl/4.1.0-test                     mallet/2.0.7\n\
+    Qt/4.2.3                           fsl/4.1.5                          ...\n...\n\
+    ```</p>"
+  parent: 24
+  sha1: 1a8335751e3a83a52007e82b2013efed4fb1c2b6
+  title: Monash MonARCH User Documentation
