@@ -202,7 +202,7 @@ There is a template of the Emu submission script in the home folder. After you h
   * *Replace the following terms in* **bold** *in the submission script*
   * <tt>**MyJobName** </tt>
   * <tt>**Your-email-Address** </tt>
-  * <tt>&#35;PBS -l ncpus=**X**</tt> - enter the number of processors required (up to 8, unless you have a private allocation with 16 CPUs)
+  * <tt>&#35;PBS -l nodes=1:ppn=**X**</tt> - enter the number of processors required (up to 8, unless you have a private allocation with 16 CPUs. NB  ensure "nodes=1")
   * <tt>&#35;PBS -l walltime=**HH:MM:SS**</tt> - Enter the maximum time the process will take to complete. If you are using a project cloud allocation, put "<tt>**###**</tt>" at the start of this line so it is ignored.
   * <tt>module load **application_module**</tt> - load any required modules first (see the output from the  `module whatis` command above). Then on a new line, load the program you will use.
   * <tt>**MyProgram+Arguments**</tt> - Enter the command to start the program, as you would enter it on the command line on your own computer.
