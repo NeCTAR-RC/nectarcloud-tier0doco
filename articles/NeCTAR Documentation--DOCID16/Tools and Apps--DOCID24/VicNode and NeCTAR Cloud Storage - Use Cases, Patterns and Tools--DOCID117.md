@@ -6,10 +6,20 @@
 ability to easily store and share research data through an affordable, secure
 and sustainable service. It provides storage solutions to suit a variety of
 research data storage needs. This documentation focuses particularly on
-__VicNode’s cloud object storage offerings__, however much of it is relevant to
+__VicNode's cloud object storage offerings__, however much of it is relevant to
 [NeCTAR Object Storage]. Here you will demos of useful object storage clients
 used to complete common tasks and caveats regarding API usage and
 compatibility.
+
+<a name="toc"/>
+### Contents
+
+- [VicNode Overview](#overview)
+- [VicNode Cloud Storage](#vicnode storage)
+- [Accessing VicNode Cloud Storage](#accessing
+- [Common Use-cases and Client Tools](#use-cases and tools)
+
+<a name="overview"/>
 
 ## Overview
 
@@ -17,7 +27,7 @@ compatibility.
 
 VicNode was established as part of RDSI (the
 Research Data Storage Initiative), a national network of research data nodes
-and the sister project of NeCTAR. RDSI’s focus is on accessibility,
+and the sister project of NeCTAR. RDSI's focus is on accessibility,
 dissemination, sharing and long-term curation of research datasets. VicNode's
 storage services are hosted locally in Victoria at the datacentres of the
 University of Melbourne and Monash University and are connected with high
@@ -31,11 +41,15 @@ linked to, and accessible through, the Research Cloud: [NeCTAR Volume Storage]
 and [NeCTAR Object Storage]. Implementation and access details of these are
 discussed in the next section.
 
+[Contents](#toc)
+
+<a name="vicnode storage"/>
+
 ### VicNode Cloud Storage
 
 #### Computational
 
-VicNode’s current Computational
+VicNode's current Computational
 storage product is delivered solely as volume storage in the Monash and
 Melbourne zones of the NeCTAR Research Cloud. This gives researchers persistent
 block storage which can be used like a virtual portable hard disk and
@@ -58,7 +72,7 @@ for different workloads.
 
 #### Object
 
-VicNode’s other cloud storage offering is what could be considered
+VicNode's other cloud storage offering is what could be considered
 as the original and definitive cloud storage, that is, object storage. Object
 storage will be familiar to any regular Internet or mobile users, though they
 may not know it! The defining characteristic of object storage is that it is
@@ -95,29 +109,49 @@ service whilst VicNode's "Object-Market" uses faster disk and will have a
 disaster recovery solution utilising a tape backup (though this is not yet
 implemented).
 
-## Object Storage Client Tools
+[Contents](#toc)
+
+<a name="accessing"/>
+
+#### Accessing VicNode Cloud Storage
+
+To use VicNode's cloud volume and/or object storage you must first have a
+VicNode allocation - apply to VicNode directly, or if you are a University of
+Melbourne or Monash user you can contact your local eResearch Support.
+
+Your VicNode storage quota will be associated with a NeCTAR Research Cloud
+project, so you will need to [get an account] on the Research Cloud. If you
+are already a Research Cloud user then you may have an existing project you
+are planning to use your VicNode storage in, otherwise you will want to
+[apply for a project] - if you are applying for a new project and already
+have a VicNode allocation you'd like to use then mention this in the
+allocation request.
+
+Once you have your VicNode cloud storage quota associated with a NeCTAR
+Research Cloud user and project you are ready to go! For the tools and
+examples in the subsequent sections you will also require your Research Cloud
+[API credentials].
+
+[Contents](#toc)
+
+<a name="use-cases and tools"/>
+
+## Object Storage Use-cases and Client Tools
 
 This section includes pointers and quickstart instructions for using various
 useful object storage client tools. These tools have been tested to work with
 VicNode cloud storage.
 
 
-[//]: # (These are reference links used in the body of this note and get
-stripped out when the markdown processor does its job. There is no need to
-format nicely because it shouldn't be seen. Thanks SO -
-http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+[//]:
 
-[VicNode]:
-<http://vicnode.org.au>
-[NeCTAR Volume Storage]:
-<https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage>
-[NeCTAR Object Storage]:
-<https://support.nectar.org.au/support/solutions/folders/6000190146>
-[Ceph Object Gateway]:
-<http://docs.ceph.com/docs/master/radosgw/>
-[OpenStack Swift]:
-<http://swift.openstack.org>
-[CAP theorm]:
-<https://en.wikipedia.org/wiki/CAP_theorem>
-[rclone]:
-<http://rclone.org/>
+  [VicNode]: <http://vicnode.org.au>
+  [NeCTAR Volume Storage]: <https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage>
+  [NeCTAR Object Storage]: <https://support.nectar.org.au/support/solutions/folders/6000190146>
+  [Ceph Object Gateway]: <http://docs.ceph.com/docs/master/radosgw/>
+  [OpenStack Swift]: <http://swift.openstack.org>
+  [CAP theorm]: <https://en.wikipedia.org/wiki/CAP_theorem>
+  [get an account]: <https://support.nectar.org.au/support/solutions/articles/6000055377-getting-an-account>
+  [apply for a project]: <https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation>
+  [API credentials]: <https://support.nectar.org.au/support/solutions/articles/6000078065-api>
+  [rclone]: <http://rclone.org/>
