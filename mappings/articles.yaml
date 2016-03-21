@@ -30319,25 +30319,27 @@
           \ with the\nability to easily store and share research data through an affordable,\
           \ secure\nand sustainable service. It provides storage solutions to suit\
           \ a variety of\nresearch data storage needs. This documentation focuses\
-          \ particularly on\nVicNode\u2019s cloud object storage offerings, however\
-          \ much of it is relevant to\nNeCTAR Object Storage. Here you will demos\
-          \ of useful object storage clients\nused to complete common tasks and caveats\
-          \ regarding API usage and\ncompatibility. \n Overview \n VicNode and the\
-          \ Research Cloud \n VicNode was established as part of RDSI (the\nResearch\
+          \ particularly on\nVicNode's cloud object storage offerings, however much\
+          \ of it is relevant to\nNeCTAR Object Storage. Here you will demos of useful\
+          \ object storage clients\nused to complete common tasks and caveats regarding\
+          \ API usage and\ncompatibility. \n \n Contents \n \n VicNode Overview \n\
+          \ VicNode Cloud Storage \n [Accessing VicNode Cloud Storage](#accessing\
+          \ \n Common Use-cases and Client Tools \n \n \n Overview \n VicNode and\
+          \ the Research Cloud \n VicNode was established as part of RDSI (the\nResearch\
           \ Data Storage Initiative), a national network of research data nodes\n\
-          and the sister project of NeCTAR. RDSI\u2019s focus is on accessibility,\n\
-          dissemination, sharing and long-term curation of research datasets. VicNode's\n\
-          storage services are hosted locally in Victoria at the datacentres of the\n\
-          University of Melbourne and Monash University and are connected with high\n\
-          bandwidth to the VeRNet and AARNet research networks, VicNode storage is\
-          \ also\nclosely coupled to the Monash and Melbourne zones of the NeCTAR\
-          \ Research Cloud. \n VicNode offers a variety of storage products utilising\
-          \ different underlying technologies at each\noperating centre. Two types\
-          \ of VicNode storage in particular are directly\nlinked to, and accessible\
-          \ through, the Research Cloud: NeCTAR Volume Storage\nand NeCTAR Object\
-          \ Storage. Implementation and access details of these are\ndiscussed in\
-          \ the next section. \n VicNode Cloud Storage \n Computational \n VicNode\u2019\
-          s current Computational\nstorage product is delivered solely as volume storage\
+          and the sister project of NeCTAR. RDSI's focus is on accessibility,\ndissemination,\
+          \ sharing and long-term curation of research datasets. VicNode's\nstorage\
+          \ services are hosted locally in Victoria at the datacentres of the\nUniversity\
+          \ of Melbourne and Monash University and are connected with high\nbandwidth\
+          \ to the VeRNet and AARNet research networks, VicNode storage is also\n\
+          closely coupled to the Monash and Melbourne zones of the NeCTAR Research\
+          \ Cloud. \n VicNode offers a variety of storage products utilising different\
+          \ underlying technologies at each\noperating centre. Two types of VicNode\
+          \ storage in particular are directly\nlinked to, and accessible through,\
+          \ the Research Cloud: NeCTAR Volume Storage\nand NeCTAR Object Storage.\
+          \ Implementation and access details of these are\ndiscussed in the next\
+          \ section. \n Contents \n \n VicNode Cloud Storage \n Computational \n VicNode's\
+          \ current Computational\nstorage product is delivered solely as volume storage\
           \ in the Monash and\nMelbourne zones of the NeCTAR Research Cloud. This\
           \ gives researchers persistent\nblock storage which can be used like a virtual\
           \ portable hard disk and\nhot-plugged (that is, attached and detached) whilst\
@@ -30355,10 +30357,10 @@
           \ the end-user and there are a number of options for this\nwithin and outside\
           \ of the Research Cloud. Note that because each operating\ncentre uses different\
           \ storage technologies their performance profiles may vary\nfor different\
-          \ workloads. \n Object \n VicNode\u2019s other cloud storage offering is\
-          \ what could be considered\nas the original and definitive cloud storage,\
-          \ that is, object storage. Object\nstorage will be familiar to any regular\
-          \ Internet or mobile users, though they\nmay not know it! The defining characteristic\
+          \ workloads. \n Object \n VicNode's other cloud storage offering is what\
+          \ could be considered\nas the original and definitive cloud storage, that\
+          \ is, object storage. Object\nstorage will be familiar to any regular Internet\
+          \ or mobile users, though they\nmay not know it! The defining characteristic\
           \ of object storage is that it is\nbuilt for the Web and uses Web standards\
           \ like HTTP and techniques like REST\n(Representational State Transfer),\
           \ this contributes to making it massively\nscalable and ubiquitously accessible\
@@ -30389,62 +30391,163 @@
           just know that VicNode's \"Object-Vault\" is the highly redundant OpenStack\
           \ Swift\nservice whilst VicNode's \"Object-Market\" uses faster disk and\
           \ will have a\ndisaster recovery solution utilising a tape backup (though\
-          \ this is not yet\nimplemented). \n Object Storage Client Tools \n This\
-          \ section includes pointers and quickstart instructions for using various\n\
-          useful object storage client tools. These tools have been tested to work\
-          \ with\nVicNode cloud storage. \n [//]: # (These are reference links used\
-          \ in the body of this note and get\nstripped out when the markdown processor\
-          \ does its job. There is no need to\nformat nicely because it shouldn't\
-          \ be seen. Thanks SO -\nhttp://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)\
-          \ \n http://vicnode.org.au\nhttps://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\n\
-          https://support.nectar.org.au/support/solutions/folders/6000190146\nhttp://docs.ceph.com/docs/master/radosgw/\n\
-          http://swift.openstack.org\nhttps://en.wikipedia.org/wiki/CAP_theorem\n\
-          http://rclone.org/ "
+          \ this is not yet\nimplemented). \n Contents \n \n Accessing VicNode Cloud\
+          \ Storage \n To use VicNode's cloud volume and/or object storage you must\
+          \ first have a\nVicNode allocation - apply to VicNode directly, or if you\
+          \ are a University of\nMelbourne or Monash user you can contact your local\
+          \ eResearch Support. \n Your VicNode storage quota will be associated with\
+          \ a NeCTAR Research Cloud\nproject, so you will need to get an account on\
+          \ the Research Cloud. If you\nare already a Research Cloud user then you\
+          \ may have an existing project you\nare planning to use your VicNode storage\
+          \ in, otherwise you will want to\napply for a project - if you are applying\
+          \ for a new project and already\nhave a VicNode allocation you'd like to\
+          \ use then mention this in the\nallocation request. \n Once you have your\
+          \ VicNode cloud storage quota associated with a NeCTAR\nResearch Cloud user\
+          \ and project you are ready to go! For the tools and\nexamples in the subsequent\
+          \ sections you will also require your Research Cloud\nAPI credentials. \n\
+          \ Contents \n \n Object Storage Use-cases and Client Tools \n This section\
+          \ includes pointers and quickstart instructions for using various\nuseful\
+          \ object storage client tools. These tools have been tested to work with\n\
+          VicNode cloud storage. \n \n rclone \n rclone is described as \"rsync for\
+          \ cloud storage\" (rysnc being a popular and\nwidely distributed tool for\
+          \ file data-transfer and synchronisation).\nOf particular note is that rclone\
+          \ supports a wide variety of cloud storage\ntypes (both as source and destination,\
+          \ with local file-system too) and is\ncapable of delta synchronisation,\
+          \ i.e., it is not necessary to transfer a\nfull copy of the dataset if part\
+          \ of it has already been copied or only some\ndata on the source has changed,\
+          \ which makes it suitable for working with\nlarge datasets. \n Install rclone\
+          \ \n From http://rclone.org/, download and install the command line tool\n\
+          for your system.  Go to http://rclone.org/downloads/ and choose: \n Windows\
+          \ \n \n Download http://downloads.rclone.org/rclone-v1.25-windows-amd64.zip\
+          \ \n Extract rclone.exe from the zip file and save it (e.g., as C:\\users\\\
+          fred\\rclone.exe) \n All configuration and examples in the Linux section\
+          \ are as below, run from within a cmd.exe shell \n \n Macintosh (TBC) \n\
+          \ Linux \n Download http://downloads.rclone.org/rclone-v1.25-linux-amd64.zip\
+          \ \n From within a terminal session \n ubuntu@linux:~$ cd ~/Downloads\n\
+          \ \n unzip the downloaded archive \n ubuntu@linux:~/Downloads$ unzip rclone-v1.25-linux-amd64.zip\
+          \ \nArchive:  rclone-v1.25-linux-amd64.zip\n  creating: rclone-v1.25-linux-amd64/\n\
+          \  inflating: rclone-v1.25-linux-amd64/README.txt  \n  inflating: rclone-v1.25-linux-amd64/rclone\
+          \  \n  inflating: rclone-v1.25-linux-amd64/README.html  \n  inflating: rclone-v1.25-linux-amd64/rclone.1\
+          \  \nubuntu@linux:~/Downloads$ cd rclone-v1.25-linux-amd64\n \n \n ubuntu@linux:~$\
+          \ cd ~/Downloads\n \n \n unzip the downloaded archive \n \n ubuntu@linux:~/Downloads$\
+          \ unzip rclone-v1.25-linux-amd64.zip \nArchive:  rclone-v1.25-linux-amd64.zip\n\
+          \ creating: rclone-v1.25-linux-amd64/\n inflating: rclone-v1.25-linux-amd64/README.txt\
+          \ \n inflating: rclone-v1.25-linux-amd64/rclone \n inflating: rclone-v1.25-linux-amd64/README.html\
+          \ \n inflating: rclone-v1.25-linux-amd64/rclone.1 \nubuntu@linux:~/Downloads$\
+          \ cd rclone-v1.25-linux-amd64 \n \n Copy the rclone program into the system\
+          \ path \n \n ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ sudo cp\
+          \ rclone /usr/local/bin\n[sudo] password for ubuntu: \n \n Also copy the\
+          \ manual page so we can RTFM \n \n ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+          \ sudo cp rclone.1 /usr/local/man/man1 \n \n Test that rclone runs \n (You\
+          \ can ignore the message that you haven't yet configured it) \n \n ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+          \ rclone --version\n2015/11/26 20:57:41 Failed to load config file /home/ubuntu/.rclone.conf\
+          \ - using defaults: open /home/ubuntu/.rclone.conf: no such file or directory\n\
+          rclone v1.25 \n \n Configure rclone to access your project's object storage\
+          \ \n NB: here you will require the API credentials for your NeCTAR Research\
+          \ Cloud\nuser and project, see Accessing VicNode Cloud Storage. \n Here\
+          \ I will create a new configuration called \"backup\" accessing storage\n\
+          belonging to the \"Monash_RSS-test\" project. \n \n Run rclone config\n\
+          \ \n Press \"n\" to select the new remote option \n Enter a name of your\
+          \ choosing, e.g., \"backup\" \n Choose the number corresponding to swift\
+          \ as the storage type \n User name is your NeCTAR OS API username \n Enter\
+          \ your NeCTAR OS API password at the key> prompt \n At the auth> prompt\
+          \ enter https://keystone.rc.nectar.org.au:5000/v2.0\n \n At the tenant>\
+          \ prompt enter your OS API tenant/project name \n At the region> prompt\
+          \ press enter \n Review and either correct the entries or press \"y\" then\
+          \ \"q\" \n \n The file $HOME/.rclone.conf should now look something like:\
+          \ \n \n [backup]\ntype = swift\nuser = john.smith@monash.edu\nkey = pvJDjLXPmDjxEmYyFiVG\n\
+          auth = https://keystone.rc.nectar.org.au:5000/v2.0\ntenant = Monash_RSS-test\n\
+          region =  \n \n Test that rclone can access the object storage \n First\
+          \ list the contents of the object location, if the object storage\nis new\
+          \ then it will be empty, but this will verify that your\nconfiguration is\
+          \ correct: \n \n ubuntu@linux:~$ rclone lsd backup: \n Transferred:    \
+          \        0 Bytes (   0.00 kByte/s)\nErrors:                 0\nChecks: \
+          \                0\nTransferred:            0\nElapsed time:        1.2s\
+          \ \n \n Create an object storage container for your data \n Here I create\
+          \ a container \"phd2015\" to hold my data: \n \n ubuntu@linux:~$ rclone\
+          \ mkdir backup:phd2015 \n Transferred:            0 Bytes (   0.00 kByte/s)\n\
+          Errors:                 0\nChecks:                 0\nTransferred:     \
+          \       0\nElapsed time:        1.3s \n \n Make backups of local data to\
+          \ the object storage container \n Here I have three directories on my local\
+          \ computer; \"PhD\", \"PhD-data\"\nand \"results\" and I'll make a backup\
+          \ copy of these in my object\nstorage, appearing as \"phd2015/Phd\", \"\
+          phd2015/Phd-data\" and\n\"phd2015/results\" respectively. \n \n ajft@fafnir:~/Downloads$\
+          \ rclone sync PhD backup:phd2015/PhD\n2015/11/26 21:26:17 Swift container\
+          \ phd2015 path PhD/: Building file list\n2015/11/26 21:26:19 Swift container\
+          \ phd2015 path PhD/: Waiting for checks to finish\n2015/11/26 21:26:19 Swift\
+          \ container phd2015 path PhD/: Waiting for transfers to finish\n2015/11/26\
+          \ 21:26:20 Waiting for deletions to finish \n Transferred:         1852\
+          \ Bytes (   0.43 kByte/s)\nErrors:                 0\nChecks:          \
+          \       0\nTransferred:            2\nElapsed time:        4.2s \n ubuntu@linux:~/Downloads$\
+          \ rclone PhD-data backup:phd2015/PhD-data\n :\nubuntu@linux:~/Downloads$\
+          \ rclone results backup:phd2015/PhD-results\n : \n \n (Note that as in the\
+          \ third of these examples commands, the local source\nfolder and remote\
+          \ destination object prefix can differ.) \n These three \"rclone sync\"\
+          \ commands can be run daily (or more\nfrequently) to ensure that the copy\
+          \ held in the object storage is up\nto date and matches the data on the\
+          \ local computer. \n ubuntu@linux:~$ cat ~/sync-my-data\n#!/bin/sh\ncd $HOME/Documents\n\
+          rclone sync PhD backup:phd2015/PhD\nrclone sync PhD-data backup:phd2015/PhD-data\n\
+          rclone sync results backup:phd2015/PhD-results\n \n Viewing the data from\
+          \ the NeCTAR dashboard \n (NB: this only applies to the NeCTAR Swift object\
+          \ store as VicNode object\nstorage is implemented as a distinct service\
+          \ with its own region.) \n After logging in to a the NeCTAR Dashboard it\
+          \ is possible to view the files\nand containers.  You must select the correct\
+          \ project first, then choose\n\"Object Store\" and \"Containers\", then\
+          \ browse into your containers, e.g.,\n\"phd2015\" in the example above.\
+          \ \n "
         description: "<h1>VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and\
-          \ Tools</h1>\n<h2>Intro</h2>\n<p><a href=\"\">VicNode</a> provides Victorian\
-          \ researchers and their collaborators with the\nability to easily store\
-          \ and share research data through an affordable, secure\nand sustainable\
-          \ service. It provides storage solutions to suit a variety of\nresearch\
-          \ data storage needs. This documentation focuses particularly on\n<strong>VicNode\u2019\
-          s cloud object storage offerings</strong>, however much of it is relevant\
-          \ to\n<a href=\"\">NeCTAR Object Storage</a>. Here you will demos of useful\
-          \ object storage clients\nused to complete common tasks and caveats regarding\
-          \ API usage and\ncompatibility.</p>\n<h2>Overview</h2>\n<h3>VicNode and\
-          \ the Research Cloud</h3>\n<p>VicNode was established as part of RDSI (the\n\
-          Research Data Storage Initiative), a national network of research data nodes\n\
-          and the sister project of NeCTAR. RDSI\u2019s focus is on accessibility,\n\
-          dissemination, sharing and long-term curation of research datasets. VicNode's\n\
-          storage services are hosted locally in Victoria at the datacentres of the\n\
-          University of Melbourne and Monash University and are connected with high\n\
-          bandwidth to the VeRNet and AARNet research networks, VicNode storage is\
-          \ also\nclosely coupled to the Monash and Melbourne zones of the NeCTAR\
-          \ Research Cloud.</p>\n<p>VicNode offers a variety of <a href=\"http://vicnode.org.au/products/\"\
+          \ Tools</h1>\n<h2>Intro</h2>\n<p><a href=\"http://vicnode.org.au\">VicNode</a>\
+          \ provides Victorian researchers and their collaborators with the\nability\
+          \ to easily store and share research data through an affordable, secure\n\
+          and sustainable service. It provides storage solutions to suit a variety\
+          \ of\nresearch data storage needs. This documentation focuses particularly\
+          \ on\n<strong>VicNode's cloud object storage offerings</strong>, however\
+          \ much of it is relevant to\n<a href=\"https://support.nectar.org.au/support/solutions/folders/6000190146\"\
+          >NeCTAR Object Storage</a>. Here you will demos of useful object storage\
+          \ clients\nused to complete common tasks and caveats regarding API usage\
+          \ and\ncompatibility.</p>\n<p><a name=\"toc\"></a></p>\n<h3>Contents</h3>\n\
+          <ul>\n<li><a href=\"#overview\">VicNode Overview</a></li>\n<li><a href=\"\
+          #vicnode%20storage\">VicNode Cloud Storage</a></li>\n<li>[Accessing VicNode\
+          \ Cloud Storage](#accessing</li>\n<li><a href=\"#use-cases%20and%20tools\"\
+          >Common Use-cases and Client Tools</a></li>\n</ul>\n<p><a name=\"overview\"\
+          ></a></p>\n<h2>Overview</h2>\n<h3>VicNode and the Research Cloud</h3>\n\
+          <p>VicNode was established as part of RDSI (the\nResearch Data Storage Initiative),\
+          \ a national network of research data nodes\nand the sister project of NeCTAR.\
+          \ RDSI's focus is on accessibility,\ndissemination, sharing and long-term\
+          \ curation of research datasets. VicNode's\nstorage services are hosted\
+          \ locally in Victoria at the datacentres of the\nUniversity of Melbourne\
+          \ and Monash University and are connected with high\nbandwidth to the VeRNet\
+          \ and AARNet research networks, VicNode storage is also\nclosely coupled\
+          \ to the Monash and Melbourne zones of the NeCTAR Research Cloud.</p>\n\
+          <p>VicNode offers a variety of <a href=\"http://vicnode.org.au/products/\"\
           \ title=\"VicNode Storage Products\">storage products</a> utilising different\
           \ underlying technologies at each\noperating centre. Two types of VicNode\
           \ storage in particular are directly\nlinked to, and accessible through,\
-          \ the Research Cloud: <a href=\"\">NeCTAR Volume Storage</a>\nand <a href=\"\
-          \">NeCTAR Object Storage</a>. Implementation and access details of these\
-          \ are\ndiscussed in the next section.</p>\n<h3>VicNode Cloud Storage</h3>\n\
-          <h4>Computational</h4>\n<p>VicNode\u2019s current Computational\nstorage\
-          \ product is delivered solely as volume storage in the Monash and\nMelbourne\
-          \ zones of the NeCTAR Research Cloud. This gives researchers persistent\n\
-          block storage which can be used like a virtual portable hard disk and\n\
-          hot-plugged (that is, attached and detached) whilst a cloud server is active.\n\
-          Volumes can also be used as bootable drives, thus making the whole cloud\
-          \ server\noperating system and configuration persistent.</p>\n<p>Access\
-          \ to the underlying storage is standardised through the NeCTAR Research\n\
-          Cloud and OpenStack, but each operating centre uses a different solution.\
-          \ At\nthe University of Melbourne, VicNode Computational storage is delivered\
-          \ via\nhigh-availability NetApp servers, whereas at Monash University it\
-          \ is built on\ntop of a cluster of commodity storage servers all running\
-          \ the Ceph distributed\nstorage system. In both cases rudimentary storage\
-          \ availability protection is\nprovided by RAID (in the NetApp case) or replication\
-          \ (in the Ceph case), but no\nautomated/implicit backups are made - backup\
-          \ of volume storage is the\nresponsibility of the end-user and there are\
-          \ a number of options for this\nwithin and outside of the Research Cloud.\
-          \ Note that because each operating\ncentre uses different storage technologies\
-          \ their performance profiles may vary\nfor different workloads.</p>\n<h4>Object</h4>\n\
-          <p>VicNode\u2019s other cloud storage offering is what could be considered\n\
+          \ the Research Cloud: <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
+          >NeCTAR Volume Storage</a>\nand <a href=\"https://support.nectar.org.au/support/solutions/folders/6000190146\"\
+          >NeCTAR Object Storage</a>. Implementation and access details of these are\n\
+          discussed in the next section.</p>\n<p><a href=\"#toc\">Contents</a></p>\n\
+          <p><a name=\"vicnode%20storage\"></a></p>\n<h3>VicNode Cloud Storage</h3>\n\
+          <h4>Computational</h4>\n<p>VicNode's current Computational\nstorage product\
+          \ is delivered solely as volume storage in the Monash and\nMelbourne zones\
+          \ of the NeCTAR Research Cloud. This gives researchers persistent\nblock\
+          \ storage which can be used like a virtual portable hard disk and\nhot-plugged\
+          \ (that is, attached and detached) whilst a cloud server is active.\nVolumes\
+          \ can also be used as bootable drives, thus making the whole cloud server\n\
+          operating system and configuration persistent.</p>\n<p>Access to the underlying\
+          \ storage is standardised through the NeCTAR Research\nCloud and OpenStack,\
+          \ but each operating centre uses a different solution. At\nthe University\
+          \ of Melbourne, VicNode Computational storage is delivered via\nhigh-availability\
+          \ NetApp servers, whereas at Monash University it is built on\ntop of a\
+          \ cluster of commodity storage servers all running the Ceph distributed\n\
+          storage system. In both cases rudimentary storage availability protection\
+          \ is\nprovided by RAID (in the NetApp case) or replication (in the Ceph\
+          \ case), but no\nautomated/implicit backups are made - backup of volume\
+          \ storage is the\nresponsibility of the end-user and there are a number\
+          \ of options for this\nwithin and outside of the Research Cloud. Note that\
+          \ because each operating\ncentre uses different storage technologies their\
+          \ performance profiles may vary\nfor different workloads.</p>\n<h4>Object</h4>\n\
+          <p>VicNode's other cloud storage offering is what could be considered\n\
           as the original and definitive cloud storage, that is, object storage. Object\n\
           storage will be familiar to any regular Internet or mobile users, though\
           \ they\nmay not know it! The defining characteristic of object storage is\
@@ -30468,32 +30571,133 @@
           \ different object storage solution, but\naccess to the underlying storage\
           \ is standardised through the NeCTAR Research\nCloud and both solutions\
           \ support the same basic end-user REST API interfaces -\nthe S3 and OpenStack\
-          \ Swift APIs. The Monash University operating centre uses\n<a href=\"\"\
+          \ Swift APIs. The Monash University operating centre uses\n<a href=\"http://docs.ceph.com/docs/master/radosgw/\"\
           >Ceph Object Gateway</a> service whilst the University of Melbourne uses\n\
-          <a href=\"\">OpenStack Swift</a> (as does the NeCTAR Research Cloud). These\
-          \ are both clustered\nsoftware-defined storage systems. The main difference\
-          \ between them (and they\nare quite different under the hood) is that, following\
-          \ [CAP therom], Swift\nrelaxes <em>Consistency</em> where Ceph relaxes <em>Availability</em>.\
-          \ Neither of these\nchoices is black &amp; white and if that means nothing\
-          \ to you then don't worry,\njust know that VicNode's \"Object-Vault\" is\
-          \ the highly redundant OpenStack Swift\nservice whilst VicNode's \"Object-Market\"\
-          \ uses faster disk and will have a\ndisaster recovery solution utilising\
-          \ a tape backup (though this is not yet\nimplemented).</p>\n<h2>Object Storage\
-          \ Client Tools</h2>\n<p>This section includes pointers and quickstart instructions\
+          <a href=\"http://swift.openstack.org\">OpenStack Swift</a> (as does the\
+          \ NeCTAR Research Cloud). These are both clustered\nsoftware-defined storage\
+          \ systems. The main difference between them (and they\nare quite different\
+          \ under the hood) is that, following [CAP therom], Swift\nrelaxes <em>Consistency</em>\
+          \ where Ceph relaxes <em>Availability</em>. Neither of these\nchoices is\
+          \ black &amp; white and if that means nothing to you then don't worry,\n\
+          just know that VicNode's \"Object-Vault\" is the highly redundant OpenStack\
+          \ Swift\nservice whilst VicNode's \"Object-Market\" uses faster disk and\
+          \ will have a\ndisaster recovery solution utilising a tape backup (though\
+          \ this is not yet\nimplemented).</p>\n<p><a href=\"#toc\">Contents</a></p>\n\
+          <p><a name=\"accessing\"></a></p>\n<h4>Accessing VicNode Cloud Storage</h4>\n\
+          <p>To use VicNode's cloud volume and/or object storage you must first have\
+          \ a\nVicNode allocation - apply to VicNode directly, or if you are a University\
+          \ of\nMelbourne or Monash user you can contact your local eResearch Support.</p>\n\
+          <p>Your VicNode storage quota will be associated with a NeCTAR Research\
+          \ Cloud\nproject, so you will need to <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055377-getting-an-account\"\
+          >get an account</a> on the Research Cloud. If you\nare already a Research\
+          \ Cloud user then you may have an existing project you\nare planning to\
+          \ use your VicNode storage in, otherwise you will want to\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation\"\
+          >apply for a project</a> - if you are applying for a new project and already\n\
+          have a VicNode allocation you'd like to use then mention this in the\nallocation\
+          \ request.</p>\n<p>Once you have your VicNode cloud storage quota associated\
+          \ with a NeCTAR\nResearch Cloud user and project you are ready to go! For\
+          \ the tools and\nexamples in the subsequent sections you will also require\
+          \ your Research Cloud\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000078065-api\"\
+          >API credentials</a>.</p>\n<p><a href=\"#toc\">Contents</a></p>\n<p><a name=\"\
+          use-cases%20and%20tools\"></a></p>\n<h2>Object Storage Use-cases and Client\
+          \ Tools</h2>\n<p>This section includes pointers and quickstart instructions\
           \ for using various\nuseful object storage client tools. These tools have\
-          \ been tested to work with\nVicNode cloud storage.</p>\n<p>[//]: # (These\
-          \ are reference links used in the body of this note and get\nstripped out\
-          \ when the markdown processor does its job. There is no need to\nformat\
-          \ nicely because it shouldn't be seen. Thanks SO -\nhttp://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)</p>\n\
-          <p><a href=\"http://vicnode.org.au\">http://vicnode.org.au</a>\n<a href=\"\
-          https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
-          >https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage</a>\n\
-          <a href=\"https://support.nectar.org.au/support/solutions/folders/6000190146\"\
-          >https://support.nectar.org.au/support/solutions/folders/6000190146</a>\n\
-          <a href=\"http://docs.ceph.com/docs/master/radosgw/\">http://docs.ceph.com/docs/master/radosgw/</a>\n\
-          <a href=\"http://swift.openstack.org\">http://swift.openstack.org</a>\n\
-          <a href=\"https://en.wikipedia.org/wiki/CAP_theorem\">https://en.wikipedia.org/wiki/CAP_theorem</a>\n\
-          <a href=\"http://rclone.org/\">http://rclone.org/</a></p>"
+          \ been tested to work with\nVicNode cloud storage.</p>\n<hr>\n<h2>rclone</h2>\n\
+          <p><a href=\"http://rclone.org/\">rclone</a> is described as \"rsync for\
+          \ cloud storage\" (rysnc being a popular and\nwidely distributed tool for\
+          \ file data-transfer and synchronisation).\nOf particular note is that <a\
+          \ href=\"http://rclone.org/\">rclone</a> supports a wide variety of cloud\
+          \ storage\ntypes (both as source and destination, with local file-system\
+          \ too) and is\ncapable of <em>delta synchronisation</em>, i.e., it is not\
+          \ necessary to transfer a\nfull copy of the dataset if part of it has already\
+          \ been copied or only some\ndata on the source has changed, which makes\
+          \ it suitable for working with\nlarge datasets.</p>\n<h3>Install rclone</h3>\n\
+          <p>From http://rclone.org/, download and install the command line tool\n\
+          for your system.  Go to http://rclone.org/downloads/ and choose:</p>\n<h4>Windows</h4>\n\
+          <ul>\n<li>Download http://downloads.rclone.org/rclone-v1.25-windows-amd64.zip</li>\n\
+          <li>Extract rclone.exe from the zip file and save it (e.g., as C:\\users\\\
+          fred\\rclone.exe)</li>\n<li>All configuration and examples in the Linux\
+          \ section are as below, run from within a cmd.exe shell</li>\n</ul>\n<h4>Macintosh\
+          \ (TBC)</h4>\n<h4>Linux</h4>\n<h5>Download http://downloads.rclone.org/rclone-v1.25-linux-amd64.zip</h5>\n\
+          <h5>From within a terminal session</h5>\n<pre><code>ubuntu@linux:~$ cd ~/Downloads\n\
+          </code></pre>\n<p>unzip the downloaded archive</p>\n<pre><code>ubuntu@linux:~/Downloads$\
+          \ unzip rclone-v1.25-linux-amd64.zip \nArchive:  rclone-v1.25-linux-amd64.zip\n\
+          \  creating: rclone-v1.25-linux-amd64/\n  inflating: rclone-v1.25-linux-amd64/README.txt\
+          \  \n  inflating: rclone-v1.25-linux-amd64/rclone  \n  inflating: rclone-v1.25-linux-amd64/README.html\
+          \  \n  inflating: rclone-v1.25-linux-amd64/rclone.1  \nubuntu@linux:~/Downloads$\
+          \ cd rclone-v1.25-linux-amd64\n</code></pre>\n<blockquote>\n<p>ubuntu@linux:~$\
+          \ cd ~/Downloads\n</p>\n</blockquote>\n<p>unzip the downloaded archive</p>\n\
+          <blockquote>\n<p>ubuntu@linux:~/Downloads$ unzip rclone-v1.25-linux-amd64.zip\
+          \ \nArchive:  rclone-v1.25-linux-amd64.zip\n creating: rclone-v1.25-linux-amd64/\n\
+          \ inflating: rclone-v1.25-linux-amd64/README.txt<br>\n inflating: rclone-v1.25-linux-amd64/rclone<br>\n\
+          \ inflating: rclone-v1.25-linux-amd64/README.html<br>\n inflating: rclone-v1.25-linux-amd64/rclone.1<br>\n\
+          ubuntu@linux:~/Downloads$ cd rclone-v1.25-linux-amd64</p>\n</blockquote>\n\
+          <h5>Copy the rclone program into the system path</h5>\n<blockquote>\n<p>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+          \ sudo cp rclone /usr/local/bin\n[sudo] password for ubuntu:</p>\n</blockquote>\n\
+          <h5>Also copy the manual page so we can RTFM</h5>\n<blockquote>\n<p>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+          \ sudo cp rclone.1 /usr/local/man/man1</p>\n</blockquote>\n<h5>Test that\
+          \ rclone runs</h5>\n<p>(You can ignore the message that you haven't yet\
+          \ configured it)</p>\n<blockquote>\n<p>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+          \ rclone --version\n2015/11/26 20:57:41 Failed to load config file /home/ubuntu/.rclone.conf\
+          \ - using defaults: open /home/ubuntu/.rclone.conf: no such file or directory\n\
+          rclone v1.25</p>\n</blockquote>\n<h5>Configure rclone to access your project's\
+          \ object storage</h5>\n<p>NB: here you will require the API credentials\
+          \ for your NeCTAR Research Cloud\nuser and project, see <a href=\"#accessing\"\
+          >Accessing VicNode Cloud Storage</a>.</p>\n<p>Here I will create a new configuration\
+          \ called \"backup\" accessing storage\nbelonging to the \"Monash_RSS-test\"\
+          \ project.</p>\n<ul>\n<li>Run <code>rclone config</code>\n</li>\n<li>Press\
+          \ \"n\" to select the new remote option</li>\n<li>Enter a name of your choosing,\
+          \ e.g., \"backup\"</li>\n<li>Choose the number corresponding to <code>swift</code>\
+          \ as the storage type</li>\n<li>User name is your NeCTAR OS API username</li>\n\
+          <li>Enter your NeCTAR OS API password at the <code>key&gt;</code> prompt</li>\n\
+          <li>At the <code>auth&gt;</code> prompt enter <code>https://keystone.rc.nectar.org.au:5000/v2.0</code>\n\
+          </li>\n<li>At the <code>tenant&gt;</code> prompt enter your OS API tenant/project\
+          \ name</li>\n<li>At the <code>region&gt;</code> prompt press enter</li>\n\
+          <li>Review and either correct the entries or press \"y\" then \"q\"</li>\n\
+          </ul>\n<p>The file $HOME/.rclone.conf should now look something like:</p>\n\
+          <blockquote>\n<p>[backup]\ntype = swift\nuser = john.smith@monash.edu\n\
+          key = pvJDjLXPmDjxEmYyFiVG\nauth = https://keystone.rc.nectar.org.au:5000/v2.0\n\
+          tenant = Monash_RSS-test\nregion = </p>\n</blockquote>\n<h5>Test that rclone\
+          \ can access the object storage</h5>\n<p>First list the contents of the\
+          \ object location, if the object storage\nis new then it will be empty,\
+          \ but this will verify that your\nconfiguration is correct:</p>\n<blockquote>\n\
+          <p>ubuntu@linux:~$ rclone lsd backup:</p>\n<p>Transferred:            0\
+          \ Bytes (   0.00 kByte/s)\nErrors:                 0\nChecks:          \
+          \       0\nTransferred:            0\nElapsed time:        1.2s</p>\n</blockquote>\n\
+          <h5>Create an object storage container for your data</h5>\n<p>Here I create\
+          \ a container \"phd2015\" to hold my data:</p>\n<blockquote>\n<p>ubuntu@linux:~$\
+          \ rclone mkdir backup:phd2015</p>\n<p>Transferred:            0 Bytes (\
+          \   0.00 kByte/s)\nErrors:                 0\nChecks:                 0\n\
+          Transferred:            0\nElapsed time:        1.3s</p>\n</blockquote>\n\
+          <h5>Make backups of local data to the object storage container</h5>\n<p>Here\
+          \ I have three directories on my local computer; \"PhD\", \"PhD-data\"\n\
+          and \"results\" and I'll make a backup copy of these in my object\nstorage,\
+          \ appearing as \"phd2015/Phd\", \"phd2015/Phd-data\" and\n\"phd2015/results\"\
+          \ respectively.</p>\n<blockquote>\n<p>ajft@fafnir:~/Downloads$ rclone sync\
+          \ PhD backup:phd2015/PhD\n2015/11/26 21:26:17 Swift container phd2015 path\
+          \ PhD/: Building file list\n2015/11/26 21:26:19 Swift container phd2015\
+          \ path PhD/: Waiting for checks to finish\n2015/11/26 21:26:19 Swift container\
+          \ phd2015 path PhD/: Waiting for transfers to finish\n2015/11/26 21:26:20\
+          \ Waiting for deletions to finish</p>\n<p>Transferred:         1852 Bytes\
+          \ (   0.43 kByte/s)\nErrors:                 0\nChecks:                \
+          \ 0\nTransferred:            2\nElapsed time:        4.2s</p>\n<p>ubuntu@linux:~/Downloads$\
+          \ rclone PhD-data backup:phd2015/PhD-data\n :\nubuntu@linux:~/Downloads$\
+          \ rclone results backup:phd2015/PhD-results\n :</p>\n</blockquote>\n<p>(Note\
+          \ that as in the third of these examples commands, the local source\nfolder\
+          \ and remote destination object prefix can differ.)</p>\n<p>These three\
+          \ \"rclone sync\" commands can be run daily (or more\nfrequently) to ensure\
+          \ that the copy held in the object storage is up\nto date and matches the\
+          \ data on the local computer.</p>\n<pre><code>ubuntu@linux:~$ cat ~/sync-my-data\n\
+          #!/bin/sh\ncd $HOME/Documents\nrclone sync PhD backup:phd2015/PhD\nrclone\
+          \ sync PhD-data backup:phd2015/PhD-data\nrclone sync results backup:phd2015/PhD-results\n\
+          </code></pre>\n<h5>Viewing the data from the NeCTAR dashboard</h5>\n<p>(NB:\
+          \ this only applies to the NeCTAR Swift object store as VicNode object\n\
+          storage is implemented as a distinct service with its own <em>region</em>.)</p>\n\
+          <p>After logging in to a the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000076111-nectar-dashboard\"\
+          >NeCTAR Dashboard</a> it is possible to view the files\nand containers.\
+          \  You must select the correct project first, then choose\n\"Object Store\"\
+          \ and \"Containers\", then browse into your containers, e.g.,\n\"phd2015\"\
+          \ in the example above.</p>\n<hr>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:07-04:00'
@@ -30510,7 +30714,7 @@
         folder_id: 6000190153
         hits: 0
         id: 6000118791
-        modified_at: '2016-03-21T05:10:38-04:00'
+        modified_at: '2016-03-21T11:05:12-04:00'
         modified_by: null
         position: 24
         seo_data: {}
@@ -30519,95 +30723,198 @@
         thumbs_down: 0
         thumbs_up: 0
         title: VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools
-        updated_at: '2016-03-21T05:10:38-04:00'
+        updated_at: '2016-03-21T11:05:12-04:00'
         user_id: 6002464727
   html: "<h1>VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools</h1>\n\
-    <h2>Intro</h2>\n<p><a href=\"\">VicNode</a> provides Victorian researchers and\
-    \ their collaborators with the\nability to easily store and share research data\
-    \ through an affordable, secure\nand sustainable service. It provides storage\
-    \ solutions to suit a variety of\nresearch data storage needs. This documentation\
-    \ focuses particularly on\n<strong>VicNode\u2019s cloud object storage offerings</strong>,\
-    \ however much of it is relevant to\n<a href=\"\">NeCTAR Object Storage</a>. Here\
-    \ you will demos of useful object storage clients\nused to complete common tasks\
-    \ and caveats regarding API usage and\ncompatibility.</p>\n<h2>Overview</h2>\n\
-    <h3>VicNode and the Research Cloud</h3>\n<p>VicNode was established as part of\
-    \ RDSI (the\nResearch Data Storage Initiative), a national network of research\
-    \ data nodes\nand the sister project of NeCTAR. RDSI\u2019s focus is on accessibility,\n\
-    dissemination, sharing and long-term curation of research datasets. VicNode's\n\
-    storage services are hosted locally in Victoria at the datacentres of the\nUniversity\
-    \ of Melbourne and Monash University and are connected with high\nbandwidth to\
-    \ the VeRNet and AARNet research networks, VicNode storage is also\nclosely coupled\
-    \ to the Monash and Melbourne zones of the NeCTAR Research Cloud.</p>\n<p>VicNode\
-    \ offers a variety of <a href=\"http://vicnode.org.au/products/\" title=\"VicNode\
-    \ Storage Products\">storage products</a> utilising different underlying technologies\
-    \ at each\noperating centre. Two types of VicNode storage in particular are directly\n\
-    linked to, and accessible through, the Research Cloud: <a href=\"\">NeCTAR Volume\
-    \ Storage</a>\nand <a href=\"\">NeCTAR Object Storage</a>. Implementation and\
-    \ access details of these are\ndiscussed in the next section.</p>\n<h3>VicNode\
-    \ Cloud Storage</h3>\n<h4>Computational</h4>\n<p>VicNode\u2019s current Computational\n\
-    storage product is delivered solely as volume storage in the Monash and\nMelbourne\
-    \ zones of the NeCTAR Research Cloud. This gives researchers persistent\nblock\
-    \ storage which can be used like a virtual portable hard disk and\nhot-plugged\
-    \ (that is, attached and detached) whilst a cloud server is active.\nVolumes can\
-    \ also be used as bootable drives, thus making the whole cloud server\noperating\
-    \ system and configuration persistent.</p>\n<p>Access to the underlying storage\
-    \ is standardised through the NeCTAR Research\nCloud and OpenStack, but each operating\
-    \ centre uses a different solution. At\nthe University of Melbourne, VicNode Computational\
-    \ storage is delivered via\nhigh-availability NetApp servers, whereas at Monash\
-    \ University it is built on\ntop of a cluster of commodity storage servers all\
-    \ running the Ceph distributed\nstorage system. In both cases rudimentary storage\
-    \ availability protection is\nprovided by RAID (in the NetApp case) or replication\
-    \ (in the Ceph case), but no\nautomated/implicit backups are made - backup of\
-    \ volume storage is the\nresponsibility of the end-user and there are a number\
-    \ of options for this\nwithin and outside of the Research Cloud. Note that because\
-    \ each operating\ncentre uses different storage technologies their performance\
-    \ profiles may vary\nfor different workloads.</p>\n<h4>Object</h4>\n<p>VicNode\u2019\
-    s other cloud storage offering is what could be considered\nas the original and\
-    \ definitive cloud storage, that is, object storage. Object\nstorage will be familiar\
-    \ to any regular Internet or mobile users, though they\nmay not know it! The defining\
-    \ characteristic of object storage is that it is\nbuilt for the Web and uses Web\
-    \ standards like HTTP and techniques like REST\n(Representational State Transfer),\
-    \ this contributes to making it massively\nscalable and ubiquitously accessible\
-    \ online. Object storage is also very good\nat storing large and plentiful data,\
-    \ that is, huge objects or many millions of\nobjects. It can do this thanks to\
-    \ another of its defining characteristics, it\ndoes not allow an arbitrarily hierarchical\
-    \ namespace - users can create\nbuckets/containers and inside them place only\
-    \ objects, containers cannot be\nnested. So, each container is a flat and unique\
-    \ namespace of objects. Both\nobjects and the containers that hold them can also\
-    \ have user-defined metadata\nassociated with them in key-value pairs, and there\
-    \ are many special metadata\nkeys which enable and/or control some useful functionality\
-    \ of the storage,\ne.g., access-controls.</p>\n<p>Because object storage is accessed\
-    \ as a web service it is not a natural primary\nstorage type for end-user computing\
-    \ devices (like your laptop). Though it is\ncommonly used by file sync-and-share\
-    \ applications (anyone heard of Dropbox?) as\nthe central storage point with just\
-    \ a small cache kept on end-user devices.</p>\n<p>Each VicNode operating centre\
-    \ uses a different object storage solution, but\naccess to the underlying storage\
-    \ is standardised through the NeCTAR Research\nCloud and both solutions support\
-    \ the same basic end-user REST API interfaces -\nthe S3 and OpenStack Swift APIs.\
-    \ The Monash University operating centre uses\n<a href=\"\">Ceph Object Gateway</a>\
-    \ service whilst the University of Melbourne uses\n<a href=\"\">OpenStack Swift</a>\
-    \ (as does the NeCTAR Research Cloud). These are both clustered\nsoftware-defined\
-    \ storage systems. The main difference between them (and they\nare quite different\
-    \ under the hood) is that, following [CAP therom], Swift\nrelaxes <em>Consistency</em>\
-    \ where Ceph relaxes <em>Availability</em>. Neither of these\nchoices is black\
-    \ &amp; white and if that means nothing to you then don't worry,\njust know that\
-    \ VicNode's \"Object-Vault\" is the highly redundant OpenStack Swift\nservice\
-    \ whilst VicNode's \"Object-Market\" uses faster disk and will have a\ndisaster\
-    \ recovery solution utilising a tape backup (though this is not yet\nimplemented).</p>\n\
-    <h2>Object Storage Client Tools</h2>\n<p>This section includes pointers and quickstart\
-    \ instructions for using various\nuseful object storage client tools. These tools\
-    \ have been tested to work with\nVicNode cloud storage.</p>\n<p>[//]: # (These\
-    \ are reference links used in the body of this note and get\nstripped out when\
-    \ the markdown processor does its job. There is no need to\nformat nicely because\
-    \ it shouldn't be seen. Thanks SO -\nhttp://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)</p>\n\
-    <p><a href=\"http://vicnode.org.au\">http://vicnode.org.au</a>\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
-    >https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage</a>\n\
-    <a href=\"https://support.nectar.org.au/support/solutions/folders/6000190146\"\
-    >https://support.nectar.org.au/support/solutions/folders/6000190146</a>\n<a href=\"\
-    http://docs.ceph.com/docs/master/radosgw/\">http://docs.ceph.com/docs/master/radosgw/</a>\n\
-    <a href=\"http://swift.openstack.org\">http://swift.openstack.org</a>\n<a href=\"\
-    https://en.wikipedia.org/wiki/CAP_theorem\">https://en.wikipedia.org/wiki/CAP_theorem</a>\n\
-    <a href=\"http://rclone.org/\">http://rclone.org/</a></p>"
+    <h2>Intro</h2>\n<p><a href=\"http://vicnode.org.au\">VicNode</a> provides Victorian\
+    \ researchers and their collaborators with the\nability to easily store and share\
+    \ research data through an affordable, secure\nand sustainable service. It provides\
+    \ storage solutions to suit a variety of\nresearch data storage needs. This documentation\
+    \ focuses particularly on\n<strong>VicNode's cloud object storage offerings</strong>,\
+    \ however much of it is relevant to\n<a href=\"https://support.nectar.org.au/support/solutions/folders/6000190146\"\
+    >NeCTAR Object Storage</a>. Here you will demos of useful object storage clients\n\
+    used to complete common tasks and caveats regarding API usage and\ncompatibility.</p>\n\
+    <p><a name=\"toc\"/></p>\n<h3>Contents</h3>\n<ul>\n<li><a href=\"#overview\">VicNode\
+    \ Overview</a></li>\n<li><a href=\"#vicnode storage\">VicNode Cloud Storage</a></li>\n\
+    <li>[Accessing VicNode Cloud Storage](#accessing</li>\n<li><a href=\"#use-cases\
+    \ and tools\">Common Use-cases and Client Tools</a></li>\n</ul>\n<p><a name=\"\
+    overview\"/></p>\n<h2>Overview</h2>\n<h3>VicNode and the Research Cloud</h3>\n\
+    <p>VicNode was established as part of RDSI (the\nResearch Data Storage Initiative),\
+    \ a national network of research data nodes\nand the sister project of NeCTAR.\
+    \ RDSI's focus is on accessibility,\ndissemination, sharing and long-term curation\
+    \ of research datasets. VicNode's\nstorage services are hosted locally in Victoria\
+    \ at the datacentres of the\nUniversity of Melbourne and Monash University and\
+    \ are connected with high\nbandwidth to the VeRNet and AARNet research networks,\
+    \ VicNode storage is also\nclosely coupled to the Monash and Melbourne zones of\
+    \ the NeCTAR Research Cloud.</p>\n<p>VicNode offers a variety of <a href=\"http://vicnode.org.au/products/\"\
+    \ title=\"VicNode Storage Products\">storage products</a> utilising different\
+    \ underlying technologies at each\noperating centre. Two types of VicNode storage\
+    \ in particular are directly\nlinked to, and accessible through, the Research\
+    \ Cloud: <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage\"\
+    >NeCTAR Volume Storage</a>\nand <a href=\"https://support.nectar.org.au/support/solutions/folders/6000190146\"\
+    >NeCTAR Object Storage</a>. Implementation and access details of these are\ndiscussed\
+    \ in the next section.</p>\n<p><a href=\"#toc\">Contents</a></p>\n<p><a name=\"\
+    vicnode storage\"/></p>\n<h3>VicNode Cloud Storage</h3>\n<h4>Computational</h4>\n\
+    <p>VicNode's current Computational\nstorage product is delivered solely as volume\
+    \ storage in the Monash and\nMelbourne zones of the NeCTAR Research Cloud. This\
+    \ gives researchers persistent\nblock storage which can be used like a virtual\
+    \ portable hard disk and\nhot-plugged (that is, attached and detached) whilst\
+    \ a cloud server is active.\nVolumes can also be used as bootable drives, thus\
+    \ making the whole cloud server\noperating system and configuration persistent.</p>\n\
+    <p>Access to the underlying storage is standardised through the NeCTAR Research\n\
+    Cloud and OpenStack, but each operating centre uses a different solution. At\n\
+    the University of Melbourne, VicNode Computational storage is delivered via\n\
+    high-availability NetApp servers, whereas at Monash University it is built on\n\
+    top of a cluster of commodity storage servers all running the Ceph distributed\n\
+    storage system. In both cases rudimentary storage availability protection is\n\
+    provided by RAID (in the NetApp case) or replication (in the Ceph case), but no\n\
+    automated/implicit backups are made - backup of volume storage is the\nresponsibility\
+    \ of the end-user and there are a number of options for this\nwithin and outside\
+    \ of the Research Cloud. Note that because each operating\ncentre uses different\
+    \ storage technologies their performance profiles may vary\nfor different workloads.</p>\n\
+    <h4>Object</h4>\n<p>VicNode's other cloud storage offering is what could be considered\n\
+    as the original and definitive cloud storage, that is, object storage. Object\n\
+    storage will be familiar to any regular Internet or mobile users, though they\n\
+    may not know it! The defining characteristic of object storage is that it is\n\
+    built for the Web and uses Web standards like HTTP and techniques like REST\n\
+    (Representational State Transfer), this contributes to making it massively\nscalable\
+    \ and ubiquitously accessible online. Object storage is also very good\nat storing\
+    \ large and plentiful data, that is, huge objects or many millions of\nobjects.\
+    \ It can do this thanks to another of its defining characteristics, it\ndoes not\
+    \ allow an arbitrarily hierarchical namespace - users can create\nbuckets/containers\
+    \ and inside them place only objects, containers cannot be\nnested. So, each container\
+    \ is a flat and unique namespace of objects. Both\nobjects and the containers\
+    \ that hold them can also have user-defined metadata\nassociated with them in\
+    \ key-value pairs, and there are many special metadata\nkeys which enable and/or\
+    \ control some useful functionality of the storage,\ne.g., access-controls.</p>\n\
+    <p>Because object storage is accessed as a web service it is not a natural primary\n\
+    storage type for end-user computing devices (like your laptop). Though it is\n\
+    commonly used by file sync-and-share applications (anyone heard of Dropbox?) as\n\
+    the central storage point with just a small cache kept on end-user devices.</p>\n\
+    <p>Each VicNode operating centre uses a different object storage solution, but\n\
+    access to the underlying storage is standardised through the NeCTAR Research\n\
+    Cloud and both solutions support the same basic end-user REST API interfaces -\n\
+    the S3 and OpenStack Swift APIs. The Monash University operating centre uses\n\
+    <a href=\"http://docs.ceph.com/docs/master/radosgw/\">Ceph Object Gateway</a>\
+    \ service whilst the University of Melbourne uses\n<a href=\"http://swift.openstack.org\"\
+    >OpenStack Swift</a> (as does the NeCTAR Research Cloud). These are both clustered\n\
+    software-defined storage systems. The main difference between them (and they\n\
+    are quite different under the hood) is that, following [CAP therom], Swift\nrelaxes\
+    \ <em>Consistency</em> where Ceph relaxes <em>Availability</em>. Neither of these\n\
+    choices is black &amp; white and if that means nothing to you then don't worry,\n\
+    just know that VicNode's \"Object-Vault\" is the highly redundant OpenStack Swift\n\
+    service whilst VicNode's \"Object-Market\" uses faster disk and will have a\n\
+    disaster recovery solution utilising a tape backup (though this is not yet\nimplemented).</p>\n\
+    <p><a href=\"#toc\">Contents</a></p>\n<p><a name=\"accessing\"/></p>\n<h4>Accessing\
+    \ VicNode Cloud Storage</h4>\n<p>To use VicNode's cloud volume and/or object storage\
+    \ you must first have a\nVicNode allocation - apply to VicNode directly, or if\
+    \ you are a University of\nMelbourne or Monash user you can contact your local\
+    \ eResearch Support.</p>\n<p>Your VicNode storage quota will be associated with\
+    \ a NeCTAR Research Cloud\nproject, so you will need to <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055377-getting-an-account\"\
+    >get an account</a> on the Research Cloud. If you\nare already a Research Cloud\
+    \ user then you may have an existing project you\nare planning to use your VicNode\
+    \ storage in, otherwise you will want to\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation\"\
+    >apply for a project</a> - if you are applying for a new project and already\n\
+    have a VicNode allocation you'd like to use then mention this in the\nallocation\
+    \ request.</p>\n<p>Once you have your VicNode cloud storage quota associated with\
+    \ a NeCTAR\nResearch Cloud user and project you are ready to go! For the tools\
+    \ and\nexamples in the subsequent sections you will also require your Research\
+    \ Cloud\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000078065-api\"\
+    >API credentials</a>.</p>\n<p><a href=\"#toc\">Contents</a></p>\n<p><a name=\"\
+    use-cases and tools\"/></p>\n<h2>Object Storage Use-cases and Client Tools</h2>\n\
+    <p>This section includes pointers and quickstart instructions for using various\n\
+    useful object storage client tools. These tools have been tested to work with\n\
+    VicNode cloud storage.</p>\n<hr>\n<h2>rclone</h2>\n<p><a href=\"http://rclone.org/\"\
+    >rclone</a> is described as \"rsync for cloud storage\" (rysnc being a popular\
+    \ and\nwidely distributed tool for file data-transfer and synchronisation).\n\
+    Of particular note is that <a href=\"http://rclone.org/\">rclone</a> supports\
+    \ a wide variety of cloud storage\ntypes (both as source and destination, with\
+    \ local file-system too) and is\ncapable of <em>delta synchronisation</em>, i.e.,\
+    \ it is not necessary to transfer a\nfull copy of the dataset if part of it has\
+    \ already been copied or only some\ndata on the source has changed, which makes\
+    \ it suitable for working with\nlarge datasets.</p>\n<h3>Install rclone</h3>\n\
+    <p>From http://rclone.org/, download and install the command line tool\nfor your\
+    \ system.  Go to http://rclone.org/downloads/ and choose:</p>\n<h4>Windows</h4>\n\
+    <ul>\n<li>Download http://downloads.rclone.org/rclone-v1.25-windows-amd64.zip</li>\n\
+    <li>Extract rclone.exe from the zip file and save it (e.g., as C:\\users\\fred\\\
+    rclone.exe)</li>\n<li>All configuration and examples in the Linux section are\
+    \ as below, run from within a cmd.exe shell</li>\n</ul>\n<h4>Macintosh (TBC)</h4>\n\
+    <h4>Linux</h4>\n<h5>Download http://downloads.rclone.org/rclone-v1.25-linux-amd64.zip</h5>\n\
+    <h5>From within a terminal session</h5>\n<pre><code>ubuntu@linux:~$ cd ~/Downloads\n\
+    </code></pre>\n<p>unzip the downloaded archive</p>\n<pre><code>ubuntu@linux:~/Downloads$\
+    \ unzip rclone-v1.25-linux-amd64.zip \nArchive:  rclone-v1.25-linux-amd64.zip\n\
+    \  creating: rclone-v1.25-linux-amd64/\n  inflating: rclone-v1.25-linux-amd64/README.txt\
+    \  \n  inflating: rclone-v1.25-linux-amd64/rclone  \n  inflating: rclone-v1.25-linux-amd64/README.html\
+    \  \n  inflating: rclone-v1.25-linux-amd64/rclone.1  \nubuntu@linux:~/Downloads$\
+    \ cd rclone-v1.25-linux-amd64\n</code></pre>\n<blockquote>\n<p>ubuntu@linux:~$\
+    \ cd ~/Downloads\n</p>\n</blockquote>\n<p>unzip the downloaded archive</p>\n<blockquote>\n\
+    <p>ubuntu@linux:~/Downloads$ unzip rclone-v1.25-linux-amd64.zip \nArchive:  rclone-v1.25-linux-amd64.zip\n\
+    \ creating: rclone-v1.25-linux-amd64/\n inflating: rclone-v1.25-linux-amd64/README.txt<br>\n\
+    \ inflating: rclone-v1.25-linux-amd64/rclone<br>\n inflating: rclone-v1.25-linux-amd64/README.html<br>\n\
+    \ inflating: rclone-v1.25-linux-amd64/rclone.1<br>\nubuntu@linux:~/Downloads$\
+    \ cd rclone-v1.25-linux-amd64</p>\n</blockquote>\n<h5>Copy the rclone program\
+    \ into the system path</h5>\n<blockquote>\n<p>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+    \ sudo cp rclone /usr/local/bin\n[sudo] password for ubuntu:</p>\n</blockquote>\n\
+    <h5>Also copy the manual page so we can RTFM</h5>\n<blockquote>\n<p>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+    \ sudo cp rclone.1 /usr/local/man/man1</p>\n</blockquote>\n<h5>Test that rclone\
+    \ runs</h5>\n<p>(You can ignore the message that you haven't yet configured it)</p>\n\
+    <blockquote>\n<p>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ rclone --version\n\
+    2015/11/26 20:57:41 Failed to load config file /home/ubuntu/.rclone.conf - using\
+    \ defaults: open /home/ubuntu/.rclone.conf: no such file or directory\nrclone\
+    \ v1.25</p>\n</blockquote>\n<h5>Configure rclone to access your project's object\
+    \ storage</h5>\n<p>NB: here you will require the API credentials for your NeCTAR\
+    \ Research Cloud\nuser and project, see <a href=\"#accessing\">Accessing VicNode\
+    \ Cloud Storage</a>.</p>\n<p>Here I will create a new configuration called \"\
+    backup\" accessing storage\nbelonging to the \"Monash_RSS-test\" project.</p>\n\
+    <ul>\n<li>Run <code>rclone config</code></li>\n<li>Press \"n\" to select the new\
+    \ remote option</li>\n<li>Enter a name of your choosing, e.g., \"backup\"</li>\n\
+    <li>Choose the number corresponding to <code>swift</code> as the storage type</li>\n\
+    <li>User name is your NeCTAR OS API username</li>\n<li>Enter your NeCTAR OS API\
+    \ password at the <code>key&gt;</code> prompt</li>\n<li>At the <code>auth&gt;</code>\
+    \ prompt enter <code>https://keystone.rc.nectar.org.au:5000/v2.0</code></li>\n\
+    <li>At the <code>tenant&gt;</code> prompt enter your OS API tenant/project name</li>\n\
+    <li>At the <code>region&gt;</code> prompt press enter</li>\n<li>Review and either\
+    \ correct the entries or press \"y\" then \"q\"</li>\n</ul>\n<p>The file $HOME/.rclone.conf\
+    \ should now look something like:</p>\n<blockquote>\n<p>[backup]\ntype = swift\n\
+    user = john.smith@monash.edu\nkey = pvJDjLXPmDjxEmYyFiVG\nauth = https://keystone.rc.nectar.org.au:5000/v2.0\n\
+    tenant = Monash_RSS-test\nregion = </p>\n</blockquote>\n<h5>Test that rclone can\
+    \ access the object storage</h5>\n<p>First list the contents of the object location,\
+    \ if the object storage\nis new then it will be empty, but this will verify that\
+    \ your\nconfiguration is correct:</p>\n<blockquote>\n<p>ubuntu@linux:~$ rclone\
+    \ lsd backup:</p>\n<p>Transferred:            0 Bytes (   0.00 kByte/s)\nErrors:\
+    \                 0\nChecks:                 0\nTransferred:            0\nElapsed\
+    \ time:        1.2s</p>\n</blockquote>\n<h5>Create an object storage container\
+    \ for your data</h5>\n<p>Here I create a container \"phd2015\" to hold my data:</p>\n\
+    <blockquote>\n<p>ubuntu@linux:~$ rclone mkdir backup:phd2015</p>\n<p>Transferred:\
+    \            0 Bytes (   0.00 kByte/s)\nErrors:                 0\nChecks:   \
+    \              0\nTransferred:            0\nElapsed time:        1.3s</p>\n</blockquote>\n\
+    <h5>Make backups of local data to the object storage container</h5>\n<p>Here I\
+    \ have three directories on my local computer; \"PhD\", \"PhD-data\"\nand \"results\"\
+    \ and I'll make a backup copy of these in my object\nstorage, appearing as \"\
+    phd2015/Phd\", \"phd2015/Phd-data\" and\n\"phd2015/results\" respectively.</p>\n\
+    <blockquote>\n<p>ajft@fafnir:~/Downloads$ rclone sync PhD backup:phd2015/PhD\n\
+    2015/11/26 21:26:17 Swift container phd2015 path PhD/: Building file list\n2015/11/26\
+    \ 21:26:19 Swift container phd2015 path PhD/: Waiting for checks to finish\n2015/11/26\
+    \ 21:26:19 Swift container phd2015 path PhD/: Waiting for transfers to finish\n\
+    2015/11/26 21:26:20 Waiting for deletions to finish</p>\n<p>Transferred:     \
+    \    1852 Bytes (   0.43 kByte/s)\nErrors:                 0\nChecks:        \
+    \         0\nTransferred:            2\nElapsed time:        4.2s</p>\n<p>ubuntu@linux:~/Downloads$\
+    \ rclone PhD-data backup:phd2015/PhD-data\n :\nubuntu@linux:~/Downloads$ rclone\
+    \ results backup:phd2015/PhD-results\n :</p>\n</blockquote>\n<p>(Note that as\
+    \ in the third of these examples commands, the local source\nfolder and remote\
+    \ destination object prefix can differ.)</p>\n<p>These three \"rclone sync\" commands\
+    \ can be run daily (or more\nfrequently) to ensure that the copy held in the object\
+    \ storage is up\nto date and matches the data on the local computer.</p>\n<pre><code>ubuntu@linux:~$\
+    \ cat ~/sync-my-data\n#!/bin/sh\ncd $HOME/Documents\nrclone sync PhD backup:phd2015/PhD\n\
+    rclone sync PhD-data backup:phd2015/PhD-data\nrclone sync results backup:phd2015/PhD-results\n\
+    </code></pre>\n<h5>Viewing the data from the NeCTAR dashboard</h5>\n<p>(NB: this\
+    \ only applies to the NeCTAR Swift object store as VicNode object\nstorage is\
+    \ implemented as a distinct service with its own <em>region</em>.)</p>\n<p>After\
+    \ logging in to a the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000076111-nectar-dashboard\"\
+    >NeCTAR Dashboard</a> it is possible to view the files\nand containers.  You must\
+    \ select the correct project first, then choose\n\"Object Store\" and \"Containers\"\
+    , then browse into your containers, e.g.,\n\"phd2015\" in the example above.</p>\n\
+    <hr>"
   parent: 24
-  sha1: 9b39e5b4f0e7c54ca45cb1da7f45121b79822b29
+  sha1: adaeedb9025b0c9e1446a9684c2e18881ef4f578
   title: VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools
