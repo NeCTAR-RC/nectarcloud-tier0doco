@@ -16,8 +16,11 @@ compatibility.
 
 - [VicNode Overview](#overview)
 - [VicNode Cloud Storage](#vicnode storage)
-- [Accessing VicNode Cloud Storage](#accessing
+- [Accessing VicNode Cloud Storage](#accessing)
 - [Common Use-cases and Client Tools](#use-cases and tools)
+- [Using rclone to synchronise folders to/from object storage](#rclone)
+- [Sharing files over the Internet with Swift tempurls](#tempurl)
+- [Backing up files to object storage using Duplicity](#duplicity)
 
 <a name="overview"/>
 
@@ -44,6 +47,8 @@ discussed in the next section.
 [Contents](#toc)
 
 <a name="vicnode storage"/>
+
+---
 
 ### VicNode Cloud Storage
 
@@ -111,6 +116,8 @@ implemented).
 
 [Contents](#toc)
 
+---
+
 <a name="accessing"/>
 
 #### Accessing VicNode Cloud Storage
@@ -134,6 +141,8 @@ examples in the subsequent sections you will also require your Research Cloud
 
 [Contents](#toc)
 
+---
+
 <a name="use-cases and tools"/>
 
 ## Object Storage Use-cases and Client Tools
@@ -143,6 +152,8 @@ useful object storage client tools. These tools have been tested to work with
 VicNode cloud storage.
 
 ---
+
+<a name="rclone"/>
 
 ## rclone
 
@@ -174,56 +185,46 @@ for your system.  Go to http://rclone.org/downloads/ and choose:
 
 ##### From within a terminal session
 
-    
-    ubuntu@linux:~$ cd ~/Downloads
-    
-unzip the downloaded archive
-
-    ubuntu@linux:~/Downloads$ unzip rclone-v1.25-linux-amd64.zip 
-    Archive:  rclone-v1.25-linux-amd64.zip
-      creating: rclone-v1.25-linux-amd64/
-      inflating: rclone-v1.25-linux-amd64/README.txt  
-      inflating: rclone-v1.25-linux-amd64/rclone  
-      inflating: rclone-v1.25-linux-amd64/README.html  
-      inflating: rclone-v1.25-linux-amd64/rclone.1  
-    ubuntu@linux:~/Downloads$ cd rclone-v1.25-linux-amd64
-    
-
 >
->ubuntu@linux:~$ cd ~/Downloads
+> ubuntu@linux:~$ cd ~/Downloads
 >
     
 unzip the downloaded archive
 
 >
->ubuntu@linux:~/Downloads$ unzip rclone-v1.25-linux-amd64.zip 
->Archive:  rclone-v1.25-linux-amd64.zip
->  creating: rclone-v1.25-linux-amd64/
->  inflating: rclone-v1.25-linux-amd64/README.txt  
->  inflating: rclone-v1.25-linux-amd64/rclone  
->  inflating: rclone-v1.25-linux-amd64/README.html  
->  inflating: rclone-v1.25-linux-amd64/rclone.1  
->ubuntu@linux:~/Downloads$ cd rclone-v1.25-linux-amd64
+> ubuntu@linux:~/Downloads$ unzip rclone-v1.25-linux-amd64.zip 
+> Archive:  rclone-v1.25-linux-amd64.zip
+>   creating: rclone-v1.25-linux-amd64/
+>   inflating: rclone-v1.25-linux-amd64/README.txt  
+>   inflating: rclone-v1.25-linux-amd64/rclone  
+>   inflating: rclone-v1.25-linux-amd64/README.html  
+>   inflating: rclone-v1.25-linux-amd64/rclone.1  
+> ubuntu@linux:~/Downloads$ cd rclone-v1.25-linux-amd64
 >
 
 
 ##### Copy the rclone program into the system path
 
-
->ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ sudo cp rclone /usr/local/bin
->[sudo] password for ubuntu:
+>
+> ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ sudo cp rclone /usr/local/bin
+> [sudo] password for ubuntu:
+>
 
 ##### Also copy the manual page so we can RTFM
 
->ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ sudo cp rclone.1 /usr/local/man/man1
+>
+> ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ sudo cp rclone.1 /usr/local/man/man1
+>
 
 ##### Test that rclone runs
 
 (You can ignore the message that you haven't yet configured it)
 
->ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ rclone --version
->2015/11/26 20:57:41 Failed to load config file /home/ubuntu/.rclone.conf - using defaults: open /home/ubuntu/.rclone.conf: no such file or directory
->rclone v1.25
+>
+> ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ rclone --version
+> 2015/11/26 20:57:41 Failed to load config file /home/ubuntu/.rclone.conf - using defaults: open /home/ubuntu/.rclone.conf: no such file or directory
+> rclone v1.25
+>
 
 ##### Configure rclone to access your project's object storage
 
@@ -233,26 +234,28 @@ user and project, see [Accessing VicNode Cloud Storage](#accessing).
 Here I will create a new configuration called "backup" accessing storage
 belonging to the "Monash_RSS-test" project.
 
-- Run ```rclone config```
-- Press "n" to select the new remote option
-- Enter a name of your choosing, e.g., "backup"
-- Choose the number corresponding to ```swift``` as the storage type
+- Run **rclone config**
+- Press **n** to select the new remote option
+- Enter a name of your choosing, e.g., **backup**
+- Choose the number corresponding to **swift** as the storage type
 - User name is your NeCTAR OS API username
-- Enter your NeCTAR OS API password at the ```key>``` prompt
-- At the ```auth>``` prompt enter ```https://keystone.rc.nectar.org.au:5000/v2.0```
-- At the ```tenant>``` prompt enter your OS API tenant/project name
-- At the ```region>``` prompt press enter
-- Review and either correct the entries or press "y" then "q"
+- Enter your NeCTAR OS API password at the **key>** prompt
+- At the **auth>** prompt enter **https://keystone.rc.nectar.org.au:5000/v2.0**
+- At the **tenant>** prompt enter your OS API tenant/project name
+- At the **region>** prompt press enter
+- Review and either correct the entries or press **y** then **q**
 
 The file $HOME/.rclone.conf should now look something like:
 
->[backup]
->type = swift
->user = john.smith@monash.edu
->key = pvJDjLXPmDjxEmYyFiVG
->auth = https://keystone.rc.nectar.org.au:5000/v2.0
->tenant = Monash_RSS-test
->region = 
+>
+> [backup]
+> type = swift
+> user = john.smith@monash.edu
+> key = pvJDjLXPmDjxEmYyFiVG
+> auth = https://keystone.rc.nectar.org.au:5000/v2.0
+> tenant = Monash_RSS-test
+> region = 
+>
 
 ##### Test that rclone can access the object storage
 
@@ -260,6 +263,7 @@ First list the contents of the object location, if the object storage
 is new then it will be empty, but this will verify that your
 configuration is correct:
 
+>
 > ubuntu@linux:~$ rclone lsd backup:
 > 
 > Transferred:            0 Bytes (   0.00 kByte/s)
@@ -267,11 +271,13 @@ configuration is correct:
 > Checks:                 0
 > Transferred:            0
 > Elapsed time:        1.2s
+> 
 
 ##### Create an object storage container for your data
 
 Here I create a container "phd2015" to hold my data:
 
+>
 > ubuntu@linux:~$ rclone mkdir backup:phd2015
 > 
 > Transferred:            0 Bytes (   0.00 kByte/s)
@@ -279,6 +285,7 @@ Here I create a container "phd2015" to hold my data:
 > Checks:                 0
 > Transferred:            0
 > Elapsed time:        1.3s
+>
 
 ##### Make backups of local data to the object storage container
 
@@ -287,6 +294,7 @@ and "results" and I'll make a backup copy of these in my object
 storage, appearing as "phd2015/Phd", "phd2015/Phd-data" and
 "phd2015/results" respectively.
 
+>
 > ajft@fafnir:~/Downloads$ rclone sync PhD backup:phd2015/PhD
 > 2015/11/26 21:26:17 Swift container phd2015 path PhD/: Building file list
 > 2015/11/26 21:26:19 Swift container phd2015 path PhD/: Waiting for checks to finish
@@ -303,6 +311,7 @@ storage, appearing as "phd2015/Phd", "phd2015/Phd-data" and
 >  :
 > ubuntu@linux:~/Downloads$ rclone results backup:phd2015/PhD-results
 >  :
+>
 
 (Note that as in the third of these examples commands, the local source
 folder and remote destination object prefix can differ.)
@@ -311,12 +320,14 @@ These three "rclone sync" commands can be run daily (or more
 frequently) to ensure that the copy held in the object storage is up
 to date and matches the data on the local computer.
 
-	ubuntu@linux:~$ cat ~/sync-my-data
-	#!/bin/sh
-	cd $HOME/Documents
-	rclone sync PhD backup:phd2015/PhD
-	rclone sync PhD-data backup:phd2015/PhD-data
-	rclone sync results backup:phd2015/PhD-results
+>
+>	ubuntu@linux:~$ cat ~/sync-my-data
+>	#!/bin/sh
+>	cd $HOME/Documents
+>	rclone sync PhD backup:phd2015/PhD
+>	rclone sync PhD-data backup:phd2015/PhD-data
+>	rclone sync results backup:phd2015/PhD-results
+>
 
 ##### Viewing the data from the NeCTAR dashboard
 
@@ -328,9 +339,100 @@ and containers.  You must select the correct project first, then choose
 "Object Store" and "Containers", then browse into your containers, e.g.,
 "phd2015" in the example above.
 
+[Contents](#toc)
+
 ---
 
-[//]:
+<a name="tempurl"/>
+
+## Sharing files over the Internet with Swift tempurls
+
+[Contents](#toc)
+
+---
+
+<a name="duplicity"/>
+
+## Backing up files to object storage using Duplicity
+
+[Duplicity] is a backup utility that can make secure and bandwidth efficient
+back-ups from your computer to various remote storage types including Swift
+and S3. Duplicity uses librsync and GnuPG to make differential and secure
+back-ups. In this example we will configure Duplicity to back-up using the
+Swift API.
+
+First you'll need to create a container that Duplicity will use as the backup
+target location. In this example we assume a container named "ubuntu" already
+exists in the project's object store. You can optionally
+[encrypt your back-ups] locally before they are transferred to cloud storage,
+though we do not cover that in this example.
+
+#### On a 14.04 (Trusty) Ubuntu LTS system
+
+>
+> apt-get install duplicity
+>
+
+#### Create a credentials file
+
+The credentials file contains a subset of the variables from your openrc.sh
+Research Cloud [API credentials] file.
+
+>
+>	cat backup.sh
+>	
+>	#!/bin/bash
+>	export SWIFT_AUTHVERSION=2
+>	export SWIFT_AUTHURL=https://keystone.rc.nectar.org.au:5000/v2.0/
+>	export SWIFT_USERNAME="Monash_RSS-test:adrian.tritschler@monash.edu"
+>	export SWIFT_PASSWORD=xxxxxxxxx
+>
+
+#### Source the credentials, then run a backup
+
+>
+> $ . backup.sh
+> $ duplicity --no-encryption /home/ajft/src swift://ubuntu
+> Synchronizing remote metadata to local cache...
+> Deleting local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full-signatures.20160106T001707Z.sigtar.gz (not authoritative at backend).
+> Deleting local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full.20160106T001707Z.manifest (not authoritative at backend).
+> Last full backup date: none
+> No signatures found, switching to full backup.
+> --------------[ Backup Statistics ]--------------
+> StartTime 1452040911.64 (Wed Jan  6 11:41:51 2016)
+> EndTime 1452040911.68 (Wed Jan  6 11:41:51 2016)
+> ElapsedTime 0.04 (0.04 seconds)
+> SourceFiles 109
+> SourceFileSize 458449 (448 KB)
+> NewFiles 109
+> NewFileSize 458449 (448 KB)
+> DeletedFiles 0
+> ChangedFiles 0
+> ChangedFileSize 0 (0 bytes)
+> ChangedDeltaSize 0 (0 bytes)
+> DeltaEntries 109
+> RawDeltaSize 257745 (252 KB)
+> TotalDestinationSizeChange 175413 (171 KB)
+> Errors 0
+>
+
+#### Verify that Duplicity has created the initial back-up
+
+You can now see the files that Duplicity has created by listing the contents
+of the target container, e.g., using the Dashboard to browse or the Swift
+command-line client (python-swiftclient).
+
+>
+> $ swift list --lh ubuntu
+> 9.6K 2016-01-06 00:41:52 duplicity-full-signatures.20160106T004151Z.sigtar.gz
+>  179 2016-01-06 00:41:53 duplicity-full.20160106T004151Z.manifest
+> 171K 2016-01-06 00:41:52 duplicity-full.20160106T004151Z.vol1.difftar.gz
+> 181K
+>
+
+[Contents](#toc)
+
+[//]: # http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax
 
   [VicNode]: <http://vicnode.org.au>
   [NeCTAR Volume Storage]: <https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage>
@@ -343,3 +445,5 @@ and containers.  You must select the correct project first, then choose
   [apply for a project]: <https://support.nectar.org.au/support/solutions/articles/6000068044-managing-an-allocation>
   [API credentials]: <https://support.nectar.org.au/support/solutions/articles/6000078065-api>
   [rclone]: <http://rclone.org/>
+  [Duplicity]: <http://duplicity.nongnu.org>
+  [encrypt your back-ups]: <https://dmsimard.com/2014/08/12/send-your-encrypted-duplicity-backups-to-a-swift-object-storage/>
