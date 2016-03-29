@@ -7,8 +7,8 @@ ability to easily store and share research data through an affordable, secure
 and sustainable service. It provides storage solutions to suit a variety of
 research data storage needs. This documentation focuses particularly on
 __VicNode's cloud object storage offerings__, however much of it is relevant to
-[NeCTAR Object Storage]. Here you will demos of useful object storage clients
-used to complete common tasks and caveats regarding API usage and
+[NeCTAR Object Storage]. Here you will find demos of object storage client
+tools useful for completing common tasks, and caveats regarding API usage and
 compatibility.
 
 <a name="toc"/>
@@ -138,6 +138,45 @@ Once you have your VicNode cloud storage quota associated with a NeCTAR
 Research Cloud user and project you are ready to go! For the tools and
 examples in the subsequent sections you will also require your Research Cloud
 [API credentials].
+
+##### A note about Regions and endpoints
+
+In the context of VicNode and NeCTAR there are at least three separate Object
+Storage services. These are all integrated with the Research Cloud but some
+are only accessible to VicNode users.
+
+1.	NeCTAR Swift - This is a nationally distributed Swift cluster with storage
+	nodes at seven Research Cloud sites around Australia. Some sites also have
+	local Swift Proxies (the user-facing API servers) which can be explicitly
+	used by configuring your client tool/s to point to the correct storage URL
+	or Region. The default storage policy for this cluster creates 3-copies of
+	all objects. This cluster also provides storage for many other services on
+	the Research Cloud, e.g., the Glance Image Catalog where VM images and
+	snapshots are stored. All NeCTAR users are able to access and use NeCTAR
+	Swift. There is no need to specify any special storage URL or Region for
+	this cluster as it is the default NeCTAR object storage service.
+1.	VicNode Swift Object Vault - See above for details. To use VicNode Swift
+	you must tell you client tool/s to select either the "VicNode" Region or
+	configure a storage URL of
+	"https://vault.melbourne.vicnode.org.au:8888/v1/<ACCOUNT>/"
+
+1.	VicNode Ceph Object Market - See above for details. Due to technical
+	limitations with NeCTAR Keystone, the VicNode Ceph Object store is not
+	currently listed in the Keystone service catalog and therefore cannot be
+	referred to via Region. Instead, configure your client tool/s to use a
+	storage URL of "https://au-east.erc.monash.edu.au/swift/v1".
+
+Example Swift python-swiftclient accessing VicNode Ceph Object:
+>
+> swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1 stat
+>
+
+Example Swift python-swiftclient accessing VicNode Vault Object:
+>
+> swift --region VicNode stat
+>
+> swift --os-storage-url https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_d57de879288840e199bb1a48ae0c2c79 stat
+>
 
 [Contents](#toc)
 
@@ -393,6 +432,112 @@ and containers.  You must select the correct project first, then choose
 
 ## Sharing files over the Internet with Swift tempurls
 
+Object storage is great at both storing large amounts of unstructured data
+and also disseminating it - once your data is in object storage it is
+only a small step to make it available over the Internet (using standard
+protocols that regular web-browsers understand). You can make the contents
+of a container public or give specific access to other users via container
+ACLs.
+
+In this example we demonstrate how to use the Swift tempurl feature to provide
+temporary URL-authenticated access to Swift objects. This feature allows you
+to easily share data with anyone via URL, they needn't have a Swift user
+account. Additionally, it's not just GET access that can be allowed, but
+also other HTTP methods like PUT - so you can use this feature to allow other
+people or services to push data into your object storage. A typical example
+is a service such as a website that allows users to download large objects
+from a non-public object storage container by minting tempurls and presenting
+them directly to the user via their web-browser.
+
+### How it works
+
+The tempurl functionality works using a Hash-based Message
+Authentication Code, this [HMAC] encodes:
+
+1.	The HTTP method being allowed, e.g., GET, PUT, HEAD, DELETE, POST
+1.	The expiry date (in Unix time)
+1.	The path to the object (from the object store's root URL)
+1.	A secret key shared between the user/process that generates the tempurl
+	and the object storage service that will decode and accept/deny access
+	based on the other parameters
+
+This encoding can be done with a few lines of Python or similar high-level
+code, but luckily the Swift command line client already has a helper command
+to do this. In older versions of python-swiftclient this was a separate
+command called _swift-temp-url_, in newer versions this is a sub-command of
+the main client, i.e., _swift tempurl ..._.
+
+### Set your Swift tempurl key
+
+To use tempurl functionality it is first necessary to configure your object
+store account with a tempurl key - this is the shared secret mentioned in
+step 4 above that allows the server to verify whether a tempurl is genuine.
+This is done (as demonstrated below) using account metadata. Both the
+OpenStack [Swift](http://docs.ceph.com/docs/master/radosgw/swift/) and
+[Ceph Object Gateway Swift](http://docs.ceph.com/docs/master/radosgw/swift/)
+implementations of the Swift API allow users to set at least 2 tempurl keys,
+this allows users and applications to perform key rotation (but if you change
+the key used to generate a particular tempurl then that tempurl will
+become invalid).
+
+On VicNode Object Market at Monash:
+
+>
+> $ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1 post --meta "Temp-URL-Key:superfunhappytimes"
+>
+
+On VicNode Object Vault at UoM:
+
+>
+> $ swift --os-region-name VicNode post --meta "Temp-URL-Key:codswallop"
+>
+
+NB: The OpenStack Swift API will display the Temp-URL-Key metadata back via
+the API when account metadata is queried. The Ceph Swift API does not, so
+it is only possible to set or add a new key if an existing one is forgotten
+or lost.
+
+### Upload the object (if doesn't already exist in the object store)
+
+Here we upload the file _experiment.tar.gz_ from the current directory to a
+container named _share_ in our object storage account.
+
+>
+> $ swift upload share experiment.tar.gz
+>
+
+### Generate a tempurl to share with collaborators
+
+We'll give them two days (172800 seconds) to grab the data.
+
+>
+> $ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1 tempurl GET 172800 /share/experiment.tar.gz superfunhappytimes
+>
+> /share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&temp_url_expires=1454540180
+>
+
+The command outputs the sub-path and query components of the final working
+tempurl URL. To get the final product we need to prepend the service's Swift
+storage URL. For the above example we would tell our colleagues to grab the
+experiment data from:
+
+>
+> https://au-east.erc.monash.edu.au/swift/v1/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&temp_url_expires=1454540180
+>
+
+With OpenStack Swift that URL also includes the account identifier, e.g.,:
+
+>
+> https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_cb6c6ea8eb634cc598b0d277b8677b4f/share/experiment.tar.gz?temp_url_sig=0b7408a830d9c03411804b019279135a714c6f28&temp_url_expires=1404626295
+>
+
+NB: The process of generating the tempurl is entirely local because the
+Swift service just needs to know the tempurl key to decode the other
+parameters and validate them on-demand. However, this means
+there is no validation that your new tempurl works, so we suggest you it
+them before distributing, e.g., by pasting into your web-browser address
+bar.
+
 [Contents](#toc)
 
 ---
@@ -510,7 +655,7 @@ command-line client (python-swiftclient).
 
 [Contents](#toc)
 
-[//]: # http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax
+[//]: # (http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
   [VicNode]: <http://vicnode.org.au>
   [NeCTAR Volume Storage]: <https://support.nectar.org.au/support/solutions/articles/6000055382-introduction-to-cloud-storage>
@@ -525,3 +670,4 @@ command-line client (python-swiftclient).
   [rclone]: <http://rclone.org/>
   [Duplicity]: <http://duplicity.nongnu.org>
   [encrypt your back-ups]: <https://dmsimard.com/2014/08/12/send-your-encrypted-duplicity-backups-to-a-swift-object-storage/>
+  [HMAC]: <https://en.wikipedia.org/wiki/Hash-based_message_authentication_code>
