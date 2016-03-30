@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bad4c104_fe24e4c7",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Tools and Apps--DOCID24/VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools--DOCID117.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000105
+      },
+      "writtenOn": "2016-03-30T00:47:44Z",
+      "side": 1,
+      "message": "Your examples use the swift client, have you considered or tried the openstack client?",
+      "revId": "e822452f5e24c8db3b5478b9432a4f0cd8a081bf",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_7e31b40a",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Tools and Apps--DOCID24/VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools--DOCID117.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1000105
+      },
+      "writtenOn": "2016-03-30T00:47:44Z",
+      "side": 1,
+      "message": "space instead of hyphen?",
+      "revId": "e822452f5e24c8db3b5478b9432a4f0cd8a081bf",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_de49e08c",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Tools and Apps--DOCID24/VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools--DOCID117.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 1000105
+      },
+      "writtenOn": "2016-03-30T00:47:44Z",
+      "side": 1,
+      "message": "Spaces instead of tabs maybe?",
+      "revId": "e822452f5e24c8db3b5478b9432a4f0cd8a081bf",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
