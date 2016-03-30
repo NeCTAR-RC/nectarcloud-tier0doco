@@ -30320,29 +30320,29 @@
           \ secure\nand sustainable service. It provides storage solutions to suit\
           \ a variety of\nresearch data storage needs. This documentation focuses\
           \ particularly on\nVicNode's cloud object storage offerings, however much\
-          \ of it is relevant to\nNeCTAR Object Storage. Here you will demos of useful\
-          \ object storage clients\nused to complete common tasks and caveats regarding\
-          \ API usage and\ncompatibility. \n \n Contents \n \n VicNode Overview \n\
-          \ VicNode Cloud Storage \n Accessing VicNode Cloud Storage \n Common Use-cases\
-          \ and Client Tools \n Using rclone to synchronise folders to/from object\
-          \ storage \n Sharing files over the Internet with Swift tempurls \n Backing\
-          \ up files to object storage using Duplicity \n \n \n Overview \n VicNode\
-          \ and the Research Cloud \n VicNode was established as part of RDSI (the\n\
-          Research Data Storage Initiative), a national network of research data nodes\n\
-          and the sister project of NeCTAR. RDSI's focus is on accessibility,\ndissemination,\
-          \ sharing and long-term curation of research datasets. VicNode's\nstorage\
-          \ services are hosted locally in Victoria at the datacentres of the\nUniversity\
-          \ of Melbourne and Monash University and are connected with high\nbandwidth\
-          \ to the VeRNet and AARNet research networks, VicNode storage is also\n\
-          closely coupled to the Monash and Melbourne zones of the NeCTAR Research\
-          \ Cloud. \n VicNode offers a variety of storage products utilising different\
-          \ underlying technologies at each\noperating centre. Two types of VicNode\
-          \ storage in particular are directly\nlinked to, and accessible through,\
-          \ the Research Cloud: NeCTAR Volume Storage\nand NeCTAR Object Storage.\
-          \ Implementation and access details of these are\ndiscussed in the next\
-          \ section. \n Contents \n \n \n VicNode Cloud Storage \n Computational \n\
-          \ VicNode's current Computational\nstorage product is delivered solely as\
-          \ volume storage in the Monash and\nMelbourne zones of the NeCTAR Research\
+          \ of it is relevant to\nNeCTAR Object Storage. Here you will find demos\
+          \ of object storage client\ntools useful for completing common tasks, and\
+          \ caveats regarding API usage and\ncompatibility. \n \n Contents \n \n VicNode\
+          \ Overview \n VicNode Cloud Storage \n Accessing VicNode Cloud Storage \n\
+          \ Common Use-cases and Client Tools \n Using rclone to synchronise folders\
+          \ to/from object storage \n Sharing files over the Internet with Swift tempurls\
+          \ \n Backing up files to object storage using Duplicity \n \n \n Overview\
+          \ \n VicNode and the Research Cloud \n VicNode was established as part of\
+          \ RDSI (the\nResearch Data Storage Initiative), a national network of research\
+          \ data nodes\nand the sister project of NeCTAR. RDSI's focus is on accessibility,\n\
+          dissemination, sharing and long-term curation of research datasets. VicNode's\n\
+          storage services are hosted locally in Victoria at the datacentres of the\n\
+          University of Melbourne and Monash University and are connected with high\n\
+          bandwidth to the VeRNet and AARNet research networks, VicNode storage is\
+          \ also\nclosely coupled to the Monash and Melbourne zones of the NeCTAR\
+          \ Research Cloud. \n VicNode offers a variety of storage products utilising\
+          \ different underlying technologies at each\noperating centre. Two types\
+          \ of VicNode storage in particular are directly\nlinked to, and accessible\
+          \ through, the Research Cloud: NeCTAR Volume Storage\nand NeCTAR Object\
+          \ Storage. Implementation and access details of these are\ndiscussed in\
+          \ the next section. \n Contents \n \n \n VicNode Cloud Storage \n Computational\
+          \ \n VicNode's current Computational\nstorage product is delivered solely\
+          \ as volume storage in the Monash and\nMelbourne zones of the NeCTAR Research\
           \ Cloud. This gives researchers persistent\nblock storage which can be used\
           \ like a virtual portable hard disk and\nhot-plugged (that is, attached\
           \ and detached) whilst a cloud server is active.\nVolumes can also be used\
@@ -30407,20 +30407,51 @@
           \ have your VicNode cloud storage quota associated with a NeCTAR\nResearch\
           \ Cloud user and project you are ready to go! For the tools and\nexamples\
           \ in the subsequent sections you will also require your Research Cloud\n\
-          API credentials. \n Contents \n \n \n Object Storage Use-cases and Client\
-          \ Tools \n This section includes pointers and quickstart instructions for\
-          \ using various\nuseful object storage client tools. These tools have been\
-          \ tested to work with\nVicNode cloud storage. \n \n \n rclone \n rclone\
-          \ is described as \"rsync for cloud storage\" (rysnc being a popular and\n\
-          widely distributed tool for file data-transfer and synchronisation).\nOf\
-          \ particular note is that rclone supports a wide variety of cloud storage\n\
-          types (both as source and destination, with local file-system too) and is\n\
-          capable of delta synchronisation, i.e., it is not necessary to transfer\
-          \ a\nfull copy of the dataset if part of it has already been copied or only\
-          \ some\ndata on the source has changed, which makes it suitable for working\
-          \ with\nlarge datasets. \n Install rclone \n From http://rclone.org/, download\
-          \ and install the command line tool\nfor your system.  Go to http://rclone.org/downloads/\
-          \ and choose: \n On Windows: \n \n Download http://downloads.rclone.org/rclone-v1.25-windows-amd64.zip\
+          API credentials. \n A note about Regions and endpoints \n In the context\
+          \ of VicNode and NeCTAR there are at least three separate Object\nStorage\
+          \ services. These are all integrated with the Research Cloud but some\n\
+          are only accessible to VicNode users: \n \n NeCTAR Swift - This is a nationally\
+          \ distributed Swift cluster with storage\n   nodes at seven Research Cloud\
+          \ sites around Australia. Some sites also have\n   local Swift Proxies (the\
+          \ user-facing API servers) which can be explicitly\n   used by configuring\
+          \ your client tool/s to point to the correct storage URL\n   or Region.\
+          \ The default storage policy for this cluster creates 3-copies of\n   all\
+          \ objects. This cluster also provides storage for many other services on\n\
+          \   the Research Cloud, e.g., the Glance Image Catalog where VM images and\n\
+          \   snapshots are stored. All NeCTAR users are able to access and use NeCTAR\n\
+          \   Swift. There is no need to specify any special storage URL or Region\
+          \ for\n   this cluster as it is the default NeCTAR object storage service.\
+          \ \n \n VicNode Swift Object Vault - See above for details. To use VicNode\
+          \ Swift\n   you must tell you client tool/s to select either the \"VicNode\"\
+          \ Region or\n   configure a storage URL of\n   \"https://vault.melbourne.vicnode.org.au:8888/v1//\"\
+          \ \n \n \n VicNode Ceph Object Market - See above for details. Due to technical\n\
+          \   limitations with NeCTAR Keystone, the VicNode Ceph Object store is not\n\
+          \   currently listed in the Keystone service catalog and therefore cannot\
+          \ be\n   referred to via Region. Instead, configure your client tool/s to\
+          \ use a\n   storage URL of \"https://au-east.erc.monash.edu.au/swift/v1\"\
+          . \n \n \n Example Swift python-swiftclient accessing VicNode Ceph Object:\
+          \ \n \n swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
+          \ stat\n \n \n Example Swift python-swiftclient accessing VicNode Vault\
+          \ Object: \n \n swift --os-region-name VicNode stat \n swift --os-storage-url\
+          \ https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_d57de879288840e199bb1a48ae0c2c79\
+          \ stat\n \n \n Example Swift python-openstackclient accessing VicNode Vault\
+          \ Object: \n \n openstack --os-region-name VicNode object store account\
+          \ show \n NB: currently python-openstackclient does not support specifying\
+          \ a different\nSwift API endpoint other than by region name. \n \n Contents\
+          \ \n \n \n Object Storage Use-cases and Client Tools \n This section includes\
+          \ pointers and quickstart instructions for using various\nuseful object\
+          \ storage client tools. These tools have been tested to work with\nVicNode\
+          \ cloud storage. \n \n \n rclone \n rclone is described as \"rsync for cloud\
+          \ storage\" (rysnc being a popular and\nwidely distributed tool for file\
+          \ data-transfer and synchronisation).\nOf particular note is that rclone\
+          \ supports a wide variety of cloud storage\ntypes (both as source and destination,\
+          \ with local file-system too) and is\ncapable of delta synchronisation,\
+          \ i.e., it is not necessary to transfer a\nfull copy of the dataset if part\
+          \ of it has already been copied or only some\ndata on the source has changed,\
+          \ which makes it suitable for working with\nlarge datasets. \n Install rclone\
+          \ \n From http://rclone.org/, download and install the command line tool\n\
+          for your system.  Go to http://rclone.org/downloads/ and choose: \n On Windows:\
+          \ \n \n Download http://downloads.rclone.org/rclone-v1.25-windows-amd64.zip\
           \ \n Extract rclone.exe from the zip file and save it (e.g., as C:\\users\\\
           fred\\rclone.exe) \n All configuration and examples in the Linux section\
           \ are as below, run from within a cmd.exe shell \n \n On Macintosh: \n Not\
@@ -30494,23 +30525,81 @@
           \ files\nand containers.  You must select the correct project first, then\
           \ choose\n\"Object Store\" and \"Containers\", then browse into your containers,\
           \ e.g.,\n\"phd2015\" in the example above. \n Contents \n \n \n Sharing\
-          \ files over the Internet with Swift tempurls \n Contents \n \n \n Backing\
-          \ up files to object storage using Duplicity \n Duplicity is a backup utility\
-          \ that can make secure and bandwidth efficient\nback-ups from your computer\
-          \ to various remote storage types including Swift\nand S3. Duplicity uses\
-          \ librsync and GnuPG to make differential and secure\nback-ups. In this\
-          \ example we will configure Duplicity to back-up using the\nSwift API. \n\
-          \ First you'll need to create a container that Duplicity will use as the\
-          \ backup\ntarget location. In this example we assume a container named \"\
-          ubuntu\" already\nexists in the project's object store. You can optionally\n\
-          encrypt your back-ups locally before they are transferred to cloud storage,\n\
-          though we do not cover that in this example. \n Configure Duplicity to use\
-          \ Swift API \n On a 14.04 (Trusty) Ubuntu LTS system \n \n apt-get install\
-          \ duplicity\n \n \n Create a credentials file \n The credentials file contains\
-          \ a subset of the variables from your openrc.sh\nResearch Cloud API credentials\
-          \ file. \n \n cat backup.sh \n #!/bin/bash \n export SWIFT_AUTHVERSION=2\
-          \ \n export SWIFT_AUTHURL=https://keystone.rc.nectar.org.au:5000/v2.0/ \n\
-          \ export SWIFT_USERNAME=\"Monash_RSS-test:adrian.tritschler@monash.edu\"\
+          \ files over the Internet with Swift tempurls \n Object storage is great\
+          \ at both storing large amounts of unstructured data\nand also disseminating\
+          \ it - once your data is in object storage it is\nonly a small step to make\
+          \ it available over the Internet (using standard\nprotocols that regular\
+          \ web-browsers understand). You can make the contents\nof a container public\
+          \ or give specific access to other users via container\nACLs. \n In this\
+          \ example we demonstrate how to use the Swift tempurl feature to provide\n\
+          temporary URL-authenticated access to Swift objects. This feature allows\
+          \ you\nto easily share data with anyone via URL, they needn't have a Swift\
+          \ user\naccount. Additionally, it's not just GET access that can be allowed,\
+          \ but\nalso other HTTP methods like PUT - so you can use this feature to\
+          \ allow other\npeople or services to push data into your object storage.\
+          \ A typical example\nis a service such as a website that allows users to\
+          \ download large objects\nfrom a non-public object storage container by\
+          \ minting tempurls and presenting\nthem directly to the user via their web-browser.\
+          \ \n How it works \n The tempurl functionality works using a Hash-based\
+          \ Message\nAuthentication Code, this HMAC encodes: \n \n The HTTP method\
+          \ being allowed, e.g., GET, PUT, HEAD, DELETE, POST \n The expiry date (in\
+          \ Unix time) \n The path to the object (from the object store's root URL)\
+          \ \n A secret key shared between the user/process that generates the tempurl\n\
+          \   and the object storage service that will decode and accept/deny access\n\
+          \   based on the other parameters \n \n This encoding can be done with a\
+          \ few lines of Python or similar high-level\ncode, but luckily the Swift\
+          \ command line client already has a helper command\nto do this. In older\
+          \ versions of python-swiftclient this was a separate\ncommand called swift-temp-url,\
+          \ in newer versions this is a sub-command of\nthe main client, i.e., swift\
+          \ tempurl .... \n Set your Swift tempurl key \n To use tempurl functionality\
+          \ it is first necessary to configure your object\nstore account with a tempurl\
+          \ key - this is the shared secret mentioned in\nstep 4 above that allows\
+          \ the server to verify whether a tempurl is genuine.\nThis is done (as demonstrated\
+          \ below) using account metadata. Both the\nOpenStack Swift and\nCeph Object\
+          \ Gateway Swift\nimplementations of the Swift API allow users to set at\
+          \ least 2 tempurl keys,\nthis allows users and applications to perform key\
+          \ rotation (but if you change\nthe key used to generate a particular tempurl\
+          \ then that tempurl will\nbecome invalid). \n On VicNode Object Market at\
+          \ Monash: \n \n $ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
+          \ post --meta \"Temp-URL-Key:superfunhappytimes\"\n \n \n On VicNode Object\
+          \ Vault at UoM: \n \n $ swift --os-region-name VicNode post --meta \"Temp-URL-Key:codswallop\"\
+          \n \n \n NB: The OpenStack Swift API will display the Temp-URL-Key metadata\
+          \ back via\nthe API when account metadata is queried. The Ceph Swift API\
+          \ does not, so\nit is only possible to set or add a new key if an existing\
+          \ one is forgotten\nor lost. \n Upload the object (if doesn't already exist\
+          \ in the object store) \n Here we upload the file experiment.tar.gz from\
+          \ the current directory to a\ncontainer named share in our object storage\
+          \ account. \n \n $ swift upload share experiment.tar.gz\n \n \n Generate\
+          \ a tempurl to share with collaborators \n We'll give them two days (172800\
+          \ seconds) to grab the data. \n \n $ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
+          \ tempurl GET 172800 /share/experiment.tar.gz superfunhappytimes \n /share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&temp_url_expires=1454540180\n\
+          \ \n \n The command outputs the sub-path and query components of the final\
+          \ working\ntempurl URL. To get the final product we need to prepend the\
+          \ service's Swift\nstorage URL. For the above example we would tell our\
+          \ colleagues to grab the\nexperiment data from: \n \n https://au-east.erc.monash.edu.au/swift/v1/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&temp_url_expires=1454540180\n\
+          \ \n \n With OpenStack Swift that URL also includes the account identifier,\
+          \ e.g.,: \n \n https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_cb6c6ea8eb634cc598b0d277b8677b4f/share/experiment.tar.gz?temp_url_sig=0b7408a830d9c03411804b019279135a714c6f28&temp_url_expires=1404626295\n\
+          \ \n \n NB: The process of generating the tempurl is entirely local because\
+          \ the\nSwift service just needs to know the tempurl key to decode the other\n\
+          parameters and validate them on-demand. However, this means\nthere is no\
+          \ validation that your new tempurl works, so we suggest you it\nthem before\
+          \ distributing, e.g., by pasting into your web-browser address\nbar. \n\
+          \ Contents \n \n \n Backing up files to object storage using Duplicity \n\
+          \ Duplicity is a backup utility that can make secure and bandwidth efficient\n\
+          back-ups from your computer to various remote storage types including Swift\n\
+          and S3. Duplicity uses librsync and GnuPG to make differential and secure\n\
+          back-ups. In this example we will configure Duplicity to back-up using the\n\
+          Swift API. \n First you'll need to create a container that Duplicity will\
+          \ use as the backup\ntarget location. In this example we assume a container\
+          \ named \"ubuntu\" already\nexists in the project's object store. You can\
+          \ optionally\nencrypt your back-ups locally before they are transferred\
+          \ to cloud storage,\nthough we do not cover that in this example. \n Configure\
+          \ Duplicity to use Swift API \n On a 14.04 (Trusty) Ubuntu LTS system \n\
+          \ \n apt-get install duplicity\n \n \n Create a credentials file \n The\
+          \ credentials file contains a subset of the variables from your openrc.sh\n\
+          Research Cloud API credentials file. \n \n cat backup.sh \n #!/bin/bash\
+          \ \n export SWIFT_AUTHVERSION=2 \n export SWIFT_AUTHURL=https://keystone.rc.nectar.org.au:5000/v2.0/\
+          \ \n export SWIFT_USERNAME=\"Monash_RSS-test:adrian.tritschler@monash.edu\"\
           \ \n export SWIFT_PASSWORD=xxxxxxxxx\n \n \n Source the credentials, then\
           \ run a backup \n \n $ . backup.sh \n $ duplicity --no-encryption /home/ajft/src\
           \ swift://ubuntu \n Synchronizing remote metadata to local cache... \n Deleting\
@@ -30531,7 +30620,7 @@
           \ list --lh ubuntu \n 9.6K 2016-01-06 00:41:52 duplicity-full-signatures.20160106T004151Z.sigtar.gz\
           \ \n 179 2016-01-06 00:41:53 duplicity-full.20160106T004151Z.manifest \n\
           \ 171K 2016-01-06 00:41:52 duplicity-full.20160106T004151Z.vol1.difftar.gz\
-          \ \n 181K\n \n \n Contents \n [//]: # http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax "
+          \ \n 181K\n \n \n Contents "
         description: "<h1>VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and\
           \ Tools</h1>\n<h2>Intro</h2>\n<p><a href=\"http://vicnode.org.au\">VicNode</a>\
           \ provides Victorian researchers and their collaborators with the\nability\
@@ -30540,8 +30629,8 @@
           \ of\nresearch data storage needs. This documentation focuses particularly\
           \ on\n<strong>VicNode's cloud object storage offerings</strong>, however\
           \ much of it is relevant to\n<a href=\"https://support.nectar.org.au/support/solutions/folders/6000190146\"\
-          >NeCTAR Object Storage</a>. Here you will demos of useful object storage\
-          \ clients\nused to complete common tasks and caveats regarding API usage\
+          >NeCTAR Object Storage</a>. Here you will find demos of object storage client\n\
+          tools useful for completing common tasks, and caveats regarding API usage\
           \ and\ncompatibility.</p>\n<p><a name=\"toc\"></a></p>\n<h3>Contents</h3>\n\
           <ul>\n<li><a href=\"#overview\">VicNode Overview</a></li>\n<li><a href=\"\
           #vicnode%20storage\">VicNode Cloud Storage</a></li>\n<li><a href=\"#accessing\"\
@@ -30638,12 +30727,44 @@
           \ with a NeCTAR\nResearch Cloud user and project you are ready to go! For\
           \ the tools and\nexamples in the subsequent sections you will also require\
           \ your Research Cloud\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000078065-api\"\
-          >API credentials</a>.</p>\n<p><a href=\"#toc\">Contents</a></p>\n<hr>\n\
-          <p><a name=\"use-cases%20and%20tools\"></a></p>\n<h2>Object Storage Use-cases\
-          \ and Client Tools</h2>\n<p>This section includes pointers and quickstart\
-          \ instructions for using various\nuseful object storage client tools. These\
-          \ tools have been tested to work with\nVicNode cloud storage.</p>\n<hr>\n\
-          <p><a name=\"rclone\"></a></p>\n<h2>rclone</h2>\n<p><a href=\"http://rclone.org/\"\
+          >API credentials</a>.</p>\n<h5>A note about Regions and endpoints</h5>\n\
+          <p>In the context of VicNode and NeCTAR there are at least three separate\
+          \ Object\nStorage services. These are all integrated with the Research Cloud\
+          \ but some\nare only accessible to VicNode users:</p>\n<ol>\n<li>NeCTAR\
+          \ Swift - This is a nationally distributed Swift cluster with storage\n\
+          \   nodes at seven Research Cloud sites around Australia. Some sites also\
+          \ have\n   local Swift Proxies (the user-facing API servers) which can be\
+          \ explicitly\n   used by configuring your client tool/s to point to the\
+          \ correct storage URL\n   or Region. The default storage policy for this\
+          \ cluster creates 3-copies of\n   all objects. This cluster also provides\
+          \ storage for many other services on\n   the Research Cloud, e.g., the Glance\
+          \ Image Catalog where VM images and\n   snapshots are stored. All NeCTAR\
+          \ users are able to access and use NeCTAR\n   Swift. There is no need to\
+          \ specify any special storage URL or Region for\n   this cluster as it is\
+          \ the default NeCTAR object storage service.</li>\n<li>\n<p>VicNode Swift\
+          \ Object Vault - See above for details. To use VicNode Swift\n   you must\
+          \ tell you client tool/s to select either the \"VicNode\" Region or\n  \
+          \ configure a storage URL of\n   \"https://vault.melbourne.vicnode.org.au:8888/v1//\"\
+          </p>\n</li>\n<li>\n<p>VicNode Ceph Object Market - See above for details.\
+          \ Due to technical\n   limitations with NeCTAR Keystone, the VicNode Ceph\
+          \ Object store is not\n   currently listed in the Keystone service catalog\
+          \ and therefore cannot be\n   referred to via Region. Instead, configure\
+          \ your client tool/s to use a\n   storage URL of \"https://au-east.erc.monash.edu.au/swift/v1\"\
+          .</p>\n</li>\n</ol>\n<p>Example Swift python-swiftclient accessing VicNode\
+          \ Ceph Object:</p>\n<blockquote>\n<p>swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
+          \ stat\n</p>\n</blockquote>\n<p>Example Swift python-swiftclient accessing\
+          \ VicNode Vault Object:</p>\n<blockquote>\n<p>swift --os-region-name VicNode\
+          \ stat</p>\n<p>swift --os-storage-url https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_d57de879288840e199bb1a48ae0c2c79\
+          \ stat\n</p>\n</blockquote>\n<p>Example Swift python-openstackclient accessing\
+          \ VicNode Vault Object:</p>\n<blockquote>\n<p>openstack --os-region-name\
+          \ VicNode object store account show</p>\n<p>NB: currently python-openstackclient\
+          \ does not support specifying a different\nSwift API endpoint other than\
+          \ by region name.</p>\n</blockquote>\n<p><a href=\"#toc\">Contents</a></p>\n\
+          <hr>\n<p><a name=\"use-cases%20and%20tools\"></a></p>\n<h2>Object Storage\
+          \ Use-cases and Client Tools</h2>\n<p>This section includes pointers and\
+          \ quickstart instructions for using various\nuseful object storage client\
+          \ tools. These tools have been tested to work with\nVicNode cloud storage.</p>\n\
+          <hr>\n<p><a name=\"rclone\"></a></p>\n<h2>rclone</h2>\n<p><a href=\"http://rclone.org/\"\
           >rclone</a> is described as \"rsync for cloud storage\" (rysnc being a popular\
           \ and\nwidely distributed tool for file data-transfer and synchronisation).\n\
           Of particular note is that <a href=\"http://rclone.org/\">rclone</a> supports\
@@ -30739,17 +30860,82 @@
           \ and \"Containers\", then browse into your containers, e.g.,\n\"phd2015\"\
           \ in the example above.</p>\n<p><a href=\"#toc\">Contents</a></p>\n<hr>\n\
           <p><a name=\"tempurl\"></a></p>\n<h2>Sharing files over the Internet with\
-          \ Swift tempurls</h2>\n<p><a href=\"#toc\">Contents</a></p>\n<hr>\n<p><a\
-          \ name=\"duplicity\"></a></p>\n<h2>Backing up files to object storage using\
-          \ Duplicity</h2>\n<p><a href=\"http://duplicity.nongnu.org\">Duplicity</a>\
-          \ is a backup utility that can make secure and bandwidth efficient\nback-ups\
-          \ from your computer to various remote storage types including Swift\nand\
-          \ S3. Duplicity uses librsync and GnuPG to make differential and secure\n\
-          back-ups. In this example we will configure Duplicity to back-up using the\n\
-          Swift API.</p>\n<p>First you'll need to create a container that Duplicity\
-          \ will use as the backup\ntarget location. In this example we assume a container\
-          \ named \"ubuntu\" already\nexists in the project's object store. You can\
-          \ optionally\n<a href=\"https://dmsimard.com/2014/08/12/send-your-encrypted-duplicity-backups-to-a-swift-object-storage/\"\
+          \ Swift tempurls</h2>\n<p>Object storage is great at both storing large\
+          \ amounts of unstructured data\nand also disseminating it - once your data\
+          \ is in object storage it is\nonly a small step to make it available over\
+          \ the Internet (using standard\nprotocols that regular web-browsers understand).\
+          \ You can make the contents\nof a container public or give specific access\
+          \ to other users via container\nACLs.</p>\n<p>In this example we demonstrate\
+          \ how to use the Swift tempurl feature to provide\ntemporary URL-authenticated\
+          \ access to Swift objects. This feature allows you\nto easily share data\
+          \ with anyone via URL, they needn't have a Swift user\naccount. Additionally,\
+          \ it's not just GET access that can be allowed, but\nalso other HTTP methods\
+          \ like PUT - so you can use this feature to allow other\npeople or services\
+          \ to push data into your object storage. A typical example\nis a service\
+          \ such as a website that allows users to download large objects\nfrom a\
+          \ non-public object storage container by minting tempurls and presenting\n\
+          them directly to the user via their web-browser.</p>\n<h3>How it works</h3>\n\
+          <p>The tempurl functionality works using a Hash-based Message\nAuthentication\
+          \ Code, this <a href=\"https://en.wikipedia.org/wiki/Hash-based_message_authentication_code\"\
+          >HMAC</a> encodes:</p>\n<ol>\n<li>The HTTP method being allowed, e.g., GET,\
+          \ PUT, HEAD, DELETE, POST</li>\n<li>The expiry date (in Unix time)</li>\n\
+          <li>The path to the object (from the object store's root URL)</li>\n<li>A\
+          \ secret key shared between the user/process that generates the tempurl\n\
+          \   and the object storage service that will decode and accept/deny access\n\
+          \   based on the other parameters</li>\n</ol>\n<p>This encoding can be done\
+          \ with a few lines of Python or similar high-level\ncode, but luckily the\
+          \ Swift command line client already has a helper command\nto do this. In\
+          \ older versions of python-swiftclient this was a separate\ncommand called\
+          \ <em>swift-temp-url</em>, in newer versions this is a sub-command of\n\
+          the main client, i.e., <em>swift tempurl ...</em>.</p>\n<h3>Set your Swift\
+          \ tempurl key</h3>\n<p>To use tempurl functionality it is first necessary\
+          \ to configure your object\nstore account with a tempurl key - this is the\
+          \ shared secret mentioned in\nstep 4 above that allows the server to verify\
+          \ whether a tempurl is genuine.\nThis is done (as demonstrated below) using\
+          \ account metadata. Both the\nOpenStack <a href=\"http://docs.ceph.com/docs/master/radosgw/swift/\"\
+          >Swift</a> and\n<a href=\"http://docs.ceph.com/docs/master/radosgw/swift/\"\
+          >Ceph Object Gateway Swift</a>\nimplementations of the Swift API allow users\
+          \ to set at least 2 tempurl keys,\nthis allows users and applications to\
+          \ perform key rotation (but if you change\nthe key used to generate a particular\
+          \ tempurl then that tempurl will\nbecome invalid).</p>\n<p>On VicNode Object\
+          \ Market at Monash:</p>\n<blockquote>\n<p>$ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
+          \ post --meta \"Temp-URL-Key:superfunhappytimes\"\n</p>\n</blockquote>\n\
+          <p>On VicNode Object Vault at UoM:</p>\n<blockquote>\n<p>$ swift --os-region-name\
+          \ VicNode post --meta \"Temp-URL-Key:codswallop\"\n</p>\n</blockquote>\n\
+          <p>NB: The OpenStack Swift API will display the Temp-URL-Key metadata back\
+          \ via\nthe API when account metadata is queried. The Ceph Swift API does\
+          \ not, so\nit is only possible to set or add a new key if an existing one\
+          \ is forgotten\nor lost.</p>\n<h3>Upload the object (if doesn't already\
+          \ exist in the object store)</h3>\n<p>Here we upload the file <em>experiment.tar.gz</em>\
+          \ from the current directory to a\ncontainer named <em>share</em> in our\
+          \ object storage account.</p>\n<blockquote>\n<p>$ swift upload share experiment.tar.gz\n\
+          </p>\n</blockquote>\n<h3>Generate a tempurl to share with collaborators</h3>\n\
+          <p>We'll give them two days (172800 seconds) to grab the data.</p>\n<blockquote>\n\
+          <p>$ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1 tempurl\
+          \ GET 172800 /share/experiment.tar.gz superfunhappytimes</p>\n<p>/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&amp;temp_url_expires=1454540180\n\
+          </p>\n</blockquote>\n<p>The command outputs the sub-path and query components\
+          \ of the final working\ntempurl URL. To get the final product we need to\
+          \ prepend the service's Swift\nstorage URL. For the above example we would\
+          \ tell our colleagues to grab the\nexperiment data from:</p>\n<blockquote>\n\
+          <p>https://au-east.erc.monash.edu.au/swift/v1/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&amp;temp_url_expires=1454540180\n\
+          </p>\n</blockquote>\n<p>With OpenStack Swift that URL also includes the\
+          \ account identifier, e.g.,:</p>\n<blockquote>\n<p>https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_cb6c6ea8eb634cc598b0d277b8677b4f/share/experiment.tar.gz?temp_url_sig=0b7408a830d9c03411804b019279135a714c6f28&amp;temp_url_expires=1404626295\n\
+          </p>\n</blockquote>\n<p>NB: The process of generating the tempurl is entirely\
+          \ local because the\nSwift service just needs to know the tempurl key to\
+          \ decode the other\nparameters and validate them on-demand. However, this\
+          \ means\nthere is no validation that your new tempurl works, so we suggest\
+          \ you it\nthem before distributing, e.g., by pasting into your web-browser\
+          \ address\nbar.</p>\n<p><a href=\"#toc\">Contents</a></p>\n<hr>\n<p><a name=\"\
+          duplicity\"></a></p>\n<h2>Backing up files to object storage using Duplicity</h2>\n\
+          <p><a href=\"http://duplicity.nongnu.org\">Duplicity</a> is a backup utility\
+          \ that can make secure and bandwidth efficient\nback-ups from your computer\
+          \ to various remote storage types including Swift\nand S3. Duplicity uses\
+          \ librsync and GnuPG to make differential and secure\nback-ups. In this\
+          \ example we will configure Duplicity to back-up using the\nSwift API.</p>\n\
+          <p>First you'll need to create a container that Duplicity will use as the\
+          \ backup\ntarget location. In this example we assume a container named \"\
+          ubuntu\" already\nexists in the project's object store. You can optionally\n\
+          <a href=\"https://dmsimard.com/2014/08/12/send-your-encrypted-duplicity-backups-to-a-swift-object-storage/\"\
           >encrypt your back-ups</a> locally before they are transferred to cloud\
           \ storage,\nthough we do not cover that in this example.</p>\n<h3>Configure\
           \ Duplicity to use Swift API</h3>\n<h4>On a 14.04 (Trusty) Ubuntu LTS system</h4>\n\
@@ -30781,8 +30967,7 @@
           <p>9.6K 2016-01-06 00:41:52 duplicity-full-signatures.20160106T004151Z.sigtar.gz</p>\n\
           <p>179 2016-01-06 00:41:53 duplicity-full.20160106T004151Z.manifest</p>\n\
           <p>171K 2016-01-06 00:41:52 duplicity-full.20160106T004151Z.vol1.difftar.gz</p>\n\
-          <p>181K\n</p>\n</blockquote>\n<p><a href=\"#toc\">Contents</a></p>\n<p>[//]:\
-          \ # http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax</p>"
+          <p>181K\n</p>\n</blockquote>\n<p><a href=\"#toc\">Contents</a></p>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:07-04:00'
@@ -30797,9 +30982,9 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 8
         id: 6000118791
-        modified_at: '2016-03-21T21:12:41-04:00'
+        modified_at: '2016-03-30T19:13:35-04:00'
         modified_by: null
         position: 24
         seo_data: {}
@@ -30808,7 +30993,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools
-        updated_at: '2016-03-21T21:12:41-04:00'
+        updated_at: '2016-03-30T19:13:35-04:00'
         user_id: 6002464727
   html: "<h1>VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools</h1>\n\
     <h2>Intro</h2>\n<p><a href=\"http://vicnode.org.au\">VicNode</a> provides Victorian\
@@ -30817,24 +31002,25 @@
     \ storage solutions to suit a variety of\nresearch data storage needs. This documentation\
     \ focuses particularly on\n<strong>VicNode's cloud object storage offerings</strong>,\
     \ however much of it is relevant to\n<a href=\"https://support.nectar.org.au/support/solutions/folders/6000190146\"\
-    >NeCTAR Object Storage</a>. Here you will demos of useful object storage clients\n\
-    used to complete common tasks and caveats regarding API usage and\ncompatibility.</p>\n\
-    <p><a name=\"toc\"/></p>\n<h3>Contents</h3>\n<ul>\n<li><a href=\"#overview\">VicNode\
-    \ Overview</a></li>\n<li><a href=\"#vicnode storage\">VicNode Cloud Storage</a></li>\n\
-    <li><a href=\"#accessing\">Accessing VicNode Cloud Storage</a></li>\n<li><a href=\"\
-    #use-cases and tools\">Common Use-cases and Client Tools</a></li>\n<li><a href=\"\
-    #rclone\">Using rclone to synchronise folders to/from object storage</a></li>\n\
-    <li><a href=\"#tempurl\">Sharing files over the Internet with Swift tempurls</a></li>\n\
-    <li><a href=\"#duplicity\">Backing up files to object storage using Duplicity</a></li>\n\
-    </ul>\n<p><a name=\"overview\"/></p>\n<h2>Overview</h2>\n<h3>VicNode and the Research\
-    \ Cloud</h3>\n<p>VicNode was established as part of RDSI (the\nResearch Data Storage\
-    \ Initiative), a national network of research data nodes\nand the sister project\
-    \ of NeCTAR. RDSI's focus is on accessibility,\ndissemination, sharing and long-term\
-    \ curation of research datasets. VicNode's\nstorage services are hosted locally\
-    \ in Victoria at the datacentres of the\nUniversity of Melbourne and Monash University\
-    \ and are connected with high\nbandwidth to the VeRNet and AARNet research networks,\
-    \ VicNode storage is also\nclosely coupled to the Monash and Melbourne zones of\
-    \ the NeCTAR Research Cloud.</p>\n<p>VicNode offers a variety of <a href=\"http://vicnode.org.au/products/\"\
+    >NeCTAR Object Storage</a>. Here you will find demos of object storage client\n\
+    tools useful for completing common tasks, and caveats regarding API usage and\n\
+    compatibility.</p>\n<p><a name=\"toc\"/></p>\n<h3>Contents</h3>\n<ul>\n<li><a\
+    \ href=\"#overview\">VicNode Overview</a></li>\n<li><a href=\"#vicnode storage\"\
+    >VicNode Cloud Storage</a></li>\n<li><a href=\"#accessing\">Accessing VicNode\
+    \ Cloud Storage</a></li>\n<li><a href=\"#use-cases and tools\">Common Use-cases\
+    \ and Client Tools</a></li>\n<li><a href=\"#rclone\">Using rclone to synchronise\
+    \ folders to/from object storage</a></li>\n<li><a href=\"#tempurl\">Sharing files\
+    \ over the Internet with Swift tempurls</a></li>\n<li><a href=\"#duplicity\">Backing\
+    \ up files to object storage using Duplicity</a></li>\n</ul>\n<p><a name=\"overview\"\
+    /></p>\n<h2>Overview</h2>\n<h3>VicNode and the Research Cloud</h3>\n<p>VicNode\
+    \ was established as part of RDSI (the\nResearch Data Storage Initiative), a national\
+    \ network of research data nodes\nand the sister project of NeCTAR. RDSI's focus\
+    \ is on accessibility,\ndissemination, sharing and long-term curation of research\
+    \ datasets. VicNode's\nstorage services are hosted locally in Victoria at the\
+    \ datacentres of the\nUniversity of Melbourne and Monash University and are connected\
+    \ with high\nbandwidth to the VeRNet and AARNet research networks, VicNode storage\
+    \ is also\nclosely coupled to the Monash and Melbourne zones of the NeCTAR Research\
+    \ Cloud.</p>\n<p>VicNode offers a variety of <a href=\"http://vicnode.org.au/products/\"\
     \ title=\"VicNode Storage Products\">storage products</a> utilising different\
     \ underlying technologies at each\noperating centre. Two types of VicNode storage\
     \ in particular are directly\nlinked to, and accessible through, the Research\
@@ -30908,22 +31094,53 @@
     \ a NeCTAR\nResearch Cloud user and project you are ready to go! For the tools\
     \ and\nexamples in the subsequent sections you will also require your Research\
     \ Cloud\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000078065-api\"\
-    >API credentials</a>.</p>\n<p><a href=\"#toc\">Contents</a></p>\n<hr>\n<p><a name=\"\
-    use-cases and tools\"/></p>\n<h2>Object Storage Use-cases and Client Tools</h2>\n\
-    <p>This section includes pointers and quickstart instructions for using various\n\
-    useful object storage client tools. These tools have been tested to work with\n\
-    VicNode cloud storage.</p>\n<hr>\n<p><a name=\"rclone\"/></p>\n<h2>rclone</h2>\n\
-    <p><a href=\"http://rclone.org/\">rclone</a> is described as \"rsync for cloud\
-    \ storage\" (rysnc being a popular and\nwidely distributed tool for file data-transfer\
-    \ and synchronisation).\nOf particular note is that <a href=\"http://rclone.org/\"\
-    >rclone</a> supports a wide variety of cloud storage\ntypes (both as source and\
-    \ destination, with local file-system too) and is\ncapable of <em>delta synchronisation</em>,\
-    \ i.e., it is not necessary to transfer a\nfull copy of the dataset if part of\
-    \ it has already been copied or only some\ndata on the source has changed, which\
-    \ makes it suitable for working with\nlarge datasets.</p>\n<h3>Install rclone</h3>\n\
-    <p>From http://rclone.org/, download and install the command line tool\nfor your\
-    \ system.  Go to http://rclone.org/downloads/ and choose:</p>\n<p>On Windows:</p>\n\
-    <ul>\n<li>Download http://downloads.rclone.org/rclone-v1.25-windows-amd64.zip</li>\n\
+    >API credentials</a>.</p>\n<h5>A note about Regions and endpoints</h5>\n<p>In\
+    \ the context of VicNode and NeCTAR there are at least three separate Object\n\
+    Storage services. These are all integrated with the Research Cloud but some\n\
+    are only accessible to VicNode users:</p>\n<ol>\n<li>NeCTAR Swift - This is a\
+    \ nationally distributed Swift cluster with storage\n   nodes at seven Research\
+    \ Cloud sites around Australia. Some sites also have\n   local Swift Proxies (the\
+    \ user-facing API servers) which can be explicitly\n   used by configuring your\
+    \ client tool/s to point to the correct storage URL\n   or Region. The default\
+    \ storage policy for this cluster creates 3-copies of\n   all objects. This cluster\
+    \ also provides storage for many other services on\n   the Research Cloud, e.g.,\
+    \ the Glance Image Catalog where VM images and\n   snapshots are stored. All NeCTAR\
+    \ users are able to access and use NeCTAR\n   Swift. There is no need to specify\
+    \ any special storage URL or Region for\n   this cluster as it is the default\
+    \ NeCTAR object storage service.</li>\n<li>\n<p>VicNode Swift Object Vault - See\
+    \ above for details. To use VicNode Swift\n   you must tell you client tool/s\
+    \ to select either the \"VicNode\" Region or\n   configure a storage URL of\n\
+    \   \"https://vault.melbourne.vicnode.org.au:8888/v1/<ACCOUNT>/\"</p>\n</li>\n\
+    <li>\n<p>VicNode Ceph Object Market - See above for details. Due to technical\n\
+    \   limitations with NeCTAR Keystone, the VicNode Ceph Object store is not\n \
+    \  currently listed in the Keystone service catalog and therefore cannot be\n\
+    \   referred to via Region. Instead, configure your client tool/s to use a\n \
+    \  storage URL of \"https://au-east.erc.monash.edu.au/swift/v1\".</p>\n</li>\n\
+    </ol>\n<p>Example Swift python-swiftclient accessing VicNode Ceph Object:</p>\n\
+    <blockquote>\n<p>swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
+    \ stat\n</p>\n</blockquote>\n<p>Example Swift python-swiftclient accessing VicNode\
+    \ Vault Object:</p>\n<blockquote>\n<p>swift --os-region-name VicNode stat</p>\n\
+    <p>swift --os-storage-url https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_d57de879288840e199bb1a48ae0c2c79\
+    \ stat\n</p>\n</blockquote>\n<p>Example Swift python-openstackclient accessing\
+    \ VicNode Vault Object:</p>\n<blockquote>\n<p>openstack --os-region-name VicNode\
+    \ object store account show</p>\n<p>NB: currently python-openstackclient does\
+    \ not support specifying a different\nSwift API endpoint other than by region\
+    \ name.</p>\n</blockquote>\n<p><a href=\"#toc\">Contents</a></p>\n<hr>\n<p><a\
+    \ name=\"use-cases and tools\"/></p>\n<h2>Object Storage Use-cases and Client\
+    \ Tools</h2>\n<p>This section includes pointers and quickstart instructions for\
+    \ using various\nuseful object storage client tools. These tools have been tested\
+    \ to work with\nVicNode cloud storage.</p>\n<hr>\n<p><a name=\"rclone\"/></p>\n\
+    <h2>rclone</h2>\n<p><a href=\"http://rclone.org/\">rclone</a> is described as\
+    \ \"rsync for cloud storage\" (rysnc being a popular and\nwidely distributed tool\
+    \ for file data-transfer and synchronisation).\nOf particular note is that <a\
+    \ href=\"http://rclone.org/\">rclone</a> supports a wide variety of cloud storage\n\
+    types (both as source and destination, with local file-system too) and is\ncapable\
+    \ of <em>delta synchronisation</em>, i.e., it is not necessary to transfer a\n\
+    full copy of the dataset if part of it has already been copied or only some\n\
+    data on the source has changed, which makes it suitable for working with\nlarge\
+    \ datasets.</p>\n<h3>Install rclone</h3>\n<p>From http://rclone.org/, download\
+    \ and install the command line tool\nfor your system.  Go to http://rclone.org/downloads/\
+    \ and choose:</p>\n<p>On Windows:</p>\n<ul>\n<li>Download http://downloads.rclone.org/rclone-v1.25-windows-amd64.zip</li>\n\
     <li>Extract rclone.exe from the zip file and save it (e.g., as C:\\users\\fred\\\
     rclone.exe)</li>\n<li>All configuration and examples in the Linux section are\
     \ as below, run from within a cmd.exe shell</li>\n</ul>\n<p>On Macintosh:</p>\n\
@@ -31002,16 +31219,76 @@
     \ select the correct project first, then choose\n\"Object Store\" and \"Containers\"\
     , then browse into your containers, e.g.,\n\"phd2015\" in the example above.</p>\n\
     <p><a href=\"#toc\">Contents</a></p>\n<hr>\n<p><a name=\"tempurl\"/></p>\n<h2>Sharing\
-    \ files over the Internet with Swift tempurls</h2>\n<p><a href=\"#toc\">Contents</a></p>\n\
-    <hr>\n<p><a name=\"duplicity\"/></p>\n<h2>Backing up files to object storage using\
-    \ Duplicity</h2>\n<p><a href=\"http://duplicity.nongnu.org\">Duplicity</a> is\
-    \ a backup utility that can make secure and bandwidth efficient\nback-ups from\
-    \ your computer to various remote storage types including Swift\nand S3. Duplicity\
-    \ uses librsync and GnuPG to make differential and secure\nback-ups. In this example\
-    \ we will configure Duplicity to back-up using the\nSwift API.</p>\n<p>First you'll\
-    \ need to create a container that Duplicity will use as the backup\ntarget location.\
-    \ In this example we assume a container named \"ubuntu\" already\nexists in the\
-    \ project's object store. You can optionally\n<a href=\"https://dmsimard.com/2014/08/12/send-your-encrypted-duplicity-backups-to-a-swift-object-storage/\"\
+    \ files over the Internet with Swift tempurls</h2>\n<p>Object storage is great\
+    \ at both storing large amounts of unstructured data\nand also disseminating it\
+    \ - once your data is in object storage it is\nonly a small step to make it available\
+    \ over the Internet (using standard\nprotocols that regular web-browsers understand).\
+    \ You can make the contents\nof a container public or give specific access to\
+    \ other users via container\nACLs.</p>\n<p>In this example we demonstrate how\
+    \ to use the Swift tempurl feature to provide\ntemporary URL-authenticated access\
+    \ to Swift objects. This feature allows you\nto easily share data with anyone\
+    \ via URL, they needn't have a Swift user\naccount. Additionally, it's not just\
+    \ GET access that can be allowed, but\nalso other HTTP methods like PUT - so you\
+    \ can use this feature to allow other\npeople or services to push data into your\
+    \ object storage. A typical example\nis a service such as a website that allows\
+    \ users to download large objects\nfrom a non-public object storage container\
+    \ by minting tempurls and presenting\nthem directly to the user via their web-browser.</p>\n\
+    <h3>How it works</h3>\n<p>The tempurl functionality works using a Hash-based Message\n\
+    Authentication Code, this <a href=\"https://en.wikipedia.org/wiki/Hash-based_message_authentication_code\"\
+    >HMAC</a> encodes:</p>\n<ol>\n<li>The HTTP method being allowed, e.g., GET, PUT,\
+    \ HEAD, DELETE, POST</li>\n<li>The expiry date (in Unix time)</li>\n<li>The path\
+    \ to the object (from the object store's root URL)</li>\n<li>A secret key shared\
+    \ between the user/process that generates the tempurl\n   and the object storage\
+    \ service that will decode and accept/deny access\n   based on the other parameters</li>\n\
+    </ol>\n<p>This encoding can be done with a few lines of Python or similar high-level\n\
+    code, but luckily the Swift command line client already has a helper command\n\
+    to do this. In older versions of python-swiftclient this was a separate\ncommand\
+    \ called <em>swift-temp-url</em>, in newer versions this is a sub-command of\n\
+    the main client, i.e., <em>swift tempurl ...</em>.</p>\n<h3>Set your Swift tempurl\
+    \ key</h3>\n<p>To use tempurl functionality it is first necessary to configure\
+    \ your object\nstore account with a tempurl key - this is the shared secret mentioned\
+    \ in\nstep 4 above that allows the server to verify whether a tempurl is genuine.\n\
+    This is done (as demonstrated below) using account metadata. Both the\nOpenStack\
+    \ <a href=\"http://docs.ceph.com/docs/master/radosgw/swift/\">Swift</a> and\n\
+    <a href=\"http://docs.ceph.com/docs/master/radosgw/swift/\">Ceph Object Gateway\
+    \ Swift</a>\nimplementations of the Swift API allow users to set at least 2 tempurl\
+    \ keys,\nthis allows users and applications to perform key rotation (but if you\
+    \ change\nthe key used to generate a particular tempurl then that tempurl will\n\
+    become invalid).</p>\n<p>On VicNode Object Market at Monash:</p>\n<blockquote>\n\
+    <p>$ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1 post --meta\
+    \ \"Temp-URL-Key:superfunhappytimes\"\n</p>\n</blockquote>\n<p>On VicNode Object\
+    \ Vault at UoM:</p>\n<blockquote>\n<p>$ swift --os-region-name VicNode post --meta\
+    \ \"Temp-URL-Key:codswallop\"\n</p>\n</blockquote>\n<p>NB: The OpenStack Swift\
+    \ API will display the Temp-URL-Key metadata back via\nthe API when account metadata\
+    \ is queried. The Ceph Swift API does not, so\nit is only possible to set or add\
+    \ a new key if an existing one is forgotten\nor lost.</p>\n<h3>Upload the object\
+    \ (if doesn't already exist in the object store)</h3>\n<p>Here we upload the file\
+    \ <em>experiment.tar.gz</em> from the current directory to a\ncontainer named\
+    \ <em>share</em> in our object storage account.</p>\n<blockquote>\n<p>$ swift\
+    \ upload share experiment.tar.gz\n</p>\n</blockquote>\n<h3>Generate a tempurl\
+    \ to share with collaborators</h3>\n<p>We'll give them two days (172800 seconds)\
+    \ to grab the data.</p>\n<blockquote>\n<p>$ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
+    \ tempurl GET 172800 /share/experiment.tar.gz superfunhappytimes</p>\n<p>/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&amp;temp_url_expires=1454540180\n\
+    </p>\n</blockquote>\n<p>The command outputs the sub-path and query components\
+    \ of the final working\ntempurl URL. To get the final product we need to prepend\
+    \ the service's Swift\nstorage URL. For the above example we would tell our colleagues\
+    \ to grab the\nexperiment data from:</p>\n<blockquote>\n<p>https://au-east.erc.monash.edu.au/swift/v1/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&amp;temp_url_expires=1454540180\n\
+    </p>\n</blockquote>\n<p>With OpenStack Swift that URL also includes the account\
+    \ identifier, e.g.,:</p>\n<blockquote>\n<p>https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_cb6c6ea8eb634cc598b0d277b8677b4f/share/experiment.tar.gz?temp_url_sig=0b7408a830d9c03411804b019279135a714c6f28&amp;temp_url_expires=1404626295\n\
+    </p>\n</blockquote>\n<p>NB: The process of generating the tempurl is entirely\
+    \ local because the\nSwift service just needs to know the tempurl key to decode\
+    \ the other\nparameters and validate them on-demand. However, this means\nthere\
+    \ is no validation that your new tempurl works, so we suggest you it\nthem before\
+    \ distributing, e.g., by pasting into your web-browser address\nbar.</p>\n<p><a\
+    \ href=\"#toc\">Contents</a></p>\n<hr>\n<p><a name=\"duplicity\"/></p>\n<h2>Backing\
+    \ up files to object storage using Duplicity</h2>\n<p><a href=\"http://duplicity.nongnu.org\"\
+    >Duplicity</a> is a backup utility that can make secure and bandwidth efficient\n\
+    back-ups from your computer to various remote storage types including Swift\n\
+    and S3. Duplicity uses librsync and GnuPG to make differential and secure\nback-ups.\
+    \ In this example we will configure Duplicity to back-up using the\nSwift API.</p>\n\
+    <p>First you'll need to create a container that Duplicity will use as the backup\n\
+    target location. In this example we assume a container named \"ubuntu\" already\n\
+    exists in the project's object store. You can optionally\n<a href=\"https://dmsimard.com/2014/08/12/send-your-encrypted-duplicity-backups-to-a-swift-object-storage/\"\
     >encrypt your back-ups</a> locally before they are transferred to cloud storage,\n\
     though we do not cover that in this example.</p>\n<h3>Configure Duplicity to use\
     \ Swift API</h3>\n<h4>On a 14.04 (Trusty) Ubuntu LTS system</h4>\n<blockquote>\n\
@@ -31042,7 +31319,7 @@
     \ 2016-01-06 00:41:52 duplicity-full-signatures.20160106T004151Z.sigtar.gz</p>\n\
     <p>179 2016-01-06 00:41:53 duplicity-full.20160106T004151Z.manifest</p>\n<p>171K\
     \ 2016-01-06 00:41:52 duplicity-full.20160106T004151Z.vol1.difftar.gz</p>\n<p>181K\n\
-    </p>\n</blockquote>\n<p><a href=\"#toc\">Contents</a></p>\n<p>[//]: # http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax</p>"
+    </p>\n</blockquote>\n<p><a href=\"#toc\">Contents</a></p>"
   parent: 24
-  sha1: 62bbfa11823f8829eb641bc7a38ab43ac2cd1132
+  sha1: 6346d963ec0af51063cf244863f06cc1143a76d8
   title: VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools
