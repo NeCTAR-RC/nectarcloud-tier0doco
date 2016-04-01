@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bad4c104_ff35bf46",
+        "filename": "articles/NeCTAR Documentation--DOCID16/NeCTAR Fundamentals--DOCID26/Image Catalog--DOCID109.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2016-04-01T03:04:21Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 18,
+        "startChar": 11,
+        "endLine": 18,
+        "endChar": 12
+      },
+      "revId": "5499ce588ddf3ef9a9a6fb74eb34248a511f2a64",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_1f3b433b",
+        "filename": "articles/NeCTAR Documentation--DOCID16/NeCTAR Fundamentals--DOCID26/Image Catalog--DOCID109.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2016-04-01T03:04:21Z",
+      "side": 1,
+      "message": "tab?",
+      "range": {
+        "startLine": 28,
+        "startChar": 58,
+        "endLine": 28,
+        "endChar": 59
+      },
+      "revId": "5499ce588ddf3ef9a9a6fb74eb34248a511f2a64",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_9f1d93c0",
+        "filename": "articles/NeCTAR Documentation--DOCID16/NeCTAR Fundamentals--DOCID26/Image Catalog--DOCID109.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2016-04-01T03:04:21Z",
+      "side": 1,
+      "message": "Wouldn\u0027t bother mentioning this. We don\u0027t really support it",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 8
+      },
+      "revId": "5499ce588ddf3ef9a9a6fb74eb34248a511f2a64",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_bf7977fe",
+        "filename": "articles/NeCTAR Documentation--DOCID16/NeCTAR Fundamentals--DOCID26/Image Catalog--DOCID109.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2016-04-01T03:04:21Z",
+      "side": 1,
+      "message": "Want me to put some examples here?",
+      "range": {
+        "startLine": 81,
+        "startChar": 0,
+        "endLine": 81,
+        "endChar": 58
+      },
+      "revId": "5499ce588ddf3ef9a9a6fb74eb34248a511f2a64",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_df7e3be4",
+        "filename": "articles/NeCTAR Documentation--DOCID16/NeCTAR Fundamentals--DOCID26/Image Catalog--DOCID109.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2016-04-01T03:04:21Z",
+      "side": 1,
+      "message": "Want to fill in this placeholder?",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 19
+      },
+      "revId": "5499ce588ddf3ef9a9a6fb74eb34248a511f2a64",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_ff83ffc9",
+        "filename": "articles/NeCTAR Documentation--DOCID16/NeCTAR Fundamentals--DOCID26/Image Catalog--DOCID109.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2016-04-01T03:04:21Z",
+      "side": 1,
+      "message": "Same",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 51
+      },
+      "revId": "5499ce588ddf3ef9a9a6fb74eb34248a511f2a64",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
