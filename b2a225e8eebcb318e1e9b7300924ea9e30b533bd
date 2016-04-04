@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bad4c104_a2731e4c",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Tools and Apps--DOCID24/VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools--DOCID117.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 505,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2016-04-04T04:05:52Z",
+      "side": 1,
+      "message": "tabs?",
+      "range": {
+        "startLine": 500,
+        "startChar": 0,
+        "endLine": 505,
+        "endChar": 32
+      },
+      "revId": "b2a225e8eebcb318e1e9b7300924ea9e30b533bd",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
