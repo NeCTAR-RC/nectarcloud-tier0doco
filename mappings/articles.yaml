@@ -30744,15 +30744,14 @@
           \ be\n   referred to via Region. Instead, configure your client tool/s to\
           \ use a\n   storage URL of \"https://au-east.erc.monash.edu.au/swift/v1\"\
           . \n \n \n Example Swift python-swiftclient accessing VicNode Ceph Object:\
-          \ \n \n swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
-          \ stat\n \n \n Example Swift python-swiftclient accessing VicNode Vault\
-          \ Object: \n \n swift --os-region-name VicNode stat \n swift --os-storage-url\
-          \ https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_d57de879288840e199bb1a48ae0c2c79\
-          \ stat\n \n \n Example Swift python-openstackclient accessing VicNode Vault\
-          \ Object: \n \n openstack --os-region-name VicNode object store account\
-          \ show \n NB: currently python-openstackclient does not support specifying\
-          \ a different\nSwift API endpoint other than by region name. \n \n Contents\
-          \ \n \n \n Object Storage Use-cases and Client Tools \n This section includes\
+          \ \n swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1 stat\n\
+          \ \n Example Swift python-swiftclient accessing VicNode Vault Object: \n\
+          \ swift --os-region-name VicNode stat\nswift --os-storage-url https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_d57de879288840e199bb1a48ae0c2c79\
+          \ stat\n \n Example Swift python-openstackclient accessing VicNode Vault\
+          \ Object: \n openstack --os-region-name VicNode object store account show\n\
+          \ \n NB: currently python-openstackclient does not support specifying a\
+          \ different\nSwift API endpoint other than by region name. \n Contents \n\
+          \ \n \n Object Storage Use-cases and Client Tools \n This section includes\
           \ pointers and quickstart instructions for using various\nuseful object\
           \ storage client tools. These tools have been tested to work with\nVicNode\
           \ cloud storage. \n \n \n rclone \n rclone is described as \"rsync for cloud\
@@ -30771,128 +30770,125 @@
           \ are as below, run from within a cmd.exe shell \n \n On Macintosh: \n Not\
           \ yet tested (will be similar to below details for Linux but different\n\
           installation). \n On Linux: \n First download http://downloads.rclone.org/rclone-v1.25-linux-amd64.zip\
-          \ \n Setup and use rclone \n From within a terminal session \n \n ubuntu@linux:~$\
-          \ cd ~/Downloads\n \n \n unzip the downloaded archive \n \n ubuntu@linux:~/Downloads$\
-          \ unzip rclone-v1.25-linux-amd64.zip  \n Archive:  rclone-v1.25-linux-amd64.zip\
-          \ \n creating: rclone-v1.25-linux-amd64/ \n inflating: rclone-v1.25-linux-amd64/README.txt\
-          \ \n inflating: rclone-v1.25-linux-amd64/rclone \n inflating: rclone-v1.25-linux-amd64/README.html\
-          \ \n inflating: rclone-v1.25-linux-amd64/rclone.1 \n ubuntu@linux:~/Downloads$\
-          \ cd rclone-v1.25-linux-amd64\n \n \n Copy the rclone program into the system\
-          \ path \n \n ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ sudo cp\
-          \ rclone /usr/local/bin \n [sudo] password for ubuntu:\n \n \n Also copy\
-          \ the manual page so we can RTFM \n \n ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
-          \ sudo cp rclone.1 /usr/local/man/man1\n \n \n Test that rclone runs \n\
-          \ (You can ignore the message that you haven't yet configured it) \n \n\
-          \ ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ rclone --version \n\
-          \ 2015/11/26 20:57:41 Failed to load config file /home/ubuntu/.rclone.conf\
-          \ - using defaults: open /home/ubuntu/.rclone.conf: no such file or directory\
-          \ \n rclone v1.25\n \n \n Configure rclone to access your project's object\
-          \ storage \n NB: here you will require the API credentials for your NeCTAR\
-          \ Research Cloud\nuser and project, see Accessing VicNode Cloud Storage.\
-          \ \n Here I will create a new configuration called \"backup\" accessing\
-          \ storage\nbelonging to the \"Monash_RSS-test\" project. \n \n Run rclone\
-          \ config\n \n Press n to select the new remote option \n Enter a name of\
-          \ your choosing, e.g., backup\n \n Choose the number corresponding to swift\
-          \ as the storage type \n User name is your NeCTAR OS API username \n Enter\
-          \ your NeCTAR OS API password at the key> prompt \n At the auth> prompt\
-          \ enter https://keystone.rc.nectar.org.au:5000/v2.0\n \n At the tenant>\
-          \ prompt enter your OS API tenant/project name \n At the region> prompt\
-          \ press enter \n Review and either correct the entries or press y then q\n\
-          \ \n \n The file $HOME/.rclone.conf should now look something like: \n \n\
-          \ [backup] \n type = swift \n user = john.smith@monash.edu \n key = pvJDjLXPmDjxEmYyFiVG\
-          \ \n auth = https://keystone.rc.nectar.org.au:5000/v2.0 \n tenant = Monash_RSS-test\
-          \ \n region = \n \n \n Test that rclone can access the object storage \n\
-          \ First list the contents of the object location, if the object storage\n\
-          is new then it will be empty, but this will verify that your\nconfiguration\
-          \ is correct: \n \n ubuntu@linux:~$ rclone lsd backup: \n Transferred: \
-          \           0 Bytes (   0.00 kByte/s) \n Errors:                 0 \n Checks:\
-          \                 0 \n Transferred:            0 \n Elapsed time:      \
-          \  1.2s\n \n \n Create an object storage container for your data \n Here\
-          \ I create a container \"phd2015\" to hold my data: \n \n ubuntu@linux:~$\
-          \ rclone mkdir backup:phd2015 \n Transferred:            0 Bytes (   0.00\
-          \ kByte/s) \n Errors:                 0 \n Checks:                 0 \n\
-          \ Transferred:            0 \n Elapsed time:        1.3s\n \n \n Make backups\
-          \ of local data to the object storage container \n Here I have three directories\
-          \ on my local computer; \"PhD\", \"PhD-data\"\nand \"results\" and I'll\
-          \ make a backup copy of these in my object\nstorage, appearing as \"phd2015/Phd\"\
-          , \"phd2015/Phd-data\" and\n\"phd2015/results\" respectively. \n \n ajft@fafnir:~/Downloads$\
-          \ rclone sync PhD backup:phd2015/PhD \n 2015/11/26 21:26:17 Swift container\
-          \ phd2015 path PhD/: Building file list \n 2015/11/26 21:26:19 Swift container\
-          \ phd2015 path PhD/: Waiting for checks to finish \n 2015/11/26 21:26:19\
-          \ Swift container phd2015 path PhD/: Waiting for transfers to finish \n\
-          \ 2015/11/26 21:26:20 Waiting for deletions to finish \n Transferred:  \
-          \       1852 Bytes (   0.43 kByte/s) \n Errors:                 0 \n Checks:\
-          \                 0 \n Transferred:            2 \n Elapsed time:      \
-          \  4.2s \n ubuntu@linux:~/Downloads$ rclone PhD-data backup:phd2015/PhD-data\
-          \ \n ... \n ubuntu@linux:~/Downloads$ rclone results backup:phd2015/PhD-results\
-          \ \n ...\n \n \n (Note that as in the third of these examples commands,\
-          \ the local source\nfolder and remote destination object prefix can differ.)\
-          \ \n These three \"rclone sync\" commands can be run daily (or more\nfrequently)\
-          \ to ensure that the copy held in the object storage is up\nto date and\
-          \ matches the data on the local computer. \n \n ubuntu@linux:~$ cat ~/sync-my-data\
-          \ \n #!/bin/sh \n cd $HOME/Documents \n rclone sync PhD backup:phd2015/PhD\
-          \ \n rclone sync PhD-data backup:phd2015/PhD-data \n rclone sync results\
-          \ backup:phd2015/PhD-results\n \n \n Viewing the data from the NeCTAR dashboard\
-          \ \n (NB: this only applies to the NeCTAR Swift object store as VicNode\
-          \ object\nstorage is implemented as a distinct service with its own region.)\
-          \ \n After logging in to a the NeCTAR Dashboard it is possible to view the\
-          \ files\nand containers.  You must select the correct project first, then\
-          \ choose\n\"Object Store\" and \"Containers\", then browse into your containers,\
-          \ e.g.,\n\"phd2015\" in the example above. \n Contents \n \n \n Sharing\
-          \ files over the Internet with Swift tempurls \n Object storage is great\
-          \ at both storing large amounts of unstructured data\nand also disseminating\
-          \ it - once your data is in object storage it is\nonly a small step to make\
-          \ it available over the Internet (using standard\nprotocols that regular\
-          \ web-browsers understand). You can make the contents\nof a container public\
-          \ or give specific access to other users via container\nACLs. \n In this\
-          \ example we demonstrate how to use the Swift tempurl feature to provide\n\
-          temporary URL-authenticated access to Swift objects. This feature allows\
-          \ you\nto easily share data with anyone via URL, they needn't have a Swift\
-          \ user\naccount. Additionally, it's not just GET access that can be allowed,\
-          \ but\nalso other HTTP methods like PUT - so you can use this feature to\
-          \ allow other\npeople or services to push data into your object storage.\
-          \ A typical example\nis a service such as a website that allows users to\
-          \ download large objects\nfrom a non-public object storage container by\
-          \ minting tempurls and presenting\nthem directly to the user via their web-browser.\
-          \ \n How it works \n The tempurl functionality works using a Hash-based\
-          \ Message\nAuthentication Code, this HMAC encodes: \n \n The HTTP method\
-          \ being allowed, e.g., GET, PUT, HEAD, DELETE, POST \n The expiry date (in\
-          \ Unix time) \n The path to the object (from the object store's root URL)\
-          \ \n A secret key shared between the user/process that generates the tempurl\n\
-          \   and the object storage service that will decode and accept/deny access\n\
-          \   based on the other parameters \n \n This encoding can be done with a\
-          \ few lines of Python or similar high-level\ncode, but luckily the Swift\
-          \ command line client already has a helper command\nto do this. In older\
-          \ versions of python-swiftclient this was a separate\ncommand called swift-temp-url,\
-          \ in newer versions this is a sub-command of\nthe main client, i.e., swift\
-          \ tempurl .... \n Set your Swift tempurl key \n To use tempurl functionality\
-          \ it is first necessary to configure your object\nstore account with a tempurl\
-          \ key - this is the shared secret mentioned in\nstep 4 above that allows\
-          \ the server to verify whether a tempurl is genuine.\nThis is done (as demonstrated\
-          \ below) using account metadata. Both the\nOpenStack Swift and\nCeph Object\
-          \ Gateway Swift\nimplementations of the Swift API allow users to set at\
-          \ least 2 tempurl keys,\nthis allows users and applications to perform key\
-          \ rotation (but if you change\nthe key used to generate a particular tempurl\
-          \ then that tempurl will\nbecome invalid). \n On VicNode Object Market at\
-          \ Monash: \n \n $ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
-          \ post --meta \"Temp-URL-Key:superfunhappytimes\"\n \n \n On VicNode Object\
-          \ Vault at UoM: \n \n $ swift --os-region-name VicNode post --meta \"Temp-URL-Key:codswallop\"\
-          \n \n \n NB: The OpenStack Swift API will display the Temp-URL-Key metadata\
-          \ back via\nthe API when account metadata is queried. The Ceph Swift API\
-          \ does not, so\nit is only possible to set or add a new key if an existing\
-          \ one is forgotten\nor lost. \n Upload the object (if doesn't already exist\
-          \ in the object store) \n Here we upload the file experiment.tar.gz from\
-          \ the current directory to a\ncontainer named share in our object storage\
-          \ account. \n \n $ swift upload share experiment.tar.gz\n \n \n Generate\
-          \ a tempurl to share with collaborators \n We'll give them two days (172800\
-          \ seconds) to grab the data. \n \n $ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
-          \ tempurl GET 172800 /share/experiment.tar.gz superfunhappytimes \n /share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&temp_url_expires=1454540180\n\
-          \ \n \n The command outputs the sub-path and query components of the final\
+          \ \n Setup and use rclone \n From within a terminal session \n ubuntu@linux:~$\
+          \ cd ~/Downloads\n \n unzip the downloaded archive \n ubuntu@linux:~/Downloads$\
+          \ unzip rclone-v1.25-linux-amd64.zip\nArchive:  rclone-v1.25-linux-amd64.zip\n\
+          \  creating: rclone-v1.25-linux-amd64/\n  inflating: rclone-v1.25-linux-amd64/README.txt\n\
+          \  inflating: rclone-v1.25-linux-amd64/rclone\n  inflating: rclone-v1.25-linux-amd64/README.html\n\
+          \  inflating: rclone-v1.25-linux-amd64/rclone.1\nubuntu@linux:~/Downloads$\
+          \ cd rclone-v1.25-linux-amd64\n \n Copy the rclone program into the system\
+          \ path \n ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ sudo cp rclone\
+          \ /usr/local/bin\n[sudo] password for ubuntu:\n \n Also copy the manual\
+          \ page so we can RTFM \n ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+          \ sudo cp rclone.1 /usr/local/man/man1\n \n Test that rclone runs \n (You\
+          \ can ignore the message that you haven't yet configured it) \n ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+          \ rclone --version\n2015/11/26 20:57:41 Failed to load config file /home/ubuntu/.rclone.conf\
+          \ - using defaults: open /home/ubuntu/.rclone.conf: no such file or directory\n\
+          rclone v1.25\n \n Configure rclone to access your project's object storage\
+          \ \n NB: here you will require the API credentials for your NeCTAR Research\
+          \ Cloud\nuser and project, see Accessing VicNode Cloud Storage. \n Here\
+          \ I will create a new configuration called \"backup\" accessing storage\n\
+          belonging to the \"Monash_RSS-test\" project. \n \n Run rclone config\n\
+          \ \n Press n to select the new remote option \n Enter a name of your choosing,\
+          \ e.g., backup\n \n Choose the number corresponding to swift as the storage\
+          \ type \n User name is your NeCTAR OS API username \n Enter your NeCTAR\
+          \ OS API password at the key> prompt \n At the auth> prompt enter https://keystone.rc.nectar.org.au:5000/v2.0\n\
+          \ \n At the tenant> prompt enter your OS API tenant/project name \n At the\
+          \ region> prompt press enter \n Review and either correct the entries or\
+          \ press y then q\n \n \n The file $HOME/.rclone.conf should now look something\
+          \ like: \n [backup]\ntype = swift\nuser = john.smith@monash.edu\nkey = pvJDjLXPmDjxEmYyFiVG\n\
+          auth = https://keystone.rc.nectar.org.au:5000/v2.0\ntenant = Monash_RSS-test\n\
+          region =\n \n Test that rclone can access the object storage \n First list\
+          \ the contents of the object location, if the object storage\nis new then\
+          \ it will be empty, but this will verify that your\nconfiguration is correct:\
+          \ \n ubuntu@linux:~$ rclone lsd backup:\n\nTransferred:            0 Bytes\
+          \ (   0.00 kByte/s)\nErrors:                 0\nChecks:                \
+          \ 0\nTransferred:            0\nElapsed time:        1.2s\n \n Create an\
+          \ object storage container for your data \n Here I create a container \"\
+          phd2015\" to hold my data: \n ubuntu@linux:~$ rclone mkdir backup:phd2015\n\
+          \nTransferred:            0 Bytes (   0.00 kByte/s)\nErrors:           \
+          \      0\nChecks:                 0\nTransferred:            0\nElapsed\
+          \ time:        1.3s\n \n Make backups of local data to the object storage\
+          \ container \n Here I have three directories on my local computer; \"PhD\"\
+          , \"PhD-data\"\nand \"results\" and I'll make a backup copy of these in\
+          \ my object\nstorage, appearing as \"phd2015/Phd\", \"phd2015/Phd-data\"\
+          \ and\n\"phd2015/results\" respectively. \n ajft@fafnir:~/Downloads$ rclone\
+          \ sync PhD backup:phd2015/PhD\n2015/11/26 21:26:17 Swift container phd2015\
+          \ path PhD/: Building file list\n2015/11/26 21:26:19 Swift container phd2015\
+          \ path PhD/: Waiting for checks to finish\n2015/11/26 21:26:19 Swift container\
+          \ phd2015 path PhD/: Waiting for transfers to finish\n2015/11/26 21:26:20\
+          \ Waiting for deletions to finish\n\nTransferred:         1852 Bytes ( \
+          \  0.43 kByte/s)\nErrors:                 0\nChecks:                 0\n\
+          Transferred:            2\nElapsed time:        4.2s\n\nubuntu@linux:~/Downloads$\
+          \ rclone PhD-data backup:phd2015/PhD-data\n...\nubuntu@linux:~/Downloads$\
+          \ rclone results backup:phd2015/PhD-results\n...\n \n (Note that as in the\
+          \ third of these examples commands, the local source\nfolder and remote\
+          \ destination object prefix can differ.) \n These three \"rclone sync\"\
+          \ commands can be run daily (or more\nfrequently) to ensure that the copy\
+          \ held in the object storage is up\nto date and matches the data on the\
+          \ local computer. \n ubuntu@linux:~$ cat ~/sync-my-data\n#!/bin/sh\ncd $HOME/Documents\n\
+          rclone sync PhD backup:phd2015/PhD\nrclone sync PhD-data backup:phd2015/PhD-data\n\
+          rclone sync results backup:phd2015/PhD-results\n \n Viewing the data from\
+          \ the NeCTAR dashboard \n (NB: this only applies to the NeCTAR Swift object\
+          \ store as VicNode object\nstorage is implemented as a distinct service\
+          \ with its own region.) \n After logging in to a the NeCTAR Dashboard it\
+          \ is possible to view the files\nand containers.  You must select the correct\
+          \ project first, then choose\n\"Object Store\" and \"Containers\", then\
+          \ browse into your containers, e.g.,\n\"phd2015\" in the example above.\
+          \ \n Contents \n \n \n Sharing files over the Internet with Swift tempurls\
+          \ \n Object storage is great at both storing large amounts of unstructured\
+          \ data\nand also disseminating it - once your data is in object storage\
+          \ it is\nonly a small step to make it available over the Internet (using\
+          \ standard\nprotocols that regular web-browsers understand). You can make\
+          \ the contents\nof a container public or give specific access to other users\
+          \ via container\nACLs. \n In this example we demonstrate how to use the\
+          \ Swift tempurl feature to provide\ntemporary URL-authenticated access to\
+          \ Swift objects. This feature allows you\nto easily share data with anyone\
+          \ via URL, they needn't have a Swift user\naccount. Additionally, it's not\
+          \ just GET access that can be allowed, but\nalso other HTTP methods like\
+          \ PUT - so you can use this feature to allow other\npeople or services to\
+          \ push data into your object storage. A typical example\nis a service such\
+          \ as a website that allows users to download large objects\nfrom a non-public\
+          \ object storage container by minting tempurls and presenting\nthem directly\
+          \ to the user via their web-browser. \n How it works \n The tempurl functionality\
+          \ works using a Hash-based Message\nAuthentication Code, this HMAC encodes:\
+          \ \n \n The HTTP method being allowed, e.g., GET, PUT, HEAD, DELETE, POST\
+          \ \n The expiry date (in Unix time) \n The path to the object (from the\
+          \ object store's root URL) \n A secret key shared between the user/process\
+          \ that generates the tempurl\n   and the object storage service that will\
+          \ decode and accept/deny access\n   based on the other parameters \n \n\
+          \ This encoding can be done with a few lines of Python or similar high-level\n\
+          code, but luckily the Swift command line client already has a helper command\n\
+          to do this. In older versions of python-swiftclient this was a separate\n\
+          command called swift-temp-url, in newer versions this is a sub-command of\n\
+          the main client, i.e., swift tempurl .... \n Set your Swift tempurl key\
+          \ \n To use tempurl functionality it is first necessary to configure your\
+          \ object\nstore account with a tempurl key - this is the shared secret mentioned\
+          \ in\nstep 4 above that allows the server to verify whether a tempurl is\
+          \ genuine.\nThis is done (as demonstrated below) using account metadata.\
+          \ Both the\nOpenStack Swift and\nCeph Object Gateway Swift\nimplementations\
+          \ of the Swift API allow users to set at least 2 tempurl keys,\nthis allows\
+          \ users and applications to perform key rotation (but if you change\nthe\
+          \ key used to generate a particular tempurl then that tempurl will\nbecome\
+          \ invalid). \n On VicNode Object Market at Monash: \n $ swift --os-storage-url\
+          \ https://au-east.erc.monash.edu.au/swift/v1 post --meta \"Temp-URL-Key:superfunhappytimes\"\
+          \n \n On VicNode Object Vault at UoM: \n $ swift --os-region-name VicNode\
+          \ post --meta \"Temp-URL-Key:codswallop\"\n \n NB: The OpenStack Swift API\
+          \ will display the Temp-URL-Key metadata back via\nthe API when account\
+          \ metadata is queried. The Ceph Swift API does not, so\nit is only possible\
+          \ to set or add a new key if an existing one is forgotten\nor lost. \n Upload\
+          \ the object (if doesn't already exist in the object store) \n Here we upload\
+          \ the file experiment.tar.gz from the current directory to a\ncontainer\
+          \ named share in our object storage account. \n $ swift upload share experiment.tar.gz\n\
+          \ \n Generate a tempurl to share with collaborators \n We'll give them two\
+          \ days (172800 seconds) to grab the data. \n $ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
+          \ tempurl GET 172800 /share/experiment.tar.gz superfunhappytimes\n/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&temp_url_expires=1454540180\n\
+          \ \n The command outputs the sub-path and query components of the final\
           \ working\ntempurl URL. To get the final product we need to prepend the\
           \ service's Swift\nstorage URL. For the above example we would tell our\
-          \ colleagues to grab the\nexperiment data from: \n \n https://au-east.erc.monash.edu.au/swift/v1/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&temp_url_expires=1454540180\n\
+          \ colleagues to grab the\nexperiment data from: \n \n https://au-east.erc.monash.edu.au/swift/v1/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&temp_url_expires=1454540180\
           \ \n \n With OpenStack Swift that URL also includes the account identifier,\
-          \ e.g.,: \n \n https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_cb6c6ea8eb634cc598b0d277b8677b4f/share/experiment.tar.gz?temp_url_sig=0b7408a830d9c03411804b019279135a714c6f28&temp_url_expires=1404626295\n\
+          \ e.g.,: \n \n https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_cb6c6ea8eb634cc598b0d277b8677b4f/share/experiment.tar.gz?temp_url_sig=0b7408a830d9c03411804b019279135a714c6f28&temp_url_expires=1404626295\
           \ \n \n NB: The process of generating the tempurl is entirely local because\
           \ the\nSwift service just needs to know the tempurl key to decode the other\n\
           parameters and validate them on-demand. However, this means\nthere is no\
@@ -30909,32 +30905,30 @@
           \ optionally\nencrypt your back-ups locally before they are transferred\
           \ to cloud storage,\nthough we do not cover that in this example. \n Configure\
           \ Duplicity to use Swift API \n On a 14.04 (Trusty) Ubuntu LTS system \n\
-          \ \n apt-get install duplicity\n \n \n Create a credentials file \n The\
-          \ credentials file contains a subset of the variables from your openrc.sh\n\
-          Research Cloud API credentials file. \n \n cat backup.sh \n #!/bin/bash\
-          \ \n export SWIFT_AUTHVERSION=2 \n export SWIFT_AUTHURL=https://keystone.rc.nectar.org.au:5000/v2.0/\
-          \ \n export SWIFT_USERNAME=\"Monash_RSS-test:adrian.tritschler@monash.edu\"\
-          \ \n export SWIFT_PASSWORD=xxxxxxxxx\n \n \n Source the credentials, then\
-          \ run a backup \n \n $ . backup.sh \n $ duplicity --no-encryption /home/ajft/src\
-          \ swift://ubuntu \n Synchronizing remote metadata to local cache... \n Deleting\
-          \ local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full-signatures.20160106T001707Z.sigtar.gz\
-          \ (not authoritative at backend). \n Deleting local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full.20160106T001707Z.manifest\
-          \ (not authoritative at backend). \n Last full backup date: none \n No signatures\
-          \ found, switching to full backup. \n --------------[ Backup Statistics\
-          \ ]-------------- \n StartTime 1452040911.64 (Wed Jan  6 11:41:51 2016)\
-          \ \n EndTime 1452040911.68 (Wed Jan  6 11:41:51 2016) \n ElapsedTime 0.04\
-          \ (0.04 seconds) \n SourceFiles 109 \n SourceFileSize 458449 (448 KB) \n\
-          \ NewFiles 109 \n NewFileSize 458449 (448 KB) \n DeletedFiles 0 \n ChangedFiles\
-          \ 0 \n ChangedFileSize 0 (0 bytes) \n ChangedDeltaSize 0 (0 bytes) \n DeltaEntries\
-          \ 109 \n RawDeltaSize 257745 (252 KB) \n TotalDestinationSizeChange 175413\
-          \ (171 KB) \n Errors 0\n \n \n Verify that Duplicity has created the initial\
-          \ back-up \n You can now see the files that Duplicity has created by listing\
-          \ the contents\nof the target container, e.g., using the Dashboard to browse\
-          \ or the Swift\ncommand-line client (python-swiftclient). \n \n $ swift\
-          \ list --lh ubuntu \n 9.6K 2016-01-06 00:41:52 duplicity-full-signatures.20160106T004151Z.sigtar.gz\
-          \ \n 179 2016-01-06 00:41:53 duplicity-full.20160106T004151Z.manifest \n\
-          \ 171K 2016-01-06 00:41:52 duplicity-full.20160106T004151Z.vol1.difftar.gz\
-          \ \n 181K\n \n \n Contents "
+          \ apt-get install duplicity\n \n Create a credentials file \n The credentials\
+          \ file contains a subset of the variables from your openrc.sh\nResearch\
+          \ Cloud API credentials file. \n cat backup.sh\n#!/bin/bash\nexport SWIFT_AUTHVERSION=2\n\
+          export SWIFT_AUTHURL=https://keystone.rc.nectar.org.au:5000/v2.0/\nexport\
+          \ SWIFT_USERNAME=\"Monash_RSS-test:adrian.tritschler@monash.edu\"\nexport\
+          \ SWIFT_PASSWORD=xxxxxxxxx\n \n Source the credentials, then run a backup\
+          \ \n $ . backup.sh\n$ duplicity --no-encryption /home/ajft/src swift://ubuntu\n\
+          Synchronizing remote metadata to local cache...\nDeleting local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full-signatures.20160106T001707Z.sigtar.gz\
+          \ (not authoritative at backend).\nDeleting local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full.20160106T001707Z.manifest\
+          \ (not authoritative at backend).\nLast full backup date: none\nNo signatures\
+          \ found, switching to full backup.\n--------------[ Backup Statistics ]--------------\n\
+          StartTime 1452040911.64 (Wed Jan  6 11:41:51 2016)\nEndTime 1452040911.68\
+          \ (Wed Jan  6 11:41:51 2016)\nElapsedTime 0.04 (0.04 seconds)\nSourceFiles\
+          \ 109\nSourceFileSize 458449 (448 KB)\nNewFiles 109\nNewFileSize 458449\
+          \ (448 KB)\nDeletedFiles 0\nChangedFiles 0\nChangedFileSize 0 (0 bytes)\n\
+          ChangedDeltaSize 0 (0 bytes)\nDeltaEntries 109\nRawDeltaSize 257745 (252\
+          \ KB)\nTotalDestinationSizeChange 175413 (171 KB)\nErrors 0\n \n Verify\
+          \ that Duplicity has created the initial back-up \n You can now see the\
+          \ files that Duplicity has created by listing the contents\nof the target\
+          \ container, e.g., using the Dashboard to browse or the Swift\ncommand-line\
+          \ client (python-swiftclient). \n $ swift list --lh ubuntu\n9.6K 2016-01-06\
+          \ 00:41:52 duplicity-full-signatures.20160106T004151Z.sigtar.gz\n 179 2016-01-06\
+          \ 00:41:53 duplicity-full.20160106T004151Z.manifest\n171K 2016-01-06 00:41:52\
+          \ duplicity-full.20160106T004151Z.vol1.difftar.gz\n181K\n \n Contents "
         description: "<h1>VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and\
           \ Tools</h1>\n<h2>Intro</h2>\n<p><a href=\"http://vicnode.org.au\">VicNode</a>\
           \ provides Victorian researchers and their collaborators with the\nability\
@@ -31065,20 +31059,20 @@
           \ and therefore cannot be\n   referred to via Region. Instead, configure\
           \ your client tool/s to use a\n   storage URL of \"https://au-east.erc.monash.edu.au/swift/v1\"\
           .</p>\n</li>\n</ol>\n<p>Example Swift python-swiftclient accessing VicNode\
-          \ Ceph Object:</p>\n<blockquote>\n<p>swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
-          \ stat\n</p>\n</blockquote>\n<p>Example Swift python-swiftclient accessing\
-          \ VicNode Vault Object:</p>\n<blockquote>\n<p>swift --os-region-name VicNode\
-          \ stat</p>\n<p>swift --os-storage-url https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_d57de879288840e199bb1a48ae0c2c79\
-          \ stat\n</p>\n</blockquote>\n<p>Example Swift python-openstackclient accessing\
-          \ VicNode Vault Object:</p>\n<blockquote>\n<p>openstack --os-region-name\
-          \ VicNode object store account show</p>\n<p>NB: currently python-openstackclient\
+          \ Ceph Object:</p>\n<pre><code>swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
+          \ stat\n</code></pre>\n<p>Example Swift python-swiftclient accessing VicNode\
+          \ Vault Object:</p>\n<pre><code>swift --os-region-name VicNode stat\nswift\
+          \ --os-storage-url https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_d57de879288840e199bb1a48ae0c2c79\
+          \ stat\n</code></pre>\n<p>Example Swift python-openstackclient accessing\
+          \ VicNode Vault Object:</p>\n<pre><code>openstack --os-region-name VicNode\
+          \ object store account show\n</code></pre>\n<p>NB: currently python-openstackclient\
           \ does not support specifying a different\nSwift API endpoint other than\
-          \ by region name.</p>\n</blockquote>\n<p><a href=\"#toc\">Contents</a></p>\n\
-          <hr>\n<p><a name=\"use-cases%20and%20tools\"></a></p>\n<h2>Object Storage\
-          \ Use-cases and Client Tools</h2>\n<p>This section includes pointers and\
-          \ quickstart instructions for using various\nuseful object storage client\
-          \ tools. These tools have been tested to work with\nVicNode cloud storage.</p>\n\
-          <hr>\n<p><a name=\"rclone\"></a></p>\n<h2>rclone</h2>\n<p><a href=\"http://rclone.org/\"\
+          \ by region name.</p>\n<p><a href=\"#toc\">Contents</a></p>\n<hr>\n<p><a\
+          \ name=\"use-cases%20and%20tools\"></a></p>\n<h2>Object Storage Use-cases\
+          \ and Client Tools</h2>\n<p>This section includes pointers and quickstart\
+          \ instructions for using various\nuseful object storage client tools. These\
+          \ tools have been tested to work with\nVicNode cloud storage.</p>\n<hr>\n\
+          <p><a name=\"rclone\"></a></p>\n<h2>rclone</h2>\n<p><a href=\"http://rclone.org/\"\
           >rclone</a> is described as \"rsync for cloud storage\" (rysnc being a popular\
           \ and\nwidely distributed tool for file data-transfer and synchronisation).\n\
           Of particular note is that <a href=\"http://rclone.org/\">rclone</a> supports\
@@ -31096,79 +31090,75 @@
           \ Macintosh:</p>\n<p>Not yet tested (will be similar to below details for\
           \ Linux but different\ninstallation).</p>\n<p>On Linux:</p>\n<p>First download\
           \ http://downloads.rclone.org/rclone-v1.25-linux-amd64.zip</p>\n<h3>Setup\
-          \ and use rclone</h3>\n<h4>From within a terminal session</h4>\n<blockquote>\n\
-          <p>ubuntu@linux:~$ cd ~/Downloads\n</p>\n</blockquote>\n<p>unzip the downloaded\
-          \ archive</p>\n<blockquote>\n<p>ubuntu@linux:~/Downloads$ unzip rclone-v1.25-linux-amd64.zip\
-          \ </p>\n<p>Archive:  rclone-v1.25-linux-amd64.zip</p>\n<p>creating: rclone-v1.25-linux-amd64/</p>\n\
-          <p>inflating: rclone-v1.25-linux-amd64/README.txt</p>\n<p>inflating: rclone-v1.25-linux-amd64/rclone</p>\n\
-          <p>inflating: rclone-v1.25-linux-amd64/README.html</p>\n<p>inflating: rclone-v1.25-linux-amd64/rclone.1</p>\n\
-          <p>ubuntu@linux:~/Downloads$ cd rclone-v1.25-linux-amd64\n</p>\n</blockquote>\n\
-          <h4>Copy the rclone program into the system path</h4>\n<blockquote>\n<p>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
-          \ sudo cp rclone /usr/local/bin</p>\n<p>[sudo] password for ubuntu:\n</p>\n\
-          </blockquote>\n<h4>Also copy the manual page so we can RTFM</h4>\n<blockquote>\n\
-          <p>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ sudo cp rclone.1 /usr/local/man/man1\n\
-          </p>\n</blockquote>\n<h4>Test that rclone runs</h4>\n<p>(You can ignore\
-          \ the message that you haven't yet configured it)</p>\n<blockquote>\n<p>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
-          \ rclone --version</p>\n<p>2015/11/26 20:57:41 Failed to load config file\
-          \ /home/ubuntu/.rclone.conf - using defaults: open /home/ubuntu/.rclone.conf:\
-          \ no such file or directory</p>\n<p>rclone v1.25\n</p>\n</blockquote>\n\
-          <h4>Configure rclone to access your project's object storage</h4>\n<p>NB:\
-          \ here you will require the API credentials for your NeCTAR Research Cloud\n\
-          user and project, see <a href=\"#accessing\">Accessing VicNode Cloud Storage</a>.</p>\n\
-          <p>Here I will create a new configuration called \"backup\" accessing storage\n\
-          belonging to the \"Monash_RSS-test\" project.</p>\n<ul>\n<li>Run <strong>rclone\
-          \ config</strong>\n</li>\n<li>Press <strong>n</strong> to select the new\
-          \ remote option</li>\n<li>Enter a name of your choosing, e.g., <strong>backup</strong>\n\
-          </li>\n<li>Choose the number corresponding to <strong>swift</strong> as\
-          \ the storage type</li>\n<li>User name is your NeCTAR OS API username</li>\n\
-          <li>Enter your NeCTAR OS API password at the <strong>key&gt;</strong> prompt</li>\n\
-          <li>At the <strong>auth&gt;</strong> prompt enter <strong>https://keystone.rc.nectar.org.au:5000/v2.0</strong>\n\
+          \ and use rclone</h3>\n<h4>From within a terminal session</h4>\n<pre><code>ubuntu@linux:~$\
+          \ cd ~/Downloads\n</code></pre>\n<p>unzip the downloaded archive</p>\n<pre><code>ubuntu@linux:~/Downloads$\
+          \ unzip rclone-v1.25-linux-amd64.zip\nArchive:  rclone-v1.25-linux-amd64.zip\n\
+          \  creating: rclone-v1.25-linux-amd64/\n  inflating: rclone-v1.25-linux-amd64/README.txt\n\
+          \  inflating: rclone-v1.25-linux-amd64/rclone\n  inflating: rclone-v1.25-linux-amd64/README.html\n\
+          \  inflating: rclone-v1.25-linux-amd64/rclone.1\nubuntu@linux:~/Downloads$\
+          \ cd rclone-v1.25-linux-amd64\n</code></pre>\n<h4>Copy the rclone program\
+          \ into the system path</h4>\n<pre><code>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+          \ sudo cp rclone /usr/local/bin\n[sudo] password for ubuntu:\n</code></pre>\n\
+          <h4>Also copy the manual page so we can RTFM</h4>\n<pre><code>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+          \ sudo cp rclone.1 /usr/local/man/man1\n</code></pre>\n<h4>Test that rclone\
+          \ runs</h4>\n<p>(You can ignore the message that you haven't yet configured\
+          \ it)</p>\n<pre><code>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+          \ rclone --version\n2015/11/26 20:57:41 Failed to load config file /home/ubuntu/.rclone.conf\
+          \ - using defaults: open /home/ubuntu/.rclone.conf: no such file or directory\n\
+          rclone v1.25\n</code></pre>\n<h4>Configure rclone to access your project's\
+          \ object storage</h4>\n<p>NB: here you will require the API credentials\
+          \ for your NeCTAR Research Cloud\nuser and project, see <a href=\"#accessing\"\
+          >Accessing VicNode Cloud Storage</a>.</p>\n<p>Here I will create a new configuration\
+          \ called \"backup\" accessing storage\nbelonging to the \"Monash_RSS-test\"\
+          \ project.</p>\n<ul>\n<li>Run <strong>rclone config</strong>\n</li>\n<li>Press\
+          \ <strong>n</strong> to select the new remote option</li>\n<li>Enter a name\
+          \ of your choosing, e.g., <strong>backup</strong>\n</li>\n<li>Choose the\
+          \ number corresponding to <strong>swift</strong> as the storage type</li>\n\
+          <li>User name is your NeCTAR OS API username</li>\n<li>Enter your NeCTAR\
+          \ OS API password at the <strong>key&gt;</strong> prompt</li>\n<li>At the\
+          \ <strong>auth&gt;</strong> prompt enter <strong>https://keystone.rc.nectar.org.au:5000/v2.0</strong>\n\
           </li>\n<li>At the <strong>tenant&gt;</strong> prompt enter your OS API tenant/project\
           \ name</li>\n<li>At the <strong>region&gt;</strong> prompt press enter</li>\n\
           <li>Review and either correct the entries or press <strong>y</strong> then\
           \ <strong>q</strong>\n</li>\n</ul>\n<p>The file $HOME/.rclone.conf should\
-          \ now look something like:</p>\n<blockquote>\n<p>[backup]</p>\n<p>type =\
-          \ swift</p>\n<p>user = john.smith@monash.edu</p>\n<p>key = pvJDjLXPmDjxEmYyFiVG</p>\n\
-          <p>auth = https://keystone.rc.nectar.org.au:5000/v2.0</p>\n<p>tenant = Monash_RSS-test</p>\n\
-          <p>region = \n</p>\n</blockquote>\n<h4>Test that rclone can access the object\
-          \ storage</h4>\n<p>First list the contents of the object location, if the\
-          \ object storage\nis new then it will be empty, but this will verify that\
-          \ your\nconfiguration is correct:</p>\n<blockquote>\n<p>ubuntu@linux:~$\
-          \ rclone lsd backup:</p>\n<p>Transferred:            0 Bytes (   0.00 kByte/s)</p>\n\
-          <p>Errors:                 0</p>\n<p>Checks:                 0</p>\n<p>Transferred:\
-          \            0</p>\n<p>Elapsed time:        1.2s\n</p>\n</blockquote>\n\
-          <h4>Create an object storage container for your data</h4>\n<p>Here I create\
-          \ a container \"phd2015\" to hold my data:</p>\n<blockquote>\n<p>ubuntu@linux:~$\
-          \ rclone mkdir backup:phd2015</p>\n<p>Transferred:            0 Bytes (\
-          \   0.00 kByte/s)</p>\n<p>Errors:                 0</p>\n<p>Checks:    \
-          \             0</p>\n<p>Transferred:            0</p>\n<p>Elapsed time:\
-          \        1.3s\n</p>\n</blockquote>\n<h4>Make backups of local data to the\
-          \ object storage container</h4>\n<p>Here I have three directories on my\
-          \ local computer; \"PhD\", \"PhD-data\"\nand \"results\" and I'll make a\
-          \ backup copy of these in my object\nstorage, appearing as \"phd2015/Phd\"\
-          , \"phd2015/Phd-data\" and\n\"phd2015/results\" respectively.</p>\n<blockquote>\n\
-          <p>ajft@fafnir:~/Downloads$ rclone sync PhD backup:phd2015/PhD</p>\n<p>2015/11/26\
-          \ 21:26:17 Swift container phd2015 path PhD/: Building file list</p>\n<p>2015/11/26\
-          \ 21:26:19 Swift container phd2015 path PhD/: Waiting for checks to finish</p>\n\
-          <p>2015/11/26 21:26:19 Swift container phd2015 path PhD/: Waiting for transfers\
-          \ to finish</p>\n<p>2015/11/26 21:26:20 Waiting for deletions to finish</p>\n\
-          <p>Transferred:         1852 Bytes (   0.43 kByte/s)</p>\n<p>Errors:   \
-          \              0</p>\n<p>Checks:                 0</p>\n<p>Transferred:\
-          \            2</p>\n<p>Elapsed time:        4.2s</p>\n<p>ubuntu@linux:~/Downloads$\
-          \ rclone PhD-data backup:phd2015/PhD-data</p>\n<p>...</p>\n<p>ubuntu@linux:~/Downloads$\
-          \ rclone results backup:phd2015/PhD-results</p>\n<p>...\n</p>\n</blockquote>\n\
-          <p>(Note that as in the third of these examples commands, the local source\n\
-          folder and remote destination object prefix can differ.)</p>\n<p>These three\
-          \ \"rclone sync\" commands can be run daily (or more\nfrequently) to ensure\
-          \ that the copy held in the object storage is up\nto date and matches the\
-          \ data on the local computer.</p>\n<blockquote>\n<p>ubuntu@linux:~$ cat\
-          \ ~/sync-my-data</p>\n<p>#!/bin/sh</p>\n<p>cd $HOME/Documents</p>\n<p>rclone\
-          \ sync PhD backup:phd2015/PhD</p>\n<p>rclone sync PhD-data backup:phd2015/PhD-data</p>\n\
-          <p>rclone sync results backup:phd2015/PhD-results\n</p>\n</blockquote>\n\
-          <h4>Viewing the data from the NeCTAR dashboard</h4>\n<p>(NB: this only applies\
-          \ to the NeCTAR Swift object store as VicNode object\nstorage is implemented\
-          \ as a distinct service with its own <em>region</em>.)</p>\n<p>After logging\
-          \ in to a the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000076111-nectar-dashboard\"\
+          \ now look something like:</p>\n<pre><code>[backup]\ntype = swift\nuser\
+          \ = john.smith@monash.edu\nkey = pvJDjLXPmDjxEmYyFiVG\nauth = https://keystone.rc.nectar.org.au:5000/v2.0\n\
+          tenant = Monash_RSS-test\nregion =\n</code></pre>\n<h4>Test that rclone\
+          \ can access the object storage</h4>\n<p>First list the contents of the\
+          \ object location, if the object storage\nis new then it will be empty,\
+          \ but this will verify that your\nconfiguration is correct:</p>\n<pre><code>ubuntu@linux:~$\
+          \ rclone lsd backup:\n\nTransferred:            0 Bytes (   0.00 kByte/s)\n\
+          Errors:                 0\nChecks:                 0\nTransferred:     \
+          \       0\nElapsed time:        1.2s\n</code></pre>\n<h4>Create an object\
+          \ storage container for your data</h4>\n<p>Here I create a container \"\
+          phd2015\" to hold my data:</p>\n<pre><code>ubuntu@linux:~$ rclone mkdir\
+          \ backup:phd2015\n\nTransferred:            0 Bytes (   0.00 kByte/s)\n\
+          Errors:                 0\nChecks:                 0\nTransferred:     \
+          \       0\nElapsed time:        1.3s\n</code></pre>\n<h4>Make backups of\
+          \ local data to the object storage container</h4>\n<p>Here I have three\
+          \ directories on my local computer; \"PhD\", \"PhD-data\"\nand \"results\"\
+          \ and I'll make a backup copy of these in my object\nstorage, appearing\
+          \ as \"phd2015/Phd\", \"phd2015/Phd-data\" and\n\"phd2015/results\" respectively.</p>\n\
+          <pre><code>ajft@fafnir:~/Downloads$ rclone sync PhD backup:phd2015/PhD\n\
+          2015/11/26 21:26:17 Swift container phd2015 path PhD/: Building file list\n\
+          2015/11/26 21:26:19 Swift container phd2015 path PhD/: Waiting for checks\
+          \ to finish\n2015/11/26 21:26:19 Swift container phd2015 path PhD/: Waiting\
+          \ for transfers to finish\n2015/11/26 21:26:20 Waiting for deletions to\
+          \ finish\n\nTransferred:         1852 Bytes (   0.43 kByte/s)\nErrors: \
+          \                0\nChecks:                 0\nTransferred:            2\n\
+          Elapsed time:        4.2s\n\nubuntu@linux:~/Downloads$ rclone PhD-data backup:phd2015/PhD-data\n\
+          ...\nubuntu@linux:~/Downloads$ rclone results backup:phd2015/PhD-results\n\
+          ...\n</code></pre>\n<p>(Note that as in the third of these examples commands,\
+          \ the local source\nfolder and remote destination object prefix can differ.)</p>\n\
+          <p>These three \"rclone sync\" commands can be run daily (or more\nfrequently)\
+          \ to ensure that the copy held in the object storage is up\nto date and\
+          \ matches the data on the local computer.</p>\n<pre><code>ubuntu@linux:~$\
+          \ cat ~/sync-my-data\n#!/bin/sh\ncd $HOME/Documents\nrclone sync PhD backup:phd2015/PhD\n\
+          rclone sync PhD-data backup:phd2015/PhD-data\nrclone sync results backup:phd2015/PhD-results\n\
+          </code></pre>\n<h4>Viewing the data from the NeCTAR dashboard</h4>\n<p>(NB:\
+          \ this only applies to the NeCTAR Swift object store as VicNode object\n\
+          storage is implemented as a distinct service with its own <em>region</em>.)</p>\n\
+          <p>After logging in to a the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000076111-nectar-dashboard\"\
           >NeCTAR Dashboard</a> it is possible to view the files\nand containers.\
           \  You must select the correct project first, then choose\n\"Object Store\"\
           \ and \"Containers\", then browse into your containers, e.g.,\n\"phd2015\"\
@@ -31212,29 +31202,29 @@
           \ to set at least 2 tempurl keys,\nthis allows users and applications to\
           \ perform key rotation (but if you change\nthe key used to generate a particular\
           \ tempurl then that tempurl will\nbecome invalid).</p>\n<p>On VicNode Object\
-          \ Market at Monash:</p>\n<blockquote>\n<p>$ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
-          \ post --meta \"Temp-URL-Key:superfunhappytimes\"\n</p>\n</blockquote>\n\
-          <p>On VicNode Object Vault at UoM:</p>\n<blockquote>\n<p>$ swift --os-region-name\
-          \ VicNode post --meta \"Temp-URL-Key:codswallop\"\n</p>\n</blockquote>\n\
-          <p>NB: The OpenStack Swift API will display the Temp-URL-Key metadata back\
-          \ via\nthe API when account metadata is queried. The Ceph Swift API does\
-          \ not, so\nit is only possible to set or add a new key if an existing one\
-          \ is forgotten\nor lost.</p>\n<h3>Upload the object (if doesn't already\
-          \ exist in the object store)</h3>\n<p>Here we upload the file <em>experiment.tar.gz</em>\
-          \ from the current directory to a\ncontainer named <em>share</em> in our\
-          \ object storage account.</p>\n<blockquote>\n<p>$ swift upload share experiment.tar.gz\n\
-          </p>\n</blockquote>\n<h3>Generate a tempurl to share with collaborators</h3>\n\
-          <p>We'll give them two days (172800 seconds) to grab the data.</p>\n<blockquote>\n\
-          <p>$ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1 tempurl\
-          \ GET 172800 /share/experiment.tar.gz superfunhappytimes</p>\n<p>/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&amp;temp_url_expires=1454540180\n\
-          </p>\n</blockquote>\n<p>The command outputs the sub-path and query components\
+          \ Market at Monash:</p>\n<pre><code>$ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
+          \ post --meta \"Temp-URL-Key:superfunhappytimes\"\n</code></pre>\n<p>On\
+          \ VicNode Object Vault at UoM:</p>\n<pre><code>$ swift --os-region-name\
+          \ VicNode post --meta \"Temp-URL-Key:codswallop\"\n</code></pre>\n<p>NB:\
+          \ The OpenStack Swift API will display the Temp-URL-Key metadata back via\n\
+          the API when account metadata is queried. The Ceph Swift API does not, so\n\
+          it is only possible to set or add a new key if an existing one is forgotten\n\
+          or lost.</p>\n<h3>Upload the object (if doesn't already exist in the object\
+          \ store)</h3>\n<p>Here we upload the file <em>experiment.tar.gz</em> from\
+          \ the current directory to a\ncontainer named <em>share</em> in our object\
+          \ storage account.</p>\n<pre><code>$ swift upload share experiment.tar.gz\n\
+          </code></pre>\n<h3>Generate a tempurl to share with collaborators</h3>\n\
+          <p>We'll give them two days (172800 seconds) to grab the data.</p>\n<pre><code>$\
+          \ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1 tempurl\
+          \ GET 172800 /share/experiment.tar.gz superfunhappytimes\n/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&amp;temp_url_expires=1454540180\n\
+          </code></pre>\n<p>The command outputs the sub-path and query components\
           \ of the final working\ntempurl URL. To get the final product we need to\
           \ prepend the service's Swift\nstorage URL. For the above example we would\
           \ tell our colleagues to grab the\nexperiment data from:</p>\n<blockquote>\n\
-          <p>https://au-east.erc.monash.edu.au/swift/v1/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&amp;temp_url_expires=1454540180\n\
-          </p>\n</blockquote>\n<p>With OpenStack Swift that URL also includes the\
-          \ account identifier, e.g.,:</p>\n<blockquote>\n<p>https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_cb6c6ea8eb634cc598b0d277b8677b4f/share/experiment.tar.gz?temp_url_sig=0b7408a830d9c03411804b019279135a714c6f28&amp;temp_url_expires=1404626295\n\
-          </p>\n</blockquote>\n<p>NB: The process of generating the tempurl is entirely\
+          <p>https://au-east.erc.monash.edu.au/swift/v1/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&amp;temp_url_expires=1454540180</p>\n\
+          </blockquote>\n<p>With OpenStack Swift that URL also includes the account\
+          \ identifier, e.g.,:</p>\n<blockquote>\n<p>https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_cb6c6ea8eb634cc598b0d277b8677b4f/share/experiment.tar.gz?temp_url_sig=0b7408a830d9c03411804b019279135a714c6f28&amp;temp_url_expires=1404626295</p>\n\
+          </blockquote>\n<p>NB: The process of generating the tempurl is entirely\
           \ local because the\nSwift service just needs to know the tempurl key to\
           \ decode the other\nparameters and validate them on-demand. However, this\
           \ means\nthere is no validation that your new tempurl works, so we suggest\
@@ -31253,35 +31243,33 @@
           >encrypt your back-ups</a> locally before they are transferred to cloud\
           \ storage,\nthough we do not cover that in this example.</p>\n<h3>Configure\
           \ Duplicity to use Swift API</h3>\n<h4>On a 14.04 (Trusty) Ubuntu LTS system</h4>\n\
-          <blockquote>\n<p>apt-get install duplicity\n</p>\n</blockquote>\n<h4>Create\
-          \ a credentials file</h4>\n<p>The credentials file contains a subset of\
-          \ the variables from your openrc.sh\nResearch Cloud <a href=\"https://support.nectar.org.au/support/solutions/articles/6000078065-api\"\
-          >API credentials</a> file.</p>\n<blockquote>\n<p>cat backup.sh</p>\n<p>#!/bin/bash</p>\n\
-          <p>export SWIFT_AUTHVERSION=2</p>\n<p>export SWIFT_AUTHURL=https://keystone.rc.nectar.org.au:5000/v2.0/</p>\n\
-          <p>export SWIFT_USERNAME=\"Monash_RSS-test:adrian.tritschler@monash.edu\"\
-          </p>\n<p>export SWIFT_PASSWORD=xxxxxxxxx\n</p>\n</blockquote>\n<h4>Source\
-          \ the credentials, then run a backup</h4>\n<blockquote>\n<p>$ . backup.sh</p>\n\
-          <p>$ duplicity --no-encryption /home/ajft/src swift://ubuntu</p>\n<p>Synchronizing\
-          \ remote metadata to local cache...</p>\n<p>Deleting local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full-signatures.20160106T001707Z.sigtar.gz\
-          \ (not authoritative at backend).</p>\n<p>Deleting local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full.20160106T001707Z.manifest\
-          \ (not authoritative at backend).</p>\n<p>Last full backup date: none</p>\n\
-          <p>No signatures found, switching to full backup.</p>\n<p>--------------[\
-          \ Backup Statistics ]--------------</p>\n<p>StartTime 1452040911.64 (Wed\
-          \ Jan  6 11:41:51 2016)</p>\n<p>EndTime 1452040911.68 (Wed Jan  6 11:41:51\
-          \ 2016)</p>\n<p>ElapsedTime 0.04 (0.04 seconds)</p>\n<p>SourceFiles 109</p>\n\
-          <p>SourceFileSize 458449 (448 KB)</p>\n<p>NewFiles 109</p>\n<p>NewFileSize\
-          \ 458449 (448 KB)</p>\n<p>DeletedFiles 0</p>\n<p>ChangedFiles 0</p>\n<p>ChangedFileSize\
-          \ 0 (0 bytes)</p>\n<p>ChangedDeltaSize 0 (0 bytes)</p>\n<p>DeltaEntries\
-          \ 109</p>\n<p>RawDeltaSize 257745 (252 KB)</p>\n<p>TotalDestinationSizeChange\
-          \ 175413 (171 KB)</p>\n<p>Errors 0\n</p>\n</blockquote>\n<h4>Verify that\
-          \ Duplicity has created the initial back-up</h4>\n<p>You can now see the\
-          \ files that Duplicity has created by listing the contents\nof the target\
-          \ container, e.g., using the Dashboard to browse or the Swift\ncommand-line\
-          \ client (python-swiftclient).</p>\n<blockquote>\n<p>$ swift list --lh ubuntu</p>\n\
-          <p>9.6K 2016-01-06 00:41:52 duplicity-full-signatures.20160106T004151Z.sigtar.gz</p>\n\
-          <p>179 2016-01-06 00:41:53 duplicity-full.20160106T004151Z.manifest</p>\n\
-          <p>171K 2016-01-06 00:41:52 duplicity-full.20160106T004151Z.vol1.difftar.gz</p>\n\
-          <p>181K\n</p>\n</blockquote>\n<p><a href=\"#toc\">Contents</a></p>"
+          <pre><code>apt-get install duplicity\n</code></pre>\n<h4>Create a credentials\
+          \ file</h4>\n<p>The credentials file contains a subset of the variables\
+          \ from your openrc.sh\nResearch Cloud <a href=\"https://support.nectar.org.au/support/solutions/articles/6000078065-api\"\
+          >API credentials</a> file.</p>\n<pre><code>cat backup.sh\n#!/bin/bash\n\
+          export SWIFT_AUTHVERSION=2\nexport SWIFT_AUTHURL=https://keystone.rc.nectar.org.au:5000/v2.0/\n\
+          export SWIFT_USERNAME=\"Monash_RSS-test:adrian.tritschler@monash.edu\"\n\
+          export SWIFT_PASSWORD=xxxxxxxxx\n</code></pre>\n<h4>Source the credentials,\
+          \ then run a backup</h4>\n<pre><code>$ . backup.sh\n$ duplicity --no-encryption\
+          \ /home/ajft/src swift://ubuntu\nSynchronizing remote metadata to local\
+          \ cache...\nDeleting local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full-signatures.20160106T001707Z.sigtar.gz\
+          \ (not authoritative at backend).\nDeleting local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full.20160106T001707Z.manifest\
+          \ (not authoritative at backend).\nLast full backup date: none\nNo signatures\
+          \ found, switching to full backup.\n--------------[ Backup Statistics ]--------------\n\
+          StartTime 1452040911.64 (Wed Jan  6 11:41:51 2016)\nEndTime 1452040911.68\
+          \ (Wed Jan  6 11:41:51 2016)\nElapsedTime 0.04 (0.04 seconds)\nSourceFiles\
+          \ 109\nSourceFileSize 458449 (448 KB)\nNewFiles 109\nNewFileSize 458449\
+          \ (448 KB)\nDeletedFiles 0\nChangedFiles 0\nChangedFileSize 0 (0 bytes)\n\
+          ChangedDeltaSize 0 (0 bytes)\nDeltaEntries 109\nRawDeltaSize 257745 (252\
+          \ KB)\nTotalDestinationSizeChange 175413 (171 KB)\nErrors 0\n</code></pre>\n\
+          <h4>Verify that Duplicity has created the initial back-up</h4>\n<p>You can\
+          \ now see the files that Duplicity has created by listing the contents\n\
+          of the target container, e.g., using the Dashboard to browse or the Swift\n\
+          command-line client (python-swiftclient).</p>\n<pre><code>$ swift list --lh\
+          \ ubuntu\n9.6K 2016-01-06 00:41:52 duplicity-full-signatures.20160106T004151Z.sigtar.gz\n\
+          \ 179 2016-01-06 00:41:53 duplicity-full.20160106T004151Z.manifest\n171K\
+          \ 2016-01-06 00:41:52 duplicity-full.20160106T004151Z.vol1.difftar.gz\n\
+          181K\n</code></pre>\n<p><a href=\"#toc\">Contents</a></p>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:07-04:00'
@@ -31296,9 +31284,9 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190153
-        hits: 8
+        hits: 10
         id: 6000118791
-        modified_at: '2016-03-30T19:13:35-04:00'
+        modified_at: '2016-04-04T03:01:26-04:00'
         modified_by: null
         position: 24
         seo_data: {}
@@ -31307,7 +31295,7 @@
         thumbs_down: 0
         thumbs_up: 0
         title: VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools
-        updated_at: '2016-03-30T19:13:35-04:00'
+        updated_at: '2016-04-04T03:01:26-04:00'
         user_id: 6002464727
   html: "<h1>VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools</h1>\n\
     <h2>Intro</h2>\n<p><a href=\"http://vicnode.org.au\">VicNode</a> provides Victorian\
@@ -31431,55 +31419,53 @@
     \   referred to via Region. Instead, configure your client tool/s to use a\n \
     \  storage URL of \"https://au-east.erc.monash.edu.au/swift/v1\".</p>\n</li>\n\
     </ol>\n<p>Example Swift python-swiftclient accessing VicNode Ceph Object:</p>\n\
-    <blockquote>\n<p>swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
-    \ stat\n</p>\n</blockquote>\n<p>Example Swift python-swiftclient accessing VicNode\
-    \ Vault Object:</p>\n<blockquote>\n<p>swift --os-region-name VicNode stat</p>\n\
-    <p>swift --os-storage-url https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_d57de879288840e199bb1a48ae0c2c79\
-    \ stat\n</p>\n</blockquote>\n<p>Example Swift python-openstackclient accessing\
-    \ VicNode Vault Object:</p>\n<blockquote>\n<p>openstack --os-region-name VicNode\
-    \ object store account show</p>\n<p>NB: currently python-openstackclient does\
-    \ not support specifying a different\nSwift API endpoint other than by region\
-    \ name.</p>\n</blockquote>\n<p><a href=\"#toc\">Contents</a></p>\n<hr>\n<p><a\
-    \ name=\"use-cases and tools\"/></p>\n<h2>Object Storage Use-cases and Client\
-    \ Tools</h2>\n<p>This section includes pointers and quickstart instructions for\
-    \ using various\nuseful object storage client tools. These tools have been tested\
-    \ to work with\nVicNode cloud storage.</p>\n<hr>\n<p><a name=\"rclone\"/></p>\n\
-    <h2>rclone</h2>\n<p><a href=\"http://rclone.org/\">rclone</a> is described as\
-    \ \"rsync for cloud storage\" (rysnc being a popular and\nwidely distributed tool\
-    \ for file data-transfer and synchronisation).\nOf particular note is that <a\
-    \ href=\"http://rclone.org/\">rclone</a> supports a wide variety of cloud storage\n\
-    types (both as source and destination, with local file-system too) and is\ncapable\
-    \ of <em>delta synchronisation</em>, i.e., it is not necessary to transfer a\n\
-    full copy of the dataset if part of it has already been copied or only some\n\
-    data on the source has changed, which makes it suitable for working with\nlarge\
-    \ datasets.</p>\n<h3>Install rclone</h3>\n<p>From http://rclone.org/, download\
-    \ and install the command line tool\nfor your system.  Go to http://rclone.org/downloads/\
-    \ and choose:</p>\n<p>On Windows:</p>\n<ul>\n<li>Download http://downloads.rclone.org/rclone-v1.25-windows-amd64.zip</li>\n\
+    <pre><code>swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1 stat\n\
+    </code></pre>\n<p>Example Swift python-swiftclient accessing VicNode Vault Object:</p>\n\
+    <pre><code>swift --os-region-name VicNode stat\nswift --os-storage-url https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_d57de879288840e199bb1a48ae0c2c79\
+    \ stat\n</code></pre>\n<p>Example Swift python-openstackclient accessing VicNode\
+    \ Vault Object:</p>\n<pre><code>openstack --os-region-name VicNode object store\
+    \ account show\n</code></pre>\n<p>NB: currently python-openstackclient does not\
+    \ support specifying a different\nSwift API endpoint other than by region name.</p>\n\
+    <p><a href=\"#toc\">Contents</a></p>\n<hr>\n<p><a name=\"use-cases and tools\"\
+    /></p>\n<h2>Object Storage Use-cases and Client Tools</h2>\n<p>This section includes\
+    \ pointers and quickstart instructions for using various\nuseful object storage\
+    \ client tools. These tools have been tested to work with\nVicNode cloud storage.</p>\n\
+    <hr>\n<p><a name=\"rclone\"/></p>\n<h2>rclone</h2>\n<p><a href=\"http://rclone.org/\"\
+    >rclone</a> is described as \"rsync for cloud storage\" (rysnc being a popular\
+    \ and\nwidely distributed tool for file data-transfer and synchronisation).\n\
+    Of particular note is that <a href=\"http://rclone.org/\">rclone</a> supports\
+    \ a wide variety of cloud storage\ntypes (both as source and destination, with\
+    \ local file-system too) and is\ncapable of <em>delta synchronisation</em>, i.e.,\
+    \ it is not necessary to transfer a\nfull copy of the dataset if part of it has\
+    \ already been copied or only some\ndata on the source has changed, which makes\
+    \ it suitable for working with\nlarge datasets.</p>\n<h3>Install rclone</h3>\n\
+    <p>From http://rclone.org/, download and install the command line tool\nfor your\
+    \ system.  Go to http://rclone.org/downloads/ and choose:</p>\n<p>On Windows:</p>\n\
+    <ul>\n<li>Download http://downloads.rclone.org/rclone-v1.25-windows-amd64.zip</li>\n\
     <li>Extract rclone.exe from the zip file and save it (e.g., as C:\\users\\fred\\\
     rclone.exe)</li>\n<li>All configuration and examples in the Linux section are\
     \ as below, run from within a cmd.exe shell</li>\n</ul>\n<p>On Macintosh:</p>\n\
     <p>Not yet tested (will be similar to below details for Linux but different\n\
     installation).</p>\n<p>On Linux:</p>\n<p>First download http://downloads.rclone.org/rclone-v1.25-linux-amd64.zip</p>\n\
-    <h3>Setup and use rclone</h3>\n<h4>From within a terminal session</h4>\n<blockquote>\n\
-    <p>ubuntu@linux:~$ cd ~/Downloads\n</p>\n</blockquote>\n<p>unzip the downloaded\
-    \ archive</p>\n<blockquote>\n<p>ubuntu@linux:~/Downloads$ unzip rclone-v1.25-linux-amd64.zip\
-    \ </p>\n<p>Archive:  rclone-v1.25-linux-amd64.zip</p>\n<p>creating: rclone-v1.25-linux-amd64/</p>\n\
-    <p>inflating: rclone-v1.25-linux-amd64/README.txt</p>\n<p>inflating: rclone-v1.25-linux-amd64/rclone</p>\n\
-    <p>inflating: rclone-v1.25-linux-amd64/README.html</p>\n<p>inflating: rclone-v1.25-linux-amd64/rclone.1</p>\n\
-    <p>ubuntu@linux:~/Downloads$ cd rclone-v1.25-linux-amd64\n</p>\n</blockquote>\n\
-    <h4>Copy the rclone program into the system path</h4>\n<blockquote>\n<p>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
-    \ sudo cp rclone /usr/local/bin</p>\n<p>[sudo] password for ubuntu:\n</p>\n</blockquote>\n\
-    <h4>Also copy the manual page so we can RTFM</h4>\n<blockquote>\n<p>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
-    \ sudo cp rclone.1 /usr/local/man/man1\n</p>\n</blockquote>\n<h4>Test that rclone\
-    \ runs</h4>\n<p>(You can ignore the message that you haven't yet configured it)</p>\n\
-    <blockquote>\n<p>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$ rclone --version</p>\n\
-    <p>2015/11/26 20:57:41 Failed to load config file /home/ubuntu/.rclone.conf -\
-    \ using defaults: open /home/ubuntu/.rclone.conf: no such file or directory</p>\n\
-    <p>rclone v1.25\n</p>\n</blockquote>\n<h4>Configure rclone to access your project's\
-    \ object storage</h4>\n<p>NB: here you will require the API credentials for your\
-    \ NeCTAR Research Cloud\nuser and project, see <a href=\"#accessing\">Accessing\
-    \ VicNode Cloud Storage</a>.</p>\n<p>Here I will create a new configuration called\
-    \ \"backup\" accessing storage\nbelonging to the \"Monash_RSS-test\" project.</p>\n\
+    <h3>Setup and use rclone</h3>\n<h4>From within a terminal session</h4>\n<pre><code>ubuntu@linux:~$\
+    \ cd ~/Downloads\n</code></pre>\n<p>unzip the downloaded archive</p>\n<pre><code>ubuntu@linux:~/Downloads$\
+    \ unzip rclone-v1.25-linux-amd64.zip\nArchive:  rclone-v1.25-linux-amd64.zip\n\
+    \  creating: rclone-v1.25-linux-amd64/\n  inflating: rclone-v1.25-linux-amd64/README.txt\n\
+    \  inflating: rclone-v1.25-linux-amd64/rclone\n  inflating: rclone-v1.25-linux-amd64/README.html\n\
+    \  inflating: rclone-v1.25-linux-amd64/rclone.1\nubuntu@linux:~/Downloads$ cd\
+    \ rclone-v1.25-linux-amd64\n</code></pre>\n<h4>Copy the rclone program into the\
+    \ system path</h4>\n<pre><code>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+    \ sudo cp rclone /usr/local/bin\n[sudo] password for ubuntu:\n</code></pre>\n\
+    <h4>Also copy the manual page so we can RTFM</h4>\n<pre><code>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+    \ sudo cp rclone.1 /usr/local/man/man1\n</code></pre>\n<h4>Test that rclone runs</h4>\n\
+    <p>(You can ignore the message that you haven't yet configured it)</p>\n<pre><code>ubuntu@linux:~/Downloads/rclone-v1.25-linux-amd64$\
+    \ rclone --version\n2015/11/26 20:57:41 Failed to load config file /home/ubuntu/.rclone.conf\
+    \ - using defaults: open /home/ubuntu/.rclone.conf: no such file or directory\n\
+    rclone v1.25\n</code></pre>\n<h4>Configure rclone to access your project's object\
+    \ storage</h4>\n<p>NB: here you will require the API credentials for your NeCTAR\
+    \ Research Cloud\nuser and project, see <a href=\"#accessing\">Accessing VicNode\
+    \ Cloud Storage</a>.</p>\n<p>Here I will create a new configuration called \"\
+    backup\" accessing storage\nbelonging to the \"Monash_RSS-test\" project.</p>\n\
     <ul>\n<li>Run <strong>rclone config</strong></li>\n<li>Press <strong>n</strong>\
     \ to select the new remote option</li>\n<li>Enter a name of your choosing, e.g.,\
     \ <strong>backup</strong></li>\n<li>Choose the number corresponding to <strong>swift</strong>\
@@ -31489,45 +31475,41 @@
     <li>At the <strong>tenant&gt;</strong> prompt enter your OS API tenant/project\
     \ name</li>\n<li>At the <strong>region&gt;</strong> prompt press enter</li>\n\
     <li>Review and either correct the entries or press <strong>y</strong> then <strong>q</strong></li>\n\
-    </ul>\n<p>The file $HOME/.rclone.conf should now look something like:</p>\n<blockquote>\n\
-    <p>[backup]</p>\n<p>type = swift</p>\n<p>user = john.smith@monash.edu</p>\n<p>key\
-    \ = pvJDjLXPmDjxEmYyFiVG</p>\n<p>auth = https://keystone.rc.nectar.org.au:5000/v2.0</p>\n\
-    <p>tenant = Monash_RSS-test</p>\n<p>region = \n</p>\n</blockquote>\n<h4>Test that\
-    \ rclone can access the object storage</h4>\n<p>First list the contents of the\
-    \ object location, if the object storage\nis new then it will be empty, but this\
-    \ will verify that your\nconfiguration is correct:</p>\n<blockquote>\n<p>ubuntu@linux:~$\
-    \ rclone lsd backup:</p>\n<p>Transferred:            0 Bytes (   0.00 kByte/s)</p>\n\
-    <p>Errors:                 0</p>\n<p>Checks:                 0</p>\n<p>Transferred:\
-    \            0</p>\n<p>Elapsed time:        1.2s\n</p>\n</blockquote>\n<h4>Create\
-    \ an object storage container for your data</h4>\n<p>Here I create a container\
-    \ \"phd2015\" to hold my data:</p>\n<blockquote>\n<p>ubuntu@linux:~$ rclone mkdir\
-    \ backup:phd2015</p>\n<p>Transferred:            0 Bytes (   0.00 kByte/s)</p>\n\
-    <p>Errors:                 0</p>\n<p>Checks:                 0</p>\n<p>Transferred:\
-    \            0</p>\n<p>Elapsed time:        1.3s\n</p>\n</blockquote>\n<h4>Make\
-    \ backups of local data to the object storage container</h4>\n<p>Here I have three\
-    \ directories on my local computer; \"PhD\", \"PhD-data\"\nand \"results\" and\
-    \ I'll make a backup copy of these in my object\nstorage, appearing as \"phd2015/Phd\"\
-    , \"phd2015/Phd-data\" and\n\"phd2015/results\" respectively.</p>\n<blockquote>\n\
-    <p>ajft@fafnir:~/Downloads$ rclone sync PhD backup:phd2015/PhD</p>\n<p>2015/11/26\
-    \ 21:26:17 Swift container phd2015 path PhD/: Building file list</p>\n<p>2015/11/26\
-    \ 21:26:19 Swift container phd2015 path PhD/: Waiting for checks to finish</p>\n\
-    <p>2015/11/26 21:26:19 Swift container phd2015 path PhD/: Waiting for transfers\
-    \ to finish</p>\n<p>2015/11/26 21:26:20 Waiting for deletions to finish</p>\n\
-    <p>Transferred:         1852 Bytes (   0.43 kByte/s)</p>\n<p>Errors:         \
-    \        0</p>\n<p>Checks:                 0</p>\n<p>Transferred:            2</p>\n\
-    <p>Elapsed time:        4.2s</p>\n<p>ubuntu@linux:~/Downloads$ rclone PhD-data\
-    \ backup:phd2015/PhD-data</p>\n<p>...</p>\n<p>ubuntu@linux:~/Downloads$ rclone\
-    \ results backup:phd2015/PhD-results</p>\n<p>...\n</p>\n</blockquote>\n<p>(Note\
-    \ that as in the third of these examples commands, the local source\nfolder and\
-    \ remote destination object prefix can differ.)</p>\n<p>These three \"rclone sync\"\
-    \ commands can be run daily (or more\nfrequently) to ensure that the copy held\
-    \ in the object storage is up\nto date and matches the data on the local computer.</p>\n\
-    <blockquote>\n<p>ubuntu@linux:~$ cat ~/sync-my-data</p>\n<p>#!/bin/sh</p>\n<p>cd\
-    \ $HOME/Documents</p>\n<p>rclone sync PhD backup:phd2015/PhD</p>\n<p>rclone sync\
-    \ PhD-data backup:phd2015/PhD-data</p>\n<p>rclone sync results backup:phd2015/PhD-results\n\
-    </p>\n</blockquote>\n<h4>Viewing the data from the NeCTAR dashboard</h4>\n<p>(NB:\
-    \ this only applies to the NeCTAR Swift object store as VicNode object\nstorage\
-    \ is implemented as a distinct service with its own <em>region</em>.)</p>\n<p>After\
+    </ul>\n<p>The file $HOME/.rclone.conf should now look something like:</p>\n<pre><code>[backup]\n\
+    type = swift\nuser = john.smith@monash.edu\nkey = pvJDjLXPmDjxEmYyFiVG\nauth =\
+    \ https://keystone.rc.nectar.org.au:5000/v2.0\ntenant = Monash_RSS-test\nregion\
+    \ =\n</code></pre>\n<h4>Test that rclone can access the object storage</h4>\n\
+    <p>First list the contents of the object location, if the object storage\nis new\
+    \ then it will be empty, but this will verify that your\nconfiguration is correct:</p>\n\
+    <pre><code>ubuntu@linux:~$ rclone lsd backup:\n\nTransferred:            0 Bytes\
+    \ (   0.00 kByte/s)\nErrors:                 0\nChecks:                 0\nTransferred:\
+    \            0\nElapsed time:        1.2s\n</code></pre>\n<h4>Create an object\
+    \ storage container for your data</h4>\n<p>Here I create a container \"phd2015\"\
+    \ to hold my data:</p>\n<pre><code>ubuntu@linux:~$ rclone mkdir backup:phd2015\n\
+    \nTransferred:            0 Bytes (   0.00 kByte/s)\nErrors:                 0\n\
+    Checks:                 0\nTransferred:            0\nElapsed time:        1.3s\n\
+    </code></pre>\n<h4>Make backups of local data to the object storage container</h4>\n\
+    <p>Here I have three directories on my local computer; \"PhD\", \"PhD-data\"\n\
+    and \"results\" and I'll make a backup copy of these in my object\nstorage, appearing\
+    \ as \"phd2015/Phd\", \"phd2015/Phd-data\" and\n\"phd2015/results\" respectively.</p>\n\
+    <pre><code>ajft@fafnir:~/Downloads$ rclone sync PhD backup:phd2015/PhD\n2015/11/26\
+    \ 21:26:17 Swift container phd2015 path PhD/: Building file list\n2015/11/26 21:26:19\
+    \ Swift container phd2015 path PhD/: Waiting for checks to finish\n2015/11/26\
+    \ 21:26:19 Swift container phd2015 path PhD/: Waiting for transfers to finish\n\
+    2015/11/26 21:26:20 Waiting for deletions to finish\n\nTransferred:         1852\
+    \ Bytes (   0.43 kByte/s)\nErrors:                 0\nChecks:                \
+    \ 0\nTransferred:            2\nElapsed time:        4.2s\n\nubuntu@linux:~/Downloads$\
+    \ rclone PhD-data backup:phd2015/PhD-data\n...\nubuntu@linux:~/Downloads$ rclone\
+    \ results backup:phd2015/PhD-results\n...\n</code></pre>\n<p>(Note that as in\
+    \ the third of these examples commands, the local source\nfolder and remote destination\
+    \ object prefix can differ.)</p>\n<p>These three \"rclone sync\" commands can\
+    \ be run daily (or more\nfrequently) to ensure that the copy held in the object\
+    \ storage is up\nto date and matches the data on the local computer.</p>\n<pre><code>ubuntu@linux:~$\
+    \ cat ~/sync-my-data\n#!/bin/sh\ncd $HOME/Documents\nrclone sync PhD backup:phd2015/PhD\n\
+    rclone sync PhD-data backup:phd2015/PhD-data\nrclone sync results backup:phd2015/PhD-results\n\
+    </code></pre>\n<h4>Viewing the data from the NeCTAR dashboard</h4>\n<p>(NB: this\
+    \ only applies to the NeCTAR Swift object store as VicNode object\nstorage is\
+    \ implemented as a distinct service with its own <em>region</em>.)</p>\n<p>After\
     \ logging in to a the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000076111-nectar-dashboard\"\
     >NeCTAR Dashboard</a> it is possible to view the files\nand containers.  You must\
     \ select the correct project first, then choose\n\"Object Store\" and \"Containers\"\
@@ -31568,31 +31550,31 @@
     \ Swift</a>\nimplementations of the Swift API allow users to set at least 2 tempurl\
     \ keys,\nthis allows users and applications to perform key rotation (but if you\
     \ change\nthe key used to generate a particular tempurl then that tempurl will\n\
-    become invalid).</p>\n<p>On VicNode Object Market at Monash:</p>\n<blockquote>\n\
-    <p>$ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1 post --meta\
-    \ \"Temp-URL-Key:superfunhappytimes\"\n</p>\n</blockquote>\n<p>On VicNode Object\
-    \ Vault at UoM:</p>\n<blockquote>\n<p>$ swift --os-region-name VicNode post --meta\
-    \ \"Temp-URL-Key:codswallop\"\n</p>\n</blockquote>\n<p>NB: The OpenStack Swift\
-    \ API will display the Temp-URL-Key metadata back via\nthe API when account metadata\
-    \ is queried. The Ceph Swift API does not, so\nit is only possible to set or add\
-    \ a new key if an existing one is forgotten\nor lost.</p>\n<h3>Upload the object\
-    \ (if doesn't already exist in the object store)</h3>\n<p>Here we upload the file\
-    \ <em>experiment.tar.gz</em> from the current directory to a\ncontainer named\
-    \ <em>share</em> in our object storage account.</p>\n<blockquote>\n<p>$ swift\
-    \ upload share experiment.tar.gz\n</p>\n</blockquote>\n<h3>Generate a tempurl\
-    \ to share with collaborators</h3>\n<p>We'll give them two days (172800 seconds)\
-    \ to grab the data.</p>\n<blockquote>\n<p>$ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1\
-    \ tempurl GET 172800 /share/experiment.tar.gz superfunhappytimes</p>\n<p>/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&amp;temp_url_expires=1454540180\n\
-    </p>\n</blockquote>\n<p>The command outputs the sub-path and query components\
-    \ of the final working\ntempurl URL. To get the final product we need to prepend\
-    \ the service's Swift\nstorage URL. For the above example we would tell our colleagues\
-    \ to grab the\nexperiment data from:</p>\n<blockquote>\n<p>https://au-east.erc.monash.edu.au/swift/v1/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&amp;temp_url_expires=1454540180\n\
-    </p>\n</blockquote>\n<p>With OpenStack Swift that URL also includes the account\
-    \ identifier, e.g.,:</p>\n<blockquote>\n<p>https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_cb6c6ea8eb634cc598b0d277b8677b4f/share/experiment.tar.gz?temp_url_sig=0b7408a830d9c03411804b019279135a714c6f28&amp;temp_url_expires=1404626295\n\
-    </p>\n</blockquote>\n<p>NB: The process of generating the tempurl is entirely\
-    \ local because the\nSwift service just needs to know the tempurl key to decode\
-    \ the other\nparameters and validate them on-demand. However, this means\nthere\
-    \ is no validation that your new tempurl works, so we suggest you it\nthem before\
+    become invalid).</p>\n<p>On VicNode Object Market at Monash:</p>\n<pre><code>$\
+    \ swift --os-storage-url https://au-east.erc.monash.edu.au/swift/v1 post --meta\
+    \ \"Temp-URL-Key:superfunhappytimes\"\n</code></pre>\n<p>On VicNode Object Vault\
+    \ at UoM:</p>\n<pre><code>$ swift --os-region-name VicNode post --meta \"Temp-URL-Key:codswallop\"\
+    \n</code></pre>\n<p>NB: The OpenStack Swift API will display the Temp-URL-Key\
+    \ metadata back via\nthe API when account metadata is queried. The Ceph Swift\
+    \ API does not, so\nit is only possible to set or add a new key if an existing\
+    \ one is forgotten\nor lost.</p>\n<h3>Upload the object (if doesn't already exist\
+    \ in the object store)</h3>\n<p>Here we upload the file <em>experiment.tar.gz</em>\
+    \ from the current directory to a\ncontainer named <em>share</em> in our object\
+    \ storage account.</p>\n<pre><code>$ swift upload share experiment.tar.gz\n</code></pre>\n\
+    <h3>Generate a tempurl to share with collaborators</h3>\n<p>We'll give them two\
+    \ days (172800 seconds) to grab the data.</p>\n<pre><code>$ swift --os-storage-url\
+    \ https://au-east.erc.monash.edu.au/swift/v1 tempurl GET 172800 /share/experiment.tar.gz\
+    \ superfunhappytimes\n/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&amp;temp_url_expires=1454540180\n\
+    </code></pre>\n<p>The command outputs the sub-path and query components of the\
+    \ final working\ntempurl URL. To get the final product we need to prepend the\
+    \ service's Swift\nstorage URL. For the above example we would tell our colleagues\
+    \ to grab the\nexperiment data from:</p>\n<blockquote>\n<p>https://au-east.erc.monash.edu.au/swift/v1/share/experiment.tar.gz?temp_url_sig=8592bd096a83ba05d3fd1e457dc1167dff62ba28&amp;temp_url_expires=1454540180</p>\n\
+    </blockquote>\n<p>With OpenStack Swift that URL also includes the account identifier,\
+    \ e.g.,:</p>\n<blockquote>\n<p>https://vault.melbourne.vicnode.org.au:8888/v1/AUTH_cb6c6ea8eb634cc598b0d277b8677b4f/share/experiment.tar.gz?temp_url_sig=0b7408a830d9c03411804b019279135a714c6f28&amp;temp_url_expires=1404626295</p>\n\
+    </blockquote>\n<p>NB: The process of generating the tempurl is entirely local\
+    \ because the\nSwift service just needs to know the tempurl key to decode the\
+    \ other\nparameters and validate them on-demand. However, this means\nthere is\
+    \ no validation that your new tempurl works, so we suggest you it\nthem before\
     \ distributing, e.g., by pasting into your web-browser address\nbar.</p>\n<p><a\
     \ href=\"#toc\">Contents</a></p>\n<hr>\n<p><a name=\"duplicity\"/></p>\n<h2>Backing\
     \ up files to object storage using Duplicity</h2>\n<p><a href=\"http://duplicity.nongnu.org\"\
@@ -31605,37 +31587,35 @@
     exists in the project's object store. You can optionally\n<a href=\"https://dmsimard.com/2014/08/12/send-your-encrypted-duplicity-backups-to-a-swift-object-storage/\"\
     >encrypt your back-ups</a> locally before they are transferred to cloud storage,\n\
     though we do not cover that in this example.</p>\n<h3>Configure Duplicity to use\
-    \ Swift API</h3>\n<h4>On a 14.04 (Trusty) Ubuntu LTS system</h4>\n<blockquote>\n\
-    <p>apt-get install duplicity\n</p>\n</blockquote>\n<h4>Create a credentials file</h4>\n\
-    <p>The credentials file contains a subset of the variables from your openrc.sh\n\
-    Research Cloud <a href=\"https://support.nectar.org.au/support/solutions/articles/6000078065-api\"\
-    >API credentials</a> file.</p>\n<blockquote>\n<p>cat backup.sh</p>\n<p>#!/bin/bash</p>\n\
-    <p>export SWIFT_AUTHVERSION=2</p>\n<p>export SWIFT_AUTHURL=https://keystone.rc.nectar.org.au:5000/v2.0/</p>\n\
-    <p>export SWIFT_USERNAME=\"Monash_RSS-test:adrian.tritschler@monash.edu\"</p>\n\
-    <p>export SWIFT_PASSWORD=xxxxxxxxx\n</p>\n</blockquote>\n<h4>Source the credentials,\
-    \ then run a backup</h4>\n<blockquote>\n<p>$ . backup.sh</p>\n<p>$ duplicity --no-encryption\
-    \ /home/ajft/src swift://ubuntu</p>\n<p>Synchronizing remote metadata to local\
-    \ cache...</p>\n<p>Deleting local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full-signatures.20160106T001707Z.sigtar.gz\
-    \ (not authoritative at backend).</p>\n<p>Deleting local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full.20160106T001707Z.manifest\
-    \ (not authoritative at backend).</p>\n<p>Last full backup date: none</p>\n<p>No\
-    \ signatures found, switching to full backup.</p>\n<p>--------------[ Backup Statistics\
-    \ ]--------------</p>\n<p>StartTime 1452040911.64 (Wed Jan  6 11:41:51 2016)</p>\n\
-    <p>EndTime 1452040911.68 (Wed Jan  6 11:41:51 2016)</p>\n<p>ElapsedTime 0.04 (0.04\
-    \ seconds)</p>\n<p>SourceFiles 109</p>\n<p>SourceFileSize 458449 (448 KB)</p>\n\
-    <p>NewFiles 109</p>\n<p>NewFileSize 458449 (448 KB)</p>\n<p>DeletedFiles 0</p>\n\
-    <p>ChangedFiles 0</p>\n<p>ChangedFileSize 0 (0 bytes)</p>\n<p>ChangedDeltaSize\
-    \ 0 (0 bytes)</p>\n<p>DeltaEntries 109</p>\n<p>RawDeltaSize 257745 (252 KB)</p>\n\
-    <p>TotalDestinationSizeChange 175413 (171 KB)</p>\n<p>Errors 0\n</p>\n</blockquote>\n\
-    <h4>Verify that Duplicity has created the initial back-up</h4>\n<p>You can now\
-    \ see the files that Duplicity has created by listing the contents\nof the target\
-    \ container, e.g., using the Dashboard to browse or the Swift\ncommand-line client\
-    \ (python-swiftclient).</p>\n<blockquote>\n<p>$ swift list --lh ubuntu</p>\n<p>9.6K\
-    \ 2016-01-06 00:41:52 duplicity-full-signatures.20160106T004151Z.sigtar.gz</p>\n\
-    <p>179 2016-01-06 00:41:53 duplicity-full.20160106T004151Z.manifest</p>\n<p>171K\
-    \ 2016-01-06 00:41:52 duplicity-full.20160106T004151Z.vol1.difftar.gz</p>\n<p>181K\n\
-    </p>\n</blockquote>\n<p><a href=\"#toc\">Contents</a></p>"
+    \ Swift API</h3>\n<h4>On a 14.04 (Trusty) Ubuntu LTS system</h4>\n<pre><code>apt-get\
+    \ install duplicity\n</code></pre>\n<h4>Create a credentials file</h4>\n<p>The\
+    \ credentials file contains a subset of the variables from your openrc.sh\nResearch\
+    \ Cloud <a href=\"https://support.nectar.org.au/support/solutions/articles/6000078065-api\"\
+    >API credentials</a> file.</p>\n<pre><code>cat backup.sh\n#!/bin/bash\nexport\
+    \ SWIFT_AUTHVERSION=2\nexport SWIFT_AUTHURL=https://keystone.rc.nectar.org.au:5000/v2.0/\n\
+    export SWIFT_USERNAME=\"Monash_RSS-test:adrian.tritschler@monash.edu\"\nexport\
+    \ SWIFT_PASSWORD=xxxxxxxxx\n</code></pre>\n<h4>Source the credentials, then run\
+    \ a backup</h4>\n<pre><code>$ . backup.sh\n$ duplicity --no-encryption /home/ajft/src\
+    \ swift://ubuntu\nSynchronizing remote metadata to local cache...\nDeleting local\
+    \ /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full-signatures.20160106T001707Z.sigtar.gz\
+    \ (not authoritative at backend).\nDeleting local /home/ajft/.cache/duplicity/97fd3f05cdb92feaf3607d5ff406f22c/duplicity-full.20160106T001707Z.manifest\
+    \ (not authoritative at backend).\nLast full backup date: none\nNo signatures\
+    \ found, switching to full backup.\n--------------[ Backup Statistics ]--------------\n\
+    StartTime 1452040911.64 (Wed Jan  6 11:41:51 2016)\nEndTime 1452040911.68 (Wed\
+    \ Jan  6 11:41:51 2016)\nElapsedTime 0.04 (0.04 seconds)\nSourceFiles 109\nSourceFileSize\
+    \ 458449 (448 KB)\nNewFiles 109\nNewFileSize 458449 (448 KB)\nDeletedFiles 0\n\
+    ChangedFiles 0\nChangedFileSize 0 (0 bytes)\nChangedDeltaSize 0 (0 bytes)\nDeltaEntries\
+    \ 109\nRawDeltaSize 257745 (252 KB)\nTotalDestinationSizeChange 175413 (171 KB)\n\
+    Errors 0\n</code></pre>\n<h4>Verify that Duplicity has created the initial back-up</h4>\n\
+    <p>You can now see the files that Duplicity has created by listing the contents\n\
+    of the target container, e.g., using the Dashboard to browse or the Swift\ncommand-line\
+    \ client (python-swiftclient).</p>\n<pre><code>$ swift list --lh ubuntu\n9.6K\
+    \ 2016-01-06 00:41:52 duplicity-full-signatures.20160106T004151Z.sigtar.gz\n 179\
+    \ 2016-01-06 00:41:53 duplicity-full.20160106T004151Z.manifest\n171K 2016-01-06\
+    \ 00:41:52 duplicity-full.20160106T004151Z.vol1.difftar.gz\n181K\n</code></pre>\n\
+    <p><a href=\"#toc\">Contents</a></p>"
   parent: 24
-  sha1: 6346d963ec0af51063cf244863f06cc1143a76d8
+  sha1: 797b91c0937e7c35f50ae33e35e4d94523b89a99
   title: VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools
 118:
   freshdesk:
