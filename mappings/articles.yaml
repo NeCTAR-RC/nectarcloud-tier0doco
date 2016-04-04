@@ -31637,3 +31637,192 @@
   parent: 24
   sha1: 6346d963ec0af51063cf244863f06cc1143a76d8
   title: VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools
+118:
+  freshdesk:
+    fd_attributes:
+      article:
+        art_type: 1
+        created_at: '2016-04-03T22:07:35-04:00'
+        desc_un_html: " Research Cloud Networking \n \n Background \n By default each\
+          \ instance/server on the NeCTAR Research gets assigned a single\npublic\
+          \ IPv4 address on boot. Each Node of the RC provides and manages the\naddress\
+          \ space associated with instances launched and running in their zones...\
+          \ \n \n Contents \n \n Background \n Research Cloud Address Ranges \n \n\
+          \ \n Research Cloud Address Ranges \n Insert list of IP ranges per Node/zone\
+          \ here \n Test FD docbot code block handling \n backticks: \n $ echo \"\
+          hi\"\nhi \n backticks with syntax qualifier: \n bash\n$ echo \"hi\"\nhi\
+          \ \n 4-spaces: \n $ echo \"hi\"\nhi\n \n tabs: \n $ echo \"hi\"\nhi\n \n\
+          \ in-line html: \n \n$ echo \"hi\"\nhi\n "
+        description: '<h1>Research Cloud Networking</h1>
+
+          <p><a name="background"></a></p>
+
+          <h2>Background</h2>
+
+          <p>By default each instance/server on the NeCTAR Research gets assigned
+          a single
+
+          public IPv4 address on boot. Each Node of the RC provides and manages the
+
+          address space associated with instances launched and running in their zones...</p>
+
+          <p><a name="toc"></a></p>
+
+          <h2>Contents</h2>
+
+          <ul>
+
+          <li><a href="#background">Background</a></li>
+
+          <li><a href="#ranges">Research Cloud Address Ranges</a></li>
+
+          </ul>
+
+          <p><a name="ranges"></a></p>
+
+          <h2>Research Cloud Address Ranges</h2>
+
+          <p>Insert list of IP ranges per Node/zone here</p>
+
+          <h2>Test FD docbot code block handling</h2>
+
+          <p>backticks:</p>
+
+          <p><code>$ echo "hi"
+
+          hi</code></p>
+
+          <p>backticks with syntax qualifier:</p>
+
+          <p><code>bash
+
+          $ echo "hi"
+
+          hi</code></p>
+
+          <p>4-spaces:</p>
+
+          <pre><code>$ echo "hi"
+
+          hi
+
+          </code></pre>
+
+          <p>tabs:</p>
+
+          <pre><code>$ echo "hi"
+
+          hi
+
+          </code></pre>
+
+          <p>in-line html:</p>
+
+          <pre><code>
+
+          $ echo "hi"
+
+          hi
+
+          </code></pre>'
+        folder:
+          category_id: 6000122278
+          created_at: '2015-09-03T01:28:09-04:00'
+          customer_folders: []
+          description: NeCTAR Fundamentals
+          id: 6000190155
+          is_default: false
+          language_id: 6
+          name: NeCTAR Fundamentals
+          parent_id: 6000190155
+          position: 2
+          updated_at: '2015-10-08T21:02:18-04:00'
+          visibility: 1
+        folder_id: 6000190155
+        hits: 0
+        id: 6000121047
+        modified_at: '2016-04-03T22:07:35-04:00'
+        modified_by: null
+        position: 5
+        seo_data: {}
+        status: 2
+        tags: []
+        thumbs_down: 0
+        thumbs_up: 0
+        title: Research Cloud Networking
+        updated_at: '2016-04-03T22:07:35-04:00'
+        user_id: 6002464727
+  html: '<h1>Research Cloud Networking</h1>
+
+    <p><a name="background"></p>
+
+    <h2>Background</h2>
+
+    <p>By default each instance/server on the NeCTAR Research gets assigned a single
+
+    public IPv4 address on boot. Each Node of the RC provides and manages the
+
+    address space associated with instances launched and running in their zones...</p>
+
+    <p><a name="toc"/></p>
+
+    <h2>Contents</h2>
+
+    <ul>
+
+    <li><a href="#background">Background</a></li>
+
+    <li><a href="#ranges">Research Cloud Address Ranges</a></li>
+
+    </ul>
+
+    <p><a name="ranges"/></p>
+
+    <h2>Research Cloud Address Ranges</h2>
+
+    <p>Insert list of IP ranges per Node/zone here</p>
+
+    <h2>Test FD docbot code block handling</h2>
+
+    <p>backticks:</p>
+
+    <p><code>$ echo "hi"
+
+    hi</code></p>
+
+    <p>backticks with syntax qualifier:</p>
+
+    <p><code>bash
+
+    $ echo "hi"
+
+    hi</code></p>
+
+    <p>4-spaces:</p>
+
+    <pre><code>$ echo "hi"
+
+    hi
+
+    </code></pre>
+
+    <p>tabs:</p>
+
+    <pre><code>$ echo "hi"
+
+    hi
+
+    </code></pre>
+
+    <p>in-line html:</p>
+
+    <pre><code>
+
+    $ echo "hi"
+
+    hi
+
+    </code></pre>'
+  parent: 26
+  sha1: d7245f956c0dcc04f227efa033801ea5359bcf1a
+  title: Research Cloud Networking
