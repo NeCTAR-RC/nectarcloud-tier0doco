@@ -22,6 +22,30 @@
       "revId": "e46af97ef8d13677f3c1c572ec64bdc0185cc9d3",
       "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_c5baece0",
+        "filename": "articles/NeCTAR Documentation--DOCID16/NeCTAR Fundamentals--DOCID26/Research Cloud Networking--DOCID118.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-04-05T12:58:45Z",
+      "side": 1,
+      "message": "I agree to some extent, but actually I do think we should be explicit about this and Midonet because the differences between the two public network types will come up in support, and also because we have a subset of users who want to know this stuff.\n\nThis was really just a quick attempt at something suitable to replace the rubbish that\u0027s on this page now. We\u0027ll want to iterate on the content somewhat and it will continue to evolve as the Neutron roll-out goes forth. Let\u0027s discuss structure of the page on slack and I\u0027ll make some edits after...",
+      "parentUuid": "bad4c104_c54d8c74",
+      "range": {
+        "startLine": 12,
+        "startChar": 71,
+        "endLine": 13,
+        "endChar": 15
+      },
+      "revId": "e46af97ef8d13677f3c1c572ec64bdc0185cc9d3",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
     }
   ]
 }
