@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "bad4c104_902f40a1",
+        "filename": "articles/NeCTAR Documentation--DOCID16/NeCTAR Fundamentals--DOCID26/Research Cloud Networking--DOCID118.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2016-04-07T06:22:38Z",
+      "side": 1,
+      "message": "Should we go into more detail on what we mean by \"Classic Provider\"",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 13
+      },
+      "revId": "e46af97ef8d13677f3c1c572ec64bdc0185cc9d3",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bad4c104_c54d8c74",
         "filename": "articles/NeCTAR Documentation--DOCID16/NeCTAR Fundamentals--DOCID26/Research Cloud Networking--DOCID118.md",
         "patchSetId": 1
@@ -42,6 +65,29 @@
         "startChar": 71,
         "endLine": 13,
         "endChar": 15
+      },
+      "revId": "e46af97ef8d13677f3c1c572ec64bdc0185cc9d3",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_7022bcba",
+        "filename": "articles/NeCTAR Documentation--DOCID16/NeCTAR Fundamentals--DOCID26/Research Cloud Networking--DOCID118.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2016-04-07T06:22:38Z",
+      "side": 1,
+      "message": "maybe we could also say you can get this information by doing a `neutron net-list`",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 65
       },
       "revId": "e46af97ef8d13677f3c1c572ec64bdc0185cc9d3",
       "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
