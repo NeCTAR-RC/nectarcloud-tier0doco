@@ -151,7 +151,7 @@ information. Then, you can use nova boot command to launch a new instance, the
 format is:
 
 
-```nova boot [instance-name]  --flavor [name] --image [name] --key-name [name] --security-groups [names separated by space]```
+```nova boot [instance-name]  --flavor [name] --image [name] --key-name [name] --security-groups [names separated by comma]```
 
 You can also specify option --availability-zone to launch an instance in a
 designed zone and option --user-data <user-data-file> for a initialization script
