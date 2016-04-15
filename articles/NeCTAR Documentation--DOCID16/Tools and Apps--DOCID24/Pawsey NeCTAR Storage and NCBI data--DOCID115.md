@@ -45,7 +45,7 @@ each of which has different purpose that needs some basic explanation.
 With your instance you have access to limited diskspace with the  "root disk" partition "/" and 
 "ephemeral disk" partition that is accessed via the /mnt directory of the default NeCTAR images. 
 The size of the the "root disk" and "ephemeral disk" varies with the different hardware templates 
-or [flavors] (https://Support.Nectar.Org.Au/Support/Solutions/Articles/6000055380-Resources-Available-To-You) 
+or [flavors] (https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you) 
 that are available when you are configuring your instance. So understanding your research data 
 requirements is key so you can select the correct `flavor` for your instance.
 However, as with everything including the research cloud it does require a bit more insight of how a 
