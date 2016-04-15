@@ -21077,30 +21077,27 @@
     fd_attributes:
       article:
         art_type: 1
-        bool_01: null
         created_at: '2015-12-01T18:22:35-05:00'
-        datetime_01: null
-        delta: true
-        desc_un_html: " Introduction to Networking \n Ethernet \n Ethernet is the\
-          \ most common network protocol used in the local area network (LAN) and\n\
-          it is specified by the IEEE 802.3 standard. Ethernet operates in the second\
-          \ layer\nin the OSI model of networking protocols. \n Hosts communicate\
-          \ by exchanging frames in a Ethernet network and each host is uniquely\n\
-          identified by an media access control(MAC) address. In NecTAR Cloud, every\
-          \ virtual\nmachine has a unique MAC address and it is different from the\
-          \ MAC address of the\nhost machine. The MAC address contains 48 bits and\
-          \ looks like 02:03:22:a2:c2:33.\nA host in a Ethernet network can communicate\
-          \ with each other by using the MAC address.\nA host can also sent a frame\
-          \ to all hosts (broadcast) in the same Ethernet network\nby using MAC address\
-          \ ff:ff:ff:ff:ff:ff.  \n When a host receives a Ethernet frame, it checks\
-          \ its destination MAC address and\nsee whether it matches its own MAC address.\
-          \ If it matches, the host receives the\nframe and if it doesn't, the host\
-          \ just simply drop the frame. \n VLAN \n In Ethernet network, every hosts\
-          \ share the same network segment and therefore share\nthe same network traffic.\
-          \ However, it is useful to divide hosts into different groups\nin order\
-          \ to isolate the network traffic and also for better management. \n VLAN\
-          \ is the technology to enable grouping of hosts in a Ethernet network and\
-          \ each\nhost can only see traffic within the group. Specifically, hosts\
+        desc_un_html: " Introduction to Networking \n Network Fundamentals \n Ethernet\
+          \ \n Ethernet is the most common network protocol used in the local area\
+          \ network (LAN) and\nit is specified by the IEEE 802.3 standard. Ethernet\
+          \ operates in the second layer\nin the OSI model of networking protocols.\
+          \ \n Hosts communicate by exchanging frames in a Ethernet network and each\
+          \ host is uniquely\nidentified by an media access control(MAC) address.\
+          \ In NecTAR Cloud, every virtual\nmachine has a unique MAC address and it\
+          \ is different from the MAC address of the\nhost machine. The MAC address\
+          \ contains 48 bits and looks like 02:03:22:a2:c2:33.\nA host in a Ethernet\
+          \ network can communicate with each other by using the MAC address.\nA host\
+          \ can also sent a frame to all hosts (broadcast) in the same Ethernet network\n\
+          by using MAC address ff:ff:ff:ff:ff:ff. \n When a host receives a Ethernet\
+          \ frame, it checks its destination MAC address and\nsee whether it matches\
+          \ its own MAC address. If it matches, the host receives the\nframe and if\
+          \ it doesn't, the host just simply drop the frame. \n VLAN \n In Ethernet\
+          \ network, every hosts share the same network segment and therefore share\n\
+          the same network traffic. However, it is useful to divide hosts into different\
+          \ groups\nin order to isolate the network traffic and also for better management.\
+          \ \n VLAN is the technology to enable grouping of hosts in a Ethernet network\
+          \ and each\nhost can only see traffic within the group. Specifically, hosts\
           \ can be grouped by\nVLANs and they cannot see traffic on different VLANs.In\
           \ NecTAR Cloud, virtual\nmachines can also take advantages to isolate the\
           \ traffic among them. Even the virtual\nmachines are on the same hosts.\
@@ -21184,28 +21181,10 @@
           \ requirements.\nIt can be configured to connect to virtual machines in\
           \ other tenants and\nprovider networks (Internet access) via a Neutron L3\
           \ router. Virtual machines can\nbe attached to provider network directly\
-          \ without the need of tenant network. \n Components \n The Network service\
-          \ consists of a server, a database, and a number of plug-in agents,\nwhich\
-          \ provide various networking functions such as layer 2 (Ethernet and Switching)\n\
-          and layer 3 (IP and Routing) connectivity. It also provides some high level\
-          \ network\nservices such as firewall and virtual private networks. \n Server\
-          \ \n Neutron server provides a web server that supports the Neutroin API\
-          \ and it also\npass the API calls to the Neutron plugins for processing.\
-          \ Plugins to communicate\nwith the agents for processing the It also manages\
-          \ the database to persist metadata.  \n Plugins \n Plugins allow function\
-          \ extension or customization of existing functions in Neutron.\nPeople can\
-          \ develop plugins for providing customized networking functions and resources\n\
-          to virtual machines. \n Agents \n The agents implement specific networking\
-          \ functions and communicate with the Neutron\nserver and the plugins on\
-          \ the server. The example agent is Layer 2 agent that runs\non the compute\
-          \ node (nova). The agent handles all layer 2 networking functions in\nthe\
-          \ OSI model and provide network connectivity to virtual machines.   \n Services\
-          \ \n Neutron provides some pre-existing high level network services such\
-          \ as VPN, firewall\nand load balancer. \n Network node \n It is the host\
-          \ where L3 agent and DHCP agent running. It manages layer 3 networking\n\
-          functions such as router between different VLANS. \n The below shows a Neutron\
-          \ Component Diagram: \n "
-        description: '<h2>Introduction to Networking</h2>
+          \ without the need of tenant network. "
+        description: '<h1>Introduction to Networking</h1>
+
+          <h2>Network Fundamentals</h2>
 
           <h3>Ethernet</h3>
 
@@ -21234,7 +21213,7 @@
           A host can also sent a frame to all hosts (broadcast) in the same Ethernet
           network
 
-          by using MAC address ff:ff:ff:ff:ff:ff. </p>
+          by using MAC address ff:ff:ff:ff:ff:ff.</p>
 
           <p>When a host receives a Ethernet frame, it checks its destination MAC
           address and
@@ -21370,7 +21349,7 @@
 
           for SSH service.</p>
 
-          <h3>Network Components</h3>
+          <h2>Network Components</h2>
 
           <h3>NICs and VNICs</h3>
 
@@ -21392,7 +21371,7 @@
 
           A VNIC is created when a virtual machine is created.</p>
 
-          <h4>Switches</h4>
+          <h3>Switches</h3>
 
           <p>A switch is a network device that connects other network devices such
           as NICs or
@@ -21402,7 +21381,7 @@
 
           connected via the ports. Switches operate at layer 2 in a OSI model.</p>
 
-          <h4>Routers</h4>
+          <h3>Routers</h3>
 
           <p>A router is a network device that connects multiple local networks together.
           When
@@ -21496,71 +21475,7 @@
           provider networks (Internet access) via a Neutron L3 router. Virtual machines
           can
 
-          be attached to provider network directly without the need of tenant network.</p>
-
-          <h3>Components</h3>
-
-          <p>The Network service consists of a server, a database, and a number of
-          plug-in agents,
-
-          which provide various networking functions such as layer 2 (Ethernet and
-          Switching)
-
-          and layer 3 (IP and Routing) connectivity. It also provides some high level
-          network
-
-          services such as firewall and virtual private networks.</p>
-
-          <h3>Server</h3>
-
-          <p>Neutron server provides a web server that supports the Neutroin API and
-          it also
-
-          pass the API calls to the Neutron plugins for processing. Plugins to communicate
-
-          with the agents for processing the It also manages the database to persist
-          metadata. </p>
-
-          <h3>Plugins</h3>
-
-          <p>Plugins allow function extension or customization of existing functions
-          in Neutron.
-
-          People can develop plugins for providing customized networking functions
-          and resources
-
-          to virtual machines.</p>
-
-          <h3>Agents</h3>
-
-          <p>The agents implement specific networking functions and communicate with
-          the Neutron
-
-          server and the plugins on the server. The example agent is Layer 2 agent
-          that runs
-
-          on the compute node (nova). The agent handles all layer 2 networking functions
-          in
-
-          the OSI model and provide network connectivity to virtual machines.  </p>
-
-          <h3>Services</h3>
-
-          <p>Neutron provides some pre-existing high level network services such as
-          VPN, firewall
-
-          and load balancer.</p>
-
-          <h2>Network node</h2>
-
-          <p>It is the host where L3 agent and DHCP agent running. It manages layer
-          3 networking
-
-          functions such as router between different VLANS.</p>
-
-          <p>The below shows a Neutron Component Diagram:</p>
-
-          <p><img alt="network1" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud%20Expert--DOCID19/Networking--DOCID44/images/network1.png?raw=true"></p>'
+          be attached to provider network directly without the need of tenant network.</p>'
         folder:
           category_id: 6000122279
           created_at: '2015-12-01T18:22:33-05:00'
@@ -21571,32 +21486,26 @@
           language_id: 6
           name: Networking
           parent_id: 6000210730
-          position: 8
-          updated_at: '2015-12-01T18:22:33-05:00'
+          position: 6
+          updated_at: '2015-12-07T19:43:55-05:00'
           visibility: 1
         folder_id: 6000210730
-        hits: 0
+        hits: 52
         id: 6000093166
-        int_01: null
-        int_02: null
-        int_03: null
-        language_id: 6
-        modified_at: '2015-12-01T18:22:35-05:00'
+        modified_at: '2016-04-15T02:27:30-04:00'
         modified_by: null
-        outdated: false
-        parent_id: 6000093166
         position: 1
         seo_data: {}
         status: 2
-        string_01: null
-        string_02: null
         tags: []
         thumbs_down: 0
         thumbs_up: 0
         title: Introduction
-        updated_at: '2015-12-01T18:22:35-05:00'
+        updated_at: '2016-04-15T02:27:30-04:00'
         user_id: 6002464727
-  html: '<h2>Introduction to Networking</h2>
+  html: '<h1>Introduction to Networking</h1>
+
+    <h2>Network Fundamentals</h2>
 
     <h3>Ethernet</h3>
 
@@ -21621,7 +21530,7 @@
 
     A host can also sent a frame to all hosts (broadcast) in the same Ethernet network
 
-    by using MAC address ff:ff:ff:ff:ff:ff. </p>
+    by using MAC address ff:ff:ff:ff:ff:ff.</p>
 
     <p>When a host receives a Ethernet frame, it checks its destination MAC address
     and
@@ -21738,7 +21647,7 @@
 
     for SSH service.</p>
 
-    <h3>Network Components</h3>
+    <h2>Network Components</h2>
 
     <h3>NICs and VNICs</h3>
 
@@ -21757,7 +21666,7 @@
 
     A VNIC is created when a virtual machine is created.</p>
 
-    <h4>Switches</h4>
+    <h3>Switches</h3>
 
     <p>A switch is a network device that connects other network devices such as NICs
     or
@@ -21766,7 +21675,7 @@
 
     connected via the ports. Switches operate at layer 2 in a OSI model.</p>
 
-    <h4>Routers</h4>
+    <h3>Routers</h3>
 
     <p>A router is a network device that connects multiple local networks together.
     When
@@ -21846,70 +21755,9 @@
     provider networks (Internet access) via a Neutron L3 router. Virtual machines
     can
 
-    be attached to provider network directly without the need of tenant network.</p>
-
-    <h3>Components</h3>
-
-    <p>The Network service consists of a server, a database, and a number of plug-in
-    agents,
-
-    which provide various networking functions such as layer 2 (Ethernet and Switching)
-
-    and layer 3 (IP and Routing) connectivity. It also provides some high level network
-
-    services such as firewall and virtual private networks.</p>
-
-    <h3>Server</h3>
-
-    <p>Neutron server provides a web server that supports the Neutroin API and it
-    also
-
-    pass the API calls to the Neutron plugins for processing. Plugins to communicate
-
-    with the agents for processing the It also manages the database to persist metadata.
-    </p>
-
-    <h3>Plugins</h3>
-
-    <p>Plugins allow function extension or customization of existing functions in
-    Neutron.
-
-    People can develop plugins for providing customized networking functions and resources
-
-    to virtual machines.</p>
-
-    <h3>Agents</h3>
-
-    <p>The agents implement specific networking functions and communicate with the
-    Neutron
-
-    server and the plugins on the server. The example agent is Layer 2 agent that
-    runs
-
-    on the compute node (nova). The agent handles all layer 2 networking functions
-    in
-
-    the OSI model and provide network connectivity to virtual machines.  </p>
-
-    <h3>Services</h3>
-
-    <p>Neutron provides some pre-existing high level network services such as VPN,
-    firewall
-
-    and load balancer.</p>
-
-    <h2>Network node</h2>
-
-    <p>It is the host where L3 agent and DHCP agent running. It manages layer 3 networking
-
-    functions such as router between different VLANS.</p>
-
-    <p>The below shows a Neutron Component Diagram:</p>
-
-    <p><img alt="network1" src="https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/Cloud
-    Expert--DOCID19/Networking--DOCID44/images/network1.png?raw=true"></p>'
+    be attached to provider network directly without the need of tenant network.</p>'
   parent: 44
-  sha1: cdc5cd37a3ca0b9c9d285716b7d55320585e86ce
+  sha1: 5e5f0f9e4bd039e4390aed73fe7820fe0fb4d261
   title: Introduction
 100:
   freshdesk:
@@ -25642,84 +25490,14 @@
     fd_attributes:
       article:
         art_type: 1
-        bool_01: null
         created_at: '2015-12-07T23:28:52-05:00'
-        datetime_01: null
-        delta: true
-        desc_un_html: " Videos \n There many useful videos about Neutron available\
-          \ on the youtube. You can\ntype in 'Neutron openstack' to search for Neutron\
-          \ videos. \n The below provides some links for useful Neutron videos: \n\
-          \ \n \n Virtual Networking in OpenStack: Neutron 101 \n \n \n Neutron L2\
-          \ and L3 agents: How They Work and How Kilo Improves Them \n \n \n Navigating\
-          \ OpenStack Networking: Nova-networks, Neutron and Advanced Services \n\
-          \ \n \n OpenStack Networking (Neutron) - 2014 Update \n \n \n The Distributed\
-          \ Virtual Router in Neutron: From Juno to Kilo \n \n \n OpenStack Networking\
-          \ Hands-on Lab \n \n \n Documentation \n The following documentations provides\
-          \ reference and guidance information for the\nNeutron API: \n \n \n Neutron\
-          \ Python API reference \n \n \n Neutron Command Line API Reference  \n \n\
-          \ \n Neutron API Reference \n \n \n Neutron wiki \n \n \n The following\
-          \ documentations explain how to configure and run Neutron: \n \n \n OpenStack\
-          \ Networking Guide \n \n \n Operation guide for Networking \n \n \n Security\
-          \ guide for Networking \n \n \n NeCTAR Support \n If you have a problem\
-          \ and you cannot resolve it, you can always go to NecTAR\nHelpDesk to log\
-          \ a support ticket and the NeCTAR support staff are\nmore than happy to\
-          \ help you. "
-        description: '<h2>Videos</h2>
-
-          <p>There many useful videos about Neutron available on the <a href="https://www.youtube.com/">youtube</a>.
-          You can
-
-          type in ''Neutron openstack'' to search for Neutron videos.</p>
-
-          <p>The below provides some links for useful Neutron videos:</p>
-
-          <ul>
-
-          <li>
-
-          <p><a href="https://www.youtube.com/watch?v=Li0Ed1VEziQ">Virtual Networking
-          in OpenStack: Neutron 101</a></p>
-
-          </li>
-
-          <li>
-
-          <p><a href="https://www.youtube.com/watch?v=uNAkDfkTGBw">Neutron L2 and
-          L3 agents: How They Work and How Kilo Improves Them</a></p>
-
-          </li>
-
-          <li>
-
-          <p><a href="https://www.youtube.com/watch?v=YLo9_t-77Kg">Navigating OpenStack
-          Networking: Nova-networks, Neutron and Advanced Services</a></p>
-
-          </li>
-
-          <li>
-
-          <p><a href="https://www.youtube.com/watch?v=4CKSm3bwv78&amp;list=PLbsn6UCyoyknyaeo2EVyvqCNeg_gt2-wk">OpenStack
-          Networking (Neutron) - 2014 Update</a></p>
-
-          </li>
-
-          <li>
-
-          <p><a href="https://www.youtube.com/watch?v=zEyBJOcqfGw">The Distributed
-          Virtual Router in Neutron: From Juno to Kilo</a></p>
-
-          </li>
-
-          <li>
-
-          <p><a href="https://www.youtube.com/watch?v=wc5ymrropjU">OpenStack Networking
-          Hands-on Lab</a></p>
-
-          </li>
-
-          </ul>
-
-          <h2>Documentation</h2>
+        desc_un_html: " Documentation \n The following documentations provides reference\
+          \ and guidance information for the\nNeutron API: \n \n \n Neutron Python\
+          \ API reference \n \n \n Neutron Command Line API Reference \n \n \n Neutron\
+          \ API Reference \n \n \n NeCTAR Support \n If you have a problem and you\
+          \ cannot resolve it, you can always go to NecTAR\nHelpDesk to log a support\
+          \ ticket and the NeCTAR support staff are\nmore than happy to help you. "
+        description: '<h1>Documentation</h1>
 
           <p>The following documentations provides reference and guidance information
           for the
@@ -25738,7 +25516,7 @@
           <li>
 
           <p><a href="http://docs.openstack.org/cli-reference/content/neutronclient_commands.html">Neutron
-          Command Line API Reference</a> </p>
+          Command Line API Reference</a></p>
 
           </li>
 
@@ -25746,39 +25524,6 @@
 
           <p><a href="http://developer.openstack.org/api-ref-networking-v2.html">Neutron
           API Reference</a></p>
-
-          </li>
-
-          <li>
-
-          <p><a href="https://wiki.openstack.org/wiki/Neutron">Neutron wiki</a></p>
-
-          </li>
-
-          </ul>
-
-          <p>The following documentations explain how to configure and run Neutron:</p>
-
-          <ul>
-
-          <li>
-
-          <p><a href="http://docs.openstack.org/networking-guide/">OpenStack Networking
-          Guide</a></p>
-
-          </li>
-
-          <li>
-
-          <p><a href="http://docs.openstack.org/openstack-ops/content/network_troubleshooting.html">Operation
-          guide for Networking</a></p>
-
-          </li>
-
-          <li>
-
-          <p><a href="http://docs.openstack.org/ha-guide/networking-ha.html">Security
-          guide for Networking</a></p>
 
           </li>
 
@@ -25807,83 +25552,20 @@
           updated_at: '2015-12-07T19:43:55-05:00'
           visibility: 1
         folder_id: 6000210730
-        hits: 0
+        hits: 16
         id: 6000095317
-        int_01: null
-        int_02: null
-        int_03: null
-        language_id: 6
-        modified_at: '2015-12-07T23:28:51-05:00'
+        modified_at: '2016-04-15T02:27:29-04:00'
         modified_by: null
-        outdated: false
-        parent_id: 6000095317
-        position: 4
+        position: 5
         seo_data: {}
         status: 2
-        string_01: null
-        string_02: null
         tags: []
         thumbs_down: 0
         thumbs_up: 0
         title: More Info
-        updated_at: '2015-12-07T23:28:52-05:00'
+        updated_at: '2016-04-15T02:27:29-04:00'
         user_id: 6002464727
-  html: '<h2>Videos</h2>
-
-    <p>There many useful videos about Neutron available on the <a href="https://www.youtube.com/">youtube</a>.
-    You can
-
-    type in ''Neutron openstack'' to search for Neutron videos.</p>
-
-    <p>The below provides some links for useful Neutron videos:</p>
-
-    <ul>
-
-    <li>
-
-    <p><a href="https://www.youtube.com/watch?v=Li0Ed1VEziQ">Virtual Networking in
-    OpenStack: Neutron 101</a></p>
-
-    </li>
-
-    <li>
-
-    <p><a href="https://www.youtube.com/watch?v=uNAkDfkTGBw">Neutron L2 and L3 agents:
-    How They Work and How Kilo Improves Them</a></p>
-
-    </li>
-
-    <li>
-
-    <p><a href="https://www.youtube.com/watch?v=YLo9_t-77Kg">Navigating OpenStack
-    Networking: Nova-networks, Neutron and Advanced Services</a></p>
-
-    </li>
-
-    <li>
-
-    <p><a href="https://www.youtube.com/watch?v=4CKSm3bwv78&amp;list=PLbsn6UCyoyknyaeo2EVyvqCNeg_gt2-wk">OpenStack
-    Networking (Neutron) - 2014 Update</a></p>
-
-    </li>
-
-    <li>
-
-    <p><a href="https://www.youtube.com/watch?v=zEyBJOcqfGw">The Distributed Virtual
-    Router in Neutron: From Juno to Kilo</a></p>
-
-    </li>
-
-    <li>
-
-    <p><a href="https://www.youtube.com/watch?v=wc5ymrropjU">OpenStack Networking
-    Hands-on Lab</a></p>
-
-    </li>
-
-    </ul>
-
-    <h2>Documentation</h2>
+  html: '<h1>Documentation</h1>
 
     <p>The following documentations provides reference and guidance information for
     the
@@ -25902,7 +25584,7 @@
     <li>
 
     <p><a href="http://docs.openstack.org/cli-reference/content/neutronclient_commands.html">Neutron
-    Command Line API Reference</a> </p>
+    Command Line API Reference</a></p>
 
     </li>
 
@@ -25910,39 +25592,6 @@
 
     <p><a href="http://developer.openstack.org/api-ref-networking-v2.html">Neutron
     API Reference</a></p>
-
-    </li>
-
-    <li>
-
-    <p><a href="https://wiki.openstack.org/wiki/Neutron">Neutron wiki</a></p>
-
-    </li>
-
-    </ul>
-
-    <p>The following documentations explain how to configure and run Neutron:</p>
-
-    <ul>
-
-    <li>
-
-    <p><a href="http://docs.openstack.org/networking-guide/">OpenStack Networking
-    Guide</a></p>
-
-    </li>
-
-    <li>
-
-    <p><a href="http://docs.openstack.org/openstack-ops/content/network_troubleshooting.html">Operation
-    guide for Networking</a></p>
-
-    </li>
-
-    <li>
-
-    <p><a href="http://docs.openstack.org/ha-guide/networking-ha.html">Security guide
-    for Networking</a></p>
 
     </li>
 
@@ -25957,7 +25606,7 @@
 
     more than happy to help you.</p>'
   parent: 44
-  sha1: e6564c6a49547b3df1e2512dd80cc6a7b5288195
+  sha1: 5ee296e2cd83cb92912c7e804069bf6b39a24a95
   title: More Info
 106:
   freshdesk:
