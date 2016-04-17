@@ -27070,199 +27070,393 @@
       article:
         art_type: 1
         created_at: '2016-01-19T18:31:18-05:00'
-        desc_un_html: " The NeCTAR Image Catalog \n Intro \n Instances on the Research\
-          \ Cloud are created from Images stored in the\nOpenStack Image service known\
-          \ as Glance. Available images can be viewed on\nthe Research Cloud Dashboard\
-          \ or via the API clients (example\nbelow). Images include items uploaded\
-          \ to and registered in Glance from\nexternal sources (e.g., these might\
-          \ be published by 3rd parties or built\nusing custom processes and tools)\
-          \ and snapshots created from existing\ninstances (see the Cloud Storage\
-          \ doco for more info). \n Categories of Images \n There are currently four\
-          \ broad categories of images: Project, NeCTAR official,\nShared with Me,\
-          \ and Public. \n Project \n These are images created by a user within a\
-          \ Research Cloud project that you\nare a member of (snapshots of instances\
-          \ in your project will be visible in\nthis category). \n NeCTAR Official\
+        desc_un_html: " The NeCTAR Image Catalog \n \n Contents \n \n What are images?\
+          \ \n \nCategories of Images \n Project \n NeCTAR Official \n Shared with\
+          \ me \n Public \n Future Categories \n \n \n \nAdvanced Image Management\
+          \ \n Command Line / API Cients \n Creating Images \n Sharing Images \n \n\
+          \ \n \n \n What are Images \n Instances on the Research Cloud are created\
+          \ from images stored in the\nOpenStack Image service known as Glance. These\
+          \ are typically some form\nof virtual machine image file (e.g. qcow, vmdk)\
+          \ or a raw disk image. These\nimages are used by the Research Cloud middleware,\
+          \ e.g., in a typical case\nwhen you boot an instance the image you have\
+          \ selected is downloaded via\nGlance to the compute host that your instance\
+          \ has been scheduled to and\nis then configured as the backing disk for\
+          \ the primary/root ephemeral\ndisk of your new instance. \n Available images\
+          \ can be viewed on\nthe Research Cloud Dashboard or via the API clients\
+          \ (example\nbelow). Images include items uploaded to and registered in Glance\
+          \ from\nexternal sources, e.g., these might be published by 3rd parties\
+          \ or built\nusing custom processes and tools. Snapshots created from existing\
+          \ instances\nare also considered images. \n Contents \n \n Categories of\
+          \ Images \n There are currently four broad categories of images: Project,\
+          \ NeCTAR official,\nShared with Me, and Public. \n \n Project \n These are\
+          \ images created by a user within a Research Cloud project that you\nare\
+          \ a member of. Snapshots of instances (see Cloud Storage for more\ninfo)\
+          \ in your project will be visible in this category. \n \n NeCTAR Official\
           \ \n These images are built and maintained by NeCTAR Core Services. They\
           \ are\nupdated on a semi-regular basis or in response to security advisories\
-          \ (even\nthough they are updated regularly you should always check   and\
-          \ apply updates\nafter creating a new instance). The NeCTAR images include\
-          \ integration software\nsuch as cloud-init and any relevant settings particular\
-          \ to the NeCTAR\nResearch Cloud that may be required for the OS in question.\
-          \ They also undergo\na light-weight testing process before being published\
-          \ or updated. \n Currently NeCTAR Core Services maintains and publishes\
-          \ various versions of\nthe follow Linux distributions (other commercial\
-          \ OSes such as Windows are\nnot able to be distributed publicly at this\
-          \ stage due to licensing\nrestrictions): \n \n Ubuntu \n Debian \n Fedora\
-          \ \n openSUSE \n CentOS \n CirrOS \n \n Bug reports and contributions to\
-          \ the NeCTAR images are welcomed. The current\nprocess uses Packer to automate\
-          \ the build process with configuration and\nscripts stored in the nectar-images\
+          \ (even\nthough they are updated regularly you should always check and apply\
+          \ updates\nafter creating a new instance). The NeCTAR images include integration\
+          \ software\nsuch as cloud-init and any relevant settings particular to the\
+          \ NeCTAR\nResearch Cloud that may be required for the OS in question. They\
+          \ also undergo\na light-weight testing process before being published or\
+          \ updated. \n Currently NeCTAR Core Services maintains and publishes various\
+          \ versions of\nthe follow Linux distributions (other commercial OSes such\
+          \ as Windows are\nnot able to be distributed publicly at this stage due\
+          \ to licensing\nrestrictions): \n \n Ubuntu \n Debian \n Fedora \n openSUSE\
+          \ \n CentOS \n \n Each of these images have a unique unprivileged user account\
+          \ you'll need to\nlogin with to gain access via SSH: \n \n For Ubuntu images,\
+          \ use ubuntu. \n For Debian images, use debian. \n For Fedora, openSUSE\
+          \ and CentOS, use ec2-user. \n \n Bug reports and contributions to the NeCTAR\
+          \ images are welcomed. The current\nprocess uses Packer to automate the\
+          \ build process with configuration and\nscripts stored in the nectar-images\
           \ GitHub project. Bugs can be reported\ndirectly to NeCTAR support or on\
-          \ GitHub. \n Shared with Me \n These are images owned by another Research\
-          \ Cloud project that you are not a\nmember of that have been explicitly\
-          \ shared with your project. Sharing images\nis a useful mechanism for collaboration\
-          \ without making images public, for\ninformation of how to share images\
-          \ see the Sharing Images section below. \n Public \n Images can be made\
-          \ public at any time. A public image is visible and usable\n(including the\
-          \ ability to boot an instance or download locally) by all users\nof the\
-          \ Research Cloud, so think carefully before making an image public\n(especially\
-          \ if it is a snapshot that may contain sensitive data). \n There is currently\
-          \ no quality assurance for public images, NeCTAR Core\nServices and Support\
+          \ GitHub. \n Notes \n The NeCTAR CentOS 5 image is not currently updated,\
+          \ though the CentOS project\nstill provides software updates. \n \n Shared\
+          \ with Me \n These are images owned by another Research Cloud project that\
+          \ you are not a\nmember of that have been explicitly shared with your project.\
+          \ Sharing images\nis a useful mechanism for collaboration without making\
+          \ images public, for\ninformation of how to share images see the Sharing\
+          \ Images section below. \n \n Public \n Images can be made public at any\
+          \ time. A public image is visible and usable\n(including the ability to\
+          \ boot an instance or download locally) by all users\nof the Research Cloud,\
+          \ so think carefully before making an image public\n(especially if it is\
+          \ a snapshot that may contain sensitive data). \n There is currently no\
+          \ quality assurance for public images, NeCTAR Core\nServices and Support\
           \ will not be able to provide assistance with these images.\nFurthermore,\
           \ public images are often outdated and may include software and/or\nservices\
-          \ with serious unpatched security vulnerabilities. \n Future Categories\
+          \ with serious unpatched security vulnerabilities. \n \n Future Categories\
           \ \n There is ongoing work to improve the NeCTAR Image Catalog to provide\
           \ users\nwith a higher level of quality assurance with respect to available\
           \ images.\nThis will also make it easier for developers and service providers\
-          \ to\ndisambiguate curated images from the general Public list. \n Advanced\
-          \ Image Management \n Command Line / API Cients \n glance and openstack\
-          \ cli examples of listing and filtering \n Creating Images \n Link to Glance\
-          \ docs \n Sharing Images \n Example sharing a snapshot and notes about privacy. "
-        description: '<h1>The NeCTAR Image Catalog</h1>
-
-          <h2>Intro</h2>
-
-          <p><a href="https://support.nectar.org.au/solution/articles/6000055376-launching-virtual-machines">Instances</a>
-          on the Research Cloud are created from <em>Images</em> stored in the
-
-          OpenStack Image service known as <a href="https://wiki.openstack.org/wiki/Glance">Glance</a>.
-          Available images can be viewed on
-
-          the Research Cloud <a href="https://dashboard.rc.nectar.org.au/project/images/">Dashboard</a>
-          or via the API clients (example
-
-          below). Images include items uploaded to and registered in Glance from
-
-          external sources (e.g., these might be published by 3rd parties or built
-
-          using custom processes and tools) and snapshots created from existing
-
-          instances (see the <a href="https://support.nectar.org.au/solution/articles/6000055382-introduction-to-cloud-storage">Cloud
-          Storage</a> doco for more info).</p>
-
-          <h2>Categories of Images</h2>
-
-          <p>There are currently four broad categories of images: Project, NeCTAR
-          official,
-
-          Shared with Me, and Public.</p>
-
-          <h3>Project</h3>
-
-          <p>These are images created by a user within a Research Cloud project that
-          you
-
-          are a member of (snapshots of instances in your project will be visible
-          in
-
-          this category).</p>
-
-          <h3>NeCTAR Official</h3>
-
-          <p>These images are built and maintained by NeCTAR Core Services. They are
-
-          updated on a semi-regular basis or in response to security advisories (even
-
-          though they are updated regularly you should always check   and apply updates
-
-          after creating a new instance). The NeCTAR images include integration software
-
-          such as <a href="https://cloudinit.readthedocs.org">cloud-init</a> and any
-          relevant settings particular to the NeCTAR
-
-          Research Cloud that may be required for the OS in question. They also undergo
-
-          a light-weight testing process before being published or updated.</p>
-
-          <p>Currently NeCTAR Core Services maintains and publishes various versions
-          of
-
-          the follow Linux distributions (other commercial OSes such as Windows are
-
-          not able to be distributed publicly at this stage due to licensing
-
-          restrictions):</p>
-
-          <ul>
-
-          <li>Ubuntu</li>
-
-          <li>Debian</li>
-
-          <li>Fedora</li>
-
-          <li>openSUSE</li>
-
-          <li>CentOS</li>
-
-          <li>CirrOS</li>
-
-          </ul>
-
-          <p>Bug reports and contributions to the NeCTAR images are welcomed. The
-          current
-
-          process uses <a href="https://www.packer.io/">Packer</a> to automate the
-          build process with configuration and
-
-          scripts stored in the <a href="https://github.com/NeCTAR-RC/nectar-images">nectar-images
-          GitHub project</a>. Bugs can be reported
-
-          directly to NeCTAR support or on GitHub.</p>
-
-          <h3>Shared with Me</h3>
-
-          <p>These are images owned by another Research Cloud project that you are
-          not a
-
-          member of that have been explicitly shared with your project. Sharing images
-
-          is a useful mechanism for collaboration without making images public, for
-
-          information of how to share images see the Sharing Images section below.</p>
-
-          <h3>Public</h3>
-
-          <p>Images can be made public at any time. A public image is visible and
-          usable
-
-          (including the ability to boot an instance or download locally) by all users
-
-          of the Research Cloud, so think carefully before making an image public
-
-          (especially if it is a snapshot that may contain sensitive data).</p>
-
-          <p>There is currently no quality assurance for public images, NeCTAR Core
-
-          Services and Support will not be able to provide assistance with these images.
-
-          Furthermore, public images are often outdated and may include software and/or
-
-          services with serious unpatched security vulnerabilities.</p>
-
-          <h3>Future Categories</h3>
-
-          <p>There is ongoing work to improve the NeCTAR Image Catalog to provide
-          users
-
-          with a higher level of quality assurance with respect to available images.
-
-          This will also make it easier for developers and service providers to
-
-          disambiguate curated images from the general Public list.</p>
-
-          <h2>Advanced Image Management</h2>
-
-          <h3>Command Line / API Cients</h3>
-
-          <p>glance and openstack cli examples of listing and filtering</p>
-
-          <h3>Creating Images</h3>
-
-          <p>Link to Glance docs</p>
-
-          <h3>Sharing Images</h3>
-
-          <p>Example sharing a snapshot and notes about privacy.</p>'
+          \ to\ndisambiguate curated images from the general Public list. \n Contents\
+          \ \n \n Advanced Image Management \n \n Command Line / API Cients \n The\
+          \ python-glanceclient and python-openstackclient command line tools are\n\
+          API clients for Glance and cover a greater Glance API feature set than\n\
+          is available through the\ndashboard. If you wish to upload, edit properties\
+          \ of, or share your own images\nthen you will need to use one of these tools.\
+          \ These examples assume some\nfamiliarity with use of the command line and\
+          \ that you have loaded the openrc\nenvironment file for the project of interest\
+          \ (specific NeCTAR instructions can\nbe found on the API page). \n The following\
+          \ command uses python-openstackclient to list all NeCTAR\nOfficial images\
+          \ (these are published under the NeCTAR-Images project,\ntenant/project\
+          \ ID: 28eadf5ad64b42a4929b2fb7df99275c): \n $ openstack image list --property\
+          \ owner=28eadf5ad64b42a4929b2fb7df99275c\n+--------------------------------------+-------------------------------------+--------+\n\
+          | ID                                   | Name                          \
+          \      | Status |\n+--------------------------------------+-------------------------------------+--------+\n\
+          | 9a2a3ceb-f4b2-40b8-8e05-831a355fbb23 | NeCTAR CentOS 5.11 x86_64     \
+          \      | active |\n| 89802fa7-670f-4b24-8011-13b69ff9dcb4 | NeCTAR CentOS\
+          \ 6 x86_64              | active |\n| 7bcd0264-5169-4a95-920b-5e5bd76790a0\
+          \ | NeCTAR CentOS 7 x86_64              | active |\n| a8749715-9c4b-475d-b4ea-db3e3a619485\
+          \ | NeCTAR Debian 6 x86_64 (Squeeze)    | active |\n| 1c022d2a-3e15-49a6-815e-f7cdcbce6340\
+          \ | NeCTAR Debian 7 (Wheezy) amd64      | active |\n| e9ffe176-acac-492c-b309-55431a1b197f\
+          \ | NeCTAR Debian 8 (Jessie) amd64      | active |\n| db354243-aba2-4831-81c7-a155b9089291\
+          \ | NeCTAR Fedora 21 x86_64             | active |\n| 6e24b152-00b3-4b39-a0ed-0577c2d3d8ba\
+          \ | NeCTAR Fedora 22 x86_64             | active |\n| 279c0d8c-d8a3-4b37-b3d8-0b87161139e2\
+          \ | NeCTAR Fedora 23 x86_64             | active |\n| f4f74915-e994-4360-a4bd-27d384433cd7\
+          \ | NeCTAR openSUSE 13.2 x86_64         | active |\n| a3d5085f-3866-4502-9278-aa41d6ce6b9c\
+          \ | NeCTAR openSUSE Leap 42.1 x86_64    | active |\n| 73cefbc1-15af-4411-95f2-23e66cc23225\
+          \ | NeCTAR Scientific Linux 6 x86_64    | active |\n| c395c528-fb43-4066-9536-cf5c5efe806d\
+          \ | NeCTAR Ubuntu 12.04 (Precise) amd64 | active |\n| e9f0323e-9383-4dc9-a2ee-846ef8d35ee7\
+          \ | NeCTAR Ubuntu 14.04 (Trusty) amd64  | active |\n| 81f6b78f-6d51-4de9-a464-91d47543d4ba\
+          \ | NeCTAR Ubuntu 15.04 (Vivid) amd64   | active |\n| 31ccebc4-ae2d-4f6d-8e3a-57b5bce533be\
+          \ | NeCTAR Ubuntu 15.10 (Wily) amd64    | active |\n+--------------------------------------+-------------------------------------+--------+\
+          \ \n The equivalent python-glanceclient command: \n $ glance image-list\
+          \ --owner 28eadf5ad64b42a4929b2fb7df99275c\n... \n Similarly, you can list\
+          \ all images owned by a project you are a member of: \n $ openstack image\
+          \ list --property owner=$OS_TENANT_ID \n \n Creating Images \n NeCTAR Research\
+          \ Cloud users can use any of the NeCTAR Official or other Public\nimages,\
+          \ but in some cases you may want to create and upload your own images\n\
+          to use on the Research Cloud. This may be useful if you have a preference\
+          \ for a\ndifferent OS or because you are using an image building tool to\
+          \ help automate\ncreation of an image for a software stack or service of\
+          \ interest. \n The OpenStack project's [image-guide] is a great source of\
+          \ relevant\ninformation about both manually building your own images or\
+          \ using tools to\nhelp automate the build process. The examples there will\
+          \ produce images that\nwork with the NeCTAR Research Cloud. The image guide's\
+          \ get images section\nprovides pointers to various external (typically distro\
+          \ maintained) image\nsources, and the recently launched OpenStack [Community\
+          \ App Catalog]\nis another useful source of images (provided by an official\
+          \ OpenStack\nfoundation project) including both basic OS templates and more.\
+          \ \n Once you have an image, e.g., a qcow2 file, you'll need to upload the\
+          \ image\nto NeCTAR's Glance image service. It may not be immediately obvious,\
+          \ but it is\nalso possible to create an entry in the image catalog without\
+          \ uploading a\nfile, e.g., you can create a placeholder image record and\
+          \ then update its\ndetails later. The example below gives a quick overview\
+          \ of image creation: \n Get or create image of interest: \n $ wget http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img\n\
+          ... \n Confirm the file type: \n $ file cirros-0.3.4-x86_64-disk.img\ncirros-0.3.4-x86_64-disk.img:\
+          \ QEMU QCOW Image (v2), 41126400 bytes \n Upload to NeCTAR Glance image\
+          \ service using python-openstackclient \n $ openstack image create --disk-format\
+          \ qcow2 --file ./cirros-0.3.4-x86_64-disk.img cirros-0.3.4\n+------------------+--------------------------------------+\n\
+          | Field            | Value                                |\n+------------------+--------------------------------------+\n\
+          | checksum         | ee1eca47dc88f4879d8a229cc70a07c6     |\n| container_format\
+          \ | bare                                 |\n| created_at       | 2016-04-02T03:37:22.000000\
+          \           |\n| deleted          | False                              \
+          \  |\n| deleted_at       | None                                 |\n| disk_format\
+          \      | qcow2                                |\n| id               | a8d7b562-a5fd-4e4b-b631-d6a528afe9da\
+          \ |\n| is_public        | False                                |\n| min_disk\
+          \         | 0                                    |\n| min_ram          |\
+          \ 0                                    |\n| name             | cirros-0.3.4\
+          \                         |\n| owner            | b53d0479d88f40ea99cb5249ae01228b\
+          \     |\n| properties       |                                      |\n|\
+          \ protected        | False                                |\n| size    \
+          \         | 13287936                             |\n| status           |\
+          \ active                               |\n| updated_at       | 2016-04-02T03:37:27.000000\
+          \           |\n| virtual_size     | None                               \
+          \  |\n+------------------+--------------------------------------+ \n Upload\
+          \ to NeCTAR Glance image service using python-glanceclient: \n $ glance\
+          \ image-create --disk-format qcow2 --container-format bare --file ./cirros-0.3.4-x86_64-disk.img\
+          \ --progress --name cirros-0.3.4\n... \n Confirm the checksum: \n $ md5sum\
+          \ cirros-0.3.4-x86_64-disk.img\nee1eca47dc88f4879d8a229cc70a07c6  cirros-0.3.4-x86_64-disk.img\
+          \ \n Refer to the OpenStack user guide create image documentation for further\n\
+          details and check the in-built help text in your client, e.g.: \n ```\n\
+          $ openstack image create -h\n...\nCreate/upload an image \n positional arguments:\n\
+          \            New image name \n optional arguments:\n  -h, --help       \
+          \     show this help message and exit\n  --id              Image ID to reserve\n\
+          \  --container-format \n                        Image container format (default:\
+          \ bare)\n  --disk-format \n                        Image disk format (default:\
+          \ raw)\n  --min-disk   Minimum disk size needed to boot image, in gigabytes\n\
+          \  --min-ram     Minimum RAM size needed to boot image, in megabytes\n \
+          \ --file          Upload image from local file\n  --volume      Create image\
+          \ from a volume\n  --force               Force image creation if volume\
+          \ is in use (only\n                        meaningful with --volume)\n \
+          \ --protected           Prevent image from being deleted\n  --unprotected\
+          \         Allow image to be deleted (default)\n  --public              Image\
+          \ is accessible to the public\n  --private             Image is inaccessible\
+          \ to the public (default)\n  --property \n                        Set a\
+          \ property on this image (repeat option to set\n                       \
+          \ multiple properties)\n  --tag            Set a tag on this image (repeat\
+          \ option to set multiple\n                        tags)\n  --project   \
+          \ Set an alternate project on this image (name or ID)\n  --project-domain\
+          \ \n                        Domain the project belongs to (name or ID).\
+          \ This can\n                        be used in case collisions between project\
+          \ names\n                        exist.\n``` \n \n Sharing Images \n The\
+          \ image service allows you to share images owned by and private to your\n\
+          project with other NeCTAR Research Cloud projects without making them public.\n\
+          This might be used, e.g., to share a snapshot of an instance that you have\n\
+          preconfigured for another user or project. However, if you do share instance\n\
+          snapshots you should be mindful that you are sharing the whole primary disk\n\
+          state of the instance, this might include old logs, passwords, history,\
+          \ etc. \n This example uses python-glanceclient to list and identify the\
+          \ ID of a\nparticular snapshot in our project and then share that snapshot\
+          \ with a\ncollaborator's project (it will then be visible to them as a [shared]\
+          \ image): \n List snapshots: \n $ glance image-list --property-filter owner=$OS_TENANT_ID\
+          \ --property-filter image_type='snapshot'\n+--------------------------------------+------------------------------------+\n\
+          | ID                                   | Name                          \
+          \     |\n+--------------------------------------+------------------------------------+\n\
+          | 8c43f74e-caf3-405c-aaae-efb14603947a | CoolService v4 r2             \
+          \     |\n| 936ccc3f-6bdf-fd28-98e9-78d00618c13f | CoolService worker test\
+          \            |\n+--------------------------------------+------------------------------------+\
+          \ \n Share a snapshot: \n ```\n$ glance help member-create\nusage: glance\
+          \ member-create   \n Create member for a given image. \n Positional arguments:\n\
+          \     Image with which to create member.\n    Tenant to add as member. \n\
+          \ $ glance member-create 8c43f74e-caf3-405c-aaae-efb14603947a \n``` \n Contents "
+        description: "<h1>The NeCTAR Image Catalog</h1>\n<p><a name=\"toc\"></a></p>\n\
+          <h2>Contents</h2>\n<ul>\n<li><a href=\"#what\">What are images?</a></li>\n\
+          <li>\n<a href=\"#categories\">Categories of Images</a><ul>\n<li><a href=\"\
+          #project\">Project</a></li>\n<li><a href=\"#nectar\">NeCTAR Official</a></li>\n\
+          <li><a href=\"#shared\">Shared with me</a></li>\n<li><a href=\"#public\"\
+          >Public</a></li>\n<li><a href=\"#future\">Future Categories</a></li>\n</ul>\n\
+          </li>\n<li>\n<a href=\"#advanced\">Advanced Image Management</a><ul>\n<li><a\
+          \ href=\"#cli\">Command Line / API Cients</a></li>\n<li><a href=\"#creating\"\
+          >Creating Images</a></li>\n<li><a href=\"#sharing\">Sharing Images</a></li>\n\
+          </ul>\n</li>\n</ul>\n<p><a name=\"what\"></a></p>\n<h2>What are Images</h2>\n\
+          <p><a href=\"https://support.nectar.org.au/solution/articles/6000055376-launching-virtual-machines\"\
+          >Instances</a> on the Research Cloud are created from images stored in the\n\
+          OpenStack Image service known as <a href=\"https://wiki.openstack.org/wiki/Glance\"\
+          >Glance</a>. These are typically some form\nof virtual machine image file\
+          \ (e.g. qcow, vmdk) or a raw disk image. These\nimages are used by the Research\
+          \ Cloud middleware, e.g., in a typical case\nwhen you boot an instance the\
+          \ image you have selected is downloaded via\nGlance to the compute host\
+          \ that your instance has been scheduled to and\nis then configured as the\
+          \ backing disk for the primary/root ephemeral\ndisk of your new instance.</p>\n\
+          <p>Available images can be viewed on\nthe Research Cloud <a href=\"https://dashboard.rc.nectar.org.au/project/images/\"\
+          >Dashboard</a> or via the API clients (example\nbelow). Images include items\
+          \ uploaded to and registered in Glance from\nexternal sources, e.g., these\
+          \ might be published by 3rd parties or built\nusing custom processes and\
+          \ tools. Snapshots created from existing instances\nare also considered\
+          \ images.</p>\n<p><a href=\"#toc\">Contents</a></p>\n<p><a name=\"categories\"\
+          ></a></p>\n<h2>Categories of Images</h2>\n<p>There are currently four broad\
+          \ categories of images: Project, NeCTAR official,\nShared with Me, and Public.</p>\n\
+          <p><a name=\"project\"></a></p>\n<h3>Project</h3>\n<p>These are images created\
+          \ by a user within a Research Cloud project that you\nare a member of. Snapshots\
+          \ of instances (see <a href=\"https://support.nectar.org.au/solution/articles/6000055382-introduction-to-cloud-storage\"\
+          >Cloud Storage</a> for more\ninfo) in your project will be visible in this\
+          \ category.</p>\n<p><a name=\"nectar\"></a></p>\n<h3>NeCTAR Official</h3>\n\
+          <p>These images are built and maintained by NeCTAR Core Services. They are\n\
+          updated on a semi-regular basis or in response to security advisories (even\n\
+          though they are updated regularly you should always check and apply updates\n\
+          after creating a new instance). The NeCTAR images include integration software\n\
+          such as <a href=\"https://cloudinit.readthedocs.org\">cloud-init</a> and\
+          \ any relevant settings particular to the NeCTAR\nResearch Cloud that may\
+          \ be required for the OS in question. They also undergo\na light-weight\
+          \ testing process before being published or updated.</p>\n<p>Currently NeCTAR\
+          \ Core Services maintains and publishes various versions of\nthe follow\
+          \ Linux distributions (other commercial OSes such as Windows are\nnot able\
+          \ to be distributed publicly at this stage due to licensing\nrestrictions):</p>\n\
+          <ul>\n<li>Ubuntu</li>\n<li>Debian</li>\n<li>Fedora</li>\n<li>openSUSE</li>\n\
+          <li>CentOS</li>\n</ul>\n<p>Each of these images have a unique unprivileged\
+          \ user account you'll need to\nlogin with to gain access via SSH:</p>\n\
+          <ul>\n<li>For Ubuntu images, use <strong>ubuntu</strong>.</li>\n<li>For\
+          \ Debian images, use <strong>debian</strong>.</li>\n<li>For Fedora, openSUSE\
+          \ and CentOS, use <strong>ec2-user</strong>.</li>\n</ul>\n<p>Bug reports\
+          \ and contributions to the NeCTAR images are welcomed. The current\nprocess\
+          \ uses <a href=\"https://www.packer.io/\">Packer</a> to automate the build\
+          \ process with configuration and\nscripts stored in the <a href=\"https://github.com/NeCTAR-RC/nectar-images\"\
+          >nectar-images GitHub project</a>. Bugs can be reported\ndirectly to NeCTAR\
+          \ support or on GitHub.</p>\n<h4>Notes</h4>\n<p>The NeCTAR CentOS 5 image\
+          \ is not currently updated, though the CentOS project\nstill provides software\
+          \ updates.</p>\n<p><a name=\"shared\"></a></p>\n<h3>Shared with Me</h3>\n\
+          <p>These are images owned by another Research Cloud project that you are\
+          \ not a\nmember of that have been explicitly shared with your project. Sharing\
+          \ images\nis a useful mechanism for collaboration without making images\
+          \ public, for\ninformation of how to share images see the Sharing Images\
+          \ section below.</p>\n<p><a name=\"public\"></a></p>\n<h3>Public</h3>\n\
+          <p>Images can be made public at any time. A public image is visible and\
+          \ usable\n(including the ability to boot an instance or download locally)\
+          \ by all users\nof the Research Cloud, so think carefully before making\
+          \ an image public\n(especially if it is a snapshot that may contain sensitive\
+          \ data).</p>\n<p>There is currently no quality assurance for public images,\
+          \ NeCTAR Core\nServices and Support will not be able to provide assistance\
+          \ with these images.\nFurthermore, public images are often outdated and\
+          \ may include software and/or\nservices with serious unpatched security\
+          \ vulnerabilities.</p>\n<p><a name=\"future\"></a></p>\n<h3>Future Categories</h3>\n\
+          <p>There is ongoing work to improve the NeCTAR Image Catalog to provide\
+          \ users\nwith a higher level of quality assurance with respect to available\
+          \ images.\nThis will also make it easier for developers and service providers\
+          \ to\ndisambiguate curated images from the general Public list.</p>\n<p><a\
+          \ href=\"#toc\">Contents</a></p>\n<p><a name=\"advanced\"></a></p>\n<h2>Advanced\
+          \ Image Management</h2>\n<p><a name=\"cli\"></a></p>\n<h3>Command Line /\
+          \ API Cients</h3>\n<p>The python-glanceclient and python-openstackclient\
+          \ command line tools are\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000078065-api\"\
+          >API</a> clients for Glance and cover a greater Glance API feature set than\n\
+          is available through the\ndashboard. If you wish to upload, edit properties\
+          \ of, or share your own images\nthen you will need to use one of these tools.\
+          \ These examples assume some\nfamiliarity with use of the command line and\
+          \ that you have loaded the <a href=\"http://docs.openstack.org/user-guide/common/cli_set_environment_variables_using_openstack_rc.html\"\
+          >openrc</a>\nenvironment file for the project of interest (specific NeCTAR\
+          \ instructions can\nbe found on the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000078065-api\"\
+          >API</a> page).</p>\n<p>The following command uses python-openstackclient\
+          \ to list all NeCTAR\nOfficial images (these are published under the NeCTAR-Images\
+          \ project,\ntenant/project ID: 28eadf5ad64b42a4929b2fb7df99275c):</p>\n\
+          <p><code>$ openstack image list --property owner=28eadf5ad64b42a4929b2fb7df99275c\n\
+          +--------------------------------------+-------------------------------------+--------+\n\
+          | ID                                   | Name                          \
+          \      | Status |\n+--------------------------------------+-------------------------------------+--------+\n\
+          | 9a2a3ceb-f4b2-40b8-8e05-831a355fbb23 | NeCTAR CentOS 5.11 x86_64     \
+          \      | active |\n| 89802fa7-670f-4b24-8011-13b69ff9dcb4 | NeCTAR CentOS\
+          \ 6 x86_64              | active |\n| 7bcd0264-5169-4a95-920b-5e5bd76790a0\
+          \ | NeCTAR CentOS 7 x86_64              | active |\n| a8749715-9c4b-475d-b4ea-db3e3a619485\
+          \ | NeCTAR Debian 6 x86_64 (Squeeze)    | active |\n| 1c022d2a-3e15-49a6-815e-f7cdcbce6340\
+          \ | NeCTAR Debian 7 (Wheezy) amd64      | active |\n| e9ffe176-acac-492c-b309-55431a1b197f\
+          \ | NeCTAR Debian 8 (Jessie) amd64      | active |\n| db354243-aba2-4831-81c7-a155b9089291\
+          \ | NeCTAR Fedora 21 x86_64             | active |\n| 6e24b152-00b3-4b39-a0ed-0577c2d3d8ba\
+          \ | NeCTAR Fedora 22 x86_64             | active |\n| 279c0d8c-d8a3-4b37-b3d8-0b87161139e2\
+          \ | NeCTAR Fedora 23 x86_64             | active |\n| f4f74915-e994-4360-a4bd-27d384433cd7\
+          \ | NeCTAR openSUSE 13.2 x86_64         | active |\n| a3d5085f-3866-4502-9278-aa41d6ce6b9c\
+          \ | NeCTAR openSUSE Leap 42.1 x86_64    | active |\n| 73cefbc1-15af-4411-95f2-23e66cc23225\
+          \ | NeCTAR Scientific Linux 6 x86_64    | active |\n| c395c528-fb43-4066-9536-cf5c5efe806d\
+          \ | NeCTAR Ubuntu 12.04 (Precise) amd64 | active |\n| e9f0323e-9383-4dc9-a2ee-846ef8d35ee7\
+          \ | NeCTAR Ubuntu 14.04 (Trusty) amd64  | active |\n| 81f6b78f-6d51-4de9-a464-91d47543d4ba\
+          \ | NeCTAR Ubuntu 15.04 (Vivid) amd64   | active |\n| 31ccebc4-ae2d-4f6d-8e3a-57b5bce533be\
+          \ | NeCTAR Ubuntu 15.10 (Wily) amd64    | active |\n+--------------------------------------+-------------------------------------+--------+</code></p>\n\
+          <p>The equivalent python-glanceclient command:</p>\n<p><code>$ glance image-list\
+          \ --owner 28eadf5ad64b42a4929b2fb7df99275c\n...</code></p>\n<p>Similarly,\
+          \ you can list all images owned by a project you are a member of:</p>\n\
+          <p><code>$ openstack image list --property owner=$OS_TENANT_ID</code></p>\n\
+          <p><a name=\"creating\"></a></p>\n<h3>Creating Images</h3>\n<p>NeCTAR Research\
+          \ Cloud users can use any of the NeCTAR Official or other Public\nimages,\
+          \ but in some cases you may want to create and upload your own images\n\
+          to use on the Research Cloud. This may be useful if you have a preference\
+          \ for a\ndifferent OS or because you are using an image building tool to\
+          \ help automate\ncreation of an image for a software stack or service of\
+          \ interest.</p>\n<p>The OpenStack project's [image-guide] is a great source\
+          \ of relevant\ninformation about both manually building your own images\
+          \ or using tools to\nhelp automate the build process. The examples there\
+          \ will produce images that\nwork with the NeCTAR Research Cloud. The image\
+          \ guide's <a href=\"http://docs.openstack.org/image-guide/obtain-images.html\"\
+          >get images</a> section\nprovides pointers to various external (typically\
+          \ distro maintained) image\nsources, and the recently launched OpenStack\
+          \ [Community App Catalog]\nis another useful source of images (provided\
+          \ by an official OpenStack\nfoundation project) including both basic OS\
+          \ templates and more.</p>\n<p>Once you have an image, e.g., a qcow2 file,\
+          \ you'll need to upload the image\nto NeCTAR's Glance image service. It\
+          \ may not be immediately obvious, but it is\nalso possible to create an\
+          \ entry in the image catalog without uploading a\nfile, e.g., you can create\
+          \ a placeholder image record and then update its\ndetails later. The example\
+          \ below gives a quick overview of image creation:</p>\n<p>Get or create\
+          \ image of interest:</p>\n<p><code>$ wget http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img\n\
+          ...</code></p>\n<p>Confirm the file type:</p>\n<p><code>$ file cirros-0.3.4-x86_64-disk.img\n\
+          cirros-0.3.4-x86_64-disk.img: QEMU QCOW Image (v2), 41126400 bytes</code></p>\n\
+          <p>Upload to NeCTAR Glance image service using python-openstackclient</p>\n\
+          <p><code>$ openstack image create --disk-format qcow2 --file ./cirros-0.3.4-x86_64-disk.img\
+          \ cirros-0.3.4\n+------------------+--------------------------------------+\n\
+          | Field            | Value                                |\n+------------------+--------------------------------------+\n\
+          | checksum         | ee1eca47dc88f4879d8a229cc70a07c6     |\n| container_format\
+          \ | bare                                 |\n| created_at       | 2016-04-02T03:37:22.000000\
+          \           |\n| deleted          | False                              \
+          \  |\n| deleted_at       | None                                 |\n| disk_format\
+          \      | qcow2                                |\n| id               | a8d7b562-a5fd-4e4b-b631-d6a528afe9da\
+          \ |\n| is_public        | False                                |\n| min_disk\
+          \         | 0                                    |\n| min_ram          |\
+          \ 0                                    |\n| name             | cirros-0.3.4\
+          \                         |\n| owner            | b53d0479d88f40ea99cb5249ae01228b\
+          \     |\n| properties       |                                      |\n|\
+          \ protected        | False                                |\n| size    \
+          \         | 13287936                             |\n| status           |\
+          \ active                               |\n| updated_at       | 2016-04-02T03:37:27.000000\
+          \           |\n| virtual_size     | None                               \
+          \  |\n+------------------+--------------------------------------+</code></p>\n\
+          <p>Upload to NeCTAR Glance image service using python-glanceclient:</p>\n\
+          <p><code>$ glance image-create --disk-format qcow2 --container-format bare\
+          \ --file ./cirros-0.3.4-x86_64-disk.img --progress --name cirros-0.3.4\n\
+          ...</code></p>\n<p>Confirm the checksum:</p>\n<p><code>$ md5sum cirros-0.3.4-x86_64-disk.img\n\
+          ee1eca47dc88f4879d8a229cc70a07c6  cirros-0.3.4-x86_64-disk.img</code></p>\n\
+          <p>Refer to the OpenStack user guide <a href=\"http://docs.openstack.org/user-guide/common/cli_manage_images.html#create-or-update-an-image-glance\"\
+          >create image</a> documentation for further\ndetails and check the in-built\
+          \ help text in your client, e.g.:</p>\n<p>```\n$ openstack image create\
+          \ -h\n...\nCreate/upload an image</p>\n<p>positional arguments:\n      \
+          \      New image name</p>\n<p>optional arguments:\n  -h, --help        \
+          \    show this help message and exit\n  --id              Image ID to reserve\n\
+          \  --container-format \n                        Image container format (default:\
+          \ bare)\n  --disk-format \n                        Image disk format (default:\
+          \ raw)\n  --min-disk   Minimum disk size needed to boot image, in gigabytes\n\
+          \  --min-ram     Minimum RAM size needed to boot image, in megabytes\n \
+          \ --file          Upload image from local file\n  --volume      Create image\
+          \ from a volume\n  --force               Force image creation if volume\
+          \ is in use (only\n                        meaningful with --volume)\n \
+          \ --protected           Prevent image from being deleted\n  --unprotected\
+          \         Allow image to be deleted (default)\n  --public              Image\
+          \ is accessible to the public\n  --private             Image is inaccessible\
+          \ to the public (default)\n  --property \n                        Set a\
+          \ property on this image (repeat option to set\n                       \
+          \ multiple properties)\n  --tag            Set a tag on this image (repeat\
+          \ option to set multiple\n                        tags)\n  --project   \
+          \ Set an alternate project on this image (name or ID)\n  --project-domain\
+          \ \n                        Domain the project belongs to (name or ID).\
+          \ This can\n                        be used in case collisions between project\
+          \ names\n                        exist.\n```</p>\n<p><a name=\"sharing\"\
+          ></a></p>\n<h3>Sharing Images</h3>\n<p>The image service allows you to share\
+          \ images owned by and private to your\nproject with other NeCTAR Research\
+          \ Cloud projects without making them public.\nThis might be used, e.g.,\
+          \ to share a snapshot of an instance that you have\npreconfigured for another\
+          \ user or project. However, if you do share instance\nsnapshots you should\
+          \ be mindful that you are sharing the whole primary disk\nstate of the instance,\
+          \ this might include old logs, passwords, history, etc.</p>\n<p>This example\
+          \ uses python-glanceclient to list and identify the ID of a\nparticular\
+          \ snapshot in our project and then share that snapshot with a\ncollaborator's\
+          \ project (it will then be visible to them as a [shared] image):</p>\n<p>List\
+          \ snapshots:</p>\n<p><code>$ glance image-list --property-filter owner=$OS_TENANT_ID\
+          \ --property-filter image_type='snapshot'\n+--------------------------------------+------------------------------------+\n\
+          | ID                                   | Name                          \
+          \     |\n+--------------------------------------+------------------------------------+\n\
+          | 8c43f74e-caf3-405c-aaae-efb14603947a | CoolService v4 r2             \
+          \     |\n| 936ccc3f-6bdf-fd28-98e9-78d00618c13f | CoolService worker test\
+          \            |\n+--------------------------------------+------------------------------------+</code></p>\n\
+          <p>Share a snapshot:</p>\n<p>```\n$ glance help member-create\nusage: glance\
+          \ member-create  </p>\n<p>Create member for a given image.</p>\n<p>Positional\
+          \ arguments:\n     Image with which to create member.\n    Tenant to add\
+          \ as member.</p>\n<p>$ glance member-create 8c43f74e-caf3-405c-aaae-efb14603947a\
+          \ \n```</p>\n<p><a href=\"#toc\">Contents</a></p>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:09-04:00'
@@ -27277,9 +27471,9 @@
           updated_at: '2015-10-08T21:02:18-04:00'
           visibility: 1
         folder_id: 6000190155
-        hits: 64
+        hits: 79
         id: 6000106269
-        modified_at: '2016-03-31T22:54:20-04:00'
+        modified_at: '2016-04-17T19:03:59-04:00'
         modified_by: null
         position: 4
         seo_data: {}
@@ -27288,148 +27482,205 @@
         thumbs_down: 4
         thumbs_up: 0
         title: Image Catalog
-        updated_at: '2016-03-31T22:54:20-04:00'
+        updated_at: '2016-04-17T19:03:59-04:00'
         user_id: 6002464727
-  html: '<h1>The NeCTAR Image Catalog</h1>
-
-    <h2>Intro</h2>
-
-    <p><a href="https://support.nectar.org.au/solution/articles/6000055376-launching-virtual-machines">Instances</a>
-    on the Research Cloud are created from <em>Images</em> stored in the
-
-    OpenStack Image service known as <a href="https://wiki.openstack.org/wiki/Glance">Glance</a>.
-    Available images can be viewed on
-
-    the Research Cloud <a href="https://dashboard.rc.nectar.org.au/project/images/">Dashboard</a>
-    or via the API clients (example
-
-    below). Images include items uploaded to and registered in Glance from
-
-    external sources (e.g., these might be published by 3rd parties or built
-
-    using custom processes and tools) and snapshots created from existing
-
-    instances (see the <a href="https://support.nectar.org.au/solution/articles/6000055382-introduction-to-cloud-storage">Cloud
-    Storage</a> doco for more info).</p>
-
-    <h2>Categories of Images</h2>
-
-    <p>There are currently four broad categories of images: Project, NeCTAR official,
-
-    Shared with Me, and Public.</p>
-
-    <h3>Project</h3>
-
-    <p>These are images created by a user within a Research Cloud project that you
-
-    are a member of (snapshots of instances in your project will be visible in
-
-    this category).</p>
-
-    <h3>NeCTAR Official</h3>
-
-    <p>These images are built and maintained by NeCTAR Core Services. They are
-
-    updated on a semi-regular basis or in response to security advisories (even
-
-    though they are updated regularly you should always check   and apply updates
-
-    after creating a new instance). The NeCTAR images include integration software
-
-    such as <a href="https://cloudinit.readthedocs.org">cloud-init</a> and any relevant
-    settings particular to the NeCTAR
-
-    Research Cloud that may be required for the OS in question. They also undergo
-
-    a light-weight testing process before being published or updated.</p>
-
-    <p>Currently NeCTAR Core Services maintains and publishes various versions of
-
-    the follow Linux distributions (other commercial OSes such as Windows are
-
-    not able to be distributed publicly at this stage due to licensing
-
-    restrictions):</p>
-
-    <ul>
-
-    <li>Ubuntu</li>
-
-    <li>Debian</li>
-
-    <li>Fedora</li>
-
-    <li>openSUSE</li>
-
-    <li>CentOS</li>
-
-    <li>CirrOS</li>
-
-    </ul>
-
-    <p>Bug reports and contributions to the NeCTAR images are welcomed. The current
-
-    process uses <a href="https://www.packer.io/">Packer</a> to automate the build
-    process with configuration and
-
-    scripts stored in the <a href="https://github.com/NeCTAR-RC/nectar-images">nectar-images
-    GitHub project</a>. Bugs can be reported
-
-    directly to NeCTAR support or on GitHub.</p>
-
-    <h3>Shared with Me</h3>
-
-    <p>These are images owned by another Research Cloud project that you are not a
-
-    member of that have been explicitly shared with your project. Sharing images
-
-    is a useful mechanism for collaboration without making images public, for
-
-    information of how to share images see the Sharing Images section below.</p>
-
-    <h3>Public</h3>
-
-    <p>Images can be made public at any time. A public image is visible and usable
-
-    (including the ability to boot an instance or download locally) by all users
-
-    of the Research Cloud, so think carefully before making an image public
-
-    (especially if it is a snapshot that may contain sensitive data).</p>
-
-    <p>There is currently no quality assurance for public images, NeCTAR Core
-
-    Services and Support will not be able to provide assistance with these images.
-
-    Furthermore, public images are often outdated and may include software and/or
-
-    services with serious unpatched security vulnerabilities.</p>
-
-    <h3>Future Categories</h3>
-
-    <p>There is ongoing work to improve the NeCTAR Image Catalog to provide users
-
-    with a higher level of quality assurance with respect to available images.
-
-    This will also make it easier for developers and service providers to
-
-    disambiguate curated images from the general Public list.</p>
-
-    <h2>Advanced Image Management</h2>
-
-    <h3>Command Line / API Cients</h3>
-
-    <p>glance and openstack cli examples of listing and filtering</p>
-
-    <h3>Creating Images</h3>
-
-    <p>Link to Glance docs</p>
-
-    <h3>Sharing Images</h3>
-
-    <p>Example sharing a snapshot and notes about privacy.</p>'
+  html: "<h1>The NeCTAR Image Catalog</h1>\n<p><a name=\"toc\"/></p>\n<h2>Contents</h2>\n\
+    <ul>\n<li><a href=\"#what\">What are images?</a></li>\n<li><a href=\"#categories\"\
+    >Categories of Images</a><ul>\n<li><a href=\"#project\">Project</a></li>\n<li><a\
+    \ href=\"#nectar\">NeCTAR Official</a></li>\n<li><a href=\"#shared\">Shared with\
+    \ me</a></li>\n<li><a href=\"#public\">Public</a></li>\n<li><a href=\"#future\"\
+    >Future Categories</a></li>\n</ul>\n</li>\n<li><a href=\"#advanced\">Advanced\
+    \ Image Management</a><ul>\n<li><a href=\"#cli\">Command Line / API Cients</a></li>\n\
+    <li><a href=\"#creating\">Creating Images</a></li>\n<li><a href=\"#sharing\">Sharing\
+    \ Images</a></li>\n</ul>\n</li>\n</ul>\n<p><a name=\"what\"/></p>\n<h2>What are\
+    \ Images</h2>\n<p><a href=\"https://support.nectar.org.au/solution/articles/6000055376-launching-virtual-machines\"\
+    >Instances</a> on the Research Cloud are created from images stored in the\nOpenStack\
+    \ Image service known as <a href=\"https://wiki.openstack.org/wiki/Glance\">Glance</a>.\
+    \ These are typically some form\nof virtual machine image file (e.g. qcow, vmdk)\
+    \ or a raw disk image. These\nimages are used by the Research Cloud middleware,\
+    \ e.g., in a typical case\nwhen you boot an instance the image you have selected\
+    \ is downloaded via\nGlance to the compute host that your instance has been scheduled\
+    \ to and\nis then configured as the backing disk for the primary/root ephemeral\n\
+    disk of your new instance.</p>\n<p>Available images can be viewed on\nthe Research\
+    \ Cloud <a href=\"https://dashboard.rc.nectar.org.au/project/images/\">Dashboard</a>\
+    \ or via the API clients (example\nbelow). Images include items uploaded to and\
+    \ registered in Glance from\nexternal sources, e.g., these might be published\
+    \ by 3rd parties or built\nusing custom processes and tools. Snapshots created\
+    \ from existing instances\nare also considered images.</p>\n<p><a href=\"#toc\"\
+    >Contents</a></p>\n<p><a name=\"categories\"/></p>\n<h2>Categories of Images</h2>\n\
+    <p>There are currently four broad categories of images: Project, NeCTAR official,\n\
+    Shared with Me, and Public.</p>\n<p><a name=\"project\"/></p>\n<h3>Project</h3>\n\
+    <p>These are images created by a user within a Research Cloud project that you\n\
+    are a member of. Snapshots of instances (see <a href=\"https://support.nectar.org.au/solution/articles/6000055382-introduction-to-cloud-storage\"\
+    >Cloud Storage</a> for more\ninfo) in your project will be visible in this category.</p>\n\
+    <p><a name=\"nectar\"/></p>\n<h3>NeCTAR Official</h3>\n<p>These images are built\
+    \ and maintained by NeCTAR Core Services. They are\nupdated on a semi-regular\
+    \ basis or in response to security advisories (even\nthough they are updated regularly\
+    \ you should always check and apply updates\nafter creating a new instance). The\
+    \ NeCTAR images include integration software\nsuch as <a href=\"https://cloudinit.readthedocs.org\"\
+    >cloud-init</a> and any relevant settings particular to the NeCTAR\nResearch Cloud\
+    \ that may be required for the OS in question. They also undergo\na light-weight\
+    \ testing process before being published or updated.</p>\n<p>Currently NeCTAR\
+    \ Core Services maintains and publishes various versions of\nthe follow Linux\
+    \ distributions (other commercial OSes such as Windows are\nnot able to be distributed\
+    \ publicly at this stage due to licensing\nrestrictions):</p>\n<ul>\n<li>Ubuntu</li>\n\
+    <li>Debian</li>\n<li>Fedora</li>\n<li>openSUSE</li>\n<li>CentOS</li>\n</ul>\n\
+    <p>Each of these images have a unique unprivileged user account you'll need to\n\
+    login with to gain access via SSH:</p>\n<ul>\n<li>For Ubuntu images, use <strong>ubuntu</strong>.</li>\n\
+    <li>For Debian images, use <strong>debian</strong>.</li>\n<li>For Fedora, openSUSE\
+    \ and CentOS, use <strong>ec2-user</strong>.</li>\n</ul>\n<p>Bug reports and contributions\
+    \ to the NeCTAR images are welcomed. The current\nprocess uses <a href=\"https://www.packer.io/\"\
+    >Packer</a> to automate the build process with configuration and\nscripts stored\
+    \ in the <a href=\"https://github.com/NeCTAR-RC/nectar-images\">nectar-images\
+    \ GitHub project</a>. Bugs can be reported\ndirectly to NeCTAR support or on GitHub.</p>\n\
+    <h4>Notes</h4>\n<p>The NeCTAR CentOS 5 image is not currently updated, though\
+    \ the CentOS project\nstill provides software updates.</p>\n<p><a name=\"shared\"\
+    /></p>\n<h3>Shared with Me</h3>\n<p>These are images owned by another Research\
+    \ Cloud project that you are not a\nmember of that have been explicitly shared\
+    \ with your project. Sharing images\nis a useful mechanism for collaboration without\
+    \ making images public, for\ninformation of how to share images see the Sharing\
+    \ Images section below.</p>\n<p><a name=\"public\"/></p>\n<h3>Public</h3>\n<p>Images\
+    \ can be made public at any time. A public image is visible and usable\n(including\
+    \ the ability to boot an instance or download locally) by all users\nof the Research\
+    \ Cloud, so think carefully before making an image public\n(especially if it is\
+    \ a snapshot that may contain sensitive data).</p>\n<p>There is currently no quality\
+    \ assurance for public images, NeCTAR Core\nServices and Support will not be able\
+    \ to provide assistance with these images.\nFurthermore, public images are often\
+    \ outdated and may include software and/or\nservices with serious unpatched security\
+    \ vulnerabilities.</p>\n<p><a name=\"future\"/></p>\n<h3>Future Categories</h3>\n\
+    <p>There is ongoing work to improve the NeCTAR Image Catalog to provide users\n\
+    with a higher level of quality assurance with respect to available images.\nThis\
+    \ will also make it easier for developers and service providers to\ndisambiguate\
+    \ curated images from the general Public list.</p>\n<p><a href=\"#toc\">Contents</a></p>\n\
+    <p><a name=\"advanced\"/></p>\n<h2>Advanced Image Management</h2>\n<p><a name=\"\
+    cli\"/></p>\n<h3>Command Line / API Cients</h3>\n<p>The python-glanceclient and\
+    \ python-openstackclient command line tools are\n<a href=\"https://support.nectar.org.au/support/solutions/articles/6000078065-api\"\
+    >API</a> clients for Glance and cover a greater Glance API feature set than\n\
+    is available through the\ndashboard. If you wish to upload, edit properties of,\
+    \ or share your own images\nthen you will need to use one of these tools. These\
+    \ examples assume some\nfamiliarity with use of the command line and that you\
+    \ have loaded the <a href=\"http://docs.openstack.org/user-guide/common/cli_set_environment_variables_using_openstack_rc.html\"\
+    >openrc</a>\nenvironment file for the project of interest (specific NeCTAR instructions\
+    \ can\nbe found on the <a href=\"https://support.nectar.org.au/support/solutions/articles/6000078065-api\"\
+    >API</a> page).</p>\n<p>The following command uses python-openstackclient to list\
+    \ all NeCTAR\nOfficial images (these are published under the NeCTAR-Images project,\n\
+    tenant/project ID: 28eadf5ad64b42a4929b2fb7df99275c):</p>\n<p><code>$ openstack\
+    \ image list --property owner=28eadf5ad64b42a4929b2fb7df99275c\n+--------------------------------------+-------------------------------------+--------+\n\
+    | ID                                   | Name                                |\
+    \ Status |\n+--------------------------------------+-------------------------------------+--------+\n\
+    | 9a2a3ceb-f4b2-40b8-8e05-831a355fbb23 | NeCTAR CentOS 5.11 x86_64           |\
+    \ active |\n| 89802fa7-670f-4b24-8011-13b69ff9dcb4 | NeCTAR CentOS 6 x86_64  \
+    \            | active |\n| 7bcd0264-5169-4a95-920b-5e5bd76790a0 | NeCTAR CentOS\
+    \ 7 x86_64              | active |\n| a8749715-9c4b-475d-b4ea-db3e3a619485 | NeCTAR\
+    \ Debian 6 x86_64 (Squeeze)    | active |\n| 1c022d2a-3e15-49a6-815e-f7cdcbce6340\
+    \ | NeCTAR Debian 7 (Wheezy) amd64      | active |\n| e9ffe176-acac-492c-b309-55431a1b197f\
+    \ | NeCTAR Debian 8 (Jessie) amd64      | active |\n| db354243-aba2-4831-81c7-a155b9089291\
+    \ | NeCTAR Fedora 21 x86_64             | active |\n| 6e24b152-00b3-4b39-a0ed-0577c2d3d8ba\
+    \ | NeCTAR Fedora 22 x86_64             | active |\n| 279c0d8c-d8a3-4b37-b3d8-0b87161139e2\
+    \ | NeCTAR Fedora 23 x86_64             | active |\n| f4f74915-e994-4360-a4bd-27d384433cd7\
+    \ | NeCTAR openSUSE 13.2 x86_64         | active |\n| a3d5085f-3866-4502-9278-aa41d6ce6b9c\
+    \ | NeCTAR openSUSE Leap 42.1 x86_64    | active |\n| 73cefbc1-15af-4411-95f2-23e66cc23225\
+    \ | NeCTAR Scientific Linux 6 x86_64    | active |\n| c395c528-fb43-4066-9536-cf5c5efe806d\
+    \ | NeCTAR Ubuntu 12.04 (Precise) amd64 | active |\n| e9f0323e-9383-4dc9-a2ee-846ef8d35ee7\
+    \ | NeCTAR Ubuntu 14.04 (Trusty) amd64  | active |\n| 81f6b78f-6d51-4de9-a464-91d47543d4ba\
+    \ | NeCTAR Ubuntu 15.04 (Vivid) amd64   | active |\n| 31ccebc4-ae2d-4f6d-8e3a-57b5bce533be\
+    \ | NeCTAR Ubuntu 15.10 (Wily) amd64    | active |\n+--------------------------------------+-------------------------------------+--------+</code></p>\n\
+    <p>The equivalent python-glanceclient command:</p>\n<p><code>$ glance image-list\
+    \ --owner 28eadf5ad64b42a4929b2fb7df99275c\n...</code></p>\n<p>Similarly, you\
+    \ can list all images owned by a project you are a member of:</p>\n<p><code>$\
+    \ openstack image list --property owner=$OS_TENANT_ID</code></p>\n<p><a name=\"\
+    creating\"/></p>\n<h3>Creating Images</h3>\n<p>NeCTAR Research Cloud users can\
+    \ use any of the NeCTAR Official or other Public\nimages, but in some cases you\
+    \ may want to create and upload your own images\nto use on the Research Cloud.\
+    \ This may be useful if you have a preference for a\ndifferent OS or because you\
+    \ are using an image building tool to help automate\ncreation of an image for\
+    \ a software stack or service of interest.</p>\n<p>The OpenStack project's [image-guide]\
+    \ is a great source of relevant\ninformation about both manually building your\
+    \ own images or using tools to\nhelp automate the build process. The examples\
+    \ there will produce images that\nwork with the NeCTAR Research Cloud. The image\
+    \ guide's <a href=\"http://docs.openstack.org/image-guide/obtain-images.html\"\
+    >get images</a> section\nprovides pointers to various external (typically distro\
+    \ maintained) image\nsources, and the recently launched OpenStack [Community App\
+    \ Catalog]\nis another useful source of images (provided by an official OpenStack\n\
+    foundation project) including both basic OS templates and more.</p>\n<p>Once you\
+    \ have an image, e.g., a qcow2 file, you'll need to upload the image\nto NeCTAR's\
+    \ Glance image service. It may not be immediately obvious, but it is\nalso possible\
+    \ to create an entry in the image catalog without uploading a\nfile, e.g., you\
+    \ can create a placeholder image record and then update its\ndetails later. The\
+    \ example below gives a quick overview of image creation:</p>\n<p>Get or create\
+    \ image of interest:</p>\n<p><code>$ wget http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img\n\
+    ...</code></p>\n<p>Confirm the file type:</p>\n<p><code>$ file cirros-0.3.4-x86_64-disk.img\n\
+    cirros-0.3.4-x86_64-disk.img: QEMU QCOW Image (v2), 41126400 bytes</code></p>\n\
+    <p>Upload to NeCTAR Glance image service using python-openstackclient</p>\n<p><code>$\
+    \ openstack image create --disk-format qcow2 --file ./cirros-0.3.4-x86_64-disk.img\
+    \ cirros-0.3.4\n+------------------+--------------------------------------+\n\
+    | Field            | Value                                |\n+------------------+--------------------------------------+\n\
+    | checksum         | ee1eca47dc88f4879d8a229cc70a07c6     |\n| container_format\
+    \ | bare                                 |\n| created_at       | 2016-04-02T03:37:22.000000\
+    \           |\n| deleted          | False                                |\n|\
+    \ deleted_at       | None                                 |\n| disk_format   \
+    \   | qcow2                                |\n| id               | a8d7b562-a5fd-4e4b-b631-d6a528afe9da\
+    \ |\n| is_public        | False                                |\n| min_disk \
+    \        | 0                                    |\n| min_ram          | 0    \
+    \                                |\n| name             | cirros-0.3.4        \
+    \                 |\n| owner            | b53d0479d88f40ea99cb5249ae01228b   \
+    \  |\n| properties       |                                      |\n| protected\
+    \        | False                                |\n| size             | 13287936\
+    \                             |\n| status           | active                 \
+    \              |\n| updated_at       | 2016-04-02T03:37:27.000000           |\n\
+    | virtual_size     | None                                 |\n+------------------+--------------------------------------+</code></p>\n\
+    <p>Upload to NeCTAR Glance image service using python-glanceclient:</p>\n<p><code>$\
+    \ glance image-create --disk-format qcow2 --container-format bare --file ./cirros-0.3.4-x86_64-disk.img\
+    \ --progress --name cirros-0.3.4\n...</code></p>\n<p>Confirm the checksum:</p>\n\
+    <p><code>$ md5sum cirros-0.3.4-x86_64-disk.img\nee1eca47dc88f4879d8a229cc70a07c6\
+    \  cirros-0.3.4-x86_64-disk.img</code></p>\n<p>Refer to the OpenStack user guide\
+    \ <a href=\"http://docs.openstack.org/user-guide/common/cli_manage_images.html#create-or-update-an-image-glance\"\
+    >create image</a> documentation for further\ndetails and check the in-built help\
+    \ text in your client, e.g.:</p>\n<p>```\n$ openstack image create -h\n...\nCreate/upload\
+    \ an image</p>\n<p>positional arguments:\n  <image-name>          New image name</p>\n\
+    <p>optional arguments:\n  -h, --help            show this help message and exit\n\
+    \  --id <id>             Image ID to reserve\n  --container-format <container-format>\n\
+    \                        Image container format (default: bare)\n  --disk-format\
+    \ <disk-format>\n                        Image disk format (default: raw)\n  --min-disk\
+    \ <disk-gb>  Minimum disk size needed to boot image, in gigabytes\n  --min-ram\
+    \ <ram-mb>    Minimum RAM size needed to boot image, in megabytes\n  --file <file>\
+    \         Upload image from local file\n  --volume <volume>     Create image from\
+    \ a volume\n  --force               Force image creation if volume is in use (only\n\
+    \                        meaningful with --volume)\n  --protected           Prevent\
+    \ image from being deleted\n  --unprotected         Allow image to be deleted\
+    \ (default)\n  --public              Image is accessible to the public\n  --private\
+    \             Image is inaccessible to the public (default)\n  --property <key=value>\n\
+    \                        Set a property on this image (repeat option to set\n\
+    \                        multiple properties)\n  --tag <tag>           Set a tag\
+    \ on this image (repeat option to set multiple\n                        tags)\n\
+    \  --project <project>   Set an alternate project on this image (name or ID)\n\
+    \  --project-domain <project-domain>\n                        Domain the project\
+    \ belongs to (name or ID). This can\n                        be used in case collisions\
+    \ between project names\n                        exist.\n```</p>\n<p><a name=\"\
+    sharing\"/></p>\n<h3>Sharing Images</h3>\n<p>The image service allows you to share\
+    \ images owned by and private to your\nproject with other NeCTAR Research Cloud\
+    \ projects without making them public.\nThis might be used, e.g., to share a snapshot\
+    \ of an instance that you have\npreconfigured for another user or project. However,\
+    \ if you do share instance\nsnapshots you should be mindful that you are sharing\
+    \ the whole primary disk\nstate of the instance, this might include old logs,\
+    \ passwords, history, etc.</p>\n<p>This example uses python-glanceclient to list\
+    \ and identify the ID of a\nparticular snapshot in our project and then share\
+    \ that snapshot with a\ncollaborator's project (it will then be visible to them\
+    \ as a [shared] image):</p>\n<p>List snapshots:</p>\n<p><code>$ glance image-list\
+    \ --property-filter owner=$OS_TENANT_ID --property-filter image_type='snapshot'\n\
+    +--------------------------------------+------------------------------------+\n\
+    | ID                                   | Name                               |\n\
+    +--------------------------------------+------------------------------------+\n\
+    | 8c43f74e-caf3-405c-aaae-efb14603947a | CoolService v4 r2                  |\n\
+    | 936ccc3f-6bdf-fd28-98e9-78d00618c13f | CoolService worker test            |\n\
+    +--------------------------------------+------------------------------------+</code></p>\n\
+    <p>Share a snapshot:</p>\n<p>```\n$ glance help member-create\nusage: glance member-create\
+    \ <IMAGE_ID> <MEMBER_ID></p>\n<p>Create member for a given image.</p>\n<p>Positional\
+    \ arguments:\n  <IMAGE_ID>   Image with which to create member.\n  <MEMBER_ID>\
+    \  Tenant to add as member.</p>\n<p>$ glance member-create 8c43f74e-caf3-405c-aaae-efb14603947a\
+    \ <collaborator's project id>\n```</p>\n<p><a href=\"#toc\">Contents</a></p>"
   parent: 26
-  sha1: d976a1187881a169a2904d8f97fe4e6a1b9ef910
+  sha1: fc6301642b9198afe1c8ded156b9dd2b13e25dd6
   title: Image Catalog
 110:
   freshdesk:
