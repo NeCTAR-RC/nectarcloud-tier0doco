@@ -31509,30 +31509,57 @@
   freshdesk:
     fd_attributes:
       article:
+        account_id: 250404
         art_type: 1
+        bool_01: null
         created_at: '2016-04-03T22:07:35-04:00'
-        desc_un_html: " Research Cloud Networking \n \n Background \n By default each\
-          \ instance/server on the NeCTAR Research gets assigned a single\npublic\
-          \ IPv4 address on boot. Each Node of the RC provides and manages the\naddress\
-          \ space associated with instances launched and running in their zones...\
-          \ \n \n Contents \n \n Background \n Research Cloud Address Ranges \n \n\
-          \ \n Research Cloud Address Ranges \n Insert list of IP ranges per Node/zone\
-          \ here \n Test FD docbot code block handling \n backticks: \n $ echo \"\
-          hi\"\nhi \n backticks with syntax qualifier: \n bash\n$ echo \"hi\"\nhi\
-          \ \n 4-spaces: \n $ echo \"hi\"\nhi\n \n tabs: \n $ echo \"hi\"\nhi\n \n\
-          \ in-line html: \n \n$ echo \"hi\"\nhi\n "
+        datetime_01: null
+        delta: true
+        desc_un_html: " Research Cloud Networking \n \n Contents \n \n Background\
+          \ \n Classic Provider \n Private Tenant Networks \n Floating IPs \n Research\
+          \ Cloud Address Ranges \n \n \n Background \n Since launching in 2012 the\
+          \ NeCTAR Research Cloud has supported a simple form\nof networking for user's\
+          \ instances, with no direct control or advanced\ncapabilities (such as private\
+          \ networks and floating IPs) available to users.\nIn 2015 the first steps\
+          \ were taken towards a richer set of networking features\nfor the Research\
+          \ Cloud - the software-defined control plane that orchestrates\ninstance\
+          \ networking was migrated to OpenStack's contemporary network project\n\
+          (Neutron). The major next steps of that evolution are planned throughout\
+          \ 2016\nbringing features such as: \n \n private/tenant networks (projects\
+          \ will be able to define and create private networks, create ports on these\
+          \ networks, and connect instances to these ports) \n floating IPs (projects\
+          \ will be able to create register public IP address to the project and \"\
+          float\" those IP addresses between instances or other virtual networking\
+          \ devices as they become available) \n load-balancers (projects will be\
+          \ able to create load-balancers attached to multiple instances and assign\
+          \ a public floating IP to the load-balancer \n \n The above items are listed\
+          \ in order of their expected rollout, but due to\nthe complexities involved\
+          \ (including the constraints and requirements of the\nindividual Node operators)\
+          \ we cannot currently confirm timing for the expected\navailability of each\
+          \ feature at each Node. When more information is available\nit will be posted\
+          \ in the support forums and linked from this page. Also note\nthat due to\
+          \ the use of consumable resources such as public IP addresses,\nsome of\
+          \ these features will only be availble to projects via the Research\nCloud\
+          \ allocations mechanism. \n Contents \n \n Classic Provider \n By default\
+          \ each instance/server on the NeCTAR Research Cloud gets assigned a\nsingle\
+          \ virtio network interface with a public IPv4 address configured by DHCP\
+          \ -\nthis is known as Classic Provider networking within the RC. Currently,\
+          \ each\nNode of the RC provides and manages the address space associated\
+          \ with instances\nlaunched and running in their zones. This default public\
+          \ network is a\nProvider Network in OpenStack networking terminology - meaning\
+          \ the cloud\noperators have preconfigured the associated subnet and transport.\
+          \ Currently\nthe Research Cloud uses Linux bridge based provider networks\
+          \ to connect all\ninstances. \n Contents \n \n Private Tenant Networks \n\
+          \ Coming soon! \n Contents \n \n Floating IPs \n Coming soon, rollout will\
+          \ be staged. \n Contents \n \n Research Cloud Address Ranges \n If you are\
+          \ interfacing external services with your Research Cloud\ninfrastructure\
+          \ and/or services then you may need to know the public\nIP address ranges\
+          \ which instances on the Research Cloud may use, e.g.,\nso you can write\
+          \ firewall rules to whitelist particular zone/s. This\ninformation is most\
+          \ readily available and up to date by querying the Neutron\nAPI. E.g.: \n\
+          \ $ neutron subnet-list \n You can also find this information in written\
+          \ form over on the IP ranges\nFAQ entry. \n Contents "
         description: '<h1>Research Cloud Networking</h1>
-
-          <p><a name="background"></a></p>
-
-          <h2>Background</h2>
-
-          <p>By default each instance/server on the NeCTAR Research gets assigned
-          a single
-
-          public IPv4 address on boot. Each Node of the RC provides and manages the
-
-          address space associated with instances launched and running in their zones...</p>
 
           <p><a name="toc"></a></p>
 
@@ -31542,95 +31569,166 @@
 
           <li><a href="#background">Background</a></li>
 
+          <li><a href="#classic">Classic Provider</a></li>
+
+          <li><a href="#tenant">Private Tenant Networks</a></li>
+
+          <li><a href="#floating">Floating IPs</a></li>
+
           <li><a href="#ranges">Research Cloud Address Ranges</a></li>
 
           </ul>
+
+          <p><a name="background"></a></p>
+
+          <h2>Background</h2>
+
+          <p>Since launching in 2012 the NeCTAR Research Cloud has supported a simple
+          form
+
+          of networking for user''s instances, with no direct control or advanced
+
+          capabilities (such as private networks and floating IPs) available to users.
+
+          In 2015 the first steps were taken towards a richer set of networking features
+
+          for the Research Cloud - the software-defined control plane that orchestrates
+
+          instance networking was migrated to OpenStack''s contemporary network project
+
+          (Neutron). The major next steps of that evolution are planned throughout
+          2016
+
+          bringing features such as:</p>
+
+          <ul>
+
+          <li>private/tenant networks (projects will be able to define and create
+          private networks, create ports on these networks, and connect instances
+          to these ports)</li>
+
+          <li>floating IPs (projects will be able to create register public IP address
+          to the project and "float" those IP addresses between instances or other
+          virtual networking devices as they become available)</li>
+
+          <li>load-balancers (projects will be able to create load-balancers attached
+          to multiple instances and assign a public floating IP to the load-balancer</li>
+
+          </ul>
+
+          <p>The above items are listed in order of their expected rollout, but due
+          to
+
+          the complexities involved (including the constraints and requirements of
+          the
+
+          individual Node operators) we cannot currently confirm timing for the expected
+
+          availability of each feature at each Node. When more information is available
+
+          it will be posted in the support forums and linked from this page. Also
+          note
+
+          that due to the use of consumable resources such as public IP addresses,
+
+          some of these features will only be availble to projects via the Research
+
+          Cloud allocations mechanism.</p>
+
+          <p><a href="#toc">Contents</a></p>
+
+          <p><a name="classic"></a></p>
+
+          <h3>Classic Provider</h3>
+
+          <p>By default each instance/server on the NeCTAR Research Cloud gets assigned
+          a
+
+          single virtio network interface with a public IPv4 address configured by
+          DHCP -
+
+          this is known as <em>Classic Provider</em> networking within the RC. Currently,
+          each
+
+          Node of the RC provides and manages the address space associated with instances
+
+          launched and running in their zones. This default public network is a
+
+          <em>Provider Network</em> in OpenStack networking terminology - meaning
+          the cloud
+
+          operators have preconfigured the associated subnet and transport. Currently
+
+          the Research Cloud uses Linux bridge based provider networks to connect
+          all
+
+          instances.</p>
+
+          <p><a href="#toc">Contents</a></p>
+
+          <p><a name="tenant"></a></p>
+
+          <h2>Private Tenant Networks</h2>
+
+          <p>Coming soon!</p>
+
+          <p><a href="#toc">Contents</a></p>
+
+          <p><a name="floating"></a></p>
+
+          <h2>Floating IPs</h2>
+
+          <p>Coming soon, rollout will be staged.</p>
+
+          <p><a href="#toc">Contents</a></p>
 
           <p><a name="ranges"></a></p>
 
           <h2>Research Cloud Address Ranges</h2>
 
-          <p>Insert list of IP ranges per Node/zone here</p>
+          <p>If you are interfacing external services with your Research Cloud
 
-          <h2>Test FD docbot code block handling</h2>
+          infrastructure and/or services then you may need to know the public
 
-          <p>backticks:</p>
+          IP address ranges which instances on the Research Cloud may use, e.g.,
 
-          <p><code>$ echo "hi"
+          so you can write firewall rules to whitelist particular zone/s. This
 
-          hi</code></p>
+          information is most readily available and up to date by querying the Neutron
 
-          <p>backticks with syntax qualifier:</p>
+          API. E.g.:</p>
 
-          <p><code>bash
+          <p><code>$ neutron subnet-list</code></p>
 
-          $ echo "hi"
+          <p>You can also find this information in written form over on the <a href="https://support.nectar.org.au/solution/articles/6000099065-ip-ranges-for-instances-in-the-cloud">IP
+          ranges</a>
 
-          hi</code></p>
+          FAQ entry.</p>
 
-          <p>4-spaces:</p>
-
-          <pre><code>$ echo "hi"
-
-          hi
-
-          </code></pre>
-
-          <p>tabs:</p>
-
-          <pre><code>$ echo "hi"
-
-          hi
-
-          </code></pre>
-
-          <p>in-line html:</p>
-
-          <pre><code>
-
-          $ echo "hi"
-
-          hi
-
-          </code></pre>'
-        folder:
-          category_id: 6000122278
-          created_at: '2015-09-03T01:28:09-04:00'
-          customer_folders: []
-          description: NeCTAR Fundamentals
-          id: 6000190155
-          is_default: false
-          language_id: 6
-          name: NeCTAR Fundamentals
-          parent_id: 6000190155
-          position: 2
-          updated_at: '2015-10-08T21:02:18-04:00'
-          visibility: 1
+          <p><a href="#toc">Contents</a></p>'
         folder_id: 6000190155
-        hits: 0
+        hits: 7
         id: 6000121047
-        modified_at: '2016-04-03T22:07:35-04:00'
+        import_id: null
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2016-04-19T17:14:27-04:00'
         modified_by: null
+        outdated: false
+        parent_id: 6000121047
         position: 5
         seo_data: {}
         status: 2
-        tags: []
+        string_01: null
+        string_02: null
         thumbs_down: 0
         thumbs_up: 0
         title: Research Cloud Networking
-        updated_at: '2016-04-03T22:07:35-04:00'
+        updated_at: '2016-04-19T17:14:27-04:00'
         user_id: 6002464727
   html: '<h1>Research Cloud Networking</h1>
-
-    <p><a name="background"></p>
-
-    <h2>Background</h2>
-
-    <p>By default each instance/server on the NeCTAR Research gets assigned a single
-
-    public IPv4 address on boot. Each Node of the RC provides and manages the
-
-    address space associated with instances launched and running in their zones...</p>
 
     <p><a name="toc"/></p>
 
@@ -31640,57 +31738,135 @@
 
     <li><a href="#background">Background</a></li>
 
+    <li><a href="#classic">Classic Provider</a></li>
+
+    <li><a href="#tenant">Private Tenant Networks</a></li>
+
+    <li><a href="#floating">Floating IPs</a></li>
+
     <li><a href="#ranges">Research Cloud Address Ranges</a></li>
 
     </ul>
+
+    <p><a name="background"></p>
+
+    <h2>Background</h2>
+
+    <p>Since launching in 2012 the NeCTAR Research Cloud has supported a simple form
+
+    of networking for user''s instances, with no direct control or advanced
+
+    capabilities (such as private networks and floating IPs) available to users.
+
+    In 2015 the first steps were taken towards a richer set of networking features
+
+    for the Research Cloud - the software-defined control plane that orchestrates
+
+    instance networking was migrated to OpenStack''s contemporary network project
+
+    (Neutron). The major next steps of that evolution are planned throughout 2016
+
+    bringing features such as:</p>
+
+    <ul>
+
+    <li>private/tenant networks (projects will be able to define and create private
+    networks, create ports on these networks, and connect instances to these ports)</li>
+
+    <li>floating IPs (projects will be able to create register public IP address to
+    the project and "float" those IP addresses between instances or other virtual
+    networking devices as they become available)</li>
+
+    <li>load-balancers (projects will be able to create load-balancers attached to
+    multiple instances and assign a public floating IP to the load-balancer</li>
+
+    </ul>
+
+    <p>The above items are listed in order of their expected rollout, but due to
+
+    the complexities involved (including the constraints and requirements of the
+
+    individual Node operators) we cannot currently confirm timing for the expected
+
+    availability of each feature at each Node. When more information is available
+
+    it will be posted in the support forums and linked from this page. Also note
+
+    that due to the use of consumable resources such as public IP addresses,
+
+    some of these features will only be availble to projects via the Research
+
+    Cloud allocations mechanism.</p>
+
+    <p><a href="#toc">Contents</a></p>
+
+    <p><a name="classic"></p>
+
+    <h3>Classic Provider</h3>
+
+    <p>By default each instance/server on the NeCTAR Research Cloud gets assigned
+    a
+
+    single virtio network interface with a public IPv4 address configured by DHCP
+    -
+
+    this is known as <em>Classic Provider</em> networking within the RC. Currently,
+    each
+
+    Node of the RC provides and manages the address space associated with instances
+
+    launched and running in their zones. This default public network is a
+
+    <em>Provider Network</em> in OpenStack networking terminology - meaning the cloud
+
+    operators have preconfigured the associated subnet and transport. Currently
+
+    the Research Cloud uses Linux bridge based provider networks to connect all
+
+    instances.</p>
+
+    <p><a href="#toc">Contents</a></p>
+
+    <p><a name="tenant"/></p>
+
+    <h2>Private Tenant Networks</h2>
+
+    <p>Coming soon!</p>
+
+    <p><a href="#toc">Contents</a></p>
+
+    <p><a name="floating"/></p>
+
+    <h2>Floating IPs</h2>
+
+    <p>Coming soon, rollout will be staged.</p>
+
+    <p><a href="#toc">Contents</a></p>
 
     <p><a name="ranges"/></p>
 
     <h2>Research Cloud Address Ranges</h2>
 
-    <p>Insert list of IP ranges per Node/zone here</p>
+    <p>If you are interfacing external services with your Research Cloud
 
-    <h2>Test FD docbot code block handling</h2>
+    infrastructure and/or services then you may need to know the public
 
-    <p>backticks:</p>
+    IP address ranges which instances on the Research Cloud may use, e.g.,
 
-    <p><code>$ echo "hi"
+    so you can write firewall rules to whitelist particular zone/s. This
 
-    hi</code></p>
+    information is most readily available and up to date by querying the Neutron
 
-    <p>backticks with syntax qualifier:</p>
+    API. E.g.:</p>
 
-    <p><code>bash
+    <p><code>$ neutron subnet-list</code></p>
 
-    $ echo "hi"
+    <p>You can also find this information in written form over on the <a href="https://support.nectar.org.au/solution/articles/6000099065-ip-ranges-for-instances-in-the-cloud">IP
+    ranges</a>
 
-    hi</code></p>
+    FAQ entry.</p>
 
-    <p>4-spaces:</p>
-
-    <pre><code>$ echo "hi"
-
-    hi
-
-    </code></pre>
-
-    <p>tabs:</p>
-
-    <pre><code>$ echo "hi"
-
-    hi
-
-    </code></pre>
-
-    <p>in-line html:</p>
-
-    <pre><code>
-
-    $ echo "hi"
-
-    hi
-
-    </code></pre>'
+    <p><a href="#toc">Contents</a></p>'
   parent: 26
-  sha1: d7245f956c0dcc04f227efa033801ea5359bcf1a
+  sha1: 18dc09536558663ad05c8dc1cfd52f669d1cbe44
   title: Research Cloud Networking
