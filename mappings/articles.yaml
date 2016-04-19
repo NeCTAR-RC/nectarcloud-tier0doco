@@ -7594,6 +7594,7 @@
   freshdesk:
     fd_attributes:
       article:
+        account_id: 250404
         art_type: 1
         bool_01: null
         created_at: '2015-10-08T00:45:12-04:00'
@@ -7659,23 +7660,23 @@
           \ You can use the above mentioned commands to acquire these\ninformation.\
           \ Then, you can use nova boot command to launch a new instance, the\nformat\
           \ is: \n nova boot [instance-name]  --flavor [name] --image [name] --key-name\
-          \ [name] --security-groups [names separated by space] \n You can also specify\
-          \ option --availability-zone to launch an instance in a\ndesigned zone and\
-          \ option --user-data  for a initialization script\nused only for the first\
-          \ time when instance boots. The user data script can be\nput in a file and\
-          \ then passed to instance creation. You can see check this\nwebsite to see\
-          \ what script you can use to initialize an instance.  \n\n\n\nCommands for\
-          \ instance management\nAction\n\n\n\n\nnova help boot\nDiscover the available\
-          \ options\n\n\nnova start <server name or ID>\nTo boot a stopped instance\n\
-          \n\nnova stop <server name or ID>\nTo stop an instance\n\n\nnova suspend\
-          \ <server name or ID>\nTo suspend an instance\n\n\nnova resume <server name\
-          \ or ID>\nTo resume an instance\n\n\nnova show <server name or ID>\nTo show\
-          \ details of an instance\n\n\nnova image-create <server name or ID> <snapshot\
-          \ name>\nTo create a snapshot of a instance\n\n\n\n You can also find more\
-          \ information about nova command line API via\nnovaclient. \n Nova Python\
-          \ API \n You can also use Nova Python API to manage instances integrated\
-          \ with Python\nprogramming language. \n Example of code to launch a new\
-          \ instance: \n ``` \n from novaclient import client \n nova = client.Client(\"\
+          \ [name] --security-groups [names separated by a comma] \n You can also\
+          \ specify option --availability-zone to launch an instance in a\ndesigned\
+          \ zone and option --user-data  for a initialization script\nused only for\
+          \ the first time when instance boots. The user data script can be\nput in\
+          \ a file and then passed to instance creation. You can see check this\n\
+          website to see what script you can use to initialize an instance.  \n\n\n\
+          \nCommands for instance management\nAction\n\n\n\n\nnova help boot\nDiscover\
+          \ the available options\n\n\nnova start <server name or ID>\nTo boot a stopped\
+          \ instance\n\n\nnova stop <server name or ID>\nTo stop an instance\n\n\n\
+          nova suspend <server name or ID>\nTo suspend an instance\n\n\nnova resume\
+          \ <server name or ID>\nTo resume an instance\n\n\nnova show <server name\
+          \ or ID>\nTo show details of an instance\n\n\nnova image-create <server\
+          \ name or ID> <snapshot name>\nTo create a snapshot of a instance\n\n\n\n\
+          \ You can also find more information about nova command line API via\nnovaclient.\
+          \ \n Nova Python API \n You can also use Nova Python API to manage instances\
+          \ integrated with Python\nprogramming language. \n Example of code to launch\
+          \ a new instance: \n ``` \n from novaclient import client \n nova = client.Client(\"\
           2\", username, password, project_name, auth_url) \n nova.servers.list()\
           \ \n nova.flavors.list() \n nova.keypairs.list() \n nova.images.list() \n\
           \ nova.security_groups.list() \n server_name = 'new instance' \n image =\
@@ -7684,7 +7685,7 @@
           \ \n key_name = 'ming' \n nova.servers.create(server_name, image, flavor,\
           \ security_groups=security_groups, key_name=) \n ```  \n You can find more\
           \ information about nova python API from this link "
-        description: "<h2>Manage instance via API</h2>\n<p>The NeCTAR Dashboard is\
+        description: "<h1>Manage instance via API</h1>\n<p>The NeCTAR Dashboard is\
           \ one way to manage your instances in projects and NeCTAR\ncloud provides\
           \ instance management via API. There are two types of API you can use\n\
           to manage your instance, one is Nova command line API and another is Nova\
@@ -7756,8 +7757,8 @@
           \ mentioned commands to acquire these\ninformation. Then, you can use nova\
           \ boot command to launch a new instance, the\nformat is:</p>\n<p><code>nova\
           \ boot [instance-name]  --flavor [name] --image [name] --key-name [name]\
-          \ --security-groups [names separated by space]</code></p>\n<p>You can also\
-          \ specify option --availability-zone to launch an instance in a\ndesigned\
+          \ --security-groups [names separated by a comma]</code></p>\n<p>You can\
+          \ also specify option --availability-zone to launch an instance in a\ndesigned\
           \ zone and option --user-data  for a initialization script\nused only for\
           \ the first time when instance boots. The user data script can be\nput in\
           \ a file and then passed to instance creation. You can see check this\n\
@@ -7790,27 +7791,15 @@
           \ key_name=)</p>\n<p>``` </p>\n<p>You can find more information about nova\
           \ python API from this <a href=\"http://docs.openstack.org/developer/python-novaclient/api.html\"\
           >link</a></p>"
-        folder:
-          category_id: 6000122279
-          created_at: '2015-09-03T01:27:59-04:00'
-          customer_folders: []
-          description: Instance Management
-          id: 6000190145
-          is_default: false
-          language_id: 6
-          name: Instance Management
-          parent_id: 6000190145
-          position: 3
-          updated_at: '2015-12-07T19:43:55-05:00'
-          visibility: 1
         folder_id: 6000190145
-        hits: 70
+        hits: 123
         id: 6000075747
+        import_id: null
         int_01: null
         int_02: null
         int_03: null
         language_id: 6
-        modified_at: '2016-01-26T18:22:21-05:00'
+        modified_at: '2016-04-18T20:53:10-04:00'
         modified_by: null
         outdated: false
         parent_id: 6000075747
@@ -7819,13 +7808,12 @@
         status: 2
         string_01: null
         string_02: null
-        tags: []
-        thumbs_down: 1
-        thumbs_up: 1
+        thumbs_down: 2
+        thumbs_up: 2
         title: API
-        updated_at: '2016-01-26T18:22:21-05:00'
+        updated_at: '2016-04-18T20:53:10-04:00'
         user_id: 6002464727
-  html: "<h2>Manage instance via API</h2>\n<p>The NeCTAR Dashboard is one way to manage\
+  html: "<h1>Manage instance via API</h1>\n<p>The NeCTAR Dashboard is one way to manage\
     \ your instances in projects and NeCTAR\ncloud provides instance management via\
     \ API. There are two types of API you can use\nto manage your instance, one is\
     \ Nova command line API and another is Nova python\nAPI. Which one to use depends\
@@ -7890,7 +7878,7 @@
     \ group\nname and flavor name. You can use the above mentioned commands to acquire\
     \ these\ninformation. Then, you can use nova boot command to launch a new instance,\
     \ the\nformat is:</p>\n<p><code>nova boot [instance-name]  --flavor [name] --image\
-    \ [name] --key-name [name] --security-groups [names separated by space]</code></p>\n\
+    \ [name] --key-name [name] --security-groups [names separated by a comma]</code></p>\n\
     <p>You can also specify option --availability-zone to launch an instance in a\n\
     designed zone and option --user-data <user-data-file> for a initialization script\n\
     used only for the first time when instance boots. The user data script can be\n\
@@ -7922,7 +7910,7 @@
     <p>You can find more information about nova python API from this <a href=\"http://docs.openstack.org/developer/python-novaclient/api.html\"\
     >link</a></p>"
   parent: 39
-  sha1: 8b2543e77d41a55fccec2aa0fa471663ffcfce04
+  sha1: bc5a5750c6317e12a872f2cb3be5bd847a91c372
   title: API
 65:
   freshdesk:
