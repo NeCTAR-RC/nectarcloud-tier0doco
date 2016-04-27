@@ -80,7 +80,7 @@ your instance.
 
 By default, virtual machines in NeCTAR has closed all ports, so in order to make
 services available to public, you need to open certain ports for it. Before you
-open a open, you need to think carefully about what service associated with it
+open a port, you need to think carefully about what service associated with it
 and what is the intention. Never open ports for non-service binded to it.
 
 ## Check-Security-16: What permission granted to user account
