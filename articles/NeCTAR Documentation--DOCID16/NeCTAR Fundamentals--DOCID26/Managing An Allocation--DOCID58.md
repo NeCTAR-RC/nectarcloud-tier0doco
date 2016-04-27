@@ -41,7 +41,7 @@ When you submit the request, you will receive a confirmation email with all
 your details.  View or edit your request by clicking on the ‘My Requests’ tab
 at the dashboard.
 
-Your request will be reviewed by the your local node (if any) or the NeCTAR
+Your request will be reviewed by your local node (if any) or the NeCTAR
 Allocation Committee.  This can take up to four weeks to process.
 
 If there are any issues with your request, we will get in touch with you.  You

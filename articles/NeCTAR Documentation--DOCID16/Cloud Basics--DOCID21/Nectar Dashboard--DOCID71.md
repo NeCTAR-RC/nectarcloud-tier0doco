@@ -23,7 +23,7 @@ your dashboard information relates to.
 ## Instances
 
 You reach the **instances screen** in the dashboard by clicking the Instances
-tab in the navigation panel. Thecentral space now shows information about the
+tab in the navigation panel. The central space now shows information about the
 instances in your project, including their Name, IP Address and other info.
 
 Beside a filter function at the top of the table (which can be handy if your
@@ -40,7 +40,7 @@ You can find similar information screens for information about your
 
 ## Allocations
 
-You use the Allocations screens for managing aallocation request. You can
+You use the Allocations screens for managing allocation request. You can
 start a new allocation request using the New Request tab, and you can find
 information about any existing request that you may have on the My Request
 screen. You can also use the My Request screen to request amendments to any
