@@ -1,4 +1,6 @@
+
 <a name="top"></a>
+
 # Bioinformatics using the Cloud Storage with NCBI data 
 
 ## Table of Contents
@@ -45,14 +47,13 @@ each of which has different purpose that needs some basic explanation.
 With your instance you have access to limited diskspace with the  "root disk" partition "/" and 
 "ephemeral disk" partition that is accessed via the /mnt directory of the default NeCTAR images. 
 The size of the the "root disk" and "ephemeral disk" varies with the different hardware templates 
-or [flavors] (https://Support.Nectar.Org.Au/Support/Solutions/Articles/6000055380-Resources-Available-To-You) 
+or [flavors] (https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you) 
 that are available when you are configuring your instance. So understanding your research data 
 requirements is key so you can select the correct `flavor` for your instance.
 However, as with everything including the research cloud it does require a bit more insight of how a 
 research might make the best use of these storage components in a bioinformatic workflow. Fortunately, NeCTAR is
 a the ideal resource to allow researchers to improve their technical knowledge of to how to use the research cloud
 for their computational work.
- 
 
 [Top of page](#top)
 <a name="root"></a>
@@ -62,7 +63,6 @@ for their computational work.
 The root disk is an ephemeral disk that the operating system (OS) image is copied to when you launch 
 a virtual machine. It is also where your home directory is located in you virtual machine. When you 
 snapshot your instance it is what is copied to create your snapshot image.
-
 
 [Top of page](#top)
  <a name="ephemeral"></a>
@@ -75,20 +75,19 @@ default images that have ephemeral storage are mounted with the instance and loc
 but you will need to change the ownership of the `/mnt` directoryto be able to have read/write 
 access to do this on a ubuntu instance use:
 
-`$ sudo chown ubuntu /mnt `
+`$ sudo chown ubuntu /mnt`
 
 on a fedora, centos, scientific linux instances
 
-`$ sudo chown ec2-user /mnt `
+`$ sudo chown ec2-user /mnt`
 
 and on a debian instance.
 
-`$ sudo chown debian /mnt `
+`$ sudo chown debian /mnt`
 
 This ephemeral disk space is where you should run you analysis as your `home` directory is too small.
 
 [Top of page](#top)
-
 
 <a name="external"></a>
 
@@ -221,7 +220,6 @@ With smaller data you can try any of the methods coverd on the NeCTAR [support](
 
 [Top of page](#top)
 <a name="openstack"></a>
-
 
 ## Using the OpenStack APIs for Managing NCBI Data  
 
