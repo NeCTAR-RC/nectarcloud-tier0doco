@@ -486,8 +486,12 @@ Once your markdown is clean, then do your `git commit --amend`
 If you do decide to use mdl locally, there is a file in the root directory of the project named `md_style.rb`
 with rules that match those applied by Jenkins. There are further instructions in the file on how to use it.
 
-This works for me (JoeyGerlach):
+This works for me (JoeyGerlach): 
 `mdl -s ~/nectarcloud-tier0doco/md_style.rb <filename>`
+The -s option loads the style guide.
+
+
+
 
 #### Getting Changes accepted <a name='Getting'></a>
 
@@ -505,15 +509,36 @@ You need two +1 votes (or one +2) for your change to be accepted, merged and to
 
 ##### What went wrong <a name='wrong'></a>
 
-Jenkins should email you advising what was wrong with your submission.  If
+Jenkins should email you advising what was wrong with your submission
 you follow that link you'll see the option on the left for the "console
-output", click on that and scroll down and you'll see what He's complaining
-about.
+output", 
 
-You can also get there by finding your submission on the list at our [gerrit](https://review.rc.nectar.org.au/#/q/status:open)
-.  Click on your submission, then down the bottom you will see the Jenkins
-feedback; click on that and the hyperlink referred to above should be
-visible there too.
+![](images/Jenkins_page.png)
+
+click on that and scroll down and you'll see what Jenkins complaining
+about in the build log.
+
+You can also get there by finding your submission on the list on the Gerrit page
+[gerrit](https://review.rc.nectar.org.au/#/q/status:open).
+
+![](images/Gerrit-status.png)
+
+ Click on your submission, then scroll down the bottom you will see the Jenkins feedback; 
+
+![](images/Gerrit_history.png)
+
+click on that will show the hyperlink to Jenkins. 
+
+![](images/Gerrit-link2jenkins.png)
+
+The hyperlink goes the build number that it assigned by the `git review` in Gerrit.
+
+![](images/Jenkins_page.png) 
+
+The "console output" on the left will show the build log and hopefully that will help you identify
+the error in your md file.
+
+![](images/Jenkins_console_output.png)
 
 #### Amending your changes for review <a name='Amending'></a>
 
