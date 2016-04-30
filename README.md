@@ -1,5 +1,6 @@
-## Table of Contents 
+# NeCTAR Cloud Tier 0 Documentation
 
+## Table of Contents 
 
 - NeCTAR Cloud Tier 0 Documentation 
   - [Licensing](#Licensing)  
@@ -26,8 +27,6 @@
         - [Cleaning up your local branches](#Cleaning)  
   - [A word of Caution](#caution)
   - [Tips, tricks and troubleshooting](#tips)
-
-# NeCTAR Cloud Tier 0 Documentation
 
 This repository contains documentation aimed at Tier 0 (self help) users of the
 NeCTAR Research Cloud.  This repository is the master location for
@@ -76,8 +75,6 @@ NeCTAR project.
 
 If you get stuck talk to the nectar docs team or ask on the #nectar IRC channel
  on freenode.
- 
-
 
 ### Initial setup  <a name='Initial'></a>
 
@@ -464,7 +461,7 @@ You'll need to fix each of those and when Jenkins finally accepts your change
 (see amending changes below), Jenkins will automatically vote (or +1) your
 commit.
 
-  Jenkins will often fail a document without giving any reasons. Using the following ruby-gem markdown lint style checker (mdl) will give you the reasons when Jenkins won't. It is a real timesaving tool!
+Jenkins will often fail a document without giving any reasons. Using the following ruby-gem markdown lint style checker (mdl) will give you the reasons when Jenkins won't. It is a real timesaving tool!
 
 Note; if you want to get really clever, you can install mdl - the same markdown
 parsing tool that Jenkins uses - that way you don't need to bother Jenkins for
@@ -486,8 +483,9 @@ Once your markdown is clean, then do your `git commit --amend`
 If you do decide to use mdl locally, there is a file in the root directory of the project named `md_style.rb`
 with rules that match those applied by Jenkins. There are further instructions in the file on how to use it.
 
-This works for me (JoeyGerlach):
+This works for me (JoeyGerlach): 
 `mdl -s ~/nectarcloud-tier0doco/md_style.rb <filename>`
+The -s option loads the style guide.
 
 #### Getting Changes accepted <a name='Getting'></a>
 
@@ -505,15 +503,36 @@ You need two +1 votes (or one +2) for your change to be accepted, merged and to
 
 ##### What went wrong <a name='wrong'></a>
 
-Jenkins should email you advising what was wrong with your submission.  If
+Jenkins should email you advising what was wrong with your submission
 you follow that link you'll see the option on the left for the "console
-output", click on that and scroll down and you'll see what He's complaining
-about.
+output", 
 
-You can also get there by finding your submission on the list at our [gerrit](https://review.rc.nectar.org.au/#/q/status:open)
-.  Click on your submission, then down the bottom you will see the Jenkins
-feedback; click on that and the hyperlink referred to above should be
-visible there too.
+![](images/Jenkins_page.png)
+
+click on that and scroll down and you'll see what Jenkins is complaining
+about in the build log.
+
+You can also get there by finding your submission on the list on the Gerrit page
+[gerrit](https://review.rc.nectar.org.au/#/q/status:open).
+
+![](images/Gerrit-status.png)
+
+ Click on your submission, then scroll down the bottom you will see the Jenkins feedback; 
+
+![](images/Gerrit_history.png)
+
+click on that will show the hyperlink to Jenkins. 
+
+![](images/Gerrit-link2jenkins.png)
+
+The hyperlink goes the build number that it assigned by the `git review` in Gerrit.
+
+![](images/Jenkins_page.png) 
+
+The "console output" on the left will show the build log and hopefully that will help you identify
+the error in your md file.
+
+![](images/Jenkins_console_output.png)
 
 #### Amending your changes for review <a name='Amending'></a>
 
