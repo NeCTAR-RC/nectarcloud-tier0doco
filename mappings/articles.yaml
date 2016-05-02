@@ -28811,9 +28811,13 @@
   freshdesk:
     fd_attributes:
       article:
+        account_id: 250404
         art_type: 1
+        bool_01: null
         created_at: '2016-02-29T21:39:10-05:00'
-        desc_un_html: " \n Bioinformatics using the Cloud Storage with NCBI data \n\
+        datetime_01: null
+        delta: true
+        desc_un_html: " Bioinformatics using the Cloud Storage with NCBI data \n \n\
           \ Table of Contents \n \n Introduction \n NeCTAR Research Cloud storage\
           \ components review using the OpenStack Dashboard \n Attached Storage \n\
           \ root disk \n ephemeral \n External Storage - Volume and Object \n What\
@@ -28839,7 +28843,7 @@
           \ partition \"/\" and \n\"ephemeral disk\" partition that is accessed via\
           \ the /mnt directory of the default NeCTAR images. \nThe size of the the\
           \ \"root disk\" and \"ephemeral disk\" varies with the different hardware\
-          \ templates \nor [flavors] (https://Support.Nectar.Org.Au/Support/Solutions/Articles/6000055380-Resources-Available-To-You)\
+          \ templates \nor [flavors] (https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you)\
           \ \nthat are available when you are configuring your instance. So understanding\
           \ your research data \nrequirements is key so you can select the correct\
           \ flavor for your instance.\nHowever, as with everything including the research\
@@ -29022,10 +29026,10 @@
           \ large data sets (>5GB) in to object storage. \nUnderstanding how to split/merge\
           \ files that are larger than 5GB and being able to manage them easily..\
           \ \n Top of page "
-        description: "<p><a name=\"top\"></a></p>\n<h1>Bioinformatics using the Cloud\
-          \ Storage with NCBI data</h1>\n<h2>Table of Contents</h2>\n<ul>\n<li><a\
-          \ href=\"#intro\">Introduction</a></li>\n<li><a href=\"#dashboard\">NeCTAR\
-          \ Research Cloud storage components review using the OpenStack Dashboard</a></li>\n\
+        description: "<h1>Bioinformatics using the Cloud Storage with NCBI data</h1>\n\
+          <p><a name=\"top\"></a></p>\n<h2>Table of Contents</h2>\n<ul>\n<li><a href=\"\
+          #intro\">Introduction</a></li>\n<li><a href=\"#dashboard\">NeCTAR Research\
+          \ Cloud storage components review using the OpenStack Dashboard</a></li>\n\
           <li><a href=\"#attached\">Attached Storage</a></li>\n<li><a href=\"#root\"\
           >root disk</a></li>\n<li><a href=\"#ephemeral\">ephemeral</a></li>\n<li><a\
           \ href=\"#external\">External Storage - Volume and Object</a></li>\n<li><a\
@@ -29056,7 +29060,7 @@
           \ to limited diskspace with the  \"root disk\" partition \"/\" and \n\"\
           ephemeral disk\" partition that is accessed via the /mnt directory of the\
           \ default NeCTAR images. \nThe size of the the \"root disk\" and \"ephemeral\
-          \ disk\" varies with the different hardware templates \nor [flavors] (https://Support.Nectar.Org.Au/Support/Solutions/Articles/6000055380-Resources-Available-To-You)\
+          \ disk\" varies with the different hardware templates \nor [flavors] (https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you)\
           \ \nthat are available when you are configuring your instance. So understanding\
           \ your research data \nrequirements is key so you can select the correct\
           \ <code>flavor</code> for your instance.\nHowever, as with everything including\
@@ -29289,35 +29293,30 @@
           \ data sets (&gt;5GB) in to object storage. \nUnderstanding how to split/merge\
           \ files that are larger than 5GB and being able to manage them easily..</p>\n\
           <p><a href=\"#top\">Top of page</a></p>"
-        folder:
-          category_id: 6000122278
-          created_at: '2015-09-03T01:28:07-04:00'
-          customer_folders: []
-          description: Tools and Apps
-          id: 6000190153
-          is_default: false
-          language_id: 6
-          name: Tools and Apps
-          parent_id: 6000190153
-          position: 3
-          updated_at: '2015-10-08T21:02:18-04:00'
-          visibility: 1
         folder_id: 6000190153
-        hits: 0
+        hits: 32
         id: 6000115009
-        modified_at: '2016-02-29T21:39:10-05:00'
+        import_id: null
+        int_01: null
+        int_02: null
+        int_03: null
+        language_id: 6
+        modified_at: '2016-05-01T22:44:43-04:00'
         modified_by: null
+        outdated: false
+        parent_id: 6000115009
         position: 22
         seo_data: {}
         status: 2
-        tags: []
+        string_01: null
+        string_02: null
         thumbs_down: 0
         thumbs_up: 0
         title: Pawsey NeCTAR Storage and NCBI data
-        updated_at: '2016-02-29T21:39:10-05:00'
+        updated_at: '2016-05-01T22:44:43-04:00'
         user_id: 6002464727
-  html: "<p><a name=\"top\"></a></p>\n<h1>Bioinformatics using the Cloud Storage with\
-    \ NCBI data</h1>\n<h2>Table of Contents</h2>\n<ul>\n<li><a href=\"#intro\">Introduction</a></li>\n\
+  html: "<h1>Bioinformatics using the Cloud Storage with NCBI data</h1>\n<p><a name=\"\
+    top\"></a></p>\n<h2>Table of Contents</h2>\n<ul>\n<li><a href=\"#intro\">Introduction</a></li>\n\
     <li><a href=\"#dashboard\">NeCTAR Research Cloud storage components review using\
     \ the OpenStack Dashboard</a></li>\n<li><a href=\"#attached\">Attached Storage</a></li>\n\
     <li><a href=\"#root\">root disk</a></li>\n<li><a href=\"#ephemeral\">ephemeral</a></li>\n\
@@ -29347,7 +29346,7 @@
     \ partition \"/\" and \n\"ephemeral disk\" partition that is accessed via the\
     \ /mnt directory of the default NeCTAR images. \nThe size of the the \"root disk\"\
     \ and \"ephemeral disk\" varies with the different hardware templates \nor [flavors]\
-    \ (https://Support.Nectar.Org.Au/Support/Solutions/Articles/6000055380-Resources-Available-To-You)\
+    \ (https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you)\
     \ \nthat are available when you are configuring your instance. So understanding\
     \ your research data \nrequirements is key so you can select the correct <code>flavor</code>\
     \ for your instance.\nHowever, as with everything including the research cloud\
@@ -29585,7 +29584,7 @@
     \ than 5GB and being able to manage them easily..</p>\n<p><a href=\"#top\">Top\
     \ of page</a></p>"
   parent: 24
-  sha1: e64ccf77ecc13bd9e9c89011d8ea0603f9c5b836
+  sha1: c234975f289401dd1eba47da9eac2d0f9554eb4c
   title: Pawsey NeCTAR Storage and NCBI data
 116:
   freshdesk:
