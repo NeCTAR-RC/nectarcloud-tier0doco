@@ -41,14 +41,16 @@ each of which has different purpose that needs some basic explanation.
      
 <a name="attached"></a>
 
+* * *
+
 ### Attached storage 
 
-With your instance you have access to limited diskspace with the  "root disk" partition "/" and 
-"ephemeral disk" partition that is accessed via the /mnt directory of the default NeCTAR images. 
-The size of the the "root disk" and "ephemeral disk" varies with the different hardware templates 
-or [flavors] (https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you) 
+With your instance you have access to limited diskspace with the **root disk** partition **"/"** and 
+**"ephemeral disk"** partition that is accessed via the **/mnt** directory of the default NeCTAR images. 
+The size of the the **root disk** and **ephemeral disk** varies with the different hardware templates 
+or [flavors](https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you) 
 that are available when you are configuring your instance. So understanding your research data 
-requirements is key so you can select the correct `flavor` for your instance.
+requirements is key so you can select the correct **flavor** for your instance.
 However, as with everything including the research cloud it does require a bit more insight of how a 
 research might make the best use of these storage components in a bioinformatic workflow. Fortunately, NeCTAR is
 a the ideal resource to allow researchers to improve their technical knowledge of to how to use the research cloud
@@ -57,21 +59,25 @@ for their computational work.
 [Top of page](#top)
 <a name="root"></a>
 
+* * *
+
 ### What is the root disk 
 
-The root disk is an ephemeral disk that the operating system (OS) image is copied to when you launch 
+The **root disk** is an **ephemeral disk** that the operating system (OS) image is copied to when you launch 
 a virtual machine. It is also where your home directory is located in you virtual machine. When you 
 snapshot your instance it is what is copied to create your snapshot image.
 
 [Top of page](#top)
  <a name="ephemeral"></a>
 
+* * *
+
 ### What is ephemeral disk
 
 Ephemeral is a secondary ephemeral data disk. That is an empty disk and exists only for the life 
 of the instance. When you terminate an instance all data in ephemeral is lost. With the NeCTAR 
-default images that have ephemeral storage are mounted with the instance and located at `/mnt` 
-but you will need to change the ownership of the `/mnt` directoryto be able to have read/write 
+default images that have ephemeral storage are mounted with the instance and located at **/mnt** 
+but you will need to change the ownership of the **/mnt** directoryto be able to have read/write 
 access to do this on a ubuntu instance use:
 
 `$ sudo chown ubuntu /mnt`
@@ -90,6 +96,8 @@ This ephemeral disk space is where you should run you analysis as your `home` di
 
 <a name="external"></a>
 
+* * *
+
 ## External Storage - Volume and Object
 
 When you apply for you NeCTAR [allocation](https://dashboard.rc.nectar.org.au) you are able 
@@ -101,6 +109,8 @@ Assuming that your allocation request has either volume or object storage or bot
 volume or object storage you need to remember to do select a sensible [availability zones](https://support.nectar.org.au/solution/articles/6000055381-availability-zones ) to use with your data.
 
  <a name="volume"></a>
+
+* * *
 
 ### What is volume or block-storage
 
@@ -154,11 +164,16 @@ and on a debian instance.
  
 To unmount the volume from your instance use these command `umount`
 NOTE: Do not umount the device if you are in that directory so `cd` to your home directory first otherwise you it will fail.
-`$ cd `  
-`$ sudo umount /volume_data`
+
+```sh
+$ cd   
+$ sudo umount /volume_data
+```
 
 [Top of page](#top)
 <a name="object"></a>
+
+* * *
 
 ### What is object storage 
 
@@ -197,48 +212,51 @@ To download the object to your instance you just neeed to use `wget`
 `wget https://dashboard.rc.nectar.org.au/project/containers/blast/wgs.99.tar.gz `
 
 [Top of page](#top)
+
 <a name="io"></a>
+
+* * *
 
 ## File I/O best practices 
 
 Moving data to and from you instance instance depending on the size of the files your are try to move can be trival for small data but large 
 data sets can become very difficult depending on many different things. Here are some things to keep in mind with data I/O and the cloud.
 
-- Compress your data files if they are larger than 10Mb with [**gzip**](http://www.math.utah.edu/docs/info/gzip_4.html#SEC7) or some other compression tool it should be installed in your instance. 
+- Compress your data files if they are larger than 10Mb with [**gzip**](http://www.math.utah.edu/docs/info/gzip_4.html#SEC7) or some other compression tool it should be installed in your instance.
 
-- If you have to move a directory create [**tar**](https://www.cs.colostate.edu/helpdocs/tar.html) files. 
+- If you have to move a directory create a [**tarball**](https://www.cs.colostate.edu/helpdocs/tar.html) files.
 
 - Don't try to move data over a wireless network, plugin to an ethernet contection, preferably at your local institution they have larger bandwidth.
 
 - If you data move still time out or are getting throttled contact your the local institutes IT support to see if they can help.
 
-- Ohio-(Only handle it once) if you are uploading data to your instance try to move it directly to your instance, NeCTAR is on a fast networks as most
-  nectar nodes are housed within University or HPC data centers. 
+- Ohio-(Only handle it once) if you are uploading data to your instance try to move it directly to your instance, NeCTAR is on a fast networks as most nectar nodes are housed within University or HPC data centers.
 
 With smaller data you can try any of the methods coverd on the NeCTAR [support](https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm) page it has excellent instructions.  This will work for moving data to and from your ephemeral or volume storage attached to your instances. 
 
 [Top of page](#top)
+
 <a name="openstack"></a>
+
+* * *
 
 ## Using the OpenStack APIs for Managing NCBI Data  
 
-The National Center for Biotechnology Information ([**NCBI**](http://www.ncbi.nlm.nih.gov/)) is located in Bethesda, Marylanl and hosts the Basic Local Alignment Search Tool ([**BLAST**](http://blast.ncbi.nlm.nih.gov/Blast.cgi)) data and is available directly from the NCBI FTP site `ftp://ftp.ncbi.nlm.nih.gov`. It is necessary for researchs to be able to access these data sets easily as they are required for many different Bioinformatic tools specifically BLAST. However we will not present how to actually run BLAST but how to manage the NeCTAR reseach cloud storage resources to enable researchers to utilize the NCBI BLAST data sets effectively.
+[The National Center for Biotechnology Information (**NCBI**)](http://www.ncbi.nlm.nih.gov/) is located in Bethesda, Marylanl and hosts the [Basic Local Alignment Search Tool (**BLAST**)](http://blast.ncbi.nlm.nih.gov/Blast.cgi) data and is available directly from the **NCBI FTP** site `ftp://ftp.ncbi.nlm.nih.gov`. It is necessary for researchs to be able to access these data sets easily as they are required for many different Bioinformatic tools specifically BLAST. However we will not present how to actually run BLAST but how to manage the NeCTAR reseach cloud storage resources to enable researchers to utilize the NCBI BLAST data sets effectively.
 
 ### Install the Python client tools
 
 First you will need to update your instance and install a set of packages that support the OpenStack APIs.
 These are the commands for a ubuntu instance.
 
-```$ sudo apt-get update```
+```bash
+$ sudo apt-get update
+$ sudo apt-get install python-novaclient
+$ sudo apt-get install python-keystoneclient
+$ sudo apt-get install python-cinderclient
+$ sudo apt-get install python-swiftclient
+```    
 
-```$ sudo apt-get install python-novaclient```
-
-```$ sudo apt-get install python-keystoneclient```
-
-```$ sudo apt-get install python-cinderclient```
-
-```$ sudo apt-get install python-swiftclient```
-    
 [Top of page](#top)
 
 ### Configuring your instance to use the Openstack API
@@ -277,23 +295,24 @@ So that the new password is hardcoded into the Project_name-openrc.sh file.
 You will need to the copy that file and your ssh key file either the ssh **pem file** or the ssh **key** file that is associated with your instance
 from your local machine to your instance. Using any of the method described in  NeCTAR [support](https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm) documents. You should move your key file or pem file to your `.ssh` directory in your home directory on your instance.
 
-On your instance you will need to source the Project_name-openrc.sh file to configure your environment to authenticate access to the OpenStack services.
+On your instance you will need to source the Project_name-openrc.sh file to configure your environment
+to authenticate access to the OpenStack services.
 
 `$ source Project_name-openrc.sh`
 
 You will need to source the script before you can run any of the commands otherwise the environment is not set properly.
 
-note: If you see this 
+Gotchas: If you see this 
 
 ![](images/Pawsey_ncbi_api_8.png) 
 
-you forget to source the OpenStack RC file. 
+you have _**forgetten**_ to source the OpenStack RC file.
 
 If you source your OpenStack RC file and see this:
 
 ![](images/Pawsey_ncbi_api_9.png) 
 
-You did not edit the OpenStack RC file!
+You did not _**edit**_ the OpenStack RC file!
 
 ### Testing you API authentication
 
@@ -369,21 +388,26 @@ and the objects in your new container
 We have covered the difference between root, ephemeral, volume and object storage available through the NeCTAR research cloud 
 and what programs are used to be able to store you data correctly so that you can make effective use of you virtual machine.
 
-- The root storage is for the Operating system and you home directory. You should install all applications there and your home directory
-is should not store any data but small scripts and files.
+- **Root storage**  
+	Is for the Operating system and you home directory. You should install all applications there and your home directory is should not store any data but small scripts and files.
 
-- The ephemeral storage is your workspace so all of you analysis should be done there and you can store your local data there. Remember
-to get the right size hardware flavor.  It needs to have enough disk space for analysis to run and store any associated data.  It is your
-responsibilty to maintain and will require regular housekeeping.  Please ***delete*** files that are not needed and move important results back to
+- **Ephemeral storage**  
+	Is your workspace so all of you analysis should be done there and you can store your local data there.  
+Remember to get the right size hardware flavor.  It needs to have enough disk space for analysis to run and store any associated data.  It is your responsibilty to maintain and will require regular housekeeping.  Please ***delete*** files that are not needed and move important results back to
 either your local machine or to volume/object storage to share them with your group or the world.
 
-- The volume storage can be used for storing results, working data, or as a working directory if needed. If you have multiple researcher who
-have access to your project then you can share data via the volume storage.  It is also possible to attach more that one volume storage instance
-to your compute instance as well so you can one for input data and have a second for results.  
+- **Volume storage**  
+  Can be used for storing results, working data, or as a working directory if needed.
+If you have multiple researcher who have access to your project then you can share data
+via the volume storage. It is also possible to attach more that one volume storage
+instance to your compute instance as well so you can one volume for input data and
+have a second volume for results.
 
-- The object storage should be used for static datasets either reference ones like the NCBI-BLAST data sets or analysis results you wish to share
-with collaborators.  Static data can be downloaded easly to your volume or ephemeral storage as part of you workflow or pipeline. With an orginal
-copy in object storage you can delete it from either volume or ephemeral storage then with out having to get a new copy to your instance. 
+- **Object storage**  
+ Should be used for static datasets either reference ones like the NCBI-BLAST data sets or analysis results you wish to share
+with collaborators. Static data can be downloaded easly to your volume or ephemeral storage as part of you workflow or pipeline. 
+With an original copy in object storage you can delete it from either volume or ephemeral storage then with out having to get
+a new copy to your instance. 
 
 NOTE: There are some unresolved issues with uploading large data sets (>5GB) in to object storage. 
 Understanding how to split/merge files that are larger than 5GB and being able to manage them easily..
