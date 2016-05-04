@@ -1,6 +1,8 @@
+# Checklist
+
 ## Check-Security-01: Are you running a mail server
 
-If you want to run a mail server in NecTAR Virtual Machine, make sure it only
+If you want to run a mail server in NeCTAR Virtual Machine, make sure it only
 listens on Localhost (127.0.0.1).
 
 ## Check-Security-02: Is automatic updates enabled
