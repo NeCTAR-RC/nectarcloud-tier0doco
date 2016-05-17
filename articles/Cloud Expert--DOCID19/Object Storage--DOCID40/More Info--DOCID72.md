@@ -1,4 +1,4 @@
-## Videos
+# Videos
 
 The object storage for OpenStack was built by SwiftStack, and they have published 
 several useful videos on the [SwiftStack website][swiftstack]
@@ -10,7 +10,7 @@ This series of [swiftstack videos][os-video] provides a more thorough introducti
 You can also search [YouTube][youtube] by keywords 'object storage' or 'swift'.
 You will find that there are large amount of videos about this topic which can certainly help you. 
 
-## Documentation
+# Documentation
 
 The following documentations provides reference and guidance information for the
 Swift API:
@@ -30,22 +30,22 @@ Storage:
 
 - [Security guide for Object Storage] [os-doc3]
 
-## Books
+# Books
 
 The following book explain how to use and develop Swift Object Storage:
 
 - [OpenStack Swift Using, Administering, and Developing for Swift Object Storage][OREILLY] 
 
-## NeCTAR Support
+# NeCTAR Support
 
 If you have a problem and you cannot resolve it, you can always go to NecTAR
 [HelpDesk][helpdesk] to log a support ticket and the NeCTAR support staff are
 more than happy to help you.
 
 
-## Useful Links
+# Useful Links
 
-[SwftStack Resources][swiftstackresources]
+[SwiftStack Resources][swiftstackresources]
 
 
 [OREILLY]: http://shop.oreilly.com/product/0636920033288.do
@@ -53,7 +53,7 @@ more than happy to help you.
 [os-doc1]: http://docs.openstack.org/admin-guide-cloud/objectstorage.html
 [os-doc2]: http://docs.openstack.org/openstack-ops/content/storage_decision.html
 [os-doc3]: http://docs.openstack.org/security-guide/object-storage.html
-[os-101]: https://www.youtube.com/watch?v=LPXM0sC2TL8
+[os-101]: https://www.youtube.com/watch?v=WV-TeM78mno
 [os-video]: https://www.youtube.com/watch?v=JUXRJaZMOb0&list=PLIr7I80Leee5NpoYTd9ffNvWq0pG18CN3
 [youtube]: https://www.youtube.com/
 [swiftstack]: https://swiftstack.com/resources/videos/#
