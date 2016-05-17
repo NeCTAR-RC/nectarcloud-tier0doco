@@ -1,3 +1,5 @@
+# More Info on Object Storage
+
 ## Videos
 
 The object storage for OpenStack was built by SwiftStack, and they have published 
@@ -45,7 +47,7 @@ more than happy to help you.
 
 ## Useful Links
 
-[SwftStack Resources][swiftstackresources]
+[SwiftStack Resources][swiftstackresources]
 
 
 [OREILLY]: http://shop.oreilly.com/product/0636920033288.do
@@ -53,7 +55,7 @@ more than happy to help you.
 [os-doc1]: http://docs.openstack.org/admin-guide-cloud/objectstorage.html
 [os-doc2]: http://docs.openstack.org/openstack-ops/content/storage_decision.html
 [os-doc3]: http://docs.openstack.org/security-guide/object-storage.html
-[os-101]: https://www.youtube.com/watch?v=LPXM0sC2TL8
+[os-101]: https://www.youtube.com/watch?v=WV-TeM78mno
 [os-video]: https://www.youtube.com/watch?v=JUXRJaZMOb0&list=PLIr7I80Leee5NpoYTd9ffNvWq0pG18CN3
 [youtube]: https://www.youtube.com/
 [swiftstack]: https://swiftstack.com/resources/videos/#
