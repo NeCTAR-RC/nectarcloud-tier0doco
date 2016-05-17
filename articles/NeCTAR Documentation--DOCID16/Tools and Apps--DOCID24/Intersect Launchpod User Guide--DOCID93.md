@@ -2,7 +2,7 @@
 
 ## Description
 
-Launchpod is a tool to deploy virtual machines (VMs) on the [NeCTAR Research Cloud][nectarrc] with one of a number of preconfigured research-based software applications. Launchpod is designed to work like a wizard; it will take care of the technical aspects of spawning a VM by asking the user for the relevnt details. The software applications that can be built using Launchpod are:
+Launchpod is a tool to deploy virtual machines (VMs) on the [NeCTAR Research Cloud][nectarrc] with one of a number of preconfigured research-based software applications. Launchpod is designed to work like a wizard; it will take care of the technical aspects of spawning a VM by asking the user for the relevant details. The software applications that can be built using Launchpod are:
 
 * [Twitter Scraper][twitterscraper-doc] – a tool to harvest Twitter for hashtags, phrases, exact tweets and specific users
 * [DIVER][diver-doc] – a general purpose open source research data capture and sharing application
