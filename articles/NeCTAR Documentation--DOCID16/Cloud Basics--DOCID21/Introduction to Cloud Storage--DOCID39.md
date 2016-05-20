@@ -4,16 +4,16 @@ The NeCTAR virtual machines have many resources binded with them in order for it
 to function properly. Among these resources, storage is the fundamental component
 for both the virtual machine and user to save and use data. Virtual machines launched within the
 NeCTAR research cloud will typically use a shared storage pool to store the root and ephemeral disks
-that contain the data of the VM, the space allocated within the pool is distinct and unique.
+that contain the data of the VM; the space allocated within the pool is distinct and unique.
 
 ## On Virtual Machine Storage
 
 Each virtual machine in the NeCTAR Cloud comes with a certain amount of built-in
-storage and theseappear as two separated hard disks
-(Root Disk and Ephemeral Disk). These storage disks run off robust
-enterprise-grade storage hardware on the back. However, both storage disks are not
-suitable for long-term persistent data as data will be lost after termination or
-rebuild of a virtual machine.
+storage, appearing as two separate hard disks (Root Disk and Ephemeral Disk).
+These storage disks run off robust
+enterprise-grade storage hardware on the back-end. However, neither storage disk is
+suitable for long-term persistent storage, as data will be lost after termination or
+rebuild of the virtual machine.
 
 ### Root Disk
 
