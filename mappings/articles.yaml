@@ -1543,31 +1543,27 @@
     fd_attributes:
       article:
         art_type: 1
-        bool_01: null
         created_at: '2015-09-03T01:28:17-04:00'
-        datetime_01: null
-        delta: true
-        desc_un_html: " The NeCTAR virtual machines have many resources binded with\
-          \ them in order for it\nto function properly. Among these resources, storage\
-          \ is the fundamental component\nfor both the virtual machine and user to\
-          \ save and use data. The amount of\nstorage your virtual machine get are\
-          \ dedicated, but the underlying storage\nsystem are shared. Furthermore,\
-          \ not all storage is created equal, and Research\nCloud users have a few\
-          \ different types of storage available which differ\naccording to performance,\
-          \ persistence and data safety. \n On Virtual Machine Storage \n Each virtual\
-          \ machine in the NeCTAR Cloud comes with a certain amount of built-in\n\
-          storage and theseappear as two separated hard disks\n(Root Disk and Ephemeral\
-          \ Disk). These storage disks run off robust\nenterprise-grade storage hardware\
-          \ on the back. However, both storage disks are not\nsuitable for long-term\
-          \ persistent data as data will be lost after termination or\nrebuild of\
-          \ a virtual machine. \n Root Disk \n This storage is used for the operating\
-          \ system of the virtual machine, to boot it\ninto a functional state. It\
-          \ has a limited 10GB in size, which is the same for every\nstandard size\
-          \ of virtual machine (Small, Medium, Large, Extra Large and\nExtra Extra\
-          \ Large). The size varies for non-standard virtual machines such as\ntiny,\
-          \ which only has 5GB root storage. \n Data stored on the root storage are\
-          \ persistent until the termination or rebuild\nof the virtual machine and\
-          \ are copied during the snapshot. That means, if you\nreboot your virtual\
+        desc_un_html: " Cloud Storage \n The NeCTAR virtual machines have many resources\
+          \ binded with them in order for it\nto function properly. Among these resources,\
+          \ storage is the fundamental component\nfor both the virtual machine and\
+          \ user to save and use data. Virtual machines launched within the\nNeCTAR\
+          \ research cloud will typically use a shared storage pool to store the root\
+          \ and ephemeral disks\nthat contain the data of the VM, the space allocated\
+          \ within the pool is distinct and unique. \n On Virtual Machine Storage\
+          \ \n Each virtual machine in the NeCTAR Cloud comes with a certain amount\
+          \ of built-in\nstorage and theseappear as two separated hard disks\n(Root\
+          \ Disk and Ephemeral Disk). These storage disks run off robust\nenterprise-grade\
+          \ storage hardware on the back. However, both storage disks are not\nsuitable\
+          \ for long-term persistent data as data will be lost after termination or\n\
+          rebuild of a virtual machine. \n Root Disk \n This storage is used for the\
+          \ operating system of the virtual machine, to boot it\ninto a functional\
+          \ state. It has a limited 10GB in size, which is the same for every\nstandard\
+          \ size of virtual machine (Small, Medium, Large, Extra Large and\nExtra\
+          \ Extra Large). The size varies for non-standard virtual machines such as\n\
+          tiny, which only has 5GB root storage. \n Data stored on the root storage\
+          \ are persistent until the termination or rebuild\nof the virtual machine\
+          \ and are copied during the snapshot. That means, if you\nreboot your virtual\
           \ machine, the data remains intact and when you take a\npoint-in-time snapshot\
           \ of your virtual machine, the entire root storage is\ncopied. As the root\
           \ storage comes with fixed size and is used by the operation\nsystem, caution\
@@ -1688,156 +1684,156 @@
           \ Swift\nhaving multiple regions (some of which are Node private) some clients/APIs\n\
           require explicit configuration of a default region, which should be \"Melbourne\"\
           \nfor most users. "
-        description: "<p>The NeCTAR virtual machines have many resources binded with\
-          \ them in order for it\nto function properly. Among these resources, storage\
-          \ is the fundamental component\nfor both the virtual machine and user to\
-          \ save and use data. The amount of\nstorage your virtual machine get are\
-          \ dedicated, but the underlying storage\nsystem are shared. Furthermore,\
-          \ not all storage is created equal, and Research\nCloud users have a few\
-          \ different types of storage available which differ\naccording to performance,\
-          \ persistence and data safety.</p>\n<h2>On Virtual Machine Storage</h2>\n\
-          <p>Each virtual machine in the NeCTAR Cloud comes with a certain amount\
-          \ of built-in\nstorage and theseappear as two separated hard disks\n(Root\
-          \ Disk and Ephemeral Disk). These storage disks run off robust\nenterprise-grade\
-          \ storage hardware on the back. However, both storage disks are not\nsuitable\
-          \ for long-term persistent data as data will be lost after termination or\n\
-          rebuild of a virtual machine.</p>\n<h3>Root Disk</h3>\n<p>This storage is\
-          \ used for the operating system of the virtual machine, to boot it\ninto\
-          \ a functional state. It has a limited 10GB in size, which is the same for\
-          \ every\nstandard size of virtual machine (Small, Medium, Large, Extra Large\
-          \ and\nExtra Extra Large). The size varies for non-standard virtual machines\
-          \ such as\ntiny, which only has 5GB root storage.</p>\n<p>Data stored on\
-          \ the root storage are persistent until the termination or rebuild\nof the\
-          \ virtual machine and are copied during the snapshot. That means, if you\n\
-          reboot your virtual machine, the data remains intact and when you take a\n\
-          point-in-time snapshot of your virtual machine, the entire root storage\
-          \ is\ncopied. As the root storage comes with fixed size and is used by the\
-          \ operation\nsystem, caution need to be taken as it should not be filled\
-          \ in full. The name of\nthis disk as seen from the virtual machine is usually\
-          \ '/dev/vda'.</p>\n<h3>Ephemeral Disk</h3>\n<p>This storage appears as a\
-          \ second hard disk in your virtual machine. It is a raw\nand unformatted\
-          \ block device, that you can format and use as you wish. It varies\nin size\
-          \ according to the size of virtual machine (from 0GB to 480GB). For each\n\
-          CPU, a standard virtual machine will get 30GB of additional ephemeral storage.\n\
-          It varies in size for non-standard virtual machines. The name of this device\
-          \ as\nseen from the instance is usually '/dev/vdb' and some operating systems\
-          \ will\nautomatically format and mount the ephemeral disk. For example,\
-          \ Ubuntu creates\nan ext3 partition and mounts it at '/mnt'. For operating\
-          \ systems that don't do it\nautomatically, you can format it by executing\
-          \ <code>mkfs.ext4 /dev/vdb</code> in the command line\nand mount it by executing\
-          \ <code>mount /dev/vdb /mnt</code>. You need to have root\npermission to\
-          \ do this.</p>\n<p>Data stored on ephemeral disk are only persistent until\
-          \ the termination or\nrebuild of the virtual machine (like the root disk).\
-          \ The only difference\nis that data on the ephemeral disk are not copied\
-          \ when taking a snapshot of a virtual\nmachine, which means you cannot use\
-          \ snapshot to save data stored on ephemeral\ndisk.</p>\n<p>NOTE: At first,\
-          \ you will not be able to save information to the ephemeral disk. \nThe\
-          \ following command gives permission for the user 'ubuntu' to write to the\
-          \ ephemeral disk:</p>\n<p><code>sudo chown ubuntu /mnt</code></p>\n<h4>Backup\
-          \ of Ephemeral Disk</h4>\n<p>Data on the ephemeral disk does not get saved\
-          \ in a snapshot, and requires other\ntechniques to make a backup. Other\
-          \ forms of storage can be used such as the\nObject Store and Volume Storage\
-          \ within the Research Cloud or external locations.</p>\n<h2>Persistent Volume\
-          \ Storage</h2>\n<p>Persistent volume storage can live outside your virtual\
-          \ machine. It appears\nas block storage which can be attached then accessed\
-          \ and even booted from. This\nis a storage volume that you can attach to\
-          \ from within your virtual machine,\nread and write data, detach it, and\
-          \ make it available to another virtual machine.\nYour data on a persistent\
-          \ volume are retained even when you terminate your\nvirtual machine. Persistent\
-          \ Volumes offer a snapshot feature which can be used\nto make convenient\
-          \ backups (this uses some of your overall Persistent Volume quota).</p>\n\
-          <p>NOTE: Persistent Volumes are local services and only virtual machines\
-          \ in the\navailability zone where the persistent Volume has been created\
-          \ can access it.</p>\n<h3>How to Get Persistent Volume Storage</h3>\n<p>By\
-          \ default, there are no persistent volume storage available to your project.\n\
-          You need to make an allocation request to apply for the quantity of persistent\
-          \ volume\nstorage you require for your project. Follow these steps to submit\
-          \ a\nrequest:</p>\n<ul>\n<li>\n<p>Login to NeCTAR Cloud <a href=\"https://dashboard.rc.nectar.org.au\"\
-          >Dashboard</a></p>\n</li>\n<li>\n<p>Go to Allocations and you can either\
-          \ click 'New Request' to make a new request\n or 'My Requests' to amend\
-          \ an existing request</p>\n</li>\n<li>\n<p>Under section 'Storage Quota',\
-          \ you select 'Resource' as volume, select the\n Zone you want the storage\
-          \ to be located at (must be the same location as the instance it will be\
-          \ attached to) and enter the size in GB under 'Requested Quota'.</p>\n</li>\n\
-          <li>\n<p>Click the 'Submit' button</p>\n</li>\n</ul>\n<p>NOTE: It may take\
-          \ a while for your request to be approved.</p>\n<h3>Create a persistent\
-          \ volume storage</h3>\n<p>Once your request has been approved, your project\
-          \ should have volume storage\navailable. You need to create the volume storage\
-          \ in the NeCTAR Cloud Dashboard \nbefore you can use it.</p>\n<ul>\n<li>\n\
-          <p>Login to the NeCTAR Cloud <a href=\"https://dashboard.rc.nectar.org.au\"\
-          >Dashboard</a></p>\n</li>\n<li>\n<p>Go to 'Volumes'</p>\n</li>\n<li>\n<p>Click\
-          \ 'Create Volume' button</p>\n</li>\n<li>\n<p>Give a Volume Name and meaningful\
-          \ description</p>\n</li>\n<li>\n<p>Specify a 'Volume Source' to determine\
-          \ how the volume will be built. You can select\n 'No source empty volume'\
-          \ to create new empty volume. You can select 'image' to\n build a volume\
-          \ from a image or 'Volume' to build a volume from existing volume</p>\n\
-          </li>\n<li>\n<p>Specify the size of the volume in GB</p>\n</li>\n<li>\n\
-          <p>Enter an 'Availability Zone' (must be the same zone as the instance)</p>\n\
-          </li>\n<li>\n<p>Click 'Create Volume' button</p>\n</li>\n</ul>\n<h3>Attach\
-          \ a persistent volume storage</h3>\n<p>You can attach the volume created\
-          \ earlier to a running virtual machine. See the\nbelow instruction:</p>\n\
-          <ul>\n<li>\n<p>Login to NeCTAR Cloud <a href=\"https://dashboard.rc.nectar.org.au\"\
-          >Dashboard</a></p>\n</li>\n<li>\n<p>Go to 'Volumes'</p>\n</li>\n<li>\n<p>Click\
-          \ the action list of volume</p>\n</li>\n<li>\n<p>Click 'Edit Attachment'</p>\n\
-          </li>\n<li>\n<p>Click 'Attach to Instance' drop down list to select a virtual\
-          \ machine to\n attach the volume to.</p>\n</li>\n<li>\n<p>Click 'Attach\
-          \ Volume' button</p>\n</li>\n</ul>\n<h3>Use Persistent Volume Storage in\
-          \ Virtual Machine</h3>\n<p>For a standard flavor virtual machine the persistent\
-          \ volume will be attached\nas '/dev/vdc'. </p>\n<p>A new volume may not\
-          \ have a file system (depending on how it was created) and\nyou need to\
-          \ create one before mounting.</p>\n<p>The exact mount command syntax is\
-          \ dependent on the virtual machine' operating\nsystem and the type of file\
-          \ system you require.</p>\n<p>You can use below command to create file system\
-          \ on the new volume:\n<code>sudo mkfs.ext4 /dev/vdc</code></p>\n<p>WARNING:\
-          \ This can cause data loss if a file system already exists on the target\n\
-          Volume.</p>\n<p>You can use below command to mount the volume (choose any\
-          \ volume-name).</p>\n<p><code>sudo mkdir /volume_name</code></p>\n<p><code>sudo\
-          \ mount /dev/vdc /volume_name -t auto</code></p>\n<p>NOTE: At first, you\
-          \ will not be able to save information to the ephemeral disk. \nThe following\
-          \ command gives permission for the user 'ubuntu' to write to the ephemeral\
-          \ disk:</p>\n<p><code>sudo chown ubuntu /mnt</code></p>\n<p>Notes:\nVolumes\
-          \ must be detached before deletion.</p>\n<h2>Check your Storage</h2>\n<p>Here\
-          \ are some commands that can allow you to look at your mounted storage blocks\n\
-          and keep track of their usage:</p>\n<p><code>lsblk -l</code>  for info :\
-          \ <code>man lsblk</code></p>\n<p><code>df -hT</code>  for info : <code>man\
-          \ df</code></p>\n<p><code>du -h &lt;path/to/directory&gt;</code>  for info\
-          \ : <code>man du</code></p>\n<h2>Object Storage</h2>\n<p>The NeCTAR Cloud\
-          \ Object Storage is not a traditional file system, but rather a\ndistributed\
-          \ storage system for static data such as virtual machine images,\nphoto\
-          \ storage, email storage, backups and archives. Having no central \"brain\"\
-          \ or\nmaster point of control provides greater scalability, redundancy and\
-          \ durability.\nWhen you put a file in the NeCTAR Cloud Object Store, 3 copies\
-          \ of your data are\ndistributed to different hardware for extra data safety\
-          \ and performance.</p>\n<p>Think about that dataset comprised of 2GB files\
-          \ that you read in and analyse\nmany times, but in general it doesn't change.\
-          \ Or the images you want to use on\nthe cloud. Those are a couple examples\
-          \ of perfect data for Object Storage.\nObjects are written to multiple hardware\
-          \ devices in the data center to ensure\nintegrity, and great performance!</p>\n\
-          <p>In general, the object store is great for data you write once and read\
-          \ many\ntimes, but not suitable for applications like databases. It's the\
-          \ safest place\nto put your data on the NeCTAR Research Cloud as multiple\
-          \ redundant copies of\nyour data are made, and it has great performance.\
-          \ You can access the object\nstore from anywhere on the Internet, and data\
-          \ from Object Storage can be\ntransferred to and from your virtual machine\
-          \ with a variety of http-capable\ntools.</p>\n<p>Object Storage is completely\
-          \ decoupled from your virtual machine, so even if you\nreboot, delete or\
-          \ crash your virtual machine, your Object Storage files will\nremain safe\
-          \ (unless you remove them yourself). Object Storage persists\nindependently\
-          \ of the life of an instance.</p>\n<h3>Swift</h3>\n<p>Swift is the component\
-          \ that provides object storage for OpenStack. With your\ncredentials and\
-          \ via a URL you can request Swift to reserve &amp; create storage\n(called\
-          \ containers or buckets). Files (known as objects when stored in Swift)\n\
-          can then be uploaded and accessed similarly by your running virtual machines.</p>\n\
-          <p>The NeCTAR implementation of Swift is geodistributed across Nodes of\
-          \ the NeCTAR\nCloud so that availability does not rely on any one data center\
-          \ or network\ninfrastructure. Each collection of Swift nodes/hardware is\
-          \ known as a region,\nwhich may or may not include a Swift proxy server\
-          \ (the Internet facing and\nserving component of Swift). With some Swift\
-          \ clients/APIs users can explicitly\nchose which proxy to connect to, this\
-          \ might be useful e.g. for speeding up\nwrites to object storage by choosing\
-          \ the nearest proxy. Due to NeCTAR's Swift\nhaving multiple regions (some\
-          \ of which are Node private) some clients/APIs\nrequire explicit configuration\
-          \ of a default region, which should be \"Melbourne\"\nfor most users.</p>"
+        description: "<h1>Cloud Storage</h1>\n<p>The NeCTAR virtual machines have\
+          \ many resources binded with them in order for it\nto function properly.\
+          \ Among these resources, storage is the fundamental component\nfor both\
+          \ the virtual machine and user to save and use data. Virtual machines launched\
+          \ within the\nNeCTAR research cloud will typically use a shared storage\
+          \ pool to store the root and ephemeral disks\nthat contain the data of the\
+          \ VM, the space allocated within the pool is distinct and unique.</p>\n\
+          <h2>On Virtual Machine Storage</h2>\n<p>Each virtual machine in the NeCTAR\
+          \ Cloud comes with a certain amount of built-in\nstorage and theseappear\
+          \ as two separated hard disks\n(Root Disk and Ephemeral Disk). These storage\
+          \ disks run off robust\nenterprise-grade storage hardware on the back. However,\
+          \ both storage disks are not\nsuitable for long-term persistent data as\
+          \ data will be lost after termination or\nrebuild of a virtual machine.</p>\n\
+          <h3>Root Disk</h3>\n<p>This storage is used for the operating system of\
+          \ the virtual machine, to boot it\ninto a functional state. It has a limited\
+          \ 10GB in size, which is the same for every\nstandard size of virtual machine\
+          \ (Small, Medium, Large, Extra Large and\nExtra Extra Large). The size varies\
+          \ for non-standard virtual machines such as\ntiny, which only has 5GB root\
+          \ storage.</p>\n<p>Data stored on the root storage are persistent until\
+          \ the termination or rebuild\nof the virtual machine and are copied during\
+          \ the snapshot. That means, if you\nreboot your virtual machine, the data\
+          \ remains intact and when you take a\npoint-in-time snapshot of your virtual\
+          \ machine, the entire root storage is\ncopied. As the root storage comes\
+          \ with fixed size and is used by the operation\nsystem, caution need to\
+          \ be taken as it should not be filled in full. The name of\nthis disk as\
+          \ seen from the virtual machine is usually '/dev/vda'.</p>\n<h3>Ephemeral\
+          \ Disk</h3>\n<p>This storage appears as a second hard disk in your virtual\
+          \ machine. It is a raw\nand unformatted block device, that you can format\
+          \ and use as you wish. It varies\nin size according to the size of virtual\
+          \ machine (from 0GB to 480GB). For each\nCPU, a standard virtual machine\
+          \ will get 30GB of additional ephemeral storage.\nIt varies in size for\
+          \ non-standard virtual machines. The name of this device as\nseen from the\
+          \ instance is usually '/dev/vdb' and some operating systems will\nautomatically\
+          \ format and mount the ephemeral disk. For example, Ubuntu creates\nan ext3\
+          \ partition and mounts it at '/mnt'. For operating systems that don't do\
+          \ it\nautomatically, you can format it by executing <code>mkfs.ext4 /dev/vdb</code>\
+          \ in the command line\nand mount it by executing <code>mount /dev/vdb /mnt</code>.\
+          \ You need to have root\npermission to do this.</p>\n<p>Data stored on ephemeral\
+          \ disk are only persistent until the termination or\nrebuild of the virtual\
+          \ machine (like the root disk). The only difference\nis that data on the\
+          \ ephemeral disk are not copied when taking a snapshot of a virtual\nmachine,\
+          \ which means you cannot use snapshot to save data stored on ephemeral\n\
+          disk.</p>\n<p>NOTE: At first, you will not be able to save information to\
+          \ the ephemeral disk. \nThe following command gives permission for the user\
+          \ 'ubuntu' to write to the ephemeral disk:</p>\n<p><code>sudo chown ubuntu\
+          \ /mnt</code></p>\n<h4>Backup of Ephemeral Disk</h4>\n<p>Data on the ephemeral\
+          \ disk does not get saved in a snapshot, and requires other\ntechniques\
+          \ to make a backup. Other forms of storage can be used such as the\nObject\
+          \ Store and Volume Storage within the Research Cloud or external locations.</p>\n\
+          <h2>Persistent Volume Storage</h2>\n<p>Persistent volume storage can live\
+          \ outside your virtual machine. It appears\nas block storage which can be\
+          \ attached then accessed and even booted from. This\nis a storage volume\
+          \ that you can attach to from within your virtual machine,\nread and write\
+          \ data, detach it, and make it available to another virtual machine.\nYour\
+          \ data on a persistent volume are retained even when you terminate your\n\
+          virtual machine. Persistent Volumes offer a snapshot feature which can be\
+          \ used\nto make convenient backups (this uses some of your overall Persistent\
+          \ Volume quota).</p>\n<p>NOTE: Persistent Volumes are local services and\
+          \ only virtual machines in the\navailability zone where the persistent Volume\
+          \ has been created can access it.</p>\n<h3>How to Get Persistent Volume\
+          \ Storage</h3>\n<p>By default, there are no persistent volume storage available\
+          \ to your project.\nYou need to make an allocation request to apply for\
+          \ the quantity of persistent volume\nstorage you require for your project.\
+          \ Follow these steps to submit a\nrequest:</p>\n<ul>\n<li>\n<p>Login to\
+          \ NeCTAR Cloud <a href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n\
+          </li>\n<li>\n<p>Go to Allocations and you can either click 'New Request'\
+          \ to make a new request\n or 'My Requests' to amend an existing request</p>\n\
+          </li>\n<li>\n<p>Under section 'Storage Quota', you select 'Resource' as\
+          \ volume, select the\n Zone you want the storage to be located at (must\
+          \ be the same location as the instance it will be attached to) and enter\
+          \ the size in GB under 'Requested Quota'.</p>\n</li>\n<li>\n<p>Click the\
+          \ 'Submit' button</p>\n</li>\n</ul>\n<p>NOTE: It may take a while for your\
+          \ request to be approved.</p>\n<h3>Create a persistent volume storage</h3>\n\
+          <p>Once your request has been approved, your project should have volume\
+          \ storage\navailable. You need to create the volume storage in the NeCTAR\
+          \ Cloud Dashboard \nbefore you can use it.</p>\n<ul>\n<li>\n<p>Login to\
+          \ the NeCTAR Cloud <a href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n\
+          </li>\n<li>\n<p>Go to 'Volumes'</p>\n</li>\n<li>\n<p>Click 'Create Volume'\
+          \ button</p>\n</li>\n<li>\n<p>Give a Volume Name and meaningful description</p>\n\
+          </li>\n<li>\n<p>Specify a 'Volume Source' to determine how the volume will\
+          \ be built. You can select\n 'No source empty volume' to create new empty\
+          \ volume. You can select 'image' to\n build a volume from a image or 'Volume'\
+          \ to build a volume from existing volume</p>\n</li>\n<li>\n<p>Specify the\
+          \ size of the volume in GB</p>\n</li>\n<li>\n<p>Enter an 'Availability Zone'\
+          \ (must be the same zone as the instance)</p>\n</li>\n<li>\n<p>Click 'Create\
+          \ Volume' button</p>\n</li>\n</ul>\n<h3>Attach a persistent volume storage</h3>\n\
+          <p>You can attach the volume created earlier to a running virtual machine.\
+          \ See the\nbelow instruction:</p>\n<ul>\n<li>\n<p>Login to NeCTAR Cloud\
+          \ <a href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n</li>\n\
+          <li>\n<p>Go to 'Volumes'</p>\n</li>\n<li>\n<p>Click the action list of volume</p>\n\
+          </li>\n<li>\n<p>Click 'Edit Attachment'</p>\n</li>\n<li>\n<p>Click 'Attach\
+          \ to Instance' drop down list to select a virtual machine to\n attach the\
+          \ volume to.</p>\n</li>\n<li>\n<p>Click 'Attach Volume' button</p>\n</li>\n\
+          </ul>\n<h3>Use Persistent Volume Storage in Virtual Machine</h3>\n<p>For\
+          \ a standard flavor virtual machine the persistent volume will be attached\n\
+          as '/dev/vdc'. </p>\n<p>A new volume may not have a file system (depending\
+          \ on how it was created) and\nyou need to create one before mounting.</p>\n\
+          <p>The exact mount command syntax is dependent on the virtual machine' operating\n\
+          system and the type of file system you require.</p>\n<p>You can use below\
+          \ command to create file system on the new volume:\n<code>sudo mkfs.ext4\
+          \ /dev/vdc</code></p>\n<p>WARNING: This can cause data loss if a file system\
+          \ already exists on the target\nVolume.</p>\n<p>You can use below command\
+          \ to mount the volume (choose any volume-name).</p>\n<p><code>sudo mkdir\
+          \ /volume_name</code></p>\n<p><code>sudo mount /dev/vdc /volume_name -t\
+          \ auto</code></p>\n<p>NOTE: At first, you will not be able to save information\
+          \ to the ephemeral disk. \nThe following command gives permission for the\
+          \ user 'ubuntu' to write to the ephemeral disk:</p>\n<p><code>sudo chown\
+          \ ubuntu /mnt</code></p>\n<p>Notes:\nVolumes must be detached before deletion.</p>\n\
+          <h2>Check your Storage</h2>\n<p>Here are some commands that can allow you\
+          \ to look at your mounted storage blocks\nand keep track of their usage:</p>\n\
+          <p><code>lsblk -l</code>  for info : <code>man lsblk</code></p>\n<p><code>df\
+          \ -hT</code>  for info : <code>man df</code></p>\n<p><code>du -h &lt;path/to/directory&gt;</code>\
+          \  for info : <code>man du</code></p>\n<h2>Object Storage</h2>\n<p>The NeCTAR\
+          \ Cloud Object Storage is not a traditional file system, but rather a\n\
+          distributed storage system for static data such as virtual machine images,\n\
+          photo storage, email storage, backups and archives. Having no central \"\
+          brain\" or\nmaster point of control provides greater scalability, redundancy\
+          \ and durability.\nWhen you put a file in the NeCTAR Cloud Object Store,\
+          \ 3 copies of your data are\ndistributed to different hardware for extra\
+          \ data safety and performance.</p>\n<p>Think about that dataset comprised\
+          \ of 2GB files that you read in and analyse\nmany times, but in general\
+          \ it doesn't change. Or the images you want to use on\nthe cloud. Those\
+          \ are a couple examples of perfect data for Object Storage.\nObjects are\
+          \ written to multiple hardware devices in the data center to ensure\nintegrity,\
+          \ and great performance!</p>\n<p>In general, the object store is great for\
+          \ data you write once and read many\ntimes, but not suitable for applications\
+          \ like databases. It's the safest place\nto put your data on the NeCTAR\
+          \ Research Cloud as multiple redundant copies of\nyour data are made, and\
+          \ it has great performance. You can access the object\nstore from anywhere\
+          \ on the Internet, and data from Object Storage can be\ntransferred to and\
+          \ from your virtual machine with a variety of http-capable\ntools.</p>\n\
+          <p>Object Storage is completely decoupled from your virtual machine, so\
+          \ even if you\nreboot, delete or crash your virtual machine, your Object\
+          \ Storage files will\nremain safe (unless you remove them yourself). Object\
+          \ Storage persists\nindependently of the life of an instance.</p>\n<h3>Swift</h3>\n\
+          <p>Swift is the component that provides object storage for OpenStack. With\
+          \ your\ncredentials and via a URL you can request Swift to reserve &amp;\
+          \ create storage\n(called containers or buckets). Files (known as objects\
+          \ when stored in Swift)\ncan then be uploaded and accessed similarly by\
+          \ your running virtual machines.</p>\n<p>The NeCTAR implementation of Swift\
+          \ is geodistributed across Nodes of the NeCTAR\nCloud so that availability\
+          \ does not rely on any one data center or network\ninfrastructure. Each\
+          \ collection of Swift nodes/hardware is known as a region,\nwhich may or\
+          \ may not include a Swift proxy server (the Internet facing and\nserving\
+          \ component of Swift). With some Swift clients/APIs users can explicitly\n\
+          chose which proxy to connect to, this might be useful e.g. for speeding\
+          \ up\nwrites to object storage by choosing the nearest proxy. Due to NeCTAR's\
+          \ Swift\nhaving multiple regions (some of which are Node private) some clients/APIs\n\
+          require explicit configuration of a default region, which should be \"Melbourne\"\
+          \nfor most users.</p>"
         folder:
           category_id: 6000122278
           created_at: '2015-09-03T01:28:04-04:00'
@@ -1852,38 +1848,30 @@
           updated_at: '2015-10-08T21:02:17-04:00'
           visibility: 1
         folder_id: 6000190150
-        hits: 18
+        hits: 514
         id: 6000055382
-        int_01: null
-        int_02: null
-        int_03: null
-        language_id: 6
-        modified_at: '2015-11-02T18:56:03-05:00'
+        modified_at: '2016-05-20T01:24:14-04:00'
         modified_by: null
-        outdated: false
-        parent_id: 6000055382
-        position: 6
+        position: 9
         seo_data: {}
         status: 2
-        string_01: null
-        string_02: null
         tags: []
         thumbs_down: 0
-        thumbs_up: 0
+        thumbs_up: 3
         title: Introduction to Cloud Storage
-        updated_at: '2015-11-02T18:56:03-05:00'
+        updated_at: '2016-05-20T01:24:14-04:00'
         user_id: 6002464727
-  html: "<p>The NeCTAR virtual machines have many resources binded with them in order\
-    \ for it\nto function properly. Among these resources, storage is the fundamental\
-    \ component\nfor both the virtual machine and user to save and use data. The amount\
-    \ of\nstorage your virtual machine get are dedicated, but the underlying storage\n\
-    system are shared. Furthermore, not all storage is created equal, and Research\n\
-    Cloud users have a few different types of storage available which differ\naccording\
-    \ to performance, persistence and data safety.</p>\n<h2>On Virtual Machine Storage</h2>\n\
-    <p>Each virtual machine in the NeCTAR Cloud comes with a certain amount of built-in\n\
-    storage and theseappear as two separated hard disks\n(Root Disk and Ephemeral\
-    \ Disk). These storage disks run off robust\nenterprise-grade storage hardware\
-    \ on the back. However, both storage disks are not\nsuitable for long-term persistent\
+  html: "<h1>Cloud Storage</h1>\n<p>The NeCTAR virtual machines have many resources\
+    \ binded with them in order for it\nto function properly. Among these resources,\
+    \ storage is the fundamental component\nfor both the virtual machine and user\
+    \ to save and use data. Virtual machines launched within the\nNeCTAR research\
+    \ cloud will typically use a shared storage pool to store the root and ephemeral\
+    \ disks\nthat contain the data of the VM, the space allocated within the pool\
+    \ is distinct and unique.</p>\n<h2>On Virtual Machine Storage</h2>\n<p>Each virtual\
+    \ machine in the NeCTAR Cloud comes with a certain amount of built-in\nstorage\
+    \ and theseappear as two separated hard disks\n(Root Disk and Ephemeral Disk).\
+    \ These storage disks run off robust\nenterprise-grade storage hardware on the\
+    \ back. However, both storage disks are not\nsuitable for long-term persistent\
     \ data as data will be lost after termination or\nrebuild of a virtual machine.</p>\n\
     <h3>Root Disk</h3>\n<p>This storage is used for the operating system of the virtual\
     \ machine, to boot it\ninto a functional state. It has a limited 10GB in size,\
@@ -2012,7 +2000,7 @@
     \ (some of which are Node private) some clients/APIs\nrequire explicit configuration\
     \ of a default region, which should be \"Melbourne\"\nfor most users.</p>"
   parent: 21
-  sha1: cefb5447304e6dde5e59187590e25598103cc923
+  sha1: 5cb5d869cf2f2b3da7c83d662a06d660b6919645
   title: Introduction to Cloud Storage
 46:
   freshdesk:
