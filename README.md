@@ -64,12 +64,12 @@ is extensively documented at the git website already so we haven't bothered
 trying to replicate it here.
 
 
-
 ## How to contribute <a name='How'></a>
 
-For the uninitiated, the initial setup may seem daunting; there are several new
-tools and concepts to learn.  Some or all of these tools you may have used
-before, so hopefully you're not starting from scratch :).  But once you are
+If you haven't contributed to a GitHub repository under Gerrit review before,
+the initial setup may seem a little daunting; there are several new
+tools and concepts to learn. Some or all of these tools you may have used
+before, so hopefully you're not starting from scratch :). But once you are
 up to speed you can create documentation and contribute code across the entire
 NeCTAR project.
 
@@ -78,21 +78,21 @@ If you get stuck talk to the nectar docs team or ask on the #nectar IRC channel
 
 ### Initial setup  <a name='Initial'></a>
 
-You need to understand basic concepts around
+You need to understand the basics of:
 
 - operating a computer via the command line.
 
-- [git and branching](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
+- [Git and branching](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
 
-- writing documentation for github in [github flavoured markdown](https://help.github.com/articles/github-flavored-markdown/);
+- writing documentation using [GitHub flavoured markdown](https://help.github.com/articles/github-flavored-markdown/);
 
-- using ssh-keygen, as you will need a new set for `git review`.
+- using `ssh-keygen`, as you will need a new set for `git review`.
 
 and then finally, you'll need to become familiar with
 
-- the git code review platform [Gerrit](https://code.google.com/p/Gerrit/);
+- [Gerrit](https://code.google.com/p/Gerrit/), the git reviewing platform;
 
-- [github](https://github.com/about); hosts thousands of git repositories
+- [GitHub](https://github.com/about); hosts thousands of git repositories
 
 Now don't worry too much, this README is aimed at taking the pain away from
 learning all of that and intends to provide step by step instructions to guide
@@ -105,52 +105,48 @@ document.
 
 ## Access the the NeCTAR-RC/nectarcloud-tier0doco repository
 
-You will need to create an account on github if you don't already have one.
+You need to install, register for or have access to the following tools, accounts and privileges;
 
-- Email [Sarah Nisbet](mailto:sarah.nisbet@ersa.edu.au) with your github username to be added as a member to the nectarcloud-teir0doco project
+- If you don't already have a GitHub account, create one [here](https://github.com/join).
 
-Initially you will need to install (or have access to) and setup the following tools;
+- Email [Nick Golovachenko](mailto:nick.golovachenko@nectar.org.au) your GitHub username requesting access privileges as a contributor to the _nectarcloud-tier0doco_ project
 
-- The leading distributed version control system [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), the leading distributed version control system 
 
-- The git plugin for Gerrit [git-review](https://www.mediawiki.org/wiki/Gerrit/git-review)
+- Install [git-review](https://www.mediawiki.org/wiki/Gerrit/git-review), the git plugin for Gerrit 
 
-- a launchpad id to authenticate yourself to Gerrit 
-  
-  - [launchpad login](https://login.launchpad.net/)
-  - [Gerrit login](https://review.rc.nectar.org.au/login)
-  - create a new set of ssh keys using `ssh-keygen -t rsa -f my_gerrit.key` then copy both files to your $HOME/.ssh directory. 
-    This is needed for a passwordless login for the `git review`   
-  - Once you are able to login to the Gerrit via launchpad you will need to create a Gerrit "username" and add the new set of 
-    ssh keys. This is done within your account/profile settings
+- Create a new ssh keypair using `ssh-keygen -t rsa -f my_gerrit.key` then copy both files to your `$HOME/.ssh` directory. You need this for passwordless use of the `git review` command
+
+- If you don't already have one, register for a Launchpad id (you need this to access Gerrit)
+
+  - Get a [launchpad login here](https://login.launchpad.net/)
+  - Use your Launchpad ID to [log in to Gerrit here](https://review.rc.nectar.org.au/login)
+
+- Create a Gerrit "username" and add the new set of ssh keys. This is done within your account/profile settings
 
 ![](images/Gerrit_settings1.png)
 
-- add a username `Look_ma_Im_using_Gerrit`
+- Add a username `Look_ma_Im_using_Gerrit`
 
 ![](images/Gerrit_username.png)
 
-- click on the Add Key button and copy your `my_gerrit.key.pub` into the field provided.
+- Click on the Add Key button and copy your `my_gerrit.key.pub` into the field provided.
 
 ![](images/Gerrit_ssh-key.png)
 
-- Test `git-review` by using the ssh -p 29418 `Look_Ma_Im_using_Gerrit@review.rc.nectar.org.au`
+- Test `git-review` by using the command `ssh -p 29418 Look_Ma_Im_using_Gerrit@review.rc.nectar.org.au`
   - if successful you should get back somthing like this....
   
-  `****    Welcome to Gerrit Code Review    ****`
+```****    Welcome to Gerrit Code Review    ****
+Hi Chris Bording, you have successfully connected over SSH.
 
-  `Hi Chris Bording, you have successfully connected over SSH.`
+Unfortunately, interactive shells are disabled.
+To clone a hosted Git repository, use:
 
-  `Unfortunately, interactive shells are disabled.`
-  ` To clone a hosted Git repository, use:`
+git clone ssh://Look_ma_Im_using_Gerrit@review.rc.nectar.org.au:29418/REPOSITORY_NAME.git
 
-  `git clone ssh://Look_ma_Im_using_Gerrit@review.rc.nectar.org.au:29418/REPOSITORY_NAME.git`
-
-  `Connection to review.rc.nectar.org.au closed.`
-  
-   
-- email, text editors and other such things.
-
+Connection to review.rc.nectar.org.au closed.
+```
 
 ## Github, Gerrit and the documentation workflow <a name='Github'></a>
 
