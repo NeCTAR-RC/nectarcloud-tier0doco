@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bad4c104_7d7c4521",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cloud Basics--DOCID21/Security Compromise Checklist--DOCID95.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-05-23T02:17:06Z",
+      "side": 1,
+      "message": "should be \"localhost\" (small L)",
+      "range": {
+        "startLine": 7,
+        "startChar": 89,
+        "endLine": 7,
+        "endChar": 98
+      },
+      "revId": "611b627c082696de7c62009d964443b646d42f9e",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_9d790932",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cloud Basics--DOCID21/Security Compromise Checklist--DOCID95.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-05-23T02:17:06Z",
+      "side": 1,
+      "message": "i feel like this should have some references, preferably some info on doing this for NeCTAR Images and at boot with cloud-init",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 65
+      },
+      "revId": "611b627c082696de7c62009d964443b646d42f9e",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_1d95f932",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cloud Basics--DOCID21/Security Compromise Checklist--DOCID95.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-05-23T02:17:06Z",
+      "side": 1,
+      "message": "\"...and disable password passed login (see reference ...).\"",
+      "range": {
+        "startLine": 39,
+        "startChar": 164,
+        "endLine": 39,
+        "endChar": 180
+      },
+      "revId": "611b627c082696de7c62009d964443b646d42f9e",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_5d9f8152",
+        "filename": "articles/NeCTAR Documentation--DOCID16/Cloud Basics--DOCID21/Security Compromise Checklist--DOCID95.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-05-23T02:17:06Z",
+      "side": 1,
+      "message": "This is crappy advice that might give users the illusion of security without actually materially improving it. Simply disabling password login and using a brute-force banner is all that\u0027s required.",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 63
+      },
+      "revId": "611b627c082696de7c62009d964443b646d42f9e",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
