@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bad4c104_0364ba20",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2016-05-24T23:48:03Z",
+      "side": 1,
+      "message": "should this be indented?",
+      "range": {
+        "startLine": 114,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 3
+      },
+      "revId": "7647d153744a4a789d710b9a812b6314ae54d78a",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_436ec202",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2016-05-24T23:48:03Z",
+      "side": 1,
+      "message": "We don\u0027t need to create a new key if one already exists. This can make things more confusing for new users.\n\nWould recommend a passphrase on the key!",
+      "range": {
+        "startLine": 118,
+        "startChar": 0,
+        "endLine": 119,
+        "endChar": 86
+      },
+      "revId": "7647d153744a4a789d710b9a812b6314ae54d78a",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
