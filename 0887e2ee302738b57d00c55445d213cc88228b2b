@@ -53,6 +53,29 @@
     },
     {
       "key": {
+        "uuid": "bad4c104_f5ff89ff",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2016-05-25T06:04:28Z",
+      "side": 1,
+      "message": "Swap unnecessary personal data for generic placeholder username?",
+      "range": {
+        "startLine": 148,
+        "startChar": 6,
+        "endLine": 148,
+        "endChar": 19
+      },
+      "revId": "0887e2ee302738b57d00c55445d213cc88228b2b",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bad4c104_95c1dd82",
         "filename": "README.md",
         "patchSetId": 5
