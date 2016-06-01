@@ -9,7 +9,7 @@
      - [Initial setup](#Initial)  
   - [Github, Gerrit and the documentation workflow](#Github)  
      - [Workflow step by step](#Workflow)  
-        - [Cloning the project from github](#Cloning)  
+        - [Cloning the project from GitHub](#Cloning)  
            - [The project directory structure](#The)  
               - [What are those --DOCID things](#What)  
            - [Making some changes](#Making)  
@@ -31,7 +31,7 @@
 This repository contains documentation aimed at Tier 0 (self help) users of the
 NeCTAR Research Cloud.  This repository is the master location for
 documentation, content added here (by means of the workflows below) will be
-visible not only on github, but at other places as well.
+visible not only on GitHub, but at other places as well.
 
 The purpose of this README is to give potential documentation writers (or
 "contributors") a primer on the systems and workflows we use to produce the
@@ -93,8 +93,6 @@ and then finally, you'll need to become familiar with
 
 - [Gerrit](https://code.google.com/p/Gerrit/), the git reviewing platform;
 
-- [GitHub](https://github.com/about); hosts thousands of git repositories
-
 Now don't worry too much, this README is aimed at taking the pain away from
 learning all of that and intends to provide step by step instructions to guide
 you along the way.
@@ -107,8 +105,6 @@ document.
 ## Access the the NeCTAR-RC/nectarcloud-tier0doco repository
 
 You need to install, register for or have access to the following tools, accounts and privileges;
-
-- If you don't already have a GitHub account, create one [here](https://github.com/join).
 
 - Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), the leading
   distributed version control system
@@ -155,18 +151,23 @@ You need to install, register for or have access to the following tools, account
   `Connection to review.rc.nectar.org.au closed.`
 
 
-- Email [Nick Golovachenko](mailto:nick.golovachenko@nectar.org.au) your GitHub username requesting 
-  access privileges as a contributor to the _nectarcloud-tier0doco_ project
+- Email [Nick Golovachenko](mailto:nick.golovachenko@nectar.org.au) your Gerrit username
+  ("Look_ma_Im_using_Gerrit" in the example above) requesting access privileges as a contributor
+  to the _nectarcloud-tier0doco_ project
 
 
 ## Github, Gerrit and the documentation workflow <a name='Github'></a>
 
-Unlike other github projects, you can't edit the NeCTAR content directly on
-github.  This is because we use Gerrit to do the peer review and checking of
-content _before it is uploaded_ to github.  That may seem odd, but github
+Unlike other GitHub projects, you can't edit the NeCTAR content directly on
+GitHub.  This is because we use Gerrit to do the peer review and checking of
+content _before it is uploaded_ to GitHub.  That may seem odd, but GitHub
 doesn't offer a sophisticated enough review system, so for that we use Gerrit.
- Gerrit sits between you and github.  To make it a little clearer, documentation
- (or content) in this project follows this workflow;
+Gerrit sits between you and GitHub.  To make it a little clearer, documentation
+(or content) in this project follows this workflow;
+
+You don't have to have or create your own GitHub account. There are some small benefits if you do,
+but it is not required. (Notably: if your git email address corresponds with your GitHub email address,
+then GitHub will attribute your contributions to you)
 
      +-----------------+
      |                 |                                   Content is visible
@@ -175,7 +176,7 @@ doesn't offer a sophisticated enough review system, so for that we use Gerrit.
      |  to their       |<----------------|            |    computer to edit it
      |  computer       |                 |  New doco  |             +
      |                 |         +------>+  Appears   | ------------+
-     +-+---------------+         |       |  on github |
+     +-+---------------+         |       |  on GitHub |
        |                         |       |            |
        |          +--------------+-+     +------+-----+
        |          |                |            |
@@ -202,7 +203,7 @@ doesn't offer a sophisticated enough review system, so for that we use Gerrit.
 
 Take your time and read through this slowly, don't be afraid to ask for help :).
 
-#### Cloning the project from github <a name='Cloning'></a>
+#### Cloning the project from GitHub <a name='Cloning'></a>
 
 Firstly you need to clone the whole documentation project from Gerrit down to
 your own computer so you can make changes to it.
@@ -220,7 +221,7 @@ your own computer so you can make changes to it.
 - Open the newly created nectarcloud-tier0doco directory and see what's in it.
 
 [Further documentation on cloning repositories](https://help.github.com/articles/cloning-a-repository/)
- can be found at github.
+ can be found at GitHub.
 
 ##### The project directory structure <a name='The'></a>
 
@@ -289,7 +290,7 @@ it may get moved elsewhere after that, but it's a good start.
 ##### Some words about markdown <a name='Some'></a>
 
 This README and also the documentation committed to this project were all
-created in github flavoured markdown. Markdown is just a way of making plain
+created in GitHub flavoured markdown. Markdown is just a way of making plain
 text appear as structured formatted rich text.  A simple example is by adding
 a # to the start of a line in markdown makes that line appear as a heading;
 
@@ -300,19 +301,19 @@ a # to the start of a line in markdown makes that line appear as a heading;
 There are heaps and heaps of ways of controlling the look and feel of your
 content via markdown.  But Jenkins (we'll talk about him later) will be quite
 fussy about how your format your markdown.  So while the best bet is to review
-the official documentation on [github flavoured markdown](https://help.github.com/articles/github-flavored-markdown/).
+the official documentation on [GitHub flavoured markdown](https://help.github.com/articles/github-flavored-markdown/).
 just be aware, that what you produce will be tightly controlled by Jenkins.
 
 New users may struggle with markdown, because unlike a word processor you don't
 get to see exactly how your content will appear to readers.  That's because
-github renders your markdown into HTML moments before readers see it.  It's
+GitHub renders your markdown into HTML moments before readers see it.  It's
 exactly the same as as when writing in other markup languages such as HTML.
 
-One thing to note is that github flavoured markdown will treat carriage returns
-in an interesting way.  Carriage returns are ignored by github unless they come
+One thing to note is that GitHub flavoured markdown will treat carriage returns
+in an interesting way.  Carriage returns are ignored by GitHub unless they come
 in a pair.   That means that the carriage return at the end of a line is ignored
 , but if it is followed immediately by another carraige return at the end of a
-paragraph, then github will render your text as a paragraph.
+paragraph, then GitHub will render your text as a paragraph.
 
 *It is* possible to render your markdown locally, which is invaluable if you're
 creating content and you do care about how it appears to end users.  This is
@@ -418,11 +419,11 @@ paragraph underneath.
 
     `git review`
 
-Why not `git push`?  Good question.  Because we're not pushing back to github,
+Why not `git push`?  Good question.  Because we're not pushing back to GitHub,
 we're having our commit reviewed by Gerrit.  If Gerrit and others think your
-commit is ok, then (and only then) Gerrit will push to github for you.  You
-can't push directly to github yourself because only Gerrit is authorized to
-push to the nectar github repository.
+commit is ok, then (and only then) Gerrit will push to GitHub for you.  You
+can't push directly to GitHub yourself because only Gerrit is authorized to
+push to the nectar GitHub repository.
 
 For further information on making changes to NeCTAR repositories using git
 review, [please refer to the NeCTAR wiki](https://wiki.rc.nectar.org.au/wiki/ChangeWorkflow#Making_changes.)
@@ -501,7 +502,7 @@ Jenkins - will have their suggestions, and you will need to satisfy them as well
 so that your content can finally be accepted.
 
 You need two +1 votes (or one +2) for your change to be accepted, merged and to
- appear back at github.
+appear back at GitHub.
 
  This can take time.  This README has currently been submitted a dozen times
  already.  Apparently some commits in the OpenStack tree can take over 50
