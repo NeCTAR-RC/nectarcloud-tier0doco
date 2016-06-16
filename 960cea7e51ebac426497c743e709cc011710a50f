@@ -25,6 +25,76 @@
     },
     {
       "key": {
+        "uuid": "bad4c104_ac83f302",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-06-16T07:02:02Z",
+      "side": 1,
+      "message": "define/reference?",
+      "range": {
+        "startLine": 3,
+        "startChar": 64,
+        "endLine": 3,
+        "endChar": 67
+      },
+      "revId": "960cea7e51ebac426497c743e709cc011710a50f",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_2ca0c39e",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-06-16T07:02:02Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "bad4c104_0c1cdf12",
+      "range": {
+        "startLine": 3,
+        "startChar": 19,
+        "endLine": 3,
+        "endChar": 25
+      },
+      "revId": "960cea7e51ebac426497c743e709cc011710a50f",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_4c9b4772",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-06-16T07:02:02Z",
+      "side": 1,
+      "message": "s/operate/use/",
+      "range": {
+        "startLine": 3,
+        "startChar": 7,
+        "endLine": 3,
+        "endChar": 14
+      },
+      "revId": "960cea7e51ebac426497c743e709cc011710a50f",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bad4c104_cc2af72b",
         "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
         "patchSetId": 2
@@ -48,6 +118,52 @@
     },
     {
       "key": {
+        "uuid": "bad4c104_8c8c6f37",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-06-16T07:02:02Z",
+      "side": 1,
+      "message": "This is misleading. Better to be more explicit. \"This is the authentication mechanism for the NeCTAR web interfaces such as the Dashboard. On first login this authentication bootstraps the creation of your Research Cloud user account and your Research Cloud username and contact details are obtained from this process, however the OpenStack services themselves do not use AAF.",
+      "range": {
+        "startLine": 4,
+        "startChar": 59,
+        "endLine": 5,
+        "endChar": 30
+      },
+      "revId": "960cea7e51ebac426497c743e709cc011710a50f",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_cc867713",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-06-16T07:02:02Z",
+      "side": 1,
+      "message": "link to other tier0 docs for these please",
+      "range": {
+        "startLine": 8,
+        "startChar": 56,
+        "endLine": 10,
+        "endChar": 16
+      },
+      "revId": "960cea7e51ebac426497c743e709cc011710a50f",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bad4c104_4ced07ef",
         "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
         "patchSetId": 2
@@ -64,6 +180,53 @@
         "startChar": 0,
         "endLine": 17,
         "endChar": 56
+      },
+      "revId": "960cea7e51ebac426497c743e709cc011710a50f",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_ec7c1b23",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-06-16T07:02:02Z",
+      "side": 1,
+      "message": "I don\u0027t think we should call it a \"NeCTAR password\". Better off being the \"Research Cloud OpenStack Password\".",
+      "parentUuid": "bad4c104_4ced07ef",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 56
+      },
+      "revId": "960cea7e51ebac426497c743e709cc011710a50f",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_0c785f2a",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-06-16T07:02:02Z",
+      "side": 1,
+      "message": "should also mention the CLI/API password reset method",
+      "range": {
+        "startLine": 45,
+        "startChar": 3,
+        "endLine": 45,
+        "endChar": 54
       },
       "revId": "960cea7e51ebac426497c743e709cc011710a50f",
       "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
