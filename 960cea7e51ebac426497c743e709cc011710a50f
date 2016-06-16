@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bad4c104_0c1cdf12",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2016-06-16T06:40:46Z",
+      "side": 1,
+      "message": "Should it be NeCTAR for all of these?",
+      "range": {
+        "startLine": 3,
+        "startChar": 19,
+        "endLine": 3,
+        "endChar": 25
+      },
+      "revId": "960cea7e51ebac426497c743e709cc011710a50f",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_cc2af72b",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2016-06-16T06:40:46Z",
+      "side": 1,
+      "message": "dupe",
+      "range": {
+        "startLine": 4,
+        "startChar": 49,
+        "endLine": 4,
+        "endChar": 54
+      },
+      "revId": "960cea7e51ebac426497c743e709cc011710a50f",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_4ced07ef",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2016-06-16T06:40:46Z",
+      "side": 1,
+      "message": "Maybe this could be changed a little\n\nTo use these other access mechanisms you will need to use your NeCTAR username and password. NOTE this is different to your intitutional username and password that you use to log into the dashboard. Your username is generated automatically and is based on your email when you signed up to the NeCTAR cloud. You can generate a NeCTAR password using the dashboard as described below",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 56
+      },
+      "revId": "960cea7e51ebac426497c743e709cc011710a50f",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_0ce3ff05",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2016-06-16T06:40:46Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 58,
+        "startChar": 76,
+        "endLine": 58,
+        "endChar": 77
+      },
+      "revId": "960cea7e51ebac426497c743e709cc011710a50f",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_ece7bb10",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2016-06-16T06:40:46Z",
+      "side": 1,
+      "message": "Maybe this should say \"You should keep your password secure\" or something like that",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 37
+      },
+      "revId": "960cea7e51ebac426497c743e709cc011710a50f",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
