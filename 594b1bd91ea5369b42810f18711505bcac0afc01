@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bad4c104_2cf3639f",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000130
+      },
+      "writtenOn": "2016-06-16T23:53:32Z",
+      "side": 1,
+      "message": "Duplicate end bracket",
+      "revId": "594b1bd91ea5369b42810f18711505bcac0afc01",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_8c162fa6",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000130
+      },
+      "writtenOn": "2016-06-16T23:53:32Z",
+      "side": 1,
+      "message": "The first sentence isn\u0027t true; the Horizon Dashboard allows you to reset the password to one it generates, but if you use the CLI you set the password to your choosing. Your OpenStack password can be generated, or can be set to your choosing.",
+      "revId": "594b1bd91ea5369b42810f18711505bcac0afc01",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
