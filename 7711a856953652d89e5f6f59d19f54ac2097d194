@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bad4c104_4c8fc7cc",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-06-17T00:57:28Z",
+      "side": 1,
+      "message": "dupe",
+      "range": {
+        "startLine": 9,
+        "startChar": 38,
+        "endLine": 9,
+        "endChar": 39
+      },
+      "revId": "7711a856953652d89e5f6f59d19f54ac2097d194",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_6cbd6b68",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-06-17T00:57:28Z",
+      "side": 1,
+      "message": "s/your/the/",
+      "range": {
+        "startLine": 25,
+        "startChar": 65,
+        "endLine": 25,
+        "endChar": 69
+      },
+      "revId": "7711a856953652d89e5f6f59d19f54ac2097d194",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_8cc0efe1",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-06-17T00:57:28Z",
+      "side": 1,
+      "message": "Delete this I think?",
+      "range": {
+        "startLine": 27,
+        "startChar": 33,
+        "endLine": 27,
+        "endChar": 52
+      },
+      "revId": "7711a856953652d89e5f6f59d19f54ac2097d194",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad4c104_acb77385",
+        "filename": "articles/Cloud Expert--DOCID19/Authentication--DOCID41/The Nectar OpenStack Password.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000082
+      },
+      "writtenOn": "2016-06-17T00:57:28Z",
+      "side": 1,
+      "message": "This is kind of misleading - they are all API clients. I think this should either just be removed, or make it as a comment about how the API auth mechanism actually works (probably just a reference) and say that all interaction with OpenStack services (whether via the Dashboard, CLI, or some SDK/library) uses this auth mechanism.",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 48
+      },
+      "revId": "7711a856953652d89e5f6f59d19f54ac2097d194",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
