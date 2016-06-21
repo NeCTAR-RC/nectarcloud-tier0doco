@@ -17,24 +17,31 @@ See below for the instructions:
 
 OS X
 
+    sudo easy_install pip
 
-`sudo easy_install pip`
+    sudo pip install --upgrade setuptools
 
-`sudo pip install --upgrade setuptools`
-
-`sudo pip install python-novaclient`
-
-
-Ubuntu
+    sudo pip install python-novaclient
 
 
-```
+Ubuntu 14.* or earlier
 
-sudo apt-get install python-pip
+   sudo add-apt-repository ppa:fkrull/deadsnakes-python2.7
+   
+   sudo apt-get update
+   
+   sudo apt-get install python2.7
+   
+   \# and run this if pbr_json issues causes python-*client installs fail...
+   sudo pip install --upgrade pbr
 
-sudo pip install python-novaclient
 
-```
+Ubuntu 15+
+
+    sudo apt-get install python-pip
+
+    sudo pip install python-novaclient
+
 
 RHEL, CentOS, or Fedora
 
@@ -54,9 +61,9 @@ Windows
 
 See [pip windows][pip windows] for instructions on installing pip for Windows.
 
-```
-pip install python-novaclient
-```
+
+    pip install python-novaclient
+
 
 [pip windows]: http://docs.python-guide.org/en/latest/starting/install/win.html#distribute-pip
 
@@ -115,9 +122,9 @@ obtained from Dashboard.
 You can use the below sample code to get authenticated. 
 
 
-```from novaclient import client```
+    from novaclient import client
 
-```nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)```
+    nova = client.Client(VERSION, USERNAME, PASSWORD, PROJECT_NAME, AUTH_URL)
 
 
 The VERSION parameter can be "1.1" or "2". You can get USERNAME, PROJECT_NAME and
@@ -151,7 +158,7 @@ information. Then, you can use nova boot command to launch a new instance, the
 format is:
 
 
-```nova boot [instance-name]  --flavor [name] --image [name] --key-name [name] --security-groups [names separated by a comma]```
+    nova boot [instance-name]  --flavor [name] --image [name] --key-name [name] --security-groups [names separated by a comma]
 
 You can also specify option --availability-zone to launch an instance in a
 designed zone and option --user-data <user-data-file> for a initialization script
@@ -179,35 +186,33 @@ programming language.
 
 Example of code to launch a new instance:
 
-```
 
-from novaclient import client
+    from novaclient import client
 
-nova = client.Client("2", username, password, project_name, auth_url)
+    nova = client.Client("2", username, password, project_name, auth_url)
 
-nova.servers.list()
+    nova.servers.list()
 
-nova.flavors.list()
+    nova.flavors.list()
 
-nova.keypairs.list()
+    nova.keypairs.list()
 
-nova.images.list()
+    nova.images.list()
 
-nova.security_groups.list()
+    nova.security_groups.list()
 
-server_name = 'new instance'
+    server_name = 'new instance'
 
-image = 'NeCTAR Ubuntu 14.04 (Trusty) amd64'
+    image = 'NeCTAR Ubuntu 14.04 (Trusty) amd64'
 
-flavor = 'm1.small'
+    flavor = 'm1.small'
 
-security_groups = ['5c8c4dd0-db53-41e3-a53b-9730c764149c', '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff']
+    security_groups = ['5c8c4dd0-db53-41e3-a53b-9730c764149c', '8cca1fba-b6b2-4ba3-b58e-b568f01e73ff']
 
-key_name = 'ming'
+    key_name = 'ming'
 
-nova.servers.create(server_name, image, flavor, security_groups=security_groups, key_name=)
+    nova.servers.create(server_name, image, flavor, security_groups=security_groups, key_name=)
 
-``` 
 
 
 You can find more information about nova python API from this [link][pythonapi]
