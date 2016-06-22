@@ -1,4 +1,5 @@
 21:
+  found: true
   freshdesk:
     fd_attributes:
       folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:04-04:00', description: Cloud
@@ -8,6 +9,7 @@
   parent: 16
   title: Cloud Basics
 24:
+  found: true
   freshdesk:
     fd_attributes:
       folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:07-04:00', description: Tools
@@ -17,6 +19,7 @@
   parent: 16
   title: Tools and Apps
 26:
+  found: true
   freshdesk:
     fd_attributes:
       folder: {category_id: 6000122278, created_at: '2015-09-03T01:28:09-04:00', description: NeCTAR
@@ -35,6 +38,7 @@
   parent: 19
   title: Instance Management
 40:
+  found: true
   freshdesk:
     fd_attributes:
       folder: {category_id: 6000122279, created_at: '2015-09-03T01:28:00-04:00', description: Object
@@ -44,6 +48,7 @@
   parent: 19
   title: Object Storage
 41:
+  found: true
   freshdesk:
     fd_attributes:
       folder: {category_id: 6000122279, created_at: '2015-09-03T01:28:01-04:00', description: Authentication,
@@ -60,6 +65,7 @@
   parent: 19
   title: Heat
 43:
+  found: true
   freshdesk:
     fd_attributes:
       folder: {category_id: 6000122279, created_at: '2015-10-01T22:28:23-04:00', description: Security
@@ -69,6 +75,7 @@
   parent: 19
   title: Security Guidelines
 44:
+  found: true
   freshdesk:
     fd_attributes:
       folder: {category_id: 6000122279, created_at: '2015-12-01T18:22:33-05:00', description: Networking,
@@ -76,4 +83,4 @@
         position: 8, updated_at: '2015-12-01T18:22:33-05:00', visibility: 1}
   parent: 19
   title: Networking
-45: {parent: 19, title: Ceilometer}
+45: {found: true, parent: 19, title: Ceilometer}

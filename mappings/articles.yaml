@@ -1,4 +1,5 @@
 33:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -545,6 +546,7 @@
   sha1: 94a609873dcf252b5697341c6f4fc664f95c2ea5
   title: Launching Virtual Machines
 34:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -671,6 +673,7 @@
   sha1: f10da9763e9420b97a4186bd8d50fe20f34e4f82
   title: Getting an account
 35:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -936,6 +939,7 @@
   sha1: 5107317db550e4e09840ae5c0eb92ed58fde7f74
   title: Welcome
 36:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -1245,6 +1249,7 @@
   sha1: 16b9cd15a0754709d46f6e8ff5dfda05615d4df6
   title: Good Practices
 37:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -1391,6 +1396,7 @@
   sha1: 61c1492a41b681772259eb522df85061c526b6d9
   title: Resources available to you
 38:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -1539,6 +1545,7 @@
   sha1: f3833959eda87b1b543c43245a1f6c223da0f4bf
   title: Availability Zones
 39:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -1866,13 +1873,13 @@
     \ storage is the fundamental component\nfor both the virtual machine and user\
     \ to save and use data. Virtual machines launched within the\nNeCTAR research\
     \ cloud will typically use a shared storage pool to store the root and ephemeral\
-    \ disks\nthat contain the data of the VM, the space allocated within the pool\
+    \ disks\nthat contain the data of the VM; the space allocated within the pool\
     \ is distinct and unique.</p>\n<h2>On Virtual Machine Storage</h2>\n<p>Each virtual\
-    \ machine in the NeCTAR Cloud comes with a certain amount of built-in\nstorage\
-    \ and theseappear as two separated hard disks\n(Root Disk and Ephemeral Disk).\
-    \ These storage disks run off robust\nenterprise-grade storage hardware on the\
-    \ back. However, both storage disks are not\nsuitable for long-term persistent\
-    \ data as data will be lost after termination or\nrebuild of a virtual machine.</p>\n\
+    \ machine in the NeCTAR Cloud comes with a certain amount of built-in\nstorage,\
+    \ appearing as two separate hard disks (Root Disk and Ephemeral Disk).\nThese\
+    \ storage disks run off robust\nenterprise-grade storage hardware on the back-end.\
+    \ However, neither storage disk is\nsuitable for long-term persistent storage,\
+    \ as data will be lost after termination or\nrebuild of the virtual machine.</p>\n\
     <h3>Root Disk</h3>\n<p>This storage is used for the operating system of the virtual\
     \ machine, to boot it\ninto a functional state. It has a limited 10GB in size,\
     \ which is the same for every\nstandard size of virtual machine (Small, Medium,\
@@ -2000,8 +2007,9 @@
     \ (some of which are Node private) some clients/APIs\nrequire explicit configuration\
     \ of a default region, which should be \"Melbourne\"\nfor most users.</p>"
   parent: 21
-  sha1: 5cb5d869cf2f2b3da7c83d662a06d660b6919645
+  sha1: a66c8a75ba5edae994dad3ec118600010aaacf75
   title: Introduction to Cloud Storage
+41: {title: The Nectar OpenStack Password}
 46:
   freshdesk:
     fd_attributes:
@@ -2624,6 +2632,7 @@
   sha1: ecd3e2fb4506878099b3828936b5fd6455e1cdd9
   title: Introduction to YAML
 50:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -2802,6 +2811,7 @@
   sha1: 1e7bfd723d5df5568137a1694554ae952820aa86
   title: Security Groups
 52:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -4368,6 +4378,7 @@
   sha1: b671b92fbc951047324add2fdd5192c9a3030128
   title: Glossary
 53:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -4544,6 +4555,7 @@
   sha1: 654c8267329e977abc6512e5ba453d3807613354
   title: Accessing Instances
 54:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -4989,6 +5001,7 @@
   sha1: c05dabd105fa47fb3ba200a7edcc90bb6fc3a078
   title: Getting Started
 55:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -5183,6 +5196,7 @@
   sha1: 4fb51710944a71beb2c2efeb135fb867663e309c
   title: Introduction to Object Storage
 56:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -5976,6 +5990,7 @@
   sha1: 49018f63c2365519bbb102f7706503b28c97870e
   title: Trouble Shooting
 58:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -6126,27 +6141,28 @@
     <h2>What happens after you submit a request</h2>\n<p>When you submit the request,\
     \ you will receive a confirmation email with all\nyour details.  View or edit\
     \ your request by clicking on the \u2018My Requests\u2019 tab\nat the dashboard.</p>\n\
-    <p>Your request will be reviewed by the your local node (if any) or the NeCTAR\n\
-    Allocation Committee.  This can take up to four weeks to process.</p>\n<p>If there\
-    \ are any issues with your request, we will get in touch with you.  You\nmay be\
-    \ asked to provide more detail about your research or to clarify your\ntechnical\
-    \ requirements.</p>\n<h2>Approved requests become \"Projects\"</h2>\n<p>We create\
-    \ a Research Cloud Project using your project name, for example \u2018QCIF\nDNA\
-    \ Sequencing Project\u2019.  You will receive an email confirming everything is\n\
-    ready to go.</p>\n<p>As a user, you can be a member of more than one project.\
-    \  You select the\ncurrent project to access at the dashboard using a drop down\
-    \ menu on the left\nhand side.</p>\n<h2>Managing an approved Project (Add / remove\
-    \ users)</h2>\n<p>Users can be members of multiple Projects sharing each Projects\
-    \ resources with\nits members.  To add other users as members of your Project(s)\
-    \ see Managing a\nProject</p>\n<h2>How do I increase my existing Projects' resources</h2>\n\
-    <p>You can make changes to your request at any time by clicking on \u2018My Requests\u2019\
+    <p>Your request will be reviewed by your local node (if any) or the NeCTAR\nAllocation\
+    \ Committee.  This can take up to four weeks to process.</p>\n<p>If there are\
+    \ any issues with your request, we will get in touch with you.  You\nmay be asked\
+    \ to provide more detail about your research or to clarify your\ntechnical requirements.</p>\n\
+    <h2>Approved requests become \"Projects\"</h2>\n<p>We create a Research Cloud\
+    \ Project using your project name, for example \u2018QCIF\nDNA Sequencing Project\u2019\
+    .  You will receive an email confirming everything is\nready to go.</p>\n<p>As\
+    \ a user, you can be a member of more than one project.  You select the\ncurrent\
+    \ project to access at the dashboard using a drop down menu on the left\nhand\
+    \ side.</p>\n<h2>Managing an approved Project (Add / remove users)</h2>\n<p>Users\
+    \ can be members of multiple Projects sharing each Projects resources with\nits\
+    \ members.  To add other users as members of your Project(s) see Managing a\n\
+    Project</p>\n<h2>How do I increase my existing Projects' resources</h2>\n<p>You\
+    \ can make changes to your request at any time by clicking on \u2018My Requests\u2019\
     \nat the dashboard.  This will show the requests you have made and you can update\n\
     them.</p>\n<p>If you change and resubmit the request, it will go through the review\
     \ process\nas outlined earlier.</p>"
   parent: 26
-  sha1: bba65138cc3ac626e863e69f7a0c6ee103e4a792
+  sha1: c94bbf8809435a0e87d9cf0637c4de78ea34ff71
   title: Managing An Allocation
 59:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -6374,6 +6390,7 @@
   sha1: c401b0c4754bf55fc6819040848b0c9d78e5e4c8
   title: Introduction
 60:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -9088,6 +9105,7 @@
   sha1: 5fe40b8d23dab31c94978688fa9f5608cf655b64
   title: Heat Actions
 70:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -9674,6 +9692,7 @@
   sha1: 924f2142908742e324041f06f5c3f9692fd30c3d
   title: Trouble Shooting
 71:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -9806,8 +9825,8 @@
     \ Overview\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Cloud Basics--DOCID21/images/dashboard_overview.png?raw=true\"\
     ></p>\n<h2>Instances</h2>\n<p>You reach the <strong>instances screen</strong>\
-    \ in the dashboard by clicking the Instances\ntab in the navigation panel. Thecentral\
-    \ space now shows information about the\ninstances in your project, including\
+    \ in the dashboard by clicking the Instances\ntab in the navigation panel. The\
+    \ central space now shows information about the\ninstances in your project, including\
     \ their Name, IP Address and other info.</p>\n<p>Beside a filter function at the\
     \ top of the table (which can be handy if your\nproject contains many instances),\
     \ there are some <strong>command buttons</strong> (e.g.\nLaunch Instance). You\
@@ -9819,7 +9838,7 @@
     \ &amp; Security</strong> using the navigation panel.</p>\n<p><img alt=\"Dashboard\
     \ Instances\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Cloud Basics--DOCID21/images/dashboard_instances.png?raw=true\"\
-    ></p>\n<h2>Allocations</h2>\n<p>You use the Allocations screens for managing aallocation\
+    ></p>\n<h2>Allocations</h2>\n<p>You use the Allocations screens for managing allocation\
     \ request. You can\nstart a new allocation request using the New Request tab,\
     \ and you can find\ninformation about any existing request that you may have on\
     \ the My Request\nscreen. You can also use the My Request screen to request amendments\
@@ -9832,9 +9851,10 @@
     \ features can be accessed using Command \nLine Interface or one of the OpenStack\
     \ APIs.</p>"
   parent: 21
-  sha1: 0cf114be6248c63a0793dd7bf20ab5bd3398ec4f
+  sha1: cdb4f4fd3d46b94a71e5fe404472d750fc983a6c
   title: Nectar Dashboard
 72:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -9947,6 +9967,7 @@
   sha1: 05e3115bed87c3e86d3e410fd3bc50c05c4ec7d0
   title: More Info
 73:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -10073,6 +10094,7 @@
   sha1: 1015e0aca8a081cf30c5762985683eb2eb68b987
   title: Best Practice
 74:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -10324,6 +10346,7 @@
   sha1: 8bf0cd6f62150c2ac27a0abe5d967b52cb893020
   title: Getting Started
 75:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -10595,6 +10618,7 @@
   sha1: 0625128a66318e3b7dc0886b244435ce2a03c6c8
   title: Introduction to Authentication
 76:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -10785,6 +10809,7 @@
   sha1: ac55360179d9e08115e5cd9e597d4d52bd9add95
   title: More Info
 77:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -10912,6 +10937,7 @@
   sha1: 63c25723ed3e8e74971a1f4a7b9b7c4a15faca4e
   title: Security Assessment
 78:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -11483,6 +11509,7 @@
   sha1: a0a89025845b291ff839964ddc5e31321d6be8bf
   title: API
 81:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -11708,6 +11735,7 @@
   sha1: 72a60e59f1612bf38c706d80dd49230706a52992
   title: More Info
 82:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -12064,6 +12092,7 @@
   sha1: 2fe4990b09f16547777dcccbc4d135ec6397c94b
   title: Trouble Shooting
 83:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -12678,6 +12707,7 @@
   sha1: 13c13cd4896f70425a317c11c3ca41da251485fc
   title: Quick Reference for Commands
 84:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -13018,6 +13048,7 @@
   sha1: 9331d018fb124e3564a5fe829f1f94f5334ebe3b
   title: Back-up and Restore
 85:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -13319,6 +13350,7 @@
   sha1: 9d23b8bbeb78ea67d27dc3a96969a27b2bda7fde
   title: Transferring Data to your VM
 86:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -13978,6 +14010,7 @@
   sha1: e407d13fe0a56c232cccf2d99f1cf6b56d8c1d2b
   title: Tips for Running Jobs on your VM
 87:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -14536,6 +14569,7 @@
   sha1: c44ddaf6c9149cba165937d9c41e0bac293c9d92
   title: eRSA Windows in the Cloud - user guide
 88:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -15412,6 +15446,7 @@
   sha1: e4cb7e4fc3faf091a40f153c83c9e0228d1485f7
   title: Intersect Twitter Scraper User Guide
 89:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -16183,6 +16218,7 @@
   sha1: 8cd94a617ddb1393c793efdab7bec35a8464d4f7
   title: eRSA Cloud Software Repository - user guide
 90:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -16514,6 +16550,7 @@
   sha1: 2046451b0669cf00d8b8e004b9db03579307f6bc
   title: TPAC R-Studio with Remote Desktop
 91:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -16874,6 +16911,7 @@
   sha1: f6f9841777a9c3afaa24f5fbbe9ae8c166fb07a1
   title: TPAC Matlab with Remote Desktop
 92:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -17817,6 +17855,7 @@
   sha1: fe20d93bd25169a4c7dc3426f4f3173b37471714
   title: TPAC Remote Desktop User Guide
 93:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -18336,7 +18375,7 @@
     >NeCTAR Research Cloud</a> with one of a number of preconfigured research-based\
     \ software applications. Launchpod is designed to work like a wizard; it will\
     \ take care of the technical aspects of spawning a VM by asking the user for the\
-    \ relevnt details. The software applications that can be built using Launchpod\
+    \ relevant details. The software applications that can be built using Launchpod\
     \ are:</p>\n<ul>\n<li><a href=\"https://support.nectar.org.au/support/solutions/articles/6000089738-intersect-twitter-scraper-user-guide\"\
     >Twitter Scraper</a> \u2013 a tool to harvest Twitter for hashtags, phrases, exact\
     \ tweets and specific users</li>\n<li><a href=\"http://www.intersect.org.au/content/diver-0\"\
@@ -18573,9 +18612,10 @@
     \  Note that this does not include application licensing costs where applicable\
     \ (e.g. MATLAB\xAE).  </p>"
   parent: 24
-  sha1: 59474bdce392a8260dfba83a519239a93d27c3b5
+  sha1: bdf06c4d4c609fa8e2f3fc789fe86087953019d3
   title: Intersect Launchpod User Guide
 94:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -18785,6 +18825,7 @@
   sha1: ec2713fd8a6436c2d4f4dacb21e5724ed84995cf
   title: Intersect DIVER User Guide
 95:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -18947,65 +18988,109 @@
         title: Security Compromise Checklist
         updated_at: '2015-11-25T23:16:29-05:00'
         user_id: 6002464727
-  html: "<h2>Check-Security-01: Are you running a mail server</h2>\n<p>If you want\
-    \ to run a mail server in NecTAR Virtual Machine, make sure it only\nlistens on\
-    \ Localhost (127.0.0.1).</p>\n<h2>Check-Security-02: Is automatic updates enabled</h2>\n\
-    <p>Check whether automatic updates is enabled in operating system.</p>\n<h2>Check-Security-03:\
-    \ Have you Upgrade operating system kernel</h2>\n<p>Check whether your operating\
-    \ system kernel is the latest. Kernel upgrade requires\nreboot and you need to\
-    \ schedule this into regular maintenance.</p>\n<h2>Check-Security-04: Are you\
-    \ running DNS service</h2>\n<p>If you are running a DNS server, ensure you only\
-    \ allow recursion from trusted\nhosts.</p>\n<h2>Check-Security-05: Are you running\
-    \ NTP service</h2>\n<p>If you run a NTP server, limit which systems can access\
-    \ it. Disable the 'monlist'\ncommand as this can be used as a denial of service\
-    \ vector on your system.</p>\n<h2>Check-Security-06: Have you subscribed to security\
-    \ announcements</h2>\n<p>If there is a security problem with your operating system,\
-    \ you need to find out\nas soon as possible. Find the appropriate mailing list\
-    \ and keep an eye\nout for anything that requires urgent action. As soon as new\
-    \ security bugs are\ndetected, you need to execute security upgrade immediately.</p>\n\
-    <h2>Check-Security-07: Is FireWall running</h2>\n<p>Virtual machine should be\
-    \ configured so they allow the minimum access required\nto run their service.\
-    \ Please use a host-based firewall, in conjunction with\nthe cloud-provided firewall\
-    \ to manage access.</p>\n<h2>Check-Security-08: Are unneeded accounts in the system</h2>\n\
-    <p>Keep an eye on the user accounts enabled on your system. Some applications\n\
-    create default accounts which are insecure. You may also open a temporary user\n\
-    account to allow quick login for a task and leave it forever. This may lead to\n\
-    security issue later, and you need to regular check and delete these user\naccounts.</p>\n\
-    <h2>Check-Security-09: Is SSH password login disabled</h2>\n<p>With enough time\
-    \ and compute power it is possible for passwords to be brute\nforce attacked.\
-    \ The average SSH server deals with thousands of such attacks\nevery week, so\
-    \ use ssh keys.</p>\n<h2>Check-Security-10: Are keys stored in image</h2>\n<p>The\
-    \ cloud provides a metadata service so you can download keys on boot, so\nyou\
-    \ don't need to copy keys manually. This ensures that if your key is\ncompromised,\
-    \ not all running instances of that image are compromised.</p>\n<h2>Check-Security-11:\
-    \ Is SSH attack banning tools installed</h2>\n<p>Install a tools like fail2ban\
-    \ or denyhosts, which checks log files for\nattempted breaches and then blocks\
-    \ malicious IP addresses.</p>\n<h2>Check-Security-12: Are unneeded services disable</h2>\n\
-    <p>Know what services run on your virtual machine, and disable the unneeded ones.</p>\n\
-    <h2>Check-Security-13: Are Encrypted Communications Used</h2>\n<p>Wherever possible,\
-    \ use encrypted communications to avoid attacks which\nintercept data.</p>\n<h2>Check-Security-14:\
-    \ Are logging stored in a secure place</h2>\n<p>Make sure that services are logging\
-    \ to a secure location, that is as\ntamperproof as possible. If logging remotely,\
-    \ ensure that it is done over\na secure channel so that eavesdroppers cannot monitor\
-    \ what is happening on\nyour instance.</p>\n<h2>Check-Security-15: Are ports opened\
-    \ for not required services</h2>\n<p>By default, virtual machines in NeCTAR has\
-    \ closed all ports, so in order to make\nservices available to public, you need\
-    \ to open certain ports for it. Before you\nopen a open, you need to think carefully\
-    \ about what service associated with it\nand what is the intention. Never open\
-    \ ports for non-service binded to it.</p>\n<h2>Check-Security-16: What permission\
-    \ granted to user account</h2>\n<p>When creating user account, make sure only\
-    \ permission sufficient for its use \nis granted. Never grant extra permission\
-    \ if it is not needed.</p>\n<h2>Check-Security-17: Is root access disabled from\
-    \ SSH</h2>\n<p>Disable root user SSH login and setup user account with sudo permission\
-    \ to\nperform administrator tasks.</p>\n<h2>Check-Security-18: Is other ports\
-    \ used for SSH</h2>\n<p>The SSH service on the virtual machine uses port 22 by\
-    \ default. This port is \nwell-known and can attract many attackers. Use a custom\
-    \ ssh port other than 22\nwill improve security. Be noted, the port number below\
-    \ 1024 is well reserved and\nshouldn't be used for SSH.</p>"
+  html: '<h1>Security Checklist</h1>
+
+    <p>Security of your NeCTAR instances is your responsibility. The following list
+    provides some suggested checks to help you keep them secure.</p>
+
+    <h2>Check-Security-01: Are you running a mail server</h2>
+
+    <p>If you want to run a mail server in NecTAR Virtual Machine, make sure it only
+    listens on localhost (127.0.0.1).</p>
+
+    <h2>Check-Security-02: Are automatic updates enabled</h2>
+
+    <p>Check that automatic updates are enabled in the operating system.</p>
+
+    <h2>Check-Security-03: Have you upgraded the operating system kernel</h2>
+
+    <p>Check whether your operating system kernel is the latest. Kernel upgrade requires
+    reboot and you need to schedule this into regular maintenance.</p>
+
+    <h2>Check-Security-04: Are you running DNS service</h2>
+
+    <p>If you are running a DNS server, ensure you only allow recursion from trusted
+    hosts.</p>
+
+    <h2>Check-Security-05: Are you running NTP service</h2>
+
+    <p>If you run a NTP server, limit which systems can access it. Disable the ''monlist''
+    command as this can be used as a denial of service vector on your system.</p>
+
+    <h2>Check-Security-06: Have you subscribed to security announcements</h2>
+
+    <p>If there is a security problem with your operating system, you need to find
+    out as soon as possible. Find the appropriate mailing list and keep an eye out
+    for anything that requires urgent action. As soon as new security bugs are detected,
+    you need to execute security upgrade immediately.</p>
+
+    <h2>Check-Security-07: Is a host-based firewall running</h2>
+
+    <p>Virtual machines should be configured so they allow the minimum access required
+    to run their service. Please use a host-based firewall, in conjunction with the
+    cloud-provided firewall to manage access.</p>
+
+    <h2>Check-Security-08: Are there any unneeded accounts in the system</h2>
+
+    <p>Keep an eye on the user accounts enabled on your system. Some applications
+    create default accounts which are insecure. You may also open a temporary user
+    account to allow quick login for a task and leave it forever. This may lead to
+    security issue later, and you need to regular check and delete these user accounts.</p>
+
+    <h2>Check-Security-09: Is SSH password login disabled</h2>
+
+    <p>With enough time and compute power it is possible for passwords to be brute
+    force attacked. The average SSH server deals with thousands of such attacks every
+    week, so use SSH keys.</p>
+
+    <h2>Check-Security-10: Are keys stored in the image</h2>
+
+    <p>The cloud provides a metadata service so you can download keys on boot, so
+    you don''t need to copy keys manually. This ensures that if your key is compromised,
+    not all running instances of that image are compromised.</p>
+
+    <h2>Check-Security-11: Is an SSH attack banning tool installed</h2>
+
+    <p>Install a tool like fail2ban or denyhosts, which checks log files for attempted
+    breaches and then blocks malicious IP addresses.</p>
+
+    <h2>Check-Security-12: Are unneeded services disabled</h2>
+
+    <p>Know what services run on your virtual machine, and disable the unneeded ones.</p>
+
+    <h2>Check-Security-13: Are encrypted communications used</h2>
+
+    <p>Wherever possible, use encrypted communications to avoid attacks which intercept
+    data.</p>
+
+    <h2>Check-Security-14: Is logging stored in a secure place</h2>
+
+    <p>Make sure that services are logging to a secure location, that is as tamperproof
+    as possible. If logging remotely, ensure that it is done over a secure channel
+    so that eavesdroppers cannot monitor what is happening on your instance.</p>
+
+    <h2>Check-Security-15: Are ports opened for unrequired services</h2>
+
+    <p>By default, virtual machines in NeCTAR have all ports closed, so in order to
+    make a service available to public, you need to open certain ports for it. Before
+    you open a port, you need to think carefully about what service is associated
+    with it and what is the intention. Never open a port without a service binded
+    to it.</p>
+
+    <h2>Check-Security-16: What permission is granted to a user account</h2>
+
+    <p>When creating a user account, make sure only permission sufficient for its
+    use is granted. Never grant extra permission if it is not needed.</p>
+
+    <h2>Check-Security-17: Is root access disabled from SSH</h2>
+
+    <p>Disable root user SSH login and setup a user account with sudo permission to
+    perform administrator tasks.</p>'
   parent: 21
-  sha1: 1f41c7ec9ff193240456cfe0886ee4667d8b2667
+  sha1: b5f555d2aa3ffb51b3eecdb64d372b7c51c0d22d
   title: Security Compromise Checklist
 96:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -19958,6 +20043,7 @@
   sha1: 6f149ecf9224f64a5f1d404d151114f58165cb5c
   title: eRSA Emu Cluster in the Cloud - user guide
 97:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -20817,6 +20903,7 @@
   sha1: 65f37559fc52b3c9c3cf99d07232ade055e589e0
   title: QCIF NFS Mounting
 98:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -21039,6 +21126,7 @@
   sha1: 96d9097503dfc18445585dd2f725b7bb0dc2ec34
   title: TPAC Aurora User Guide
 99:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -21726,6 +21814,7 @@
   sha1: 5e5f0f9e4bd039e4390aed73fe7820fe0fb4d261
   title: Introduction
 100:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -22188,6 +22277,7 @@
   sha1: 0821a4e8a8aa973a34520faaffe4fa3589885107
   title: Monash Bioinformatics Training Platform User Guide
 101:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -22943,6 +23033,7 @@
   sha1: 91d15d3b3a455215847d5af3da7780f8893f7610
   title: QCIF TERN CoESRA
 102:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -23596,6 +23687,7 @@
   sha1: 7d4091507e81e37b92d790232484619e35754299
   title: Getting Started
 103:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -23790,6 +23882,7 @@
   sha1: 558d3322391589a032322e1e93e1ea66964cb9b4
   title: API
 104:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -25452,6 +25545,7 @@
   sha1: 7c38bf34d75a35fd33a877021bb51828bed70c33
   title: QCIF Nimrod
 105:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -25575,6 +25669,7 @@
   sha1: 5ee296e2cd83cb92912c7e804069bf6b39a24a95
   title: More Info
 106:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -26135,6 +26230,7 @@
   sha1: 9acbb5d011cc0ca185cceb3755b02ccde3f6dd89
   title: Trouble Shooting
 107:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -26929,22 +27025,22 @@
   parent: 24
   sha1: e47738cf88725e7285c7ac3905c41d5a9539871c
   title: Pawsey Installing R and RStudio
-108: {html: "<p>In the cloud environment, billing requires multiple steps and services\
-    \ to support\nit. The required steps and services are metering, rating and billing.\
-    \ The Ceilometer\nproject was originally designed to provide the metering service\
-    \ as it gathers the\ndata required by the billing systems that vendors would implement\
-    \ for their OpenStack installations. This service collects information and required\
-    \ data about the system\nand saves it in the form of samples in order to provide\
-    \ data about anything that\ncan be billed.</p>\n<p>The primary purposes of the\
-    \ Ceilometer are the following:</p>\n<ul>\n<li>\n<p>The efficient collection of\
-    \ metering data.</p>\n</li>\n<li>\n<p>Collecting data by monitoring notifications\
-    \ sent from services or by polling the \n resources.</p>\n</li>\n<li>\n<p>Configuring\
-    \ the type of collected data to meet various requirements.</p>\n</li>\n<li>\n\
-    <p>Accessing data through the REST API.</p>\n</li>\n<li>\n<p>Expanding the framework\
-    \ to collect custom usage data by additional plugins.</p>\n</li>\n<li>\n<p>Producing\
-    \ signed and non-repudiable metering messages.</p>\n</li>\n</ul>\n<p>But since\
-    \ its inception more features have been added to Ceilometer, the most\nimportant\
-    \ of which is the addition of alarms that can be set to fire when monitored\n\
+108: {found: true, html: "<p>In the cloud environment, billing requires multiple steps\
+    \ and services to support\nit. The required steps and services are metering, rating\
+    \ and billing. The Ceilometer\nproject was originally designed to provide the\
+    \ metering service as it gathers the\ndata required by the billing systems that\
+    \ vendors would implement for their OpenStack installations. This service collects\
+    \ information and required data about the system\nand saves it in the form of\
+    \ samples in order to provide data about anything that\ncan be billed.</p>\n<p>The\
+    \ primary purposes of the Ceilometer are the following:</p>\n<ul>\n<li>\n<p>The\
+    \ efficient collection of metering data.</p>\n</li>\n<li>\n<p>Collecting data\
+    \ by monitoring notifications sent from services or by polling the \n resources.</p>\n\
+    </li>\n<li>\n<p>Configuring the type of collected data to meet various requirements.</p>\n\
+    </li>\n<li>\n<p>Accessing data through the REST API.</p>\n</li>\n<li>\n<p>Expanding\
+    \ the framework to collect custom usage data by additional plugins.</p>\n</li>\n\
+    <li>\n<p>Producing signed and non-repudiable metering messages.</p>\n</li>\n</ul>\n\
+    <p>But since its inception more features have been added to Ceilometer, the most\n\
+    important of which is the addition of alarms that can be set to fire when monitored\n\
     data streams cross user set thresholds.</p>\n<p>Unlike the rest of OpenStack there\
     \ is currently no Ceilometer dashboard component\nfor end users. You either have\
     \ to use the command line client or the RESTful web\nAPI (the command line client\
@@ -27031,6 +27127,7 @@
     >OpenStack documentation</a>.</p>", parent: 45, sha1: 30ed71aa34e561b7b3cf5d0f83d970d24dce63c8,
   title: Introduction to Ceilometer}
 109:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -27649,6 +27746,7 @@
   sha1: fc6301642b9198afe1c8ded156b9dd2b13e25dd6
   title: Image Catalog
 110:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -28102,6 +28200,7 @@
   sha1: fd098fed933df16aa9dd9226f82317f0a2aac8ae
   title: NCI Tenjin--A quick start guide
 111:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -28180,6 +28279,7 @@
   sha1: 9818146b3172be1f92ab57e2ea0d1faef112824c
   title: Cluster as a Service (CAAS)--NCI SLURM Cluster Documentation
 112:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -28497,6 +28597,7 @@
   sha1: 6ad79aedf56d4f5b3f5d2f0a08e5e85b763e9ccb
   title: NCI Using MATLAB in NeCTAR
 113:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -28615,6 +28716,7 @@
   sha1: f364031c15a303fe3fcb913d5b15113ebf1ea73f
   title: NCI Remote Job Submission
 114:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -28786,6 +28888,7 @@
   sha1: 432ee39eebf4d71bfe842e348d44fc54749bb255
   title: Dynamic Cluster as a Service (DCaaS)--eRSA Dynamic Cluster Documentation
 115:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -29319,46 +29422,48 @@
     \ OpenStack dashboard lets user <code>provision</code> resources for their instances\
     \ \nthrough a web interface. The storage resources can be classified as attached\
     \ and external disks\neach of which has different purpose that needs some basic\
-    \ explanation.</p>\n<p><a name=\"attached\"></a></p>\n<h3>Attached storage</h3>\n\
-    <p>With your instance you have access to limited diskspace with the  \"root disk\"\
-    \ partition \"/\" and \n\"ephemeral disk\" partition that is accessed via the\
-    \ /mnt directory of the default NeCTAR images. \nThe size of the the \"root disk\"\
-    \ and \"ephemeral disk\" varies with the different hardware templates \nor [flavors]\
-    \ (https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you)\
-    \ \nthat are available when you are configuring your instance. So understanding\
-    \ your research data \nrequirements is key so you can select the correct <code>flavor</code>\
+    \ explanation.</p>\n<p><a name=\"attached\"></a></p>\n<hr>\n<h3>Attached storage</h3>\n\
+    <p>With your instance you have access to limited diskspace with the <strong>root\
+    \ disk</strong> partition <strong>\"/\"</strong> and \n<strong>\"ephemeral disk\"\
+    </strong> partition that is accessed via the <strong>/mnt</strong> directory of\
+    \ the default NeCTAR images. \nThe size of the the <strong>root disk</strong>\
+    \ and <strong>ephemeral disk</strong> varies with the different hardware templates\
+    \ \nor <a href=\"https://support.nectar.org.au/support/solutions/articles/6000055380-resources-available-to-you\"\
+    >flavors</a> \nthat are available when you are configuring your instance. So understanding\
+    \ your research data \nrequirements is key so you can select the correct <strong>flavor</strong>\
     \ for your instance.\nHowever, as with everything including the research cloud\
     \ it does require a bit more insight of how a \nresearch might make the best use\
     \ of these storage components in a bioinformatic workflow. Fortunately, NeCTAR\
     \ is\na the ideal resource to allow researchers to improve their technical knowledge\
     \ of to how to use the research cloud\nfor their computational work.</p>\n<p><a\
-    \ href=\"#top\">Top of page</a>\n<a name=\"root\"></a></p>\n<h3>What is the root\
-    \ disk</h3>\n<p>The root disk is an ephemeral disk that the operating system (OS)\
-    \ image is copied to when you launch \na virtual machine. It is also where your\
-    \ home directory is located in you virtual machine. When you \nsnapshot your instance\
-    \ it is what is copied to create your snapshot image.</p>\n<p><a href=\"#top\"\
-    >Top of page</a>\n <a name=\"ephemeral\"></a></p>\n<h3>What is ephemeral disk</h3>\n\
-    <p>Ephemeral is a secondary ephemeral data disk. That is an empty disk and exists\
-    \ only for the life \nof the instance. When you terminate an instance all data\
-    \ in ephemeral is lost. With the NeCTAR \ndefault images that have ephemeral storage\
-    \ are mounted with the instance and located at <code>/mnt</code> \nbut you will\
-    \ need to change the ownership of the <code>/mnt</code> directoryto be able to\
-    \ have read/write \naccess to do this on a ubuntu instance use:</p>\n<p><code>$\
-    \ sudo chown ubuntu /mnt</code></p>\n<p>on a fedora, centos, scientific linux\
-    \ instances</p>\n<p><code>$ sudo chown ec2-user /mnt</code></p>\n<p>and on a debian\
-    \ instance.</p>\n<p><code>$ sudo chown debian /mnt</code></p>\n<p>This ephemeral\
-    \ disk space is where you should run you analysis as your <code>home</code> directory\
-    \ is too small.</p>\n<p><a href=\"#top\">Top of page</a></p>\n<p><a name=\"external\"\
-    ></a></p>\n<h2>External Storage - Volume and Object</h2>\n<p>When you apply for\
-    \ you NeCTAR <a href=\"https://dashboard.rc.nectar.org.au\">allocation</a> you\
-    \ are able \nto apply for object and volume storage to use for research project.\
-    \  </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ href=\"#top\">Top of page</a>\n<a name=\"root\"></a></p>\n<hr>\n<h3>What is\
+    \ the root disk</h3>\n<p>The <strong>root disk</strong> is an <strong>ephemeral\
+    \ disk</strong> that the operating system (OS) image is copied to when you launch\
+    \ \na virtual machine. It is also where your home directory is located in you\
+    \ virtual machine. When you \nsnapshot your instance it is what is copied to create\
+    \ your snapshot image.</p>\n<p><a href=\"#top\">Top of page</a>\n <a name=\"ephemeral\"\
+    ></a></p>\n<hr>\n<h3>What is ephemeral disk</h3>\n<p>Ephemeral is a secondary\
+    \ ephemeral data disk. That is an empty disk and exists only for the life \nof\
+    \ the instance. When you terminate an instance all data in ephemeral is lost.\
+    \ With the NeCTAR \ndefault images that have ephemeral storage are mounted with\
+    \ the instance and located at <strong>/mnt</strong> \nbut you will need to change\
+    \ the ownership of the <strong>/mnt</strong> directoryto be able to have read/write\
+    \ \naccess to do this on a ubuntu instance use:</p>\n<p><code>$ sudo chown ubuntu\
+    \ /mnt</code></p>\n<p>on a fedora, centos, scientific linux instances</p>\n<p><code>$\
+    \ sudo chown ec2-user /mnt</code></p>\n<p>and on a debian instance.</p>\n<p><code>$\
+    \ sudo chown debian /mnt</code></p>\n<p>This ephemeral disk space is where you\
+    \ should run you analysis as your <code>home</code> directory is too small.</p>\n\
+    <p><a href=\"#top\">Top of page</a></p>\n<p><a name=\"external\"></a></p>\n<hr>\n\
+    <h2>External Storage - Volume and Object</h2>\n<p>When you apply for you NeCTAR\
+    \ <a href=\"https://dashboard.rc.nectar.org.au\">allocation</a> you are able \n\
+    to apply for object and volume storage to use for research project.  </p>\n<p><img\
+    \ alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_storage_request.png?raw=true\"\
     ></p>\n<p>Assuming that your allocation request has either volume or object storage\
     \ or both when you configure your\nvolume or object storage you need to remember\
     \ to do select a sensible <a href=\"https://support.nectar.org.au/solution/articles/6000055381-availability-zones\"\
     >availability zones</a> to use with your data.</p>\n<p><a name=\"volume\"></a></p>\n\
-    <h3>What is volume or block-storage</h3>\n<p>Persistent <a href=\"http://docs.openstack.org/openstack-ops/content/user_facing_block_storage.html\"\
+    <hr>\n<h3>What is volume or block-storage</h3>\n<p>Persistent <a href=\"http://docs.openstack.org/openstack-ops/content/user_facing_block_storage.html\"\
     >block-storage</a> \nor volume storage can live outside of you instance. This\
     \ means that you read and write data in the persistent volume storage \nand it\
     \ can be moved around to different instances but can only be mounted to one instance\
@@ -29391,9 +29496,9 @@
     \ sudo chown debian /volume_data</code></p>\n<p>To unmount the volume from your\
     \ instance use these command <code>umount</code>\nNOTE: Do not umount the device\
     \ if you are in that directory so <code>cd</code> to your home directory first\
-    \ otherwise you it will fail.\n<code>$ cd</code><br>\n<code>$ sudo umount /volume_data</code></p>\n\
-    <p><a href=\"#top\">Top of page</a>\n<a name=\"object\"></a></p>\n<h3>What is\
-    \ object storage</h3>\n<p>What is object storage?</p>\n<p><img alt=\"\" src=\"\
+    \ otherwise you it will fail.</p>\n<p><code>sh\n$ cd   \n$ sudo umount /volume_data</code></p>\n\
+    <p><a href=\"#top\">Top of page</a>\n<a name=\"object\"></a></p>\n<hr>\n<h3>What\
+    \ is object storage</h3>\n<p>What is object storage?</p>\n<p><img alt=\"\" src=\"\
     https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_obj_def.png?raw=true\"\
     ></p>\n<p>A more useful definition can be found on the NeCTAR <a href=\"https://support.nectar.org.au/solution/articles/6000055382-introduction-to-cloud-storage\"\
@@ -29419,32 +29524,32 @@
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_obj_5.png?raw=true\"\
     ></p>\n<p>To download the object to your instance you just neeed to use <code>wget</code></p>\n\
     <p><code>wget https://dashboard.rc.nectar.org.au/project/containers/blast/wgs.99.tar.gz</code></p>\n\
-    <p><a href=\"#top\">Top of page</a>\n<a name=\"io\"></a></p>\n<h2>File I/O best\
-    \ practices</h2>\n<p>Moving data to and from you instance instance depending on\
-    \ the size of the files your are try to move can be trival for small data but\
+    <p><a href=\"#top\">Top of page</a></p>\n<p><a name=\"io\"></a></p>\n<hr>\n<h2>File\
+    \ I/O best practices</h2>\n<p>Moving data to and from you instance instance depending\
+    \ on the size of the files your are try to move can be trival for small data but\
     \ large \ndata sets can become very difficult depending on many different things.\
     \ Here are some things to keep in mind with data I/O and the cloud.</p>\n<ul>\n\
     <li>\n<p>Compress your data files if they are larger than 10Mb with <a href=\"\
     http://www.math.utah.edu/docs/info/gzip_4.html#SEC7\"><strong>gzip</strong></a>\
-    \ or some other compression tool it should be installed in your instance. </p>\n\
-    </li>\n<li>\n<p>If you have to move a directory create <a href=\"https://www.cs.colostate.edu/helpdocs/tar.html\"\
-    ><strong>tar</strong></a> files. </p>\n</li>\n<li>\n<p>Don't try to move data\
+    \ or some other compression tool it should be installed in your instance.</p>\n\
+    </li>\n<li>\n<p>If you have to move a directory create a <a href=\"https://www.cs.colostate.edu/helpdocs/tar.html\"\
+    ><strong>tarball</strong></a> files.</p>\n</li>\n<li>\n<p>Don't try to move data\
     \ over a wireless network, plugin to an ethernet contection, preferably at your\
     \ local institution they have larger bandwidth.</p>\n</li>\n<li>\n<p>If you data\
     \ move still time out or are getting throttled contact your the local institutes\
     \ IT support to see if they can help.</p>\n</li>\n<li>\n<p>Ohio-(Only handle it\
     \ once) if you are uploading data to your instance try to move it directly to\
-    \ your instance, NeCTAR is on a fast networks as most\n  nectar nodes are housed\
-    \ within University or HPC data centers. </p>\n</li>\n</ul>\n<p>With smaller data\
+    \ your instance, NeCTAR is on a fast networks as most nectar nodes are housed\
+    \ within University or HPC data centers.</p>\n</li>\n</ul>\n<p>With smaller data\
     \ you can try any of the methods coverd on the NeCTAR <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
     >support</a> page it has excellent instructions.  This will work for moving data\
     \ to and from your ephemeral or volume storage attached to your instances. </p>\n\
-    <p><a href=\"#top\">Top of page</a>\n<a name=\"openstack\"></a></p>\n<h2>Using\
-    \ the OpenStack APIs for Managing NCBI Data</h2>\n<p>The National Center for Biotechnology\
-    \ Information (<a href=\"http://www.ncbi.nlm.nih.gov/\"><strong>NCBI</strong></a>)\
-    \ is located in Bethesda, Marylanl and hosts the Basic Local Alignment Search\
-    \ Tool (<a href=\"http://blast.ncbi.nlm.nih.gov/Blast.cgi\"><strong>BLAST</strong></a>)\
-    \ data and is available directly from the NCBI FTP site <code>ftp://ftp.ncbi.nlm.nih.gov</code>.\
+    <p><a href=\"#top\">Top of page</a></p>\n<p><a name=\"openstack\"></a></p>\n<hr>\n\
+    <h2>Using the OpenStack APIs for Managing NCBI Data</h2>\n<p><a href=\"http://www.ncbi.nlm.nih.gov/\"\
+    >The National Center for Biotechnology Information (<strong>NCBI</strong>)</a>\
+    \ is located in Bethesda, Marylanl and hosts the <a href=\"http://blast.ncbi.nlm.nih.gov/Blast.cgi\"\
+    >Basic Local Alignment Search Tool (<strong>BLAST</strong>)</a> data and is available\
+    \ directly from the <strong>NCBI FTP</strong> site <code>ftp://ftp.ncbi.nlm.nih.gov</code>.\
     \ It is necessary for researchs to be able to access these data sets easily as\
     \ they are required for many different Bioinformatic tools specifically BLAST.\
     \ However we will not present how to actually run BLAST but how to manage the\
@@ -29452,14 +29557,14 @@
     \ NCBI BLAST data sets effectively.</p>\n<h3>Install the Python client tools</h3>\n\
     <p>First you will need to update your instance and install a set of packages that\
     \ support the OpenStack APIs.\nThese are the commands for a ubuntu instance.</p>\n\
-    <p><code>$ sudo apt-get update</code></p>\n<p><code>$ sudo apt-get install python-novaclient</code></p>\n\
-    <p><code>$ sudo apt-get install python-keystoneclient</code></p>\n<p><code>$ sudo\
-    \ apt-get install python-cinderclient</code></p>\n<p><code>$ sudo apt-get install\
-    \ python-swiftclient</code></p>\n<p><a href=\"#top\">Top of page</a></p>\n<h3>Configuring\
-    \ your instance to use the Openstack API</h3>\n<p>This the basic procedure to\
-    \ configure within your instance to use the OpenStack APIs with the Python clients.\n\
-    The first step is to set or reset your your password from the OpenStack dashboard\
-    \ through your user account settings. </p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    <p><code>bash\n$ sudo apt-get update\n$ sudo apt-get install python-novaclient\n\
+    $ sudo apt-get install python-keystoneclient\n$ sudo apt-get install python-cinderclient\n\
+    $ sudo apt-get install python-swiftclient</code>    </p>\n<p><a href=\"#top\"\
+    >Top of page</a></p>\n<h3>Configuring your instance to use the Openstack API</h3>\n\
+    <p>This the basic procedure to configure within your instance to use the OpenStack\
+    \ APIs with the Python clients.\nThe first step is to set or reset your your password\
+    \ from the OpenStack dashboard through your user account settings. </p>\n<p><img\
+    \ alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_1.png?raw=true\"\
     > </p>\n<p>Select the Reset Password tab:</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_2.png?raw=true\"\
@@ -29486,20 +29591,21 @@
     \ method described in  NeCTAR <a href=\"https://support.nectar.org.au/support/solutions/articles/6000085114-transferring-data-to-your-vm\"\
     >support</a> documents. You should move your key file or pem file to your <code>.ssh</code>\
     \ directory in your home directory on your instance.</p>\n<p>On your instance\
-    \ you will need to source the Project_name-openrc.sh file to configure your environment\
-    \ to authenticate access to the OpenStack services.</p>\n<p><code>$ source Project_name-openrc.sh</code></p>\n\
+    \ you will need to source the Project_name-openrc.sh file to configure your environment\n\
+    to authenticate access to the OpenStack services.</p>\n<p><code>$ source Project_name-openrc.sh</code></p>\n\
     <p>You will need to source the script before you can run any of the commands otherwise\
-    \ the environment is not set properly.</p>\n<p>note: If you see this </p>\n<p><img\
-    \ alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    \ the environment is not set properly.</p>\n<p>Gotchas: If you see this </p>\n\
+    <p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_8.png?raw=true\"\
-    > </p>\n<p>you forget to source the OpenStack RC file. </p>\n<p>If you source\
-    \ your OpenStack RC file and see this:</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    > </p>\n<p>you have <em><strong>forgetten</strong></em> to source the OpenStack\
+    \ RC file.</p>\n<p>If you source your OpenStack RC file and see this:</p>\n<p><img\
+    \ alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_9.png?raw=true\"\
-    > </p>\n<p>You did not edit the OpenStack RC file!</p>\n<h3>Testing you API authentication</h3>\n\
-    <p>To test your access authentication you can use the command</p>\n<p><code>$\
-    \ nova list</code></p>\n<p>this should show the list of your current instances\
-    \ that indicates your authentication access was successful!</p>\n<p><img alt=\"\
-    \" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
+    > </p>\n<p>You did not <em><strong>edit</strong></em> the OpenStack RC file!</p>\n\
+    <h3>Testing you API authentication</h3>\n<p>To test your access authentication\
+    \ you can use the command</p>\n<p><code>$ nova list</code></p>\n<p>this should\
+    \ show the list of your current instances that indicates your authentication access\
+    \ was successful!</p>\n<p><img alt=\"\" src=\"https://github.com/NeCTAR-RC/nectarcloud-tier0doco/blob/master/articles/NeCTAR\
     \ Documentation--DOCID16/Tools and Apps--DOCID24/images/Pawsey_ncbi_api_10.png?raw=true\"\
     > </p>\n<p><a href=\"#top\">Top of page</a>\n<a name=\"ncbi\"></a></p>\n<h3>Downloading\
     \ NCBI datasets directly to your instance</h3>\n<p>The data transferring program\
@@ -29536,35 +29642,37 @@
     <p>We have covered the difference between root, ephemeral, volume and object storage\
     \ available through the NeCTAR research cloud \nand what programs are used to\
     \ be able to store you data correctly so that you can make effective use of you\
-    \ virtual machine.</p>\n<ul>\n<li>\n<p>The root storage is for the Operating system\
-    \ and you home directory. You should install all applications there and your home\
-    \ directory\nis should not store any data but small scripts and files.</p>\n</li>\n\
-    <li>\n<p>The ephemeral storage is your workspace so all of you analysis should\
-    \ be done there and you can store your local data there. Remember\nto get the\
-    \ right size hardware flavor.  It needs to have enough disk space for analysis\
-    \ to run and store any associated data.  It is your\nresponsibilty to maintain\
-    \ and will require regular housekeeping.  Please <strong><em>delete</em></strong>\
-    \ files that are not needed and move important results back to\neither your local\
-    \ machine or to volume/object storage to share them with your group or the world.</p>\n\
-    </li>\n<li>\n<p>The volume storage can be used for storing results, working data,\
-    \ or as a working directory if needed. If you have multiple researcher who\nhave\
-    \ access to your project then you can share data via the volume storage.  It is\
-    \ also possible to attach more that one volume storage instance\nto your compute\
-    \ instance as well so you can one for input data and have a second for results.\
-    \  </p>\n</li>\n<li>\n<p>The object storage should be used for static datasets\
-    \ either reference ones like the NCBI-BLAST data sets or analysis results you\
-    \ wish to share\nwith collaborators.  Static data can be downloaded easly to your\
-    \ volume or ephemeral storage as part of you workflow or pipeline. With an orginal\n\
-    copy in object storage you can delete it from either volume or ephemeral storage\
-    \ then with out having to get a new copy to your instance. </p>\n</li>\n</ul>\n\
-    <p>NOTE: There are some unresolved issues with uploading large data sets (&gt;5GB)\
-    \ in to object storage. \nUnderstanding how to split/merge files that are larger\
-    \ than 5GB and being able to manage them easily..</p>\n<p><a href=\"#top\">Top\
-    \ of page</a></p>"
+    \ virtual machine.</p>\n<ul>\n<li>\n<p><strong>Root storage</strong><br>\n   \
+    \ Is for the Operating system and you home directory. You should install all applications\
+    \ there and your home directory is should not store any data but small scripts\
+    \ and files.</p>\n</li>\n<li>\n<p><strong>Ephemeral storage</strong><br>\n   \
+    \ Is your workspace so all of you analysis should be done there and you can store\
+    \ your local data there.<br>\nRemember to get the right size hardware flavor.\
+    \  It needs to have enough disk space for analysis to run and store any associated\
+    \ data.  It is your responsibilty to maintain and will require regular housekeeping.\
+    \  Please <strong><em>delete</em></strong> files that are not needed and move\
+    \ important results back to\neither your local machine or to volume/object storage\
+    \ to share them with your group or the world.</p>\n</li>\n<li>\n<p><strong>Volume\
+    \ storage</strong><br>\n  Can be used for storing results, working data, or as\
+    \ a working directory if needed.\nIf you have multiple researcher who have access\
+    \ to your project then you can share data\nvia the volume storage. It is also\
+    \ possible to attach more that one volume storage\ninstance to your compute instance\
+    \ as well so you can one volume for input data and\nhave a second volume for results.</p>\n\
+    </li>\n<li>\n<p><strong>Object storage</strong><br>\n Should be used for static\
+    \ datasets either reference ones like the NCBI-BLAST data sets or analysis results\
+    \ you wish to share\nwith collaborators. Static data can be downloaded easly to\
+    \ your volume or ephemeral storage as part of you workflow or pipeline. \nWith\
+    \ an original copy in object storage you can delete it from either volume or ephemeral\
+    \ storage then with out having to get\na new copy to your instance. </p>\n</li>\n\
+    </ul>\n<p>NOTE: There are some unresolved issues with uploading large data sets\
+    \ (&gt;5GB) in to object storage. \nUnderstanding how to split/merge files that\
+    \ are larger than 5GB and being able to manage them easily..</p>\n<p><a href=\"\
+    #top\">Top of page</a></p>"
   parent: 24
-  sha1: c234975f289401dd1eba47da9eac2d0f9554eb4c
+  sha1: 552be087730d5b1586753d57ce40c81d9ccf7f6b
   title: Pawsey NeCTAR Storage and NCBI data
 116:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -30488,6 +30596,7 @@
   sha1: 1a8335751e3a83a52007e82b2013efed4fb1c2b6
   title: Monash MonARCH User Documentation
 117:
+  found: true
   freshdesk:
     fd_attributes:
       article:
@@ -31483,6 +31592,7 @@
   sha1: 797b91c0937e7c35f50ae33e35e4d94523b89a99
   title: VicNode and NeCTAR Cloud Storage - Use Cases, Patterns and Tools
 118:
+  found: true
   freshdesk:
     fd_attributes:
       article:
