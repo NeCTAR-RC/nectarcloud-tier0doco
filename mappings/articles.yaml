@@ -1901,38 +1901,38 @@
     \ will\nautomatically format and mount the ephemeral disk. For example, Ubuntu\
     \ creates\nan ext3 partition and mounts it at '/mnt'. For operating systems that\
     \ don't do it\nautomatically, you can format it by executing <code>mkfs.ext4 /dev/vdb</code>\
-    \ in the command line\nand mount it by executing <code>mount /dev/vdb /mnt</code>.\
-    \ You need to have root\npermission to do this.</p>\n<p>Data stored on ephemeral\
-    \ disk are only persistent until the termination or\nrebuild of the virtual machine\
-    \ (like the root disk). The only difference\nis that data on the ephemeral disk\
-    \ are not copied when taking a snapshot of a virtual\nmachine, which means you\
-    \ cannot use snapshot to save data stored on ephemeral\ndisk.</p>\n<p>NOTE: At\
-    \ first, you will not be able to save information to the ephemeral disk. \nThe\
-    \ following command gives permission for the user 'ubuntu' to write to the ephemeral\
-    \ disk:</p>\n<p><code>sudo chown ubuntu /mnt</code></p>\n<h4>Backup of Ephemeral\
-    \ Disk</h4>\n<p>Data on the ephemeral disk does not get saved in a snapshot, and\
-    \ requires other\ntechniques to make a backup. Other forms of storage can be used\
-    \ such as the\nObject Store and Volume Storage within the Research Cloud or external\
-    \ locations.</p>\n<h2>Persistent Volume Storage</h2>\n<p>Persistent volume storage\
-    \ can live outside your virtual machine. It appears\nas block storage which can\
-    \ be attached then accessed and even booted from. This\nis a storage volume that\
-    \ you can attach to from within your virtual machine,\nread and write data, detach\
-    \ it, and make it available to another virtual machine.\nYour data on a persistent\
-    \ volume are retained even when you terminate your\nvirtual machine. Persistent\
-    \ Volumes offer a snapshot feature which can be used\nto make convenient backups\
-    \ (this uses some of your overall Persistent Volume quota).</p>\n<p>NOTE: Persistent\
-    \ Volumes are local services and only virtual machines in the\navailability zone\
-    \ where the persistent Volume has been created can access it.</p>\n<h3>How to\
-    \ Get Persistent Volume Storage</h3>\n<p>By default, there are no persistent volume\
-    \ storage available to your project.\nYou need to make an allocation request to\
-    \ apply for the quantity of persistent volume\nstorage you require for your project.\
-    \ Follow these steps to submit a\nrequest:</p>\n<ul>\n<li>\n<p>Login to NeCTAR\
-    \ Cloud <a href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n</li>\n\
-    <li>\n<p>Go to Allocations and you can either click 'New Request' to make a new\
-    \ request\n or 'My Requests' to amend an existing request</p>\n</li>\n<li>\n<p>Under\
-    \ section 'Storage Quota', you select 'Resource' as volume, select the\n Zone\
-    \ you want the storage to be located at (must be the same location as the instance\
-    \ it will be attached to) and enter the size in GB under 'Requested Quota'.</p>\n\
+    \ in the command line\nand mount it by executing <code>sudo mount /dev/vdb /mnt</code>.\
+    \ You need to have root or sudo\npermission to do this.</p>\n<p>Data stored on\
+    \ ephemeral disk are only persistent until the termination or\nrebuild of the\
+    \ virtual machine (like the root disk). The only difference\nis that data on the\
+    \ ephemeral disk are not copied when taking a snapshot of a virtual\nmachine,\
+    \ which means you cannot use snapshot to save data stored on ephemeral\ndisk.</p>\n\
+    <p>NOTE: At first, you will not be able to save information to the ephemeral disk.\
+    \ \nThe following command gives permission for the user 'ubuntu' to write to the\
+    \ ephemeral disk:</p>\n<p><code>sudo chown ubuntu /mnt</code></p>\n<h4>Backup\
+    \ of Ephemeral Disk</h4>\n<p>Data on the ephemeral disk does not get saved in\
+    \ a snapshot, and requires other\ntechniques to make a backup. Other forms of\
+    \ storage can be used such as the\nObject Store and Volume Storage within the\
+    \ Research Cloud or external locations.</p>\n<h2>Persistent Volume Storage</h2>\n\
+    <p>Persistent volume storage can live outside your virtual machine. It appears\n\
+    as block storage which can be attached then accessed and even booted from. This\n\
+    is a storage volume that you can attach to from within your virtual machine,\n\
+    read and write data, detach it, and make it available to another virtual machine.\n\
+    Your data on a persistent volume are retained even when you terminate your\nvirtual\
+    \ machine. Persistent Volumes offer a snapshot feature which can be used\nto make\
+    \ convenient backups (this uses some of your overall Persistent Volume quota).</p>\n\
+    <p>NOTE: Persistent Volumes are local services and only virtual machines in the\n\
+    availability zone where the persistent Volume has been created can access it.</p>\n\
+    <h3>How to Get Persistent Volume Storage</h3>\n<p>By default, there are no persistent\
+    \ volume storage available to your project.\nYou need to make an allocation request\
+    \ to apply for the quantity of persistent volume\nstorage you require for your\
+    \ project. Follow these steps to submit a\nrequest:</p>\n<ul>\n<li>\n<p>Login\
+    \ to NeCTAR Cloud <a href=\"https://dashboard.rc.nectar.org.au\">Dashboard</a></p>\n\
+    </li>\n<li>\n<p>Go to Allocations and you can either click 'New Request' to make\
+    \ a new request\n or 'My Requests' to amend an existing request</p>\n</li>\n<li>\n\
+    <p>Under section 'Storage Quota', you select 'Resource' as volume, select the\n\
+    \ Zone you want the storage to be located at (must be the same location as the\
+    \ instance it will be attached to) and enter the size in GB under 'Requested Quota'.</p>\n\
     </li>\n<li>\n<p>Click the 'Submit' button</p>\n</li>\n</ul>\n<p>NOTE: It may take\
     \ a while for your request to be approved.</p>\n<h3>Create a persistent volume\
     \ storage</h3>\n<p>Once your request has been approved, your project should have\
@@ -1962,13 +1962,17 @@
     \ system you require.</p>\n<p>You can use below command to create file system\
     \ on the new volume:\n<code>sudo mkfs.ext4 /dev/vdc</code></p>\n<p>WARNING: This\
     \ can cause data loss if a file system already exists on the target\nVolume.</p>\n\
-    <p>You can use below command to mount the volume (choose any volume-name).</p>\n\
-    <p><code>sudo mkdir /volume_name</code></p>\n<p><code>sudo mount /dev/vdc /volume_name\
-    \ -t auto</code></p>\n<p>NOTE: At first, you will not be able to save information\
-    \ to the ephemeral disk. \nThe following command gives permission for the user\
-    \ 'ubuntu' to write to the ephemeral disk:</p>\n<p><code>sudo chown ubuntu /mnt</code></p>\n\
-    <p>Notes:\nVolumes must be detached before deletion.</p>\n<h2>Check your Storage</h2>\n\
-    <p>Here are some commands that can allow you to look at your mounted storage blocks\n\
+    <p>You can use below command to mount the volume in a subdirectory under /mnt.\
+    \ Choose \nany volume_name, keeping in mind that using a name relevant to the\
+    \ use or content \nof the volume is probably a good idea as it will help you to\
+    \ identify the volume \nlater, and will make it easier for more than one volume\
+    \ to be mounted.</p>\n<p><code>sudo mkdir /mnt/volume_name</code></p>\n<p><code>sudo\
+    \ mount /dev/vdc /mnt/volume_name -t auto</code></p>\n<p>NOTE: At first, you will\
+    \ not be able to save information to the volume. \nThe following command gives\
+    \ permission for the user 'ubuntu' to write to /mnt and \neverything currently\
+    \ inside it:</p>\n<p><code>sudo chown ubuntu /mnt -R</code></p>\n<p>Notes:\nVolumes\
+    \ MUST be detached before deletion.</p>\n<h2>Check your Storage</h2>\n<p>Here\
+    \ are some commands that can allow you to look at your mounted storage blocks\n\
     and keep track of their usage:</p>\n<p><code>lsblk -l</code>  for info : <code>man\
     \ lsblk</code></p>\n<p><code>df -hT</code>  for info : <code>man df</code></p>\n\
     <p><code>du -h &lt;path/to/directory&gt;</code>  for info : <code>man du</code></p>\n\
@@ -2007,7 +2011,7 @@
     \ (some of which are Node private) some clients/APIs\nrequire explicit configuration\
     \ of a default region, which should be \"Melbourne\"\nfor most users.</p>"
   parent: 21
-  sha1: a66c8a75ba5edae994dad3ec118600010aaacf75
+  sha1: a036ad4619f75f9c2c5498f685571d1575852397
   title: Introduction to Cloud Storage
 41: {title: The Nectar OpenStack Password}
 46: {title: Data Storage Summary}
