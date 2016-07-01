@@ -42,7 +42,7 @@ seen from the instance is usually '/dev/vdb' and some operating systems will
 automatically format and mount the ephemeral disk. For example, Ubuntu creates
 an ext3 partition and mounts it at '/mnt'. For operating systems that don't do it
 automatically, you can format it by executing `mkfs.ext4 /dev/vdb` in the command line
-and mount it by executing `mount /dev/vdb /mnt`. You need to have root
+and mount it by executing `sudo mount /dev/vdb /mnt`. You need to have root or sudo
 permission to do this.
 
 Data stored on ephemeral disk are only persistent until the termination or
@@ -153,19 +153,23 @@ You can use below command to create file system on the new volume:
 WARNING: This can cause data loss if a file system already exists on the target
 Volume.
 
-You can use below command to mount the volume (choose any volume-name).
+You can use below command to mount the volume in a subdirectory under /mnt. Choose 
+any volume_name, keeping in mind that using a name relevant to the use or content 
+of the volume is probably a good idea as it will help you to identify the volume 
+later, and will make it easier for more than one volume to be mounted.
 
-`sudo mkdir /volume_name`
+`sudo mkdir /mnt/volume_name`
 
-`sudo mount /dev/vdc /volume_name -t auto`
+`sudo mount /dev/vdc /mnt/volume_name -t auto`
 
-NOTE: At first, you will not be able to save information to the ephemeral disk. 
-The following command gives permission for the user 'ubuntu' to write to the ephemeral disk:
+NOTE: At first, you will not be able to save information to the volume. 
+The following command gives permission for the user 'ubuntu' to write to /mnt and 
+everything currently inside it:
 
-`sudo chown ubuntu /mnt`
+`sudo chown ubuntu /mnt -R`
 
 Notes:
-Volumes must be detached before deletion.
+Volumes MUST be detached before deletion.
 
 ## Check your Storage 
 
