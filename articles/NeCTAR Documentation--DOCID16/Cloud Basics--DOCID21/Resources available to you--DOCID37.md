@@ -1,4 +1,4 @@
-## The Cloud
+# The Cloud
 
 The Nectar Cloud supports [thousands of virtual machines][cloud_growth]
 using [20,000 VCPUs][cloud_growth] across Australia.
@@ -8,11 +8,18 @@ using [20,000 VCPUs][cloud_growth] across Australia.
 The Nectar Cloud provides access to the cloud via projects, each with an
 allocation of time & capacity (virtual CPUs).
 
-- All researchers initially (and without application) get a personal
- project with 2 VCPUs for 3 Months.
-- This means you can run 2 Small or 1 Medium virtual machine for three months.
-- Need more time or computing power? Submit an allocation request.
-- Multiple users can share an allocation for a project.
+All researchers initially (and without application) get a personal trial project
+with 2 VCPUs allocated for 3 Months. This means you can run 2 Small or 1 Medium
+virtual machine for three months. Or 1 small VM for a total of 6 months.
+
+If you need more time or computing power, or you need one of the storage or
+other features of the Nectar Research Cloud, you can submit an allocation
+request. See our article  on
+[Managing an Allocation](https://support.ehelp.edu.au/support/solutions/articles/6000068044-managing-an-allocation "Managing an Allocation")
+for further detail
+
+You can share your Nectar Project (but not your personal trial project) with 
+users you invite.
 
 ## Instances available by size
 

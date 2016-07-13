@@ -25,11 +25,20 @@ Otherwise, your request will be reviewed by the NeCTAR Allocation Committee.
 
 ## Submit a Request for more resources
 
+To request access to more Nectar Cloud resources, you fill in a new request
+or you amend/extend one of your existing requests
+
 Use the Allocation Request form from the left hand side menu of the dashboard.
 
-- Allocations New Request creates a new project
-- Allocations: My Requests adds resources to an existing project (you will see
-  your previous requests here)
+1. Login to the Nectar dashboard at [https://dashboard.rc.nectar.org.au](https://dashboard.rc.nectar.org.au)
+1. On the left hand side, click "Allocations"
+1. If you're requesting a New Allocation, click "New Request"
+   Or
+   If you're amending/extending an existing project, navigate to My Requests and
+   click the Amend/Extend allocation button on the right, next to your project
+1. On the Request Form, you're asked to fill in or adjust some details about
+   your research project.
+1. Click the "Submit" button.
 
 As a rule of thumb, the more resources you ask for, the more detail we require
 about your research. Requesting a few cores won’t be scrutinised as much as
