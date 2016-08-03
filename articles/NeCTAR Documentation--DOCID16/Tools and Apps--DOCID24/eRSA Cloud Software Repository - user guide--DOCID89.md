@@ -29,13 +29,13 @@ This service is designed for:
 
 - Researchers who want to use cloud virtual machines to run compute-intensive software applications
 - Situations where a single virtual machine image containing all the required software is not available, and the researcher does not want to install the software themselves.
-- This service is currently only available for South Australian users as it uses the eResearch SA software repository.
+- This service is currently only available for **South Australian users** as it uses the eResearch SA software repository.
 
-## CVMFS 
+## The Software Repository
 
-The system makes use of a read-only, http-based distributed virtual file system called the [CERN VM File System][cern] (CVMFS), which CERN developed to enable researchers to access their standard software packages at many sites around the world. eRSA has set up a CVMFS server that provides access to a repository of all the open-source software that is installed on eRSA's HPC systems, and a NeCTAR cloud virtual machine image that contains a CVMFS client that can access the software in the repository. 
+eRSA has set up a server that provides access to a repository of all the open-source software that is installed on eRSA's HPC systems.  eRSA have also created a Nectar cloud virtual machine image that contains a client that can access the software in the repository. 
 
-When a user runs a software application on the cloud virtual machine, the software is automatically downloaded from the CVMFS repository and stored locally on the VM. The next time the same software is used, CVMFS uses the local copy of the software so it will start up faster, without having to wait for the download.
+When a user runs a software application on the cloud virtual machine, the software is automatically downloaded from the repository and stored locally on the VM. The next time the same software is used, the local copy of the software is accessed so it will start up faster, without having to wait for the download.
 
 For the user, this all happens transparently, it appears as though all the application software is installed on the cloud virtual machine.
 
@@ -135,7 +135,7 @@ See this [training module][train] or this [guide][launch] for detailed instructi
 
 -  ![](images/software_launchInstance_button.png) Select the "Launch Instance" button near the top right corner
 
--  Fill in a name for the VM, choose an appropriate size (Flavor), then select the image name provided by eRSA (the screenshot shows the image used for CVMFS access at the time of writing this document).
+-  Fill in a name for the VM, choose an appropriate size (Flavor), then select the image name provided by eRSA.
 
   ![](images/software_launchInstance.png)
 
@@ -175,7 +175,7 @@ An example of loading the package 'Stacks'.
 
 ![](images/software_module_load_stacks_full.png)
 
-**NOTE:** If there is software that you would like to access that is not already in the CVMFS software repository, email the [eRSA Helpdesk](mailto:servicedesk@ersa.edu.au) and request that it be added. Ensure you mention that you would like to access it through cloud computing on your VM.
+**NOTE:** If there is software that you would like to access that is not already in the software repository, email the [eRSA Helpdesk](mailto:servicedesk@ersa.edu.au) and request that it be added. Ensure you mention that you would like to access it through cloud computing on your VM.
 
 [Glossary of Terms](#glossary)   
 [Top of page](#top)
@@ -232,9 +232,9 @@ to close the sftp connection, type `exit`.
 
 ## The CentOS operating system
 
-The VM image that allows access to the CVMFS software repository is a Linux distribution called CentOS. Most of the documentation available about using your Linux VM in the NeCTAR cloud assumes that you have an Ubuntu operating system.  There is very little difference for the user between these Linux operating systems, but there is one main difference to be aware of.
+The VM image that allows access to the software repository is a Linux distribution called CentOS. Most of the documentation available about using your Linux VM in the Nectar cloud assumes that you have an Ubuntu operating system.  There is very little difference for the user between these Linux operating systems, but there is one main difference to be aware of.
 
-CentOS uses the package manager '**yum**' instead of '**apt-get**'. If you need to install packages on your VM that aren't in the CVMFS software repository, you need to use the 'yum' command wherever there would be an 'apt-get' command in Ubuntu. e.g.
+CentOS uses the package manager '**yum**' instead of '**apt-get**'. If you need to install packages on your VM that aren't in the software repository, you need to use the 'yum' command wherever there would be an 'apt-get' command in Ubuntu. e.g.
 
 - `yum search <package name>`
 - `sudo yum install <package name>`
